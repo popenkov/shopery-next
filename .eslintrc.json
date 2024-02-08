@@ -1,0 +1,33 @@
+// {
+//   "extends": ["stylelint-config-standard", "stylelint-order-config-standard"],
+//   "plugins": ["stylelint-order"],
+//   "rules": {
+//     "indentation": ["tab"],
+//     "color-hex-case": "upper",
+//     "selector-class-pattern": "^.*$",
+//     "declaration-block-no-redundant-longhand-properties": [
+//       true,
+//       {
+//         "ignoreShorthands": ["/grid/"]
+//       }
+//     ]
+//   }
+// }
+
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "semi": "off",
+    "@typescript-eslint/semi": ["warn"],
+    "@typescript-eslint/no-empty-interface": [
+      "error",
+      {
+        "allowSingleExtends": true
+      }
+    ]
+  },
+
+  "extends": ["next/core-web-vitals", "eslint:recommended", "next"]
+}
