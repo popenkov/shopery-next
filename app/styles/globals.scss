@@ -1,4 +1,4 @@
-@import './styles/variables.scss';
+@import './variables.scss';
 
 * {
   box-sizing: border-box;
@@ -8,9 +8,8 @@
 
 html,
 body {
-  overflow-x: hidden;
-
   max-width: 100vw;
+  overflow-x: hidden;
 }
 
 body {
@@ -19,9 +18,8 @@ body {
 }
 
 a {
-  text-decoration: none;
-
   color: inherit;
+  text-decoration: none;
 }
 
 h1,

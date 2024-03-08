@@ -1,3 +1,9 @@
+import { AppLink } from '@/src/shared/ui/AppLink/AppLink';
+
 export default function Home() {
-  return <></>;
+  return (
+    <>
+      <AppLink href={'#'}>gsdfgdfg</AppLink>
+    </>
+  );
 }

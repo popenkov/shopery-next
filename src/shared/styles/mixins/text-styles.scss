@@ -1,0 +1,91 @@
+@mixin search-field() {
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 0;
+}
+
+@mixin display-400($weight: 400) {
+  font-weight: $weight;
+  font-size: 72px;
+  line-height: 120%;
+}
+
+@mixin heading-1($weight: 400) {
+  font-weight: $weight;
+  font-size: 56px;
+  line-height: 120%;
+}
+
+@mixin heading-2($weight: 400) {
+  font-weight: $weight;
+  font-size: 48px;
+  line-height: 120%;
+}
+
+@mixin heading-3($weight: 400) {
+  font-weight: $weight;
+  font-size: 40px;
+  line-height: 120%;
+}
+
+@mixin heading-4($weight: 400) {
+  font-weight: $weight;
+  font-size: 36px;
+  line-height: 120%;
+}
+
+@mixin heading-5($weight: 400) {
+  font-weight: $weight;
+  font-size: 32px;
+  line-height: 120%;
+}
+
+@mixin body-xxl($weight: 400) {
+  font-weight: $weight;
+  font-size: 24px;
+  line-height: 150%;
+}
+
+@mixin body-xl($weight: 400) {
+  font-weight: $weight;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+@mixin body-large($weight: 400) {
+  font-weight: $weight;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+@mixin body-medium($weight: 400) {
+  font-weight: $weight;
+  font-size: 16px;
+
+  @if $weight == 600 {
+    line-height: 1.3125;
+  }
+
+ @else {
+    line-height: 1.5;
+  }
+}
+
+@mixin body-small($weight: 400) {
+  font-weight: $weight;
+  font-size: 14px;
+
+  @if $weight == 600 {
+    line-height: 1.215;
+  }
+
+ @else {
+    line-height: 1.5;
+  }
+}
+
+@mixin body-tiny($weight: 400) {
+  font-weight: $weight;
+  font-size: 12px;
+  line-height: 1.3334;
+}
