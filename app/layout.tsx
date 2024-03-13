@@ -3,7 +3,10 @@ import { Poppins } from 'next/font/google';
 import './styles/globals.scss';
 import { ReactNode } from 'react';
 
-const poppins = Poppins({ weight: ['600'], subsets: ['latin'] });
+const poppins = Poppins({
+  weight: ['300', '400', '500', '600', '700'],
+  subsets: ['latin'],
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
