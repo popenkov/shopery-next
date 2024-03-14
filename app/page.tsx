@@ -4,6 +4,8 @@ import {
   Logo,
   LogoSize,
   StarRating,
+  Tag,
+  TagVariant,
   Text,
   TextSize,
   TextWeight,
@@ -21,7 +23,7 @@ export default function Home() {
       <Logo />
 
       <StarRating value={3} />
-      <p>test</p>
+      <Tag content="tag" variant={TagVariant.ORANGE} />
     </>
   );
 }

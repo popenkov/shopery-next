@@ -2,7 +2,7 @@
 
 import { DetailedHTMLProps, FC, HTMLAttributes, memo } from 'react';
 
-import styles from './StarRating.module.scss';
+import cls from './StarRating.module.scss';
 import cn from 'classnames';
 import StarIcon from '../../../../public/icons/icon__star.svg';
 
@@ -16,14 +16,14 @@ export const StarRating: FC<StarRatingProps> = memo(({ value }) => {
   const ratingArray = new Array(MAX_RATING_VALUE).fill('*');
 
   return (
-    <div className={styles.rating}>
+    <div className={cls.rating}>
       {ratingArray.map((_, index) => {
         const isFilled = index <= value;
         return (
           <span
             key={`rating-${index}`}
-            className={cn(styles.star, {
-              [styles.filled]: isFilled,
+            className={cn(cls.star, {
+              [cls.filled]: isFilled,
             })}
           >
             <StarIcon />
