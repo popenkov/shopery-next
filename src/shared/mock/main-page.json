@@ -108,6 +108,7 @@
   ],
   "products": [
     {
+      "href": "#",
       "img": "product-apple.jpg",
       "title": "Green Apple",
       "price": "$14.99",
@@ -129,6 +130,7 @@
       "tags": null
     },
     {
+      "href": "#",
       "img": "product-tomatos.jpg",
       "title": "Red Tomatos",
       "price": "$14.99",
@@ -137,6 +139,7 @@
       "tags": null
     },
     {
+      "href": "#",
       "img": "product-cauliflower.jpg",
       "title": "Fresh Cauliflower",
       "price": "$14.99",
@@ -145,6 +148,7 @@
       "tags": null
     },
     {
+      "href": "#",
       "img": "product-letucce.jpg",
       "title": "Green Lettuce",
       "price": "$14.99",
@@ -153,6 +157,7 @@
       "tags": null
     },
     {
+      "href": "#",
       "img": "product-eggplant.jpg",
       "title": "Eggplant",
       "price": "$14.99",
@@ -161,6 +166,7 @@
       "tags": null
     },
     {
+      "href": "#",
       "img": "product-chilli.jpg",
       "title": "Green Chilli",
       "price": "$14.99",
@@ -169,6 +175,7 @@
       "tags": null
     },
     {
+      "href": "#",
       "img": "product-eggplant-dark.jpg",
       "title": "Eggplant",
       "price": "$14.99",
@@ -208,6 +215,7 @@
   ],
   "featuredProducts": [
     {
+      "href": "#",
       "img": "product-apple.jpg",
       "title": "Green Apple",
       "price": "$14.99",
@@ -221,6 +229,7 @@
       ]
     },
     {
+      "href": "#",
       "img": "product-mango.jpg",
       "title": "Surjapur Mango",
       "price": "$14.99",
@@ -229,6 +238,7 @@
       "tags": null
     },
     {
+      "href": "#",
       "img": "product-tomatos.jpg",
       "title": "Red Tomatos",
       "price": "$14.99",
@@ -237,6 +247,7 @@
       "tags": null
     },
     {
+      "href": "#",
       "img": "product-cauliflower.jpg",
       "title": "Fresh Cauliflower",
       "price": "$14.99",
@@ -245,6 +256,7 @@
       "tags": null
     },
     {
+      "href": "#",
       "img": "product-letucce.jpg",
       "title": "Green Lettuce",
       "price": "$14.99",
