@@ -3,6 +3,7 @@ import {
   Button,
   Logo,
   LogoSize,
+  StarRating,
   Text,
   TextSize,
   TextWeight,
@@ -18,6 +19,9 @@ export default function Home() {
 
       <Logo size={LogoSize.SMALL} />
       <Logo />
+
+      <StarRating value={3} />
+      <p>test</p>
     </>
   );
 }

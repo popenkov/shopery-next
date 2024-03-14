@@ -1,0 +1,26 @@
+@import '../../styles/mixins/box.scss';
+@import '../../styles/mixins/flexbox.scss';
+@import '../../styles/mixins/text-styles.scss';
+
+.rating {
+  @include flex-center-vertical;
+}
+
+.star {
+  @include box(16px);
+
+  position: relative;
+
+  color: var(--gray-200);
+
+  &.filled {
+    color: var(--orange);
+  }
+}
+
+.text {
+  @include body-s;
+
+  margin-left: 3px;
+  line-height: 1.429;
+}

@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { FC, memo } from 'react';
 import cn from 'classnames';
 import cls from './Text.module.scss';
 
@@ -52,7 +52,7 @@ const mapSizeToHeaderTag: Record<TextSize, HeaderTagType> = {
   [TextSize.XXL]: 'h1',
 };
 
-export const Text = memo((props: TextProps) => {
+export const Text: FC<TextProps> = memo((props) => {
   const {
     className,
     text,

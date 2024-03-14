@@ -1,4 +1,4 @@
-import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+import { DetailedHTMLProps, FC, HTMLAttributes, memo } from 'react';
 import Image from 'next/image';
 
 export enum LogoSize {
@@ -11,7 +11,7 @@ interface LogoProps
   size?: LogoSize;
 }
 
-export const Logo: FC<LogoProps> = ({ size }) => {
+export const Logo: FC<LogoProps> = memo(({ size }) => {
   switch (size) {
     case LogoSize.SMALL:
       return (
@@ -27,4 +27,4 @@ export const Logo: FC<LogoProps> = ({ size }) => {
         />
       );
   }
-};
+});
