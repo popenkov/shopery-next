@@ -16,7 +16,7 @@ export const StarRating: FC<StarRatingProps> = memo(({ value }) => {
   return (
     <div className={cls.rating}>
       {ratingArray.map((_, index) => {
-        const isFilled = index <= value;
+        const isFilled = index < value;
         return (
           <span
             key={`rating-${index}`}

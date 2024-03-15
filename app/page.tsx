@@ -9,8 +9,10 @@ import {
   Text,
   TextSize,
   TextWeight,
+  Product,
+  ProductLarge,
+  ProductPreview,
 } from '@/src/shared/ui';
-import { Product, ProductLarge, ProductPreview } from '@/src/shared/ui/Product';
 
 export default function Home() {
   return (
@@ -32,7 +34,7 @@ export default function Home() {
         title="Potatos"
         price="$14.99"
         priceOld="$19.99"
-        rating={3}
+        rating={5}
       />
 
       <Product
@@ -41,7 +43,7 @@ export default function Home() {
         title="Potatos"
         price="$14.99"
         priceOld="$19.99"
-        rating={3}
+        rating={4}
       />
 
       <ProductLarge
