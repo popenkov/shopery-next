@@ -3,21 +3,11 @@ import { FC, memo } from 'react';
 import cls from './Breadcrumps.module.scss';
 import ChevronIcon from '../../../../public/icons/icon__chevron-down.svg';
 import HomeIcon from '../../../../public/icons/icon__home.svg';
+import { PAGE_ROUTES } from '../../constants/router';
 
 interface BreadcrumbsProps {
   items: string[];
 }
-
-const PAGE_ROUTES = [
-  {
-    href: '/',
-    name: 'Home',
-  },
-  {
-    href: '/catalog',
-    name: 'Catalog',
-  },
-];
 
 export const Breadcrumbs: FC<BreadcrumbsProps> = memo(({ items }) => {
   const homeLink = (
