@@ -13,6 +13,8 @@ import {
   ProductLarge,
   ProductPreview,
   Input,
+  Radio,
+  Checkbox,
 } from '@/src/shared/ui';
 
 export default function Home() {
@@ -57,6 +59,11 @@ export default function Home() {
       />
 
       <Input type="search" />
+
+      <Radio name="test" value="1" />
+      <Radio name="test" value="2" />
+      <Checkbox name="test-check" value="1" />
+      <Checkbox name="test-check" value="2" />
     </>
   );
 }

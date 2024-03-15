@@ -1,0 +1,74 @@
+@import '../../styles/mixins/flexbox';
+@import '../../styles/mixins/box';
+@import '../../styles/mixins/text-styles';
+@import '../../styles/mixins/absolute-positioning';
+
+.input {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  opacity: 0;
+}
+
+.fakeInput {
+  @include flex-center;
+  @include box(20px);
+
+  position: relative;
+  border: 1px solid var(--gray-200);
+  border-radius: 50%;
+  cursor: pointer;
+
+  &::after {
+    @include absolute-center;
+    @include box(12px);
+
+    border-radius: 50%;
+    transition: background 0.125s ease;
+    content: '';
+  }
+}
+
+.input:checked + .fakeInput {
+  border-color: var(--primary);
+  border-width: 2px;
+}
+
+.input:checked + .fakeInput::after {
+  background: var(--primary);
+}
+
+.label {
+  @include body-s;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.amount {
+  @include body-s;
+
+  color: var(--gray-500);
+}
+
+.label + .amount {
+  margin-left: -4px;
+}
+
+.radio {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  justify-self: start;
+  transition: var(--transition);
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--primary);
+
+      .fakeInput {
+        border-color: var(--primary);
+      }
+    }
+  }
+}
