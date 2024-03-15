@@ -12,6 +12,7 @@ import {
   Product,
   ProductLarge,
   ProductPreview,
+  Input,
 } from '@/src/shared/ui';
 
 export default function Home() {
@@ -54,6 +55,8 @@ export default function Home() {
         priceOld="$19.99"
         rating={3}
       />
+
+      <Input type="search" />
     </>
   );
 }

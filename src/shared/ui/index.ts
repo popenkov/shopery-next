@@ -6,3 +6,4 @@ export * from './StarRating';
 export * from './Tag';
 export * from './Product';
 export * from './Breadcrumps';
+export * from './Input';
