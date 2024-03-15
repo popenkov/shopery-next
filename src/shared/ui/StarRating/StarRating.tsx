@@ -1,5 +1,3 @@
-'use client';
-
 import { DetailedHTMLProps, FC, HTMLAttributes, memo } from 'react';
 
 import cls from './StarRating.module.scss';

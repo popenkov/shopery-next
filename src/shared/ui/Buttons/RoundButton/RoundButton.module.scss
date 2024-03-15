@@ -44,7 +44,7 @@
     }
   }
 
-  .primary-inversed {
+  &.primary-inversed {
     background-color: var(--back-primary);
     box-shadow: 0 0 8px 0 var(--gray-200);
 
