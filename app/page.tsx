@@ -16,6 +16,7 @@ import {
   Radio,
   Checkbox,
   Video,
+  InstagramCard,
 } from '@/src/shared/ui';
 
 export default function Home() {
@@ -71,6 +72,8 @@ export default function Home() {
         background="/images/video-preview.jpg"
         title="We’re the Best Organic Farm in the World"
       />
+
+      <InstagramCard />
     </>
   );
 }

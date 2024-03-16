@@ -1,8 +1,9 @@
-import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+'use client';
+
+import { DetailedHTMLProps, FC, HTMLAttributes, useState } from 'react';
 import cn from 'classnames';
 import cls from './Video.module.scss';
 import PlayIcon from '../../../../public/icons/icon__play-button.svg';
-import { Text } from '..';
 
 interface VideoProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
@@ -14,6 +15,9 @@ interface VideoProps
 
 export const Video: FC<VideoProps> = (props) => {
   const { src, background, title, hasOverlay = true } = props;
+
+  const [isVideoShown, setIsVideoShown] = useState(false);
+
   return (
     <div className={cls.video}>
       <div
@@ -29,6 +33,13 @@ export const Video: FC<VideoProps> = (props) => {
             <PlayIcon className={cls.playIcon} />
           </button>
         </div>
+        <iframe
+          className={cls.iframe}
+          src="${videoURL}?autoplay=1&mute=1"
+          frameBorder="0"
+          allowFullScreen
+          allow="autoplay"
+        ></iframe>
       </div>
     </div>
   );
