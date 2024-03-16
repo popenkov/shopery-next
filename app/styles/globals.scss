@@ -1,5 +1,11 @@
 @import './variables.scss';
 
+@font-face {
+  font-weight: 400;
+  font-family: 'Segoescript';
+  src: url('/fonts/Segoescript.woff2') format('woff');
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

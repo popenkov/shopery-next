@@ -15,6 +15,7 @@ import {
   Input,
   Radio,
   Checkbox,
+  Video,
 } from '@/src/shared/ui';
 
 export default function Home() {
@@ -64,6 +65,12 @@ export default function Home() {
       <Radio name="test" value="2" />
       <Checkbox name="test-check" value="1" />
       <Checkbox name="test-check" value="2" />
+
+      <Video
+        src="https://www.youtube.com/embed/2eX2TCfiFuY"
+        background="/images/video-preview.jpg"
+        title="We’re the Best Organic Farm in the World"
+      />
     </>
   );
 }
