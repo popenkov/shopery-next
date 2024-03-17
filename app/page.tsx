@@ -18,6 +18,7 @@ import {
   Video,
   InstagramCard,
   AppSelect,
+  Banner,
 } from '@/src/shared/ui';
 
 export default function Home() {
@@ -83,15 +84,11 @@ export default function Home() {
           { value: 'vanilla', label: 'Vanilla' },
         ]}
       />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <Banner
+        background="/images/banner-s-2.jpg"
+        subtitle="test"
+        title="test"
+      />
     </>
   );
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import {
+import React, {
   DetailedHTMLProps,
   FC,
   HTMLAttributes,
@@ -24,6 +24,7 @@ export const Video: FC<VideoProps> = (props) => {
   const { src, background, title, hasOverlay = true } = props;
 
   const containerRef = useRef<HTMLDivElement>(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   const [isVideoShown, setIsVideoShown] = useState(false);
 
@@ -32,32 +33,39 @@ export const Video: FC<VideoProps> = (props) => {
   };
 
   useEffect(() => {
-    if (isVideoShown && containerRef.current) {
-      containerRef.current.innerHTML = `        <iframe
-          className={cls.iframe}
-          src="${src}?autoplay=1&mute=1"
-          frameBorder="0"
-          allowFullScreen
-          allow="autoplay"
-        ></iframe>`;
+    if (isVideoShown && iframeRef.current) {
+      iframeRef.current.src = `${src}?autoplay=1&mute=1`;
+    } else if (iframeRef.current) {
+      iframeRef.current.src = '';
     }
-  }, [isVideoShown, containerRef.current]);
+  }, [isVideoShown, src]);
 
   return (
     <div className={cls.video} ref={containerRef}>
       <div
         className={cn(cls.preview, {
-          [cls.withOverlay]: hasOverlay,
+          [cls.withOverlay]: hasOverlay && !isVideoShown,
         })}
         style={{ backgroundImage: `url("${background}")` }}
       >
-        <div className={cls.text}>
-          <p className={cls.subtitle}>Video</p>
-          <h2 className={cls.title}>{title}</h2>
-          <button className={cls.playButton} onClick={handlePlayButtonClick}>
-            <PlayIcon className={cls.playIcon} />
-          </button>
-        </div>
+        {!isVideoShown && (
+          <div className={cls.text}>
+            <p className={cls.subtitle}>Video</p>
+            <h2 className={cls.title}>{title}</h2>
+            <button className={cls.playButton} onClick={handlePlayButtonClick}>
+              <PlayIcon className={cls.playIcon} />
+            </button>
+          </div>
+        )}
+        {isVideoShown && (
+          <iframe
+            ref={iframeRef}
+            className={cls.iframe}
+            frameBorder="0"
+            allowFullScreen
+            allow="autoplay"
+          ></iframe>
+        )}
       </div>
     </div>
   );
