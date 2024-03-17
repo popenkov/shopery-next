@@ -79,3 +79,5 @@ export const Text: FC<TextProps> = memo((props) => {
     </div>
   );
 });
+
+Text.displayName = 'Text';

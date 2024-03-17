@@ -31,3 +31,5 @@ export const StarRating: FC<StarRatingProps> = memo(({ value }) => {
     </div>
   );
 });
+
+StarRating.displayName = 'StarRating';

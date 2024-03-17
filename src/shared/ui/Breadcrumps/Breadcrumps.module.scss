@@ -4,8 +4,8 @@
 .breadcrumps {
   background: linear-gradient(
       95.02deg,
-      rgba(0, 0, 0, 0.7) 0.034%,
-      rgba(0, 0, 0, 0) 91.306%
+      rgb(0 0 0 / 70%) 0.034%,
+      rgb(0 0 0 / 0%) 91.306%
     ),
     url('/images/breadcrumbs-img.jpg');
 }
@@ -18,7 +18,7 @@
   padding: 48px 0;
   overflow-y: auto;
 
-  @media (max-width: 724px) {
+  @media (width <= 724px) {
     align-items: flex-start;
   }
 
@@ -50,9 +50,9 @@
   @include flex-center-vertical;
 
   gap: 8px;
-  text-decoration: none;
   color: var(--gray-400);
   white-space: nowrap;
+  text-decoration: none;
 
   &.active {
     color: var(--primary);

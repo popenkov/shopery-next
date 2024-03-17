@@ -23,9 +23,9 @@
   @include flex-column;
 
   position: absolute;
-  z-index: 2;
   top: 20px;
   right: 20px;
+  z-index: 2;
   gap: 6px;
   visibility: hidden;
   opacity: 0;

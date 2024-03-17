@@ -21,6 +21,7 @@
           "/^return/",
           "/^each/",
           "/^while/",
+          "mixin",
           "use"
         ]
       }

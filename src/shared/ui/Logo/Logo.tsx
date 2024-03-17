@@ -28,3 +28,5 @@ export const Logo: FC<LogoProps> = memo(({ size }) => {
       );
   }
 });
+
+Logo.displayName = 'Logo';

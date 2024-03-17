@@ -58,3 +58,5 @@ export const Breadcrumbs: FC<BreadcrumbsProps> = memo(({ items }) => {
     </div>
   );
 });
+
+Breadcrumbs.displayName = 'Breadcrumbs';

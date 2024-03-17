@@ -48,7 +48,7 @@ export const Product: FC<ProductProps> = (props) => {
       </div>
       <div className={cls.description}>
         <div>
-          <Link className={cls.link} href="#">
+          <Link className={cls.link} href={href}>
             <Text text={title} size={TextSize.S} className={cls.title} />
           </Link>
           <div className={cls.price}>

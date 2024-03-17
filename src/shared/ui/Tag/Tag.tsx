@@ -26,3 +26,5 @@ export const Tag: FC<TagProps> = memo(({ content, variant }) => {
     </span>
   );
 });
+
+Tag.displayName = 'Tag';

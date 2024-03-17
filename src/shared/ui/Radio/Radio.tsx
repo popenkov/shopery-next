@@ -47,7 +47,9 @@ export const Radio = memo((props: RadioProps) => {
       />
       <span className={cls.fakeInput} />
       {placeholder && <span className={cls.placeholder}>{placeholder}</span>}
-      {amount && <span className={cls.amount}>`( ${amount} )`</span>}
+      {amount && <span className={cls.amount}>( ${amount} )</span>}
     </label>
   );
 });
+
+Radio.displayName = 'Radio';

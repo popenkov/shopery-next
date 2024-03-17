@@ -1,11 +1,11 @@
 @import '../../styles/mixins/text-styles.scss';
 
 .link {
+  text-decoration: none;
   border: none;
   border-radius: 43px;
   cursor: pointer;
   transition: background-color var(--transition);
-  text-decoration: none;
 
   &.primary {
     color: var(--front-primary-inversed);

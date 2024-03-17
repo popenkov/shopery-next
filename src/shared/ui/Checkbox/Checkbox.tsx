@@ -20,15 +20,8 @@ interface CheckboxProps extends HTMLCheckboxProps {
 }
 
 export const Checkbox = memo((props: CheckboxProps) => {
-  const {
-    className,
-    value,
-    onChange,
-    placeholder,
-    name,
-
-    ...otherProps
-  } = props;
+  const { className, value, onChange, placeholder, name, ...otherProps } =
+    props;
   const ref = useRef<HTMLInputElement>(null);
 
   const handleCheckboxChange = (evt: ChangeEvent<HTMLInputElement>) => {
@@ -54,3 +47,5 @@ export const Checkbox = memo((props: CheckboxProps) => {
     </label>
   );
 });
+
+Checkbox.displayName = 'Checkbox';

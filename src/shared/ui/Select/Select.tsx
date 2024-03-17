@@ -26,7 +26,6 @@ export const AppSelect: FC<SelectProps> = (props) => {
   const handleSelectChange = (
     newValue: OnChangeValue<SelectOption, boolean>
   ) => {
-    console.log(newValue);
     const stringValue = (newValue as SelectOption).value;
     setSelectedOption(newValue as SelectOption);
     onChange?.(stringValue);

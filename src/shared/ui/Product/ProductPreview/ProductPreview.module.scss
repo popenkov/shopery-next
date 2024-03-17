@@ -71,9 +71,9 @@
   min-width: 282px;
   max-width: 424px;
   min-height: 118px;
+  overflow: hidden;
   border: var(--card-border);
   border-radius: 6px;
-  overflow: hidden;
 
   @media (hover: hover) {
     &:hover {

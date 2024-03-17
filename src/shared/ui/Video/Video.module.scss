@@ -5,19 +5,21 @@
 @import '../../styles/mixins/text-styles.scss';
 
 .video {
-  $block-name: &; // .element
+  $block-name: &;
 
-  overflow: hidden;
-  border-radius: 20px;
+ // .element
+
+  overflow: hidden;.elementoverflow.elementoverflow.elementoverflow.elementoverflow.elementoverflow.elementoverflow.elementoverflow.elementoverflow.elementoverflow.elementoverflow.elementoverflow.elementoverflow
+  border-radius: 20px;border-radiusborder-radiusborder-radiusborder-radiusborder-radiusborder-radiusborder-radiusborder-radiusborder-radiusborder-radiusborder-radius
 }
 
 .preview {
   position: relative;
   width: 100%;
   min-height: 400px;
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
   aspect-ratio: 66 / 37;
 
   &.withOverlay {
