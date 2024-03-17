@@ -17,6 +17,7 @@ import {
   Checkbox,
   Video,
   InstagramCard,
+  AppSelect,
 } from '@/src/shared/ui';
 
 export default function Home() {
@@ -74,6 +75,23 @@ export default function Home() {
       />
 
       <InstagramCard />
+
+      <AppSelect
+        options={[
+          { value: 'chocolate', label: 'Chocolate' },
+          { value: 'strawberry', label: 'Strawberry' },
+          { value: 'vanilla', label: 'Vanilla' },
+        ]}
+      />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </>
   );
 }

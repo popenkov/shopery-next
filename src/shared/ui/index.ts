@@ -11,3 +11,4 @@ export * from './Radio';
 export * from './Checkbox';
 export * from './Video';
 export * from './InstagramCard';
+export * from './Select';
