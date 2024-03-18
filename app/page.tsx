@@ -1,3 +1,5 @@
+import { ProductInterface } from '@/src/shared/interfaces/common';
+import { MAIN_PAGE_DATA } from '@/src/shared/mock/mainPage';
 import {
   AppLink,
   Button,
@@ -19,9 +21,13 @@ import {
   InstagramCard,
   AppSelect,
   Banner,
+  Tabs,
+  TabItem,
 } from '@/src/shared/ui';
 
-export default function Home() {
+export default async function Home() {
+  const productTabs = MAIN_PAGE_DATA.productTabs;
+
   return (
     <>
       <AppLink href={'#'}>gsdfgdfg</AppLink>
@@ -89,6 +95,8 @@ export default function Home() {
         subtitle="test"
         title="test"
       />
+
+      <Tabs tabs={productTabs} />
     </>
   );
 }

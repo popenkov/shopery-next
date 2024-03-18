@@ -13,3 +13,5 @@ export * from './Video';
 export * from './InstagramCard';
 export * from './Select';
 export * from './Banner';
+export * from './Tabs';
+export * from './MobileSlider';
