@@ -30,7 +30,7 @@ export default async function Home() {
 
   return (
     <>
-      <AppLink href={'#'}>gsdfgdfg</AppLink>
+      {/* <AppLink href={'#'}>gsdfgdfg</AppLink>
       <Button>321132</Button>
 
       <Text text="test" weight={TextWeight.SEMIBOLD} size={TextSize.L} />
@@ -94,7 +94,7 @@ export default async function Home() {
         background="/images/banner-s-2.jpg"
         subtitle="test"
         title="test"
-      />
+      /> */}
 
       <Tabs tabs={productTabs} />
     </>

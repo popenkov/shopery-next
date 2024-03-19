@@ -119,7 +119,7 @@
 
   @media (hover: hover) {
     &:hover {
-      border: var(--card-hover-border);
+      border-color: var(--card-hover-border);
       box-shadow: var(--card-hover-shadow);
 
       .title {

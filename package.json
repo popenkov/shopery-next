@@ -30,7 +30,8 @@
     "stylelint-config-rational-order": "0.1.2",
     "stylelint-config-standard": "36.0.0",
     "stylelint-order": "6.0.4",
-    "stylelint-scss": "6.1.0"
+    "stylelint-scss": "6.1.0",
+    "swiper": "^11.0.7"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "14.1.0",
