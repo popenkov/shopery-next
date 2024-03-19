@@ -23,6 +23,7 @@ import {
   Banner,
   Tabs,
   TabItem,
+  PhoneLink,
 } from '@/src/shared/ui';
 
 export default async function Home() {
@@ -30,6 +31,7 @@ export default async function Home() {
 
   return (
     <>
+      <PhoneLink phone={'(219) 555-0114'} href="2195550114" />
       <AppSelect
         options={[
           { value: 'chocolate', label: 'Chocolate' },
