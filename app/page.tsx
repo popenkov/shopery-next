@@ -99,7 +99,7 @@ export default async function Home() {
         title="test"
       /> */}
       <RangeSlider min={50} max={2000} />
-      <Tabs tabs={productTabs} />
+      <Tabs<ProductInterface> tabs={productTabs} />
     </>
   );
 }

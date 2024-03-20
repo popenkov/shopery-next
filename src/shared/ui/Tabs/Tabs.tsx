@@ -1,12 +1,4 @@
-'use client';
-
-import {
-  DetailedHTMLProps,
-  FC,
-  HTMLAttributes,
-  useEffect,
-  useState,
-} from 'react';
+import { useEffect, useState } from 'react';
 import cn from 'classnames';
 
 import cls from './Tabs.module.scss';
@@ -20,17 +12,21 @@ export interface TabItem<T> {
   content: T[];
 }
 
-// todo WIP
-
 interface TabsProps<T> {
   tabs: TabItem<T>[];
   title?: string;
   onTabChange?: (value: string) => void;
 }
 
-export const Tabs = <T,>({ tabs, title, onTabChange }: TabsProps<T>) => {
+export const Tabs = <T extends ProductInterface>({
+  tabs,
+  title,
+  onTabChange,
+}: TabsProps<T>) => {
   const [selectedTab, setSelectedTab] = useState<string>(tabs?.[0].id);
-  const [tabContent, setTabContent] = useState<T[] | undefined>([]);
+  const [tabContent, setTabContent] = useState<T[]>(
+    () => tabs?.[0].content || []
+  );
 
   const handleTabChange = (value: string) => {
     setSelectedTab(value);
@@ -40,8 +36,8 @@ export const Tabs = <T,>({ tabs, title, onTabChange }: TabsProps<T>) => {
 
   useEffect(() => {
     const activeContent = tabs?.find((t) => t.id === selectedTab)?.content;
-    setTabContent(activeContent);
-  }, [selectedTab]);
+    setTabContent(activeContent || []);
+  }, [selectedTab, tabs]);
 
   return (
     <div className="section section--green">
@@ -71,23 +67,12 @@ export const Tabs = <T,>({ tabs, title, onTabChange }: TabsProps<T>) => {
         <div className={cls.panes}>
           <div className={cls.pane}>
             <div className="grid grid__four-items products-tabs__items products-tabs__items--desktop container">
-              {tabContent?.map((item) => {
-                return <ProductLarge {...(item as ProductInterface)} />;
+              {tabContent.map((item) => {
+                return <ProductLarge {...item} />;
               })}
             </div>
-            {/* todo slider mobile */}
             <div className="container products-tabs__items--mobile mobile-slider">
               <ProductSlider data={tabContent} />
-              {/* <div className="swiper mobile-slider__slider js-mobile-slider">
-                <div className="swiper-wrapper mobile-slider__wrapper">
-                  <div className="swiper-slide mobile-slider__slide">
-                    {tabContent?.map((item) => {
-                      return <ProductLarge {...(item as ProductInterface)} />;
-                    })}
-                  </div>
-                </div>
-                <div className="mobile-slider__pagination swiper-pagination"></div>
-              </div> */}
             </div>
           </div>
         </div>

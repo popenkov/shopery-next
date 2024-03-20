@@ -20,7 +20,6 @@ export const RangeSlider: FC<RangeSliderProps> = (props) => {
   const [range, setRange] = useState<RangeValueInterface>({ min, max });
 
   const handleSliderUpdate = (value: number | number[]) => {
-    console.log(value);
     if (Array.isArray(value)) {
       const [min, max] = value;
       setRange({ min, max });

@@ -1,5 +1,6 @@
 export interface TagInterface {
-  content: string;
+  type: string;
+  text: string;
 }
 
 export interface ProductInterface {
