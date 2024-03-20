@@ -26,10 +26,9 @@ import {
   PhoneLink,
   RangeSlider,
 } from '@/src/shared/ui';
+import { ProductTab } from '@/src/widgets/ProductTab';
 
 export default async function Home() {
-  const productTabs = MAIN_PAGE_DATA.productTabs;
-
   return (
     <>
       {/* <AppLink href={'#'}>gsdfgdfg</AppLink>
@@ -98,8 +97,8 @@ export default async function Home() {
         subtitle="test"
         title="test"
       /> */}
+      <ProductTab />
       <RangeSlider min={50} max={2000} />
-      <Tabs<ProductInterface> tabs={productTabs} />
     </>
   );
 }

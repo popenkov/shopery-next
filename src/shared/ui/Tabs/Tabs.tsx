@@ -1,10 +1,12 @@
+'use client';
 import { useEffect, useState } from 'react';
 import cn from 'classnames';
 
 import cls from './Tabs.module.scss';
-import { ProductLarge } from '..';
-import { ProductInterface } from '../../interfaces/common';
-import { ProductSlider } from '../ProductSlider/ProductSlider';
+
+interface SliderProps<T> {
+  data: T[];
+}
 
 export interface TabItem<T> {
   id: string;
@@ -16,17 +18,19 @@ interface TabsProps<T> {
   tabs: TabItem<T>[];
   title?: string;
   onTabChange?: (value: string) => void;
+  tabContent: (item: T) => JSX.Element;
+  sliderContent?: (props: SliderProps<T>) => JSX.Element;
 }
 
-export const Tabs = <T extends ProductInterface>({
+export const Tabs = <T extends unknown>({
   tabs,
   title,
   onTabChange,
+  tabContent,
+  sliderContent,
 }: TabsProps<T>) => {
   const [selectedTab, setSelectedTab] = useState<string>(tabs?.[0].id);
-  const [tabContent, setTabContent] = useState<T[]>(
-    () => tabs?.[0].content || []
-  );
+  const [tabContentState, setTabContentState] = useState<T[]>([]);
 
   const handleTabChange = (value: string) => {
     setSelectedTab(value);
@@ -36,7 +40,7 @@ export const Tabs = <T extends ProductInterface>({
 
   useEffect(() => {
     const activeContent = tabs?.find((t) => t.id === selectedTab)?.content;
-    setTabContent(activeContent || []);
+    setTabContentState(activeContent || []);
   }, [selectedTab, tabs]);
 
   return (
@@ -67,13 +71,15 @@ export const Tabs = <T extends ProductInterface>({
         <div className={cls.panes}>
           <div className={cls.pane}>
             <div className="grid grid__four-items products-tabs__items products-tabs__items--desktop container">
-              {tabContent.map((item) => {
-                return <ProductLarge {...item} />;
+              {tabContentState?.map((item) => {
+                return tabContent(item);
               })}
             </div>
-            <div className="container products-tabs__items--mobile mobile-slider">
-              <ProductSlider data={tabContent} />
-            </div>
+            {sliderContent && (
+              <div className="container products-tabs__items--mobile mobile-slider">
+                {sliderContent({ data: tabContentState })}
+              </div>
+            )}
           </div>
         </div>
       </div>
