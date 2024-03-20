@@ -21,6 +21,7 @@
     "D": "1.0.0",
     "next": "14.1.0",
     "next-plugin-svgr": "^1.1.10",
+    "rc-slider": "^10.5.0",
     "react": "18",
     "react-dom": "18",
     "react-select": "^5.8.0",

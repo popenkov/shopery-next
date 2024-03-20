@@ -15,3 +15,5 @@ export * from './Select';
 export * from './Banner';
 export * from './Tabs';
 export * from './ProductSlider';
+export * from './PhoneLink';
+export * from './RangeSlider';

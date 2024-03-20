@@ -23,6 +23,8 @@ import {
   Banner,
   Tabs,
   TabItem,
+  PhoneLink,
+  RangeSlider,
 } from '@/src/shared/ui';
 
 export default async function Home() {
@@ -83,6 +85,7 @@ export default async function Home() {
 
       <InstagramCard />
 
+      <RangeSlider />
       <AppSelect
         options={[
           { value: 'chocolate', label: 'Chocolate' },

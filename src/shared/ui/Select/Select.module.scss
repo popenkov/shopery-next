@@ -1,1 +1,29 @@
-// todo styling is in progress
+@import '../../styles/mixins/box.scss';
+
+.select {
+  :global(.custom-select__indicator-separator) {
+    display: none;
+  }
+
+  :global(.custom-select__control) {
+    min-width: 166px;
+    padding: 0 16px;
+    border: 1px solid var(--gray-300);
+  }
+
+  :global(.custom-select__indicator) {
+    transform: rotate(0deg);
+    transition: transform var(--transition);
+
+    svg {
+      @include box(16px);
+
+      color: var(--gray-700);
+    }
+  }
+
+  :global(.custom-select__control--menu-is-open)
+    :global(.custom-select__indicator) {
+    transform: rotate(180deg);
+  }
+}
