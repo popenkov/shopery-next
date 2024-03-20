@@ -1,3 +1,5 @@
+'use client';
+
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';

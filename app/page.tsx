@@ -85,7 +85,7 @@ export default async function Home() {
 
       <InstagramCard />
 
-      <RangeSlider />
+      
       <AppSelect
         options={[
           { value: 'chocolate', label: 'Chocolate' },
@@ -98,7 +98,7 @@ export default async function Home() {
         subtitle="test"
         title="test"
       /> */}
-
+      <RangeSlider min={50} max={2000} />
       <Tabs tabs={productTabs} />
     </>
   );

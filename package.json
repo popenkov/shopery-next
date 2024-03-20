@@ -20,11 +20,11 @@
     "classnames": "2.5.1",
     "D": "1.0.0",
     "next": "14.1.0",
-    "next-plugin-svgr": "^1.1.10",
-    "rc-slider": "^10.5.0",
+    "next-plugin-svgr": "1.1.10",
+    "rc-slider": "10.5.0",
     "react": "18",
     "react-dom": "18",
-    "react-select": "^5.8.0",
+    "react-select": "5.8.0",
     "sass": "1.70.0",
     "storybook": "7.6.17",
     "stylelint": "16.2.1",
@@ -32,7 +32,7 @@
     "stylelint-config-standard": "36.0.0",
     "stylelint-order": "6.0.4",
     "stylelint-scss": "6.1.0",
-    "swiper": "^11.0.7"
+    "swiper": "11.0.7"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "14.1.0",
@@ -43,7 +43,7 @@
     "@storybook/blocks": "7.6.17",
     "@storybook/nextjs": "7.6.17",
     "@storybook/test": "7.6.17",
-    "@svgr/webpack": "^8.1.0",
+    "@svgr/webpack": "8.1.0",
     "@types/node": "20",
     "@types/react": "18",
     "@types/react-dom": "18",

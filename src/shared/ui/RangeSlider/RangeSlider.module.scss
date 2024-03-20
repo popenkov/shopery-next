@@ -1,0 +1,57 @@
+@import '../../styles/breakpoints';
+@import '../../styles/mixins/text-styles.scss';
+@import '../../styles/mixins/box.scss';
+
+.range {
+  padding: 16px 0 8px;
+}
+
+.text {
+  @include body-s;
+
+  color: var(--gray-700);
+}
+
+.textValue {
+  color: var(--gray-900);
+  font-weight: 500;
+}
+
+.slider {
+  height: 6px;
+  background-color: var(--gray-100);
+  border-radius: 15px;
+}
+
+.slider + .text {
+  display: block;
+  margin-top: 22px;
+}
+
+.rangeSlider {
+  :global(.rc-slider-rail) {
+    height: 6px;
+    border-radius: 15px;
+    background-color: var(--gray-100);
+  }
+
+  :global(.rc-slider-track) {
+    height: 6px;
+    background-color: var(--primary);
+    border-radius: 15px;
+  }
+
+  :global(.rc-slider-handle) {
+    @include box(18px);
+
+    background-color: var(--back-primary);
+    border: 2px solid var(--primary);
+    border-radius: 15px;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--primary);
+      }
+    }
+  }
+}
