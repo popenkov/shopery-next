@@ -6,13 +6,23 @@ import cls from './Banner.module.scss';
 import ArrowIcon from '../../../../public/icons/icon__arrow.svg';
 import { AppLink, AppLinkTheme } from '..';
 
-interface BannerProps
+export enum BannerType {
+  LEFT = 'left',
+  RIGHT = 'right',
+  WHITE = 'white',
+}
+
+export interface BannerProps
   extends DetailedHTMLProps<
     HTMLAttributes<HTMLAnchorElement>,
     HTMLAnchorElement
   > {
+  id: string;
+  type: `${BannerType}`[];
   background: string;
   subtitle: string;
+  price: string;
+  link: string;
   title?: string;
   text?: string;
   textPosition?: 'left' | 'right';
@@ -29,7 +39,7 @@ export const Banner: FC<BannerProps> = (props) => {
     >
       <div
         className={cls.image}
-        style={{ background: `center / cover  url(${background})` }}
+        style={{ background: `center / cover  url("/images/${background}")` }}
       ></div>
       <div className={cls.content}>
         <p className={cls.subtitle}>{subtitle}</p>

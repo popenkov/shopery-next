@@ -1,4 +1,5 @@
 import { MainPageData } from '../interfaces/main-page';
+import { BannerType } from '../ui';
 
 export const MAIN_PAGE_DATA: MainPageData = {
   header: {
@@ -117,7 +118,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
         {
           href: '#',
           img: '/images/product-apple.jpg',
-          title: 'Green Apple',
+          title: '1 Green Apple',
           price: '$14.99',
           priceOld: '$20.99',
           rating: 4,
@@ -131,7 +132,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
         {
           href: '#',
           img: '/images/product-mango.jpg',
-          title: 'Surjapur Mango',
+          title: '1 Surjapur Mango',
           price: '$14.99',
           priceOld: '',
           rating: 4,
@@ -139,7 +140,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
         {
           href: '#',
           img: '/images/product-tomatos.jpg',
-          title: 'Red Tomatos',
+          title: '1 Red Tomatos',
           price: '$14.99',
           priceOld: '',
           rating: 4,
@@ -147,7 +148,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
         {
           href: '#',
           img: '/images/product-cauliflower.jpg',
-          title: 'Fresh Cauliflower',
+          title: '1 Fresh Cauliflower',
           price: '$14.99',
           priceOld: '',
           rating: 4,
@@ -155,7 +156,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
         {
           href: '#',
           img: '/images/product-letucce.jpg',
-          title: 'Green Lettuce',
+          title: '1 Green Lettuce',
           price: '$14.99',
           priceOld: '',
           rating: 4,
@@ -163,7 +164,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
         {
           href: '#',
           img: '/images/product-eggplant.jpg',
-          title: 'Eggplant',
+          title: '1 Eggplant',
           price: '$14.99',
           priceOld: '',
           rating: 4,
@@ -171,7 +172,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
         {
           href: '#',
           img: '/images/product-chilli.jpg',
-          title: 'Green Chilli',
+          title: '1 Green Chilli',
           price: '$14.99',
           priceOld: '',
           rating: 4,
@@ -179,7 +180,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
         {
           href: '#',
           img: '/images/product-eggplant-dark.jpg',
-          title: 'Eggplant',
+          title: '1 Eggplant',
           price: '$14.99',
           priceOld: '',
           rating: 4,
@@ -346,7 +347,8 @@ export const MAIN_PAGE_DATA: MainPageData = {
   ],
   banners: [
     {
-      type: 'left, white',
+      id: '1',
+      type: ['left', 'white'],
       background: 'banner-s-1.jpg',
       subtitle: '',
       title: '100% Fresh Cow Milk',
@@ -355,7 +357,8 @@ export const MAIN_PAGE_DATA: MainPageData = {
       link: '#',
     },
     {
-      type: 'right',
+      id: '2',
+      type: ['right'],
       background: 'banner-s-2.jpg',
       subtitle: 'Drink Sale',
       title: 'Water & Soft Drink',
@@ -364,7 +367,8 @@ export const MAIN_PAGE_DATA: MainPageData = {
       link: '#',
     },
     {
-      type: 'left',
+      id: '3',
+      type: ['left'],
       background: 'banner-s-3.jpg',
       subtitle: '100% Organic',
       title: 'Quick Breakfast',

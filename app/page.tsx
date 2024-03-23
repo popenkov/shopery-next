@@ -26,6 +26,7 @@ import {
   PhoneLink,
   RangeSlider,
 } from '@/src/shared/ui';
+import { Banners } from '@/src/widgets/Banners';
 import { ProductTab } from '@/src/widgets/ProductTab';
 
 export default async function Home() {
@@ -98,6 +99,7 @@ export default async function Home() {
         title="test"
       /> */}
       <ProductTab />
+      <Banners />
       <RangeSlider min={50} max={2000} />
     </>
   );
