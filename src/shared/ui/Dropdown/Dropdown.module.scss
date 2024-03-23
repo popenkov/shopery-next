@@ -1,0 +1,78 @@
+@import '../../styles/mixins/flexbox.scss';
+@import '../../styles/mixins/box.scss';
+
+.content {
+  @include flex-column;
+
+  position: absolute;
+  top: 29px;
+  left: 50%;
+  gap: 12px;
+  width: 100px;
+  padding: 16px 22px;
+  background-color: var(--gray-800);
+  border-radius: 4px;
+  box-shadow: 0 6px 20px 0 rgb(0 0 0 / 12%);
+  transform: translateX(-50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: all var(--transition);
+}
+
+.item {
+  list-style: none;
+}
+
+.chevron {
+  @include box(12px);
+
+  transform: rotate(0);
+  transition: all var(--transition);
+}
+
+.button {
+  @include flex-center-vertical;
+
+  gap: 3px;
+  padding: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--primary);
+    }
+  }
+}
+
+.link {
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--primary);
+    }
+  }
+}
+
+.dropdown {
+  position: relative;
+
+  &:hover {
+    color: var(--front-primary-inversed);
+
+    .content {
+      visibility: visible;
+      opacity: 1;
+      transition: all var(--transition);
+    }
+
+    .chevron {
+      transform: rotate(180deg);
+    }
+  }
+}

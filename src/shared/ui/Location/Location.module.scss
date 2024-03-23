@@ -1,0 +1,28 @@
+@import './../../styles/mixins/flexbox.scss';
+@import './../../styles/mixins/box.scss';
+@import './../../styles/breakpoints';
+
+.location {
+  @include flex-center-vertical;
+
+  gap: 8px;
+
+  @media screen and (max-width: $screen-tl) {
+    display: none;
+
+    &.mobile {
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+}
+
+.icon {
+  width: 15px;
+  min-width: 15px;
+  height: 18px;
+
+  @media screen and (max-width: $screen-tl) {
+    @include box(26px);
+  }
+}

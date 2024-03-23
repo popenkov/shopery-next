@@ -1,0 +1,18 @@
+@import '../../../shared/styles/_breakpoints';
+@import '../../../shared/styles/mixins/flexbox.scss';
+
+.top {
+  padding: 11px 0 13px;
+  color: var(--gray-300);
+  background-color: var(--gray-800);
+}
+
+.content {
+  @include flex-center-sb;
+
+  gap: 35px;
+
+  @media screen and (max-width: $screen-d) {
+    gap: 15px;
+  }
+}

@@ -16,4 +16,6 @@ export * from './Banner';
 export * from './Tabs';
 export * from './PhoneLink';
 export * from './RangeSlider';
-// export * from './MobileSlider';
+export * from './MobileSlider';
+export * from './Dropdown';
+export * from './Location';

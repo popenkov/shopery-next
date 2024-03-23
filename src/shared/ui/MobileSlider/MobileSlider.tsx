@@ -25,7 +25,12 @@ export const MobileSlider = <T,>({
 
   return (
     <div className={cls.slider} {...restProps}>
-      <Swiper spaceBetween={20} slidesPerView={'auto'} className={cls.swiper}>
+      <Swiper
+        spaceBetween={20}
+        slidesPerView={'auto'}
+        loop
+        className={cls.swiper}
+      >
         {data.map((item, index) => {
           return <SwiperSlide key={index}>{render(item)}</SwiperSlide>;
         })}
