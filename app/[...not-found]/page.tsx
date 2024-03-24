@@ -1,7 +1,1 @@
-export default async function NotFound() {
-  return (
-    <>
-      <h1>Not found</h1>
-    </>
-  );
-}
+export { NotFoundPage as default } from '@/src/pages/not-found';

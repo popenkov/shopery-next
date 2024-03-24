@@ -3,13 +3,6 @@
 @import '../../../shared/styles/mixins/box.scss';
 @import '../../../shared/styles/mixins/text-styles.scss';
 
-.top {
-  @include body-tiny;
-
-  padding: 11px 0 13px;
-  color: var(--gray-300);
-  background-color: var(--gray-800);
-}
 
 .content {
   @include flex-center-sb;
