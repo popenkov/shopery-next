@@ -1,0 +1,68 @@
+@import '../../styles/mixins/flexbox.scss';
+@import '../../styles/mixins/box.scss';
+
+.breadcrumps {
+  background: linear-gradient(
+      95.02deg,
+      rgb(0 0 0 / 70%) 0.034%,
+      rgb(0 0 0 / 0%) 91.306%
+    ),
+    url('/images/breadcrumbs-img.jpg');
+}
+
+.list {
+  @include flex-center-vertical;
+
+  gap: 8px;
+  margin: 0;
+  padding: 48px 0;
+  overflow-y: auto;
+
+  @media (width <= 724px) {
+    align-items: flex-start;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.homeIcon {
+  @include box(24px);
+
+  color: var(--gray-400);
+}
+
+.item {
+  @include flex-center-vertical;
+
+  gap: 9px;
+  list-style: none;
+
+  &:hover {
+    .link {
+      color: var(--primary);
+    }
+  }
+}
+
+.link {
+  @include flex-center-vertical;
+
+  gap: 8px;
+  color: var(--gray-400);
+  white-space: nowrap;
+  text-decoration: none;
+
+  &.active {
+    color: var(--primary);
+    pointer-events: none;
+  }
+}
+
+.chevron {
+  @include box(12px);
+
+  color: var(--gray-400);
+  transform: rotate(-90deg);
+}

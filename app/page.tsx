@@ -1,95 +1,94 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import {
+  AppLink,
+  Button,
+  Logo,
+  LogoSize,
+  StarRating,
+  Tag,
+  TagVariant,
+  Text,
+  TextSize,
+  TextWeight,
+  Product,
+  ProductLarge,
+  ProductPreview,
+  Input,
+  Radio,
+  Checkbox,
+  Video,
+  InstagramCard,
+  AppSelect,
+  Banner,
+} from '@/src/shared/ui';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
+      <AppLink href={'#'}>gsdfgdfg</AppLink>
+      <Button>321132</Button>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <Text text="test" weight={TextWeight.SEMIBOLD} size={TextSize.L} />
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      <Logo size={LogoSize.SMALL} />
+      <Logo />
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+      <StarRating value={3} />
+      <Tag content="tag" variant={TagVariant.ORANGE} />
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
+      <ProductPreview
+        href={'#'}
+        img="/images/product-big-potatos.jpg"
+        title="Potatos"
+        price="$14.99"
+        priceOld="$19.99"
+        rating={5}
+      />
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <Product
+        href={'#'}
+        img="/images/product-big-potatos.jpg"
+        title="Potatos"
+        price="$14.99"
+        priceOld="$19.99"
+        rating={4}
+      />
+
+      <ProductLarge
+        href={'#'}
+        img="/images/product-big-potatos.jpg"
+        title="Potatos"
+        price="$14.99"
+        priceOld="$19.99"
+        rating={3}
+      />
+
+      <Input type="search" />
+
+      <Radio name="test" value="1" />
+      <Radio name="test" value="2" />
+      <Checkbox name="test-check" value="1" />
+      <Checkbox name="test-check" value="2" />
+
+      <Video
+        src="https://www.youtube.com/embed/2eX2TCfiFuY"
+        background="/images/video-preview.jpg"
+        title="We’re the Best Organic Farm in the World"
+      />
+
+      <InstagramCard />
+
+      <AppSelect
+        options={[
+          { value: 'chocolate', label: 'Chocolate' },
+          { value: 'strawberry', label: 'Strawberry' },
+          { value: 'vanilla', label: 'Vanilla' },
+        ]}
+      />
+      <Banner
+        background="/images/banner-s-2.jpg"
+        subtitle="test"
+        title="test"
+      />
+    </>
   );
 }
