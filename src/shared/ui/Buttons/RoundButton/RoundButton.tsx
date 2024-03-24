@@ -1,5 +1,12 @@
 import cn from 'classnames';
-import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode, Ref } from 'react';
+import {
+  DetailedHTMLProps,
+  FC,
+  HTMLAttributes,
+  ReactNode,
+  Ref,
+  memo,
+} from 'react';
 
 import style from './RoundButton.module.scss';
 
@@ -20,7 +27,7 @@ interface AppButtonProps
   ref?: Ref<HTMLButtonElement>;
 }
 
-export const RoundButton: FC<AppButtonProps> = (props) => {
+export const RoundButton: FC<AppButtonProps> = memo((props) => {
   const {
     className,
     children,
@@ -39,4 +46,4 @@ export const RoundButton: FC<AppButtonProps> = (props) => {
       {children}
     </button>
   );
-};
+});
