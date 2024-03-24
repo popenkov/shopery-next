@@ -2,7 +2,8 @@ import { DetailedHTMLProps, FC, HTMLAttributes, memo } from 'react';
 import cn from 'classnames';
 import MapPinIcon from '../../../../public/icons/icon__map-pin.svg';
 import cls from './Location.module.scss';
-import { Text, TextSize } from '..';
+import { Text } from '..';
+import { TextVariant } from '../Text/Text.interfaces';
 
 interface LocationProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
@@ -18,7 +19,7 @@ export const Location: FC<LocationProps> = memo(({ address, isMobile }) => {
       })}
     >
       <MapPinIcon className={cls.icon} />
-      <Text text={address} size={TextSize.XS} />
+      <Text variant={TextVariant.BODY_TINY}> {address}</Text>
     </div>
   );
 });

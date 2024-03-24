@@ -1,83 +1,61 @@
-import { FC, memo } from 'react';
+import { memo } from 'react';
+import type { ComponentProps, ElementType, ReactNode } from 'react';
 import cn from 'classnames';
 import cls from './Text.module.scss';
+import {
+  TextAlign,
+  TextTheme,
+  TextVariant,
+  TextWeight,
+} from './Text.interfaces';
 
-export enum TextTheme {
-  PRIMARY = 'primary',
-  INVERTED = 'inverted',
-  ERROR = 'error',
-}
-
-export enum TextAlign {
-  RIGHT = 'right',
-  LEFT = 'left',
-  CENTER = 'center',
-}
-
-export enum TextWeight {
-  LIGHT = 'light',
-  REGULAR = 'regular',
-  MEDIUM = 'medium',
-  SEMIBOLD = 'semibold',
-  BOLD = 'bold',
-}
-
-export enum TextSize {
-  XS = 'size_xs',
-  S = 'size_s',
-  M = 'size_m',
-  L = 'size_l',
-  XL = 'size_xl',
-  XXL = 'size_xxl',
-}
-
-interface TextProps {
+interface TextOwnProps<E extends ElementType = ElementType> {
+  children: ReactNode;
   className?: string;
+  href?: string;
   title?: string;
   text?: string;
   theme?: TextTheme;
   align?: TextAlign;
-  size?: TextSize;
+  variant?: TextVariant;
   weight?: TextWeight;
+  as?: E;
 }
 
-type HeaderTagType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+const DEFAULT_ELEMENT: ElementType = 'p';
 
-const mapSizeToHeaderTag: Record<TextSize, HeaderTagType> = {
-  [TextSize.XS]: 'h6',
-  [TextSize.S]: 'h5',
-  [TextSize.M]: 'h4',
-  [TextSize.L]: 'h3',
-  [TextSize.XL]: 'h2',
-  [TextSize.XXL]: 'h1',
-};
+export type TextProps<E extends ElementType> = TextOwnProps<E> &
+  Omit<ComponentProps<E>, keyof TextOwnProps>;
 
-export const Text: FC<TextProps> = memo((props) => {
+const T = <E extends ElementType = typeof DEFAULT_ELEMENT>(
+  props: TextProps<E>
+) => {
   const {
     className,
-    text,
-    title,
+    children,
+    as,
     theme = TextTheme.PRIMARY,
     align = TextAlign.LEFT,
-    size = TextSize.M,
+    variant = TextVariant.BODY_M,
     weight = TextWeight.REGULAR,
   } = props;
 
-  const HeaderTag = mapSizeToHeaderTag[size];
+  const Element = as || DEFAULT_ELEMENT;
 
   const mods = {
     [cls[theme]]: true,
+    [cls[variant]]: true,
     [cls[align]]: true,
-    [cls[size]]: true,
     [cls[weight]]: true,
   };
 
   return (
-    <div className={cn(cls.Text, className, mods)}>
-      {title && <HeaderTag className={cls.title}>{title}</HeaderTag>}
-      {text && <p className={cls.text}>{text}</p>}
-    </div>
+    <Element className={cn(cls.Text, className, mods)} {...props}>
+      {children}
+    </Element>
   );
-});
+};
+
+export const Text = memo(T);
 
 Text.displayName = 'Text';
