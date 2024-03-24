@@ -1,7 +1,8 @@
 'use client';
 
-import { ChangeEvent, InputHTMLAttributes, memo, useRef } from 'react';
 import cn from 'classnames';
+import { ChangeEvent, InputHTMLAttributes, memo, useRef } from 'react';
+
 import cls from './Radio.module.scss';
 
 type HTMLRadioProps = Omit<

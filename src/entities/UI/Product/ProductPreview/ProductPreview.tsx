@@ -1,8 +1,13 @@
-import { ProductInterface } from '@/shared/interfaces/common';
 import Image from 'next/image';
-import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
-import cls from './ProductPreview.module.scss';
 import Link from 'next/link';
+import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+
+import { ProductInterface } from '@/shared/interfaces/common';
+
+import cls from './ProductPreview.module.scss';
+import CartIcon from '../../../../../public/icons/icon__cart.svg';
+import PreviewIcon from '../../../../../public/icons/icon__eye.svg';
+import LikeIcon from '../../../../../public/icons/icon__heart.svg';
 import {
   RoundButton,
   RoundButtonTheme,
@@ -11,9 +16,6 @@ import {
   TextSize,
   TextWeight,
 } from '../../../../shared/ui';
-import CartIcon from '../../../../../public/icons/icon__cart.svg';
-import PreviewIcon from '../../../../../public/icons/icon__eye.svg';
-import LikeIcon from '../../../../../public/icons/icon__heart.svg';
 
 interface ProductPreviewProps
   extends Omit<

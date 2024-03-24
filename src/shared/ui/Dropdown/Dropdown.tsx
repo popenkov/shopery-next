@@ -26,16 +26,16 @@ interface DropdownProps
 }
 
 export const Dropdown: FC<DropdownProps> = memo(({ data, onChange }) => {
-  if (!data.length) {
-    return null;
-  }
-
   const [chosenElement, setChosenElement] = useState<DropdownItem>(data[0]);
 
   const handleOptionChoose = (item: DropdownItem) => {
     setChosenElement(item);
     onChange(item);
   };
+
+  if (!data.length) {
+    return null;
+  }
 
   return (
     <div className={cls.dropdown}>

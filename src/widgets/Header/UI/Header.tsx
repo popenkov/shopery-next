@@ -1,9 +1,9 @@
 import React from 'react';
 
 import cls from './Header.module.scss';
-import { HeaderTop } from './HeaderTop';
 import { HeaderMiddle } from './HeaderMiddle';
 import { HeaderNavigation } from './HeaderNavigation';
+import { HeaderTop } from './HeaderTop';
 
 export const Header = () => {
   return (

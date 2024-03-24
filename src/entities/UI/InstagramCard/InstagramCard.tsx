@@ -1,6 +1,7 @@
-import { FC, DetailedHTMLProps, HTMLAttributes } from 'react';
-import cls from './InstagramCard.module.scss';
 import Image from 'next/image';
+import { FC, DetailedHTMLProps, HTMLAttributes } from 'react';
+
+import cls from './InstagramCard.module.scss';
 import InstagramIcon from '../../../../public/icons/icon__instagram.svg';
 
 interface InstagramCardProps

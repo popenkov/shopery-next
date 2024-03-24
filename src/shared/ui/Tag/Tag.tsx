@@ -1,5 +1,6 @@
-import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode, memo } from 'react';
 import cn from 'classnames';
+import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode, memo } from 'react';
+
 import cls from './Tag.module.scss';
 
 export enum TagVariant {

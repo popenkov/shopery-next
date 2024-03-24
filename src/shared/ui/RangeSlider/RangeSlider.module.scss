@@ -31,8 +31,8 @@
 .rangeSlider {
   :global(.rc-slider-rail) {
     height: 6px;
-    border-radius: 15px;
     background-color: var(--gray-100);
+    border-radius: 15px;
   }
 
   :global(.rc-slider-track) {

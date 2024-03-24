@@ -1,5 +1,6 @@
-import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode, Ref } from 'react';
 import cn from 'classnames';
+import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode, Ref } from 'react';
+
 import style from './RoundButton.module.scss';
 
 export enum RoundButtonTheme {

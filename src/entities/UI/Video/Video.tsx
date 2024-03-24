@@ -1,5 +1,6 @@
 'use client';
 
+import cn from 'classnames';
 import React, {
   DetailedHTMLProps,
   FC,
@@ -8,7 +9,7 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import cn from 'classnames';
+
 import cls from './Video.module.scss';
 import PlayIcon from '../../../../public/icons/icon__play-button.svg';
 

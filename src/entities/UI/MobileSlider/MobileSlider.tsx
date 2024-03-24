@@ -15,7 +15,6 @@ interface MobileSliderProps<T>
 
 export const MobileSlider = <T,>({
   data,
-  children,
   render,
   ...restProps
 }: MobileSliderProps<T>) => {

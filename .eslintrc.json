@@ -12,6 +12,28 @@
       {
         "allowSingleExtends": true
       }
+    ],
+    "import/order": [
+      "warn",
+      {
+        "groups": ["builtin", "external", "internal"],
+        "pathGroups": [
+          {
+            "pattern": "@(react)",
+            "group": "external"
+          },
+          {
+            "pattern": "@src/**",
+            "group": "internal"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
     ]
   },
   "extends": [

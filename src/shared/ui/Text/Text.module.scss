@@ -43,15 +43,19 @@
 .heading_1 {
   @include heading-1;
 }
+
 .heading_2 {
   @include heading-2;
 }
+
 .heading_3 {
   @include heading-3;
 }
+
 .heading_4 {
   @include heading-4;
 }
+
 .heading_5 {
   @include heading-5;
 }
@@ -59,18 +63,23 @@
 .body_xxl {
   @include body-xxl;
 }
+
 .body_xl {
   @include body-xl;
 }
+
 .body_l {
   @include body-l;
 }
+
 .body_m {
   @include body-m;
 }
+
 .body_s {
   @include body-s;
 }
+
 .body_tiny {
   @include body-tiny;
 }

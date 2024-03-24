@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import '@/app/styles/globals.scss';
 import { ReactNode } from 'react';
+
 import { Header } from '@/widgets/Header';
 
 const poppins = Poppins({

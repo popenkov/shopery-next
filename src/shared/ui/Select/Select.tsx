@@ -8,8 +8,8 @@ import Select, {
   Options,
 } from 'react-select';
 
-import ChevronIcon from '../../../../public/icons/icon__chevron-down.svg';
 import cls from './Select.module.scss';
+import ChevronIcon from '../../../../public/icons/icon__chevron-down.svg';
 
 interface SelectOption {
   value: string;

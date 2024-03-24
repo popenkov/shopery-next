@@ -338,6 +338,7 @@
     &:hover {
       color: var(--front-primary-inversed);
       transition: all var(--transition);
+
       .navigation-drop-menu {
         top: 100%;
         visibility: visible;

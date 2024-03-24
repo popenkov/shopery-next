@@ -1,5 +1,5 @@
-import { DetailedHTMLProps, FC, HTMLAttributes, memo } from 'react';
 import Image from 'next/image';
+import { DetailedHTMLProps, FC, HTMLAttributes, memo } from 'react';
 
 export enum LogoSize {
   SMALL = 'small',

@@ -1,7 +1,7 @@
+import cn from 'classnames';
 import { DetailedHTMLProps, FC, HTMLAttributes, memo } from 'react';
 
 import cls from './StarRating.module.scss';
-import cn from 'classnames';
 import StarIcon from '../../../../public/icons/icon__star.svg';
 
 interface StarRatingProps

@@ -1,4 +1,5 @@
 import { FC } from 'react';
+
 import { AppRouteNames } from '@/shared/interfaces/router';
 import { Breadcrumbs } from '@/shared/ui';
 

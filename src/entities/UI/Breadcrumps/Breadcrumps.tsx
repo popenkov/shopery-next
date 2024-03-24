@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { FC, memo } from 'react';
+
 import cls from './Breadcrumps.module.scss';
 import ChevronIcon from '../../../../public/icons/icon__chevron-down.svg';
 import HomeIcon from '../../../../public/icons/icon__home.svg';

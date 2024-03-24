@@ -1,8 +1,8 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
-import PhoneIcon from '../../../../public/icons/icon__phone.svg';
 import cls from './PhoneLink.module.scss';
 import { Text, TextSize, TextWeight } from '..';
+import PhoneIcon from '../../../../public/icons/icon__phone.svg';
 
 interface PhoneLinkProps
   extends DetailedHTMLProps<

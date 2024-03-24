@@ -1,8 +1,9 @@
-import { DetailedHTMLProps, FC, HTMLAttributes, memo } from 'react';
 import cn from 'classnames';
-import MapPinIcon from '../../../../public/icons/icon__map-pin.svg';
+import { DetailedHTMLProps, FC, HTMLAttributes, memo } from 'react';
+
 import cls from './Location.module.scss';
 import { Text } from '..';
+import MapPinIcon from '../../../../public/icons/icon__map-pin.svg';
 import { TextVariant } from '../Text/Text.interfaces';
 
 interface LocationProps
@@ -23,3 +24,5 @@ export const Location: FC<LocationProps> = memo(({ address, isMobile }) => {
     </div>
   );
 });
+
+Location.displayName = 'Location';

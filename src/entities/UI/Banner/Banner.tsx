@@ -1,6 +1,6 @@
-import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
-import Link from 'next/link';
 import cn from 'classnames';
+import Link from 'next/link';
+import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import cls from './Banner.module.scss';
 import ArrowIcon from '../../../../public/icons/icon__arrow.svg';

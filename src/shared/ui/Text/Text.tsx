@@ -1,13 +1,14 @@
+import cn from 'classnames';
 import { memo } from 'react';
 import type { ComponentProps, ElementType, ReactNode } from 'react';
-import cn from 'classnames';
-import cls from './Text.module.scss';
+
 import {
   TextAlign,
   TextTheme,
   TextVariant,
   TextWeight,
 } from './Text.interfaces';
+import cls from './Text.module.scss';
 
 interface TextOwnProps<E extends ElementType = ElementType> {
   children: ReactNode;

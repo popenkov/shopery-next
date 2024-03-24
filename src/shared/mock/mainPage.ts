@@ -1,5 +1,4 @@
 import { MainPageData } from '../interfaces/main-page';
-import { BannerType } from '../ui';
 
 export const MAIN_PAGE_DATA: MainPageData = {
   header: {

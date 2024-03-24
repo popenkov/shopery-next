@@ -1,10 +1,11 @@
 'use client';
 
+import React from 'react';
+
+import { MobileSlider } from '@/entities/UI/MobileSlider';
 import { MAIN_PAGE_DATA } from '@/shared/mock/mainPage';
 import { Banner, BannerProps } from '@/shared/ui';
-import { MobileSlider } from '@/entities/UI/MobileSlider';
 
-import React from 'react';
 
 export const Banners = () => {
   const banners = MAIN_PAGE_DATA.banners;
