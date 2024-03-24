@@ -1,6 +1,6 @@
-@import '../../styles/_breakpoints';
-@import '../../styles/mixins/box.scss';
-@import '../../styles/mixins/flexbox.scss';
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/flexbox.scss';
 
 .imgContainer {
   position: relative;

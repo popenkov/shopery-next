@@ -1,8 +1,8 @@
 'use client';
 
-import { MAIN_PAGE_DATA } from '@/src/shared/mock/mainPage';
-import { Banner, BannerProps } from '@/src/shared/ui';
-import { MobileSlider } from '@/src/shared/ui/MobileSlider';
+import { MAIN_PAGE_DATA } from '@/shared/mock/mainPage';
+import { Banner, BannerProps } from '@/shared/ui';
+import { MobileSlider } from '@/entities/UI/MobileSlider';
 
 import React from 'react';
 

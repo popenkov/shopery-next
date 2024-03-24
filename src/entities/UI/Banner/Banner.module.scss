@@ -1,6 +1,6 @@
-@import '../../styles/_breakpoints';
-@import '../../styles/mixins/text-styles.scss';
-@import '../../styles/mixins/flexbox.scss';
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/text-styles.scss';
+@import '@/shared/styles/mixins/flexbox.scss';
 
 .image {
   position: absolute;

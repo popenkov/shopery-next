@@ -1,4 +1,4 @@
-import { ProductInterface } from '@/src/shared/interfaces/common';
+import { ProductInterface } from '@/shared/interfaces/common';
 import Image from 'next/image';
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import cls from './ProductPreview.module.scss';
@@ -10,7 +10,7 @@ import {
   Text,
   TextSize,
   TextWeight,
-} from '../..';
+} from '../../../../shared/ui';
 import CartIcon from '../../../../../public/icons/icon__cart.svg';
 import PreviewIcon from '../../../../../public/icons/icon__eye.svg';
 import LikeIcon from '../../../../../public/icons/icon__heart.svg';

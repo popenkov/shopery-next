@@ -2,7 +2,7 @@
 
 import React from 'react';
 import cn from 'classnames';
-import { Dropdown, Location } from '@/src/shared/ui';
+import { Dropdown, Location } from '@/shared/ui';
 
 import cls from './HeaderTop.module.scss';
 

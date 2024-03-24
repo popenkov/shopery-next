@@ -1,7 +1,7 @@
-import { ProductInterface } from '@/src/shared/interfaces/common';
+import { ProductInterface } from '@/shared/interfaces/common';
 import Image from 'next/image';
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
-import cls from './Product.module.scss';
+import cls from './ProductLarge.module.scss';
 import Link from 'next/link';
 import {
   RoundButton,
@@ -10,19 +10,19 @@ import {
   Text,
   TextSize,
   TextWeight,
-} from '../..';
+} from '../../../../shared/ui';
 import CartIcon from '../../../../../public/icons/icon__cart.svg';
 import PreviewIcon from '../../../../../public/icons/icon__eye.svg';
 import LikeIcon from '../../../../../public/icons/icon__heart-lined.svg';
 
-interface ProductProps
+interface ProductLargeProps
   extends Omit<
       DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
       'title'
     >,
     ProductInterface {}
 
-export const Product: FC<ProductProps> = (props) => {
+export const ProductLarge: FC<ProductLargeProps> = (props) => {
   const { img, title, href, price, priceOld, rating } = props;
 
   return (
@@ -49,7 +49,7 @@ export const Product: FC<ProductProps> = (props) => {
       <div className={cls.description}>
         <div>
           <Link className={cls.link} href={href}>
-            <Text text={title} size={TextSize.S} className={cls.title} />
+            <Text text={title} size={TextSize.M} className={cls.title} />
           </Link>
           <div className={cls.price}>
             <Text text={price} size={TextSize.M} weight={TextWeight.MEDIUM} />

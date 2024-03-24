@@ -15,7 +15,7 @@ interface AppButtonProps
   > {
   className?: string;
   theme?: RoundButtonTheme;
-  children?: ReactNode;
+  children: ReactNode;
   ref?: Ref<HTMLButtonElement>;
 }
 

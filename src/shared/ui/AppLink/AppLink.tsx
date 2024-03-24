@@ -23,7 +23,7 @@ interface AppLinkProps
   className?: string;
   theme?: AppLinkTheme;
   size?: AppLinkSize;
-  children?: ReactNode;
+  children: ReactNode;
   ref?: Ref<HTMLAnchorElement>;
 }
 

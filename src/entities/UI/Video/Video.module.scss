@@ -1,8 +1,8 @@
-@import '../../styles/_breakpoints';
-@import '../../styles/mixins/button-reset.scss';
-@import '../../styles/mixins/flexbox.scss';
-@import '../../styles/mixins/box.scss';
-@import '../../styles/mixins/text-styles.scss';
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/button-reset.scss';
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/text-styles.scss';
 
 .video {
   $block-name: &;

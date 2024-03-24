@@ -1,7 +1,7 @@
-@import '../../../styles/breakpoints';
-@import '../../../styles/mixins/flexbox.scss';
-@import '../../../styles/mixins/box.scss';
-@import '../../../styles/mixins/text-styles.scss';
+@import '@/shared/styles/breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/text-styles.scss';
 
 .imageLink {
   @include box(112px);

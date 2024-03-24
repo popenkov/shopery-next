@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
-import '@/src/app/styles/globals.scss';
+import '@/app/styles/globals.scss';
 import { ReactNode } from 'react';
-import { Header } from '@/src/widgets/Header';
+import { Header } from '@/widgets/Header';
 
 const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700'],

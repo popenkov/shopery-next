@@ -24,7 +24,7 @@ interface AppButtonProps
   className?: string;
   theme?: ButtonTheme;
   size?: ButtonSize;
-  children?: ReactNode;
+  children: ReactNode;
   ref?: Ref<HTMLButtonElement>;
 }
 
