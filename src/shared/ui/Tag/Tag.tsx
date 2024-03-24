@@ -1,4 +1,4 @@
-import { DetailedHTMLProps, FC, HTMLAttributes, memo } from 'react';
+import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode, memo } from 'react';
 import cn from 'classnames';
 import cls from './Tag.module.scss';
 
@@ -11,18 +11,18 @@ export enum TagVariant {
 
 interface TagProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement> {
-  content: string;
+  children: ReactNode;
   variant: TagVariant;
 }
 
-export const Tag: FC<TagProps> = memo(({ content, variant }) => {
+export const Tag: FC<TagProps> = memo(({ children, variant }) => {
   return (
     <span
       className={cn(cls.tag, {
         [cls[variant]]: true,
       })}
     >
-      {content}
+      {children}
     </span>
   );
 });

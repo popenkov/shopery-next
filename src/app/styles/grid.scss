@@ -12,7 +12,7 @@
     }
 
     @media screen and (max-width: $screen-ti) {
-      grid-template-columns: 1fr !important;
+      grid-template-columns: 1fr;
     }
   }
 
@@ -28,7 +28,7 @@
     }
 
     @media screen and (max-width: $screen-t) {
-      grid-template-columns: 1fr !important;
+      grid-template-columns: 1fr;
     }
   }
 
@@ -44,7 +44,7 @@
     }
 
     @media screen and (max-width: $screen-t) {
-      grid-template-columns: 1fr !important;
+      grid-template-columns: 1fr;
     }
   }
 }

@@ -9,8 +9,6 @@ export async function getMainPageData() {
       },
     });
 
-    console.log('response', response);
-
     if (!response.ok) {
       throw new Error('loading error');
     }
