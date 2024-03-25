@@ -10,6 +10,7 @@ export enum AppLinkTheme {
   WHITE = 'white',
   BORDER = 'border',
   GRAY = 'gray',
+  TEXT = 'text',
 }
 
 export enum AppLinkSize {

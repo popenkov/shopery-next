@@ -11,7 +11,7 @@ import React, {
 } from 'react';
 
 import cls from './Video.module.scss';
-import PlayIcon from '../../../../public/icons/icon__play-button.svg';
+import PlayIcon from '@public/icons/icon__play-button.svg';
 
 interface VideoProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {

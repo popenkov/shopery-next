@@ -4,7 +4,7 @@ import cn from 'classnames';
 import { ChangeEvent, InputHTMLAttributes, memo, useRef } from 'react';
 
 import cls from './Checkbox.module.scss';
-import CheckIcon from '../../../../public/icons/icon__check.svg';
+import CheckIcon from '@public/icons/icon__check.svg';
 
 type HTMLCheckboxProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,

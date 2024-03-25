@@ -1,0 +1,62 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/box.scss';
+
+.categories {
+  position: relative;
+
+  @media screen and (max-width: $screen-t) {
+    width: 100%;
+  }
+}
+
+.dropdown {
+  @include flex-column;
+
+  position: absolute;
+  top: 55px;
+  left: 0;
+  z-index: var(--header-dropdown-z-index);
+  width: 100%;
+  max-width: 300px;
+  margin: 0;
+  padding: 16px 0;
+  background-color: var(--back-primary);
+  box-shadow: 0 6px 20px 0 rgb(0 0 0 / 12%);
+  //   visibility: hidden;
+  //   opacity: 0;
+  transition: all var(--transition);
+
+  @media screen and (max-width: $screen-t) {
+    width: 100%;
+    max-width: unset;
+  }
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.link {
+  @include flex-center-vertical;
+  //   todo
+  //   @include body-s;
+
+  gap: 12px;
+  padding: 6px 22px;
+  color: var(--gray-500);
+  text-decoration: none;
+  transition: all var(--transition);
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--front-primary-inversed);
+      background-color: var(--primary);
+    }
+  }
+}
+
+.linkIcon {
+  @include box(24px);
+}

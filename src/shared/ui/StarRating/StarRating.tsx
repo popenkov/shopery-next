@@ -2,7 +2,7 @@ import cn from 'classnames';
 import { DetailedHTMLProps, FC, HTMLAttributes, memo } from 'react';
 
 import cls from './StarRating.module.scss';
-import StarIcon from '../../../../public/icons/icon__star.svg';
+import StarIcon from '@public/icons/icon__star.svg';
 
 interface StarRatingProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {

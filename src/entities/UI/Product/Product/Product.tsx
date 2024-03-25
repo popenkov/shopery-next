@@ -5,9 +5,9 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import { ProductInterface } from '@/shared/interfaces/common';
 
 import cls from './Product.module.scss';
-import CartIcon from '../../../../../public/icons/icon__cart.svg';
-import PreviewIcon from '../../../../../public/icons/icon__eye.svg';
-import LikeIcon from '../../../../../public/icons/icon__heart-lined.svg';
+import CartIcon from '@public/icons/icon__cart.svg';
+import PreviewIcon from '@public/icons/icon__eye.svg';
+import LikeIcon from '@public/icons/icon__heart-lined.svg';
 import {
   RoundButton,
   RoundButtonTheme,

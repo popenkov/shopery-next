@@ -4,7 +4,7 @@ import cn from 'classnames';
 import { ChangeEvent, InputHTMLAttributes, memo, useRef } from 'react';
 
 import cls from './Input.module.scss';
-import SearchIcon from '../../../../public/icons/icon__search.svg';
+import SearchIcon from '@public/icons/icon__search.svg';
 
 type HTMLInputProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,

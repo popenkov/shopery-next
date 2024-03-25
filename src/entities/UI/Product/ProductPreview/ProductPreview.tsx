@@ -5,9 +5,9 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import { ProductInterface } from '@/shared/interfaces/common';
 
 import cls from './ProductPreview.module.scss';
-import CartIcon from '../../../../../public/icons/icon__cart.svg';
-import PreviewIcon from '../../../../../public/icons/icon__eye.svg';
-import LikeIcon from '../../../../../public/icons/icon__heart.svg';
+import CartIcon from '@public/icons/icon__cart.svg';
+import PreviewIcon from '@public/icons/icon__eye.svg';
+import LikeIcon from '@public/icons/icon__heart.svg';
 import {
   RoundButton,
   RoundButtonTheme,
@@ -15,7 +15,7 @@ import {
   Text,
   TextVariant,
   TextWeight,
-} from '../../../../shared/ui';
+} from '@/shared/ui';
 
 interface ProductPreviewProps
   extends Omit<

@@ -1,0 +1,38 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/box.scss';
+
+.chevron {
+  @include box(18px);
+
+  margin-left: 13px;
+  transform: rotate(0deg);
+  transition: all var(--transition);
+}
+
+.button {
+  gap: 10px;
+  padding: 18px 24px 17px 26px;
+  color: var(--front-primary-inversed);
+  background-color: var(--primary);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+
+  @media screen and (max-width: $screen-t) {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--hard-primary);
+    }
+  }
+
+  &.open {
+    .chevron {
+      transform: rotate(180deg);
+    }
+  }
+}

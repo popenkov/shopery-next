@@ -2,7 +2,7 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import cls from './PhoneLink.module.scss';
 import { Text } from '..';
-import PhoneIcon from '../../../../public/icons/icon__phone.svg';
+import PhoneIcon from '@public/icons/icon__phone.svg';
 import { TextVariant, TextWeight } from '../Text/Text.interfaces';
 
 interface PhoneLinkProps

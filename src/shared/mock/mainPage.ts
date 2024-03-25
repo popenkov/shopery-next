@@ -4,29 +4,30 @@ export const MAIN_PAGE_DATA: MainPageData = {
   header: {
     categories: [
       {
-        link: '#',
+        slug: '#',
         icon: 'icon__apple',
         title: 'Fresh Fruit',
       },
       {
-        link: '#',
+        slug: '#',
         icon: 'icon__salad',
         title: 'Vegetables',
       },
-      { link: '#', icon: 'icon__fish', title: 'River Fish' },
-      { link: '#', icon: 'icon__coffee', title: 'Drink & Water' },
-      { link: '#', icon: 'icon__ice-cream', title: 'Yogurt & Ice Cream' },
+      { slug: '#', icon: 'icon__fish', title: 'River Fish' },
+      { slug: '#', icon: 'icon__coffee', title: 'Drink & Water' },
+      { slug: '#', icon: 'icon__ice_cream', title: 'Yogurt & Ice Cream' },
       {
+        slug: '#',
         icon: 'icon__cupcake',
         title: 'Cake & Bread',
       },
-      { link: '#', icon: 'icon__pie', title: 'Butter & Cream' },
-      { link: '#', icon: 'icon__food', title: 'Cooking' },
+      { slug: '#', icon: 'icon__pie', title: 'Butter & Cream' },
+      { slug: '#', icon: 'icon__food', title: 'Cooking' },
     ],
     navigation: [
       {
         title: 'Home',
-        link: '#',
+        slug: '#',
         items: [
           { title: 'Home 1', link: '#' },
           { title: 'Home 1', link: '#' },
@@ -36,7 +37,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       },
       {
         title: 'Shop',
-        link: '#',
+        slug: '#',
         items: [
           { title: 'Shop 1', link: '#' },
           { title: 'Shop 1', link: '#' },
@@ -46,7 +47,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       },
       {
         title: 'Pages',
-        link: '#',
+        slug: '#',
         items: [
           { title: 'Pages 1', link: '#' },
           { title: 'Pages 1', link: '#' },
@@ -56,7 +57,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       },
       {
         title: 'Blog',
-        link: '#',
+        slug: '#',
         items: [
           { title: 'Blog 1', link: '#' },
           { title: 'Blog 1', link: '#' },
@@ -115,7 +116,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       label: 'All',
       content: [
         {
-          href: '#',
+          slug: '#',
           img: '/images/product-apple.jpg',
           title: '1 Green Apple',
           price: '$14.99',
@@ -129,7 +130,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           ],
         },
         {
-          href: '#',
+          slug: '#',
           img: '/images/product-mango.jpg',
           title: '1 Surjapur Mango',
           price: '$14.99',
@@ -137,7 +138,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           rating: 4,
         },
         {
-          href: '#',
+          slug: '#',
           img: '/images/product-tomatos.jpg',
           title: '1 Red Tomatos',
           price: '$14.99',
@@ -145,7 +146,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           rating: 4,
         },
         {
-          href: '#',
+          slug: '#',
           img: '/images/product-cauliflower.jpg',
           title: '1 Fresh Cauliflower',
           price: '$14.99',
@@ -153,7 +154,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           rating: 4,
         },
         {
-          href: '#',
+          slug: '#',
           img: '/images/product-letucce.jpg',
           title: '1 Green Lettuce',
           price: '$14.99',
@@ -161,7 +162,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           rating: 4,
         },
         {
-          href: '#',
+          slug: '#',
           img: '/images/product-eggplant.jpg',
           title: '1 Eggplant',
           price: '$14.99',
@@ -169,7 +170,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           rating: 4,
         },
         {
-          href: '#',
+          slug: '#',
           img: '/images/product-chilli.jpg',
           title: '1 Green Chilli',
           price: '$14.99',
@@ -177,7 +178,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           rating: 4,
         },
         {
-          href: '#',
+          slug: '#',
           img: '/images/product-eggplant-dark.jpg',
           title: '1 Eggplant',
           price: '$14.99',
@@ -191,7 +192,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       label: 'Vegetables',
       content: [
         {
-          href: '#',
+          slug: '#',
           img: '/images/product-apple.jpg',
           title: 'Green Apple',
           price: '$14.99',
@@ -205,7 +206,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           ],
         },
         {
-          href: '#',
+          slug: '#',
           img: '/images/product-mango.jpg',
           title: 'Surjapur Mango',
           price: '$14.99',
@@ -213,7 +214,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           rating: 4,
         },
         {
-          href: '#',
+          slug: '#',
           img: '/images/product-tomatos.jpg',
           title: 'Red Tomatos',
           price: '$14.99',
@@ -221,7 +222,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           rating: 4,
         },
         {
-          href: '#',
+          slug: '#',
           img: '/images/product-cauliflower.jpg',
           title: 'Fresh Cauliflower',
           price: '$14.99',
@@ -229,7 +230,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           rating: 4,
         },
         {
-          href: '#',
+          slug: '#',
           img: '/images/product-letucce.jpg',
           title: 'Green Lettuce',
           price: '$14.99',
@@ -237,7 +238,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           rating: 4,
         },
         {
-          href: '#',
+          slug: '#',
           img: '/images/product-eggplant.jpg',
           title: 'Eggplant',
           price: '$14.99',
@@ -245,7 +246,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           rating: 4,
         },
         {
-          href: '#',
+          slug: '#',
           img: '/images/product-chilli.jpg',
           title: 'Green Chilli',
           price: '$14.99',
@@ -253,7 +254,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           rating: 4,
         },
         {
-          href: '#',
+          slug: '#',
           img: '/images/product-eggplant-dark.jpg',
           title: 'Eggplant',
           price: '$14.99',
@@ -275,7 +276,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
   ],
   products: [
     {
-      href: '#',
+      slug: '#',
       img: '/images/product-apple.jpg',
       title: 'Green Apple',
       price: '$14.99',
@@ -296,7 +297,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       rating: 4,
     },
     {
-      href: '#',
+      slug: '#',
       img: '/images/product-tomatos.jpg',
       title: 'Red Tomatos',
       price: '$14.99',
@@ -304,7 +305,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       rating: 4,
     },
     {
-      href: '#',
+      slug: '#',
       img: '/images/product-cauliflower.jpg',
       title: 'Fresh Cauliflower',
       price: '$14.99',
@@ -312,7 +313,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       rating: 4,
     },
     {
-      href: '#',
+      slug: '#',
       img: '/images/product-letucce.jpg',
       title: 'Green Lettuce',
       price: '$14.99',
@@ -320,7 +321,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       rating: 4,
     },
     {
-      href: '#',
+      slug: '#',
       img: '/images/product-eggplant.jpg',
       title: 'Eggplant',
       price: '$14.99',
@@ -328,7 +329,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       rating: 4,
     },
     {
-      href: '#',
+      slug: '#',
       img: '/images/product-chilli.jpg',
       title: 'Green Chilli',
       price: '$14.99',
@@ -336,7 +337,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       rating: 4,
     },
     {
-      href: '#',
+      slug: '#',
       img: '/images/product-eggplant-dark.jpg',
       title: 'Eggplant',
       price: '$14.99',
@@ -353,7 +354,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       title: '100% Fresh Cow Milk',
       text: 'Starting at ',
       price: '$14.99',
-      link: '#',
+      slug: '#',
     },
     {
       id: '2',
@@ -363,7 +364,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       title: 'Water & Soft Drink',
       text: '',
       price: '',
-      link: '#',
+      slug: '#',
     },
     {
       id: '3',
@@ -373,12 +374,12 @@ export const MAIN_PAGE_DATA: MainPageData = {
       title: 'Quick Breakfast',
       text: '',
       price: '',
-      link: '#',
+      slug: '#',
     },
   ],
   featuredProducts: [
     {
-      href: '#',
+      slug: '#',
       img: '/images/product-apple.jpg',
       title: 'Green Apple',
       price: '$14.99',
@@ -392,7 +393,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       ],
     },
     {
-      href: '#',
+      slug: '#',
       img: '/images/product-mango.jpg',
       title: 'Surjapur Mango',
       price: '$14.99',
@@ -400,7 +401,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       rating: 4,
     },
     {
-      href: '#',
+      slug: '#',
       img: '/images/product-tomatos.jpg',
       title: 'Red Tomatos',
       price: '$14.99',
@@ -408,7 +409,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       rating: 4,
     },
     {
-      href: '#',
+      slug: '#',
       img: '/images/product-cauliflower.jpg',
       title: 'Fresh Cauliflower',
       price: '$14.99',
@@ -416,7 +417,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       rating: 4,
     },
     {
-      href: '#',
+      slug: '#',
       img: '/images/product-letucce.jpg',
       title: 'Green Lettuce',
       price: '$14.99',
@@ -456,7 +457,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       img: '/images/news-img--1.jpg',
       title: 'Curabitur porttitor orci eget neque accumsan venenatis.',
       text: 'Nulla libero lorem, euismod venenatis nibh sed, sodales dictum ex. Etiam nisi augue, malesuada et pulvinar at, posuere eu neque.',
-      link: '#',
+      slug: '#',
     },
     {
       dateDay: '23',
@@ -464,7 +465,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       img: '/images/news-img--2.jpg',
       title: 'Curabitur porttitor orci eget neque accumsan venenatis.',
       text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. ',
-      link: '#',
+      slug: '#',
     },
     {
       dateDay: '23',
@@ -472,122 +473,122 @@ export const MAIN_PAGE_DATA: MainPageData = {
       img: '/images/news-img--3.jpg',
       title: 'Curabitur porttitor orci eget neque accumsan venenatis.',
       text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. ',
-      link: '#',
+      slug: '#',
     },
   ],
   footer: {
     account: [
       {
         title: 'My Account',
-        link: '#',
+        slug: '#',
       },
       {
         title: 'Order History',
-        link: '#',
+        slug: '#',
       },
       {
         title: 'Shoping Cart',
-        link: '#',
+        slug: '#',
       },
       {
         title: 'Wishlist',
-        link: '#',
+        slug: '#',
       },
       {
         title: 'Settings',
-        link: '#',
+        slug: '#',
       },
     ],
     helps: [
       {
         title: 'Contact',
-        link: '#',
+        slug: '#',
       },
       {
         title: 'Faqs',
-        link: '#',
+        slug: '#',
       },
       {
         title: 'Terms & Condition',
-        link: '#',
+        slug: '#',
       },
       {
         title: 'Privacy Policy',
-        link: '#',
+        slug: '#',
       },
     ],
     proxy: [
       {
         title: 'About',
-        link: '#',
+        slug: '#',
       },
       {
         title: 'Shop',
-        link: '#',
+        slug: '#',
       },
       {
         title: 'Product',
-        link: '#',
+        slug: '#',
       },
       {
         title: 'Products Details',
-        link: '#',
+        slug: '#',
       },
       {
         title: 'Track Order',
-        link: '#',
+        slug: '#',
       },
     ],
     instagram: [
       {
         img: '/images/instagram--01.jpg',
-        link: '#',
+        slug: '#',
       },
       {
         img: '/images/instagram--02.jpg',
-        link: '#',
+        slug: '#',
       },
       {
         img: '/images/instagram--03.jpg',
-        link: '#',
+        slug: '#',
       },
       {
         img: '/images/instagram--04.jpg',
-        link: '#',
+        slug: '#',
       },
       {
         img: '/images/instagram--05.jpg',
-        link: '#',
+        slug: '#',
       },
       {
         img: '/images/instagram--06.jpg',
-        link: '#',
+        slug: '#',
       },
       {
         img: '/images/instagram--07.jpg',
-        link: '#',
+        slug: '#',
       },
       {
         img: '/images/instagram--08.jpg',
-        link: '#',
+        slug: '#',
       },
     ],
     socialLinks: [
       {
         icon: 'icon__facebook',
-        href: '#',
+        slug: '#',
       },
       {
         icon: 'icon__twitter',
-        href: '#',
+        slug: '#',
       },
       {
         icon: 'icon__pinterest',
-        href: '#',
+        slug: '#',
       },
       {
         icon: 'icon__instagram',
-        href: '#',
+        slug: '#',
       },
     ],
     paymentMethods: [

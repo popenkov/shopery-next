@@ -80,6 +80,10 @@
   @include body-s;
 }
 
+.body_xs {
+  @include body-xs;
+}
+
 .body_tiny {
   @include body-tiny;
 }

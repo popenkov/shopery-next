@@ -1,0 +1,1 @@
+export { ProductSearch } from './UI';

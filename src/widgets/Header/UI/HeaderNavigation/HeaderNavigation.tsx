@@ -1,4 +1,5 @@
 import React from 'react';
+import { Categories } from '../Categories';
 
 export const HeaderNavigation = () => {
   return (
@@ -6,81 +7,7 @@ export const HeaderNavigation = () => {
       <div className="container">
         <div className="header__content">
           <div className="header__navigation-content">
-            <div className="header__all-categories">
-              <button className="header__all-categories-button js-header-all-categories-button">
-                <span className="burger-button header__all-categories-burger"></span>
-                <span>All Categories</span>
-                <svg className="header__all-categories-chevron">
-                  <use href="img/svgSprite.svg#icon__chevron-down"></use>
-                </svg>
-              </button>
-              <ul className="header__all-categories-dropdown js-header-all-categories-content">
-                <li>
-                  <a className="header__all-categories-link" href="#">
-                    <svg className="header__all-categories-icon">
-                      <use href="img/svgSprite.svg#icon__apple"></use>
-                    </svg>
-                    <span>Fresh Fruit</span>
-                  </a>
-                </li>
-                <li>
-                  <a className="header__all-categories-link" href="#">
-                    <svg className="header__all-categories-icon">
-                      <use href="img/svgSprite.svg#icon__salad"></use>
-                    </svg>
-                    <span>Vegetables</span>
-                  </a>
-                </li>
-                <li>
-                  <a className="header__all-categories-link" href="#">
-                    <svg className="header__all-categories-icon">
-                      <use href="img/svgSprite.svg#icon__fish"></use>
-                    </svg>
-                    <span>River Fish</span>
-                  </a>
-                </li>
-                <li>
-                  <a className="header__all-categories-link" href="#">
-                    <svg className="header__all-categories-icon">
-                      <use href="img/svgSprite.svg#icon__coffee"></use>
-                    </svg>
-                    <span>Drink &amp; Water</span>
-                  </a>
-                </li>
-                <li>
-                  <a className="header__all-categories-link" href="#">
-                    <svg className="header__all-categories-icon">
-                      <use href="img/svgSprite.svg#icon__ice-cream"></use>
-                    </svg>
-                    <span>Yogurt &amp; Ice Cream</span>
-                  </a>
-                </li>
-                <li>
-                  <a className="header__all-categories-link">
-                    <svg className="header__all-categories-icon">
-                      <use href="img/svgSprite.svg#icon__cupcake"></use>
-                    </svg>
-                    <span>Cake &amp; Bread</span>
-                  </a>
-                </li>
-                <li>
-                  <a className="header__all-categories-link" href="#">
-                    <svg className="header__all-categories-icon">
-                      <use href="img/svgSprite.svg#icon__pie"></use>
-                    </svg>
-                    <span>Butter &amp; Cream</span>
-                  </a>
-                </li>
-                <li>
-                  <a className="header__all-categories-link" href="#">
-                    <svg className="header__all-categories-icon">
-                      <use href="img/svgSprite.svg#icon__food"></use>
-                    </svg>
-                    <span>Cooking</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <Categories />
             <ul className="header__navigation-menu">
               <li className="header__navigation-menu-item">
                 <a

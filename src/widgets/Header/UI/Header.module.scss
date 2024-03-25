@@ -1,8 +1,7 @@
-@import '../../../shared/styles/_breakpoints';
-@import '../../../shared/styles/mixins/flexbox.scss';
-@import '../../../shared/styles/mixins/box.scss';
-@import '../../../shared/styles/mixins/text-styles.scss';
-
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/text-styles.scss';
 
 .content {
   @include flex-center-sb;
@@ -68,74 +67,10 @@
   padding: 0 5px;
 }
 
-.middle {
-  @include flex-center-sb;
-
-  gap: 20px;
-  padding: 24px 0;
-
-  @media screen and (max-width: $screen-tl) {
-    justify-content: flex-start;
-  }
-}
-
-.mobile-burger {
-  display: none;
-
-  @media screen and (max-width: $screen-tl) {
-    @include flex-center;
-    @include box(38px);
-
-    border: none;
-    cursor: pointer;
-
-    span {
-      display: block;
-      padding: 0;
-      background-color: var(--gray-900);
-      border: none;
-    }
-  }
-}
-
-.logo {
-  max-width: 183px;
-
-  @media screen and (max-width: $screen-t) {
-    display: none;
-  }
-}
-
-.logo-mobile {
-  display: none;
-
-  @media screen and (max-width: $screen-t) {
-    display: block;
-  }
-}
-
 .search {
   width: 100%;
   max-width: 498px;
   margin-left: 9px;
-}
-
-.navbar {
-  @include flex-center-vertical;
-
-  gap: 16px;
-
-  @media screen and (max-width: $screen-tl) {
-    gap: 8px;
-    margin-left: auto;
-  }
-}
-
-.navbar-separator {
-  display: block;
-  width: 1px;
-  height: 24px;
-  background-color: var(--gray-200);
 }
 
 .favorite-icon {
@@ -144,64 +79,6 @@
   stroke-width: 1.3px;
   color: var(--gray-900);
   fill: transparent;
-}
-
-.cart {
-  @include flex-center-vertical;
-
-  gap: 12px;
-}
-
-.cart-link {
-  position: relative;
-}
-
-.cart-icon {
-  @include box(34px);
-
-  stroke-width: 1.3px;
-  color: var(--gray-900);
-}
-
-.cart-items-amount {
-  @include flex-center;
-
-  position: absolute;
-  top: -2px;
-  right: -1px;
-  padding: 4px 6px;
-  color: var(--front-primary-inversed);
-  font-weight: 500;
-  font-size: 10px;
-  line-height: 10px;
-  letter-spacing: 0%;
-  background-color: var(--primary);
-  border-radius: 50%;
-}
-
-.cart-info {
-  @include flex-column;
-
-  gap: 7px;
-
-  @media screen and (max-width: $screen-t) {
-    display: none;
-  }
-}
-
-.cart-title {
-  margin: 0;
-  color: var(--gray-700);
-  font-size: 11px;
-  line-height: 1.1825;
-  letter-spacing: 0%;
-}
-
-.cart-amount {
-  color: var(--gray-900);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 100%;
 }
 
 .navigation {
@@ -220,102 +97,6 @@
   @media screen and (max-width: $screen-t) {
     width: 100%;
   }
-}
-
-.all-categories {
-  position: relative;
-
-  @media screen and (max-width: $screen-t) {
-    width: 100%;
-  }
-}
-
-.allCategoriesChevron {
-  @include box(18px);
-
-  margin-left: 13px;
-  transform: rotate(0deg);
-  transition: all var(--transition);
-}
-
-.allCategoriesButton {
-  @include flex-center-vertical;
-  @include body-s(500);
-
-  gap: 10px;
-  padding: 18px 24px 17px 26px;
-  color: var(--front-primary-inversed);
-  background-color: var(--primary);
-  border: none;
-  cursor: pointer;
-  transition: all var(--transition);
-
-  @media screen and (max-width: $screen-t) {
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  @media (hover: hover) {
-    &:hover {
-      background-color: var(--hard-primary);
-    }
-  }
-
-  &.open {
-    .all-categories-chevron {
-      transform: rotate(180deg);
-    }
-  }
-}
-
-.all-categories-dropdown {
-  @include flex-column;
-
-  position: absolute;
-  top: 55px;
-  left: 0;
-  z-index: var(--header-dropdown-z-index);
-  width: 100%;
-  max-width: 300px;
-  margin: 0;
-  padding: 16px 0;
-  background-color: var(--back-primary);
-  box-shadow: 0 6px 20px 0 rgb(0 0 0 / 12%);
-  visibility: hidden;
-  opacity: 0;
-  transition: all var(--transition);
-
-  @media screen and (max-width: $screen-t) {
-    width: 100%;
-    max-width: unset;
-  }
-
-  &.open {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-.all-categories-link {
-  @include flex-center-vertical;
-  @include body-s;
-
-  gap: 12px;
-  padding: 6px 22px;
-  color: var(--gray-500);
-  text-decoration: none;
-  transition: all var(--transition);
-
-  @media (hover: hover) {
-    &:hover {
-      color: var(--front-primary-inversed);
-      background-color: var(--primary);
-    }
-  }
-}
-
-.all-categories-icon {
-  @include box(24px);
 }
 
 .navigation-menu {

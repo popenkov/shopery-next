@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { RoundButton, RoundButtonTheme } from './RoundButton';
-import CartIcon from '../../../../../public/icons/icon__cart.svg';
+import CartIcon from '../@public/icons/icon__cart.svg';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {

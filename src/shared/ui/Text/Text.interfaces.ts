@@ -30,5 +30,6 @@ export enum TextVariant {
   BODY_L = 'body_l',
   BODY_M = 'body_m',
   BODY_S = 'body_s',
+  BODY_XS = 'body_xs',
   BODY_TINY = 'body_tiny',
 }

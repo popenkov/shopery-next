@@ -9,7 +9,7 @@ import React, {
 } from 'react';
 
 import cls from './Dropdown.module.scss';
-import ChevronIcon from '../../../../public/icons/icon__chevron-down.svg';
+import ChevronIcon from '@public/icons/icon__chevron-down.svg';
 
 interface DropdownItem {
   value: string;
