@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { DAY, HOUR, MILLISECONDS, MINUTE } from '../constants/time';
 
 export const useCountDown = (endDate: string) => {
   const timeoutIdRef = useRef<NodeJS.Timeout | undefined>(undefined);
@@ -12,14 +13,10 @@ export const useCountDown = (endDate: string) => {
     const now = new Date();
     const timeLeft = Number(targetDate) - Number(now);
 
-    const daysValue = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hoursValue = Math.floor(
-      (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    const minutesValue = Math.floor(
-      (timeLeft % (1000 * 60 * 60)) / (1000 * 60)
-    );
-    const secondsValue = Math.floor((timeLeft % (1000 * 60)) / 1000);
+    const daysValue = Math.floor(timeLeft / DAY);
+    const hoursValue = Math.floor((timeLeft % DAY) / HOUR);
+    const minutesValue = Math.floor((timeLeft % HOUR) / MINUTE);
+    const secondsValue = Math.floor((timeLeft % MINUTE) / MILLISECONDS);
 
     setDays(daysValue);
     setHours(hoursValue);
