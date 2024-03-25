@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export const useCountDown = (endDate: string) => {
+  const timeoutIdRef = useRef<NodeJS.Timeout | undefined>(undefined);
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
@@ -24,12 +25,20 @@ export const useCountDown = (endDate: string) => {
     setHours(hoursValue);
     setMinutes(minutesValue);
     setSeconds(secondsValue);
+
+    if (timeLeft > 0) {
+      timeoutIdRef.current = setTimeout(updateCountDown, 1000);
+    }
   };
 
   useEffect(() => {
-    const countDown = setInterval(updateCountDown, 1000);
+    updateCountDown();
 
-    return () => clearInterval(countDown);
+    return () => {
+      if (timeoutIdRef.current) {
+        clearTimeout(timeoutIdRef.current);
+      }
+    };
   }, [endDate]);
 
   return { days, hours, minutes, seconds };

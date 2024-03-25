@@ -13,7 +13,7 @@ import {
   RoundButtonTheme,
   StarRating,
   Text,
-  TextSize,
+  TextVariant,
   TextWeight,
 } from '../../../../shared/ui';
 
@@ -34,19 +34,33 @@ export const ProductPreview: FC<ProductPreviewProps> = (props) => {
       </Link>
       <div className={cls.description}>
         <Link href={href} className={cls.link}>
-          <Text text={title} size={TextSize.S} className={cls.title} />
+          <Text
+            text={title}
+            variant={TextVariant.HEADING_4}
+            className={cls.title}
+          >
+            {title}
+          </Text>
         </Link>
         <div>
           <div className={cls.descriptionMain}>
             <div className={cls.price}>
-              <Text text={price} size={TextSize.M} weight={TextWeight.MEDIUM} />
+              <Text
+                text={price}
+                size={TextVariant.BODY_M}
+                weight={TextWeight.MEDIUM}
+              >
+                {price}
+              </Text>
               {priceOld && (
                 <Text
                   text={price}
-                  size={TextSize.M}
+                  size={TextVariant.BODY_M}
                   weight={TextWeight.MEDIUM}
                   className={cls.priceOld}
-                />
+                >
+                  {priceOld}
+                </Text>
               )}
             </div>
             <StarRating value={rating} />
