@@ -1,0 +1,20 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+
+.navigation {
+  background-color: var(--gray-50);
+}
+
+.navigationContent {
+  @include flex-center-vertical;
+
+  gap: 32px;
+
+  @media screen and (max-width: $screen-d) {
+    gap: 15px;
+  }
+
+  @media screen and (max-width: $screen-t) {
+    width: 100%;
+  }
+}

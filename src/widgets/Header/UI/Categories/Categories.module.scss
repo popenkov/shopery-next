@@ -23,8 +23,8 @@
   padding: 16px 0;
   background-color: var(--back-primary);
   box-shadow: 0 6px 20px 0 rgb(0 0 0 / 12%);
-  //   visibility: hidden;
-  //   opacity: 0;
+  visibility: hidden;
+  opacity: 0;
   transition: all var(--transition);
 
   @media screen and (max-width: $screen-t) {
@@ -38,10 +38,12 @@
   }
 }
 
+.listItem {
+  list-style: none;
+}
+
 .link {
   @include flex-center-vertical;
-  //   todo
-  //   @include body-s;
 
   gap: 12px;
   padding: 6px 22px;

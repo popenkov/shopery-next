@@ -1,0 +1,100 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/box.scss';
+
+.navigationMenu {
+  @include flex-center-vertical;
+
+  gap: 31px;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (max-width: $screen-tl) {
+    display: none;
+  }
+}
+
+.navigationMenuItem {
+  position: relative;
+  list-style: none;
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--front-primary-inversed);
+      transition: all var(--transition);
+
+      .navigationDropMenu {
+        top: 100%;
+        visibility: visible;
+        opacity: 1;
+        transition: all var(--transition);
+      }
+
+      .navigationLinkIcon {
+        transform: rotate(180deg);
+        transition: all var(--transition);
+      }
+    }
+  }
+}
+
+.navigationMenuLink {
+  @include flex-center-vertical;
+  //   @include body-s(500);
+
+  gap: 5px;
+  padding: 18px 0 17px;
+  color: var(--gray-500);
+  text-transform: capitalize;
+  text-decoration: none;
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--primary);
+    }
+  }
+
+  &.active {
+    color: var(--primary);
+  }
+}
+
+.navigationLinkIcon {
+  @include box(16px);
+
+  transform: rotate(0);
+}
+
+.navigationDropMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: var(--header-dropdown-z-index);
+  min-width: 200px;
+  padding: 10px 0;
+  overflow: hidden;
+  background-color: var(--back-primary);
+  border-radius: 6px;
+  box-shadow: 0 6px 20px 0 rgb(0 0 0 / 12%);
+  visibility: hidden;
+  opacity: 0;
+  transition: all var(--transition);
+
+  &.open {
+    opacity: 1;
+  }
+}
+
+.navigationDropMenuLink {
+  display: block;
+  padding: 4px 6px;
+  color: var(--gray-500);
+  transition: all var(--transition);
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--primary);
+      background-color: var(--primary-soft);
+    }
+  }
+}

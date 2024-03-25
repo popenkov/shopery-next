@@ -1,4 +1,10 @@
+@import '@/shared/styles/mixins/button-reset.scss';
+
 .button {
+  @include button-reset;
+}
+
+.buttonLines {
   position: relative;
   display: inline-block;
   width: 18px;

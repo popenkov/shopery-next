@@ -12,8 +12,8 @@ interface Props
 
 export const BurgerButton: FC<Props> = ({ className, ...otherProps }) => {
   return (
-    <button className={className} {...otherProps}>
-      <span className={cls.button}></span>
+    <button className={cls.button} {...otherProps}>
+      <span className={cls.buttonLines}></span>
     </button>
   );
 };

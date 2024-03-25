@@ -1,0 +1,72 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/button-reset.scss';
+
+.accordion {
+  @include flex-column;
+
+  width: 100%;
+}
+
+.content {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--back-primary);
+  transition: all 0.3s ease-in;
+
+  &:not(.content--no-border) {
+    border-bottom: 1px solid var(--gray-100);
+  }
+
+  &--no-border {
+    padding-bottom: 3px !important;
+  }
+}
+
+.accordionItem {
+  list-style: none;
+}
+
+.chevronIcon {
+  @include box(15px);
+
+  transform: rotate(0deg);
+  transition: all var(--transition);
+  stroke-width: 1.6px;
+}
+
+.button {
+  @include button-reset;
+  @include flex-center-sb;
+  // todo
+  // @include body-xl(500);
+
+  width: 100%;
+  padding-bottom: 6px;
+  color: var(--gray-900);
+  background-color: var(--back-primary);
+  cursor: pointer;
+  transition: color var(--transition);
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--primary);
+    }
+  }
+
+  &.open {
+    .chevronIcon {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &.open + .content {
+    padding: 4px 0 15px;
+  }
+}
+
+.contentItem {
+  padding: 10px 0;
+}

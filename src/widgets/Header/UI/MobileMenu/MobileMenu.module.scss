@@ -1,0 +1,65 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/button-reset.scss';
+@import '@/shared/styles/mixins/box.scss';
+
+.content {
+  @include flex-column;
+
+  position: relative;
+  gap: 20px;
+  width: 320px;
+  height: 100vh;
+  padding: 80px 20px 30px;
+  overflow-y: auto;
+  background-color: var(--back-primary);
+  // todo
+  // transform: translateX(-320px);
+  transition: all var(--transition);
+}
+
+.closeButton {
+  @include button-reset;
+  @include box(38px);
+
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.closeIcon {
+  @include box(28px);
+}
+
+.menuFooter {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.mobileMenu {
+  // todo
+  display: none;
+
+  @media screen and (max-width: $screen-tl) {
+    position: fixed;
+    z-index: var(--mobile-menu-z-index);
+    display: block;
+    background-color: var(--modal-bg);
+    visibility: hidden;
+    opacity: 0;
+    transition: all var(--transition);
+    inset: 0;
+  }
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+
+    .content {
+      transform: translateX(0);
+    }
+  }
+}

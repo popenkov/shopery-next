@@ -15,7 +15,7 @@ interface Props
 export const CategoriesButton: FC<Props> = () => {
   return (
     <button className={cls.button}>
-      <BurgerButton className="header__all-categories-burger" />
+      <BurgerButton />
       <Text variant={TextVariant.BODY_S} weight={TextWeight.MEDIUM} as="span">
         All Categories
       </Text>
