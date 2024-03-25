@@ -1,0 +1,61 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+
+.navigation {
+  display: flex;
+  grid-area: navigation;
+  gap: 78px;
+
+  @media screen and (max-width: $screen-tl) {
+    @include flex-center;
+
+    align-items: flex-start;
+  }
+
+  @media screen and (max-width: $screen-t) {
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: flex-start;
+  }
+}
+
+.navigationItem {
+  @include flex-column;
+
+  gap: 20px;
+  list-style: none;
+
+  @media screen and (max-width: $screen-t) {
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.navigationTitle {
+  //   @include body-xl(500);
+
+  margin: 0;
+  color: var(--front-primary-inversed);
+}
+
+.navigationList {
+  @include flex-column;
+
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-link {
+  //   @include body-small;
+
+  color: var(--green-gray-500);
+  transition: all var(--transition);
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--front-primary-inversed);
+    }
+  }
+}

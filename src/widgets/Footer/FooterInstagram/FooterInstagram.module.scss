@@ -1,0 +1,22 @@
+@import '@/shared/styles/_breakpoints';
+
+.instagramTitle {
+  //   @include body-xl(500);
+
+  margin: 0;
+  color: var(--front-primary-inversed);
+}
+
+.instagramCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+
+  @media screen and (max-width: $screen-d) {
+    grid-template-columns: repeat(4, 80px);
+  }
+
+  @media screen and (max-width: $screen-t) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

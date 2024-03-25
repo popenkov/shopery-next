@@ -477,68 +477,83 @@ export const MAIN_PAGE_DATA: MainPageData = {
     },
   ],
   footer: {
-    account: [
+    navigation: [
       {
-        title: 'My Account',
         slug: '#',
+        title: 'account',
+        items: [
+          {
+            title: 'My Account',
+            slug: '#',
+          },
+          {
+            title: 'Order History',
+            slug: '#',
+          },
+          {
+            title: 'Shoping Cart',
+            slug: '#',
+          },
+          {
+            title: 'Wishlist',
+            slug: '#',
+          },
+          {
+            title: 'Settings',
+            slug: '#',
+          },
+        ],
       },
       {
-        title: 'Order History',
         slug: '#',
+        title: 'helps',
+        items: [
+          {
+            title: 'Contact',
+            slug: '#',
+          },
+          {
+            title: 'Faqs',
+            slug: '#',
+          },
+          {
+            title: 'Terms & Condition',
+            slug: '#',
+          },
+          {
+            title: 'Privacy Policy',
+            slug: '#',
+          },
+        ],
       },
       {
-        title: 'Shoping Cart',
         slug: '#',
-      },
-      {
-        title: 'Wishlist',
-        slug: '#',
-      },
-      {
-        title: 'Settings',
-        slug: '#',
+        title: 'proxy',
+        items: [
+          {
+            title: 'About',
+            slug: '#',
+          },
+          {
+            title: 'Shop',
+            slug: '#',
+          },
+          {
+            title: 'Product',
+            slug: '#',
+          },
+          {
+            title: 'Products Details',
+            slug: '#',
+          },
+          {
+            title: 'Track Order',
+            slug: '#',
+          },
+        ],
       },
     ],
-    helps: [
-      {
-        title: 'Contact',
-        slug: '#',
-      },
-      {
-        title: 'Faqs',
-        slug: '#',
-      },
-      {
-        title: 'Terms & Condition',
-        slug: '#',
-      },
-      {
-        title: 'Privacy Policy',
-        slug: '#',
-      },
-    ],
-    proxy: [
-      {
-        title: 'About',
-        slug: '#',
-      },
-      {
-        title: 'Shop',
-        slug: '#',
-      },
-      {
-        title: 'Product',
-        slug: '#',
-      },
-      {
-        title: 'Products Details',
-        slug: '#',
-      },
-      {
-        title: 'Track Order',
-        slug: '#',
-      },
-    ],
+
     instagram: [
       {
         img: '/images/instagram--01.jpg',

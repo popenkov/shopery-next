@@ -1,5 +1,6 @@
 import { ProductInterface } from './common';
-import { BannerProps, TabItem } from '../ui';
+import { TabItem } from '../ui';
+import { BannerProps } from '@/entities/UI/Banner';
 
 interface HeaderCategory {
   slug: string;
@@ -26,8 +27,19 @@ interface Header {
   navigation: NavigationLink[];
 }
 
+interface InstagramCard {
+  img: string;
+  slug: string;
+}
+
+interface Footer {
+  navigation: NavigationLink[];
+  instagram: InstagramCard[];
+}
+
 export interface MainPageData {
   productTabs: TabItem<ProductInterface>[];
   banners: BannerProps[];
   header: Header;
+  footer: Footer;
 }

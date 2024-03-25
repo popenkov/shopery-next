@@ -1,5 +1,6 @@
-@import '../../styles/mixins/flexbox.scss';
-@import '../../styles/mixins/box.scss';
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/button-reset.scss';
 
 .content {
   @include flex-column;
@@ -31,6 +32,7 @@
 }
 
 .button {
+  @include button-reset;
   @include flex-center-vertical;
 
   gap: 3px;
@@ -47,6 +49,7 @@
 }
 
 .link {
+  @include button-reset;
   padding: 0;
   text-decoration: none;
   border: none;
