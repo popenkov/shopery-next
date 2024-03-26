@@ -2,6 +2,7 @@
 @import '@/shared/styles/mixins/flexbox.scss';
 @import '@/shared/styles/mixins/box.scss';
 @import '@/shared/styles/mixins/button-reset.scss';
+@import '@/shared/styles/mixins/text-styles.scss';
 
 .chevron {
   @include box(18px);
@@ -13,6 +14,13 @@
 
 .button {
   @include button-reset;
+
+  @include flex-center-vertical;
+  @include body-s(500);
+
+  gap: 10px;
+  padding: 18px 24px 17px 26px;
+  color: var(--front-primary-inversed);
 
   gap: 10px;
   padding: 18px 24px 17px 26px;

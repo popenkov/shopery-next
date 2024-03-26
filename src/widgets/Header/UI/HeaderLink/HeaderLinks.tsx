@@ -21,7 +21,7 @@ export const HeaderLinks: FC<Props> = ({ links }) => {
           <li className={cls.navigationMenuItem} key={link.id}>
             <Link className={cls.navigationMenuLink} href={link.id}>
               {link.title}
-              <ChevronIcon className={cls.navigationMenuLinkIcon} />
+              {linkItems && <ChevronIcon className={cls.navigationLinkIcon} />}
             </Link>
             {linkItems && (
               <ul className={cls.navigationDropMenu}>

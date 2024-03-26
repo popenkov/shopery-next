@@ -17,6 +17,7 @@ export const Categories = () => {
 
   const handleMenuToggle = () => {
     setIsOpen((prev) => !prev);
+    console.log(isOpen);
   };
 
   return (

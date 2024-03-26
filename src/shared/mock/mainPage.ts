@@ -65,6 +65,14 @@ export const MAIN_PAGE_DATA: MainPageData = {
           { title: 'Blog 1', id: '#' },
         ],
       },
+      {
+        title: 'About us',
+        id: '#',
+      },
+      {
+        title: 'Contact us',
+        id: '#',
+      },
     ],
   },
   hero: [

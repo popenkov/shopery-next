@@ -33,8 +33,8 @@ export const HeaderTop = () => {
     <div className={cls.top}>
       <div className={cn(cls.content, 'container')}>
         <Location address="Store Location: Lincoln- 344, Illinois, Chicago, USA" />
-        <div className="header__actions">
-          <div className="header__dropdowns">
+        <div className={cls.actions}>
+          <div className={cls.dropdowns}>
             <Dropdown
               data={CHANGE_LANG_DATA}
               onChange={(item) => console.log(item)}
@@ -44,7 +44,7 @@ export const HeaderTop = () => {
               onChange={(item) => console.log(item)}
             />
           </div>
-          <div className="header__actions-separator"></div>
+          <div className={cls.actionsSeparator}></div>
           <div className="header__auth">
             <a className="header__auth-link" href="#">
               Sign in

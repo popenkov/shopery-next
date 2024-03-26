@@ -1,5 +1,5 @@
-import { DetailedHTMLProps, FC, HTMLAttributes, Ref } from 'react';
-
+import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+import cn from 'classnames';
 import cls from './BurgerButton.module.scss';
 
 interface Props
@@ -8,11 +8,18 @@ interface Props
     HTMLButtonElement
   > {
   className?: string;
+  onClick: () => void;
 }
 
-export const BurgerButton: FC<Props> = ({ className, ...otherProps }) => {
+export const BurgerButton: FC<Props> = ({ className, onClick }) => {
+  const handleBurgerButtonClick = () => {
+    onClick();
+  };
   return (
-    <button className={cls.button} {...otherProps}>
+    <button
+      className={cn(cls.button, className)}
+      onClick={handleBurgerButtonClick}
+    >
       <span className={cls.buttonLines}></span>
     </button>
   );

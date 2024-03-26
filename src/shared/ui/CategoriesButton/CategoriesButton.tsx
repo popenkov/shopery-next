@@ -3,6 +3,7 @@ import { BurgerButton } from '../BurgerButton';
 import cls from './CategoriesButton.module.scss';
 import { Text, TextVariant, TextWeight } from '..';
 import ChevronIcon from '@public/icons/icon__chevron-down.svg';
+import cn from 'classnames';
 
 interface Props
   extends DetailedHTMLProps<
@@ -10,11 +11,18 @@ interface Props
     HTMLButtonElement
   > {
   className?: string;
+  onClick: () => void;
 }
 
-export const CategoriesButton: FC<Props> = () => {
+export const CategoriesButton: FC<Props> = ({ className, onClick }) => {
+  const handleCategoryButtonClick = () => {
+    onClick();
+  };
   return (
-    <button className={cls.button}>
+    <button
+      className={cn(cls.button, className)}
+      onClick={handleCategoryButtonClick}
+    >
       <BurgerButton />
       <Text variant={TextVariant.BODY_S} weight={TextWeight.MEDIUM} as="span">
         All Categories

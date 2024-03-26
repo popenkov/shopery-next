@@ -5,6 +5,16 @@
   background-color: var(--gray-50);
 }
 
+.content {
+  @include flex-center-sb;
+
+  gap: 35px;
+
+  @media screen and (max-width: $screen-d) {
+    gap: 15px;
+  }
+}
+
 .navigationContent {
   @include flex-center-vertical;
 

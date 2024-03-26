@@ -10,9 +10,11 @@ export const HeaderNavigation = () => {
   return (
     <nav className={cls.navigation}>
       <div className="container">
-        <div className={cls.navigationContent}>
-          <Categories />
-          <HeaderLinks links={navigation} />
+        <div className={cls.content}>
+          <div className={cls.navigationContent}>
+            <Categories />
+            <HeaderLinks links={navigation} />
+          </div>
           <PhoneLink phone="(219) 555-0114" href="2195550114" />
         </div>
       </div>

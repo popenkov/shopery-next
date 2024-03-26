@@ -32,7 +32,7 @@
   }
 }
 
-.logo {
+.logoDesktop {
   max-width: 183px;
 
   @media screen and (max-width: $screen-t) {
@@ -40,7 +40,7 @@
   }
 }
 
-.logo-mobile {
+.logoMobile {
   display: none;
 
   @media screen and (max-width: $screen-t) {

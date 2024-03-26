@@ -8,11 +8,9 @@ import Link from 'next/link';
 export const HeaderActions = () => {
   return (
     <div className={cls.actions}>
-      <div className="header__favorite">
-        <Link className="header__favorite-link" href="#">
-          <LikeIcon className="header__favorite-icon" />
-        </Link>
-      </div>
+      <Link className={cls.favoriteLink} href="#">
+        <LikeIcon className={cls.favoriteIcon} />
+      </Link>
       <span className={cls.actionsSeparator} />
       <HeaderCart />
     </div>
