@@ -30,8 +30,8 @@ export const Categories = () => {
         {categories.map((link) => {
           const Icon = getCategoryIcon(link.icon);
           return (
-            <li key={link.slug} className={cls.listItem}>
-              <Link className={cls.link} href={link.slug}>
+            <li key={link.id} className={cls.listItem}>
+              <Link className={cls.link} href={link.id}>
                 <Icon className={cls.linkIcon} />
                 <Text
                   variant={TextVariant.BODY_S}

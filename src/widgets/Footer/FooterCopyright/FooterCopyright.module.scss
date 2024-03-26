@@ -1,9 +1,10 @@
 @import '@/shared/styles/_breakpoints';
 @import '@/shared/styles/mixins/flexbox.scss';
 
-.bottom {
+.copyright {
   @include flex-center-sb;
 
+  grid-area: copyright;
   padding: 24px 0 23px;
   border-top: 1px solid var(--green-gray-800);
 
@@ -13,57 +14,12 @@
   }
 }
 
-.socials {
-  @include flex-center-vertical;
-
-  gap: 8px;
-  margin: 0;
-  padding: 0;
-}
-
-// stylelint-disable-next-line
-.socials .socials-icon.button-round__icon {
-  color: var(--green-gray-300);
-}
-
-.copyright-text {
-  //   @include body-small;
-
-  margin: 0 0 0 114px;
+.copyrightText {
+  margin-left: 114px;
   color: var(--green-gray-500);
 
   @media screen and (max-width: $screen-tl) {
     margin-left: 0;
     text-align: center;
-  }
-}
-
-.payment {
-  @include flex-center-vertical;
-
-  gap: 8px;
-  margin: 0;
-  padding: 0;
-}
-
-.payment-icon {
-  width: 45px;
-  height: 32px;
-}
-
-.payment-item {
-  display: block;
-  width: 45px;
-  height: 32px;
-  background-color: var(--green-gray-900);
-  border-radius: 5px;
-  outline: 1px solid var(--green-gray-800);
-
-  &--large {
-    width: 65px;
-
-    .payment-icon {
-      width: 65px;
-    }
   }
 }

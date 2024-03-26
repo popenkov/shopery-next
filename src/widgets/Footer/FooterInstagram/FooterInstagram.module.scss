@@ -1,8 +1,18 @@
 @import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+
+.instagram {
+  @include flex-column;
+
+  grid-area: instagram;
+  gap: 20px;
+
+  @media screen and (max-width: $screen-tl) {
+    @include flex-column-center;
+  }
+}
 
 .instagramTitle {
-  //   @include body-xl(500);
-
   margin: 0;
   color: var(--front-primary-inversed);
 }

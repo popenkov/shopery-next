@@ -1,12 +1,5 @@
 import cn from 'classnames';
-import {
-  DetailedHTMLProps,
-  FC,
-  HTMLAttributes,
-  ReactNode,
-  Ref,
-  memo,
-} from 'react';
+import { ComponentProps, ElementType, ReactNode, memo } from 'react';
 
 import style from './RoundButton.module.scss';
 
@@ -16,34 +9,41 @@ export enum RoundButtonTheme {
   GHOST = 'ghost',
 }
 
-interface AppButtonProps
-  extends DetailedHTMLProps<
-    HTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
-  > {
+const DEFAULT_ELEMENT: ElementType = 'button';
+
+interface ButtonOwnProps<E extends ElementType = ElementType> {
   className?: string;
   theme?: RoundButtonTheme;
   children: ReactNode;
-  ref?: Ref<HTMLButtonElement>;
+  as?: E;
 }
 
-export const RoundButton: FC<AppButtonProps> = memo((props) => {
+type RoundButtonProps<E extends ElementType> = ButtonOwnProps<E> &
+  Omit<ComponentProps<E>, keyof ButtonOwnProps>;
+
+const ButtonElement = <E extends ElementType = typeof DEFAULT_ELEMENT>(
+  props: RoundButtonProps<E>
+) => {
   const {
     className,
     children,
-    ref,
+    as,
     theme = RoundButtonTheme.PRIMARY,
     ...otherProps
   } = props;
+
+  const Element = as || DEFAULT_ELEMENT;
+
   return (
-    <button
+    <Element
       className={cn(style.button, className, {
         [style[theme]]: true,
       })}
-      ref={ref}
       {...otherProps}
     >
       {children}
-    </button>
+    </Element>
   );
-});
+};
+
+export const RoundButton = memo(ButtonElement);

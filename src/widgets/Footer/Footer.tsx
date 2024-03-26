@@ -10,11 +10,11 @@ export const Footer = () => {
   return (
     <footer className={cls.footer}>
       <div className={cls.footerInner}>
-        <div className={(cn(cls.footerContent), 'container')}>
-          <FooterAbout className={cls.footerAbout} />
-          <FooterNavigation className={cls.footerNavigation} />
-          <FooterInstagram className={cls.footerInstagram} />
-          <FooterCopyright className={cls.footerCopyright} />
+        <div className={cn(cls.footerContent, 'container')}>
+          <FooterAbout />
+          <FooterNavigation />
+          <FooterInstagram />
+          <FooterCopyright />
         </div>
       </div>
     </footer>

@@ -3,7 +3,7 @@ import { TabItem } from '../ui';
 import { BannerProps } from '@/entities/UI/Banner';
 
 interface HeaderCategory {
-  slug: string;
+  id: string;
   icon:
     | 'icon__apple'
     | 'icon__salad'
@@ -17,8 +17,9 @@ interface HeaderCategory {
 }
 
 export interface NavigationLink {
-  slug: string;
-  title: string;
+  id: string;
+  icon?: string;
+  title?: string;
   items?: NavigationLink[];
 }
 
@@ -29,12 +30,32 @@ interface Header {
 
 interface InstagramCard {
   img: string;
-  slug: string;
+  id: string;
+}
+
+interface SocialLink {
+  icon:
+    | 'icon__facebook'
+    | 'icon__twitter'
+    | 'icon__pinterest'
+    | 'icon__instagram';
+  id: string;
+}
+interface PaymentIcon {
+  icon:
+    | 'icon__secure'
+    | 'icon__applepay'
+    | 'icon__visa'
+    | 'icon__discover'
+    | 'icon__mastercard';
+  id: string;
 }
 
 interface Footer {
   navigation: NavigationLink[];
   instagram: InstagramCard[];
+  socialLinks: SocialLink[];
+  paymentMethods: PaymentIcon[];
 }
 
 export interface MainPageData {

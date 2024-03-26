@@ -4,65 +4,65 @@ export const MAIN_PAGE_DATA: MainPageData = {
   header: {
     categories: [
       {
-        slug: '#',
+        id: '#',
         icon: 'icon__apple',
         title: 'Fresh Fruit',
       },
       {
-        slug: '#',
+        id: '#',
         icon: 'icon__salad',
         title: 'Vegetables',
       },
-      { slug: '#', icon: 'icon__fish', title: 'River Fish' },
-      { slug: '#', icon: 'icon__coffee', title: 'Drink & Water' },
-      { slug: '#', icon: 'icon__ice_cream', title: 'Yogurt & Ice Cream' },
+      { id: '#', icon: 'icon__fish', title: 'River Fish' },
+      { id: '#', icon: 'icon__coffee', title: 'Drink & Water' },
+      { id: '#', icon: 'icon__ice_cream', title: 'Yogurt & Ice Cream' },
       {
-        slug: '#',
+        id: '#',
         icon: 'icon__cupcake',
         title: 'Cake & Bread',
       },
-      { slug: '#', icon: 'icon__pie', title: 'Butter & Cream' },
-      { slug: '#', icon: 'icon__food', title: 'Cooking' },
+      { id: '#', icon: 'icon__pie', title: 'Butter & Cream' },
+      { id: '#', icon: 'icon__food', title: 'Cooking' },
     ],
     navigation: [
       {
         title: 'Home',
-        slug: '#',
+        id: '#',
         items: [
-          { title: 'Home 1', slug: '#' },
-          { title: 'Home 1', slug: '#' },
-          { title: 'Home 1', slug: '#' },
-          { title: 'Home 1', slug: '#' },
+          { title: 'Home 1', id: '#' },
+          { title: 'Home 1', id: '#' },
+          { title: 'Home 1', id: '#' },
+          { title: 'Home 1', id: '#' },
         ],
       },
       {
         title: 'Shop',
-        slug: '#',
+        id: '#',
         items: [
-          { title: 'Shop 1', slug: '#' },
-          { title: 'Shop 1', slug: '#' },
-          { title: 'Shop 1', slug: '#' },
-          { title: 'Shop 1', slug: '#' },
+          { title: 'Shop 1', id: '#' },
+          { title: 'Shop 1', id: '#' },
+          { title: 'Shop 1', id: '#' },
+          { title: 'Shop 1', id: '#' },
         ],
       },
       {
         title: 'Pages',
-        slug: '#',
+        id: '#',
         items: [
-          { title: 'Pages 1', slug: '#' },
-          { title: 'Pages 1', slug: '#' },
-          { title: 'Pages 1', slug: '#' },
-          { title: 'Pages 1', slug: '#' },
+          { title: 'Pages 1', id: '#' },
+          { title: 'Pages 1', id: '#' },
+          { title: 'Pages 1', id: '#' },
+          { title: 'Pages 1', id: '#' },
         ],
       },
       {
         title: 'Blog',
-        slug: '#',
+        id: '#',
         items: [
-          { title: 'Blog 1', slug: '#' },
-          { title: 'Blog 1', slug: '#' },
-          { title: 'Blog 1', slug: '#' },
-          { title: 'Blog 1', slug: '#' },
+          { title: 'Blog 1', id: '#' },
+          { title: 'Blog 1', id: '#' },
+          { title: 'Blog 1', id: '#' },
+          { title: 'Blog 1', id: '#' },
         ],
       },
     ],
@@ -116,7 +116,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       label: 'All',
       content: [
         {
-          slug: '#',
+          id: '#',
           img: '/images/product-apple.jpg',
           title: '1 Green Apple',
           price: '$14.99',
@@ -130,7 +130,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           ],
         },
         {
-          slug: '#',
+          id: '#',
           img: '/images/product-mango.jpg',
           title: '1 Surjapur Mango',
           price: '$14.99',
@@ -138,7 +138,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           rating: 4,
         },
         {
-          slug: '#',
+          id: '#',
           img: '/images/product-tomatos.jpg',
           title: '1 Red Tomatos',
           price: '$14.99',
@@ -146,7 +146,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           rating: 4,
         },
         {
-          slug: '#',
+          id: '#',
           img: '/images/product-cauliflower.jpg',
           title: '1 Fresh Cauliflower',
           price: '$14.99',
@@ -154,7 +154,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           rating: 4,
         },
         {
-          slug: '#',
+          id: '#',
           img: '/images/product-letucce.jpg',
           title: '1 Green Lettuce',
           price: '$14.99',
@@ -162,7 +162,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           rating: 4,
         },
         {
-          slug: '#',
+          id: '#',
           img: '/images/product-eggplant.jpg',
           title: '1 Eggplant',
           price: '$14.99',
@@ -170,7 +170,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           rating: 4,
         },
         {
-          slug: '#',
+          id: '#',
           img: '/images/product-chilli.jpg',
           title: '1 Green Chilli',
           price: '$14.99',
@@ -178,7 +178,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           rating: 4,
         },
         {
-          slug: '#',
+          id: '#',
           img: '/images/product-eggplant-dark.jpg',
           title: '1 Eggplant',
           price: '$14.99',
@@ -192,7 +192,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       label: 'Vegetables',
       content: [
         {
-          slug: '#',
+          id: '#',
           img: '/images/product-apple.jpg',
           title: 'Green Apple',
           price: '$14.99',
@@ -206,7 +206,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           ],
         },
         {
-          slug: '#',
+          id: '#',
           img: '/images/product-mango.jpg',
           title: 'Surjapur Mango',
           price: '$14.99',
@@ -214,7 +214,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           rating: 4,
         },
         {
-          slug: '#',
+          id: '#',
           img: '/images/product-tomatos.jpg',
           title: 'Red Tomatos',
           price: '$14.99',
@@ -222,7 +222,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           rating: 4,
         },
         {
-          slug: '#',
+          id: '#',
           img: '/images/product-cauliflower.jpg',
           title: 'Fresh Cauliflower',
           price: '$14.99',
@@ -230,7 +230,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           rating: 4,
         },
         {
-          slug: '#',
+          id: '#',
           img: '/images/product-letucce.jpg',
           title: 'Green Lettuce',
           price: '$14.99',
@@ -238,7 +238,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           rating: 4,
         },
         {
-          slug: '#',
+          id: '#',
           img: '/images/product-eggplant.jpg',
           title: 'Eggplant',
           price: '$14.99',
@@ -246,7 +246,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           rating: 4,
         },
         {
-          slug: '#',
+          id: '#',
           img: '/images/product-chilli.jpg',
           title: 'Green Chilli',
           price: '$14.99',
@@ -254,7 +254,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
           rating: 4,
         },
         {
-          slug: '#',
+          id: '#',
           img: '/images/product-eggplant-dark.jpg',
           title: 'Eggplant',
           price: '$14.99',
@@ -276,7 +276,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
   ],
   products: [
     {
-      slug: '#',
+      id: '#',
       img: '/images/product-apple.jpg',
       title: 'Green Apple',
       price: '$14.99',
@@ -297,7 +297,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       rating: 4,
     },
     {
-      slug: '#',
+      id: '#',
       img: '/images/product-tomatos.jpg',
       title: 'Red Tomatos',
       price: '$14.99',
@@ -305,7 +305,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       rating: 4,
     },
     {
-      slug: '#',
+      id: '#',
       img: '/images/product-cauliflower.jpg',
       title: 'Fresh Cauliflower',
       price: '$14.99',
@@ -313,7 +313,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       rating: 4,
     },
     {
-      slug: '#',
+      id: '#',
       img: '/images/product-letucce.jpg',
       title: 'Green Lettuce',
       price: '$14.99',
@@ -321,7 +321,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       rating: 4,
     },
     {
-      slug: '#',
+      id: '#',
       img: '/images/product-eggplant.jpg',
       title: 'Eggplant',
       price: '$14.99',
@@ -329,7 +329,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       rating: 4,
     },
     {
-      slug: '#',
+      id: '#',
       img: '/images/product-chilli.jpg',
       title: 'Green Chilli',
       price: '$14.99',
@@ -337,7 +337,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       rating: 4,
     },
     {
-      slug: '#',
+      id: '#',
       img: '/images/product-eggplant-dark.jpg',
       title: 'Eggplant',
       price: '$14.99',
@@ -354,7 +354,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       title: '100% Fresh Cow Milk',
       text: 'Starting at ',
       price: '$14.99',
-      slug: '#',
+      id: '#',
     },
     {
       id: '2',
@@ -364,7 +364,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       title: 'Water & Soft Drink',
       text: '',
       price: '',
-      slug: '#',
+      id: '#',
     },
     {
       id: '3',
@@ -374,12 +374,12 @@ export const MAIN_PAGE_DATA: MainPageData = {
       title: 'Quick Breakfast',
       text: '',
       price: '',
-      slug: '#',
+      id: '#',
     },
   ],
   featuredProducts: [
     {
-      slug: '#',
+      id: '#',
       img: '/images/product-apple.jpg',
       title: 'Green Apple',
       price: '$14.99',
@@ -393,7 +393,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       ],
     },
     {
-      slug: '#',
+      id: '#',
       img: '/images/product-mango.jpg',
       title: 'Surjapur Mango',
       price: '$14.99',
@@ -401,7 +401,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       rating: 4,
     },
     {
-      slug: '#',
+      id: '#',
       img: '/images/product-tomatos.jpg',
       title: 'Red Tomatos',
       price: '$14.99',
@@ -409,7 +409,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       rating: 4,
     },
     {
-      slug: '#',
+      id: '#',
       img: '/images/product-cauliflower.jpg',
       title: 'Fresh Cauliflower',
       price: '$14.99',
@@ -417,7 +417,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       rating: 4,
     },
     {
-      slug: '#',
+      id: '#',
       img: '/images/product-letucce.jpg',
       title: 'Green Lettuce',
       price: '$14.99',
@@ -457,7 +457,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       img: '/images/news-img--1.jpg',
       title: 'Curabitur porttitor orci eget neque accumsan venenatis.',
       text: 'Nulla libero lorem, euismod venenatis nibh sed, sodales dictum ex. Etiam nisi augue, malesuada et pulvinar at, posuere eu neque.',
-      slug: '#',
+      id: '#',
     },
     {
       dateDay: '23',
@@ -465,7 +465,7 @@ export const MAIN_PAGE_DATA: MainPageData = {
       img: '/images/news-img--2.jpg',
       title: 'Curabitur porttitor orci eget neque accumsan venenatis.',
       text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. ',
-      slug: '#',
+      id: '#',
     },
     {
       dateDay: '23',
@@ -473,82 +473,82 @@ export const MAIN_PAGE_DATA: MainPageData = {
       img: '/images/news-img--3.jpg',
       title: 'Curabitur porttitor orci eget neque accumsan venenatis.',
       text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. ',
-      slug: '#',
+      id: '#',
     },
   ],
   footer: {
     navigation: [
       {
-        slug: '#',
+        id: '#',
         title: 'account',
         items: [
           {
             title: 'My Account',
-            slug: '#',
+            id: '#',
           },
           {
             title: 'Order History',
-            slug: '#',
+            id: '#',
           },
           {
             title: 'Shoping Cart',
-            slug: '#',
+            id: '#',
           },
           {
             title: 'Wishlist',
-            slug: '#',
+            id: '#',
           },
           {
             title: 'Settings',
-            slug: '#',
+            id: '#',
           },
         ],
       },
       {
-        slug: '#',
+        id: '#',
         title: 'helps',
         items: [
           {
             title: 'Contact',
-            slug: '#',
+            id: '#',
           },
           {
             title: 'Faqs',
-            slug: '#',
+            id: '#',
           },
           {
             title: 'Terms & Condition',
-            slug: '#',
+            id: '#',
           },
           {
             title: 'Privacy Policy',
-            slug: '#',
+            id: '#',
           },
         ],
       },
       {
-        slug: '#',
+        id: '#',
         title: 'proxy',
         items: [
           {
             title: 'About',
-            slug: '#',
+            id: '#',
           },
           {
             title: 'Shop',
-            slug: '#',
+            id: '#',
           },
           {
             title: 'Product',
-            slug: '#',
+            id: '#',
           },
           {
             title: 'Products Details',
-            slug: '#',
+            id: '#',
           },
           {
             title: 'Track Order',
-            slug: '#',
+            id: '#',
           },
         ],
       },
@@ -557,70 +557,75 @@ export const MAIN_PAGE_DATA: MainPageData = {
     instagram: [
       {
         img: '/images/instagram--01.jpg',
-        slug: '#',
+        id: '#',
       },
       {
         img: '/images/instagram--02.jpg',
-        slug: '#',
+        id: '#',
       },
       {
         img: '/images/instagram--03.jpg',
-        slug: '#',
+        id: '#',
       },
       {
         img: '/images/instagram--04.jpg',
-        slug: '#',
+        id: '#',
       },
       {
         img: '/images/instagram--05.jpg',
-        slug: '#',
+        id: '#',
       },
       {
         img: '/images/instagram--06.jpg',
-        slug: '#',
+        id: '#',
       },
       {
         img: '/images/instagram--07.jpg',
-        slug: '#',
+        id: '#',
       },
       {
         img: '/images/instagram--08.jpg',
-        slug: '#',
+        id: '#',
       },
     ],
     socialLinks: [
       {
         icon: 'icon__facebook',
-        slug: '#',
+        id: '#',
       },
       {
         icon: 'icon__twitter',
-        slug: '#',
+        id: '#',
       },
       {
         icon: 'icon__pinterest',
-        slug: '#',
+        id: '#',
       },
       {
         icon: 'icon__instagram',
-        slug: '#',
+        id: '#',
       },
     ],
     paymentMethods: [
       {
-        icon: 'icon__apple-pay',
+        icon: 'icon__applepay',
+        id: '#',
       },
       {
         icon: 'icon__visa',
+        id: '#',
       },
       {
         icon: 'icon__discover',
+        id: '#',
       },
       {
         icon: 'icon__mastercard',
+        id: '#',
       },
       {
         icon: 'icon__secure',
+        id: '#',
       },
     ],
   },

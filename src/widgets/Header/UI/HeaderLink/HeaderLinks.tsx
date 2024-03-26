@@ -18,8 +18,8 @@ export const HeaderLinks: FC<Props> = ({ links }) => {
       {links.map((link) => {
         const linkItems = link?.items;
         return (
-          <li className={cls.navigationMenuItem} key={link.slug}>
-            <Link className={cls.navigationMenuLink} href={link.slug}>
+          <li className={cls.navigationMenuItem} key={link.id}>
+            <Link className={cls.navigationMenuLink} href={link.id}>
               {link.title}
               <ChevronIcon className={cls.navigationMenuLinkIcon} />
             </Link>
@@ -27,10 +27,10 @@ export const HeaderLinks: FC<Props> = ({ links }) => {
               <ul className={cls.navigationDropMenu}>
                 {linkItems.map((sublink) => {
                   return (
-                    <li key={sublink.slug}>
+                    <li key={sublink.id}>
                       <Link
                         className={cls.navigationDropMenuLink}
-                        href={sublink.slug}
+                        href={sublink.id}
                       >
                         {sublink.title}
                       </Link>

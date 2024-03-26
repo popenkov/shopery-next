@@ -2,8 +2,8 @@
 @import '@/shared/styles/mixins/flexbox.scss';
 
 .navigation {
-  display: flex;
   grid-area: navigation;
+  display: flex;
   gap: 78px;
 
   @media screen and (max-width: $screen-tl) {
@@ -33,10 +33,9 @@
 }
 
 .navigationTitle {
-  //   @include body-xl(500);
-
   margin: 0;
   color: var(--front-primary-inversed);
+  text-transform: capitalize;
 }
 
 .navigationList {
@@ -47,11 +46,10 @@
   padding: 0;
 }
 
-.navigation-link {
-  //   @include body-small;
-
+.navigationLink {
   color: var(--green-gray-500);
   transition: all var(--transition);
+  text-transform: capitalize;
 
   @media (hover: hover) {
     &:hover {

@@ -8,7 +8,6 @@
 }
 
 .footerInner {
-  // todo
   background: url('/images/left.svg') no-repeat left bottom,
     url('/images/right.svg') no-repeat right bottom;
 
@@ -17,7 +16,7 @@
   }
 }
 
-.content {
+.footerContent {
   display: grid;
   grid-template: repeat(2, auto) / minmax(1fr, 336px) repeat(2, 1fr);
   grid-template-areas:
@@ -44,24 +43,4 @@
       'copyright copyright';
     gap: 50px 40px;
   }
-}
-
-// todo
-.top {
-  padding: 66px 0;
-}
-
-.footerInstagram {
-  @include flex-column;
-
-  grid-area: instagram;
-  gap: 20px;
-
-  @media screen and (max-width: $screen-tl) {
-    @include flex-column-center;
-  }
-}
-
-.footerCopyright {
-  grid-area: copyright;
 }

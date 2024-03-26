@@ -9,23 +9,17 @@ interface InstagramCardProps
     HTMLAttributes<HTMLAnchorElement>,
     HTMLAnchorElement
   > {
-  //   img: string;
-  //   title: string;
-  //   href: string;
+  img: string;
+  id: string;
 }
 
 // todo
 
-export const InstagramCard: FC<InstagramCardProps> = () => {
+export const InstagramCard: FC<InstagramCardProps> = ({ img, id }) => {
   return (
-    <a className={cls.card} href="#">
+    <a className={cls.card} href={id}>
       <div className={cls.imgContainer}>
-        <Image
-          src="/images/instagram--01.jpg"
-          alt="alt"
-          className={cls.img}
-          fill
-        />
+        <Image src={img} alt="alt" className={cls.img} fill />
       </div>
       <div className={cls.overlay}>
         <InstagramIcon className={cls.icon} />

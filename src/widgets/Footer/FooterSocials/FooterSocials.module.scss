@@ -1,0 +1,13 @@
+@import '@/shared/styles/mixins/flexbox.scss';
+
+.socials {
+  @include flex-center-vertical;
+
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.socials svg.linkIcon {
+  color: var(--green-gray-300);
+}
