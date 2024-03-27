@@ -2,8 +2,6 @@
 @import '@/shared/styles/mixins/flexbox.scss';
 
 .search {
-  $block-name: &; // #{$block-name}__element
-
   @include flex-center-vertical;
 
   border-radius: 6px;
