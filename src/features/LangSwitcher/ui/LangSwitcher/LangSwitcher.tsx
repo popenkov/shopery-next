@@ -2,8 +2,8 @@
 
 import { FC, memo } from 'react';
 
-import { Dropdown } from '@/shared/ui';
-import { DropdownItem } from '@/shared/ui/Dropdown/Dropdown.interface';
+import { Dropdown } from '@/shared';
+import { DropdownItem } from '@/shared/UI/Dropdown/Dropdown.interface';
 
 const CHANGE_LANG_DATA = [
   {

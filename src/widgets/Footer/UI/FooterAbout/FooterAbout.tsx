@@ -1,4 +1,5 @@
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+
 import cls from './FooterAbout.module.scss';
 
 interface Props

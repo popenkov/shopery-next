@@ -1,9 +1,10 @@
+import Link from 'next/link';
 import React from 'react';
 
+import { Text } from '@/shared';
 import CartIcon from '@public/icons/icon__cart.svg';
-import Link from 'next/link';
+
 import cls from './HeaderCart.module.scss';
-import { Text, TextVariant, TextWeight } from '@/shared/ui';
 
 export const HeaderCart = () => {
   return (
@@ -13,10 +14,18 @@ export const HeaderCart = () => {
         <span className={cls.cartItemsAmount}>2</span>
       </Link>
       <div className={cls.cartInfo}>
-        <Text variant={TextVariant.BODY_XS} className={cls.cartTitle}>
+        <Text
+          // todo
+          // variant={TextVariant.BODY_XS}
+          className={cls.cartTitle}
+        >
           Shopping cart:
         </Text>
-        <Text variant={TextVariant.BODY_S} weight={TextWeight.MEDIUM}>
+        <Text
+        // todo
+        // variant={TextVariant.BODY_S}
+        // weight={TextWeight.MEDIUM}
+        >
           ${'57.00'}
         </Text>
       </div>

@@ -1,9 +1,10 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
-import cls from './InstagramPosts.module.scss';
 
-import { Text, TextVariant, TextWeight } from '@/shared/ui';
 import { InstagramCard } from '@/entities/InstagramCard';
+
+import cls from './InstagramPosts.module.scss';
 import { getInstagramPosts } from '../api/getInstagramPosts';
+import { Text, TextVariant, TextWeight } from '@/shared/ui';
 
 interface Props
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}

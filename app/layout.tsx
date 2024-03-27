@@ -3,8 +3,8 @@ import { Poppins } from 'next/font/google';
 import '@/app/styles/globals.scss';
 import { ReactNode } from 'react';
 
-import { Header } from '@/widgets/Header';
 import { Footer } from '@/widgets/Footer';
+import { Header } from '@/widgets/Header';
 
 const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700'],

@@ -2,8 +2,8 @@
 
 import { FC, memo } from 'react';
 
-import { Dropdown } from '@/shared/ui';
-import { DropdownItem } from '@/shared/ui/Dropdown/Dropdown.interface';
+import { Dropdown } from '@/shared';
+import { DropdownItem } from '@/shared/UI/Dropdown/Dropdown.interface';
 
 const CHANGE_CURRENCY_DATA = [
   {
@@ -17,7 +17,9 @@ const CHANGE_CURRENCY_DATA = [
 ];
 
 export const CurrencySwitcher: FC = memo(() => {
-  const handleCurrencyChange = (item: DropdownItem) => console.log(item);
+  const handleCurrencyChange = (item: DropdownItem) => {
+    console.log(item);
+  };
 
   return (
     <Dropdown data={CHANGE_CURRENCY_DATA} onChange={handleCurrencyChange} />

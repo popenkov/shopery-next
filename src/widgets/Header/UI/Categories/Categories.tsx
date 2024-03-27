@@ -1,13 +1,14 @@
 'use client';
 
-import { CategoriesButton } from '@/shared/ui/CategoriesButton';
+import cn from 'classnames';
+import Link from 'next/link';
 import React, { DetailedHTMLProps, FC, HTMLAttributes, useState } from 'react';
+
+import { Text } from '@/shared';
+import { CategoriesButton } from '@/shared/UI/CategoriesButton';
 
 import cls from './Categories.module.scss';
 import { getCategoryIcon } from './getCategoryIcon';
-import { Text, TextVariant, TextWeight } from '@/shared/ui';
-import Link from 'next/link';
-import cn from 'classnames';
 import { HeaderCategory } from '../../model/interfaces/header-categories.interface';
 
 interface Props
@@ -41,8 +42,9 @@ export const Categories: FC<Props> = ({ categories }) => {
               <Link className={cls.link} href={link.id}>
                 <Icon className={cls.linkIcon} />
                 <Text
-                  variant={TextVariant.BODY_S}
-                  weight={TextWeight.MEDIUM}
+                  // todo
+                  // variant={TextVariant.BODY_S}
+                  // weight={TextWeight.MEDIUM}
                   as="span"
                 >
                   {link.title}

@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
-import cls from './NavigationLinks.module.scss';
+
 import ChevronIcon from '@public/icons/icon__chevron-down.svg';
+
+import cls from './NavigationLinks.module.scss';
 import { NavigationLink } from '../../model/types/navigation.interface';
 
 interface Props

@@ -1,9 +1,9 @@
+import Link from 'next/link';
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
-import cls from './FooterNavigation.module.scss';
+import { Text } from '@/shared';
 
-import Link from 'next/link';
-import { Text, TextVariant, TextWeight } from '@/shared/ui';
+import cls from './FooterNavigation.module.scss';
 import { getFooterData } from '../../api/getFooterData';
 
 interface Props
@@ -19,8 +19,9 @@ export const FooterNavigation: FC<Props> = () => {
           <div className={cls.navigationItem} key={id}>
             <Text
               className={cls.navigationTitle}
-              variant={TextVariant.BODY_XL}
-              weight={TextWeight.MEDIUM}
+              // todo
+              // variant={TextVariant.BODY_XL}
+              // weight={TextWeight.MEDIUM}
               as="h2"
             >
               {title}
@@ -32,7 +33,12 @@ export const FooterNavigation: FC<Props> = () => {
                   return (
                     <li className={cls.navigationItem} key={id}>
                       <Link className={cls.navigationLink} href={id}>
-                        <Text variant={TextVariant.BODY_S}>{title}</Text>
+                        <Text
+                        // todo
+                        // variant={TextVariant.BODY_S}
+                        >
+                          {title}
+                        </Text>
                       </Link>
                     </li>
                   );

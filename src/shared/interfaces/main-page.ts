@@ -1,6 +1,7 @@
-import { ProductInterface } from './common';
-import { TabItem } from '../ui';
 import { BannerProps } from '@/entities/Banner';
+
+import { ProductInterface } from './common';
+import { TabItem } from '../UI';
 
 // todo  разнести по виджетам
 

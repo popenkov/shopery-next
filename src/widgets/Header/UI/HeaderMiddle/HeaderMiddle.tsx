@@ -1,12 +1,13 @@
 'use client';
 
-import { ProductSearch } from '@/features/ProductsSearch';
-import React, { useState } from 'react';
 import cn from 'classnames';
+import React, { useState } from 'react';
+
+import { ProductSearch } from '@/features/ProductsSearch';
+import { Logo } from '@/shared';
+import { BurgerButton } from '@/shared/UI/BurgerButton';
 
 import cls from './HeaderMiddle.module.scss';
-import { BurgerButton } from '@/shared/ui/BurgerButton';
-import { Logo, LogoSize } from '@/shared/ui';
 import { HeaderActions } from '../HeaderActions';
 import { MobileMenu } from '../MobileMenu';
 
@@ -21,7 +22,11 @@ export const HeaderMiddle = () => {
     <div className={cn(cls.middle, 'container')}>
       <BurgerButton className={cls.mobileBurger} onClick={handleMenuToggle} />
       <Logo className={cls.logoDesktop} />
-      <Logo className={cls.logoMobile} size={LogoSize.SMALL} />
+      <Logo
+        className={cls.logoMobile}
+        // todo
+        // size={LogoSize.SMALL}
+      />
       <div className={cn(cls.search, cls.searchDesktop)}>
         <ProductSearch />
       </div>

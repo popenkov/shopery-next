@@ -1,11 +1,11 @@
 import cn from 'classnames';
 import React from 'react';
 
-import { Location } from '@/shared/ui';
+import { CurrencySwitcher } from '@/features/CurrencySwitcher';
+import { LangSwitcher } from '@/features/LangSwitcher';
+import { Location } from '@/shared';
 
 import cls from './HeaderTop.module.scss';
-import { LangSwitcher } from '@/features/LangSwitcher';
-import { CurrencySwitcher } from '@/features/CurrencySwitcher';
 
 export const HeaderTop = () => {
   return (

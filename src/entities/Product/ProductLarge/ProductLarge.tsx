@@ -2,20 +2,20 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
-import { ProductInterface } from '@/shared/interfaces/common';
-
-import cls from './ProductLarge.module.scss';
+import {
+  RoundButton,
+  // RoundButtonTheme,
+  StarRating,
+  Text,
+  // TextVariant,
+  // TextWeight,
+} from '@/shared';
 import CartIcon from '@public/icons/icon__cart.svg';
 import PreviewIcon from '@public/icons/icon__eye.svg';
 import LikeIcon from '@public/icons/icon__heart-lined.svg';
-import {
-  RoundButton,
-  RoundButtonTheme,
-  StarRating,
-  Text,
-  TextVariant,
-  TextWeight,
-} from '@/shared/ui';
+
+import cls from './ProductLarge.module.scss';
+import { ProductInterface } from '../model/interfaces/product.interface';
 
 interface ProductLargeProps
   extends Omit<
@@ -33,13 +33,15 @@ export const ProductLarge: FC<ProductLargeProps> = (props) => {
         <div className={cls.buttons}>
           <div className={cls.buttons}>
             <RoundButton
-              theme={RoundButtonTheme.PRIMARYINVERSED}
+              // todo
+              // theme={RoundButtonTheme.PRIMARYINVERSED}
               className={cls.imageButton}
             >
               <LikeIcon />
             </RoundButton>
             <RoundButton
-              theme={RoundButtonTheme.PRIMARYINVERSED}
+              // todo
+              // theme={RoundButtonTheme.PRIMARYINVERSED}
               className={cls.imageButton}
             >
               <PreviewIcon />
@@ -53,7 +55,8 @@ export const ProductLarge: FC<ProductLargeProps> = (props) => {
           <Link className={cls.link} href={href}>
             <Text
               text={title}
-              variant={TextVariant.HEADING_4}
+              // todo
+              // variant={TextVariant.HEADING_4}
               className={cls.title}
             >
               {title}

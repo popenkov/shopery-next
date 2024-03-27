@@ -1,10 +1,13 @@
-import React from 'react';
-import { FooterAbout } from './FooterAbout';
 import cn from 'classnames';
-import cls from './Footer.module.scss';
-import { FooterNavigation } from './FooterNavigation';
-import { FooterCopyright } from './FooterCopyright';
+import React from 'react';
+
 import { InstagramPosts } from '@/features/InstagramPosts';
+
+import cls from './Footer.module.scss';
+import { FooterAbout } from './FooterAbout';
+import { FooterCopyright } from './FooterCopyright';
+import { FooterNavigation } from './FooterNavigation';
+
 
 export const Footer = () => {
   return (

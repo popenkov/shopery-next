@@ -10,8 +10,9 @@ import React, {
   useState,
 } from 'react';
 
-import cls from './Video.module.scss';
 import PlayIcon from '@public/icons/icon__play-button.svg';
+
+import cls from './Video.module.scss';
 
 interface VideoProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {

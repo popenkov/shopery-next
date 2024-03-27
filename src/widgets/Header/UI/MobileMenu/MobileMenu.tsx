@@ -1,11 +1,12 @@
-import { Location, PhoneLink } from '@/shared/ui';
-import React, { DetailedHTMLProps, FC, HTMLAttributes, useRef } from 'react';
-import CloseIcon from '@public/icons/icon__cross.svg';
-import cls from './MobileMenu.module.scss';
 import cn from 'classnames';
+import React, { DetailedHTMLProps, FC, HTMLAttributes, useRef } from 'react';
 
-import { ProductSearch } from '@/features/ProductsSearch';
 import { NavigationMobile } from '@/features/Navigation';
+import { ProductSearch } from '@/features/ProductsSearch';
+import CloseIcon from '@public/icons/icon__cross.svg';
+
+import cls from './MobileMenu.module.scss';
+import { Location, PhoneLink } from '@/shared/ui';
 
 interface Props
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {

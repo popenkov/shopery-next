@@ -1,9 +1,10 @@
 import React from 'react';
-import { Categories } from '../../../widgets/Header/UI/Categories';
-import { PhoneLink } from '@/shared/ui';
+
 import cls from './Navigation.module.scss';
-import { getNavigationData } from '../api/getNavigationData';
 import { NavigationLinks } from './NavigationLinks';
+import { Categories } from '../../../widgets/Header/UI/Categories';
+import { getNavigationData } from '../api/getNavigationData';
+import { PhoneLink } from '@/shared/ui';
 
 export const Navigation = () => {
   const { navigation, categories } = getNavigationData();

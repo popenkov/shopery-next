@@ -1,8 +1,9 @@
-import { MAIN_PAGE_DATA } from '@/shared/mock/mainPage';
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
-import { getSocialIcon } from './getSocialIcon';
+
+import { RoundButton } from '@/shared';
+
 import cls from './FooterSocials.module.scss';
-import { RoundButton, RoundButtonTheme } from '@/shared/ui';
+import { getSocialIcon } from './getSocialIcon';
 import { getFooterData } from '../../api/getFooterData';
 
 interface Props
@@ -22,7 +23,8 @@ export const FooterSocials: FC<Props> = () => {
           <RoundButton
             key={id}
             className={cls.link}
-            theme={RoundButtonTheme.GHOST}
+            // todo
+            // theme={RoundButtonTheme.GHOST}
             as="a"
           >
             <Icon className={cls.linkIcon} />
