@@ -1,0 +1,29 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/box.scss';
+
+.actions {
+  @include flex-center-vertical;
+
+  gap: 16px;
+
+  @media screen and (max-width: $screen-tl) {
+    gap: 8px;
+    margin-left: auto;
+  }
+}
+
+.actionsSeparator {
+  display: block;
+  width: 1px;
+  height: 24px;
+  background-color: var(--gray-200);
+}
+
+.favoriteIcon {
+  @include box(33px);
+
+  stroke-width: 1.3px;
+  color: var(--gray-900);
+  fill: transparent;
+}

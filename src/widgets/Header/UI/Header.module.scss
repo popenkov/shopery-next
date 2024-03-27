@@ -1,0 +1,20 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/text-styles.scss';
+
+.content {
+  @include flex-center-sb;
+
+  gap: 35px;
+
+  @media screen and (max-width: $screen-d) {
+    gap: 15px;
+  }
+}
+
+.search {
+  width: 100%;
+  max-width: 498px;
+  margin-left: 9px;
+}

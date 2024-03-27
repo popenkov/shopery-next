@@ -1,0 +1,82 @@
+@import '@/shared/styles/mixins/text-styles.scss';
+@import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/flexbox.scss';
+
+.button {
+  @include flex-center;
+  @include box(40px);
+
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  transition: background-color var(--transition);
+
+  svg {
+    @include box(20px);
+
+    transition: color var(--transition);
+  }
+
+  &.primary {
+    background-color: var(--primary);
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--hard-primary);
+
+        svg {
+          color: var(--front-primary-inversed);
+        }
+      }
+    }
+
+    &:disabled {
+      background-color: var(--gray-50);
+
+      svg {
+        color: var(--gray-900);
+      }
+    }
+
+    svg {
+      color: var(--front-primary-inversed);
+    }
+  }
+
+  &.primary_inversed {
+    background-color: var(--back-primary);
+    box-shadow: 0 0 8px 0 var(--gray-200);
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--primary);
+
+        svg {
+          color: var(--front-primary-inversed);
+        }
+      }
+    }
+
+    svg {
+      color: var(--gray-900);
+    }
+  }
+
+  &.ghost {
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--primary);
+
+        svg {
+          color: var(--front-primary-inversed);
+        }
+      }
+
+      svg {
+        color: var(--gray-700);
+      }
+    }
+  }
+}

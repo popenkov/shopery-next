@@ -1,0 +1,25 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+
+.copyright {
+  @include flex-center-sb;
+
+  grid-area: copyright;
+  padding: 24px 0 23px;
+  border-top: 1px solid var(--green-gray-800);
+
+  @media screen and (max-width: $screen-tl) {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.copyrightText {
+  margin-left: 114px;
+  color: var(--green-gray-500);
+
+  @media screen and (max-width: $screen-tl) {
+    margin-left: 0;
+    text-align: center;
+  }
+}

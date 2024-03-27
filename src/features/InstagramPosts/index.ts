@@ -1,0 +1,1 @@
+export { InstagramPosts } from './UI';

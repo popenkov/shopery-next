@@ -3,6 +3,8 @@
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": "off",
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": "error",
     "semi": "off",
@@ -12,12 +14,35 @@
       {
         "allowSingleExtends": true
       }
+    ],
+    "import/order": [
+      "warn",
+      {
+        "groups": ["builtin", "external", "internal"],
+        "pathGroups": [
+          {
+            "pattern": "@(react)",
+            "group": "external"
+          },
+          {
+            "pattern": "@src/**",
+            "group": "internal"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
     ]
   },
   "extends": [
     "next/core-web-vitals",
     "eslint:recommended",
     "next",
-    "plugin:storybook/recommended"
+    "plugin:storybook/recommended",
+    "@feature-sliced"
   ]
 }

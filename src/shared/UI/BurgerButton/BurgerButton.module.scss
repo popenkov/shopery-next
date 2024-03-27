@@ -1,0 +1,36 @@
+@import '@/shared/styles/mixins/button-reset.scss';
+@import '@/shared/styles/mixins/box.scss';
+
+.button {
+  @include button-reset;
+  @include box(18px);
+}
+
+.buttonLines {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 1.5px;
+  background-color: #fff;
+  border-radius: 4px;
+
+  &::after,
+  &::before {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    width: 18px;
+    height: 1.5px;
+    background-color: inherit;
+    border-radius: 4px;
+    content: '';
+  }
+
+  &::after {
+    top: -7px;
+  }
+
+  &::before {
+    bottom: -7px;
+  }
+}

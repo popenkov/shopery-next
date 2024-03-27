@@ -1,0 +1,43 @@
+@import '@/shared/styles/mixins/text-styles.scss';
+@import '@/shared/styles/mixins/box.scss';
+
+.inputWrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.input {
+  @include search-field;
+
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgb(230 230 230);
+  border-radius: 6px;
+  outline: none;
+  transition: all var(--transition);
+
+  &::placeholder {
+    color: var(--gray-500);
+  }
+
+  &:focus {
+    border-color: var(--primary);
+  }
+
+  &.search {
+    position: relative;
+    padding: 14px 16px 14px 44px;
+    border: 1px solid rgb(230 230 230);
+    border-radius: 6px;
+    outline: none;
+  }
+}
+
+.searchIcon {
+  @include box(20px);
+
+  position: absolute;
+  top: 12px;
+  left: 15px;
+}

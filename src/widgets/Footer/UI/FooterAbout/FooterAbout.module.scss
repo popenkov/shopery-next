@@ -1,0 +1,53 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/text-styles.scss';
+
+.about {
+  @include flex-column;
+
+  grid-area: about;
+  gap: 16px;
+
+  @media screen and (max-width: $screen-tl) {
+    align-items: center;
+  }
+}
+
+.aboutTitle {
+  margin: 0;
+  color: var(--front-primary-inversed);
+}
+
+.aboutText {
+  margin: 0;
+  color: var(--green-gray-500);
+
+  @media screen and (max-width: $screen-tl) {
+    text-align: center;
+  }
+}
+
+.aboutText + .aboutContact {
+  margin-top: 6px;
+}
+
+.aboutLink {
+  @include body-s(500);
+
+  display: inline-block;
+  padding-bottom: 6px;
+  color: var(--front-primary-inversed);
+  border-bottom: 1px solid var(--primary);
+  transition: all var(--transition);
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--primary);
+    }
+  }
+}
+
+.separator {
+  padding: 0 16px;
+  color: var(--green-gray-500);
+}

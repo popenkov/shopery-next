@@ -1,0 +1,30 @@
+@import '@/shared/styles/_breakpoints.scss';
+@import '@/shared/styles/mixins/flexbox.scss';
+
+.search {
+  @include flex-center-vertical;
+
+  border-radius: 6px;
+}
+
+.searchField input[type='search'] {
+  width: 100%;
+  height: 45px;
+  border-radius: 6px 0 0 6px;
+
+  @media screen and (max-width: $screen-tl) {
+    padding: 8px;
+  }
+
+  svg {
+    @media screen and (max-width: $screen-tl) {
+      display: none;
+    }
+  }
+}
+
+.searchButton {
+  height: 45px;
+  padding: 14px 24px;
+  border-radius: 0 6px 6px 0;
+}
