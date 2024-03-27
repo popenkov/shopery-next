@@ -2,10 +2,9 @@
 
 import React from 'react';
 
-import { MobileSlider } from '@/entities/UI/MobileSlider';
+import { MobileSlider } from '@/entities/MobileSlider';
 import { MAIN_PAGE_DATA } from '@/shared/mock/mainPage';
 import { Banner, BannerProps } from '@/shared/ui';
-
 
 export const Banners = () => {
   const banners = MAIN_PAGE_DATA.banners;

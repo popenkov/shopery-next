@@ -1,6 +1,6 @@
 import { ProductInterface } from './common';
 import { TabItem } from '../ui';
-import { BannerProps } from '@/entities/UI/Banner';
+import { BannerProps } from '@/entities/Banner';
 
 interface HeaderCategory {
   id: string;

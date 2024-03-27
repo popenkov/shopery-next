@@ -40,6 +40,7 @@
     "next/core-web-vitals",
     "eslint:recommended",
     "next",
-    "plugin:storybook/recommended"
+    "plugin:storybook/recommended",
+    "@feature-sliced"
   ]
 }

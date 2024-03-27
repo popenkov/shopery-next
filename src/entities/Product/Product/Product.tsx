@@ -15,7 +15,7 @@ import {
   Text,
   TextVariant,
   TextWeight,
-} from '../../../../shared/ui';
+} from '../../../shared/ui';
 
 interface ProductProps
   extends Omit<

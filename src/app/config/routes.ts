@@ -1,4 +1,4 @@
-import { AppRouteNames, AppRoutesProps } from '../interfaces/router';
+import { AppRouteNames, AppRoutesProps } from '../../shared/interfaces/router';
 
 export const getRouteHome = () => '/';
 export const getRouteCatalog = () => '/catalog';

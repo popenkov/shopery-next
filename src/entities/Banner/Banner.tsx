@@ -4,7 +4,7 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import cls from './Banner.module.scss';
 import ArrowIcon from '@public/icons/icon__arrow.svg';
-import { AppLink, AppLinkTheme } from '../../../shared/ui';
+import { AppLink, AppLinkTheme } from '../../shared/ui';
 
 export enum BannerType {
   LEFT = 'left',

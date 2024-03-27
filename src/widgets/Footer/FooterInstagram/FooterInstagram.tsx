@@ -1,7 +1,7 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import cls from './FooterInstagram.module.scss';
 import { MAIN_PAGE_DATA } from '@/shared/mock/mainPage';
-import { InstagramCard } from '@/entities/UI/InstagramCard';
+import { InstagramCard } from '@/entities/InstagramCard';
 import { Text, TextVariant, TextWeight } from '@/shared/ui';
 
 interface Props

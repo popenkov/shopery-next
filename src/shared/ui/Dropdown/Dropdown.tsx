@@ -10,11 +10,7 @@ import React, {
 
 import cls from './Dropdown.module.scss';
 import ChevronIcon from '@public/icons/icon__chevron-down.svg';
-
-interface DropdownItem {
-  value: string;
-  label: string;
-}
+import { DropdownItem } from './Dropdown.interface';
 
 interface DropdownProps
   extends Omit<

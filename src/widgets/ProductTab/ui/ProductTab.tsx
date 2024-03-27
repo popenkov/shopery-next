@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import { MobileSlider } from '@/entities/UI/MobileSlider';
+import { MobileSlider } from '@/entities/MobileSlider';
 import { ProductInterface } from '@/shared/interfaces/common';
 import { MAIN_PAGE_DATA } from '@/shared/mock/mainPage';
 import { ProductLarge, Tabs } from '@/shared/ui';
