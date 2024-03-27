@@ -3,35 +3,35 @@ import { InstagramCardType } from '@/entities/InstagramCard';
 const DATA: InstagramCardType[] = [
   {
     img: '/images/instagram--01.jpg',
-    id: '#',
+    id: '/instagram--01',
   },
   {
     img: '/images/instagram--02.jpg',
-    id: '#',
+    id: '/instagram--02',
   },
   {
     img: '/images/instagram--03.jpg',
-    id: '#',
+    id: '/instagram--03',
   },
   {
     img: '/images/instagram--04.jpg',
-    id: '#',
+    id: '/instagram--04',
   },
   {
     img: '/images/instagram--05.jpg',
-    id: '#',
+    id: '/instagram--05',
   },
   {
     img: '/images/instagram--06.jpg',
-    id: '#',
+    id: '/instagram--06',
   },
   {
     img: '/images/instagram--07.jpg',
-    id: '#',
+    id: '/instagram--07',
   },
   {
     img: '/images/instagram--08.jpg',
-    id: '#',
+    id: '/instagram--08',
   },
 ];
 export const getInstagramPosts = () => {

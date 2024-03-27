@@ -22,11 +22,7 @@ export const HeaderMiddle = () => {
     <div className={cn(cls.middle, 'container')}>
       <BurgerButton className={cls.mobileBurger} onClick={handleMenuToggle} />
       <Logo className={cls.logoDesktop} />
-      <Logo
-        className={cls.logoMobile}
-        // todo
-        // size={LogoSize.SMALL}
-      />
+      <Logo className={cls.logoMobile} size="small" />
       <div className={cn(cls.search, cls.searchDesktop)}>
         <ProductSearch />
       </div>

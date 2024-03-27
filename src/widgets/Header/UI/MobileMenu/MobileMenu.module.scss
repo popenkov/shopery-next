@@ -13,8 +13,6 @@
   padding: 80px 20px 30px;
   overflow-y: auto;
   background-color: var(--back-primary);
-  // todo
-  // transform: translateX(-320px);
   transition: all var(--transition);
 }
 
@@ -40,7 +38,6 @@
 }
 
 .mobileMenu {
-  // todo
   display: none;
 
   @media screen and (max-width: $screen-tl) {

@@ -1,4 +1,4 @@
-@import '../../styles/mixins/box.scss';
+@import '@/shared/styles/mixins/box.scss';
 
 .select {
   :global(.custom-select__indicator-separator) {

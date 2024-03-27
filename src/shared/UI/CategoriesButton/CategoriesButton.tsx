@@ -4,9 +4,7 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import ChevronIcon from '@public/icons/icon__chevron-down.svg';
 
 import cls from './CategoriesButton.module.scss';
-import { Text, TextVariant, TextWeight } from '..';
-import { BurgerButton } from '../BurgerButton';
-
+import { Text } from '..';
 
 interface Props
   extends DetailedHTMLProps<
@@ -26,8 +24,8 @@ export const CategoriesButton: FC<Props> = ({ className, onClick }) => {
       className={cn(cls.button, className)}
       onClick={handleCategoryButtonClick}
     >
-      <BurgerButton />
-      <Text variant={TextVariant.BODY_S} weight={TextWeight.MEDIUM} as="span">
+      <span className={cls.buttonLines} />
+      <Text variant="body_s" weight="medium" as="span">
         All Categories
       </Text>
       <ChevronIcon className={cls.chevron} />

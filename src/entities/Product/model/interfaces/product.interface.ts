@@ -1,11 +1,11 @@
-import { TagInterface } from '@/entities/Tag';
+import { TagInterface } from '@/shared/UI/Tag';
 
 export type ProductInterface = {
-  href: string;
+  id: string;
   img: string;
   title: string;
-  price: string;
-  priceOld?: string;
+  price: number;
+  priceOld?: number;
   rating: number;
   tags?: TagInterface[];
 };

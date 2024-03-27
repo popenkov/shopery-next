@@ -1,4 +1,4 @@
-import { NavigationLink } from '@/shared/interfaces/common';
+import { NavigationLink } from '@/features/Navigation';
 
 interface SocialLink {
   icon:

@@ -36,16 +36,16 @@ export const Dropdown: FC<DropdownProps> = memo(({ data, onChange }) => {
 
   return (
     <div className={cls.dropdown}>
-      <button className={cls.button}>
+      <button className={cls.dropdownButton}>
         <span>{chosenElement.label}</span>
-        <ChevronIcon className={cls.chevron} />
+        <ChevronIcon className={cls.dropdownButtonIcon} />
       </button>
-      <ul className={cls.content}>
+      <ul className={cls.dropdownContent}>
         {data.map((item) => {
           return (
-            <li key={item.value} className={cls.item}>
+            <li key={item.value} className={cls.dropdownItem}>
               <button
-                className={cls.link}
+                className={cls.dropdownLink}
                 onClick={() => handleOptionChoose(item)}
               >
                 {item.label}
@@ -57,3 +57,5 @@ export const Dropdown: FC<DropdownProps> = memo(({ data, onChange }) => {
     </div>
   );
 });
+
+Dropdown.displayName = 'Dropdown';

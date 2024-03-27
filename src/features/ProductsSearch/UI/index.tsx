@@ -11,8 +11,8 @@ interface Props
 export const ProductSearch: FC<Props> = () => {
   return (
     <form className={cls.search}>
-      <Input type="search" placeholder="search" className={cls.field} />
-      <Button className={cls.button}>Search</Button>
+      <Input type="search" placeholder="search" className={cls.searchField} />
+      <Button className={cls.searchButton}>Search</Button>
     </form>
   );
 };

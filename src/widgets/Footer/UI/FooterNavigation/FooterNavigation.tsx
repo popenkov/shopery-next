@@ -19,9 +19,8 @@ export const FooterNavigation: FC<Props> = () => {
           <div className={cls.navigationItem} key={id}>
             <Text
               className={cls.navigationTitle}
-              // todo
-              // variant={TextVariant.BODY_XL}
-              // weight={TextWeight.MEDIUM}
+              variant="body_xl"
+              weight="medium"
               as="h2"
             >
               {title}
@@ -33,12 +32,7 @@ export const FooterNavigation: FC<Props> = () => {
                   return (
                     <li className={cls.navigationItem} key={id}>
                       <Link className={cls.navigationLink} href={id}>
-                        <Text
-                        // todo
-                        // variant={TextVariant.BODY_S}
-                        >
-                          {title}
-                        </Text>
+                        <Text variant="body_s">{title}</Text>
                       </Link>
                     </li>
                   );

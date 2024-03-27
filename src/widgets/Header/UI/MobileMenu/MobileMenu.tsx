@@ -1,9 +1,10 @@
 import cn from 'classnames';
 import React, { DetailedHTMLProps, FC, HTMLAttributes, useRef } from 'react';
 
+import { Location } from '@/entities/Location';
+import { PhoneLink } from '@/entities/PhoneLink';
 import { NavigationMobile } from '@/features/Navigation';
 import { ProductSearch } from '@/features/ProductsSearch';
-import { Location, PhoneLink } from '@/shared';
 import CloseIcon from '@public/icons/icon__cross.svg';
 
 import cls from './MobileMenu.module.scss';

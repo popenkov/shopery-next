@@ -13,11 +13,7 @@ export const FooterCopyright: FC<Props> = () => {
   return (
     <div className={cls.copyright}>
       <FooterSocials />
-      <Text
-        // todo
-        // variant={TextVariant.BODY_S}
-        className={cls.copyrightText}
-      >
+      <Text variant="body_s" className={cls.copyrightText}>
         Shopery eCommerce © 2021. All Rights Reserved
       </Text>
       <FooterPayment />

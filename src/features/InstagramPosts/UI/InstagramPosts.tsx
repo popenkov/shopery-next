@@ -18,9 +18,8 @@ export const InstagramPosts: FC<Props> = () => {
   return (
     <div className={cls.instagram}>
       <Text
-        // todo
-        // variant={TextVariant.BODY_XL}
-        // weight={TextWeight.MEDIUM}
+        variant="body_xl"
+        weight="medium"
         as="h2"
         className={cls.instagramTitle}
       >

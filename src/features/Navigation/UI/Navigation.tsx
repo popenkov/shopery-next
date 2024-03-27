@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { PhoneLink } from '@/shared';
+import { PhoneLink } from '@/entities/PhoneLink';
 
 import cls from './Navigation.module.scss';
+import { NavigationCategories } from './NavigationCategories';
 import { NavigationLinks } from './NavigationLinks';
-import { Categories } from '../../../widgets/Header/UI/Categories';
 import { getNavigationData } from '../api/getNavigationData';
 
 export const Navigation = () => {
@@ -14,7 +14,7 @@ export const Navigation = () => {
       <div className="container">
         <div className={cls.content}>
           <div className={cls.navigationContent}>
-            <Categories categories={categories} />
+            <NavigationCategories categories={categories} />
             <NavigationLinks links={navigation} />
           </div>
           <PhoneLink phone="(219) 555-0114" href="2195550114" />

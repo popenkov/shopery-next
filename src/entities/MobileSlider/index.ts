@@ -1,1 +1,1 @@
-export * from './MobileSlider';
+export { MobileSlider } from './UI';

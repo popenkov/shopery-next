@@ -3,76 +3,76 @@ import { Footer } from '../model/interface/footer.interface';
 const data: Footer = {
   navigation: [
     {
-      id: '#',
+      id: '/account',
       title: 'account',
       items: [
         {
           title: 'My Account',
-          id: '#',
+          id: '/account-1',
         },
         {
           title: 'Order History',
-          id: '#',
+          id: '/account-2',
         },
         {
           title: 'Shoping Cart',
-          id: '#',
+          id: '/account-3',
         },
         {
           title: 'Wishlist',
-          id: '#',
+          id: '/account-4',
         },
         {
           title: 'Settings',
-          id: '#',
+          id: '/account-5',
         },
       ],
     },
     {
-      id: '#',
+      id: '/helps',
       title: 'helps',
       items: [
         {
           title: 'Contact',
-          id: '#',
+          id: '/helps-1',
         },
         {
           title: 'Faqs',
-          id: '#',
+          id: 'helps-2',
         },
         {
           title: 'Terms & Condition',
-          id: '#',
+          id: 'helps-3',
         },
         {
           title: 'Privacy Policy',
-          id: '#',
+          id: 'helps-4',
         },
       ],
     },
     {
-      id: '#',
+      id: '/proxy',
       title: 'proxy',
       items: [
         {
           title: 'About',
-          id: '#',
+          id: '/proxy-1',
         },
         {
           title: 'Shop',
-          id: '#',
+          id: '/proxy-2',
         },
         {
           title: 'Product',
-          id: '#',
+          id: '/proxy-3',
         },
         {
           title: 'Products Details',
-          id: '#',
+          id: '/proxy-4',
         },
         {
           title: 'Track Order',
-          id: '#',
+          id: '/proxy-5',
         },
       ],
     },
@@ -81,41 +81,41 @@ const data: Footer = {
   socialLinks: [
     {
       icon: 'icon__facebook',
-      id: '#',
+      id: '/fb',
     },
     {
       icon: 'icon__twitter',
-      id: '#',
+      id: '/tw',
     },
     {
       icon: 'icon__pinterest',
-      id: '#',
+      id: '/pint',
     },
     {
       icon: 'icon__instagram',
-      id: '#',
+      id: '/inst',
     },
   ],
   paymentMethods: [
     {
       icon: 'icon__applepay',
-      id: '#',
+      id: '/apple',
     },
     {
       icon: 'icon__visa',
-      id: '#',
+      id: '/visa',
     },
     {
       icon: 'icon__discover',
-      id: '#',
+      id: '/discover',
     },
     {
       icon: 'icon__mastercard',
-      id: '#',
+      id: '/mc',
     },
     {
       icon: 'icon__secure',
-      id: '#',
+      id: '/secure',
     },
   ],
 };

@@ -2,12 +2,13 @@
 
 import React from 'react';
 
-import { Banner, BannerProps } from '@/entities/Banner';
+import { Banner, BannerType } from '@/entities/Banner';
 import { MobileSlider } from '@/entities/MobileSlider';
-import { MAIN_PAGE_DATA } from '@/shared/mock/mainPage';
+
+import { getBannerData } from '../api/getBannerData';
 
 export const Banners = () => {
-  const banners = MAIN_PAGE_DATA.banners;
+  const { banners } = getBannerData();
 
   return (
     <div className="section">
@@ -17,9 +18,9 @@ export const Banners = () => {
         })}
       </div>
       <div className="container mobile-slider d-mobile">
-        <MobileSlider<BannerProps>
+        <MobileSlider<BannerType>
           data={banners}
-          render={(child: BannerProps) => <Banner {...child} />}
+          render={(child: BannerType) => <Banner {...child} />}
         />
       </div>
     </div>

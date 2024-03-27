@@ -1,6 +1,6 @@
-@import '../../styles/mixins/text-styles';
-@import '../../styles/mixins/flexbox';
-@import '../../styles/breakpoints';
+@import '@/shared/styles/mixins/text-styles';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/breakpoints';
 
 .tabs {
   max-width: 100vw;

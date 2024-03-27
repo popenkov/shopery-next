@@ -9,9 +9,10 @@ import cls from './Accordion.module.scss';
 interface Props {
   title: string;
   children: ReactNode;
+  noBorder?: boolean;
 }
 
-export const Accordion: FC<Props> = ({ title, children }) => {
+export const Accordion: FC<Props> = ({ title, children, noBorder }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleAccordeonToggle = () => {
@@ -19,17 +20,23 @@ export const Accordion: FC<Props> = ({ title, children }) => {
   };
 
   return (
-    <div className={cls.accordionItem}>
+    <div className={cls.accordion}>
       <button
         onClick={handleAccordeonToggle}
-        className={cn(cls.button, {
+        className={cn(cls.accordionButton, {
           [cls.open]: isOpen,
         })}
       >
         {title}
-        <ChevronIcon className={cls.chevronIcon} />
+        <ChevronIcon className={cls.accordionButtonIcon} />
       </button>
-      {isOpen && <div className={cls.content}>{children}</div>}
+      {isOpen && (
+        <div
+          className={cn(cls.accordionContent, { [cls.no_border]: noBorder })}
+        >
+          {children}
+        </div>
+      )}
     </div>
   );
 };

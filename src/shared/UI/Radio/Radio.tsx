@@ -14,21 +14,14 @@ interface RadioProps extends HTMLRadioProps {
   className?: string;
   name: string;
   value: string | number;
-  placeholder?: string;
+  text?: string;
   amount?: number;
   onChange?: (value: string) => void;
 }
 
 export const Radio = memo((props: RadioProps) => {
-  const {
-    className,
-    value,
-    onChange,
-    placeholder,
-    name,
-    amount,
-    ...otherProps
-  } = props;
+  const { className, value, onChange, text, name, amount, ...otherProps } =
+    props;
   const ref = useRef<HTMLInputElement>(null);
 
   const handleRadioChange = (evt: ChangeEvent<HTMLInputElement>) => {
@@ -47,8 +40,10 @@ export const Radio = memo((props: RadioProps) => {
         {...otherProps}
       />
       <span className={cls.fakeInput} />
-      {placeholder && <span className={cls.placeholder}>{placeholder}</span>}
-      {amount && <span className={cls.amount}>( ${amount} )</span>}
+      {text && <span className={cls.placeholder}>{text}</span>}
+      {typeof amount === 'number' && (
+        <span className={cls.amount}>( ${amount} )</span>
+      )}
     </label>
   );
 });

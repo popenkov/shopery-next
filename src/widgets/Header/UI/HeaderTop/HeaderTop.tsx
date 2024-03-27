@@ -1,9 +1,9 @@
 import cn from 'classnames';
 import React from 'react';
 
+import { Location } from '@/entities/Location';
 import { CurrencySwitcher } from '@/features/CurrencySwitcher';
 import { LangSwitcher } from '@/features/LangSwitcher';
-import { Location } from '@/shared';
 
 import cls from './HeaderTop.module.scss';
 

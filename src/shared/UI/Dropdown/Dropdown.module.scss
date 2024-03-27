@@ -20,18 +20,18 @@
   transition: all var(--transition);
 }
 
-.item {
+.dropdownItem {
   list-style: none;
 }
 
-.chevron {
+.dropdownButtonIcon {
   @include box(12px);
 
   transform: rotate(0);
   transition: all var(--transition);
 }
 
-.button {
+.dropdownButton {
   @include button-reset;
   @include flex-center-vertical;
 
@@ -49,7 +49,7 @@
   }
 }
 
-.link {
+.dropdownLink {
   @include button-reset;
   padding: 0;
   text-decoration: none;
@@ -76,7 +76,7 @@
       transition: all var(--transition);
     }
 
-    .chevron {
+    .dropdownButtonIcon {
       transform: rotate(180deg);
     }
   }

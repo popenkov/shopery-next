@@ -11,7 +11,7 @@ interface Props
 
 export const Logo: FC<Props> = memo(({ size, className }) => {
   switch (size) {
-    case LogoSize.SMALL:
+    case 'small':
       return (
         <Image
           src="/icons/logo__mini.svg"

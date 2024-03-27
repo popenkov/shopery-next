@@ -9,12 +9,12 @@ interface Props
     HTMLButtonElement
   > {
   className?: string;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export const BurgerButton: FC<Props> = ({ className, onClick }) => {
   const handleBurgerButtonClick = () => {
-    onClick();
+    onClick?.();
   };
   return (
     <button

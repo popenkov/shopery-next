@@ -1,1 +1,1 @@
-export * from './RoundButton';
+export { RoundButton } from './UI';

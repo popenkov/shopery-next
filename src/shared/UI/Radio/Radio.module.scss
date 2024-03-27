@@ -1,7 +1,7 @@
-@import '../../styles/mixins/flexbox';
-@import '../../styles/mixins/box';
-@import '../../styles/mixins/text-styles';
-@import '../../styles/mixins/absolute-positioning';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/text-styles';
+@import '@/shared/styles/mixins/absolute-positioning';
 
 .input {
   position: absolute;

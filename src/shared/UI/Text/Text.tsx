@@ -35,10 +35,10 @@ const T = <E extends ElementType = typeof DEFAULT_ELEMENT>(
     className,
     children,
     as,
-    theme = TextTheme.PRIMARY,
-    align = TextAlign.LEFT,
-    variant = TextVariant.BODY_M,
-    weight = TextWeight.REGULAR,
+    theme = 'primary',
+    align = 'left',
+    variant = 'body_m',
+    weight = 'regular',
   } = props;
 
   const Element = as || DEFAULT_ELEMENT;

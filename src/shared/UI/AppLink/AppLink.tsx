@@ -4,20 +4,9 @@ import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode, Ref } from 'react';
 
 import style from './AppLink.module.scss';
 
-export enum AppLinkTheme {
-  PRIMARY = 'primary',
-  GHOST = 'ghost',
-  WHITE = 'white',
-  BORDER = 'border',
-  GRAY = 'gray',
-  TEXT = 'text',
-}
+type AppLinkTheme = 'primary' | 'ghost' | 'white' | 'border' | 'gray' | 'text';
 
-export enum AppLinkSize {
-  SMALL = 'small',
-  NORMAL = 'normal',
-  LARGE = 'large',
-}
+type AppLinkSize = 'small' | 'normal' | 'large';
 
 interface AppLinkProps
   extends LinkProps,
@@ -35,8 +24,8 @@ export const AppLink: FC<AppLinkProps> = (props) => {
     className,
     children,
     ref,
-    theme = AppLinkTheme.PRIMARY,
-    size = AppLinkSize.NORMAL,
+    theme = 'primary',
+    size = 'normal',
     ...otherProps
   } = props;
   return (

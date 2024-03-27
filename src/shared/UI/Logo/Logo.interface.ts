@@ -1,4 +1,1 @@
-export enum LogoSize {
-  SMALL = 'small',
-  DEFAULT = 'default',
-}
+export type LogoSize = 'small' | 'default';

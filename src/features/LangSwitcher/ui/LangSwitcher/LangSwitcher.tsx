@@ -21,3 +21,5 @@ export const LangSwitcher: FC = memo(() => {
 
   return <Dropdown data={CHANGE_LANG_DATA} onChange={handleLanguageChange} />;
 });
+
+LangSwitcher.displayName = 'LangSwitcher';

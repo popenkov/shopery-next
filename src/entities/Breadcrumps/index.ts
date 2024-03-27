@@ -1,1 +1,1 @@
-export * from './Breadcrumps';
+export { Breadcrumbs } from './UI';
