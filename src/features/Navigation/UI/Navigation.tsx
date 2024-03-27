@@ -1,10 +1,11 @@
 import React from 'react';
 
+import { PhoneLink } from '@/shared';
+
 import cls from './Navigation.module.scss';
 import { NavigationLinks } from './NavigationLinks';
 import { Categories } from '../../../widgets/Header/UI/Categories';
 import { getNavigationData } from '../api/getNavigationData';
-import { PhoneLink } from '@/shared/ui';
 
 export const Navigation = () => {
   const { navigation, categories } = getNavigationData();

@@ -14,3 +14,4 @@ export * from './Dropdown';
 export * from './Location';
 export * from './Accordion';
 export * from './BurgerButton';
+export * from './CategoriesButton';

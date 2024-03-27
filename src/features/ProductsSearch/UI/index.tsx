@@ -2,8 +2,9 @@
 
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
+import { Button, Input } from '@/shared';
+
 import cls from './style.module.scss';
-import { Button, Input } from '@/shared/ui';
 interface Props
   extends DetailedHTMLProps<HTMLAttributes<HTMLFormElement>, HTMLFormElement> {}
 

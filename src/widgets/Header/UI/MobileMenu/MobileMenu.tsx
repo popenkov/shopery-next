@@ -3,10 +3,10 @@ import React, { DetailedHTMLProps, FC, HTMLAttributes, useRef } from 'react';
 
 import { NavigationMobile } from '@/features/Navigation';
 import { ProductSearch } from '@/features/ProductsSearch';
+import { Location, PhoneLink } from '@/shared';
 import CloseIcon from '@public/icons/icon__cross.svg';
 
 import cls from './MobileMenu.module.scss';
-import { Location, PhoneLink } from '@/shared/ui';
 
 interface Props
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {

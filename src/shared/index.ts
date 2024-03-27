@@ -16,4 +16,5 @@ export {
   Dropdown,
   Location,
   Accordion,
+  CategoriesButton,
 } from './UI';

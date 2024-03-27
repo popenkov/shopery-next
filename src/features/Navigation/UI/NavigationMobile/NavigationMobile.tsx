@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import React from 'react';
 
+import { Accordion } from '@/shared';
+
 import cls from './NavigationMobile.module.scss';
 import { getNavigationData } from '../../api/getNavigationData';
-import { Accordion } from '@/shared/ui';
 
 export const NavigationMobile = () => {
   const { navigation } = getNavigationData();

@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 
 import { ProductSearch } from '@/features/ProductsSearch';
 import { Logo } from '@/shared';
-import { BurgerButton } from '@/shared/UI/BurgerButton';
+import { BurgerButton } from '@/shared';
 
 import cls from './HeaderMiddle.module.scss';
 import { HeaderActions } from '../HeaderActions';

@@ -2,20 +2,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
-import { ProductInterface } from '@/shared/interfaces/common';
+import { RoundButton, StarRating, Text } from '@/shared';
 import CartIcon from '@public/icons/icon__cart.svg';
 import PreviewIcon from '@public/icons/icon__eye.svg';
 import LikeIcon from '@public/icons/icon__heart.svg';
 
 import cls from './ProductPreview.module.scss';
-import {
-  RoundButton,
-  RoundButtonTheme,
-  StarRating,
-  Text,
-  TextVariant,
-  TextWeight,
-} from '@/shared/ui';
+import { ProductInterface } from '../model/interfaces/product.interface';
 
 interface ProductPreviewProps
   extends Omit<
@@ -36,7 +29,8 @@ export const ProductPreview: FC<ProductPreviewProps> = (props) => {
         <Link href={href} className={cls.link}>
           <Text
             text={title}
-            variant={TextVariant.HEADING_4}
+            // todo
+            // variant={TextVariant.HEADING_4}
             className={cls.title}
           >
             {title}
@@ -47,16 +41,18 @@ export const ProductPreview: FC<ProductPreviewProps> = (props) => {
             <div className={cls.price}>
               <Text
                 text={price}
-                size={TextVariant.BODY_M}
-                weight={TextWeight.MEDIUM}
+                // todo
+                // size={TextVariant.BODY_M}
+                // weight={TextWeight.MEDIUM}
               >
                 {price}
               </Text>
               {priceOld && (
                 <Text
                   text={price}
-                  size={TextVariant.BODY_M}
-                  weight={TextWeight.MEDIUM}
+                  // todo
+                  // size={TextVariant.BODY_M}
+                  // weight={TextWeight.MEDIUM}
                   className={cls.priceOld}
                 >
                   {priceOld}
@@ -67,13 +63,22 @@ export const ProductPreview: FC<ProductPreviewProps> = (props) => {
           </div>
           <div className={cls.descriptionHover}>
             <div className={cls.buttons}>
-              <RoundButton theme={RoundButtonTheme.PRIMARY}>
+              <RoundButton
+              // todo
+              // theme={RoundButtonTheme.PRIMARY}
+              >
                 <CartIcon />
               </RoundButton>
-              <RoundButton theme={RoundButtonTheme.PRIMARYINVERSED}>
+              <RoundButton
+              // todo
+              // theme={RoundButtonTheme.PRIMARYINVERSED}
+              >
                 <PreviewIcon />
               </RoundButton>
-              <RoundButton theme={RoundButtonTheme.PRIMARYINVERSED}>
+              <RoundButton
+              // todo
+              // theme={RoundButtonTheme.PRIMARYINVERSED}
+              >
                 <LikeIcon />
               </RoundButton>
             </div>

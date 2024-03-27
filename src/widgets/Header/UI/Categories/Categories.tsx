@@ -5,7 +5,7 @@ import Link from 'next/link';
 import React, { DetailedHTMLProps, FC, HTMLAttributes, useState } from 'react';
 
 import { Text } from '@/shared';
-import { CategoriesButton } from '@/shared/UI/CategoriesButton';
+import { CategoriesButton } from '@/shared';
 
 import cls from './Categories.module.scss';
 import { getCategoryIcon } from './getCategoryIcon';

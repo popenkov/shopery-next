@@ -1,8 +1,7 @@
 import { FC } from 'react';
 
+import { Breadcrumbs } from '@/entities/Breadcrumps';
 import { AppRouteNames } from '@/shared/interfaces/router';
-
-import { Breadcrumbs } from '@/shared/ui';
 
 export const Catalog: FC = () => {
   const crumbs: AppRouteNames[] = [AppRouteNames.HOME, AppRouteNames.CATALOG];
