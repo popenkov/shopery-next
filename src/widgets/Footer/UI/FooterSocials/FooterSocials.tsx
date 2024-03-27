@@ -3,6 +3,7 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import { getSocialIcon } from './getSocialIcon';
 import cls from './FooterSocials.module.scss';
 import { RoundButton, RoundButtonTheme } from '@/shared/ui';
+import { getFooterData } from '../../api/getFooterData';
 
 interface Props
   extends DetailedHTMLProps<
@@ -11,7 +12,7 @@ interface Props
   > {}
 
 export const FooterSocials: FC<Props> = () => {
-  const { socialLinks } = MAIN_PAGE_DATA.footer;
+  const { socialLinks } = getFooterData();
   return (
     <ul className={cls.socials}>
       {socialLinks.map((socialLink) => {

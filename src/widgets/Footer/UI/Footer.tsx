@@ -3,8 +3,8 @@ import { FooterAbout } from './FooterAbout';
 import cn from 'classnames';
 import cls from './Footer.module.scss';
 import { FooterNavigation } from './FooterNavigation';
-import { FooterInstagram } from './FooterInstagram';
 import { FooterCopyright } from './FooterCopyright';
+import { InstagramPosts } from '@/features/InstagramPosts';
 
 export const Footer = () => {
   return (
@@ -13,7 +13,7 @@ export const Footer = () => {
         <div className={cn(cls.footerContent, 'container')}>
           <FooterAbout />
           <FooterNavigation />
-          <FooterInstagram />
+          <InstagramPosts />
           <FooterCopyright />
         </div>
       </div>

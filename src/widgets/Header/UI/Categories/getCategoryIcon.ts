@@ -7,7 +7,7 @@ import icon__cupcake from '@public/icons/icon__cupcake.svg';
 import icon__pie from '@public/icons/icon__pie.svg';
 import icon__food from '@public/icons/icon__food.svg';
 
-const icons = {
+const categoryIcons = {
   icon__apple: icon__apple,
   icon__salad: icon__salad,
   icon__fish: icon__fish,
@@ -18,6 +18,6 @@ const icons = {
   icon__food: icon__food,
 };
 
-export const getCategoryIcon = (iconName: keyof typeof icons) => {
-  return icons[iconName];
+export const getCategoryIcon = (iconName: keyof typeof categoryIcons) => {
+  return categoryIcons[iconName];
 };

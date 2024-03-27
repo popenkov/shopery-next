@@ -3,19 +3,16 @@ import { FC, DetailedHTMLProps, HTMLAttributes } from 'react';
 
 import cls from './InstagramCard.module.scss';
 import InstagramIcon from '@public/icons/icon__instagram.svg';
+import { InstagramCardType } from '..';
 
-interface InstagramCardProps
-  extends DetailedHTMLProps<
-    HTMLAttributes<HTMLAnchorElement>,
-    HTMLAnchorElement
-  > {
-  img: string;
-  id: string;
-}
+interface Props
+  extends Omit<
+      DetailedHTMLProps<HTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>,
+      'id'
+    >,
+    InstagramCardType {}
 
-// todo
-
-export const InstagramCard: FC<InstagramCardProps> = ({ img, id }) => {
+export const InstagramCard: FC<Props> = ({ img, id }) => {
   return (
     <a className={cls.card} href={id}>
       <div className={cls.imgContainer}>

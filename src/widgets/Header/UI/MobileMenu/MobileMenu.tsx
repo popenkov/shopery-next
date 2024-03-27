@@ -4,8 +4,8 @@ import CloseIcon from '@public/icons/icon__cross.svg';
 import cls from './MobileMenu.module.scss';
 import cn from 'classnames';
 
-import { MobileMenuNavigation } from '../MobileMenuNavigation';
 import { ProductSearch } from '@/features/ProductsSearch';
+import { NavigationMobile } from '@/features/Navigation';
 
 interface Props
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
@@ -39,9 +39,8 @@ export const MobileMenu: FC<Props> = ({ isOpen, handleMenuToggle }) => {
         <button className={cls.closeButton} onClick={handleCloseButtonClick}>
           <CloseIcon className={cls.closeIcon} />
         </button>
-
         <ProductSearch className={cls.mobileMenuSearch} />
-        <MobileMenuNavigation />
+        <NavigationMobile />
         <div className={cls.menuFooter}>
           <PhoneLink phone="(219) 555-0114" href="2195550114" />
           <Location

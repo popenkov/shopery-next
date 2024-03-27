@@ -1,14 +1,15 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
-import cls from './FooterInstagram.module.scss';
-import { MAIN_PAGE_DATA } from '@/shared/mock/mainPage';
-import { InstagramCard } from '@/entities/InstagramCard';
+import cls from './InstagramPosts.module.scss';
+
 import { Text, TextVariant, TextWeight } from '@/shared/ui';
+import { InstagramCard } from '@/entities/InstagramCard';
+import { getInstagramPosts } from '../api/getInstagramPosts';
 
 interface Props
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 
-export const FooterInstagram: FC<Props> = () => {
-  const cards = MAIN_PAGE_DATA.footer.instagram;
+export const InstagramPosts: FC<Props> = () => {
+  const { data: cards } = getInstagramPosts();
 
   if (!cards) {
     return null;

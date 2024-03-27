@@ -1,18 +1,24 @@
 'use client';
 
 import { CategoriesButton } from '@/shared/ui/CategoriesButton';
-import React, { useState } from 'react';
+import React, { DetailedHTMLProps, FC, HTMLAttributes, useState } from 'react';
 
 import cls from './Categories.module.scss';
-import { MAIN_PAGE_DATA } from '@/shared/mock/mainPage';
 import { getCategoryIcon } from './getCategoryIcon';
 import { Text, TextVariant, TextWeight } from '@/shared/ui';
 import Link from 'next/link';
 import cn from 'classnames';
+import { HeaderCategory } from '../../model/interfaces/header-categories.interface';
 
-export const Categories = () => {
-  const categories = MAIN_PAGE_DATA.header.categories;
+interface Props
+  extends DetailedHTMLProps<
+    HTMLAttributes<HTMLUListElement>,
+    HTMLUListElement
+  > {
+  categories: HeaderCategory[];
+}
 
+export const Categories: FC<Props> = ({ categories }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleMenuToggle = () => {

@@ -1,18 +1,19 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import cls from './FooterNavigation.module.scss';
-import { MAIN_PAGE_DATA } from '@/shared/mock/mainPage';
+
 import Link from 'next/link';
 import { Text, TextVariant, TextWeight } from '@/shared/ui';
+import { getFooterData } from '../../api/getFooterData';
 
 interface Props
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 
 export const FooterNavigation: FC<Props> = () => {
-  const links = MAIN_PAGE_DATA.footer.navigation;
+  const { navigation } = getFooterData();
   return (
     <div className={cls.navigation}>
-      {links.map((link) => {
+      {navigation.map((link) => {
         const { id, title, items } = link;
         return (
           <div className={cls.navigationItem} key={id}>

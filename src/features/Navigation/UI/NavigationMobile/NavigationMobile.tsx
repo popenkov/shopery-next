@@ -1,14 +1,18 @@
-import { MAIN_PAGE_DATA } from '@/shared/mock/mainPage';
 import { Accordion } from '@/shared/ui';
 import Link from 'next/link';
 import React from 'react';
-import cls from './MobileMenuNavigation.module.scss';
+import cls from './NavigationMobile.module.scss';
+import { getNavigationData } from '../../api/getNavigationData';
 
-export const MobileMenuNavigation = () => {
-  const links = MAIN_PAGE_DATA.header.navigation;
+export const NavigationMobile = () => {
+  const { navigation } = getNavigationData();
+
+  if (!navigation?.length) {
+    return null;
+  }
   return (
     <div className={cls.navigation}>
-      {links.map((link) => {
+      {navigation.map((link) => {
         return (
           <Accordion title={link.title!} key={link.id}>
             {link?.items?.map((sublink) => {

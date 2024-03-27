@@ -1,9 +1,9 @@
-export interface TagInterface {
+export type TagInterface = {
   type: string;
   text: string;
-}
+};
 
-export interface ProductInterface {
+export type ProductInterface = {
   href: string;
   img: string;
   title: string;
@@ -11,4 +11,11 @@ export interface ProductInterface {
   priceOld?: string;
   rating: number;
   tags?: TagInterface[];
-}
+};
+
+export type NavigationLink = {
+  id: string;
+  icon?: string;
+  title?: string;
+  items?: NavigationLink[];
+};

@@ -1,8 +1,8 @@
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import cls from './FooterPayment.module.scss';
-import { MAIN_PAGE_DATA } from '@/shared/mock/mainPage';
 import cn from 'classnames';
 import { getPaymentIcon } from './getPaymentIcon';
+import { getFooterData } from '../../api/getFooterData';
 
 interface Props
   extends DetailedHTMLProps<
@@ -11,7 +11,7 @@ interface Props
   > {}
 
 export const FooterPayment: FC<Props> = () => {
-  const { paymentMethods } = MAIN_PAGE_DATA.footer;
+  const { paymentMethods } = getFooterData();
 
   return (
     <ul className={cls.payment}>

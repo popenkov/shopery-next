@@ -1,8 +1,8 @@
-import { NavigationLink } from '@/shared/interfaces/main-page';
 import Link from 'next/link';
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
-import cls from './HeaderLinks.module.scss';
+import cls from './NavigationLinks.module.scss';
 import ChevronIcon from '@public/icons/icon__chevron-down.svg';
+import { NavigationLink } from '../../model/types/navigation.interface';
 
 interface Props
   extends DetailedHTMLProps<
@@ -12,7 +12,7 @@ interface Props
   links: NavigationLink[];
 }
 
-export const HeaderLinks: FC<Props> = ({ links }) => {
+export const NavigationLinks: FC<Props> = ({ links }) => {
   return (
     <ul className={cls.navigationMenu}>
       {links.map((link) => {
