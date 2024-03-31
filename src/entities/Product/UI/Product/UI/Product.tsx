@@ -12,7 +12,6 @@ import LikeIcon from '@public/icons/icon__heart-lined.svg';
 
 import cls from './Product.module.scss';
 
-
 interface ProductProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   data: ProductInterface;
