@@ -1,5 +1,6 @@
 import { useCountDown } from '@/shared/lib/hooks/useCountDown/useCountDown';
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+import cls from './Countdown.module.scss';
 
 interface Props
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
@@ -9,33 +10,25 @@ interface Props
 export const Countdown: FC<Props> = ({ date }) => {
   const { days, hours, minutes, seconds } = useCountDown(date);
   return (
-    <div className="counter">
-      <div className="best-deals__counter-item">
-        <span className="best-deals__counter-value js-counter-days">
-          {days}
-        </span>
-        <span className="best-deals__counter-description">Days</span>
+    <div className={cls.counter}>
+      <div className={cls.counterItem}>
+        <span className={cls.counterValue}>{days}</span>
+        <span className={cls.counterDescription}>Days</span>
       </div>
-      <span className="best-deals__counter-separator">:</span>
-      <div className="best-deals__counter-item">
-        <span className="best-deals__counter-value js-counter-hours">
-          {hours}
-        </span>
-        <span className="best-deals__counter-description">Hours</span>
+      <span className={cls.counterSeparator}>:</span>
+      <div className={cls.counterItem}>
+        <span className={cls.counterValue}>{hours}</span>
+        <span className={cls.counterDescription}>Hours</span>
       </div>
-      <span className="best-deals__counter-separator">:</span>
-      <div className="best-deals__counter-item">
-        <span className="best-deals__counter-value js-counter-minutes">
-          {minutes}
-        </span>
-        <span className="best-deals__counter-description">Mins</span>
+      <span className={cls.counterSeparator}>:</span>
+      <div className={cls.counterItem}>
+        <span className={cls.counterValue}>{minutes}</span>
+        <span className={cls.counterDescription}>Mins</span>
       </div>
-      <span className="best-deals__counter-separator">:</span>
-      <div className="best-deals__counter-item">
-        <span className="best-deals__counter-value js-counter-seconds">
-          {seconds}
-        </span>
-        <span className="best-deals__counter-description">Secs</span>
+      <span className={cls.counterSeparator}>:</span>
+      <div className={cls.counterItem}>
+        <span className={cls.counterValue}>{seconds}</span>
+        <span className={cls.counterDescription}>Secs</span>
       </div>
     </div>
   );
