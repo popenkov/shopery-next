@@ -1,5 +1,61 @@
+// import cn from 'classnames';
+// import {
+//   ComponentProps,
+//   ElementType,
+//   ReactNode,
+//   Ref,
+//   RefObject,
+//   forwardRef,
+//   memo,
+// } from 'react';
+
+// import style from './RoundButton.module.scss';
+
+// export type RoundButtonTheme = 'primary' | 'primary_inversed' | 'ghost';
+
+// const DEFAULT_ELEMENT: ElementType = 'button';
+
+// interface ButtonOwnProps<E extends ElementType = ElementType> {
+//   className?: string;
+//   theme?: RoundButtonTheme;
+//   children: ReactNode;
+//   as?: E;
+// }
+
+// type RoundButtonProps<E extends ElementType> = ButtonOwnProps<E> &
+//   Omit<ComponentProps<E>, keyof ButtonOwnProps>;
+
+// // const ButtonElement = <E extends ElementType = typeof DEFAULT_ELEMENT>forwardRef((
+// //   props: RoundButtonProps<E>, ref: RefObject<ElementType>
+// // ) => {
+// //   const { className, children, as, theme = 'primary', ...otherProps } = props;
+
+// //   const Element = as || DEFAULT_ELEMENT;
+
+// //   return (
+// //     <Element
+// //       className={cn(style.button, className, {
+// //         [style[theme]]: true,
+// //       })}
+// //       ref={ref}
+// //       {...otherProps}
+// //     >
+// //       {children}
+// //     </Element>
+// //   );
+// // });
+
+// export const RoundButton = memo(ButtonElement);
+
 import cn from 'classnames';
-import { ComponentProps, ElementType, ReactNode, memo } from 'react';
+import {
+  ComponentProps,
+  ElementType,
+  ReactNode,
+  Ref,
+  forwardRef,
+  memo,
+} from 'react';
 
 import style from './RoundButton.module.scss';
 
@@ -7,33 +63,34 @@ export type RoundButtonTheme = 'primary' | 'primary_inversed' | 'ghost';
 
 const DEFAULT_ELEMENT: ElementType = 'button';
 
-interface ButtonOwnProps<E extends ElementType = ElementType> {
+interface ButtonOwnProps {
   className?: string;
   theme?: RoundButtonTheme;
   children: ReactNode;
-  as?: E;
+  as?: ElementType;
 }
 
-type RoundButtonProps<E extends ElementType> = ButtonOwnProps<E> &
-  Omit<ComponentProps<E>, keyof ButtonOwnProps>;
+type RoundButtonProps = ButtonOwnProps &
+  Omit<ComponentProps<ElementType>, keyof ButtonOwnProps>;
 
-const ButtonElement = <E extends ElementType = typeof DEFAULT_ELEMENT>(
-  props: RoundButtonProps<E>
-) => {
-  const { className, children, as, theme = 'primary', ...otherProps } = props;
+const ButtonElement = forwardRef(
+  (props: RoundButtonProps, ref: Ref<HTMLButtonElement>) => {
+    const { className, children, as, theme = 'primary', ...otherProps } = props;
 
-  const Element = as || DEFAULT_ELEMENT;
+    const Element = as || DEFAULT_ELEMENT;
 
-  return (
-    <Element
-      className={cn(style.button, className, {
-        [style[theme]]: true,
-      })}
-      {...otherProps}
-    >
-      {children}
-    </Element>
-  );
-};
+    return (
+      <Element
+        className={cn(style.button, className, {
+          [style[theme]]: true,
+        })}
+        ref={ref}
+        {...otherProps}
+      >
+        {children}
+      </Element>
+    );
+  }
+);
 
 export const RoundButton = memo(ButtonElement);
