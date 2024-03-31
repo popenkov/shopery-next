@@ -1,3 +1,5 @@
+'use client';
+
 import { useCountDown } from '@/shared/lib/hooks/useCountDown/useCountDown';
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import cls from './Countdown.module.scss';
