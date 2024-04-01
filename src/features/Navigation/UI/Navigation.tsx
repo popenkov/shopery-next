@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 
 import { PhoneLink } from '@/entities/PhoneLink';
 
@@ -7,7 +7,7 @@ import { NavigationCategories } from './NavigationCategories';
 import { NavigationLinks } from './NavigationLinks';
 import { getNavigationData } from '../api/getNavigationData';
 
-export const Navigation = () => {
+export const Navigation: FC = () => {
   const { navigation, categories } = getNavigationData();
   return (
     <nav className={cls.navigation}>

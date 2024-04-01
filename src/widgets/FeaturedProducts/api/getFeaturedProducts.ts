@@ -4,6 +4,7 @@ import { ProductInterface } from '@/entities/Product';
 const data: ProductInterface[] = [
   {
     id: nanoid(),
+    path: '#',
     img: '/images/product-apple.jpg',
     title: 'Green Apple',
     price: 14.99,
@@ -18,6 +19,7 @@ const data: ProductInterface[] = [
   },
   {
     id: nanoid(),
+    path: '#',
     img: '/images/product-mango.jpg',
     title: 'Surjapur Mango',
     price: 14.99,
@@ -25,6 +27,7 @@ const data: ProductInterface[] = [
   },
   {
     id: nanoid(),
+    path: '#',
     img: '/images/product-tomatos.jpg',
     title: 'Red Tomatos',
     price: 14.99,
@@ -32,6 +35,7 @@ const data: ProductInterface[] = [
   },
   {
     id: nanoid(),
+    path: '#',
     img: '/images/product-cauliflower.jpg',
     title: 'Fresh Cauliflower',
     price: 14.99,
@@ -39,6 +43,7 @@ const data: ProductInterface[] = [
   },
   {
     id: nanoid(),
+    path: '#',
     img: '/images/product-letucce.jpg',
     title: 'Green Lettuce',
     price: 14.99,

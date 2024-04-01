@@ -1,6 +1,11 @@
 'use client';
 
-import { DetailedHTMLProps, HTMLAttributes, PropsWithChildren } from 'react';
+import {
+  DetailedHTMLProps,
+  FC,
+  HTMLAttributes,
+  PropsWithChildren,
+} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
@@ -9,7 +14,7 @@ import cls from './MobileSlider.module.scss';
 interface MobileSliderProps<T>
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
     PropsWithChildren<{
-      data?: T[];
+      data: T[];
       render: (child: T) => JSX.Element;
     }> {}
 

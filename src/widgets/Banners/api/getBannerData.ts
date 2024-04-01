@@ -1,6 +1,6 @@
-import { BannerType } from '@/entities/Banner';
+import { TBanner } from '@/entities/Banner';
 
-const data: BannerType[] = [
+const data: TBanner[] = [
   {
     id: '1',
     variant: ['left', 'white'],

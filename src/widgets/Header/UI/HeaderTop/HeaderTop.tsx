@@ -1,13 +1,14 @@
 import cn from 'classnames';
-import React from 'react';
+import { FC } from 'react';
 
 import { Location } from '@/entities/Location';
 import { CurrencySwitcher } from '@/features/CurrencySwitcher';
 import { LangSwitcher } from '@/features/LangSwitcher';
 
 import cls from './HeaderTop.module.scss';
+import Link from 'next/link';
 
-export const HeaderTop = () => {
+export const HeaderTop: FC = () => {
   return (
     <div className={cls.top}>
       <div className={cn(cls.content, 'container')}>
@@ -19,13 +20,13 @@ export const HeaderTop = () => {
           </div>
           <div className={cls.actionsSeparator}></div>
           <div className="header__auth">
-            <a className="header__auth-link" href="#">
+            <Link className="header__auth-link" href="#">
               Sign in
-            </a>
+            </Link>
             <span className="header__auth-separator">/</span>
-            <a className="header__auth-link" href="#">
+            <Link className="header__auth-link" href="#">
               Sign up
-            </a>
+            </Link>
           </div>
         </div>
       </div>

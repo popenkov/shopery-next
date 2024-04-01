@@ -16,11 +16,11 @@ export const NavigationMobile = () => {
     <div className={cls.navigation}>
       {navigation.map((link) => {
         return (
-          <Accordion title={link.title!} key={link.id}>
+          <Accordion title={link.title!} key={link.path}>
             {link?.items?.map((sublink) => {
               return (
-                <li key={sublink.id} className={cls.navigationMenuItem}>
-                  <Link href={sublink.id} className={cls.navigationLink}>
+                <li key={sublink.path} className={cls.navigationMenuItem}>
+                  <Link href={sublink.path} className={cls.navigationLink}>
                     {sublink.title}
                   </Link>
                 </li>

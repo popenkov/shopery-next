@@ -1,4 +1,4 @@
-export type TagInterface = {
+export type TTag = {
   type: string;
   text: string;
 };

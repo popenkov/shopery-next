@@ -1,6 +1,6 @@
-import { InstagramCardType } from '@/entities/InstagramCard';
+import { TInstagramCard } from '@/entities/InstagramCard';
 
-const DATA: InstagramCardType[] = [
+const DATA: TInstagramCard[] = [
   {
     img: '/images/instagram--01.jpg',
     id: '/instagram--01',

@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import React from 'react';
+import React, { FC } from 'react';
 
 import { InstagramPosts } from '@/features/InstagramPosts';
 
@@ -8,8 +8,7 @@ import { FooterAbout } from './FooterAbout';
 import { FooterCopyright } from './FooterCopyright';
 import { FooterNavigation } from './FooterNavigation';
 
-
-export const Footer = () => {
+export const Footer: FC = () => {
   return (
     <footer className={cls.footer}>
       <div className={cls.footerInner}>

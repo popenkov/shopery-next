@@ -14,9 +14,9 @@ export const FooterNavigation: FC<Props> = () => {
   return (
     <div className={cls.navigation}>
       {navigation.map((link) => {
-        const { id, title, items } = link;
+        const { path, title, items } = link;
         return (
-          <div className={cls.navigationItem} key={id}>
+          <div className={cls.navigationItem} key={path}>
             <Text
               className={cls.navigationTitle}
               variant="body_xl"
@@ -28,10 +28,10 @@ export const FooterNavigation: FC<Props> = () => {
             {items && (
               <ul className={cls.navigationList}>
                 {items.map((sublink) => {
-                  const { id, title } = sublink;
+                  const { path, title } = sublink;
                   return (
-                    <li className={cls.navigationItem} key={id}>
-                      <Link className={cls.navigationLink} href={id}>
+                    <li className={cls.navigationItem} key={path}>
+                      <Link className={cls.navigationLink} href={path}>
                         <Text variant="body_s">{title}</Text>
                       </Link>
                     </li>

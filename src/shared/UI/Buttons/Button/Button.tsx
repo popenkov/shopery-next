@@ -3,19 +3,9 @@ import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode, Ref } from 'react';
 
 import style from './Button.module.scss';
 
-export enum ButtonTheme {
-  PRIMARY = 'primary',
-  GHOST = 'ghost',
-  WHITE = 'white',
-  BORDER = 'border',
-  GRAY = 'gray',
-}
+type ButtonTheme = 'primary' | 'ghost' | 'white' | 'border' | 'gray' | 'text';
 
-export enum ButtonSize {
-  SMALL = 'small',
-  NORMAL = 'normal',
-  LARGE = 'large',
-}
+type ButtonSize = 'small' | 'normal' | 'large';
 
 interface AppButtonProps
   extends DetailedHTMLProps<
@@ -34,8 +24,8 @@ export const Button: FC<AppButtonProps> = (props) => {
     className,
     children,
     ref,
-    theme = ButtonTheme.PRIMARY,
-    size = ButtonSize.NORMAL,
+    theme = 'primary',
+    size = 'normal',
     ...otherProps
   } = props;
   return (

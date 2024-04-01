@@ -22,11 +22,11 @@
 //   as?: E;
 // }
 
-// type RoundButtonProps<E extends ElementType> = ButtonOwnProps<E> &
+// type Props<E extends ElementType> = ButtonOwnProps<E> &
 //   Omit<ComponentProps<E>, keyof ButtonOwnProps>;
 
 // // const ButtonElement = <E extends ElementType = typeof DEFAULT_ELEMENT>forwardRef((
-// //   props: RoundButtonProps<E>, ref: RefObject<ElementType>
+// //   props: Props<E>, ref: RefObject<ElementType>
 // // ) => {
 // //   const { className, children, as, theme = 'primary', ...otherProps } = props;
 
@@ -51,6 +51,7 @@ import cn from 'classnames';
 import {
   ComponentProps,
   ElementType,
+  FC,
   ReactNode,
   Ref,
   forwardRef,
@@ -70,11 +71,11 @@ interface ButtonOwnProps {
   as?: ElementType;
 }
 
-type RoundButtonProps = ButtonOwnProps &
+type Props = ButtonOwnProps &
   Omit<ComponentProps<ElementType>, keyof ButtonOwnProps>;
 
-const ButtonElement = forwardRef(
-  (props: RoundButtonProps, ref: Ref<HTMLButtonElement>) => {
+const ButtonElement: FC = forwardRef(
+  (props: Props, ref: Ref<HTMLButtonElement>) => {
     const { className, children, as, theme = 'primary', ...otherProps } = props;
 
     const Element = as || DEFAULT_ELEMENT;

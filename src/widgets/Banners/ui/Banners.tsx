@@ -1,13 +1,16 @@
 'use client';
 
-import React from 'react';
+import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
-import { Banner, BannerType } from '@/entities/Banner';
+import { Banner, TBanner } from '@/entities/Banner';
 import { MobileSlider } from '@/entities/MobileSlider';
 
 import { getBannerData } from '../api/getBannerData';
 
-export const Banners = () => {
+interface Props
+  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
+
+export const Banners: FC<Props> = () => {
   const { banners } = getBannerData();
 
   return (
@@ -18,9 +21,9 @@ export const Banners = () => {
         })}
       </div>
       <div className="container mobile-slider d-mobile">
-        <MobileSlider<BannerType>
+        <MobileSlider<TBanner>
           data={banners}
-          render={(child: BannerType) => <Banner {...child} />}
+          render={(child: TBanner) => <Banner {...child} />}
         />
       </div>
     </div>

@@ -1,7 +1,7 @@
 'use client';
 
 import cn from 'classnames';
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 
 import { ProductSearch } from '@/features/ProductsSearch';
 import { Logo } from '@/shared';
@@ -11,7 +11,7 @@ import cls from './HeaderMiddle.module.scss';
 import { HeaderActions } from '../HeaderActions';
 import { MobileMenu } from '../MobileMenu';
 
-export const HeaderMiddle = () => {
+export const HeaderMiddle: FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuToggle = () => {

@@ -38,8 +38,8 @@ export const NavigationCategories: FC<Props> = ({ categories }) => {
         {categories.map((link) => {
           const Icon = getCategoryIcon(link.icon);
           return (
-            <li key={link.id} className={cls.listItem}>
-              <Link className={cls.link} href={link.id}>
+            <li key={link.path} className={cls.listItem}>
+              <Link className={cls.link} href={link.path}>
                 <Icon className={cls.linkIcon} />
                 <Text variant="body_s" weight="medium" as="span">
                   {link.title}

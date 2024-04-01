@@ -1,2 +1,2 @@
 export { Tag } from './UI';
-export { type TagInterface } from './model/interfaces/tag.interface';
+export { type TTag } from './model/interfaces/tag.interface';

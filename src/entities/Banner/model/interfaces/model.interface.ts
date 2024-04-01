@@ -4,7 +4,7 @@ enum BannerVariant {
   WHITE = 'white',
 }
 
-export type BannerType = {
+export type TBanner = {
   id: string;
   variant: `${BannerVariant}`[];
   background: string;
