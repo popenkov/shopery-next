@@ -12,12 +12,12 @@ import LikeIcon from '@public/icons/icon__heart-lined.svg';
 
 import cls from './Product.module.scss';
 
-interface ProductProps
+interface Props
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   data: ProductInterface;
 }
 
-export const Product: FC<ProductProps> = ({ data }) => {
+export const Product: FC<Props> = ({ data }) => {
   const { img, title, path, price, priceOld, rating } = data;
 
   return (
