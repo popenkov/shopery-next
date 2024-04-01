@@ -3,76 +3,76 @@ import { Footer } from '../model/interface/footer.interface';
 const data: Footer = {
   navigation: [
     {
-      id: '/account',
+      path: '/account',
       title: 'account',
       items: [
         {
           title: 'My Account',
-          id: '/account-1',
+          path: '/account-1',
         },
         {
           title: 'Order History',
-          id: '/account-2',
+          path: '/account-2',
         },
         {
           title: 'Shoping Cart',
-          id: '/account-3',
+          path: '/account-3',
         },
         {
           title: 'Wishlist',
-          id: '/account-4',
+          path: '/account-4',
         },
         {
           title: 'Settings',
-          id: '/account-5',
+          path: '/account-5',
         },
       ],
     },
     {
-      id: '/helps',
+      path: '/helps',
       title: 'helps',
       items: [
         {
           title: 'Contact',
-          id: '/helps-1',
+          path: '/helps-1',
         },
         {
           title: 'Faqs',
-          id: 'helps-2',
+          path: 'helps-2',
         },
         {
           title: 'Terms & Condition',
-          id: 'helps-3',
+          path: 'helps-3',
         },
         {
           title: 'Privacy Policy',
-          id: 'helps-4',
+          path: 'helps-4',
         },
       ],
     },
     {
-      id: '/proxy',
+      path: '/proxy',
       title: 'proxy',
       items: [
         {
           title: 'About',
-          id: '/proxy-1',
+          path: '/proxy-1',
         },
         {
           title: 'Shop',
-          id: '/proxy-2',
+          path: '/proxy-2',
         },
         {
           title: 'Product',
-          id: '/proxy-3',
+          path: '/proxy-3',
         },
         {
           title: 'Products Details',
-          id: '/proxy-4',
+          path: '/proxy-4',
         },
         {
           title: 'Track Order',
-          id: '/proxy-5',
+          path: '/proxy-5',
         },
       ],
     },
@@ -81,41 +81,41 @@ const data: Footer = {
   socialLinks: [
     {
       icon: 'icon__facebook',
-      id: '/fb',
+      path: '/fb',
     },
     {
       icon: 'icon__twitter',
-      id: '/tw',
+      path: '/tw',
     },
     {
       icon: 'icon__pinterest',
-      id: '/pint',
+      path: '/pint',
     },
     {
       icon: 'icon__instagram',
-      id: '/inst',
+      path: '/inst',
     },
   ],
   paymentMethods: [
     {
       icon: 'icon__applepay',
-      id: '/apple',
+      path: '/apple',
     },
     {
       icon: 'icon__visa',
-      id: '/visa',
+      path: '/visa',
     },
     {
       icon: 'icon__discover',
-      id: '/discover',
+      path: '/discover',
     },
     {
       icon: 'icon__mastercard',
-      id: '/mc',
+      path: '/mc',
     },
     {
       icon: 'icon__secure',
-      id: '/secure',
+      path: '/secure',
     },
   ],
 };

@@ -1,18 +1,41 @@
 'use client';
 
-import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+import {
+  DetailedHTMLProps,
+  FC,
+  HTMLAttributes,
+  useCallback,
+  useState,
+} from 'react';
+import { redirect } from 'next/navigation';
 
 import { Button, Input } from '@/shared';
 
 import cls from './style.module.scss';
+import { getRouteCatalog } from '@/shared/constants/routes';
 interface Props
-  extends DetailedHTMLProps<HTMLAttributes<HTMLFormElement>, HTMLFormElement> {}
+  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 
 export const ProductSearch: FC<Props> = () => {
+  const [searchValue, setSearchValue] = useState('');
+
+  const handleSearchButtonClick = useCallback(() => {
+    console.log(searchValue);
+    redirect(getRouteCatalog());
+  }, [searchValue]);
+
   return (
-    <form className={cls.search}>
-      <Input type="search" placeholder="search" className={cls.searchField} />
-      <Button className={cls.searchButton}>Search</Button>
-    </form>
+    <div className={cls.search}>
+      <Input
+        value={searchValue}
+        onChange={setSearchValue}
+        type="search"
+        placeholder="search"
+        className={cls.searchField}
+      />
+      <Button className={cls.searchButton} onClick={handleSearchButtonClick}>
+        Search
+      </Button>
+    </div>
   );
 };

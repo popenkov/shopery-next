@@ -1,5 +1,5 @@
 export type NavigationLink = {
-  id: string;
+  path: string;
   icon?: string;
   title?: string;
   items?: NavigationLink[];

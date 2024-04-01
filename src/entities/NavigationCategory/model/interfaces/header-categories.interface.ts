@@ -1,5 +1,5 @@
 export type HeaderCategory = {
-  id: string;
+  path: string;
   icon:
     | 'icon__apple'
     | 'icon__salad'

@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { FC } from 'react';
 
 import { MobileSlider } from '@/entities/MobileSlider';
 import { ProductLarge } from '@/entities/Product';
@@ -9,18 +9,20 @@ import { Tabs } from '@/shared';
 
 import { getProductTab } from '../api/getProductTabs';
 
-export const ProductTab = () => {
+export const ProductTab: FC = () => {
   const { productTabs } = getProductTab();
 
   return (
     <div>
       <Tabs<ProductInterface>
         tabs={productTabs}
-        tabContent={(item) => <ProductLarge data={item} />}
+        tabContent={(item) => <ProductLarge data={item} key={item.id} />}
         sliderContent={(props) => (
           <MobileSlider<ProductInterface>
             {...props}
-            render={(child: ProductInterface) => <ProductLarge data={child} />}
+            render={(child: ProductInterface) => (
+              <ProductLarge data={child} key={child.id} />
+            )}
           />
         )}
       />

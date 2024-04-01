@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React from 'react';
+import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import { Text } from '@/shared';
 import { getFormattedPrice } from '@/shared/lib/utils/getFormattedPrice';
@@ -8,14 +8,17 @@ import CartIcon from '@public/icons/icon__cart.svg';
 import cls from './HeaderCart.module.scss';
 import { getCartAmount } from '../api/getCartAmount';
 
-export const HeaderCart = () => {
+interface Props
+  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
+
+export const HeaderCart: FC<Props> = () => {
   const { amount, price } = getCartAmount();
   const formattedPrice = getFormattedPrice(price);
   return (
     <div className={cls.cart}>
       <Link className={cls.cartLink} href="#">
         <CartIcon className={cls.cartIcon} />
-        {typeof amount === 'number' && (
+        {Number.isFinite(amount) && (
           <span className={cls.cartItemsAmount}>{amount}</span>
         )}
       </Link>

@@ -18,15 +18,15 @@ interface ProductPreviewProps
 }
 
 export const ProductPreview: FC<ProductPreviewProps> = ({ data }) => {
-  const { img, title, id, price, priceOld, rating } = data;
+  const { img, title, path, price, priceOld, rating } = data;
 
   return (
     <div className={cls.product}>
-      <Link href={id} className={cls.imageLink}>
+      <Link href={`/products/${path}`} className={cls.imageLink}>
         <Image src={img} fill alt={title} className={cls.image} />
       </Link>
       <div className={cls.description}>
-        <Link href={id} className={cls.link}>
+        <Link href={`/products/${path}`} className={cls.link}>
           <Text variant="heading_4" className={cls.title}>
             {title}
           </Text>

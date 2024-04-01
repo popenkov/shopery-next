@@ -3,6 +3,7 @@ import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import { Text } from '@/shared';
 
 import cls from './FooterAbout.module.scss';
+import Link from 'next/link';
 
 interface Props
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
@@ -19,15 +20,15 @@ export const FooterAbout: FC<Props> = () => {
       </Text>
 
       <div className={cls.aboutContact}>
-        <a className={cls.aboutLink} href="tel:(219)555-0114">
+        <Link className={cls.aboutLink} href="tel:(219)555-0114">
           (219) 555-0114
-        </a>
+        </Link>
         <Text variant="body_s" as="span" className={cls.separator}>
           or
         </Text>
-        <a className={cls.aboutLink} href="mailto:proxy@gmail.com">
+        <Link className={cls.aboutLink} href="mailto:proxy@gmail.com">
           Proxy@gmail.com
-        </a>
+        </Link>
       </div>
     </div>
   );

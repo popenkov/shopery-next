@@ -13,11 +13,9 @@ interface StarRatingProps
 
 export const StarRating: FC<StarRatingProps> = memo(
   ({ value, maxValue = 5 }) => {
-    const ratingArray = new Array(maxValue).fill('*');
-
     return (
       <div className={cls.rating}>
-        {ratingArray.map((_, index) => {
+        {new Array(maxValue).fill('*').map((_, index) => {
           return (
             <span
               key={`rating-${index}`}

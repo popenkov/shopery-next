@@ -12,33 +12,30 @@ import LikeIcon from '@public/icons/icon__heart-lined.svg';
 
 import cls from './Product.module.scss';
 
-
 interface ProductProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   data: ProductInterface;
 }
 
 export const Product: FC<ProductProps> = ({ data }) => {
-  const { img, title, id, price, priceOld, rating } = data;
+  const { img, title, path, price, priceOld, rating } = data;
 
   return (
     <div className={cls.product}>
       <div className={cls.imageContainer}>
         <div className={cls.buttons}>
-          <div className={cls.buttons}>
-            <RoundButton theme="primary_inversed" className={cls.imageButton}>
-              <LikeIcon />
-            </RoundButton>
-            <RoundButton theme="primary_inversed" className={cls.imageButton}>
-              <PreviewIcon />
-            </RoundButton>
-          </div>
+          <RoundButton theme="primary_inversed" className={cls.imageButton}>
+            <LikeIcon />
+          </RoundButton>
+          <RoundButton theme="primary_inversed" className={cls.imageButton}>
+            <PreviewIcon />
+          </RoundButton>
         </div>
         <Image src={img} fill alt={title} className={cls.image} />
       </div>
       <div className={cls.description}>
         <div>
-          <Link className={cls.link} href={id}>
+          <Link className={cls.link} href={`/products/${path}`}>
             <Text variant="heading_4" className={cls.title}>
               {title}
             </Text>

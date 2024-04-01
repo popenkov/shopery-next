@@ -18,21 +18,22 @@ export const NavigationLinks: FC<Props> = ({ links }) => {
   return (
     <ul className={cls.navigationMenu}>
       {links.map((link) => {
-        const linkItems = link?.items;
         return (
-          <li className={cls.navigationMenuItem} key={link.id}>
-            <Link className={cls.navigationMenuLink} href={link.id}>
+          <li className={cls.navigationMenuItem} key={link.path}>
+            <Link className={cls.navigationMenuLink} href={link.path}>
               {link.title}
-              {linkItems && <ChevronIcon className={cls.navigationLinkIcon} />}
+              {link?.items && (
+                <ChevronIcon className={cls.navigationLinkIcon} />
+              )}
             </Link>
-            {linkItems && (
+            {link?.items && (
               <ul className={cls.navigationDropMenu}>
-                {linkItems.map((sublink) => {
+                {link.items.map((sublink) => {
                   return (
-                    <li key={sublink.id}>
+                    <li key={sublink.path}>
                       <Link
                         className={cls.navigationDropMenuLink}
-                        href={sublink.id}
+                        href={sublink.path}
                       >
                         {sublink.title}
                       </Link>

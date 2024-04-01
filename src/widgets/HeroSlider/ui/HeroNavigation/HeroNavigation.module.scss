@@ -1,0 +1,58 @@
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/breakpoints';
+
+.navigation {
+  @media screen and (max-width: $screen-dxl) {
+    @include flex-center-vertical;
+
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    z-index: var(--hero-navigation-z-index);
+    gap: 30px;
+  }
+
+  @media screen and (max-width: $screen-tl) {
+    display: none !important;
+  }
+}
+
+.navigationButton {
+  @include box(45px);
+
+  position: absolute;
+  top: 46.7%;
+  border: 1px solid var(--green-gray-100);
+  box-shadow: none !important;
+  transform: translateY(-50%);
+
+  @media screen and (max-width: $screen-dxl) {
+    position: static;
+    top: auto;
+    margin-bottom: 75px;
+    transform: none;
+  }
+
+  @media screen and (max-width: $screen-ti) {
+    margin-bottom: 60px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: 0 0 8px 0 var(--gray-200) !important;
+    }
+  }
+
+  &Prev {
+    left: -110px;
+
+    svg {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &Next {
+    right: -110px;
+  }
+}

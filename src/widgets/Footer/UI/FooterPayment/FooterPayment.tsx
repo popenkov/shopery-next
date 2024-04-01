@@ -18,12 +18,12 @@ export const FooterPayment: FC<Props> = () => {
     <ul className={cls.payment}>
       {paymentMethods.map((item) => {
         const { id, icon } = item;
-        const isLargeIcon = icon === 'icon__secure';
+
         const Icon = getPaymentIcon(icon);
         return (
           <li
             className={cn(cls.paymentItem, {
-              [cls.large]: isLargeIcon,
+              [cls.large]: icon === 'icon__secure',
             })}
             key={id}
           >

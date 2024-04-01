@@ -1,0 +1,98 @@
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/breakpoints';
+
+.slide {
+  @include flex-center-vertical;
+
+  gap: 19px;
+
+  @media screen and (max-width: $screen-tl) {
+    flex-direction: column;
+  }
+}
+
+.imgContainer {
+  width: 58%;
+  height: 564px;
+
+  @media screen and (max-width: $screen-tl) {
+    @include flex-center;
+
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    aspect-ratio: 191 / 141;
+  }
+}
+
+.img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.description {
+  @include flex-column;
+
+  align-items: flex-start;
+  width: 40%;
+
+  @media screen and (max-width: $screen-tl) {
+    width: 100%;
+  }
+}
+
+.note {
+  color: var(--primary);
+  font-weight: 400;
+  font-size: 14px;
+  font-family: var(--font-segoe);
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.title {
+  // todo
+  // @include heading-1(600);
+
+  margin: 0;
+  color: var(--green-gray-900);
+
+  @media screen and (max-width: $screen-tl) {
+    // todo
+    // @include heading-3(600);
+  }
+}
+
+.note + .title {
+  margin-top: 8px;
+}
+
+.text {
+  // todo
+  // @include body-large;
+
+  margin: 0;
+  color: var(--gray-500);
+
+  @media screen and (max-width: $screen-tl) {
+    // @include body-medium;
+  }
+}
+
+.title + .text {
+  margin-top: 20px;
+}
+
+// stylelint-disable-next-line
+.button.button--large {
+  @include flex-center-vertical;
+
+  gap: 12px;
+  height: 51px;
+  padding-right: 35px;
+}
+
+.text + .button {
+  margin-top: 30px;
+}

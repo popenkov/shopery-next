@@ -1,0 +1,62 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/text-styles.scss';
+
+.counter {
+  @include flex-center;
+
+  gap: 8px;
+  width: 100%;
+}
+
+.title + .counter {
+  margin-top: 12px;
+}
+
+.counter-title + .counter-container {
+  margin-top: 6px;
+}
+
+.counterItem {
+  @include box(96px);
+  @include flex-column;
+
+  gap: 4px;
+  align-items: center;
+  min-width: 60px;
+  padding: 20px 8px;
+  background-color: var(--color-white);
+  border-radius: 6px;
+}
+
+.counterSeparator {
+  @include body-xl;
+
+  color: var(--green-gray-500);
+}
+
+.counterValue {
+  @include heading-5;
+
+  color: var(--primary);
+}
+
+.counterDescription {
+  color: var(--green-gray-500);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 3%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.button.icon-button {
+  gap: 12px;
+  padding: 14px 36px 13px 40px;
+}
+
+.counter + .button {
+  margin-top: 20px;
+}
