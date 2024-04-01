@@ -1,11 +1,18 @@
 'use client';
 
 import cn from 'classnames';
-import { ChangeEvent, InputHTMLAttributes, memo, useRef } from 'react';
+import {
+  ChangeEvent,
+  InputHTMLAttributes,
+  memo,
+  useRef,
+  useState,
+} from 'react';
 
 import SearchIcon from '@public/icons/icon__search.svg';
 
 import cls from './Input.module.scss';
+import { checkEmailValidation } from '@/shared/lib/utils/checkEmailValidation/checkEmailValidation';
 
 type HTMLInputProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
@@ -22,26 +29,33 @@ export const Input = memo((props: InputProps) => {
   const { className, value, onChange, type = 'text', ...otherProps } = props;
   const ref = useRef<HTMLInputElement>(null);
 
+  const [isInvalid, setIsInvalid] = useState(true);
+
   const handleInputChange = (evt: ChangeEvent<HTMLInputElement>) => {
+    if (type === 'email') {
+      setIsInvalid(!checkEmailValidation(value?.toString() || ''));
+    }
+
     onChange?.(evt.target.value);
   };
 
-  const isSearchInput = type === 'search';
-
   return (
-    <div className={cn(cls.inputWrapper, className)}>
-      <input
-        ref={ref}
-        type={type}
-        value={value}
-        onChange={handleInputChange}
-        className={cn(cls.input, {
-          [cls.search]: isSearchInput,
-        })}
-        {...otherProps}
-      />
-      {isSearchInput && <SearchIcon className={cls.searchIcon} />}
-    </div>
+    <>
+      <div className={cn(cls.inputWrapper, className)}>
+        <input
+          ref={ref}
+          type={type}
+          value={value}
+          onChange={handleInputChange}
+          className={cn(cls.input, {
+            [cls.search]: type === 'search',
+          })}
+          {...otherProps}
+        />
+        {type === 'search' && <SearchIcon className={cls.searchIcon} />}
+      </div>
+      {isInvalid && <span>error</span>}
+    </>
   );
 });
 
