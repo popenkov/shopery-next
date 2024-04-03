@@ -2,6 +2,7 @@ import { Banners } from '@/widgets/Banners';
 import { BestDeals } from '@/widgets/BestDeals';
 import { FeaturedProducts } from '@/widgets/FeaturedProducts';
 import { HeroSlider } from '@/widgets/HeroSlider';
+import { MainVideo } from '@/widgets/MainVideo';
 import { NewsList } from '@/widgets/NewsList/ui';
 import { NewsSubscription } from '@/widgets/NewsSubscription';
 import { ProductTab } from '@/widgets/ProductTab';
@@ -18,6 +19,7 @@ export const HomePage: FC = () => {
       <FeaturedProducts />
       <Reviews />
       <NewsList />
+      <MainVideo />
       <NewsSubscription />
     </>
   );
