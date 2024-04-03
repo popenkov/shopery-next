@@ -19,14 +19,22 @@ type HTMLInputProps = Omit<
   'value' | 'onChange' | 'readOnly'
 >;
 
-interface InputProps extends HTMLInputProps {
+interface Props extends HTMLInputProps {
   className?: string;
+  hasValidation?: boolean;
   value?: string | number;
   onChange?: (value: string) => void;
 }
 
-export const Input = memo((props: InputProps) => {
-  const { className, value, onChange, type = 'text', ...otherProps } = props;
+export const Input = memo((props: Props) => {
+  const {
+    className,
+    value,
+    onChange,
+    type = 'text',
+    hasValidation = false,
+    ...otherProps
+  } = props;
   const ref = useRef<HTMLInputElement>(null);
 
   const [isInvalid, setIsInvalid] = useState(true);
@@ -54,7 +62,7 @@ export const Input = memo((props: InputProps) => {
         />
         {type === 'search' && <SearchIcon className={cls.searchIcon} />}
       </div>
-      {isInvalid && <span>error</span>}
+      {isInvalid && hasValidation && <span>error</span>}
     </>
   );
 });

@@ -1,105 +1,95 @@
 @import '@/shared/styles/mixins/text-styles.scss';
 
-.error {
-  .title {
+.text {
+  &.error {
     color: var(--front-primary);
   }
 
-  .text {
-    color: var(--front-primary);
-  }
-}
-
-.inverted {
-  .title {
+  &.inverted {
     color: var(--front-primary-inversed);
   }
 
-  .text {
-    color: var(--front-primary-inversed);
+  &.left {
+    text-align: left;
   }
-}
 
-.left {
-  text-align: left;
-}
+  &.right {
+    text-align: right;
+  }
 
-.right {
-  text-align: right;
-}
+  &.center {
+    text-align: center;
+  }
 
-.center {
-  text-align: center;
-}
+  &.search_field {
+    @include search-field;
+  }
 
-.search_field {
-  @include search-field;
-}
+  &.display_1 {
+    @include display-1;
+  }
 
-.display_1 {
-  @include display-1;
-}
+  &.heading_1 {
+    @include heading-1;
+  }
 
-.heading_1 {
-  @include heading-1;
-}
+  &.heading_2 {
+    @include heading-2;
+  }
 
-.heading_2 {
-  @include heading-2;
-}
+  &.heading_3 {
+    @include heading-3;
+  }
 
-.heading_3 {
-  @include heading-3;
-}
+  &.heading_4 {
+    @include heading-4;
+  }
 
-.heading_4 {
-  @include heading-4;
-}
+  &.heading_5 {
+    @include heading-5;
+  }
 
-.heading_5 {
-  @include heading-5;
-}
+  &.body_xxl {
+    @include body-xxl;
+  }
 
-.body_xxl {
-  @include body-xxl;
-}
+  &.body_xl {
+    @include body-xl;
+  }
 
-.body_xl {
-  @include body-xl;
-}
+  &.body_l {
+    @include body-l;
+  }
 
-.body_l {
-  @include body-l;
-}
+  &.body_m {
+    @include body-m;
+  }
 
-.body_m {
-  @include body-m;
-}
+  &.body_s {
+    @include body-s;
+  }
 
-.body_s {
-  @include body-s;
-}
+  &.body_xs {
+    @include body-xs;
+  }
 
-.body_xs {
-  @include body-xs;
-}
+  &.body_tiny {
+    @include body-tiny;
+  }
 
-.body_tiny {
-  @include body-tiny;
-}
+  &.light {
+    font-weight: 300;
+  }
 
-.light {
-  font-weight: 300;
-}
+  &.medium {
+    font-weight: 500;
+  }
 
-.medium {
-  font-weight: 500;
-}
+  &.semibold {
+    font-weight: 600;
+  }
 
-.semibold {
-  font-weight: 600;
-}
-
-.bold {
-  font-weight: 700;
+  &.bold {
+    font-weight: 700;
+  }
 }

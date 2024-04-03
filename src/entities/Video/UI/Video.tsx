@@ -50,7 +50,7 @@ export const Video: FC<{ data: Props }> = ({ data }) => {
         className={cn(cls.videoPreview, {
           [cls.withOverlay]: hasOverlay && !isVideoShown,
         })}
-        style={{ backgroundImage: `url("${background}")` }}
+        style={{ backgroundImage: `url("/images/${background}")` }}
       >
         {!isVideoShown && (
           <div className={cls.videoText}>

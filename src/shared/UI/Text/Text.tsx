@@ -51,9 +51,7 @@ const T = <E extends ElementType = typeof DEFAULT_ELEMENT>(
   };
 
   return (
-    <Element className={cn(cls.Text, className, mods)} {...props}>
-      {children}
-    </Element>
+    <Element className={cn(cls.text, className, mods)}>{children}</Element>
   );
 };
 

@@ -29,7 +29,7 @@ export const AdvantageCard: FC<Props> = ({
       <div className={cls.iconWrapper}>
         <Icon className={cls.icon} />
       </div>
-      <Text variant="body_l" weight="semibold" className={cls.title}>
+      <Text variant="body_l" weight="semibold" className={cls.title} as="h2">
         {title}
       </Text>
       <Text variant="body_s" className={cls.text}>
