@@ -2,7 +2,7 @@ import cn from 'classnames';
 import Link from 'next/link';
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
-import { AppLink, Button } from '@/shared';
+import { Button } from '@/shared';
 import ArrowIcon from '@public/icons/icon__arrow.svg';
 
 import cls from './Banner.module.scss';

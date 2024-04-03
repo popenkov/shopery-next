@@ -2,7 +2,7 @@
 @import '@/shared/styles/mixins/box.scss';
 @import '@/shared/styles/mixins/button-reset.scss';
 
-.content {
+.dropdownContent {
   @include flex-column;
 
   position: absolute;
@@ -70,7 +70,7 @@
   &:hover {
     color: var(--front-primary-inversed);
 
-    .content {
+    .dropdownContent {
       visibility: visible;
       opacity: 1;
       transition: all var(--transition);

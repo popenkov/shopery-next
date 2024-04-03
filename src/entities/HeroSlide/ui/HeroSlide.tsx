@@ -1,7 +1,8 @@
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import { THeroSlide } from '..';
 import cls from './HeroSlide.module.scss';
-import Link from 'next/link';
+import { AppLink } from '@/shared';
+import ArrowIcon from '@public/icons/icon__arrow.svg';
 
 interface Props
   extends Omit<
@@ -20,15 +21,10 @@ export const HeroSlide: FC<Props> = ({ path, image, note, title, text }) => {
         <span className={cls.note}>{note}</span>
         <h2 className={cls.title}>{title}</h2>
         <p className={cls.text}>{text}</p>
-        <Link
-          className="button  button--fill button--large .button icon-button"
-          href={path}
-        >
-          <span className="icon-button__text">Shop now</span>
-          <svg className="icon-button__icon">
-            <use href="img/svgSprite.svg#icon__arrow"></use>
-          </svg>
-        </Link>
+        <AppLink theme="primary" size="large" href={path} className={cls.link}>
+          <span className={cls.linkText}>Shop now</span>
+          <ArrowIcon className={cls.linkIcon} />
+        </AppLink>
       </div>
     </div>
   );

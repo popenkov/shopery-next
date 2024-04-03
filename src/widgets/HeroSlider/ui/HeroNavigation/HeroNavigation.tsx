@@ -20,11 +20,6 @@ export const HeroNavigation: FC<Props> = ({
     <>
       <div className={cls.pagination} ref={fractionRef}></div>
       <div className={cls.navigation}>
-        {/* <button className="button-round button-round--white-green hero__navigation-button hero__navigation-button--prev">
-          <svg className="button-round__icon">
-            <use href="img/svgSprite.svg#icon__arrow"></use>
-          </svg>
-        </button> */}
         <RoundButton
           theme="primary_inversed"
           className={cn(cls.navigationButton, cls.navigationButtonPrev)}
@@ -39,11 +34,6 @@ export const HeroNavigation: FC<Props> = ({
         >
           <ArrowIcon />
         </RoundButton>
-        {/* <button className="button-round button-round--white-green hero__navigation-button hero__navigation-button--next">
-          <svg className="button-round__icon">
-            <use href="img/svgSprite.svg#icon__arrow"></use>
-          </svg>
-        </button> */}
       </div>
     </>
   );

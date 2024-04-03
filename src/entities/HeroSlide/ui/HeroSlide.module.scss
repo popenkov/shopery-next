@@ -85,7 +85,7 @@
 }
 
 // stylelint-disable-next-line
-.button.button--large {
+.link {
   @include flex-center-vertical;
 
   gap: 12px;
@@ -93,6 +93,6 @@
   padding-right: 35px;
 }
 
-.text + .button {
+.text + .link {
   margin-top: 30px;
 }
