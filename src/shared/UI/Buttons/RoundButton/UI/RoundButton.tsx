@@ -2,7 +2,6 @@ import cn from 'classnames';
 import {
   ComponentProps,
   ElementType,
-  FC,
   ReactNode,
   Ref,
   forwardRef,
