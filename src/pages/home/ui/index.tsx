@@ -1,3 +1,4 @@
+import { Advantages } from '@/widgets/Advantages/ui/Advantages';
 import { Banners } from '@/widgets/Banners';
 import { BestDeals } from '@/widgets/BestDeals';
 import { FeaturedProducts } from '@/widgets/FeaturedProducts';
@@ -13,6 +14,7 @@ export const HomePage: FC = () => {
   return (
     <>
       <HeroSlider />
+      <Advantages />
       <ProductTab />
       <Banners />
       <BestDeals />
