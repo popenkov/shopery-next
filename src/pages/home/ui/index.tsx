@@ -1,3 +1,5 @@
+import React, { FC } from 'react';
+
 import { Advantages } from '@/widgets/Advantages/ui/Advantages';
 import { Banners } from '@/widgets/Banners';
 import { BestDeals } from '@/widgets/BestDeals';
@@ -8,7 +10,6 @@ import { NewsList } from '@/widgets/NewsList/ui';
 import { NewsSubscription } from '@/widgets/NewsSubscription';
 import { ProductTab } from '@/widgets/ProductTab';
 import { Reviews } from '@/widgets/Reviews';
-import React, { FC } from 'react';
 
 export const HomePage: FC = () => {
   return (
@@ -20,8 +21,8 @@ export const HomePage: FC = () => {
       <BestDeals />
       <FeaturedProducts />
       <Reviews />
-      <NewsList />
       <MainVideo />
+      <NewsList />
       <NewsSubscription />
     </>
   );

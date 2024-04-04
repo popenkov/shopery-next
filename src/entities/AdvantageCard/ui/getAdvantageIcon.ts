@@ -1,7 +1,7 @@
 import icon__delivery_truck from '@public/icons/icon__delivery_truck.svg';
 import icon__headphones from '@public/icons/icon__headphones.svg';
-import icon__shopping_bag from '@public/icons/icon__shopping_bag.svg';
 import icon__package from '@public/icons/icon__package.svg';
+import icon__shopping_bag from '@public/icons/icon__shopping_bag.svg';
 
 const advantageIcons = {
   icon__delivery_truck: icon__delivery_truck,

@@ -1,5 +1,6 @@
-import Link from 'next/link';
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+
+import Link from 'next/link';
 
 import { Text } from '@/shared';
 

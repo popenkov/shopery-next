@@ -5,6 +5,12 @@
   @include flex-center-vertical;
 
   border-radius: 6px;
+
+  button.searchButton {
+    height: 45px;
+    padding: 14px 24px;
+    border-radius: 0 6px 6px 0;
+  }
 }
 
 .searchField input[type='search'] {
@@ -15,16 +21,10 @@
   @media screen and (max-width: $screen-tl) {
     padding: 8px;
   }
-
-  svg {
-    @media screen and (max-width: $screen-tl) {
-      display: none;
-    }
-  }
 }
 
-.searchButton {
-  height: 45px;
-  padding: 14px 24px;
-  border-radius: 0 6px 6px 0;
+.searchField svg {
+  @media screen and (max-width: $screen-tl) {
+    display: none;
+  }
 }

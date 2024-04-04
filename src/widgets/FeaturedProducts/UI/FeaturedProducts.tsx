@@ -2,11 +2,11 @@
 
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
+import { MobileSlider } from '@/entities/MobileSlider';
+import { Product } from '@/entities/Product';
 import { ProductInterface } from '@/entities/Product/model/interfaces/product.interface';
 
 import { getFeaturedProducts } from '../api/getFeaturedProducts';
-import { MobileSlider } from '@/entities/MobileSlider';
-import { Product } from '@/entities/Product';
 
 interface Props
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}

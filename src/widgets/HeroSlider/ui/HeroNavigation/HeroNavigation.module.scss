@@ -38,6 +38,12 @@
     margin-bottom: 60px;
   }
 
+  svg {
+    width: auto;
+    height: auto;
+    min-width: none;
+  }
+
   @media (hover: hover) {
     &:hover {
       box-shadow: 0 0 8px 0 var(--gray-200) !important;
@@ -54,5 +60,37 @@
 
   &Next {
     right: -110px;
+  }
+}
+
+.pagination {
+  &:global(.swiper-pagination-bullets) {
+    @include flex-center;
+
+    position: absolute;
+    bottom: 81px;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: $screen-tl) {
+      bottom: 60px;
+    }
+
+    :global(.swiper-pagination-bullet) {
+      @include box(8px);
+
+      display: block;
+      width: 8px;
+      height: 8px;
+      background-color: var(--green-gray-200);
+      border-radius: 50%;
+      transition: all var(--transition);
+    }
+
+    :global(.swiper-pagination-bullet-active) {
+      width: 16px;
+      background-color: var(--primary);
+      border-radius: 50px;
+    }
   }
 }

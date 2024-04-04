@@ -1,5 +1,6 @@
-import cn from 'classnames';
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+
+import cn from 'classnames';
 
 import cls from './FooterPayment.module.scss';
 import { getPaymentIcon } from './getPaymentIcon';

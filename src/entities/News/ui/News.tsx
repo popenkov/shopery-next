@@ -1,9 +1,12 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
-import ArrowIcon from '@public/icons/icon__arrow.svg';
-import cls from './News.module.scss';
-import { TNews } from './news.interface';
-import { AppLink, Text } from '@/shared';
+
 import Image from 'next/image';
+
+import { AppLink, Text } from '@/shared';
+import ArrowIcon from '@public/icons/icon__arrow.svg';
+
+import { TNews } from './news.interface';
+import cls from './News.module.scss';
 
 interface Props
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {

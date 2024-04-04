@@ -1,5 +1,6 @@
-import { Subscription } from '@/features/Subscription';
 import { FC } from 'react';
+
+import { Subscription } from '@/features/Subscription';
 
 export const NewsSubscription: FC = () => {
   return (

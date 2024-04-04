@@ -1,5 +1,6 @@
-import cn from 'classnames';
 import React, { DetailedHTMLProps, FC, HTMLAttributes, useRef } from 'react';
+
+import cn from 'classnames';
 
 import { Location } from '@/entities/Location';
 import { PhoneLink } from '@/entities/PhoneLink';

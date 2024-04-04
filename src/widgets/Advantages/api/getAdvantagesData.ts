@@ -1,5 +1,6 @@
-import { TAdvantage } from '@/entities/AdvantageCard';
 import { nanoid } from 'nanoid';
+
+import { TAdvantage } from '@/entities/AdvantageCard';
 
 const data: TAdvantage[] = [
   {

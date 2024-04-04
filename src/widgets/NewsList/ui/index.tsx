@@ -1,6 +1,8 @@
 import { FC } from 'react';
-import { getNewsData } from '../api/getNewsData';
+
 import { News } from '@/entities/News';
+
+import { getNewsData } from '../api/getNewsData';
 
 export const NewsList: FC = () => {
   const { news } = getNewsData();

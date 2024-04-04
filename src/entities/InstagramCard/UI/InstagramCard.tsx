@@ -1,5 +1,6 @@
-import Image from 'next/image';
 import { FC, DetailedHTMLProps, HTMLAttributes } from 'react';
+
+import Image from 'next/image';
 
 import InstagramIcon from '@public/icons/icon__instagram.svg';
 

@@ -18,6 +18,8 @@
   transition: all var(--transition);
 
   &::placeholder {
+    @include search-field;
+
     color: var(--gray-500);
   }
 

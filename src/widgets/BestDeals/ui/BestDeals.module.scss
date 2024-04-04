@@ -23,90 +23,38 @@
   @media screen and (max-width: $screen-t) {
     background: none;
   }
+}
 
-  .container {
-    @include flex-column-center;
+.container {
+  @include flex-column-center;
 
-    gap: 12px;
-    width: calc(100% - 40px);
-    max-width: 508px;
-    margin: 0 auto;
-  }
+  gap: 12px;
+  width: calc(100% - 40px);
+  max-width: 508px;
+  margin: 0 auto;
+}
 
-  .subtitle {
-    margin: 0;
-    color: var(--primary);
-    line-height: 100%;
-    letter-spacing: 2%;
-    text-align: center;
-    text-transform: uppercase;
-  }
+.subtitle {
+  margin: 0;
+  color: var(--primary);
+  line-height: 100%;
+  letter-spacing: 2%;
+  text-transform: uppercase;
+}
 
-  .title {
-    margin: 0;
-    text-align: center;
+.title {
+  margin: 0;
+}
 
-    @media screen and (max-width: $screen-tl) {
-      // todo
-      //   @include heading-5(600);
-    }
-  }
+.title + .counter {
+  margin-top: 12px;
+}
 
-  .counter {
-    @include flex-center;
+.container a.button {
+  gap: 12px;
+  padding: 14px 36px 13px 40px;
+}
 
-    gap: 8px;
-    width: 100%;
-  }
-
-  .title + .counter {
-    margin-top: 12px;
-  }
-
-  .counter-title + .counter-container {
-    margin-top: 6px;
-  }
-
-  .counter-item {
-    @include box(96px);
-    @include flex-column;
-
-    gap: 4px;
-    align-items: center;
-    min-width: 60px;
-    padding: 20px 8px;
-    background-color: var(--color-white);
-    border-radius: 6px;
-  }
-
-  .counter-separator {
-    @include body-xl;
-
-    color: var(--green-gray-500);
-  }
-
-  .counter-value {
-    @include heading-5;
-
-    color: var(--primary);
-  }
-
-  .counter-description {
-    color: var(--green-gray-500);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 100%;
-    letter-spacing: 3%;
-    text-align: center;
-    text-transform: uppercase;
-  }
-
-  .button.icon-button {
-    gap: 12px;
-    padding: 14px 36px 13px 40px;
-  }
-
-  .counter + .button {
-    margin-top: 20px;
-  }
+.counter + .button {
+  margin-top: 20px;
 }

@@ -1,8 +1,10 @@
 'use client';
-import cn from 'classnames';
 import { useEffect, useState } from 'react';
 
+import cn from 'classnames';
+
 import cls from './Tabs.module.scss';
+import { Text } from '..';
 
 interface SliderProps<T> {
   data: T[];
@@ -16,7 +18,6 @@ export interface TabItem<T> {
 
 interface TabsProps<T> {
   tabs: TabItem<T>[];
-  title?: string;
   onTabChange?: (value: string) => void;
   tabContent: (item: T) => JSX.Element;
   sliderContent?: (props: SliderProps<T>) => JSX.Element;
@@ -24,7 +25,6 @@ interface TabsProps<T> {
 
 export const Tabs = <T extends unknown>({
   tabs,
-  title,
   onTabChange,
   tabContent,
   sliderContent,
@@ -44,43 +44,39 @@ export const Tabs = <T extends unknown>({
   }, [selectedTab, tabs]);
 
   return (
-    <div className="section section--green">
-      {title && <h2 className="section__title container">{title}</h2>}
-
-      <div className={cn(cls.tabs, 'section__content')}>
-        <div className={cn(cls.labels, 'container')}>
-          <div className={cls.labelsContent}>
-            <div className={cls.scrollContainer}>
-              {tabs?.map((tab) => {
-                const isActive = selectedTab === tab.id;
-                return (
-                  <button
-                    className={cn(cls.label, {
-                      [cls.active]: isActive,
-                    })}
-                    onClick={() => handleTabChange(tab.id)}
-                    key={tab.id}
-                  >
-                    {tab.label}
-                  </button>
-                );
-              })}
-            </div>
+    <div className={cn(cls.tabs, 'section__content')}>
+      <div className={cn(cls.labels, 'container')}>
+        <div className={cls.labelsContent}>
+          <div className={cls.scrollContainer}>
+            {tabs?.map((tab) => {
+              const isActive = selectedTab === tab.id;
+              return (
+                <button
+                  className={cn(cls.label, {
+                    [cls.active]: isActive,
+                  })}
+                  onClick={() => handleTabChange(tab.id)}
+                  key={tab.id}
+                >
+                  {tab.label}
+                </button>
+              );
+            })}
           </div>
         </div>
-        <div className={cls.panes}>
-          <div className={cls.pane}>
-            <div className="grid grid__four-items products-tabs__items products-tabs__items--desktop container">
-              {tabContentState?.map((item) => {
-                return tabContent(item);
-              })}
-            </div>
-            {sliderContent && (
-              <div className="container products-tabs__items--mobile mobile-slider">
-                {sliderContent({ data: tabContentState })}
-              </div>
-            )}
+      </div>
+      <div className={cls.panes}>
+        <div className={cls.pane}>
+          <div className="grid grid__four-items  d-desktop container">
+            {tabContentState?.map((item) => {
+              return tabContent(item);
+            })}
           </div>
+          {sliderContent && (
+            <div className="container mobile-slider d-mobile">
+              {sliderContent({ data: tabContentState })}
+            </div>
+          )}
         </div>
       </div>
     </div>

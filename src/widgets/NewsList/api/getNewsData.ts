@@ -1,5 +1,6 @@
-import { TNews } from '@/entities/News';
 import { nanoid } from 'nanoid';
+
+import { TNews } from '@/entities/News';
 
 const data: TNews[] = [
   {

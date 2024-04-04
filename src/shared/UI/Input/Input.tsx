@@ -1,6 +1,5 @@
 'use client';
 
-import cn from 'classnames';
 import {
   ChangeEvent,
   InputHTMLAttributes,
@@ -9,10 +8,12 @@ import {
   useState,
 } from 'react';
 
+import cn from 'classnames';
+
+import { checkEmailValidation } from '@/shared/lib/utils/checkEmailValidation/checkEmailValidation';
 import SearchIcon from '@public/icons/icon__search.svg';
 
 import cls from './Input.module.scss';
-import { checkEmailValidation } from '@/shared/lib/utils/checkEmailValidation/checkEmailValidation';
 
 type HTMLInputProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,

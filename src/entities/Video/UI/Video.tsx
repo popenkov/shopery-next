@@ -1,6 +1,5 @@
 'use client';
 
-import cn from 'classnames';
 import React, {
   DetailedHTMLProps,
   FC,
@@ -10,6 +9,9 @@ import React, {
   useState,
 } from 'react';
 
+import cn from 'classnames';
+
+import { Text } from '@/shared';
 import PlayIcon from '@public/icons/icon__play-button.svg';
 
 import cls from './Video.module.scss';
@@ -55,7 +57,14 @@ export const Video: FC<{ data: Props }> = ({ data }) => {
         {!isVideoShown && (
           <div className={cls.videoText}>
             <p className={cls.videoSubtitle}>Video</p>
-            <h2 className={cls.videoTitle}>{title}</h2>
+            <Text
+              variant="heading_4"
+              align="center"
+              as="h2"
+              className={cls.videoTitle}
+            >
+              {title}
+            </Text>
             <button
               className={cls.videoPlayButton}
               onClick={handlePlayButtonClick}

@@ -1,5 +1,6 @@
-import Link from 'next/link';
 import { FC, memo } from 'react';
+
+import Link from 'next/link';
 
 import { PAGE_ROUTES } from '@/shared/constants/routes';
 import ChevronIcon from '@public/icons/icon__chevron-down.svg';

@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
-import { getVideoData } from '../api/getVideoData';
+
 import { Video } from '@/entities/Video';
+
+import { getVideoData } from '../api/getVideoData';
 
 export const MainVideo: FC = () => {
   const { video } = getVideoData();

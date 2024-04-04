@@ -1,8 +1,12 @@
-import { RoundButton } from '@/shared';
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
-import ArrowIcon from '@public/icons/icon__arrow.svg';
-import cls from './HeroNavigation.module.scss';
+
 import cn from 'classnames';
+
+import { RoundButton } from '@/shared';
+import ArrowIcon from '@public/icons/icon__arrow.svg';
+
+import cls from './HeroNavigation.module.scss';
+
 
 interface Props
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {

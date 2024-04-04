@@ -1,6 +1,7 @@
+import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+
 import Image from 'next/image';
 import Link from 'next/link';
-import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import { ProductInterface } from '@/entities/Product';
 import { StarRating } from '@/entities/StarRating';
@@ -36,7 +37,7 @@ export const ProductLarge: FC<ProductLargeProps> = ({ data }) => {
       <div className={cls.description}>
         <div>
           <Link className={cls.link} href={`/products/${path}`}>
-            <Text variant="heading_4" className={cls.title}>
+            <Text variant="body_s" className={cls.title}>
               {title}
             </Text>
           </Link>

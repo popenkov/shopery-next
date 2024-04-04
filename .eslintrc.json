@@ -22,10 +22,11 @@
         "pathGroups": [
           {
             "pattern": "@(react)",
-            "group": "external"
+            "group": "external",
+            "position": "before"
           },
           {
-            "pattern": "@src/**",
+            "pattern": "@/**",
             "group": "internal"
           }
         ],

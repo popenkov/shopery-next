@@ -1,7 +1,8 @@
 'use client';
 
-import cn from 'classnames';
 import React, { FC, useState } from 'react';
+
+import cn from 'classnames';
 
 import { ProductSearch } from '@/features/ProductsSearch';
 import { Logo } from '@/shared';

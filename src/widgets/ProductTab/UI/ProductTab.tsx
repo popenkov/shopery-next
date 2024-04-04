@@ -5,7 +5,7 @@ import React, { FC } from 'react';
 import { MobileSlider } from '@/entities/MobileSlider';
 import { ProductLarge } from '@/entities/Product';
 import { ProductInterface } from '@/entities/Product/model/interfaces/product.interface';
-import { Tabs } from '@/shared';
+import { Tabs, Text } from '@/shared';
 
 import { getProductTab } from '../api/getProductTabs';
 
@@ -13,7 +13,16 @@ export const ProductTab: FC = () => {
   const { productTabs } = getProductTab();
 
   return (
-    <div>
+    <div className="section section--green">
+      <Text
+        variant="heading_3"
+        weight="semibold"
+        align="center"
+        className="section__title container"
+      >
+        Introducing Our Products
+      </Text>
+
       <Tabs<ProductInterface>
         tabs={productTabs}
         tabContent={(item) => <ProductLarge data={item} key={item.id} />}

@@ -1,6 +1,7 @@
+import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode, Ref } from 'react';
+
 import cn from 'classnames';
 import Link, { LinkProps } from 'next/link';
-import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode, Ref } from 'react';
 
 import style from './AppLink.module.scss';
 

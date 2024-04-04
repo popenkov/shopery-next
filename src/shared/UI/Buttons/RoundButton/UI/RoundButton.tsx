@@ -1,4 +1,3 @@
-import cn from 'classnames';
 import {
   ComponentProps,
   ElementType,
@@ -7,6 +6,8 @@ import {
   forwardRef,
   memo,
 } from 'react';
+
+import cn from 'classnames';
 
 import style from './RoundButton.module.scss';
 
@@ -26,7 +27,7 @@ type Props<E extends ElementType = ElementType> = ButtonOwnProps<E> &
   Ref<HTMLButtonElement>;
 
 const ButtonElement = forwardRef<HTMLButtonElement, Props>((props, ref) => {
-  const { className, children, as, theme = 'primary', ...otherProps } = props;
+  const { className, children, as, theme = 'primary' } = props;
 
   const Element = as || DEFAULT_ELEMENT;
 
@@ -36,7 +37,6 @@ const ButtonElement = forwardRef<HTMLButtonElement, Props>((props, ref) => {
         [style[theme]]: true,
       })}
       ref={ref}
-      {...otherProps}
     >
       {children}
     </Element>

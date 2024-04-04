@@ -1,6 +1,7 @@
-import cn from 'classnames';
 import { memo } from 'react';
 import type { ComponentProps, ElementType, ReactNode } from 'react';
+
+import cn from 'classnames';
 
 import {
   TextAlign,

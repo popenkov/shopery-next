@@ -13,34 +13,4 @@
   @media screen and (max-width: $screen-ti) {
     padding-bottom: 116px;
   }
-
-  .swiper-pagination-bullets {
-    @include flex-center;
-
-    position: absolute;
-    bottom: 81px;
-    display: flex;
-    justify-content: center;
-
-    @media screen and (max-width: $screen-tl) {
-      bottom: 60px;
-    }
-  }
-
-  // stylelint-disable-next-line
-  .swiper-pagination-bullet {
-    @include box(8px);
-
-    width: 8px;
-    height: 8px;
-    background-color: var(--green-gray-200);
-    border-radius: 50%;
-    transition: all var(--transition);
-
-    &-active {
-      width: 16px;
-      background-color: var(--primary);
-      border-radius: 50px;
-    }
-  }
 }

@@ -7,12 +7,13 @@ import {
   useCallback,
   useState,
 } from 'react';
+
 import { redirect } from 'next/navigation';
 
 import { Button, Input } from '@/shared';
-
-import cls from './style.module.scss';
 import { getRouteCatalog } from '@/shared/constants/routes';
+
+import cls from './ProductsSearch.module.scss';
 interface Props
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 
