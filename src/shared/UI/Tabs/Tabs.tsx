@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import cn from 'classnames';
 
 import cls from './Tabs.module.scss';
-import { Text } from '..';
 
 interface SliderProps<T> {
   data: T[];

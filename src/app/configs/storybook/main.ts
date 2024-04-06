@@ -24,11 +24,14 @@ const config: StorybookConfig = {
   staticDirs: ['../../../../public'], // This loads images at localhost:6006/next.svg e.t.c.
   webpackFinal: async (config, { configType }) => {
     if (config.resolve) {
-      config.resolve.plugins = [
-        new TsconfigPathsPlugin({
-          extensions: config.resolve.extensions,
-        }),
-      ];
+      // @ts-expect-error
+      config.resolve.alias['@'] = path.resolve(__dirname, '../../../');
+      // @ts-expect-error
+      config.resolve.alias['@public'] = path.resolve(
+        __dirname,
+        '../../../../public'
+      );
+      return config;
     }
 
     if (config.module && config.module.rules) {
