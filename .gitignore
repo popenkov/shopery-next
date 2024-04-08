@@ -38,3 +38,7 @@ next-env.d.ts
 
 #examples
 /src/stories
+
+/api
+/json-server
+.env
