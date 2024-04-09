@@ -32,6 +32,7 @@ interface SelectProps
   > {
   options: Options<SelectOption>;
   onChange?: (value: string) => void;
+  menuIsOpen?: boolean;
 }
 
 const DropdownIndicator: ComponentType<
@@ -45,7 +46,7 @@ const DropdownIndicator: ComponentType<
 };
 
 export const AppSelect: FC<SelectProps> = (props) => {
-  const { options, onChange } = props;
+  const { options, onChange, menuIsOpen } = props;
   const [selectedOption, setSelectedOption] = useState<SelectOption | null>(
     null
   );
@@ -67,6 +68,7 @@ export const AppSelect: FC<SelectProps> = (props) => {
       isMulti={false}
       classNamePrefix="custom-select"
       className={cls.select}
+      menuIsOpen={menuIsOpen}
     />
   );
 };

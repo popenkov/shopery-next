@@ -21,6 +21,7 @@ export const BurgerButton: FC<Props> = ({ className, onClick }) => {
     <button
       className={cn(cls.button, className)}
       onClick={handleBurgerButtonClick}
+      data-testid="burger-button"
     >
       <span className={cls.buttonLines}></span>
     </button>
