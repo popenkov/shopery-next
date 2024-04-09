@@ -12,3 +12,6 @@ export * from './Dropdown';
 export * from './Accordion';
 export * from './BurgerButton';
 export * from './CategoriesButton';
+export * from './Pagination';
+export * from './FilterButton';
+export * from './TagCheckbox';

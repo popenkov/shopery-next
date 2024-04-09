@@ -10,12 +10,13 @@ interface StarRatingProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   value: number;
   maxValue?: number;
+  className?: string;
 }
 
 export const StarRating: FC<StarRatingProps> = memo(
-  ({ value, maxValue = 5 }) => {
+  ({ value, className, maxValue = 5 }) => {
     return (
-      <div className={cls.rating}>
+      <div className={cn(cls.rating, className)}>
         {new Array(maxValue).fill('*').map((_, index) => {
           return (
             <span

@@ -1,0 +1,17 @@
+@import '@/shared/styles/mixins/flexbox.scss';
+
+.itemsFound {
+  @include flex-center-vertical;
+
+  gap: 4px;
+  margin-right: 3px;
+}
+
+.itemsFoundValue {
+  color: var(--gray-900);
+  font-weight: 600;
+}
+
+.itemsFoundText {
+  color: var(--gray-600);
+}

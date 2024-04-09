@@ -1,6 +1,12 @@
 'use client';
 
-import { ChangeEvent, InputHTMLAttributes, memo, useRef } from 'react';
+import {
+  ChangeEvent,
+  InputHTMLAttributes,
+  ReactNode,
+  memo,
+  useRef,
+} from 'react';
 
 import cn from 'classnames';
 
@@ -16,6 +22,7 @@ type HTMLCheckboxProps = Omit<
 
 interface CheckboxProps extends HTMLCheckboxProps {
   className?: string;
+  children?: ReactNode;
   name: string;
   value: string | number;
   text?: string;
@@ -24,7 +31,8 @@ interface CheckboxProps extends HTMLCheckboxProps {
 }
 
 export const Checkbox = memo((props: CheckboxProps) => {
-  const { className, value, onChange, text, name, ...otherProps } = props;
+  const { className, value, onChange, text, name, children, ...otherProps } =
+    props;
   const ref = useRef<HTMLInputElement>(null);
 
   const handleCheckboxChange = (evt: ChangeEvent<HTMLInputElement>) => {
@@ -45,6 +53,7 @@ export const Checkbox = memo((props: CheckboxProps) => {
       <span className={cls.fakeInput}>
         <CheckIcon />
       </span>
+      {children && <span>{children}</span>}
       {text && <Text>{text}</Text>}
     </label>
   );

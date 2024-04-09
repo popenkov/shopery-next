@@ -1,0 +1,43 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/button-reset.scss';
+@import '@/shared/styles/mixins/text-styles.scss';
+
+.filterAccordion {
+  @include flex-column;
+
+  gap: 20px;
+}
+
+.checkbox {
+  padding: 10px 0 11px;
+
+  &:first-child {
+    padding-top: 21px;
+  }
+
+  &:last-child {
+    padding-bottom: 9px;
+  }
+
+  .checkbox {
+    gap: 9px;
+  }
+
+  .star-rating {
+    gap: 2px;
+  }
+  // stylelint-disable-next-line
+  .star-rating__star {
+    @include box(16px);
+  }
+}
+
+.tagsContainer {
+  @include flex-center-vertical;
+
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 12px !important;
+}

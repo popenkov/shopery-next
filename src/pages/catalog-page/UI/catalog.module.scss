@@ -1,0 +1,76 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+
+.catalog {
+  display: grid;
+  grid-template-areas: 'filter sort' 'filter result' 'filter pagination';
+  grid-template-columns: 312px 1fr;
+  gap: 26px 24px;
+  padding: 32px 0 82px;
+
+  @media screen and (max-width: $screen-tl) {
+    grid-template-areas: 'filter' 'sort' 'result' 'pagination' 'banner' 'saleItems';
+    grid-template-columns: 1fr;
+  }
+}
+
+.filter {
+  grid-area: filter;
+}
+
+.sorting {
+  grid-area: sort;
+  padding-top: 2px;
+}
+
+.items {
+  grid-area: result;
+}
+
+.itemsDesktop {
+  @media screen and (max-width: $screen-tl) {
+    display: none !important;
+  }
+}
+
+.itemsMobile {
+  display: none !important;
+
+  @media screen and (max-width: $screen-tl) {
+    display: grid !important;
+  }
+}
+
+.banner {
+  grid-area: banner;
+}
+.bannerMobile {
+  display: none;
+
+  @media screen and (max-width: $screen-tl) {
+    display: block;
+  }
+}
+
+.saleProducts {
+  @include flex-column;
+
+  gap: 10px;
+}
+.saleProductsMobile {
+  display: none;
+
+  @media screen and (max-width: $screen-tl) {
+    display: flex !important;
+    gap: 10px;
+  }
+}
+
+.pagination {
+  // todo moove to pagination
+  @include flex-center;
+
+  grid-area: pagination;
+  justify-content: center;
+  margin-top: 14px;
+}
