@@ -8,16 +8,16 @@ import icon__pie from '@public/icons/icon__pie.svg';
 import icon__salad from '@public/icons/icon__salad.svg';
 
 const categoryIcons = {
-  icon__apple: icon__apple,
-  icon__salad: icon__salad,
-  icon__fish: icon__fish,
-  icon__coffee: icon__coffee,
-  icon__ice_cream: icon__ice_cream,
-  icon__cupcake: icon__cupcake,
-  icon__pie: icon__pie,
-  icon__food: icon__food,
+    icon__apple: icon__apple,
+    icon__salad: icon__salad,
+    icon__fish: icon__fish,
+    icon__coffee: icon__coffee,
+    icon__ice_cream: icon__ice_cream,
+    icon__cupcake: icon__cupcake,
+    icon__pie: icon__pie,
+    icon__food: icon__food,
 };
 
 export const getCategoryIcon = (iconName: keyof typeof categoryIcons) => {
-  return categoryIcons[iconName];
+    return categoryIcons[iconName];
 };

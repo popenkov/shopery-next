@@ -6,21 +6,21 @@ import cls from './FilterButton.module.scss';
 import { Text } from '..';
 
 interface Props
-  extends DetailedHTMLProps<
-    HTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
-  > {
-  className?: string;
-  onClick: () => void;
+    extends DetailedHTMLProps<
+        HTMLAttributes<HTMLButtonElement>,
+        HTMLButtonElement
+    > {
+    className?: string;
+    onClick: () => void;
 }
 
 export const FilterButton: FC<Props> = ({ className, onClick }) => {
-  return (
-    <button className={cn(cls.button, className)} onClick={onClick}>
-      <Text variant="body_s" className={cls.text}>
-        Filter
-      </Text>
-      <FilterIcon className={cls.icon} />
-    </button>
-  );
+    return (
+        <button className={cn(cls.button, className)} onClick={onClick}>
+            <Text variant="body_s" className={cls.text}>
+                Filter
+            </Text>
+            <FilterIcon className={cls.icon} />
+        </button>
+    );
 };

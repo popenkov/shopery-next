@@ -12,18 +12,18 @@ import { ProductTab } from '@/widgets/ProductTab';
 import { Reviews } from '@/widgets/Reviews';
 
 export const HomePage: FC = () => {
-  return (
-    <>
-      <HeroSlider />
-      <Advantages />
-      <ProductTab />
-      <Banners />
-      <BestDeals />
-      <FeaturedProducts />
-      <Reviews />
-      <MainVideo />
-      <NewsList />
-      <NewsSubscription />
-    </>
-  );
+    return (
+        <>
+            <HeroSlider />
+            <Advantages />
+            <ProductTab />
+            <Banners />
+            <BestDeals />
+            <FeaturedProducts />
+            <Reviews />
+            <MainVideo />
+            <NewsList />
+            <NewsSubscription />
+        </>
+    );
 };

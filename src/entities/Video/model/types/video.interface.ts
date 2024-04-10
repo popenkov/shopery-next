@@ -1,5 +1,5 @@
 export type TVideo = {
-  background: string;
-  src: string;
-  title: string;
+    background: string;
+    src: string;
+    title: string;
 };

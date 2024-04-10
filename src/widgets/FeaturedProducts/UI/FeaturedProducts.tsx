@@ -9,28 +9,30 @@ import { ProductInterface } from '@/entities/Product/model/interfaces/product.in
 import { getFeaturedProducts } from '../api/getFeaturedProducts';
 
 interface Props
-  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
+    extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 
 export const FeaturedProducts: FC<Props> = () => {
-  const { products } = getFeaturedProducts();
+    const { products } = getFeaturedProducts();
 
-  return (
-    <div className="section">
-      <h2 className="section__title container">Featured Products</h2>
-      <div className="section__content--large">
-        <div className="grid grid__five-items d-desktop container">
-          {/*  продукты */}
-          {products.map((item) => {
-            return <Product data={item} key={item.id} />;
-          })}
+    return (
+        <div className="section">
+            <h2 className="section__title container">Featured Products</h2>
+            <div className="section__content--large">
+                <div className="grid grid__five-items d-desktop container">
+                    {/*  продукты */}
+                    {products.map((item) => {
+                        return <Product data={item} key={item.id} />;
+                    })}
+                </div>
+                <div className="container mobile-slider d-mobile">
+                    <MobileSlider<ProductInterface>
+                        data={products}
+                        render={(child: ProductInterface) => (
+                            <Product data={child} />
+                        )}
+                    />
+                </div>
+            </div>
         </div>
-        <div className="container mobile-slider d-mobile">
-          <MobileSlider<ProductInterface>
-            data={products}
-            render={(child: ProductInterface) => <Product data={child} />}
-          />
-        </div>
-      </div>
-    </div>
-  );
+    );
 };

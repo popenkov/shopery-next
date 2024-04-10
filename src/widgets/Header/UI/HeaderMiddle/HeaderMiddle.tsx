@@ -13,22 +13,28 @@ import { HeaderActions } from '../HeaderActions';
 import { MobileMenu } from '../MobileMenu';
 
 export const HeaderMiddle: FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleMenuToggle = () => {
-    setIsMenuOpen((prev) => !prev);
-  };
+    const handleMenuToggle = () => {
+        setIsMenuOpen((prev) => !prev);
+    };
 
-  return (
-    <div className={cn(cls.middle, 'container')}>
-      <BurgerButton className={cls.mobileBurger} onClick={handleMenuToggle} />
-      <Logo className={cls.logoDesktop} />
-      <Logo className={cls.logoMobile} size="small" />
-      <div className={cn(cls.search, cls.searchDesktop)}>
-        <ProductSearch />
-      </div>
-      <HeaderActions />
-      <MobileMenu isOpen={isMenuOpen} handleMenuToggle={handleMenuToggle} />
-    </div>
-  );
+    return (
+        <div className={cn(cls.middle, 'container')}>
+            <BurgerButton
+                className={cls.mobileBurger}
+                onClick={handleMenuToggle}
+            />
+            <Logo className={cls.logoDesktop} />
+            <Logo className={cls.logoMobile} size="small" />
+            <div className={cn(cls.search, cls.searchDesktop)}>
+                <ProductSearch />
+            </div>
+            <HeaderActions />
+            <MobileMenu
+                isOpen={isMenuOpen}
+                handleMenuToggle={handleMenuToggle}
+            />
+        </div>
+    );
 };

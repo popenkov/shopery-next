@@ -7,11 +7,11 @@ import { HeaderMiddle } from './HeaderMiddle';
 import { HeaderTop } from './HeaderTop';
 
 export const Header: FC = () => {
-  return (
-    <header className={cls.header}>
-      <HeaderTop />
-      <HeaderMiddle />
-      <Navigation />
-    </header>
-  );
+    return (
+        <header className={cls.header}>
+            <HeaderTop />
+            <HeaderMiddle />
+            <Navigation />
+        </header>
+    );
 };

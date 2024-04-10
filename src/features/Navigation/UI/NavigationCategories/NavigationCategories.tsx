@@ -13,43 +13,47 @@ import { getCategoryIcon } from './getCategoryIcon';
 import cls from './NavigationCategories.module.scss';
 
 interface Props
-  extends DetailedHTMLProps<
-    HTMLAttributes<HTMLUListElement>,
-    HTMLUListElement
-  > {
-  categories: HeaderCategory[];
+    extends DetailedHTMLProps<
+        HTMLAttributes<HTMLUListElement>,
+        HTMLUListElement
+    > {
+    categories: HeaderCategory[];
 }
 
 export const NavigationCategories: FC<Props> = ({ categories }) => {
-  const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
-  const handleMenuToggle = () => {
-    setIsOpen((prev) => !prev);
-    console.log(isOpen);
-  };
+    const handleMenuToggle = () => {
+        setIsOpen((prev) => !prev);
+        console.log(isOpen);
+    };
 
-  return (
-    <div className={cls.categories}>
-      <CategoriesButton onClick={handleMenuToggle} />
-      <ul
-        className={cn(cls.dropdown, {
-          [cls.open]: isOpen,
-        })}
-      >
-        {categories.map((link) => {
-          const Icon = getCategoryIcon(link.icon);
-          return (
-            <li key={link.path} className={cls.listItem}>
-              <Link className={cls.link} href={link.path}>
-                <Icon className={cls.linkIcon} />
-                <Text variant="body_s" weight="medium" as="span">
-                  {link.title}
-                </Text>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-  );
+    return (
+        <div className={cls.categories}>
+            <CategoriesButton onClick={handleMenuToggle} />
+            <ul
+                className={cn(cls.dropdown, {
+                    [cls.open]: isOpen,
+                })}
+            >
+                {categories.map((link) => {
+                    const Icon = getCategoryIcon(link.icon);
+                    return (
+                        <li key={link.path} className={cls.listItem}>
+                            <Link className={cls.link} href={link.path}>
+                                <Icon className={cls.linkIcon} />
+                                <Text
+                                    variant="body_s"
+                                    weight="medium"
+                                    as="span"
+                                >
+                                    {link.title}
+                                </Text>
+                            </Link>
+                        </li>
+                    );
+                })}
+            </ul>
+        </div>
+    );
 };

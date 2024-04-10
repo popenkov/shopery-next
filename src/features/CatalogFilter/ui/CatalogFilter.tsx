@@ -8,44 +8,44 @@ import { FilterButton } from '@/shared/UI';
 import { FilterControllers } from './FilterControllers';
 
 interface Props
-  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
+    extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 
 export const CatalogFilter: FC<Props> = () => {
-  const handleFilterButtonClick = () => {
-    console.log('click');
-  };
+    const handleFilterButtonClick = () => {
+        console.log('click');
+    };
 
-  return (
-    <div className={cls.filter}>
-      <FilterButton
-        onClick={handleFilterButtonClick}
-        className="aside-filter__filter-button"
-      />
+    return (
+        <div className={cls.filter}>
+            <FilterButton
+                onClick={handleFilterButtonClick}
+                className="aside-filter__filter-button"
+            />
 
-      <div className="js-filter-menu aside-filter__filter-menu-background">
-        <div className="catalog-page__filter-accordion filter-accordion aside-filter__filter-menu">
-          {/* filter header*/}
-          <div className={cn(cls.header, 'd-mobile--flex')}>
-            <p className="aside-filter__title">Filter</p>
-            <button className="aside-filter__close-button js-filter-close-button">
-              <svg className="aside-filter__close-icon">
-                <use href="img/svgSprite.svg#icon__close"></use>
-              </svg>
-            </button>
-          </div>
+            <div className="js-filter-menu aside-filter__filter-menu-background">
+                <div className="catalog-page__filter-accordion filter-accordion aside-filter__filter-menu">
+                    {/* filter header*/}
+                    <div className={cn(cls.header, 'd-mobile--flex')}>
+                        <p className="aside-filter__title">Filter</p>
+                        <button className="aside-filter__close-button js-filter-close-button">
+                            <svg className="aside-filter__close-icon">
+                                <use href="img/svgSprite.svg#icon__close"></use>
+                            </svg>
+                        </button>
+                    </div>
 
-          <FilterControllers />
+                    <FilterControllers />
 
-          <div className="aside-filter__footer">
-            <button className="button  button--fill button--large aside-filter__button js-apply-filter-button">
-              Apply filter
-            </button>
-          </div>
-        </div>
-      </div>
+                    <div className="aside-filter__footer">
+                        <button className="button  button--fill button--large aside-filter__button js-apply-filter-button">
+                            Apply filter
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-      {/* banner */}
-      {/* <div className="discount-banner aside-filter__banner aside-filter__banner--desktop">
+            {/* banner */}
+            {/* <div className="discount-banner aside-filter__banner aside-filter__banner--desktop">
         <img
           className="discount-banner__img"
           src="img/discount-banner--1.jpg"
@@ -67,8 +67,8 @@ export const CatalogFilter: FC<Props> = () => {
           </a>
         </div>
       </div> */}
-      {/* sale */}
-      {/* <div className="aside-filter__products aside-filter__products--desktop">
+            {/* sale */}
+            {/* <div className="aside-filter__products aside-filter__products--desktop">
         <p className="aside-filter__title">Sale Products</p>
         <div className="aside-filter__product-cards">
           <div className="product-xs">
@@ -253,6 +253,6 @@ export const CatalogFilter: FC<Props> = () => {
           </div>
         </div>
       </div> */}
-    </div>
-  );
+        </div>
+    );
 };

@@ -1,4 +1,4 @@
 export type TInstagramCard = {
-  img: string;
-  id: string;
+    img: string;
+    id: string;
 };

@@ -8,13 +8,13 @@ import { DropdownItem } from '@/shared/UI';
 import { CHANGE_CURRENCY_DATA } from '../../model/constants';
 
 export const CurrencySwitcher: FC = memo(() => {
-  const handleCurrencyChange = (item: DropdownItem) => {
-    console.log(item);
-  };
+    const handleCurrencyChange = (item: DropdownItem) => {
+        console.log(item);
+    };
 
-  return (
-    <Dropdown data={CHANGE_CURRENCY_DATA} onChange={handleCurrencyChange} />
-  );
+    return (
+        <Dropdown data={CHANGE_CURRENCY_DATA} onChange={handleCurrencyChange} />
+    );
 });
 
 CurrencySwitcher.displayName = 'CurrencySwitcher';

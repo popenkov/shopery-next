@@ -7,29 +7,29 @@ import cls from './InstagramPosts.module.scss';
 import { getInstagramPosts } from '../api/getInstagramPosts';
 
 interface Props
-  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
+    extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 
 export const InstagramPosts: FC<Props> = () => {
-  const { data: cards } = getInstagramPosts();
+    const { data: cards } = getInstagramPosts();
 
-  if (!cards) {
-    return null;
-  }
-  return (
-    <div className={cls.instagram}>
-      <Text
-        variant="body_xl"
-        weight="medium"
-        as="h2"
-        className={cls.instagramTitle}
-      >
-        Instagram
-      </Text>
-      <div className={cls.instagramCards}>
-        {cards.map((card) => {
-          return <InstagramCard {...card} key={card.id} />;
-        })}
-      </div>
-    </div>
-  );
+    if (!cards) {
+        return null;
+    }
+    return (
+        <div className={cls.instagram}>
+            <Text
+                variant="body_xl"
+                weight="medium"
+                as="h2"
+                className={cls.instagramTitle}
+            >
+                Instagram
+            </Text>
+            <div className={cls.instagramCards}>
+                {cards.map((card) => {
+                    return <InstagramCard {...card} key={card.id} />;
+                })}
+            </div>
+        </div>
+    );
 };
