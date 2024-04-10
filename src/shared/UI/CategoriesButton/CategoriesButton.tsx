@@ -2,6 +2,7 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import cn from 'classnames';
 
+
 import ChevronIcon from '@public/icons/icon__chevron-down.svg';
 
 import cls from './CategoriesButton.module.scss';

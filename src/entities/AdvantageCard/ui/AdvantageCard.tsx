@@ -2,6 +2,7 @@ import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import cn from 'classnames';
 
+
 import { Text } from '@/shared';
 
 import cls from './AdvantageCard.module.scss';

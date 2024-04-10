@@ -1,10 +1,13 @@
 'use client';
 
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+
 import cn from 'classnames';
 
-import cls from './CatalogFilter.module.scss';
+
 import { FilterButton } from '@/shared/UI';
+
+import cls from './CatalogFilter.module.scss';
 import { FilterControllers } from './FilterControllers';
 
 interface Props

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { StarRating } from '@/entities/StarRating';
 import {
     Accordion,
     Checkbox,
@@ -9,10 +10,8 @@ import {
     Text,
 } from '@/shared/UI';
 
-import { StarRating } from '@/entities/StarRating';
-import { getFilterData } from '../../api/getFilterData';
-
 import cls from './FilterControllers.module.scss';
+import { getFilterData } from '../../api/getFilterData';
 
 export const FilterControllers = () => {
     const { categories, priceRange, tags } = getFilterData();

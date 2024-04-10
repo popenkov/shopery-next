@@ -1,5 +1,7 @@
-import { AppSelect } from '@/shared';
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+
+import { AppSelect } from '@/shared';
+
 import cls from './CatalogSort.module.scss';
 import { CatalogSortAmount } from '../CatalogSortAmount';
 

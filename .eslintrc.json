@@ -2,6 +2,13 @@
     "root": true,
     "parser": "@typescript-eslint/parser",
     "plugins": ["@typescript-eslint"],
+    "settings": {
+      "import/resolver": {
+        "typescript": {
+          "alwaysTryTypes": true
+        }
+      }
+    },
     "rules": {
         "react/react-in-jsx-scope": "off",
         "react/jsx-uses-react": "off",
@@ -37,14 +44,20 @@
                     "caseInsensitive": true
                 }
             }
-        ]
+        ],
+        // feature-sliced/public-api
+        "import/no-internal-modules": "warn", // ~ 1,
+        // feature-sliced/layers-slices
+        "boundaries/element-types": "warn" // ~ 1,
     },
     "extends": [
         "next/core-web-vitals",
         "eslint:recommended",
         "next",
         "plugin:storybook/recommended",
-        "@feature-sliced",
-        "prettier"
+        "prettier",
+        "@feature-sliced/eslint-config/rules/import-order",
+        "@feature-sliced/eslint-config/rules/public-api",
+        "@feature-sliced/eslint-config/rules/layers-slices"
     ]
 }

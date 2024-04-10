@@ -1,11 +1,14 @@
+
 import { FC } from 'react';
+
 import cn from 'classnames';
 
 import { Breadcrumbs } from '@/entities/Breadcrumps';
-import { AppRouteNames } from '@/shared/interfaces/router';
-import cls from './catalog.module.scss';
-import { CatalogSort } from '@/features/CatalogSort';
 import { CatalogFilter } from '@/features/CatalogFilter';
+import { CatalogSort } from '@/features/CatalogSort';
+import { AppRouteNames } from '@/shared/interfaces/router';
+
+import cls from './catalog.module.scss';
 
 export const Catalog: FC = () => {
     const crumbs: AppRouteNames[] = [AppRouteNames.HOME, AppRouteNames.CATALOG];

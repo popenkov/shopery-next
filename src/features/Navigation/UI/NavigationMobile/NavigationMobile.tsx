@@ -2,6 +2,7 @@ import React from 'react';
 
 import Link from 'next/link';
 
+
 import { Accordion, Text } from '@/shared';
 
 import cls from './NavigationMobile.module.scss';

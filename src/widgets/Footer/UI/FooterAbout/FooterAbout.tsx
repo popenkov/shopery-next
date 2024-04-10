@@ -2,6 +2,7 @@ import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import Link from 'next/link';
 
+
 import { Text } from '@/shared';
 
 import cls from './FooterAbout.module.scss';

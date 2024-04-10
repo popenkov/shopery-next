@@ -4,6 +4,7 @@ import React, { FC, useCallback, useState } from 'react';
 
 import cn from 'classnames';
 
+
 import { Button, Input, Logo, Text } from '@/shared';
 
 import cls from './Subscription.module.scss';

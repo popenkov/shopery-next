@@ -1,7 +1,8 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
-import cls from './CatalogSortAmount.module.scss';
 import { Text } from '@/shared';
+
+import cls from './CatalogSortAmount.module.scss';
 
 interface Props
     extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}

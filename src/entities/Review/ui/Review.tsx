@@ -2,6 +2,7 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import Image from 'next/image';
 
+
 import { Text } from '@/shared';
 import QuoteIcon from '@public/icons/icon__quote.svg';
 

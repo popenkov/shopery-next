@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 
 import cn from 'classnames';
 
+
 import { InstagramPosts } from '@/features/InstagramPosts';
 
 import cls from './Footer.module.scss';

@@ -11,6 +11,7 @@ import React, {
 
 import cn from 'classnames';
 
+
 import { Text } from '@/shared';
 import PlayIcon from '@public/icons/icon__play-button.svg';
 

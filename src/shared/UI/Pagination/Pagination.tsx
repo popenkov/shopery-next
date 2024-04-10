@@ -1,8 +1,11 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+
 import cn from 'classnames';
 
-import cls from './Pagination.module.scss';
+
 import { DOTS, usePagination } from '@/shared/lib/hooks/usePagination';
+
+import cls from './Pagination.module.scss';
 
 interface Props
     extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {

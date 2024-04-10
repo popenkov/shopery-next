@@ -10,6 +10,7 @@ import {
 
 import cn from 'classnames';
 
+
 import CheckIcon from '@public/icons/icon__check.svg';
 
 import cls from './Checkbox.module.scss';

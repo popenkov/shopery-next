@@ -10,6 +10,7 @@ import {
 
 import cn from 'classnames';
 
+
 import { checkEmailValidation } from '@/shared/lib/utils/checkEmailValidation/checkEmailValidation';
 import SearchIcon from '@public/icons/icon__search.svg';
 

@@ -2,6 +2,7 @@ import { DetailedHTMLProps, FC, HTMLAttributes, memo } from 'react';
 
 import cn from 'classnames';
 
+
 import { Text } from '@/shared/UI';
 import MapPinIcon from '@public/icons/icon__map-pin.svg';
 

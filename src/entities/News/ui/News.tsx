@@ -2,6 +2,7 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import Image from 'next/image';
 
+
 import { AppLink, Text } from '@/shared';
 import ArrowIcon from '@public/icons/icon__arrow.svg';
 

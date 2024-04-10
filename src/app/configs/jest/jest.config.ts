@@ -3,6 +3,7 @@
  * https://jestjs.io/docs/configuration
  */
 import path from 'path';
+
 import type { Config } from 'jest';
 
 const config: Config = {

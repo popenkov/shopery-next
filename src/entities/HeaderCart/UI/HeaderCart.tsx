@@ -2,6 +2,7 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import Link from 'next/link';
 
+
 import { Text } from '@/shared';
 import { getFormattedPrice } from '@/shared/lib/utils/getFormattedPrice';
 import CartIcon from '@public/icons/icon__cart.svg';

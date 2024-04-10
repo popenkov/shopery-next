@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 
 import cn from 'classnames';
 
+
 import cls from './Tabs.module.scss';
 
 interface SliderProps<T> {

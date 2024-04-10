@@ -2,6 +2,7 @@ import { DetailedHTMLProps, FC, HTMLAttributes, memo } from 'react';
 
 import Image from 'next/image';
 
+
 interface Props
     extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
     size?: 'small' | 'default';

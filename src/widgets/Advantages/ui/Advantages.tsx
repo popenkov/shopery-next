@@ -2,6 +2,7 @@ import React from 'react';
 
 import cn from 'classnames';
 
+
 import { AdvantageCard } from '@/entities/AdvantageCard';
 
 import cls from './Advantages.module.scss';

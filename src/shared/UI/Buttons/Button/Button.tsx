@@ -2,6 +2,7 @@ import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode, Ref } from 'react';
 
 import cn from 'classnames';
 
+
 import style from './Button.module.scss';
 
 type ButtonTheme = 'primary' | 'ghost' | 'white' | 'border' | 'gray' | 'text';

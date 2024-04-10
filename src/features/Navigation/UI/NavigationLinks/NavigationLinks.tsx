@@ -2,6 +2,7 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import Link from 'next/link';
 
+
 import ChevronIcon from '@public/icons/icon__chevron-down.svg';
 
 import cls from './NavigationLinks.module.scss';

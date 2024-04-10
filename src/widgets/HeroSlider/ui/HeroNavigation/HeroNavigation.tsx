@@ -2,6 +2,7 @@ import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import cn from 'classnames';
 
+
 import { RoundButton } from '@/shared';
 import ArrowIcon from '@public/icons/icon__arrow.svg';
 
