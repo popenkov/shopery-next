@@ -40,6 +40,7 @@ export const AppLink: FC<AppLinkProps> = (props) => {
       {...otherProps}
     >
       {children}
+      <h1> test</h1>
     </Link>
   );
 };
