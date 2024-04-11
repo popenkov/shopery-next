@@ -19,7 +19,7 @@ const config: StorybookConfig = {
         autodocs: 'tag',
     },
 
-    staticDirs: ['../../../../public'], // This loads images at localhost:6006/next.svg e.t.c.
+    staticDirs: ['../../../../public'], // This loads images at localhost:6006/next.svg
     webpackFinal: async (config) => {
         if (config.resolve) {
             // @ts-expect-error
