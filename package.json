@@ -23,7 +23,9 @@
         "test:ui:report": "npm run test:ui:json && npm run test:ui:html",
         "test:ui:json": "node scripts/generate-visual-json-report.js",
         "test:ui:html": "reg-cli --from .loki/report.json --report .loki/report.html",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "depcruise": "npx depcruise src --include-only \"^src\" --output-type dot | dot -T svg > dependency-graph.svg",
+        "depcruise:win": "npx depcruise src --include-only \"^src\" --output-type dot | cmd /c path C:/Program Files/Graphviz/bin/dot.exe -T svg > dependency-graph.svg"
     },
     "dependencies": {
         "@storybook/react": "7.6.17",
@@ -79,6 +81,7 @@
         "@types/react": "18",
         "@types/react-dom": "18",
         "babel-jest": "^29.7.0",
+        "dependency-cruiser": "^16.3.0",
         "eslint": "8.56.0",
         "eslint-config-next": "14.1.0",
         "eslint-config-prettier": "^9.1.0",
