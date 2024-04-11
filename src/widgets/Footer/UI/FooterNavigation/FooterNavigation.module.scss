@@ -2,8 +2,8 @@
 @import '@/shared/styles/mixins/flexbox.scss';
 
 .navigation {
-  grid-area: navigation;
   display: flex;
+  grid-area: navigation;
   gap: 78px;
 
   @media screen and (max-width: $screen-tl) {
@@ -48,8 +48,8 @@
 
 .navigationLink {
   color: var(--green-gray-500);
-  transition: all var(--transition);
   text-transform: capitalize;
+  transition: all var(--transition);
 
   @media (hover: hover) {
     &:hover {

@@ -9,7 +9,6 @@ import {
 
 import cn from 'classnames';
 
-
 import style from './RoundButton.module.scss';
 
 export type RoundButtonTheme = 'primary' | 'primary_inversed' | 'ghost';
@@ -43,5 +42,7 @@ const ButtonElement = forwardRef<HTMLButtonElement, Props>((props, ref) => {
         </Element>
     );
 });
+
+ButtonElement.displayName = 'ButtonElement';
 
 export const RoundButton = memo(ButtonElement);

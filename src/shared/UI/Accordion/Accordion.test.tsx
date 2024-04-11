@@ -2,7 +2,6 @@ import React from 'react';
 
 import { render, fireEvent, waitFor } from '@testing-library/react';
 
-
 import { Accordion } from './Accordion';
 
 describe('Accordion', () => {
@@ -39,7 +38,7 @@ describe('Accordion', () => {
     });
 
     it('render a border when noBorder prop is false', () => {
-        const { getByText, queryByText, container } = render(
+        const { getByText } = render(
             <Accordion title="Test Title" noBorder>
                 <p>Test Content</p>
             </Accordion>,

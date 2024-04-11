@@ -44,6 +44,7 @@
 .banner {
   grid-area: banner;
 }
+
 .bannerMobile {
   display: none;
 
@@ -57,6 +58,7 @@
 
   gap: 10px;
 }
+
 .saleProductsMobile {
   display: none;
 
@@ -67,9 +69,8 @@
 }
 
 .pagination {
-  // todo moove to pagination
+  // todo move to pagination
   @include flex-center;
-
   grid-area: pagination;
   justify-content: center;
   margin-top: 14px;

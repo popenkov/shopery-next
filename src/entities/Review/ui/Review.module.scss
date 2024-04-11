@@ -44,8 +44,9 @@
   }
 
   .photoContainer {
-    position: relative;
     @include box(64px);
+
+    position: relative;
   }
 
   .photo {

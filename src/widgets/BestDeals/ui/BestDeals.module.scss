@@ -4,8 +4,6 @@
 @import '@/shared/styles/mixins/text-styles.scss';
 
 .bgContainer {
-  $block-name: &; // #{$block-name}__element
-
   padding: 100px 0;
   background: url('/images/deals-bg-left.png') no-repeat 10% center,
     url('/images/deals-bg-right.png') no-repeat 93% bottom;

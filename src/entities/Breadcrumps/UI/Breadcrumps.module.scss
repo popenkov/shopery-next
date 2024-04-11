@@ -33,19 +33,6 @@
   color: var(--gray-400);
 }
 
-.item {
-  @include flex-center-vertical;
-
-  gap: 9px;
-  list-style: none;
-
-  &:hover {
-    .link {
-      color: var(--primary);
-    }
-  }
-}
-
 .link {
   @include flex-center-vertical;
 
@@ -59,6 +46,21 @@
     pointer-events: none;
   }
 }
+
+
+.item {
+  @include flex-center-vertical;
+
+  gap: 9px;
+  list-style: none;
+
+  &:hover {
+    .link {
+      color: var(--primary);
+    }
+  }
+}
+
 
 .chevron {
   @include box(12px);

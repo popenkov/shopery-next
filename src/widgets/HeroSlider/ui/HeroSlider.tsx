@@ -1,23 +1,17 @@
 'use client';
 
-import React, {
-    DetailedHTMLProps,
-    FC,
-    HTMLAttributes,
-    useRef,
-    useState,
-} from 'react';
+import React, { DetailedHTMLProps, FC, HTMLAttributes, useRef } from 'react';
 
 import cn from 'classnames';
 import type { Swiper as SwiperType } from 'swiper';
-import { Navigation, Pagination, EffectFade, Autoplay } from 'swiper/modules';
+import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import { HeroSlide } from '@/entities/HeroSlide';
 import 'swiper/css';
+import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/effect-fade';
-import { HeroSlide } from '@/entities/HeroSlide';
 
 import { HeroNavigation } from './HeroNavigation';
 import cls from './HeroSlider.module.scss';
@@ -53,7 +47,6 @@ interface Props
 
 export const HeroSlider: FC<Props> = () => {
     const { data } = getHeroSliderData();
-    const [swiper, setSwiper] = useState<SwiperType | null>(null);
     const buttonPrevRef = useRef<HTMLButtonElement | null>(null);
     const buttonNextRef = useRef<HTMLButtonElement | null>(null);
     const fractionRef = useRef<HTMLDivElement | null>(null);
@@ -81,7 +74,6 @@ export const HeroSlider: FC<Props> = () => {
                     el: fractionRef.current,
                     clickable: true,
                 }}
-                onSwiper={setSwiper}
                 onInit={(swiper: SwiperType) => {
                     onBeforeInit(
                         swiper,

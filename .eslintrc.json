@@ -1,15 +1,22 @@
 {
     "root": true,
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest": true
+    },
     "parser": "@typescript-eslint/parser",
-    "plugins": ["@typescript-eslint"],
+    "plugins": ["@typescript-eslint", "unused-imports"],
     "settings": {
-      "import/resolver": {
-        "typescript": {
-          "alwaysTryTypes": true
+        "import/resolver": {
+            "typescript": {
+                "alwaysTryTypes": true
+            }
         }
-      }
     },
     "rules": {
+        "no-undef": "off",
+        "unused-imports/no-unused-imports": "error",
         "react/react-in-jsx-scope": "off",
         "react/jsx-uses-react": "off",
         "no-unused-vars": "off",

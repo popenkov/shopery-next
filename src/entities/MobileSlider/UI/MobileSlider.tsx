@@ -2,7 +2,6 @@
 
 import {
     DetailedHTMLProps,
-    FC,
     HTMLAttributes,
     PropsWithChildren,
 } from 'react';

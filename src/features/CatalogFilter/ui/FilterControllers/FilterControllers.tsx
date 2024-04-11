@@ -28,6 +28,7 @@ export const FilterControllers = () => {
                 {categories?.map((category) => {
                     return (
                         <Radio
+                            key={category.value}
                             value={category.value}
                             name="category"
                             text={category.title}

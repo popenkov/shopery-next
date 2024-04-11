@@ -28,7 +28,7 @@
   .star-rating {
     gap: 2px;
   }
-  // stylelint-disable-next-line
+  
   .star-rating__star {
     @include box(16px);
   }

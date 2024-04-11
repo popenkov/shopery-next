@@ -64,15 +64,7 @@
     display: none;
   }
 
-  &:disabled {
-    background-color: var(--gray-50);
-    border-color: var(--gray-50);
-    pointer-events: none;
-
-    .icon {
-      color: var(--gray-300);
-    }
-  }
+  
 }
 
 .pagePrev .icon {
@@ -82,3 +74,14 @@
 .pageNext .icon {
   transform: rotate(-90deg);
 }
+
+.pagePrev:disabled,
+.pageNext:disabled {
+    background-color: var(--gray-50);
+    border-color: var(--gray-50);
+    pointer-events: none;
+
+    .icon {
+      color: var(--gray-300);
+    }
+  }

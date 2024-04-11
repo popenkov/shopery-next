@@ -2,8 +2,6 @@ import path from 'path';
 
 import type { StorybookConfig } from '@storybook/nextjs';
 
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
-
 const config: StorybookConfig = {
     stories: ['../../../**/*.stories.@(js|jsx|ts|tsx)'],
     addons: [
@@ -22,7 +20,7 @@ const config: StorybookConfig = {
     },
 
     staticDirs: ['../../../../public'], // This loads images at localhost:6006/next.svg e.t.c.
-    webpackFinal: async (config, { configType }) => {
+    webpackFinal: async (config) => {
         if (config.resolve) {
             // @ts-expect-error
             config.resolve.alias['@'] = path.resolve(__dirname, '../../../');
