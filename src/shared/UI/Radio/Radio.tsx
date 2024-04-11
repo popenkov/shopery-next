@@ -1,7 +1,8 @@
 'use client';
 
-import cn from 'classnames';
 import { ChangeEvent, InputHTMLAttributes, memo, useRef } from 'react';
+
+import cn from 'classnames';
 
 import cls from './Radio.module.scss';
 

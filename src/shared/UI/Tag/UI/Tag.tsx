@@ -1,5 +1,6 @@
-import cn from 'classnames';
 import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode, memo } from 'react';
+
+import cn from 'classnames';
 
 import cls from './Tag.module.scss';
 

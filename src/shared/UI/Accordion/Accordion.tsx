@@ -1,13 +1,14 @@
 'use client';
-import cn from 'classnames';
 import { FC, ReactNode, useState } from 'react';
+
+import cn from 'classnames';
 
 import ChevronIcon from '@public/icons/icon__chevron-down.svg';
 
 import cls from './Accordion.module.scss';
 
 interface Props {
-  title: string;
+  title: ReactNode;
   children: ReactNode;
   noBorder?: boolean;
 }

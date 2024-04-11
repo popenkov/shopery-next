@@ -6,14 +6,14 @@
   @include flex-center-sb;
 
   gap: 20px;
-  padding: 24px 0;
+  padding: 24px 0 22px;
 
   @media screen and (max-width: $screen-tl) {
     justify-content: flex-start;
   }
 }
 
-.mobileBurger {
+button.mobileBurger {
   display: none;
 
   @media screen and (max-width: $screen-tl) {

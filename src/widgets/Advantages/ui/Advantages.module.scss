@@ -1,0 +1,29 @@
+@import '@/shared/styles/_breakpoints';
+
+.advantages {
+  position: relative;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  overflow: hidden;
+  background-color: var(--back-primary);
+  border-radius: 8px;
+  outline: 1px solid rgb(230 230 230);
+  box-shadow: 0 16px 48px 0 rgb(14 107 21 / 8%);
+
+  @media screen and (max-width: $screen-tl) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: $screen-ti) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: $screen-t) {
+    grid-template-columns: 1fr;
+  }
+}

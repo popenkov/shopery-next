@@ -1,4 +1,5 @@
 import { nanoid } from 'nanoid';
+
 import { THeroSlide } from '@/entities/HeroSlide';
 
 const data: THeroSlide[] = [

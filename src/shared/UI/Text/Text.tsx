@@ -1,6 +1,7 @@
-import cn from 'classnames';
 import { memo } from 'react';
 import type { ComponentProps, ElementType, ReactNode } from 'react';
+
+import cn from 'classnames';
 
 import {
   TextAlign,
@@ -51,9 +52,7 @@ const T = <E extends ElementType = typeof DEFAULT_ELEMENT>(
   };
 
   return (
-    <Element className={cn(cls.Text, className, mods)} {...props}>
-      {children}
-    </Element>
+    <Element className={cn(cls.text, className, mods)}>{children}</Element>
   );
 };
 

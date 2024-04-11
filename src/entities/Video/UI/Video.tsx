@@ -1,6 +1,5 @@
 'use client';
 
-import cn from 'classnames';
 import React, {
   DetailedHTMLProps,
   FC,
@@ -10,19 +9,24 @@ import React, {
   useState,
 } from 'react';
 
+import cn from 'classnames';
+
+import { Text } from '@/shared';
 import PlayIcon from '@public/icons/icon__play-button.svg';
 
 import cls from './Video.module.scss';
+import { TVideo } from '..';
 
-interface VideoProps
-  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  src: string;
-  background: string;
-  title: string;
+interface Props
+  extends Omit<
+      DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
+      'title'
+    >,
+    TVideo {
   hasOverlay?: boolean;
 }
 
-export const Video: FC<{ data: VideoProps }> = ({ data }) => {
+export const Video: FC<{ data: Props }> = ({ data }) => {
   const { src, background, title, hasOverlay = true } = data;
 
   const containerRef = useRef<HTMLDivElement>(null);
@@ -48,12 +52,19 @@ export const Video: FC<{ data: VideoProps }> = ({ data }) => {
         className={cn(cls.videoPreview, {
           [cls.withOverlay]: hasOverlay && !isVideoShown,
         })}
-        style={{ backgroundImage: `url("${background}")` }}
+        style={{ backgroundImage: `url("/images/${background}")` }}
       >
         {!isVideoShown && (
           <div className={cls.videoText}>
             <p className={cls.videoSubtitle}>Video</p>
-            <h2 className={cls.videoTitle}>{title}</h2>
+            <Text
+              variant="heading_4"
+              align="center"
+              as="h2"
+              className={cls.videoTitle}
+            >
+              {title}
+            </Text>
             <button
               className={cls.videoPlayButton}
               onClick={handlePlayButtonClick}

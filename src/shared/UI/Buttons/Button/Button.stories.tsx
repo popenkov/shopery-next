@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button, ButtonTheme, ButtonSize } from './Button';
+import { Button } from './Button';
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
   title: 'shared/Button',
   component: Button,
@@ -11,60 +10,64 @@ const meta = {
   },
   tags: ['autodocs'],
   argTypes: {
-    backgroundColor: { control: 'color' },
+    theme: ['primary', 'ghost', 'white', 'border', 'gray', 'text'],
+    size: ['small', 'medium', 'large'],
+    children: {
+      controls: 'Test',
+    },
   },
 } satisfies Meta<typeof Button>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Button>;
 
 export const PrimarySmall: Story = {
   args: {
     children: 'Text',
-    theme: ButtonTheme.PRIMARY,
-    size: ButtonSize.SMALL,
+    theme: 'primary',
+    size: 'small',
   },
 };
 
 export const Primary: Story = {
   args: {
     children: 'Text',
-    theme: ButtonTheme.PRIMARY,
+    theme: 'primary',
   },
 };
 
 export const PrimaryLarge: Story = {
   args: {
     children: 'Text',
-    theme: ButtonTheme.PRIMARY,
-    size: ButtonSize.LARGE,
+    theme: 'primary',
+    size: 'large',
   },
 };
 
 export const Ghost: Story = {
   args: {
     children: 'Text',
-    theme: ButtonTheme.GHOST,
+    theme: 'ghost',
   },
 };
 
 export const White: Story = {
   args: {
     children: 'Text',
-    theme: ButtonTheme.WHITE,
+    theme: 'white',
   },
 };
 
 export const Border: Story = {
   args: {
     children: 'Text',
-    theme: ButtonTheme.BORDER,
+    theme: 'border',
   },
 };
 
 export const Gray: Story = {
   args: {
     children: 'Text',
-    theme: ButtonTheme.GRAY,
+    theme: 'gray',
   },
 };

@@ -1,8 +1,9 @@
 'use client';
 
+import React, { DetailedHTMLProps, FC, HTMLAttributes, useState } from 'react';
+
 import cn from 'classnames';
 import Link from 'next/link';
-import React, { DetailedHTMLProps, FC, HTMLAttributes, useState } from 'react';
 
 import { HeaderCategory } from '@/entities/NavigationCategory';
 import { Text } from '@/shared';

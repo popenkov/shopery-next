@@ -10,8 +10,8 @@
     "lint:fix": "eslint -c ./.eslintrc.json \"./**/*.{js,jsx,ts,tsx}\" --fix",
     "stylelint": "stylelint \"**/*.scss\" --fix",
     "debug": "NODE_OPTIONS='--inspect' next dev",
-    "storybook": "storybook dev -p 6006 -c ./config/storybook",
-    "storybook:build": "build-storybook -c ./config/storybook",
+    "storybook": "storybook dev -p 6006 -c ./src/app/configs/storybook --debug-webpack",
+    "storybook:build": "build-storybook -c ./src/app/configs/storybook",
     "build-storybook": "storybook build "
   },
   "dependencies": {
@@ -42,6 +42,7 @@
     "@storybook/addon-interactions": "7.6.17",
     "@storybook/addon-links": "7.6.17",
     "@storybook/addon-onboarding": "1.0.11",
+    "@storybook/addon-styling-webpack": "^1.0.0",
     "@storybook/blocks": "7.6.17",
     "@storybook/nextjs": "7.6.17",
     "@storybook/test": "7.6.17",
@@ -55,6 +56,7 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-storybook": "0.8.0",
     "nanoid": "^5.0.6",
+    "tsconfig-paths-webpack-plugin": "^4.1.0",
     "typescript": "5"
   },
   "browserslist": {

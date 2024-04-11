@@ -1,11 +1,10 @@
-import Image from 'next/image';
 import { DetailedHTMLProps, FC, HTMLAttributes, memo } from 'react';
 
-import { LogoSize } from '.';
+import Image from 'next/image';
 
 interface Props
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  size?: LogoSize;
+  size?: 'small' | 'default';
   className?: string;
 }
 

@@ -1,4 +1,5 @@
 import { nanoid } from 'nanoid';
+
 import { ProductInterface } from '@/entities/Product';
 import { TabItem } from '@/shared/UI';
 

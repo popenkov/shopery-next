@@ -1,6 +1,9 @@
 @import '@/shared/styles/mixins/text-styles.scss';
+@import '@/shared/styles/mixins/flexbox.scss';
 
 .link {
+  @include flex-center-vertical;
+
   text-decoration: none;
   border: none;
   border-radius: 43px;
@@ -81,5 +84,18 @@
     @include body-m(600);
 
     padding: 15px 40px;
+  }
+
+  &.text {
+    padding: 0;
+    color: var(--primary);
+    text-decoration: none;
+    transition: color var(--transition);
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--hard-primary);
+      }
+    }
   }
 }

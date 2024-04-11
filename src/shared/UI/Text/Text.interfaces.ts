@@ -7,6 +7,7 @@ export type TextWeight = 'light' | 'regular' | 'medium' | 'semibold' | 'bold';
 export type TextVariant =
   | 'search-field'
   | 'display_1'
+  | 'heading_1'
   | 'heading_2'
   | 'heading_3'
   | 'heading_4'

@@ -1,5 +1,6 @@
-import cn from 'classnames';
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+
+import cn from 'classnames';
 
 import cls from './BurgerButton.module.scss';
 

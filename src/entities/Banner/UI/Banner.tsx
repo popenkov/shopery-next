@@ -1,8 +1,9 @@
-import cn from 'classnames';
-import Link from 'next/link';
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
-import { AppLink, Button } from '@/shared';
+import cn from 'classnames';
+import Link from 'next/link';
+
+import { Button, Text } from '@/shared';
 import ArrowIcon from '@public/icons/icon__arrow.svg';
 
 import cls from './Banner.module.scss';
@@ -16,10 +17,22 @@ interface BannerProps
     TBanner {}
 
 export const Banner: FC<BannerProps> = (props) => {
-  const { background, subtitle, title, text, textPosition = 'left' } = props;
+  const {
+    background,
+    variant,
+    subtitle,
+    title,
+    text,
+    textPosition = 'left',
+  } = props;
+
+  const variantMods = variant.map((variant) => {
+    return cls[variant];
+  });
+
   return (
     <Link
-      className={cn(cls.banner, {
+      className={cn(cls.banner, variantMods, {
         [cls.right]: textPosition === 'right',
       })}
       href="#"
@@ -30,8 +43,17 @@ export const Banner: FC<BannerProps> = (props) => {
       ></span>
       <span className={cls.content}>
         <p className={cls.subtitle}>{subtitle}</p>
-        <h3 className={cls.title}>{title}</h3>
-        <p className={cls.text}>{text}</p>
+        <Text
+          variant="heading_5"
+          weight="semibold"
+          className={cls.title}
+          as="h3"
+        >
+          {title}
+        </Text>
+        <Text variant="body_s" className={cls.text}>
+          {text}
+        </Text>
         <span className={cls.buttonContainer}>
           <Button theme="white" className={cls.button}>
             <span className="icon-button__text">Shop Now</span>

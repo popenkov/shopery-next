@@ -1,6 +1,7 @@
+import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+
 import Image from 'next/image';
 import Link from 'next/link';
-import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import { ProductInterface } from '@/entities/Product';
 import { StarRating } from '@/entities/StarRating';

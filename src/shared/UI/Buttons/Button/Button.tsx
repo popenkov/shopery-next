@@ -1,5 +1,6 @@
-import cn from 'classnames';
 import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode, Ref } from 'react';
+
+import cn from 'classnames';
 
 import style from './Button.module.scss';
 
@@ -30,10 +31,14 @@ export const Button: FC<AppButtonProps> = (props) => {
   } = props;
   return (
     <button
-      className={cn(style.button, className, {
-        [style[theme]]: true,
-        [style[size]]: true,
-      })}
+      className={cn(
+        style.button,
+        {
+          [style[theme]]: true,
+          [style[size]]: true,
+        },
+        className
+      )}
       ref={ref}
       {...otherProps}
     >

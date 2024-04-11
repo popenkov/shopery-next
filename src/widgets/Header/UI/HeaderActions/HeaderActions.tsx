@@ -1,5 +1,6 @@
-import Link from 'next/link';
 import { FC } from 'react';
+
+import Link from 'next/link';
 
 import { HeaderCart } from '@/entities/HeaderCart';
 import LikeIcon from '@public/icons/icon__heart.svg';

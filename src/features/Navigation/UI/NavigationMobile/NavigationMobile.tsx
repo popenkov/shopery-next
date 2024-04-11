@@ -1,7 +1,8 @@
-import Link from 'next/link';
 import React from 'react';
 
-import { Accordion } from '@/shared';
+import Link from 'next/link';
+
+import { Accordion, Text } from '@/shared';
 
 import cls from './NavigationMobile.module.scss';
 import { getNavigationData } from '../../api/getNavigationData';
@@ -16,7 +17,14 @@ export const NavigationMobile = () => {
     <div className={cls.navigation}>
       {navigation.map((link) => {
         return (
-          <Accordion title={link.title!} key={link.path}>
+          <Accordion
+            title={
+              <Text variant="body_l" weight="medium">
+                {link.title}
+              </Text>
+            }
+            key={link.path}
+          >
             {link?.items?.map((sublink) => {
               return (
                 <li key={sublink.path} className={cls.navigationMenuItem}>

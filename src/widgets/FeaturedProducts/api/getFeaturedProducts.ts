@@ -1,4 +1,5 @@
 import { nanoid } from 'nanoid';
+
 import { ProductInterface } from '@/entities/Product';
 
 const data: ProductInterface[] = [

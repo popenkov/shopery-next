@@ -2,9 +2,10 @@
 
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
-import { Review } from '@/entities/Review';
 import { MobileSlider } from '@/entities/MobileSlider';
+import { Review } from '@/entities/Review';
 import { TPreview } from '@/entities/Review/model/interfaces/Review.interface';
+
 import { getReviewsData } from '../api/getReviewsData';
 
 interface Props

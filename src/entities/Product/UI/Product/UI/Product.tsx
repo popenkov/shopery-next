@@ -1,6 +1,7 @@
+import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+
 import Image from 'next/image';
 import Link from 'next/link';
-import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import { ProductInterface } from '@/entities/Product';
 import { StarRating } from '@/entities/StarRating';
@@ -12,12 +13,12 @@ import LikeIcon from '@public/icons/icon__heart-lined.svg';
 
 import cls from './Product.module.scss';
 
-interface ProductProps
+interface Props
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   data: ProductInterface;
 }
 
-export const Product: FC<ProductProps> = ({ data }) => {
+export const Product: FC<Props> = ({ data }) => {
   const { img, title, path, price, priceOld, rating } = data;
 
   return (
@@ -36,7 +37,7 @@ export const Product: FC<ProductProps> = ({ data }) => {
       <div className={cls.description}>
         <div>
           <Link className={cls.link} href={`/products/${path}`}>
-            <Text variant="heading_4" className={cls.title}>
+            <Text variant="body_s" className={cls.title}>
               {title}
             </Text>
           </Link>

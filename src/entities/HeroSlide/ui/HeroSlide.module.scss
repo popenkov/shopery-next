@@ -52,16 +52,8 @@
 }
 
 .title {
-  // todo
-  // @include heading-1(600);
-
   margin: 0;
   color: var(--green-gray-900);
-
-  @media screen and (max-width: $screen-tl) {
-    // todo
-    // @include heading-3(600);
-  }
 }
 
 .note + .title {
@@ -69,23 +61,15 @@
 }
 
 .text {
-  // todo
-  // @include body-large;
-
   margin: 0;
   color: var(--gray-500);
-
-  @media screen and (max-width: $screen-tl) {
-    // @include body-medium;
-  }
 }
 
 .title + .text {
   margin-top: 20px;
 }
 
-// stylelint-disable-next-line
-.button.button--large {
+.link {
   @include flex-center-vertical;
 
   gap: 12px;
@@ -93,6 +77,6 @@
   padding-right: 35px;
 }
 
-.text + .button {
+.text + .link {
   margin-top: 30px;
 }

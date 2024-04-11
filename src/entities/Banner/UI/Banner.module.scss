@@ -36,19 +36,11 @@
 }
 
 .title {
-  @include heading-5(600);
-
   margin: 0;
 }
 
 .text {
-  @include body-s;
-
   margin: 0;
-}
-
-.price {
-  @include body-xl(500);
 }
 
 .buttonContainer {

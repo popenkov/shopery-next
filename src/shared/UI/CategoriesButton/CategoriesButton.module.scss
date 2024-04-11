@@ -47,6 +47,9 @@
     background-color: #fff;
     border-radius: 4px;
 
+    @media screen and (max-width: $screen-t) {
+      display: none;
+    }
     &::after,
     &::before {
       position: absolute;

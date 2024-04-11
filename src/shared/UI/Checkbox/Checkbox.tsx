@@ -1,7 +1,8 @@
 'use client';
 
-import cn from 'classnames';
 import { ChangeEvent, InputHTMLAttributes, memo, useRef } from 'react';
+
+import cn from 'classnames';
 
 import CheckIcon from '@public/icons/icon__check.svg';
 

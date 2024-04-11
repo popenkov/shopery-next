@@ -18,7 +18,7 @@ export const PhoneLink: FC<PhoneLinkProps> = ({ phone, href }) => {
   return (
     <a className={cls.phone} href={`tel:${href}`}>
       <PhoneIcon className={cls.icon} />
-      <Text variant="body_tiny" weight="medium">
+      <Text variant="body_s" weight="medium">
         {phone}
       </Text>
     </a>

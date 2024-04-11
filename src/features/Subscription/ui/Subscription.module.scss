@@ -1,0 +1,111 @@
+@import '@/shared/styles/breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/text-styles.scss';
+
+.subscription {
+  border-top: 1px solid rgb(180 204 180 / 70%);
+}
+
+.container {
+  display: grid;
+  grid-template-areas: 'logo text form';
+  grid-template-columns: minmax(auto, 223px) minmax(auto, 433px) minmax(
+      auto,
+      535px
+    );
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0;
+
+  @media screen and (max-width: $screen-d) {
+    grid-template: repeat(2, auto) / 1fr minmax(auto, 535px);
+    grid-template-areas: 'logo logo' 'text form';
+    justify-content: start;
+  }
+
+  @media screen and (max-width: $screen-tl) {
+    grid-template: repeat(3, auto) / 1fr;
+    grid-template-areas: 'logo' 'text' 'form';
+    justify-content: start;
+  }
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.text {
+  @include flex-column;
+
+  grid-area: text;
+  gap: 4px;
+  margin: 0 0 0 auto;
+
+  @media screen and (max-width: $screen-d) {
+    margin-left: unset;
+  }
+}
+
+.title {
+  margin: 0;
+  color: var(--green-gray-900);
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--green-gray-400);
+}
+
+.form {
+  @include flex-center-vertical;
+
+  position: relative;
+  grid-area: form;
+  height: 52px;
+
+  @media screen and (max-width: $screen-t) {
+    @include flex-column;
+
+    position: static;
+    gap: 20px;
+    align-items: flex-start;
+    height: auto;
+  }
+}
+
+.input {
+  @include body-m;
+
+  height: 52px;
+  padding-right: 180px;
+  padding-left: 24px;
+  color: var(--green-gray-800);
+  background-color: var(--back-primary);
+  border: 1px solid var(--green-gray-100);
+  border-radius: 46px;
+
+  @media screen and (max-width: $screen-t) {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  &::placeholder {
+    color: var(--green-gray-500);
+    opacity: 1;
+  }
+}
+
+.button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 52px;
+  border-radius: 43px;
+
+  @media screen and (max-width: $screen-t) {
+    position: static;
+    width: 100%;
+  }
+}

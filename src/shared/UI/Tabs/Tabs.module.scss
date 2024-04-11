@@ -77,6 +77,7 @@
   flex-shrink: 0;
   padding: 0;
   padding: 8px 12px 6px;
+  background-color: inherit;
   color: var(--gray-500);
   border-top-width: 0;
   border-right-width: 0;
@@ -84,6 +85,10 @@
   border-left-width: 0;
   cursor: pointer;
   transition: border-color var(--transition-long), color var(--transition-long);
+
+  &:hover {
+    color: var(--primary);
+  }
 
   &.active {
     color: var(--primary);
