@@ -1,22 +1,27 @@
 'use client';
 
-import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
-
+import {
+    DetailedHTMLProps,
+    FC,
+    HTMLAttributes,
+    useCallback,
+    useState,
+} from 'react';
 import cn from 'classnames';
 
-
-import { FilterButton } from '@/shared/UI';
-
 import cls from './CatalogFilter.module.scss';
+import { Button, FilterButton } from '@/shared/UI';
 import { FilterControllers } from './FilterControllers';
 
 interface Props
     extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 
 export const CatalogFilter: FC<Props> = () => {
-    const handleFilterButtonClick = () => {
+    const [isFilterOpen, setIsFilterOpen] = useState(false);
+    const handleFilterButtonClick = useCallback(() => {
         console.log('click');
-    };
+        setIsFilterOpen(true);
+    }, []);
 
     return (
         <div className={cls.filter}>
@@ -25,7 +30,7 @@ export const CatalogFilter: FC<Props> = () => {
                 className="aside-filter__filter-button"
             />
 
-            <div className="js-filter-menu aside-filter__filter-menu-background">
+            <div className=" aside-filter__filter-menu-background">
                 <div className="catalog-page__filter-accordion filter-accordion aside-filter__filter-menu">
                     {/* filter header*/}
                     <div className={cn(cls.header, 'd-mobile--flex')}>
@@ -39,10 +44,10 @@ export const CatalogFilter: FC<Props> = () => {
 
                     <FilterControllers />
 
-                    <div className="aside-filter__footer">
-                        <button className="button  button--fill button--large aside-filter__button js-apply-filter-button">
+                    <div className={cls.footer}>
+                        <Button size="large" className={cls.button}>
                             Apply filter
-                        </button>
+                        </Button>
                     </div>
                 </div>
             </div>

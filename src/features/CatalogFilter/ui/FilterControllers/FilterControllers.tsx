@@ -17,7 +17,6 @@ export const FilterControllers = () => {
     const { categories, priceRange, tags } = getFilterData();
     return (
         <>
-            {/* accordions */}
             <Accordion
                 title={
                     <Text variant="body_l" weight="medium">
