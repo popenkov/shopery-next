@@ -78,6 +78,8 @@
     }
   }
 
+  // todo переписать
+
   &:nth-child(2) {
     @media screen and (max-width: $screen-tl) {
       border-bottom: 1px solid rgb(230 230 230);

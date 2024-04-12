@@ -3,8 +3,7 @@ import { FC, ReactNode, useState } from 'react';
 
 import cn from 'classnames';
 
-
-import ChevronIcon from '@public/icons/icon__chevron-down.svg';
+import { ReactComponent as ChevronIcon } from '@public/icons/icon__chevron-down.svg';
 
 import cls from './Accordion.module.scss';
 
@@ -15,6 +14,8 @@ interface Props {
 }
 
 export const Accordion: FC<Props> = ({ title, children, noBorder }) => {
+    // todo
+    console.log('ChevronIcon', ChevronIcon);
     const [isOpen, setIsOpen] = useState(false);
 
     const handleAccordeonToggle = () => {
