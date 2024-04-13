@@ -23,7 +23,7 @@
         "prepare": "husky",
         "depcruise": "npx depcruise src --include-only \"^src\" --output-type dot | dot -T svg > dependency-graph.svg",
         "depcruise:win": "npx depcruise src --include-only \"^src\" --output-type dot | cmd /c path C:/Program Files/Graphviz/bin/dot.exe -T svg > dependency-graph.svg",
-        "storybook": "storybook dev -p 6006 -c ./src/app/configs/storybook",
+        "storybook": "storybook dev -p 6006 -c ./src/app/configs/storybook --debug-webpack",
         "build-storybook": "storybook build -c ./src/app/configs/storybook"
     },
     "dependencies": {
@@ -97,7 +97,6 @@
         "storybook": "^8.0.8",
         "stylelint-config-standard-scss": "^13.1.0",
         "ts-jest": "^29.1.2",
-        "tsconfig-paths-webpack-plugin": "^4.1.0",
         "typescript": "5"
     },
     "browserslist": {

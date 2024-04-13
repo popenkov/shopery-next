@@ -3,7 +3,7 @@ import { FC, ReactNode, useState } from 'react';
 
 import cn from 'classnames';
 
-import { ReactComponent as ChevronIcon } from '@public/icons/icon__chevron-down.svg';
+import ChevronIcon from '@public/icons/icon__chevron-down.svg';
 
 import cls from './Accordion.module.scss';
 

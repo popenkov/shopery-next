@@ -28,6 +28,7 @@ const config: StorybookConfig = {
 
     staticDirs: ['../../../../public'], // This loads images at localhost:6006/next.svg
     webpackFinal: async (config) => {
+        //  апроблема с путями
         if (config.resolve) {
             // @ts-expect-error
             config.resolve.alias['@'] = path.resolve(__dirname, '../../../');
@@ -36,8 +37,38 @@ const config: StorybookConfig = {
                 __dirname,
                 '../../../../public',
             );
-            return config;
         }
+
+        // config.module.rules
+        //     .filter((rule) => rule.test.test('.svg'))
+        //     .forEach((rule) => (rule.exclude = /\.svg$/i));
+
+        // config.module.rules.unshift({
+        //     test: /\.svg$/,
+        //     oneOf: [
+        //         {
+        //             dependency: { not: ['url'] },
+        //             use: [
+        //                 {
+        //                     loader: require.resolve('@svgr/webpack'),
+        //                     options: {
+        //                         prettier: false,
+        //                         svgo: false,
+        //                         svgoConfig: {
+        //                             plugins: [{ removeViewBox: false }],
+        //                         },
+        //                         titleProp: true,
+        //                         ref: true,
+        //                     },
+        //                 },
+        //                 path.resolve(
+        //                     __dirname,
+        //                     '../webpack-custom-loaders/svg-url-loader.js',
+        //                 ),
+        //             ],
+        //         },
+        //     ],
+        // });
 
         // if (!config.module || !config.module.rules) {
         //     return config;
@@ -99,49 +130,22 @@ const config: StorybookConfig = {
         //     });
         // }
         // todo 2
-        // const imageRule = config.module?.rules?.find((rule) => {
-        //     const test = (rule as { test: RegExp }).test;
+        const imageRule = config.module?.rules?.find((rule) => {
+            const test = (rule as { test: RegExp }).test;
 
-        //     if (!test) {
-        //         return false;
-        //     }
+            if (!test) {
+                return false;
+            }
 
-        //     return test.test('.svg');
-        // }) as { [key: string]: any };
+            return test.test('.svg');
+        }) as { [key: string]: any };
 
-        // imageRule.exclude = /\.svg$/;
+        imageRule.exclude = /\.svg$/;
 
-        // config.module?.rules?.push({
-        //     test: /\.svg$/,
-        //     use: ['@svgr/webpack'],
-        // });
-
-        // todo 3
-        // const imageRule = config.module.rules.find((rule) =>
-        //     rule?.['test']?.test('.svg'),
-        // );
-        // if (imageRule) {
-        //     imageRule['exclude'] = /\.svg$/;
-        // }
-
-        // // Configure .svg files to be loaded with @svgr/webpack
-        // config.module.rules.push({
-        //     test: /\.svg$/,
-        //     use: ['@svgr/webpack'],
-        // });
-
-        // config.module.rules?.push({
-        //     test: /\.svg$/,
-        //     use: ['@svgr/webpack', 'file-loader'],
-        //     // use: [
-        //     //     {
-        //     //         loader: '@svgr/webpack',
-        //     //         options: {
-        //     //             exportAsDefault: true,
-        //     //         },
-        //     //     },
-        //     // ],
-        // });
+        config.module?.rules?.push({
+            test: /\.svg$/,
+            use: ['@svgr/webpack'],
+        });
 
         return config;
     },

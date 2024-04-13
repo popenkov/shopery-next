@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import { ReactComponent as Icon } from '@public/icons/icon__delivery_truck.svg';
 
 import { Advantages } from '@/widgets/Advantages/ui/Advantages';
 import { Banners } from '@/widgets/Banners';
@@ -15,8 +14,7 @@ import { Reviews } from '@/widgets/Reviews';
 export const HomePage: FC = () => {
     return (
         <>
-            <Icon />
-            {/* <HeroSlider />
+            <HeroSlider />
             <Advantages />
             <ProductTab />
             <Banners />
@@ -25,7 +23,7 @@ export const HomePage: FC = () => {
             <Reviews />
             <MainVideo />
             <NewsList />
-            <NewsSubscription /> */}
+            <NewsSubscription />
         </>
     );
 };
