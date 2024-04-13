@@ -14,8 +14,6 @@ interface Props {
 }
 
 export const Accordion: FC<Props> = ({ title, children, noBorder }) => {
-    // todo
-    console.log('ChevronIcon', ChevronIcon);
     const [isOpen, setIsOpen] = useState(false);
 
     const handleAccordeonToggle = () => {

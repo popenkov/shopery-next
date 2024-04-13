@@ -4,19 +4,29 @@ import {
     DetailedHTMLProps,
     FC,
     HTMLAttributes,
+    ReactNode,
     useCallback,
     useState,
 } from 'react';
 import cn from 'classnames';
 
-import cls from './CatalogFilter.module.scss';
+import cls from './Filter.module.scss';
 import { Button, FilterButton } from '@/shared/UI';
 import { FilterControllers } from './FilterControllers';
+import { ProductInterface } from '@/entities/Product';
 
 interface Props
-    extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
+    extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+    banner?: ReactNode;
+    saleProducts?: ProductInterface[];
+    renderSaleProducts?: (product: ProductInterface) => ReactNode;
+}
 
-export const CatalogFilter: FC<Props> = () => {
+export const Filter: FC<Props> = ({
+    banner,
+    saleProducts,
+    renderSaleProducts,
+}) => {
     const [isFilterOpen, setIsFilterOpen] = useState(false);
     const handleFilterButtonClick = useCallback(() => {
         console.log('click');
@@ -27,16 +37,16 @@ export const CatalogFilter: FC<Props> = () => {
         <div className={cls.filter}>
             <FilterButton
                 onClick={handleFilterButtonClick}
-                className="aside-filter__filter-button"
+                className={cls.filterButton}
             />
 
-            <div className=" aside-filter__filter-menu-background">
-                <div className="catalog-page__filter-accordion filter-accordion aside-filter__filter-menu">
+            <div className={cls.filterMenuBackground}>
+                <div className={cls.filterMenu}>
                     {/* filter header*/}
                     <div className={cn(cls.header, 'd-mobile--flex')}>
-                        <p className="aside-filter__title">Filter</p>
-                        <button className="aside-filter__close-button js-filter-close-button">
-                            <svg className="aside-filter__close-icon">
+                        <p className=".title">Filter</p>
+                        <button className=".close-button js-filter-close-button">
+                            <svg className=".close-icon">
                                 <use href="img/svgSprite.svg#icon__close"></use>
                             </svg>
                         </button>
@@ -52,33 +62,23 @@ export const CatalogFilter: FC<Props> = () => {
                 </div>
             </div>
 
-            {/* banner */}
-            {/* <div className="discount-banner aside-filter__banner aside-filter__banner--desktop">
-        <img
-          className="discount-banner__img"
-          src="img/discount-banner--1.jpg"
-          alt="discount banner"
-        />
-        <div className="discount-banner__text">
-          <p className="discount-banner__title">
-            <span className="discount-banner__title--bold">79%</span> Discount
-          </p>
-          <p className="discount-banner__subtitle">on your first order</p>
-          <a
-            className="button  button--ghost button--normal discount-banner__button icon-button"
-            href="#"
-          >
-            <span className="icon-button__text">Shop Now</span>
-            <svg className="icon-button__icon">
-              <use href="img/svgSprite.svg#icon__arrow"></use>
-            </svg>
-          </a>
-        </div>
-      </div> */}
-            {/* sale */}
-            {/* <div className="aside-filter__products aside-filter__products--desktop">
-        <p className="aside-filter__title">Sale Products</p>
-        <div className="aside-filter__product-cards">
+            {/* desktop banner */}
+            <div className={cls.bannerDesktop}>{banner}</div>
+
+            {/* desktop sale items */}
+            {saleProducts && renderSaleProducts && (
+                <div>
+                    {saleProducts.map((product) => (
+                        <div key={product.id}>
+                            {renderSaleProducts(product)}
+                        </div>
+                    ))}
+                </div>
+            )}
+
+            {/* <div className=".products .products--desktop">
+        <p className=".title">Sale Products</p>
+        <div className=".product-cards">
           <div className="product-xs">
             <a className="product-xs__image-link" href="#">
               <img

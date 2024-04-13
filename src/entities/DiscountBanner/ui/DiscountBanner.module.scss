@@ -1,0 +1,61 @@
+.discountBanner {
+
+  position: relative;
+  width: 100%;
+  min-height: 295px;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+
+
+}
+
+
+.bannerImageWrapper {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+        inset: 0;
+}
+
+  .bannerImage {
+
+    object-fit: cover;
+
+  }
+
+  .bannerText {
+    @include flex-column-center;
+  }
+
+  .bannerTitle {
+    @include body-xxl;
+
+    margin: 0;
+
+    b {
+      @include heading-5(600);
+
+      color: var(--orange);
+    }
+  }
+
+  .bannerSubtitle {
+    @include body-medium;
+
+    margin: 0;
+    color: var(--gray-700);
+  }
+
+  .bannerButton {
+    @include body-medium(600);
+
+    gap: 8px;
+    margin-left: 4px;
+    padding: 0;
+  }
+
+  .bannerSubtitle + .bannerButton {
+    margin-top: -1px;
+  }

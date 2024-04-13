@@ -12,6 +12,14 @@
   align-items: flex-start;
 }
 
+.filterButton {
+      display: none;
+
+    @media screen and (max-width: $screen-tl) {
+      display: block;
+    }
+}
+
 .header {
   @include flex-center-vertical;
 
@@ -43,15 +51,11 @@
   border-top: 1px solid var(--gray-300);
 }
 
-.filter-button {
-  display: none;
 
-  @media screen and (max-width: $screen-tl) {
-    display: block;
-  }
-}
 
-.filter-menu-background {
+
+.filterMenuBackground {
+  width: 100%;
   @media screen and (max-width: $screen-tl) {
     position: fixed;
     background-color: var(--modal-bg);
@@ -69,7 +73,7 @@
     transition: all var(--transition);
     pointer-events: auto;
 
-    .filter-menu {
+    .filterMenu {
       display: block;
       max-width: 390px;
       height: 100vh;
