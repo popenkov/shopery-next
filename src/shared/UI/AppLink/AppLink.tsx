@@ -1,4 +1,3 @@
-
 import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode, Ref } from 'react';
 
 import cn from 'classnames';
@@ -6,7 +5,13 @@ import Link, { LinkProps } from 'next/link';
 
 import style from './AppLink.module.scss';
 
-type AppLinkTheme = 'primary' | 'ghost' | 'white' | 'border' | 'gray' | 'text';
+type AppLinkTheme =
+    | 'primary'
+    | 'ghost'
+    | 'secondary'
+    | 'outlined'
+    | 'gray'
+    | 'text';
 
 type AppLinkSize = 'small' | 'normal' | 'large';
 

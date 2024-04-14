@@ -1,4 +1,3 @@
-
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import cn from 'classnames';
@@ -61,7 +60,7 @@ export const Banner: FC<BannerProps> = (props) => {
                     {text}
                 </Text>
                 <span className={cls.buttonContainer}>
-                    <Button theme="white" className={cls.button}>
+                    <Button theme="secondary" className={cls.button}>
                         <span className="icon-button__text">Shop Now</span>
                         <ArrowIcon className="icon-button__icon" />
                     </Button>

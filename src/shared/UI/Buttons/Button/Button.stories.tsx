@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
+import { fn } from '@storybook/test';
 import { Button } from './Button';
 
 const meta = {
@@ -9,8 +9,9 @@ const meta = {
         layout: 'centered',
     },
     tags: ['autodocs'],
+    args: { onClick: fn() },
     argTypes: {
-        theme: ['primary', 'ghost', 'white', 'border', 'gray', 'text'],
+        theme: ['primary', 'ghost', 'secondary', 'outlined', 'gray', 'text'],
         size: ['small', 'medium', 'large'],
         children: {
             controls: 'Test',
@@ -51,17 +52,17 @@ export const Ghost: Story = {
     },
 };
 
-export const White: Story = {
+export const Secondary: Story = {
     args: {
         children: 'Text',
-        theme: 'white',
+        theme: 'secondary',
     },
 };
 
-export const Border: Story = {
+export const Outlined: Story = {
     args: {
         children: 'Text',
-        theme: 'border',
+        theme: 'outlined',
     },
 };
 
