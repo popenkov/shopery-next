@@ -1,0 +1,142 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/button-reset.scss';
+@import '@/shared/styles/mixins/text-styles.scss';
+
+.filter {
+  @include flex-column;
+
+  grid-area: filter;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.filterButton {
+      display: none;
+
+    @media screen and (max-width: $screen-tl) {
+      display: block;
+    }
+}
+
+.header {
+  @include flex-center-vertical;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  display: none !important;
+  gap: 20px;
+  justify-content: space-between;
+  max-width: 390px;
+  padding: 10px 16px;
+  background-color: var(--back-primary);
+  border-bottom: 1px solid var(--gray-300);
+}
+
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: none !important;
+  justify-content: flex-end;
+  max-width: 390px;
+  padding: 10px 16px;
+  background-color: var(--back-primary);
+  border-top: 1px solid var(--gray-300);
+}
+
+
+
+
+.filterMenuBackground {
+  width: 100%;
+  @media screen and (max-width: $screen-tl) {
+    position: fixed;
+    background-color: var(--modal-bg);
+    opacity: 0;
+    pointer-events: none;
+    inset: 0;
+  }
+
+  &.opened {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: var(--mobile-menu-z-index);
+    opacity: 1;
+    transition: all var(--transition);
+    pointer-events: auto;
+
+    .filterMenu {
+      display: block;
+      max-width: 390px;
+      height: 100vh;
+      padding: 80px 16px;
+      overflow-y: auto;
+      background-color: var(--back-primary);
+    }
+
+    .header {
+      display: flex !important;
+    }
+
+    .footer {
+      display: flex !important;
+    }
+  }
+}
+
+.close-button {
+  @include button-reset;
+}
+
+.close-icon {
+  @include box(25px);
+}
+
+.banner--desktop {
+  display: block;
+
+  @media screen and (max-width: $screen-tl) {
+    display: none;
+  }
+}
+
+.item + .banner {
+  margin-top: -8px;
+}
+
+.products {
+  @include flex-column;
+
+  gap: 12px;
+  width: 100%;
+}
+
+.banner + .products {
+  margin-top: -4px;
+}
+
+.products--desktop {
+  @media screen and (max-width: $screen-tl) {
+    display: none;
+  }
+}
+
+.title {
+  @include body-xl(500);
+
+  margin: 0;
+}
+
+.product-cards {
+  @include flex-column;
+
+  gap: 16px;
+}

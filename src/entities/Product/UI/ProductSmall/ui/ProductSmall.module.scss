@@ -4,20 +4,26 @@
 @import '@/shared/styles/mixins/text-styles.scss';
 
 
+.productImageLink {@include box(102px);
+
+  position: relative;
+
+}
+
   .image {
-    @include box(102px);
+
 
     object-fit: contain;
   }
 
-  .description {
+  .productImage {
     @include flex-column;
 
     gap: 1px;
     padding: 24px 12px 24px 20px;
   }
 
-  .description-main {
+  .productDescriptionMain {
     @include flex-column;
 
     gap: 5px;
@@ -27,49 +33,47 @@
     transition: opacity var(--transition);
   }
 
-  .link {
-    text-decoration: none;
-  }
 
-  .title {
-    @include body-small;
+
+  .productTitle {
+    @include body-s;
 
     margin: 0;
     color: var(--gray-700);
   }
 
-  .price {
+  .productPrice {
     @include flex-center-vertical;
-    @include body-medium(500);
+    @include body-m(500);
 
     gap: 4px;
     margin: 0;
     color: var(--gray-900);
 
-    &--old {
+    &Old {
       color: var(--green-gray-400);
       text-decoration-line: line-through;
     }
   }
 
-  .rating svg {
+  .productRating svg {
     @include box(12px);
   }
 
-  .description-hover {
+  .productDescriptionHover {
     position: absolute;
     height: 40px;
     visibility: hidden;
     opacity: 0;
   }
 
-  .buttons {
+  .productActions {
     @include flex-center-vertical;
 
     gap: 12px;
   }
 
-.product-xs {
+.productSmall {
 
   @include flex-center-vertical;
 
@@ -83,7 +87,7 @@
       border: var(--card-hover-border);
       box-shadow: var(--card-hover-shadow);
 
-      .title {
+      .productTitle {
         color: var(--primary);
       }
 
@@ -92,14 +96,14 @@
         padding-bottom: 19px;
       }
 
-      .description-hover {
+      .productDescriptionHover {
         position: static;
         visibility: visible;
         opacity: 1;
         transition: opacity var(--transition);
       }
 
-      .description-main {
+      .productDescriptionMain {
         position: absolute;
         visibility: hidden;
         opacity: 0;

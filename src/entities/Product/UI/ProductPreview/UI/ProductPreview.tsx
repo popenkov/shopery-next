@@ -3,7 +3,6 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-
 import { ProductInterface } from '@/entities/Product';
 import { StarRating } from '@/entities/StarRating';
 import { RoundButton, Text } from '@/shared';
@@ -56,10 +55,10 @@ export const ProductPreview: FC<ProductPreviewProps> = ({ data }) => {
                             <RoundButton theme="primary">
                                 <CartIcon />
                             </RoundButton>
-                            <RoundButton theme="primary_inversed">
+                            <RoundButton theme="secondary">
                                 <PreviewIcon />
                             </RoundButton>
-                            <RoundButton theme="primary_inversed">
+                            <RoundButton theme="secondary">
                                 <LikeIcon />
                             </RoundButton>
                         </div>

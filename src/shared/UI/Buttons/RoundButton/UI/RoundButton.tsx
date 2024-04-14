@@ -11,7 +11,7 @@ import cn from 'classnames';
 
 import style from './RoundButton.module.scss';
 
-export type RoundButtonTheme = 'primary' | 'primary_inversed' | 'ghost';
+export type RoundButtonTheme = 'primary' | 'secondary' | 'ghost';
 
 const DEFAULT_ELEMENT: ElementType = 'button';
 

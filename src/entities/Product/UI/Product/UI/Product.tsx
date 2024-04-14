@@ -3,7 +3,6 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-
 import { ProductInterface } from '@/entities/Product';
 import { StarRating } from '@/entities/StarRating';
 import { getFormattedPrice } from '@/shared/lib/utils/getFormattedPrice';
@@ -26,16 +25,10 @@ export const Product: FC<Props> = ({ data }) => {
         <div className={cls.product}>
             <div className={cls.imageContainer}>
                 <div className={cls.buttons}>
-                    <RoundButton
-                        theme="primary_inversed"
-                        className={cls.imageButton}
-                    >
+                    <RoundButton theme="secondary" className={cls.imageButton}>
                         <LikeIcon />
                     </RoundButton>
-                    <RoundButton
-                        theme="primary_inversed"
-                        className={cls.imageButton}
-                    >
+                    <RoundButton theme="secondary" className={cls.imageButton}>
                         <PreviewIcon />
                     </RoundButton>
                 </div>

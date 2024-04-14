@@ -2,7 +2,6 @@ import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import cn from 'classnames';
 
-
 import { RoundButton } from '@/shared';
 import ArrowIcon from '@public/icons/icon__arrow.svg';
 
@@ -25,7 +24,7 @@ export const HeroNavigation: FC<Props> = ({
             <div className={cls.pagination} ref={fractionRef}></div>
             <div className={cls.navigation}>
                 <RoundButton
-                    theme="primary_inversed"
+                    theme="secondary"
                     className={cn(
                         cls.navigationButton,
                         cls.navigationButtonPrev,
@@ -35,7 +34,7 @@ export const HeroNavigation: FC<Props> = ({
                     <ArrowIcon />
                 </RoundButton>
                 <RoundButton
-                    theme="primary_inversed"
+                    theme="secondary"
                     className={cn(
                         cls.navigationButton,
                         cls.navigationButtonNext,

@@ -13,7 +13,7 @@ const meta = {
     },
     tags: ['autodocs'],
     argTypes: {
-        theme: ['primary', 'primary_inversed', 'ghost'],
+        theme: ['primary', 'secondary', 'ghost'],
     },
 } satisfies Meta<typeof RoundButton>;
 
@@ -30,7 +30,7 @@ export const Primary: Story = {
 export const PrimaryInversed: Story = {
     args: {
         children: <CartIcon />,
-        theme: 'primary_inversed',
+        theme: 'secondary',
     },
 };
 
