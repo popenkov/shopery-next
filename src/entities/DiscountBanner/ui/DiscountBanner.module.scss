@@ -1,3 +1,9 @@
+
+@import '@/shared/styles/breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/text-styles.scss';
+
 .discountBanner {
 
   position: relative;
@@ -42,14 +48,14 @@
   }
 
   .bannerSubtitle {
-    @include body-medium;
+    @include body-m;
 
     margin: 0;
     color: var(--gray-700);
   }
 
   .bannerButton {
-    @include body-medium(600);
+    @include body-m(600);
 
     gap: 8px;
     margin-left: 4px;

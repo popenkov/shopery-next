@@ -1,0 +1,111 @@
+@import '@/shared/styles/breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/text-styles.scss';
+
+
+  .image {
+    @include box(102px);
+
+    object-fit: contain;
+  }
+
+  .description {
+    @include flex-column;
+
+    gap: 1px;
+    padding: 24px 12px 24px 20px;
+  }
+
+  .description-main {
+    @include flex-column;
+
+    gap: 5px;
+    height: 40px;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity var(--transition);
+  }
+
+  .link {
+    text-decoration: none;
+  }
+
+  .title {
+    @include body-small;
+
+    margin: 0;
+    color: var(--gray-700);
+  }
+
+  .price {
+    @include flex-center-vertical;
+    @include body-medium(500);
+
+    gap: 4px;
+    margin: 0;
+    color: var(--gray-900);
+
+    &--old {
+      color: var(--green-gray-400);
+      text-decoration-line: line-through;
+    }
+  }
+
+  .rating svg {
+    @include box(12px);
+  }
+
+  .description-hover {
+    position: absolute;
+    height: 40px;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .buttons {
+    @include flex-center-vertical;
+
+    gap: 12px;
+  }
+
+.product-xs {
+
+  @include flex-center-vertical;
+
+  min-width: 282px;
+  min-height: 112px;
+  border: var(--card-border);
+  border-radius: 6px;
+
+  @media (hover: hover) {
+    &:hover {
+      border: var(--card-hover-border);
+      box-shadow: var(--card-hover-shadow);
+
+      .title {
+        color: var(--primary);
+      }
+
+      .description {
+        gap: 6px;
+        padding-bottom: 19px;
+      }
+
+      .description-hover {
+        position: static;
+        visibility: visible;
+        opacity: 1;
+        transition: opacity var(--transition);
+      }
+
+      .description-main {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+  }
+
+
+}
