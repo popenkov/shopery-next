@@ -1,8 +1,16 @@
-import React from 'react';
+import React, {
+    DetailedHTMLProps,
+    FC,
+    HTMLAttributes,
+    useEffect,
+    useState,
+} from 'react';
 
+import cn from 'classnames';
 import { StarRating } from '@/entities/StarRating';
 import {
     Accordion,
+    Button,
     Checkbox,
     Radio,
     RangeSlider,
@@ -13,10 +21,35 @@ import {
 import cls from './Filter.module.scss';
 import { getFilterData } from '../api/getFilterData';
 
-export const Filter = () => {
+interface Props
+    extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+    classname?: string;
+}
+
+export const Filter: FC<Props> = ({ classname }) => {
     const { categories, priceRange, tags } = getFilterData();
+
+    const [isButtonShown, setIsButtonShown] = useState(false);
+    const [chosenFilters, setChosenFilters] = useState({
+        priceRange,
+        tags: [],
+        rating: [],
+        categories: [],
+    });
+
+    useEffect(() => {
+        console.log('chosenFilters', chosenFilters);
+        setIsButtonShown(true);
+    }, [chosenFilters]);
+
+    const handleFilterButtonClick = () => {
+        // todo requesst
+        console.log('apply filter', chosenFilters);
+        setIsButtonShown(false);
+    };
+
     return (
-        <>
+        <div className={cn(cls.filter, classname)}>
             <Accordion
                 title={
                     <Text variant="body_l" weight="medium">
@@ -42,6 +75,7 @@ export const Filter = () => {
                         Price
                     </Text>
                 }
+                className={cls.priceAccordion}
             >
                 <RangeSlider min={priceRange.min} max={priceRange.max} />
             </Accordion>
@@ -94,6 +128,16 @@ export const Filter = () => {
                     })}
                 </div>
             </Accordion>
-        </>
+
+            {true && (
+                <Button
+                    size="large"
+                    className={cls.filterButtonDesktop}
+                    onClick={handleFilterButtonClick}
+                >
+                    Apply filter
+                </Button>
+            )}
+        </div>
     );
 };

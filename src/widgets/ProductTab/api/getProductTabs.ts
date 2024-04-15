@@ -1,9 +1,9 @@
 import { nanoid } from 'nanoid';
 
-import { ProductInterface } from '@/entities/Product';
+import { TProduct } from '@/entities/Product';
 import { TabItem } from '@/shared/UI';
 
-const data: TabItem<ProductInterface>[] = [
+const data: TabItem<TProduct>[] = [
     {
         id: 'tab1',
         label: 'All',

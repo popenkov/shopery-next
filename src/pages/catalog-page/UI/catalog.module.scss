@@ -29,41 +29,35 @@
 
 .itemsDesktop {
   @media screen and (max-width: $screen-tl) {
-    display: none !important;
+    display: none ;
   }
 }
 
 .itemsMobile {
-  display: none !important;
+  display: none ;
 
   @media screen and (max-width: $screen-tl) {
-    display: grid !important;
+    display: grid ;
   }
 }
 
-.banner {
-  grid-area: banner;
-}
+
 
 .bannerMobile {
   display: none;
-
+  grid-area: banner;
   @media screen and (max-width: $screen-tl) {
     display: block;
   }
 }
 
-.saleProducts {
-  @include flex-column;
 
-  gap: 10px;
-}
 
 .saleProductsMobile {
   display: none;
 
   @media screen and (max-width: $screen-tl) {
-    display: flex !important;
+    @include flex-column;
     gap: 10px;
   }
 }

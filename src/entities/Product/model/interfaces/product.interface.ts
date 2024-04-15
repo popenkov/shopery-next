@@ -1,6 +1,6 @@
 import { TTag } from '@/shared/UI/Tag';
 
-export type ProductInterface = {
+export type TProduct = {
     id: string;
     path: string;
     img: string;

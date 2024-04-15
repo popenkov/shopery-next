@@ -1,6 +1,9 @@
 @import '@/shared/styles/mixins/text-styles.scss';
 
 .text {
+  margin: 0;
+  padding: 0;
+  
   &.error {
     color: var(--front-primary);
   }

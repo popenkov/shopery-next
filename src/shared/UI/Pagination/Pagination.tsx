@@ -1,8 +1,7 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import cn from 'classnames';
-
-
+import ChevronIcon from '@public/icons/icon__chevron-down.svg';
 import { DOTS, usePagination } from '@/shared/lib/hooks/usePagination';
 
 import cls from './Pagination.module.scss';
@@ -43,13 +42,11 @@ export const Pagination: FC<Props> = (props) => {
     }
 
     return (
-        <div className={(cls.pagination, className)}>
+        <div className={cn(cls.pagination, className)}>
             <button className={cn(cls.page, cls.pagePrev)} disabled>
-                <svg className="icon">
-                    <use href="img/svgSprite.svg#icon__chevron-down"></use>
-                </svg>
+                <ChevronIcon className={cls.icon} />
             </button>
-            <ul className="pages">
+            <ul className={cls.pages}>
                 {paginationRange?.map((pageNumber, index) => {
                     if (pageNumber === DOTS) {
                         return (
@@ -80,9 +77,7 @@ export const Pagination: FC<Props> = (props) => {
                 })}
             </ul>
             <button className={cn(cls.page, cls.pageNext)}>
-                <svg className="icon">
-                    <use href="img/svgSprite.svg#icon__chevron-down"></use>
-                </svg>
+                <ChevronIcon className={cls.icon} />
             </button>
         </div>
     );

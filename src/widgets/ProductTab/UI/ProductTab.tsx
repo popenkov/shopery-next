@@ -4,7 +4,7 @@ import React, { FC } from 'react';
 
 import { MobileSlider } from '@/entities/MobileSlider';
 import { ProductLarge } from '@/entities/Product';
-import { ProductInterface } from '@/entities/Product/model/interfaces/product.interface';
+import { TProduct } from '@/entities/Product/model/interfaces/product.interface';
 import { Tabs, Text } from '@/shared';
 
 import { getProductTab } from '../api/getProductTabs';
@@ -23,15 +23,15 @@ export const ProductTab: FC = () => {
                 Introducing Our Products
             </Text>
 
-            <Tabs<ProductInterface>
+            <Tabs<TProduct>
                 tabs={productTabs}
                 tabContent={(item) => (
                     <ProductLarge data={item} key={item.id} />
                 )}
                 sliderContent={(props) => (
-                    <MobileSlider<ProductInterface>
+                    <MobileSlider<TProduct>
                         {...props}
-                        render={(child: ProductInterface) => (
+                        render={(child: TProduct) => (
                             <ProductLarge data={child} key={child.id} />
                         )}
                     />

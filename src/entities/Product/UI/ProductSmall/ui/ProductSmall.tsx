@@ -1,4 +1,4 @@
-import { ProductInterface } from '../../../';
+import { TProduct } from '../../../';
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import cls from './ProductSmall.module.scss';
 import { StarRating } from '@/entities/StarRating';
@@ -11,7 +11,7 @@ import LikeIcon from '@public/icons/icon__heart.svg';
 
 interface Props
     extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-    data: ProductInterface;
+    data: TProduct;
 }
 
 export const ProductSmall: FC<Props> = ({ data }) => {

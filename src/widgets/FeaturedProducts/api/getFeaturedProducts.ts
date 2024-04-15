@@ -1,8 +1,8 @@
 import { nanoid } from 'nanoid';
 
-import { ProductInterface } from '@/entities/Product';
+import { TProduct } from '@/entities/Product';
 
-const data: ProductInterface[] = [
+const data: TProduct[] = [
     {
         id: nanoid(),
         path: '#',

@@ -22,8 +22,10 @@
 }
 
 .page {
+  
   @include button-reset;
   @include box(36px);
+  @include flex-center;
   @include body-m;
 
   padding: 8px;
@@ -42,6 +44,18 @@
     color: var(--front-primary-inversed);
     background-color: var(--primary);
   }
+
+
+  &:disabled {
+    background-color: var(--gray-50);
+    border-color: var(--gray-50);
+    pointer-events: none;}
+}
+
+.pageButton {
+   @include button-reset;
+
+   
 }
 
 .dots {

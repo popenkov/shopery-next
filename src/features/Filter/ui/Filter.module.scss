@@ -4,6 +4,11 @@
 @import '@/shared/styles/mixins/button-reset.scss';
 @import '@/shared/styles/mixins/text-styles.scss';
 
+
+.filter {
+  position: relative;
+}
+
 .filterAccordion {
   @include flex-column;
 
@@ -40,4 +45,22 @@
   flex-wrap: wrap;
   gap: 8px;
   padding-top: 12px !important;
+}
+
+
+// todo  подумать может лучше есть решение
+.priceAccordion :global(.rc-slider) {
+  margin-left: 10px;
+  
+    max-width: calc(100% - 20px);
+}
+
+
+// todo  кнопка фильтра
+.filterButtonDesktop {
+position: fixed;
+// left: 0;
+z-index: 3;
+bottom: 50px;
+
 }

@@ -11,9 +11,15 @@ interface Props {
     title: ReactNode;
     children: ReactNode;
     noBorder?: boolean;
+    className?: string;
 }
 
-export const Accordion: FC<Props> = ({ title, children, noBorder }) => {
+export const Accordion: FC<Props> = ({
+    title,
+    children,
+    noBorder,
+    className,
+}) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleAccordeonToggle = () => {
@@ -21,7 +27,7 @@ export const Accordion: FC<Props> = ({ title, children, noBorder }) => {
     };
 
     return (
-        <div className={cls.accordion}>
+        <div className={cn(cls.accordion, className)}>
             <button
                 onClick={handleAccordeonToggle}
                 className={cn(cls.accordionButton, {

@@ -3,7 +3,7 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { ProductInterface } from '@/entities/Product';
+import { TProduct } from '@/entities/Product';
 import { StarRating } from '@/entities/StarRating';
 import { RoundButton, Text } from '@/shared';
 import { getFormattedPrice } from '@/shared/lib/utils/getFormattedPrice';
@@ -15,7 +15,7 @@ import cls from './ProductLarge.module.scss';
 
 interface ProductLargeProps
     extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-    data: ProductInterface;
+    data: TProduct;
 }
 
 export const ProductLarge: FC<ProductLargeProps> = ({ data }) => {

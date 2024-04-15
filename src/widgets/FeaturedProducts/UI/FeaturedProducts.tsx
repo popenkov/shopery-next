@@ -4,7 +4,7 @@ import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import { MobileSlider } from '@/entities/MobileSlider';
 import { Product } from '@/entities/Product';
-import { ProductInterface } from '@/entities/Product/model/interfaces/product.interface';
+import { TProduct } from '@/entities/Product/model/interfaces/product.interface';
 
 import { getFeaturedProducts } from '../api/getFeaturedProducts';
 
@@ -25,11 +25,9 @@ export const FeaturedProducts: FC<Props> = () => {
                     })}
                 </div>
                 <div className="container mobile-slider d-mobile">
-                    <MobileSlider<ProductInterface>
+                    <MobileSlider<TProduct>
                         data={products}
-                        render={(child: ProductInterface) => (
-                            <Product data={child} />
-                        )}
+                        render={(child: TProduct) => <Product data={child} />}
                     />
                 </div>
             </div>
