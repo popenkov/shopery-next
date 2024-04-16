@@ -13,18 +13,24 @@ interface RangeValueInterface {
     max: number;
 }
 
-interface RangeSliderProps
-    extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
-        RangeValueInterface {}
+interface Props
+    extends Omit<
+            DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
+            'onChange'
+        >,
+        RangeValueInterface {
+    onChange: (value: RangeValueInterface) => void;
+}
 
-export const RangeSlider: FC<RangeSliderProps> = (props) => {
-    const { min, max } = props;
+export const RangeSlider: FC<Props> = (props) => {
+    const { min, max, onChange } = props;
     const [range, setRange] = useState<RangeValueInterface>({ min, max });
 
     const handleSliderUpdate = (value: number | number[]) => {
         if (Array.isArray(value)) {
             const [min, max] = value;
             setRange({ min, max });
+            onChange({ min, max });
         }
     };
 

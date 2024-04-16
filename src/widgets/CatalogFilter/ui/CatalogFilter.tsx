@@ -37,7 +37,6 @@ export const CatalogFilter: FC<Props> = ({ banner, featuredItems }) => {
     }, []);
 
     const handleFilterApply = () => {
-        console.log('apply filters');
         handleFilterToggle();
     };
 

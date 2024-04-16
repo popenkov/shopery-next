@@ -1,7 +1,7 @@
 const data = {
     categories: [
-        { title: 'Fresh Fruit (25)', value: '', amount: 134 },
-        { title: 'Vegetables', value: '', amount: 150 },
+        { title: 'Fresh Fruit', value: 'fruits', amount: 134 },
+        { title: 'Vegetables', value: 'vegetables', amount: 150 },
         { title: 'Cooking', value: 'cooking', amount: 54 },
         { title: 'Snacks', value: 'snacks', amount: 47 },
         { title: 'Beverages', value: 'beverages', amount: 43 },

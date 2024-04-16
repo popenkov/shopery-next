@@ -4,7 +4,6 @@ import { ChangeEvent, InputHTMLAttributes, memo, useRef } from 'react';
 
 import cn from 'classnames';
 
-
 import cls from './Radio.module.scss';
 
 type HTMLRadioProps = Omit<
@@ -44,7 +43,7 @@ export const Radio = memo((props: RadioProps) => {
             <span className={cls.fakeInput} />
             {text && <span className={cls.placeholder}>{text}</span>}
             {typeof amount === 'number' && (
-                <span className={cls.amount}>( ${amount} )</span>
+                <span className={cls.amount}>({amount})</span>
             )}
         </label>
     );

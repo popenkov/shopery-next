@@ -11,6 +11,7 @@ interface Props {
     title: ReactNode;
     children: ReactNode;
     noBorder?: boolean;
+    isOpenByDefault?: boolean;
     className?: string;
 }
 
@@ -18,9 +19,10 @@ export const Accordion: FC<Props> = ({
     title,
     children,
     noBorder,
+    isOpenByDefault = false,
     className,
 }) => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(isOpenByDefault);
 
     const handleAccordeonToggle = () => {
         setIsOpen((prev) => !prev);

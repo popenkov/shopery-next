@@ -1,7 +1,9 @@
 import React, {
+    ChangeEvent,
     DetailedHTMLProps,
     FC,
     HTMLAttributes,
+    useCallback,
     useEffect,
     useState,
 } from 'react';
@@ -26,27 +28,83 @@ interface Props
     classname?: string;
 }
 
+type TState = {
+    price: {
+        min: number;
+        max: number;
+    };
+    tags: string[];
+    rating: string[];
+    category: string;
+};
+
 export const Filter: FC<Props> = ({ classname }) => {
     const { categories, priceRange, tags } = getFilterData();
 
     const [isButtonShown, setIsButtonShown] = useState(false);
-    const [chosenFilters, setChosenFilters] = useState({
-        priceRange,
+    const [chosenFilters, setChosenFilters] = useState<TState>({
+        price: priceRange,
         tags: [],
         rating: [],
-        categories: [],
+        category: '',
     });
 
     useEffect(() => {
-        console.log('chosenFilters', chosenFilters);
         setIsButtonShown(true);
     }, [chosenFilters]);
 
     const handleFilterButtonClick = () => {
         // todo requesst
-        console.log('apply filter', chosenFilters);
+        alert(JSON.stringify(chosenFilters));
         setIsButtonShown(false);
     };
+
+    const handleCategoryChoose = useCallback(
+        (value: string) => {
+            setChosenFilters({ ...chosenFilters, category: value });
+        },
+        [chosenFilters],
+    );
+
+    const handleRatingChoose = useCallback(
+        (event: ChangeEvent<HTMLInputElement>) => {
+            const isChecked = event.target.checked;
+            const value = event.target.value;
+            const newRatingValue = isChecked
+                ? [...chosenFilters.rating, value]
+                : chosenFilters.rating.filter((item) => {
+                      return item !== value;
+                  });
+            setChosenFilters({
+                ...chosenFilters,
+                rating: newRatingValue,
+            });
+        },
+        [chosenFilters],
+    );
+
+    const handleTagsChoose = useCallback(
+        (event: ChangeEvent<HTMLInputElement>) => {
+            const isChecked = event.target.checked;
+            const value = event.target.value;
+            const newTagsValue = isChecked
+                ? [...chosenFilters.tags, value]
+                : chosenFilters.tags.filter((item) => {
+                      return item !== value;
+                  });
+            setChosenFilters({
+                ...chosenFilters,
+                tags: newTagsValue,
+            });
+        },
+        [chosenFilters],
+    );
+    const handlePriceChange = useCallback(
+        (value: { min: number; max: number }) => {
+            setChosenFilters({ ...chosenFilters, price: value });
+        },
+        [chosenFilters],
+    );
 
     return (
         <div className={cn(cls.filter, classname)}>
@@ -56,6 +114,7 @@ export const Filter: FC<Props> = ({ classname }) => {
                         All categories
                     </Text>
                 }
+                isOpenByDefault
             >
                 {categories?.map((category) => {
                     return (
@@ -65,6 +124,7 @@ export const Filter: FC<Props> = ({ classname }) => {
                             name="category"
                             text={category.title}
                             amount={category.amount}
+                            onChange={handleCategoryChoose}
                         />
                     );
                 })}
@@ -76,8 +136,13 @@ export const Filter: FC<Props> = ({ classname }) => {
                     </Text>
                 }
                 className={cls.priceAccordion}
+                isOpenByDefault
             >
-                <RangeSlider min={priceRange.min} max={priceRange.max} />
+                <RangeSlider
+                    min={priceRange.min}
+                    max={priceRange.max}
+                    onChange={handlePriceChange}
+                />
             </Accordion>
 
             <Accordion
@@ -86,24 +151,45 @@ export const Filter: FC<Props> = ({ classname }) => {
                         Rating
                     </Text>
                 }
+                isOpenByDefault
             >
-                <Checkbox name="filter-rating" value="5">
+                <Checkbox
+                    name="filter-rating"
+                    value="5"
+                    onChange={handleRatingChoose}
+                >
                     <StarRating value={5} />
                     <Text variant="body_s">5.0</Text>
                 </Checkbox>
-                <Checkbox name="filter-rating" value="4">
+                <Checkbox
+                    name="filter-rating"
+                    value="4"
+                    onChange={handleRatingChoose}
+                >
                     <StarRating value={4} />
                     <Text variant="body_s">4.0 & up</Text>
                 </Checkbox>
-                <Checkbox name="filter-rating" value="3">
+                <Checkbox
+                    name="filter-rating"
+                    value="3"
+                    onChange={handleRatingChoose}
+                >
                     <StarRating value={3} />
                     <Text variant="body_s">3.0 & up</Text>
                 </Checkbox>
-                <Checkbox name="filter-rating" value="2">
+                <Checkbox
+                    name="filter-rating"
+                    value="2"
+                    onChange={handleRatingChoose}
+                >
                     <StarRating value={2} />
                     <Text variant="body_s">2.0 & up</Text>
                 </Checkbox>
-                <Checkbox name="filter-rating" value="1">
+                <Checkbox
+                    name="filter-rating"
+                    value="1"
+                    onChange={handleRatingChoose}
+                >
                     <StarRating value={1} />
                     <Text variant="body_s">1.0 & up</Text>
                 </Checkbox>
@@ -114,6 +200,7 @@ export const Filter: FC<Props> = ({ classname }) => {
                         Popular Tag
                     </Text>
                 }
+                isOpenByDefault
             >
                 <div className={cls.tagsContainer}>
                     {tags?.map((category) => {
@@ -123,13 +210,14 @@ export const Filter: FC<Props> = ({ classname }) => {
                                 name="filter-tag"
                                 value={category.value}
                                 title={category.value}
+                                onChange={handleTagsChoose}
                             />
                         );
                     })}
                 </div>
             </Accordion>
 
-            {true && (
+            {isButtonShown && (
                 <Button
                     size="large"
                     className={cls.filterButtonDesktop}

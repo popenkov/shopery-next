@@ -10,7 +10,6 @@ import {
 
 import cn from 'classnames';
 
-
 import CheckIcon from '@public/icons/icon__check.svg';
 
 import cls from './Checkbox.module.scss';
@@ -27,18 +26,13 @@ interface CheckboxProps extends HTMLCheckboxProps {
     name: string;
     value: string | number;
     text?: string;
-
-    onChange?: (value: string) => void;
+    onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const Checkbox = memo((props: CheckboxProps) => {
-    const { className, value, onChange, text, name, children, ...otherProps } =
+    const { className, value, text, name, children, onChange, ...otherProps } =
         props;
     const ref = useRef<HTMLInputElement>(null);
-
-    const handleCheckboxChange = (evt: ChangeEvent<HTMLInputElement>) => {
-        onChange?.(evt.target.value);
-    };
 
     return (
         <label className={cn(cls.checkbox, className)}>
@@ -47,7 +41,7 @@ export const Checkbox = memo((props: CheckboxProps) => {
                 type="checkbox"
                 name={name}
                 value={value}
-                onChange={handleCheckboxChange}
+                onChange={onChange}
                 className={cls.input}
                 {...otherProps}
             />
