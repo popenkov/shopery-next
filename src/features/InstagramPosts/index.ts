@@ -1,1 +1,1 @@
-export { InstagramPosts } from './UI';
+export { InstagramPosts } from './ui';

@@ -1,4 +1,4 @@
-import { TTag } from '@/shared/UI/Tag';
+import { TTag } from '@/shared/ui/Tag';
 
 export type TProduct = {
     id: string;

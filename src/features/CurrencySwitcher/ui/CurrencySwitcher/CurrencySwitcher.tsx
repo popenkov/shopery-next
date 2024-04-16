@@ -3,7 +3,7 @@
 import { FC, memo } from 'react';
 
 import { Dropdown } from '@/shared';
-import { DropdownItem } from '@/shared/UI';
+import { DropdownItem } from '@/shared/ui';
 
 import { CHANGE_CURRENCY_DATA } from '../../model/constants';
 

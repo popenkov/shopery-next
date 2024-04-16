@@ -3,9 +3,24 @@ import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import { AppLink, Text } from '@/shared';
 import { BREAKPOINTS, useMediaQuery } from '@/shared/lib/hooks/useMediaQuery';
 import ArrowIcon from '@public/icons/icon__arrow.svg';
+import { THeroSlide } from '..';
 
 import cls from './HeroSlide.module.scss';
-import { THeroSlide } from '..';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 interface Props
     extends Omit<
@@ -25,7 +40,7 @@ export const HeroSlide: FC<Props> = ({ path, image, note, title, text }) => {
             <div className={cls.description}>
                 <span className={cls.note}>{note}</span>
                 <Text
-                // todo  в текст вынести стили
+                    // todo  в текст вынести стили
                     variant={!isMobile ? 'heading_1' : 'heading_3'}
                     weight="semibold"
                     className={cls.title}

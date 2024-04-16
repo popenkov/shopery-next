@@ -7,17 +7,32 @@ import {
     useCallback,
     useState,
 } from 'react';
+
 import cn from 'classnames';
 
-import cls from './CatalogFilter.module.scss';
-import { FilterButton } from '@/shared/UI';
-
+import { TDiscountBanner } from '@/entities/DiscountBanner/model/banner';
+import { DiscountBanner } from '@/entities/DiscountBanner/ui';
 import { ProductSmall, TProduct } from '@/entities/Product';
 import { Filter } from '@/features/Filter';
-import { DiscountBanner } from '@/entities/DiscountBanner/ui';
-import { CatalogFilterHeader } from './CatalogFilterHeader/CatalogFilterHeader';
+import { FilterButton } from '@/shared/ui';
 import { CatalogFilterFooter } from './CatalogFilterFooter';
-import { TDiscountBanner } from '@/entities/DiscountBanner/model/banner';
+import { CatalogFilterHeader } from './CatalogFilterHeader/CatalogFilterHeader';
+
+import cls from './CatalogFilter.module.scss';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 interface Props
     extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {

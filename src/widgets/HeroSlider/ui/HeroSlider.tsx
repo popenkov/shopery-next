@@ -4,18 +4,19 @@ import React, { DetailedHTMLProps, FC, HTMLAttributes, useRef } from 'react';
 
 import cn from 'classnames';
 import type { Swiper as SwiperType } from 'swiper';
-import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-import { HeroSlide } from '@/entities/HeroSlide';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import { HeroSlide } from '@/entities/HeroSlide';
 
 import { HeroNavigation } from './HeroNavigation';
-import cls from './HeroSlider.module.scss';
 import { getHeroSliderData } from '../api/getHeroSliderData';
+
+import cls from './HeroSlider.module.scss';
 
 export const onBeforeInit = (
     swiper: SwiperType,

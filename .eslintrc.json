@@ -6,7 +6,7 @@
         "jest": true
     },
     "parser": "@typescript-eslint/parser",
-    "plugins": ["@typescript-eslint", "unused-imports"],
+    "plugins": ["@typescript-eslint", "unused-imports", "css-import-order"],
     "settings": {
         "import/resolver": {
             "typescript": {
@@ -44,6 +44,7 @@
                         "group": "internal"
                     }
                 ],
+                "warnOnUnassignedImports": true,
                 "pathGroupsExcludedImportTypes": ["react"],
                 "newlines-between": "always",
                 "alphabetize": {
@@ -65,6 +66,7 @@
         "prettier",
         "@feature-sliced/eslint-config/rules/import-order",
         "@feature-sliced/eslint-config/rules/public-api",
-        "@feature-sliced/eslint-config/rules/layers-slices"
+        "@feature-sliced/eslint-config/rules/layers-slices",
+        "plugin:css-import-order/recommended"
     ]
 }

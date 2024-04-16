@@ -1,5 +1,7 @@
-import { Button } from '@/shared';
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+
+import { Button } from '@/shared';
+
 import cls from './CatalogFilterFooter.module.scss';
 interface Props
     extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {

@@ -1,8 +1,9 @@
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
-import CloseIcon from '@public/icons/icon__close.svg';
-import cls from './CatalogFilterHeader.module.scss';
 import { Text } from '@/shared';
+import CloseIcon from '@public/icons/icon__close.svg';
+
+import cls from './CatalogFilterHeader.module.scss';
 
 interface Props
     extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {

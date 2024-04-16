@@ -1,1 +1,1 @@
-export { Location } from './UI';
+export { Location } from './ui';

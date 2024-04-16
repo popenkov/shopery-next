@@ -14,4 +14,4 @@ export {
     Dropdown,
     Accordion,
     CategoriesButton,
-} from './UI';
+} from './ui';

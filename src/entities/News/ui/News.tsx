@@ -2,11 +2,11 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import Image from 'next/image';
 
-
 import { AppLink, Text } from '@/shared';
 import ArrowIcon from '@public/icons/icon__arrow.svg';
 
 import { TNews } from './news.interface';
+
 import cls from './News.module.scss';
 
 interface Props

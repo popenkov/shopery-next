@@ -1,10 +1,23 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
-import { TDiscountBanner } from '../model/banner';
-import ArrowIcon from '@public/icons/icon__arrow.svg';
-import cls from './DiscountBanner.module.scss';
-import { AppLink } from '@/shared';
-import Image from 'next/image';
+
 import cn from 'classnames';
+import Image from 'next/image';
+
+import { AppLink } from '@/shared';
+import ArrowIcon from '@public/icons/icon__arrow.svg';
+import { TDiscountBanner } from '../model/banner';
+
+import cls from './DiscountBanner.module.scss';
+
+
+
+
+
+
+
+
+
+
 
 interface Props
     extends Omit<

@@ -9,6 +9,7 @@ import React, {
 } from 'react';
 
 import cn from 'classnames';
+
 import { StarRating } from '@/entities/StarRating';
 import {
     Accordion,
@@ -18,10 +19,25 @@ import {
     RangeSlider,
     TagCheckbox,
     Text,
-} from '@/shared/UI';
+} from '@/shared/ui';
+import { getFilterData } from '../api/getFilterData';
 
 import cls from './Filter.module.scss';
-import { getFilterData } from '../api/getFilterData';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 interface Props
     extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {

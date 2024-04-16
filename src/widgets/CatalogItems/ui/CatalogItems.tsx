@@ -1,6 +1,9 @@
-import { Product, ProductSmall, TProduct } from '@/entities/Product';
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+
 import cn from 'classnames';
+
+import { Product, ProductSmall, TProduct } from '@/entities/Product';
+
 import cls from './CatalogItems.module.scss';
 
 interface Props

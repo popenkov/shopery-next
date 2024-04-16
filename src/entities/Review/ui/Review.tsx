@@ -2,12 +2,26 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import Image from 'next/image';
 
-
 import { Text } from '@/shared';
 import QuoteIcon from '@public/icons/icon__quote.svg';
+import { TPreview } from '../model/interfaces/Review.interface';
 
 import cls from './Review.module.scss';
-import { TPreview } from '../model/interfaces/Review.interface';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 interface Props
     extends Omit<
