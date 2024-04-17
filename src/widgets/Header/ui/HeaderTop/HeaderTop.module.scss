@@ -1,5 +1,6 @@
 @import '@/shared/styles/_breakpoints';
 @import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/container.scss';
 @import '@/shared/styles/mixins/text-styles.scss';
 
 .top {
@@ -9,6 +10,7 @@
 }
 
 .content {
+  @include container;
   @include flex-center-sb;
 
   gap: 35px;

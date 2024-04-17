@@ -2,8 +2,6 @@
 
 import React, { FC, useCallback, useState } from 'react';
 
-import cn from 'classnames';
-
 import cls from './Subscription.module.scss';
 import { Text } from '@/shared/ui/Text';
 import { Logo } from '@/shared/ui/Logo';
@@ -19,7 +17,7 @@ export const Subscription: FC = () => {
 
     return (
         <div className={cls.subscription}>
-            <div className={cn(cls.container, 'container')}>
+            <div className={cls.container}>
                 <Logo className={cls.logo} />
                 <div className={cls.text}>
                     <Text

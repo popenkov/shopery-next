@@ -1,8 +1,11 @@
 @import '@/shared/styles/breakpoints';
 @import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/container.scss';
 @import '@/shared/styles/mixins/box.scss';
 
 .slider {
+  @include container;
+
   position: relative;
   padding: 68px 0 118px;
 

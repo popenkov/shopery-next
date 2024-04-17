@@ -8,17 +8,18 @@ import { ProductLarge, TProduct } from '@/entities/Product';
 import { getProductTab } from '../api/getProductTabs';
 import { Text } from '@/shared/ui/Text';
 import { Tabs } from '@/shared/ui/Tabs';
+import cls from './ProductTab.module.scss';
 
 export const ProductTab: FC = () => {
     const { productTabs } = getProductTab();
 
     return (
-        <div className="section section--green">
+        <div className={cls.productTab}>
             <Text
                 variant="heading_3"
                 weight="semibold"
                 align="center"
-                className="section__title container"
+                className={cls.productTabTitle}
             >
                 Introducing Our Products
             </Text>

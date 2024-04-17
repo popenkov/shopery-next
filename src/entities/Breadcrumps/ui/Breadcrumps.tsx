@@ -1,4 +1,3 @@
-
 import { FC, memo } from 'react';
 
 import Link from 'next/link';
@@ -56,7 +55,7 @@ export const Breadcrumbs: FC<BreadcrumbsProps> = memo(({ items }) => {
 
     return (
         <div className={cls.breadcrumps}>
-            <div className="container">
+            <div className={cls.breadcrumpsContent}>
                 <ul className={cls.list}>{breadcrumbItems}</ul>
             </div>
         </div>

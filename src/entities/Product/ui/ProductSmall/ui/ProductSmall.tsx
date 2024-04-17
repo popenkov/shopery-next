@@ -25,15 +25,15 @@ export const ProductSmall: FC<Props> = ({ data }) => {
                 <Image
                     className={cls.productImage}
                     src={img}
-                    alt="product-xs"
+                    alt={title}
                     fill
                 />
             </Link>
             <div className={cls.productDescription}>
-                <Link className=".link" href="#">
+                <Link className={cls.link} href="#">
                     <h3 className={cls.productTitle}>{title}</h3>
                 </Link>
-                <div className=".description-container">
+                <div>
                     <div className={cls.productDescriptionMain}>
                         <p className={cls.productPrice}>
                             <span>${price}</span>

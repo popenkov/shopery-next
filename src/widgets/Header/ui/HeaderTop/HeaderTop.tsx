@@ -1,7 +1,5 @@
-
 import { FC } from 'react';
 
-import cn from 'classnames';
 import Link from 'next/link';
 
 import { Location } from '@/entities/Location';
@@ -13,7 +11,7 @@ import cls from './HeaderTop.module.scss';
 export const HeaderTop: FC = () => {
     return (
         <div className={cls.top}>
-            <div className={cn(cls.content, 'container')}>
+            <div className={cls.content}>
                 <Location address="Store Location: Lincoln- 344, Illinois, Chicago, USA" />
                 <div className={cls.actions}>
                     <div className={cls.dropdowns}>

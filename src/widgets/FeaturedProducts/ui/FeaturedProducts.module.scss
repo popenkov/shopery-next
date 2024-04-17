@@ -1,0 +1,38 @@
+@import '@/shared/styles/mixins/container';
+@import '@/shared/styles/mixins/grid';
+@import '@/shared/styles/mixins/display';
+@import '@/shared/styles/mixins/section';
+@import '@/shared/styles/breakpoints';
+
+
+.featuredProducts {
+    @include section;
+       @include container;
+}
+
+.featuredProductsTitle {
+    @include section-title;
+    
+
+}
+
+.featuredProductsContent {
+@include section-content;
+}
+
+.featuredProductsDesktop {
+    @include grid(5);
+    @include display-desktop;
+
+    @media screen and (max-width: $screen-tl) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (max-width: $screen-ti) {
+      grid-template-columns: 1fr;
+    }
+}
+
+.featuredProductsMobile {
+    @include display-mobile;
+}

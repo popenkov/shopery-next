@@ -1,10 +1,15 @@
 @import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/container.scss';
+@import '@/shared/styles/mixins/section.scss';
 
 .advantages {
-  position: relative;
+  @include section-green-bg--bottom;
+
 }
 
 .content {
+    @include container;
+    
   position: relative;
   z-index: 1;
   display: grid;

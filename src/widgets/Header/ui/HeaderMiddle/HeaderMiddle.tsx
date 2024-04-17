@@ -22,7 +22,7 @@ export const HeaderMiddle: FC = () => {
 
     return (
         // todo add link
-        <div className={cn(cls.middle, 'container')}>
+        <div className={cls.middle}>
             <BurgerButton
                 className={cls.mobileBurger}
                 onClick={handleMenuToggle}

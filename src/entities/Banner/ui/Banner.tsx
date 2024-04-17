@@ -62,8 +62,8 @@ export const Banner: FC<BannerProps> = (props) => {
                 </Text>
                 <span className={cls.buttonContainer}>
                     <Button theme="secondary" className={cls.button}>
-                        <span className="icon-button__text">Shop Now</span>
-                        <ArrowIcon className="icon-button__icon" />
+                        <span className={cls.buttonText}>Shop Now</span>
+                        <ArrowIcon className={cls.buttonIcon} />
                     </Button>
                 </span>
             </span>

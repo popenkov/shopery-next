@@ -60,3 +60,17 @@
     }
   }
 }
+
+.menuLocation {
+      @include flex-center-vertical;
+
+    gap: 8px;
+
+    @media screen and (max-width: $screen-tl) {
+
+
+        display: flex;
+        align-items: flex-end;
+      
+    }
+}

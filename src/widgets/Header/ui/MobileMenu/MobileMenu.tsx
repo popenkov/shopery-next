@@ -2,7 +2,6 @@ import React, { DetailedHTMLProps, FC, HTMLAttributes, useRef } from 'react';
 
 import cn from 'classnames';
 
-
 import { Location } from '@/entities/Location';
 import { PhoneLink } from '@/entities/PhoneLink';
 import { NavigationMobile } from '@/features/Navigation';
@@ -52,7 +51,7 @@ export const MobileMenu: FC<Props> = ({ isOpen, handleMenuToggle }) => {
                     <PhoneLink phone="(219) 555-0114" href="2195550114" />
                     <Location
                         address="Store Location: Lincoln- 344, Illinois, Chicago, USA"
-                        className="header__top-location header__top-location--mobile"
+                        className={cls.menuLocation}
                     />
                 </div>
             </div>

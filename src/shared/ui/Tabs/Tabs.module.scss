@@ -1,8 +1,14 @@
 @import '@/shared/styles/mixins/text-styles';
 @import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/container';
+@import '@/shared/styles/mixins/section';
+@import '@/shared/styles/mixins/grid';
+@import '@/shared/styles/mixins/display';
 @import '@/shared/styles/breakpoints';
 
 .tabs {
+  @include section-content;
+  
   max-width: 100vw;
   overflow: hidden;
 }
@@ -117,11 +123,42 @@
   border-top: 0;
 }
 
+.labels  {
+  @include container;
+}
+
 .labels + .panes {
   margin-top: 47px;
 }
 
 .pane {
+  
+
   width: 100%;
   max-width: 100vw;
+
+
+}
+
+.paneContent {
+@include container;
+  @include grid(4);
+  @include display-desktop;
+
+        @media screen and (max-width: $screen-tl) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media screen and (max-width: $screen-ti) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (max-width: $screen-t) {
+      grid-template-columns: 1fr;
+    }
+}
+
+.sliderContent {
+  @include container;
+  @include display-mobile;
 }

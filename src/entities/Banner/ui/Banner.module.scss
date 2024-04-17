@@ -1,6 +1,7 @@
 @import '@/shared/styles/_breakpoints';
 @import '@/shared/styles/mixins/text-styles.scss';
 @import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/box.scss';
 
 .image {
   position: absolute;
@@ -58,6 +59,14 @@
 
   gap: 8px;
   padding: 10px 27px 10px 32px;
+}
+
+.buttonText {
+  white-space: nowrap;
+}
+
+.buttonIcon {
+  @include box(24px)
 }
 
 .banner {

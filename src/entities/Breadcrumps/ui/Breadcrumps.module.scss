@@ -1,5 +1,6 @@
 @import '@/shared/styles/mixins/flexbox.scss';
 @import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/container.scss';
 
 .breadcrumps {
   background: linear-gradient(
@@ -8,6 +9,10 @@
       rgb(0 0 0 / 0%) 91.306%
     ),
     url('/images/breadcrumbs-img.jpg');
+}
+
+.breadcrumpsContent {
+  @include container;
 }
 
 .list {

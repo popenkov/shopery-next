@@ -14,7 +14,7 @@ interface Props
 
 export const BestDeals: FC<Props> = () => {
     return (
-        <div className="section--green">
+        <div className={cls.bestDeals}>
             <div className={cls.bgContainer}>
                 <div className={cls.container}>
                     <Text
@@ -39,8 +39,8 @@ export const BestDeals: FC<Props> = () => {
                         className={cls.counter}
                     />
                     <AppLink href={'path'} className={cls.button}>
-                        <span className="icon-button__text">Shop now</span>
-                        <ArrowIcon />
+                        <span className={cls.buttonText}>Shop now</span>
+                        <ArrowIcon className={cls.buttonIcon} />
                     </AppLink>
                 </div>
             </div>

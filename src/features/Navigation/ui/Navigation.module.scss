@@ -1,11 +1,13 @@
 @import '@/shared/styles/_breakpoints';
 @import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/container.scss';
 
 .navigation {
   background-color: var(--gray-50);
 }
 
 .content {
+  @include container;
   @include flex-center-sb;
 
   gap: 35px;

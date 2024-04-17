@@ -1,0 +1,11 @@
+@import '@/shared/styles/mixins/container';
+@import '@/shared/styles/mixins/section';
+
+.mainVideo {
+    @include section;
+@include section-green-bg--top;
+}
+
+.mainVideoContent {
+    @include container;
+}

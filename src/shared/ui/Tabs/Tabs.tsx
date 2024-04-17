@@ -43,8 +43,8 @@ export const Tabs = <T extends unknown>({
     }, [selectedTab, tabs]);
 
     return (
-        <div className={cn(cls.tabs, 'section__content')}>
-            <div className={cn(cls.labels, 'container')}>
+        <div className={cls.tabs}>
+            <div className={cls.labels}>
                 <div className={cls.labelsContent}>
                     <div className={cls.scrollContainer}>
                         {tabs.map((tab) => {
@@ -65,13 +65,13 @@ export const Tabs = <T extends unknown>({
             </div>
             <div className={cls.panes}>
                 <div className={cls.pane}>
-                    <div className="grid grid__four-items  d-desktop container">
+                    <div className={cls.paneContent}>
                         {tabContentState?.map((item) => {
                             return tabContent(item);
                         })}
                     </div>
                     {sliderContent && (
-                        <div className="container mobile-slider d-mobile">
+                        <div className={cls.sliderContent}>
                             {sliderContent({ data: tabContentState })}
                         </div>
                     )}

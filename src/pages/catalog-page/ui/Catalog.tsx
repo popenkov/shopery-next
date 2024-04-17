@@ -1,8 +1,6 @@
 'use client';
 import { FC } from 'react';
 
-import cn from 'classnames';
-
 import { Breadcrumbs } from '@/entities/Breadcrumps';
 import { DiscountBanner } from '@/entities/DiscountBanner/ui';
 import { ProductSmall } from '@/entities/Product';
@@ -27,7 +25,7 @@ export const Catalog: FC = () => {
     return (
         <>
             <Breadcrumbs items={crumbs} />
-            <div className={cn(cls.catalog, 'container')}>
+            <div className={cls.catalog}>
                 <div className={cls.filter}>
                     <CatalogFilter
                         banner={banner}

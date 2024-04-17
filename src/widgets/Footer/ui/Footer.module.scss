@@ -2,6 +2,7 @@
 @import '@/shared/styles/mixins/flexbox.scss';
 @import '@/shared/styles/mixins/box.scss';
 @import '@/shared/styles/mixins/text-styles.scss';
+@import '@/shared/styles/mixins/container.scss';
 
 .footer {
   background-color: var(--green-gray-900);
@@ -17,6 +18,8 @@
 }
 
 .footerContent {
+  @include container;
+
   display: grid;
   grid-template: repeat(2, auto) / minmax(1fr, 336px) repeat(2, 1fr);
   grid-template-areas:

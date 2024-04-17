@@ -8,6 +8,7 @@ import { TDiscountBanner } from '../model/banner';
 
 import cls from './DiscountBanner.module.scss';
 import { AppLink } from '@/shared/ui/AppLink';
+import { Text } from '@/shared/ui/Text';
 
 interface Props
     extends Omit<
@@ -37,15 +38,11 @@ export const DiscountBanner: FC<Props> = ({
             <div className={cls.bannerText}>
                 <p className={cls.bannerTitle}>{title}</p>
                 <p className={cls.bannerSubtitle}>{subtitle}</p>
-                {/* todo */}
-                {/* <a
-                    className="button  button--ghost button--normal discount-banner__button icon-button"
-                    href="#"
-                >
-                    <ArrowIcon className="icon-button__icon" />
-                </a> */}
-                <AppLink href={path} theme="ghost">
-                    <ArrowIcon className="icon-button__icon" />
+                <AppLink href={path} theme="ghost" className={cls.bannerButton}>
+                    <Text variant="body_m" weight="semibold">
+                        Shop Now
+                    </Text>
+                    <ArrowIcon className={cls.bannerButtonIcon} />
                 </AppLink>
             </div>
         </div>

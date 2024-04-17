@@ -2,7 +2,6 @@
 
 import React, { DetailedHTMLProps, FC, HTMLAttributes, useRef } from 'react';
 
-import cn from 'classnames';
 import type { Swiper as SwiperType } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
@@ -53,7 +52,7 @@ export const HeroSlider: FC<Props> = () => {
     const fractionRef = useRef<HTMLDivElement | null>(null);
 
     return (
-        <div className={cn(cls.slider, 'container')}>
+        <div className={cls.slider}>
             <Swiper
                 modules={[Navigation, Pagination, EffectFade, Autoplay]}
                 effect="fade"

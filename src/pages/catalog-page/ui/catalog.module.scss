@@ -1,7 +1,10 @@
 @import '@/shared/styles/_breakpoints';
 @import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/container.scss';
 
 .catalog {
+    @include container;
+
   display: grid;
   grid-template-areas: 'filter sort' 'filter result' 'filter pagination';
   grid-template-columns: 312px 1fr;
