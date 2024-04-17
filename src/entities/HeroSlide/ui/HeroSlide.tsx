@@ -1,10 +1,11 @@
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
-import { AppLink, Text } from '@/shared';
 import ArrowIcon from '@public/icons/icon__arrow.svg';
 import { THeroSlide } from '..';
 
 import cls from './HeroSlide.module.scss';
+import { Text } from '@/shared/ui/Text';
+import { AppLink } from '@/shared/ui/AppLink';
 
 interface Props
     extends Omit<

@@ -5,26 +5,13 @@ import React, { FC, useState } from 'react';
 import cn from 'classnames';
 
 import { ProductSearch } from '@/features/ProductsSearch';
-import { Logo } from '@/shared';
-import { BurgerButton } from '@/shared';
+
 import { HeaderActions } from '../HeaderActions';
 import { MobileMenu } from '../MobileMenu';
 
 import cls from './HeaderMiddle.module.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import { BurgerButton } from '@/shared/ui/BurgerButton';
+import { Logo } from '@/shared/ui/Logo';
 
 export const HeaderMiddle: FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,6 +21,7 @@ export const HeaderMiddle: FC = () => {
     };
 
     return (
+        // todo add link
         <div className={cn(cls.middle, 'container')}>
             <BurgerButton
                 className={cls.mobileBurger}

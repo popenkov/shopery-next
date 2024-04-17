@@ -14,25 +14,11 @@ import { TDiscountBanner } from '@/entities/DiscountBanner/model/banner';
 import { DiscountBanner } from '@/entities/DiscountBanner/ui';
 import { ProductSmall, TProduct } from '@/entities/Product';
 import { Filter } from '@/features/Filter';
-import { FilterButton } from '@/shared/ui';
+import { FilterButton } from '@/shared/ui/FilterButton';
 import { CatalogFilterFooter } from './CatalogFilterFooter';
 import { CatalogFilterHeader } from './CatalogFilterHeader/CatalogFilterHeader';
 
 import cls from './CatalogFilter.module.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 interface Props
     extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {

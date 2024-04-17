@@ -1,6 +1,6 @@
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
-import { Text } from '@/shared';
+import { Text } from '@/shared/ui/Text';
 import CloseIcon from '@public/icons/icon__close.svg';
 
 import cls from './CatalogFilterHeader.module.scss';

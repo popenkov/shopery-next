@@ -1,6 +1,6 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
-import { Text } from '@/shared';
+import { Text } from '@/shared/ui/Text';
 import PhoneIcon from '@public/icons/icon__phone.svg';
 
 import cls from './PhoneLink.module.scss';

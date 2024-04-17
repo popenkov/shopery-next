@@ -4,10 +4,11 @@ import React, { FC, useCallback, useState } from 'react';
 
 import cn from 'classnames';
 
-
-import { Button, Input, Logo, Text } from '@/shared';
-
 import cls from './Subscription.module.scss';
+import { Text } from '@/shared/ui/Text';
+import { Logo } from '@/shared/ui/Logo';
+import { Input } from '@/shared/ui/Input';
+import { Button } from '@/shared/ui/Buttons';
 
 export const Subscription: FC = () => {
     const [searchValue, setSearchValue] = useState('');

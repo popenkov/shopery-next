@@ -3,11 +3,11 @@
 import React, { FC } from 'react';
 
 import { MobileSlider } from '@/entities/MobileSlider';
-import { ProductLarge } from '@/entities/Product';
-import { TProduct } from '@/entities/Product/model/interfaces/product.interface';
-import { Tabs, Text } from '@/shared';
+import { ProductLarge, TProduct } from '@/entities/Product';
 
 import { getProductTab } from '../api/getProductTabs';
+import { Text } from '@/shared/ui/Text';
+import { Tabs } from '@/shared/ui/Tabs';
 
 export const ProductTab: FC = () => {
     const { productTabs } = getProductTab();

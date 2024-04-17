@@ -3,7 +3,8 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import { Countdown } from '@/entities/Countdown';
-import { AppLink, Text } from '@/shared';
+import { Text } from '@/shared/ui/Text';
+import { AppLink } from '@/shared/ui/AppLink';
 import ArrowIcon from '@public/icons/icon__arrow.svg';
 
 import cls from './BestDeals.module.scss';

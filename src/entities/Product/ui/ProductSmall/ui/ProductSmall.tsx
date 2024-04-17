@@ -4,28 +4,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { StarRating } from '@/entities/StarRating';
-import { RoundButton } from '@/shared';
+import { RoundButton } from '@/shared/ui/Buttons';
 import CartIcon from '@public/icons/icon__cart.svg';
 import PreviewIcon from '@public/icons/icon__eye.svg';
 import LikeIcon from '@public/icons/icon__heart.svg';
 import { TProduct } from '../../../';
 
 import cls from './ProductSmall.module.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 interface Props
     extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {

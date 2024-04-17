@@ -2,20 +2,11 @@ import React from 'react';
 
 import Link from 'next/link';
 
-import { Accordion, Text } from '@/shared';
 import { getNavigationData } from '../../api/getNavigationData';
 
 import cls from './NavigationMobile.module.scss';
-
-
-
-
-
-
-
-
-
-
+import { Text } from '@/shared/ui/Text';
+import { Accordion } from '@/shared/ui/Accordion';
 
 export const NavigationMobile = () => {
     const { navigation } = getNavigationData();

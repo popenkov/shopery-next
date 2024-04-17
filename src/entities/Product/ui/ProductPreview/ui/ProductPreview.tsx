@@ -5,7 +5,8 @@ import Link from 'next/link';
 
 import { TProduct } from '@/entities/Product';
 import { StarRating } from '@/entities/StarRating';
-import { RoundButton, Text } from '@/shared';
+import { Text } from '@/shared/ui/Text';
+import { RoundButton } from '@/shared/ui/Buttons';
 import { getFormattedPrice } from '@/shared/lib/utils/getFormattedPrice';
 import CartIcon from '@public/icons/icon__cart.svg';
 import PreviewIcon from '@public/icons/icon__eye.svg';

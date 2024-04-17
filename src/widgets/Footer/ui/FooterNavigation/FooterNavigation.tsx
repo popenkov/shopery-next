@@ -2,24 +2,10 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import Link from 'next/link';
 
-import { Text } from '@/shared';
+import { Text } from '@/shared/ui/Text';
 import { getFooterData } from '../../api/getFooterData';
 
 import cls from './FooterNavigation.module.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 interface Props
     extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}

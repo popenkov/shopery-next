@@ -6,11 +6,12 @@ import cn from 'classnames';
 import Link from 'next/link';
 
 import { HeaderCategory } from '@/entities/NavigationCategory';
-import { CategoriesButton, Text } from '@/shared';
 
 import { getCategoryIcon } from './getCategoryIcon';
 
 import cls from './NavigationCategories.module.scss';
+import { CategoriesButton } from '@/shared/ui/CategoriesButton';
+import { Text } from '@/shared/ui/Text';
 
 interface Props
     extends DetailedHTMLProps<

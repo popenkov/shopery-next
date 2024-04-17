@@ -8,7 +8,7 @@ import { DiscountBanner } from '@/entities/DiscountBanner/ui';
 import { ProductSmall } from '@/entities/Product';
 import { CatalogSort } from '@/features/CatalogSort';
 import { AppRouteNames } from '@/shared/interfaces/router';
-import { Pagination } from '@/shared/ui';
+import { Pagination } from '@/shared/ui/Pagination';
 import { CatalogFilter } from '@/widgets/CatalogFilter';
 import { getCatalogFilterData } from '@/widgets/CatalogFilter/api/getCatalogFilterData';
 import { CatalogItems } from '@/widgets/CatalogItems';

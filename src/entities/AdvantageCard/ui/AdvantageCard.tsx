@@ -2,11 +2,11 @@ import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import cn from 'classnames';
 
-import { Text } from '@/shared';
 import { getAdvantageIcon } from './getAdvantageIcon';
 import { TAdvantage } from '..';
 
 import cls from './AdvantageCard.module.scss';
+import { Text } from '@/shared/ui/Text';
 
 interface Props
     extends Omit<

@@ -1,19 +1,9 @@
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
-import { AppSelect } from '@/shared';
 import { CatalogSortAmount } from '../CatalogSortAmount';
+import { AppSelect } from '@/shared/ui/AppSelect';
 
 import cls from './CatalogSort.module.scss';
-
-
-
-
-
-
-
-
-
-
 
 interface Props
     extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}

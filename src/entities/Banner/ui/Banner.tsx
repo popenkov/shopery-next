@@ -3,11 +3,12 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import cn from 'classnames';
 import Link from 'next/link';
 
-import { Button, Text } from '@/shared';
 import ArrowIcon from '@public/icons/icon__arrow.svg';
 import { TBanner } from '../model/types/banner.types';
 
 import cls from './Banner.module.scss';
+import { Text } from '@/shared/ui/Text';
+import { Button } from '@/shared/ui/Buttons';
 
 interface BannerProps
     extends Omit<

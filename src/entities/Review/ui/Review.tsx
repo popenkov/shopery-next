@@ -2,7 +2,7 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import Image from 'next/image';
 
-import { Text } from '@/shared';
+import { Text } from '@/shared/ui/Text';
 import QuoteIcon from '@public/icons/icon__quote.svg';
 import { TPreview } from '../model/types/Review.types';
 

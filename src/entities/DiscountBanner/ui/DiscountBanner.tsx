@@ -3,21 +3,11 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import cn from 'classnames';
 import Image from 'next/image';
 
-import { AppLink } from '@/shared';
 import ArrowIcon from '@public/icons/icon__arrow.svg';
 import { TDiscountBanner } from '../model/banner';
 
 import cls from './DiscountBanner.module.scss';
-
-
-
-
-
-
-
-
-
-
+import { AppLink } from '@/shared/ui/AppLink';
 
 interface Props
     extends Omit<

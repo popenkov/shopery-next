@@ -2,7 +2,8 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import Image from 'next/image';
 
-import { AppLink, Text } from '@/shared';
+import { Text } from '@/shared/ui/Text';
+import { AppLink } from '@/shared/ui/AppLink';
 import ArrowIcon from '@public/icons/icon__arrow.svg';
 import { TNews } from '..';
 

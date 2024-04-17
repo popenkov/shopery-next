@@ -1,22 +1,7 @@
 import { ChangeEvent, DetailedHTMLProps, FC, HTMLAttributes } from 'react';
-import { Text } from '..';
+import { Text } from '../Text';
 
 import cls from './TagCheckbox.module.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 interface Props
     extends Omit<

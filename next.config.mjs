@@ -14,7 +14,7 @@ const nextConfig = {
             new CircularDependencyPlugin({
                 exclude: /a\.js|node_modules/,
                 include: /src/,
-                failOnError: false,
+                failOnError: true,
                 allowAsyncCycles: false,
                 cwd: process.cwd(),
             }),

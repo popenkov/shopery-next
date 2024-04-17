@@ -1,7 +1,7 @@
 import { nanoid } from 'nanoid';
 
 import { TProduct } from '@/entities/Product';
-import { TabItem } from '@/shared/ui';
+import { TabItem } from '@/shared/ui/Tabs';
 
 const data: TabItem<TProduct>[] = [
     {

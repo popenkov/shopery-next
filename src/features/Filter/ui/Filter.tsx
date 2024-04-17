@@ -11,33 +11,17 @@ import React, {
 import cn from 'classnames';
 
 import { StarRating } from '@/entities/StarRating';
-import {
-    Accordion,
-    Button,
-    Checkbox,
-    Radio,
-    RangeSlider,
-    TagCheckbox,
-    Text,
-} from '@/shared/ui';
+
 import { getFilterData } from '../api/getFilterData';
 
 import cls from './Filter.module.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import { Accordion } from '@/shared/ui/Accordion';
+import { Text } from '@/shared/ui/Text';
+import { Radio } from '@/shared/ui/Radio';
+import { RangeSlider } from '@/shared/ui/RangeSlider';
+import { Checkbox } from '@/shared/ui/Checkbox';
+import { TagCheckbox } from '@/shared/ui/TagCheckbox';
+import { Button } from '@/shared/ui/Buttons';
 
 interface Props
     extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {

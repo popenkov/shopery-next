@@ -7,21 +7,6 @@ import { TInstagramCard } from '..';
 
 import cls from './InstagramCard.module.scss';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 interface Props
     extends Omit<
             DetailedHTMLProps<

@@ -11,26 +11,11 @@ import React, {
 
 import cn from 'classnames';
 
-import { Text } from '@/shared';
+import { Text } from '@/shared/ui/Text';
 import PlayIcon from '@public/icons/icon__play-button.svg';
 import { TVideo } from '..';
 
 import cls from './Video.module.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 interface Props
     extends Omit<
