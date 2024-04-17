@@ -9,8 +9,8 @@ const data = {
         { title: 'Bread & Bakery', value: 'bread-n-bakery', amount: 15 },
     ],
     priceRange: {
-        min: 100,
-        max: 1000,
+        min: 1,
+        max: 999,
     },
 
     tags: [

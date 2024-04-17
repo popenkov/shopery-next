@@ -31,7 +31,7 @@ export const HeroNavigation: FC<Props> = ({
                     )}
                     ref={prevRef}
                 >
-                    <ArrowIcon />
+                    <ArrowIcon className={cls.navigationButtonIcon} />
                 </RoundButton>
                 <RoundButton
                     theme="secondary"
@@ -41,7 +41,7 @@ export const HeroNavigation: FC<Props> = ({
                     )}
                     ref={nextRef}
                 >
-                    <ArrowIcon />
+                    <ArrowIcon className={cls.navigationButtonIcon} />
                 </RoundButton>
             </div>
         </>

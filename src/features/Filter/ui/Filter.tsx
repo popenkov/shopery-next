@@ -141,6 +141,7 @@ export const Filter: FC<Props> = ({ classname }) => {
                 <RangeSlider
                     min={priceRange.min}
                     max={priceRange.max}
+                    range={[priceRange.min, priceRange.max]}
                     onChange={handlePriceChange}
                 />
             </Accordion>

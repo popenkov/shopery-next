@@ -10,7 +10,6 @@ import {
 
 import cn from 'classnames';
 
-
 import { checkEmailValidation } from '@/shared/lib/utils/checkEmailValidation/checkEmailValidation';
 import SearchIcon from '@public/icons/icon__search.svg';
 
@@ -49,6 +48,10 @@ export const Input = memo((props: Props) => {
         onChange?.(evt.target.value);
     };
 
+    const handleLoupeClick = () => {
+        ref.current?.focus();
+    };
+
     return (
         <>
             <div className={cn(cls.inputWrapper, className)}>
@@ -62,7 +65,12 @@ export const Input = memo((props: Props) => {
                     })}
                     {...otherProps}
                 />
-                {type === 'search' && <SearchIcon className={cls.searchIcon} />}
+                {type === 'search' && (
+                    <SearchIcon
+                        className={cls.searchIcon}
+                        onClick={handleLoupeClick}
+                    />
+                )}
             </div>
             {isInvalid && hasValidation && <span>error</span>}
         </>

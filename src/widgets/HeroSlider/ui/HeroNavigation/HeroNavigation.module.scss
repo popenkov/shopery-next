@@ -38,16 +38,16 @@
     margin-bottom: 60px;
   }
 
-  svg {
-    width: auto;
-    min-width: none;
-    height: auto;
-  }
 
   @media (hover: hover) {
     &:hover {
       box-shadow: 0 0 8px 0 var(--gray-200) !important;
     }
+  }
+
+  .navigationButtonIcon {
+    @include box(24px);
+
   }
 
   &Prev {

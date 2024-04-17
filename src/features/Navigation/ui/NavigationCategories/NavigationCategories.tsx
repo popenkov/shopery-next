@@ -26,7 +26,10 @@ export const NavigationCategories: FC<Props> = ({ categories }) => {
 
     const handleMenuToggle = () => {
         setIsOpen((prev) => !prev);
-        console.log(isOpen);
+    };
+
+    const handleLinkClick = () => {
+        setIsOpen(false);
     };
 
     return (
@@ -41,7 +44,11 @@ export const NavigationCategories: FC<Props> = ({ categories }) => {
                     const Icon = getCategoryIcon(link.icon);
                     return (
                         <li key={link.path} className={cls.listItem}>
-                            <Link className={cls.link} href={link.path}>
+                            <Link
+                                className={cls.link}
+                                href={link.path}
+                                onClick={handleLinkClick}
+                            >
                                 <Icon className={cls.linkIcon} />
                                 <Text
                                     variant="body_s"

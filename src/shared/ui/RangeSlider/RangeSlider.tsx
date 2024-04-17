@@ -1,6 +1,13 @@
 'use client';
 
-import { DetailedHTMLProps, FC, HTMLAttributes, useState } from 'react';
+import {
+    DetailedHTMLProps,
+    FC,
+    HTMLAttributes,
+    memo,
+    useEffect,
+    useState,
+} from 'react';
 
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
@@ -18,35 +25,40 @@ interface Props
             'onChange'
         >,
         RangeValueInterface {
+    range: number[];
     onChange: (value: RangeValueInterface) => void;
 }
 
-export const RangeSlider: FC<Props> = (props) => {
-    const { min, max, onChange } = props;
-    const [range, setRange] = useState<RangeValueInterface>({ min, max });
+export const RangeSlider: FC<Props> = memo((props) => {
+    const { min, max, range, onChange } = props;
+    const [currentRange, setCurrentRange] = useState<number[]>(range);
 
     const handleSliderUpdate = (value: number | number[]) => {
         if (Array.isArray(value)) {
             const [min, max] = value;
-            setRange({ min, max });
+            setCurrentRange(value);
             onChange({ min, max });
         }
     };
-
     return (
         <div className={cls.range}>
             <Slider
                 range
-                defaultValue={[min, max]}
+                min={min}
+                max={max}
+                defaultValue={range}
+                value={currentRange}
                 onChange={handleSliderUpdate}
                 className={cls.rangeSlider}
             />
             <span className={cls.text}>
                 Price:{' '}
                 <span className={cls.textValue}>
-                    {range.min} - {range.max}
+                    {currentRange[0]} - {currentRange[1]}
                 </span>
             </span>
         </div>
     );
-};
+});
+
+RangeSlider.displayName = 'RangeSlider';
