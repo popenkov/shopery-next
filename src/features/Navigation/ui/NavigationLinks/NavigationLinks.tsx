@@ -3,14 +3,9 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import Link from 'next/link';
 
 import ChevronIcon from '@public/icons/icon__chevron-down.svg';
-import { NavigationLink } from '../../model/interfaces/navigation-link.interface';
+import { NavigationLink } from '../../model/types/navigation-link.types';
 
 import cls from './NavigationLinks.module.scss';
-
-
-
-
-
 
 interface Props
     extends DetailedHTMLProps<

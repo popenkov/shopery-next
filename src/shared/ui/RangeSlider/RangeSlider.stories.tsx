@@ -7,22 +7,20 @@ const meta = {
     title: 'shared/RangeSlider',
     component: RangeSlider,
     parameters: {
-        // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
         layout: 'centered',
     },
-    // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
     tags: ['autodocs'],
-    // More on argTypes: https://storybook.js.org/docs/api/argtypes
 } satisfies Meta<typeof RangeSlider>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-
 export const RangeSliderComponent: Story = {
     args: {
         min: 0,
         max: 550,
+        onChange: () => {
+            console.log('change');
+        },
     },
 };

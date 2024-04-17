@@ -8,10 +8,11 @@ import '../../styles/globals.scss';
  * See https://github.com/mswjs/msw-storybook-addon#configuring-msw
  * to learn how to customize it
  */
-initialize();
+// initialize();
 
 const preview: Preview = {
-    decorators: [mswDecorator],
+    // todo разобраться
+    // decorators: [mswDecorator],
     parameters: {
         actions: { argTypesRegex: '^on.*' },
         controls: {

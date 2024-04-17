@@ -1,3 +1,4 @@
+@import '@/shared/styles/_breakpoints.scss';
 @import '@/shared/styles/mixins/text-styles.scss';
 
 .text {
@@ -34,6 +35,10 @@
 
   &.heading_1 {
     @include heading-1;
+
+     @media screen and (max-width: $screen-tl) {
+      @include heading-3;
+     }
   }
 
   &.heading_2 {
@@ -42,6 +47,10 @@
 
   &.heading_3 {
     @include heading-3;
+
+      @media screen and (max-width: $screen-tl) {
+      @include heading-5;
+     }
   }
 
   &.heading_4 {
@@ -62,6 +71,10 @@
 
   &.body_l {
     @include body-l;
+
+     @media screen and (max-width: $screen-tl) {
+      @include body-m;
+     }
   }
 
   &.body_m {

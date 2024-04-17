@@ -1,4 +1,5 @@
-import { Footer } from '../model/interface/footer.interface';
+import { nanoid } from 'nanoid';
+import { Footer } from '../model/types/footer.types';
 
 const data: Footer = {
     navigation: [
@@ -80,43 +81,28 @@ const data: Footer = {
 
     socialLinks: [
         {
+            id: nanoid(),
             icon: 'icon__facebook',
             path: '/fb',
         },
+        { id: nanoid(), icon: 'icon__twitter', path: '/tw' },
         {
-            icon: 'icon__twitter',
-            path: '/tw',
-        },
-        {
+            id: nanoid(),
             icon: 'icon__pinterest',
             path: '/pint',
         },
-        {
-            icon: 'icon__instagram',
-            path: '/inst',
-        },
+        { id: nanoid(), icon: 'icon__instagram', path: '/inst' },
     ],
     paymentMethods: [
+        { id: nanoid(), icon: 'icon__applepay', path: '/apple' },
+        { id: nanoid(), icon: 'icon__visa', path: '/visa' },
+        { id: nanoid(), icon: 'icon__discover', path: '/discover' },
         {
-            icon: 'icon__applepay',
-            path: '/apple',
-        },
-        {
-            icon: 'icon__visa',
-            path: '/visa',
-        },
-        {
-            icon: 'icon__discover',
-            path: '/discover',
-        },
-        {
+            id: nanoid(),
             icon: 'icon__mastercard',
             path: '/mc',
         },
-        {
-            icon: 'icon__secure',
-            path: '/secure',
-        },
+        { id: nanoid(), icon: 'icon__secure', path: '/secure' },
     ],
 };
 

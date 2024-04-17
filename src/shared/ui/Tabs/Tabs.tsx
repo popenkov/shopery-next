@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 
 import cn from 'classnames';
 
-
 import cls from './Tabs.module.scss';
 
 interface SliderProps<T> {
@@ -29,7 +28,7 @@ export const Tabs = <T extends unknown>({
     tabContent,
     sliderContent,
 }: TabsProps<T>) => {
-    const [selectedTab, setSelectedTab] = useState<string>(tabs?.[0].id);
+    const [selectedTab, setSelectedTab] = useState<string>(tabs[0].id);
     const [tabContentState, setTabContentState] = useState<T[]>([]);
 
     const handleTabChange = (value: string) => {
@@ -39,7 +38,7 @@ export const Tabs = <T extends unknown>({
     };
 
     useEffect(() => {
-        const activeContent = tabs?.find((t) => t.id === selectedTab)?.content;
+        const activeContent = tabs.find((t) => t.id === selectedTab)?.content;
         setTabContentState(activeContent || []);
     }, [selectedTab, tabs]);
 
@@ -48,12 +47,11 @@ export const Tabs = <T extends unknown>({
             <div className={cn(cls.labels, 'container')}>
                 <div className={cls.labelsContent}>
                     <div className={cls.scrollContainer}>
-                        {tabs?.map((tab) => {
-                            const isActive = selectedTab === tab.id;
+                        {tabs.map((tab) => {
                             return (
                                 <button
                                     className={cn(cls.label, {
-                                        [cls.active]: isActive,
+                                        [cls.active]: selectedTab === tab.id,
                                     })}
                                     onClick={() => handleTabChange(tab.id)}
                                     key={tab.id}

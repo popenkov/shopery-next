@@ -8,16 +8,6 @@ import { TAdvantage } from '..';
 
 import cls from './AdvantageCard.module.scss';
 
-
-
-
-
-
-
-
-
-
-
 interface Props
     extends Omit<
             DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,

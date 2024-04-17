@@ -7,20 +7,6 @@ import { Text } from '..';
 
 import cls from './CategoriesButton.module.scss';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 interface Props
     extends DetailedHTMLProps<
         HTMLAttributes<HTMLButtonElement>,

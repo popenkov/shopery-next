@@ -4,24 +4,9 @@ import Image from 'next/image';
 
 import { Text } from '@/shared';
 import QuoteIcon from '@public/icons/icon__quote.svg';
-import { TPreview } from '../model/interfaces/Review.interface';
+import { TPreview } from '../model/types/Review.types';
 
 import cls from './Review.module.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 interface Props
     extends Omit<

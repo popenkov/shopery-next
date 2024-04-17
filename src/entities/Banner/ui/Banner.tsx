@@ -5,24 +5,9 @@ import Link from 'next/link';
 
 import { Button, Text } from '@/shared';
 import ArrowIcon from '@public/icons/icon__arrow.svg';
-import { TBanner } from '../model/interfaces/model.interface';
+import { TBanner } from '../model/types/banner.types';
 
 import cls from './Banner.module.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 interface BannerProps
     extends Omit<

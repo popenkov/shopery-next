@@ -6,8 +6,7 @@ import cn from 'classnames';
 import Link from 'next/link';
 
 import { HeaderCategory } from '@/entities/NavigationCategory';
-import { Text } from '@/shared';
-import { CategoriesButton } from '@/shared';
+import { CategoriesButton, Text } from '@/shared';
 
 import { getCategoryIcon } from './getCategoryIcon';
 

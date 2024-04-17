@@ -1,4 +1,4 @@
-import { TNavigation } from '../model/interfaces/navigation.interface';
+import { TNavigation } from '../model/types/navigation.types';
 
 const data: TNavigation = {
     categories: [

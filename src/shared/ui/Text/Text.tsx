@@ -3,12 +3,7 @@ import type { ComponentProps, ElementType, ReactNode } from 'react';
 
 import cn from 'classnames';
 
-import {
-    TextAlign,
-    TextTheme,
-    TextVariant,
-    TextWeight,
-} from './Text.interfaces';
+import { TextAlign, TextTheme, TextVariant, TextWeight } from './Text.types';
 
 import cls from './Text.module.scss';
 

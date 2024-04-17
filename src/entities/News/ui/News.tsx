@@ -4,8 +4,7 @@ import Image from 'next/image';
 
 import { AppLink, Text } from '@/shared';
 import ArrowIcon from '@public/icons/icon__arrow.svg';
-
-import { TNews } from './news.interface';
+import { TNews } from '..';
 
 import cls from './News.module.scss';
 
