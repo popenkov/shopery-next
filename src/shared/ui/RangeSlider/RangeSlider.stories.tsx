@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { RangeSlider } from './RangeSlider';
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
     title: 'shared/RangeSlider',
     component: RangeSlider,
@@ -19,6 +18,7 @@ export const RangeSliderComponent: Story = {
     args: {
         min: 0,
         max: 550,
+        range: [0, 550],
         onChange: () => {
             console.log('change');
         },

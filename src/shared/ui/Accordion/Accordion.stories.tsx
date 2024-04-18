@@ -15,6 +15,13 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const AccordionComponent: Story = {
+    decorators: [
+        (Story) => (
+            <div style={{ width: '200px' }}>
+                <Story />
+            </div>
+        ),
+    ],
     args: {
         title: <p>Заголовок</p>,
         children: <p>Содержимое</p>,

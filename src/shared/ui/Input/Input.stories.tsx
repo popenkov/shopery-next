@@ -1,13 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Input } from './Input';
-import { userEvent, within } from '@storybook/test';
+import { fn, userEvent, within } from '@storybook/test';
 
 const meta = {
     title: 'shared/Input',
     component: Input,
     parameters: {
         layout: 'centered',
+    },
+    args: {
+        onBlur: fn(),
+        onChange: fn(),
+        onFocus: fn(),
     },
     tags: ['autodocs'],
 } satisfies Meta<typeof Input>;
