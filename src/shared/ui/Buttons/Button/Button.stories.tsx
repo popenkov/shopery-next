@@ -24,6 +24,13 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const PrimarySmall: Story = {
+    parameters: {
+        docs: {
+            description: {
+                story: 'Кнопка с зеленым фоном',
+            },
+        },
+    },
     args: {
         children: 'Text',
         theme: 'primary',
