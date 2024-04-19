@@ -33,7 +33,7 @@
     "stylelint-config-standard": "36.0.0",
     "stylelint-order": "6.0.4",
     "stylelint-scss": "6.1.0",
-    "swiper": "11.0.7"
+    "swiper": "11.1.0"
   },
   "devDependencies": {
     "@feature-sliced/eslint-config": "^0.1.0-beta.6",
