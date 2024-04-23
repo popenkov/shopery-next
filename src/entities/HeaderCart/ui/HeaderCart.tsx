@@ -5,9 +5,9 @@ import Link from 'next/link';
 import { getFormattedPrice } from '@/shared/lib/utils/getFormattedPrice';
 import CartIcon from '@public/icons/icon__cart.svg';
 import { getCartAmount } from '../api/getCartAmount';
+import { Text } from '@/shared/ui/Text';
 
 import cls from './HeaderCart.module.scss';
-import { Text } from '@/shared/ui/Text';
 
 interface Props
     extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}

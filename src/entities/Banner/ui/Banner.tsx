@@ -5,10 +5,10 @@ import Link from 'next/link';
 
 import ArrowIcon from '@public/icons/icon__arrow.svg';
 import { TBanner } from '../model/types/banner.types';
-
-import cls from './Banner.module.scss';
 import { Text } from '@/shared/ui/Text';
 import { Button } from '@/shared/ui/Buttons';
+
+import cls from './Banner.module.scss';
 
 interface BannerProps
     extends Omit<

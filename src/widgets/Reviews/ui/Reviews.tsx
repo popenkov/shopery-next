@@ -7,6 +7,7 @@ import { Review } from '@/entities/Review';
 
 import { getReviewsData } from '../api/getReviewsData';
 import { TPreview } from '@/entities/Review/model/types/Review.types';
+
 import cls from './Reviews.module.scss';
 
 interface Props

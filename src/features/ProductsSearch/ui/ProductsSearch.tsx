@@ -11,10 +11,10 @@ import {
 import { redirect } from 'next/navigation';
 
 import { getRouteCatalog } from '@/shared/constants/routes';
-
-import cls from './ProductsSearch.module.scss';
 import { Input } from '@/shared/ui/Input';
 import { Button } from '@/shared/ui/Buttons';
+
+import cls from './ProductsSearch.module.scss';
 
 interface Props
     extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}

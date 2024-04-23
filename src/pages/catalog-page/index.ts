@@ -1,1 +1,2 @@
-export { Catalog } from './ui/Catalog';
+import Catalog from './ui/Catalog';
+export default Catalog;

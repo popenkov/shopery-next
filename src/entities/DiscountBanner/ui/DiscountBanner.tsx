@@ -5,10 +5,10 @@ import Image from 'next/image';
 
 import ArrowIcon from '@public/icons/icon__arrow.svg';
 import { TDiscountBanner } from '../model/banner';
-
-import cls from './DiscountBanner.module.scss';
 import { AppLink } from '@/shared/ui/AppLink';
 import { Text } from '@/shared/ui/Text';
+
+import cls from './DiscountBanner.module.scss';
 
 interface Props
     extends Omit<

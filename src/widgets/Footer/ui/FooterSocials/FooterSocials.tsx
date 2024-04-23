@@ -2,9 +2,9 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import { getSocialIcon } from './getSocialIcon';
 import { getFooterData } from '../../api/getFooterData';
+import { RoundButton } from '@/shared/ui/Buttons';
 
 import cls from './FooterSocials.module.scss';
-import { RoundButton } from '@/shared/ui/Buttons';
 
 interface Props
     extends DetailedHTMLProps<

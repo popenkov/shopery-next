@@ -5,9 +5,9 @@ import { FC } from 'react';
 import { News, TNews } from '@/entities/News';
 
 import { getNewsData } from '../api/getNewsData';
+import { MobileSlider } from '@/entities/MobileSlider';
 
 import cls from './NewsList.module.scss';
-import { MobileSlider } from '@/entities/MobileSlider';
 
 export const NewsList: FC = () => {
     const { news } = getNewsData();

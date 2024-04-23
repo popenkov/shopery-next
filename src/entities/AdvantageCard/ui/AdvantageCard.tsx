@@ -4,9 +4,9 @@ import cn from 'classnames';
 
 import { getAdvantageIcon } from './getAdvantageIcon';
 import { TAdvantage } from '..';
+import { Text } from '@/shared/ui/Text';
 
 import cls from './AdvantageCard.module.scss';
-import { Text } from '@/shared/ui/Text';
 
 interface Props
     extends Omit<

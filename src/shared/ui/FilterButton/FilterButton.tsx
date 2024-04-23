@@ -3,9 +3,9 @@ import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import cn from 'classnames';
 
 import FilterIcon from '@public/icons/icon__filter.svg';
+import { Text } from '../Text';
 
 import cls from './FilterButton.module.scss';
-import { Text } from '../Text';
 
 interface Props
     extends DetailedHTMLProps<

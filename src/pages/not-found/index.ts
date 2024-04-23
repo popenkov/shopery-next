@@ -1,1 +1,3 @@
-export { NotFoundPage } from './ui';
+import NotFoundPage from './ui';
+
+export default NotFoundPage;

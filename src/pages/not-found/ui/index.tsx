@@ -1,5 +1,7 @@
 import { FC } from 'react';
 
-export const NotFoundPage: FC = () => {
-    return <div>NotFoundPage</div>;
+const NotFoundPage: FC = () => {
+    return <div data-testId="notFoundPage">NotFoundPage</div>;
 };
+
+export default NotFoundPage;

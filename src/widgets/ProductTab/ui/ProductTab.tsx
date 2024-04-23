@@ -8,6 +8,7 @@ import { ProductLarge, TProduct } from '@/entities/Product';
 import { getProductTab } from '../api/getProductTabs';
 import { Text } from '@/shared/ui/Text';
 import { Tabs } from '@/shared/ui/Tabs';
+
 import cls from './ProductTab.module.scss';
 
 export const ProductTab: FC = () => {

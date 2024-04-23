@@ -2,9 +2,9 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import { FooterPayment } from '../FooterPayment';
 import { FooterSocials } from '../FooterSocials';
+import { Text } from '@/shared/ui/Text';
 
 import cls from './FooterCopyright.module.scss';
-import { Text } from '@/shared/ui/Text';
 
 interface Props
     extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}

@@ -5,6 +5,7 @@ import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import { MobileSlider } from '@/entities/MobileSlider';
 import { Product, TProduct } from '@/entities/Product';
 import { getFeaturedProducts } from '../api/getFeaturedProducts';
+
 import cls from './FeaturedProducts.module.scss';
 
 interface Props

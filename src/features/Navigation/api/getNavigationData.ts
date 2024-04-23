@@ -40,7 +40,7 @@ const data: TNavigation = {
         },
         {
             title: 'Shop',
-            path: '/shop',
+            path: '/catalog',
             items: [
                 { title: 'Shop 1', path: '/shop-1' },
                 { title: 'Shop 1', path: '/shop-2' },

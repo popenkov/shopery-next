@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import { Subscription } from '@/features/Subscription';
+
 import cls from './NewsSubscription.module.scss';
 
 export const NewsSubscription: FC = () => {

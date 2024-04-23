@@ -11,9 +11,9 @@ import { Reviews } from '@/widgets/Reviews';
 import { NewsList } from '@/widgets/NewsList/ui/NewsList';
 import { MainVideo } from '@/widgets/MainVideo';
 
-export const HomePage: FC = () => {
+const HomePage: FC = () => {
     return (
-        <>
+        <div data-testId="mainPage">
             <HeroSlider />
             <Advantages />
             <ProductTab />
@@ -24,6 +24,8 @@ export const HomePage: FC = () => {
             <MainVideo />
             <NewsList />
             <NewsSubscription />
-        </>
+        </div>
     );
 };
+
+export default HomePage;

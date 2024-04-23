@@ -14,7 +14,7 @@ import { getCatalogItems } from '@/widgets/CatalogItems/api/getCatalogItems';
 
 import cls from './catalog.module.scss';
 
-export const Catalog: FC = () => {
+const Catalog: FC = () => {
     const crumbs: AppRouteNames[] = [AppRouteNames.HOME, AppRouteNames.CATALOG];
     const { banner, featuredItems } = getCatalogFilterData();
     const { items } = getCatalogItems();
@@ -23,7 +23,7 @@ export const Catalog: FC = () => {
         console.log('handlePageChange');
     };
     return (
-        <>
+        <div data-testId="mainPage">
             <Breadcrumbs items={crumbs} />
             <div className={cls.catalog}>
                 <div className={cls.filter}>
@@ -53,6 +53,8 @@ export const Catalog: FC = () => {
                     className={cls.pagination}
                 />
             </div>
-        </>
+        </div>
     );
 };
+
+export default Catalog;

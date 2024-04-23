@@ -5,13 +5,12 @@ import React, { FC, useState } from 'react';
 import cn from 'classnames';
 
 import { ProductSearch } from '@/features/ProductsSearch';
-
 import { HeaderActions } from '../HeaderActions';
 import { MobileMenu } from '../MobileMenu';
-
-import cls from './HeaderMiddle.module.scss';
 import { BurgerButton } from '@/shared/ui/BurgerButton';
 import { Logo } from '@/shared/ui/Logo';
+
+import cls from './HeaderMiddle.module.scss';
 
 export const HeaderMiddle: FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -5,6 +5,7 @@ import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import { Banner, TBanner } from '@/entities/Banner';
 import { MobileSlider } from '@/entities/MobileSlider';
 import { getBannerData } from '../api/getBannerData';
+
 import cls from './Banner.module.scss';
 
 interface Props

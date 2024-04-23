@@ -11,9 +11,9 @@ import {
 import cn from 'classnames';
 
 import CheckIcon from '@public/icons/icon__check.svg';
+import { Text } from '../Text';
 
 import cls from './Checkbox.module.scss';
-import { Text } from '../Text';
 
 type HTMLCheckboxProps = Omit<
     InputHTMLAttributes<HTMLInputElement>,
