@@ -11,8 +11,11 @@ import { Tabs } from '@/shared/ui/Tabs';
 
 import cls from './ProductTab.module.scss';
 
-export const ProductTab: FC = () => {
+export const ProductTab: FC = async () => {
     const { productTabs } = getProductTab();
+
+    // todo
+    // const products = await fetch(`http://localhost:6868/api/products`);
 
     return (
         <div className={cls.productTab}>

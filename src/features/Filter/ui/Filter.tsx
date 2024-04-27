@@ -54,7 +54,6 @@ export const Filter: FC<Props> = ({ classname }) => {
     }, [chosenFilters]);
 
     const handleFilterButtonClick = () => {
-        // todo requesst
         alert(JSON.stringify(chosenFilters));
         setIsButtonShown(false);
     };
