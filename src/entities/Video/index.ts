@@ -1,2 +1,2 @@
-export * from './UI';
-export { type TVideo } from './model/types/video.interface';
+export * from './ui';
+export { type TVideo } from './model/types/video.types';

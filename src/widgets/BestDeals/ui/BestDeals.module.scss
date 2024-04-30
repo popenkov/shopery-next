@@ -3,9 +3,12 @@
 @import '@/shared/styles/mixins/box.scss';
 @import '@/shared/styles/mixins/text-styles.scss';
 
-.bgContainer {
-  $block-name: &; // #{$block-name}__element
 
+.bestDeals {
+background-color: var(--green-gray-50);
+}
+
+.bgContainer {
   padding: 100px 0;
   background: url('/images/deals-bg-left.png') no-repeat 10% center,
     url('/images/deals-bg-right.png') no-repeat 93% bottom;
@@ -57,4 +60,13 @@
 
 .counter + .button {
   margin-top: 20px;
+}
+
+
+.buttonText {
+  white-space: nowrap;
+}
+
+.buttonIcon {
+  @include box(24px);
 }

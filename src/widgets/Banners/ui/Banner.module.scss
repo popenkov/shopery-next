@@ -1,0 +1,29 @@
+@import '@/shared/styles/mixins/container';
+@import '@/shared/styles/mixins/grid';
+@import '@/shared/styles/mixins/display';
+@import '@/shared/styles/mixins/section';
+@import '@/shared/styles/breakpoints';
+
+.banners {
+    @include section;
+
+}
+
+.bannersDesktop {
+    @include container;
+    @include grid(3, 24px);
+    @include display-desktop;
+
+    @media screen and (max-width: $screen-tl) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (max-width: $screen-ti) {
+      grid-template-columns: 1fr;
+    }
+}
+
+.bannersMobile {
+      @include container;
+    @include display-mobile;
+}

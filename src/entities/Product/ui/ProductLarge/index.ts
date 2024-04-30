@@ -1,0 +1,1 @@
+export { ProductLarge } from './ui';

@@ -1,0 +1,101 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/button-reset.scss';
+@import '@/shared/styles/mixins/text-styles.scss';
+
+.pagination {
+  @include flex-center-vertical;
+
+  gap: 12px;
+}
+
+.pages {
+  display: flex;
+  align-items: flex-end;
+}
+
+.icon {
+  @include box(20px);
+
+  transition: color var(--transition);
+}
+
+.page {
+  
+  @include button-reset;
+  @include box(36px);
+  @include flex-center;
+  @include body-m;
+
+  padding: 8px;
+  color: var(--gray-400);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color var(--transition), border-color var(--transition);
+
+  &:hover {
+    color: var(--front-primary-inversed);
+    background-color: var(--primary);
+    border-color: var(--primary);
+  }
+
+  &.active {
+    color: var(--front-primary-inversed);
+    background-color: var(--primary);
+  }
+
+
+  &:disabled {
+    background-color: var(--gray-50);
+    border-color: var(--gray-50);
+    pointer-events: none;}
+}
+
+.pageButton {
+   @include button-reset;
+
+   
+}
+
+.dots {
+  @include body-m;
+
+  padding: 0 13px 5px;
+  color: var(--gray-400);
+}
+
+.pagePrev,
+.pageNext {
+  @include flex-center;
+
+  padding: 5px 10px;
+  border: 1px solid var(--gray-100);
+  border-radius: 50%;
+  cursor: pointer;
+
+  @media screen and (max-width: $screen-t) {
+    display: none;
+  }
+
+  
+}
+
+.pagePrev .icon {
+  transform: rotate(90deg);
+}
+
+.pageNext .icon {
+  transform: rotate(-90deg);
+}
+
+.pagePrev:disabled,
+.pageNext:disabled {
+    background-color: var(--gray-50);
+    border-color: var(--gray-50);
+    pointer-events: none;
+
+    .icon {
+      color: var(--gray-300);
+    }
+  }

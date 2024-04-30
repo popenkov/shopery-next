@@ -1,0 +1,13 @@
+@import '@/shared/styles/mixins/container';
+@import '@/shared/styles/mixins/section';
+
+
+.productTab {
+    @include section-green;
+  
+}
+
+.productTabTitle {
+    @include section-title;
+@include container;
+}

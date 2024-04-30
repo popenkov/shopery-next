@@ -1,1 +1,1 @@
-export { HeaderCart } from './UI';
+export { HeaderCart } from './ui';

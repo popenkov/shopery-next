@@ -1,3 +1,3 @@
 export { HeroSlide } from './ui';
 
-export { type THeroSlide } from './model/interfaces/hero-slide.inteface';
+export { type THeroSlide } from './model/types/hero-slide.types';

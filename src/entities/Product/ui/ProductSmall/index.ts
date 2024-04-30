@@ -1,0 +1,1 @@
+export { ProductSmall } from './ui';

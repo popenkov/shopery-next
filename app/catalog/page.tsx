@@ -1,1 +1,2 @@
-export { Catalog as default } from '@/pages/catalog-page';
+import Catalog from '@/pages/catalog-page';
+export default Catalog;

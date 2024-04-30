@@ -1,1 +1,1 @@
-export { PhoneLink } from './UI';
+export { PhoneLink } from './ui';

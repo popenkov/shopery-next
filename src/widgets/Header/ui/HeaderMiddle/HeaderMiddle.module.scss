@@ -1,0 +1,63 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/container.scss';
+
+.middle {
+  @include container;
+  @include flex-center-sb;
+
+  gap: 20px;
+  padding: 24px 0 22px;
+
+  @media screen and (max-width: $screen-tl) {
+    justify-content: flex-start;
+  }
+}
+
+button.mobileBurger {
+  display: none;
+
+  @media screen and (max-width: $screen-tl) {
+    @include flex-center;
+    @include box(38px);
+
+    border: none;
+    cursor: pointer;
+
+    span {
+      display: block;
+      padding: 0;
+      background-color: var(--gray-900);
+      border: none;
+    }
+  }
+}
+
+.logoDesktop {
+  max-width: 183px;
+
+  @media screen and (max-width: $screen-t) {
+    display: none;
+  }
+}
+
+.logoMobile {
+  display: none;
+
+  @media screen and (max-width: $screen-t) {
+    display: block;
+  }
+}
+
+.search {
+  width: 100%;
+  max-width: 498px;
+  margin-left: 9px;
+}
+
+.searchDesktop {
+  @media screen and (max-width: $screen-ti) {
+    display: none;
+  }
+}

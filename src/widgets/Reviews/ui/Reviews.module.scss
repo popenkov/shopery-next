@@ -1,0 +1,38 @@
+@import '@/shared/styles/mixins/container';
+@import '@/shared/styles/mixins/grid';
+@import '@/shared/styles/mixins/display';
+@import '@/shared/styles/mixins/section';
+@import '@/shared/styles/breakpoints';
+
+.reviews {
+    @include section-green;
+}
+
+.reviewsTitle {
+    @include container;
+    @include section-title;
+}
+
+.reviewsContent {
+    @include section-content;
+    @include container;
+}
+
+.reviewsDesktop {
+    
+    @include grid(3, 24px);
+    @include display-desktop;
+
+    @media screen and (max-width: $screen-tl) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (max-width: $screen-ti) {
+      grid-template-columns: 1fr;
+    }
+}
+
+.reviewsMobile {
+
+    @include display-mobile;
+}

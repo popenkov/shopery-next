@@ -1,2 +1,2 @@
-export { Banner } from './UI';
-export { type TBanner } from './model/interfaces/model.interface';
+export { Banner } from './ui';
+export { type TBanner } from './model/types/banner.types';

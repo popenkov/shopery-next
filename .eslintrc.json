@@ -1,49 +1,72 @@
 {
-  "root": true,
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
-  "rules": {
-    "react/react-in-jsx-scope": "off",
-    "react/jsx-uses-react": "off",
-    "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": "error",
-    "semi": "off",
-    "@typescript-eslint/semi": ["warn"],
-    "@typescript-eslint/no-empty-interface": [
-      "error",
-      {
-        "allowSingleExtends": true
-      }
-    ],
-    "import/order": [
-      "warn",
-      {
-        "groups": ["builtin", "external", "internal"],
-        "pathGroups": [
-          {
-            "pattern": "@(react)",
-            "group": "external",
-            "position": "before"
-          },
-          {
-            "pattern": "@/**",
-            "group": "internal"
-          }
-        ],
-        "pathGroupsExcludedImportTypes": ["react"],
-        "newlines-between": "always",
-        "alphabetize": {
-          "order": "asc",
-          "caseInsensitive": true
+    "root": true,
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint", "unused-imports", "css-import-order"],
+    "settings": {
+        "import/resolver": {
+            "typescript": {
+                "alwaysTryTypes": true
+            }
         }
-      }
+    },
+    "rules": {
+        "no-undef": "off",
+        "unused-imports/no-unused-imports": "error",
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-uses-react": "off",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "error",
+        "semi": "off",
+        "@typescript-eslint/semi": ["warn"],
+        "@typescript-eslint/no-empty-interface": [
+            "error",
+            {
+                "allowSingleExtends": true
+            }
+        ],
+        "import/order": [
+            "warn",
+            {
+                "groups": ["builtin", "external", "internal"],
+                "pathGroups": [
+                    {
+                        "pattern": "@(react)",
+                        "group": "external",
+                        "position": "before"
+                    },
+                    {
+                        "pattern": "@/**",
+                        "group": "internal"
+                    }
+                ],
+                "warnOnUnassignedImports": true,
+                "pathGroupsExcludedImportTypes": ["react"],
+                "newlines-between": "always",
+                "alphabetize": {
+                    "order": "asc",
+                    "caseInsensitive": true
+                }
+            }
+        ],
+        // feature-sliced/public-api
+        "import/no-internal-modules": "warn", // ~ 1,
+        // feature-sliced/layers-slices
+        "boundaries/element-types": "warn" // ~ 1,
+    },
+    "extends": [
+        "next/core-web-vitals",
+        "eslint:recommended",
+        "next",
+        "plugin:storybook/recommended",
+        "prettier",
+        "@feature-sliced/eslint-config/rules/import-order",
+        "@feature-sliced/eslint-config/rules/public-api",
+        "@feature-sliced/eslint-config/rules/layers-slices",
+        "plugin:css-import-order/recommended"
     ]
-  },
-  "extends": [
-    "next/core-web-vitals",
-    "eslint:recommended",
-    "next",
-    "plugin:storybook/recommended",
-    "@feature-sliced"
-  ]
 }

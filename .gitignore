@@ -8,6 +8,7 @@
 
 # testing
 /coverage
+/storybook-static
 
 # next.js
 /.next/
@@ -38,3 +39,8 @@ next-env.d.ts
 
 #examples
 /src/stories
+
+/api
+/json-server
+.env
+*storybook.log

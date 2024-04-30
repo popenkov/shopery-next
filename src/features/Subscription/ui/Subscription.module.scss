@@ -1,6 +1,7 @@
 @import '@/shared/styles/breakpoints';
 @import '@/shared/styles/mixins/flexbox.scss';
 @import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/container.scss';
 @import '@/shared/styles/mixins/text-styles.scss';
 
 .subscription {
@@ -8,6 +9,8 @@
 }
 
 .container {
+  @include container;
+  
   display: grid;
   grid-template-areas: 'logo text form';
   grid-template-columns: minmax(auto, 223px) minmax(auto, 433px) minmax(

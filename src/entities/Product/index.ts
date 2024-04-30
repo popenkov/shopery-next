@@ -1,4 +1,5 @@
-export * from './UI/Product';
-export * from './UI/ProductLarge';
-export * from './UI/ProductPreview';
-export { type ProductInterface } from './model/interfaces/product.interface';
+export { Product } from './ui/Product';
+export { ProductLarge } from './ui/ProductLarge';
+export { ProductPreview } from './ui/ProductPreview';
+export { ProductSmall } from './ui/ProductSmall';
+export { type TProduct } from './model/types/product.types';
