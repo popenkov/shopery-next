@@ -13,7 +13,7 @@ import { MainVideo } from '@/widgets/MainVideo';
 
 const HomePage: FC = () => {
     return (
-        <div data-testId="mainPage">
+        <div data-testid="mainPage">
             <HeroSlider />
             <Advantages />
             <ProductTab />

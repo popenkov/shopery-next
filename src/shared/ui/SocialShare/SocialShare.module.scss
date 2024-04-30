@@ -1,0 +1,25 @@
+@import '@/shared/styles/mixins/text-styles.scss';
+@import '@/shared/styles/mixins/flexbox.scss';
+
+.socialShare {
+
+  @include flex-center-vertical;
+
+  gap: 9px;
+
+  
+}
+
+.socialShareText {
+    @include body-s;
+  }
+
+  .socialShareContainer {
+    @include flex-center-vertical;
+
+    gap: 5px;
+  }
+
+  .socialShareIcon {
+    color: var(--green-gray-300);
+  }

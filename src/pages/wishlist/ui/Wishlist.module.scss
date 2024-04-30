@@ -1,0 +1,6 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/container.scss';
+
+.wishlist {
+  @include container;
+}

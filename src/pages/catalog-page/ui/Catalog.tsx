@@ -23,7 +23,7 @@ const Catalog: FC = () => {
         console.log('handlePageChange');
     };
     return (
-        <div data-testId="mainPage">
+        <div data-testid="mainPage">
             <Breadcrumbs items={crumbs} />
             <div className={cls.catalog}>
                 <div className={cls.filter}>

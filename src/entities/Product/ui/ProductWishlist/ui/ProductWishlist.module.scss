@@ -1,0 +1,135 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/container.scss';
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/text-styles.scss';
+
+
+.productWishlist {
+  $block-name: &; // #{$block-name}__element
+
+  display: grid;
+  grid-template-columns: 1fr minmax(194px, 317px) minmax(108px, 187px) 194px;
+  gap: 20px;
+  align-items: center;
+
+  @media screen and (max-width: $screen-d) {
+    grid-template-columns: 2fr 1fr 1fr 194px;
+  }
+
+  @media screen and (max-width: $screen-tl) {
+    grid-template-columns: 2fr 1fr 1fr 178px;
+  }
+
+  @media screen and (max-width: $screen-ti) {
+    grid-template-areas: "info price stock" "info price actions";
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+
+  @media screen and (max-width: $screen-t) {
+    grid-template-areas: "info info" "price stock" "actions actions";
+    grid-template-columns: auto 1fr;
+  }
+
+  &Info {
+    @include flex-center-vertical;
+
+    gap: 20px;
+
+    @media screen and (max-width: $screen-tl) {
+      flex-direction: column;
+      gap: 6px;
+      align-items: flex-start;
+    }
+
+    @media screen and (max-width: $screen-ti) {
+      grid-area: info;
+    }
+  }
+
+  &Photo {
+    @include box(100px);
+
+    object-fit: contain;
+
+    @media screen and (max-width: $screen-t) {
+      width: 100%;
+      height: auto;
+      max-height: 250px;
+    }
+  }
+
+  &Title {
+    @include body-m;
+
+    margin: 0;
+  }
+
+  &Price {
+    @include flex-center-vertical;
+    @include body-m(500);
+
+    gap: 4px;
+    margin: 0;
+
+    @media screen and (max-width: $screen-ti) {
+      flex-direction: column;
+      grid-area: price;
+      align-items: flex-start;
+    }
+
+    @media screen and (max-width: $screen-t) {
+      flex-direction: row;
+    }
+  }
+
+  &PriceNew {
+    color: var(--monochrome-900);
+  }
+
+  &PriceOld {
+    color: var(--monochrome-400);
+    text-decoration-line: line-through;
+  }
+
+  &Stock {
+    width: fit-content;
+
+    @media screen and (max-width: $screen-ti) {
+      grid-area: stock;
+      width: auto;
+      text-align: center;
+    }
+
+    @media screen and (max-width: $screen-t) {
+      width: fit-content;
+    }
+  }
+
+  &Actions {
+    @include flex-center-vertical;
+
+    gap: 10px;
+    justify-content: space-between;
+
+    @media screen and (max-width: $screen-ti) {
+      grid-area: actions;
+    }
+
+    @media screen and (max-width: $screen-t) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+
+  &AddToCartButton {
+    max-height: 45px;
+    white-space: nowrap;
+
+    @media screen and (max-width: $screen-ti) {
+      flex-grow: 1;
+    }
+  }
+}
