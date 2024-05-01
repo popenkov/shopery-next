@@ -1,0 +1,121 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/button-reset.scss';
+
+
+.ThumbSlider{
+  
+  display: flex;
+  gap: 12px;
+
+
+}
+
+
+  .thumbContainer {
+    position: relative;
+    max-height: 556px;
+
+    @media screen and (max-width: $screen-d) {
+      max-height: 400px;
+    }
+
+    @media screen and (max-width: $screen-tl) {
+      display: none;
+    }
+  }
+
+  .thumb {
+    max-width: 80px;
+    max-height: 400px;
+    margin: 80px 0;
+    overflow-y: hidden;
+
+    @media screen and (max-width: $screen-d) {
+      max-height: 240px;
+    }
+
+    @media screen and (max-width: $screen-tl) {
+      display: none;
+    }
+  }
+
+  .thumbSlide {
+    width: 80px;
+    height: 90px;
+    border-radius: 2px;
+
+    &--active {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        border: 1px solid var(--primary);
+        border-radius: 5px;
+        content: "";
+        inset: 0;
+      }
+    }
+  }
+
+  .main {
+    max-width: 556px;
+
+    @media screen and (max-width: $screen-d) {
+      max-height: 400px;
+    }
+
+    @media screen and (max-width: $screen-tl) {
+      max-width: unset;
+      max-height: 300px;
+    }
+  }
+
+  .mainImg {
+    object-fit: contain;
+
+    @media screen and (max-width: $screen-d) {
+      max-height: 400px;
+    }
+
+    @media screen and (max-width: $screen-tl) {
+      width: 100%;
+      max-height: 300px;
+    }
+  }
+
+  .navigation {
+    @media screen and (max-width: $screen-tl) {
+      display: none;
+    }
+  }
+
+  .navigationButtonPrev {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+  }
+
+  .navigationButtonNext {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .navigationButtonIcon {
+    @include box(22px);
+
+    color: var(--monochrome-400);
+  }
+
+  .navigationButton {
+    @include button-reset;
+
+    &.swiper-button-disabled .navigationButtonIcon {
+      color: var(--monochrome-100);
+      cursor: not-allowed;
+    }
+  }
