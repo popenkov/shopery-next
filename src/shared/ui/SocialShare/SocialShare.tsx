@@ -1,33 +1,30 @@
 import { FC } from 'react';
 
 import cls from './SocialShare.module.scss';
+import { getFooterData } from '@/widgets/Footer/api/getFooterData';
+import { RoundButton } from '../Buttons';
+import { getSocialIcon } from '@/widgets/Footer/ui/FooterSocials/getSocialIcon';
 
 export const SocialShare: FC = () => {
+    const { socialLinks } = getFooterData();
     return (
         <div className={cls.socialShare}>
             <span className={cls.socialShareText}>Share:</span>
             <div className={cls.socialShareContainer}>
-                {/* todo */}
-                {/* <a className="button-round button-round--ghost>
-                    <svg className="button-round__icon cls.socialShare__icon">
-                        <use href="img/svgSprite.svg#icon__facebook"></use>
-                    </svg>
-                </a>
-                <a className="button-round button-round--ghost">
-                    <svg className="button-round__icon cls.socialShare__icon">
-                        <use href="img/svgSprite.svg#icon__twitter"></use>
-                    </svg>
-                </a>
-                <a className="button-round button-round--ghost">
-                    <svg className="button-round__icon cls.socialShare__icon">
-                        <use href="img/svgSprite.svg#icon__pinterest"></use>
-                    </svg>
-                </a>
-                <a className="button-round button-round--ghost">
-                    <svg className="button-round__icon cls.socialShare__icon">
-                        <use href="img/svgSprite.svg#icon__instagram"></use>
-                    </svg>
-                </a> */}
+                {socialLinks.map((socialLink) => {
+                    const { icon, id } = socialLink;
+                    const Icon = getSocialIcon(icon);
+                    return (
+                        <RoundButton
+                            key={id}
+                            className={cls.link}
+                            theme="ghost"
+                            as="a"
+                        >
+                            <Icon className={cls.linkIcon} />
+                        </RoundButton>
+                    );
+                })}
             </div>
         </div>
     );

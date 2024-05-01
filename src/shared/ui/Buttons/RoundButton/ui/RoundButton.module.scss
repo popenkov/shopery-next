@@ -36,10 +36,10 @@
     }
 
     &:disabled {
-      background-color: var(--gray-50);
+      background-color: var(--monochrome-50);
 
       svg {
-        color: var(--gray-900);
+        color: var(--monochrome-900);
       }
     }
 
@@ -48,10 +48,10 @@
 
   &.secondary {
     background-color: var(--back-primary);
-    box-shadow: 0 0 8px 0 var(--gray-200);
+    box-shadow: 0 0 8px 0 var(--monochrome-200);
 
       svg {
-      color: var(--gray-900);
+      color: var(--monochrome-900);
     }
 
     @media (hover: hover) {

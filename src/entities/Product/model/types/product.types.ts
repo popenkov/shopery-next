@@ -1,5 +1,7 @@
 import { TTag } from '@/shared/ui/Tag';
 
+type StockVariant = 'not-available' | 'in-stock';
+
 export type TProduct = {
     id: string;
     path: string;
@@ -9,4 +11,8 @@ export type TProduct = {
     priceOld?: number;
     rating: number;
     tags?: TTag[];
+    stock?: {
+        type: StockVariant;
+        text: string;
+    };
 };

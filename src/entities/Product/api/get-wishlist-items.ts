@@ -1,6 +1,7 @@
 import { nanoid } from 'nanoid';
+import { TProduct } from '..';
 
-const data = [
+const data: Omit<TProduct, 'rating'>[] = [
     {
         id: nanoid(),
         path: '/',

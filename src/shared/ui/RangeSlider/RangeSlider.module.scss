@@ -9,17 +9,17 @@
 .text {
   @include body-s;
 
-  color: var(--gray-700);
+  color: var(--monochrome-700);
 }
 
 .textValue {
-  color: var(--gray-900);
+  color: var(--monochrome-900);
   font-weight: 500;
 }
 
 .slider {
   height: 6px;
-  background-color: var(--gray-100);
+  background-color: var(--monochrome-100);
   border-radius: 15px;
 }
 
@@ -31,7 +31,7 @@
 .rangeSlider {
   :global(.rc-slider-rail) {
     height: 6px;
-    background-color: var(--gray-100);
+    background-color: var(--monochrome-100);
     border-radius: 15px;
   }
 

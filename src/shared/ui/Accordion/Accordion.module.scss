@@ -15,7 +15,7 @@
   transition: all 0.3s ease-in;
 
   &:not(.no_border) {
-    border-bottom: 1px solid var(--gray-100);
+    border-bottom: 1px solid var(--monochrome-100);
   }
 
   &.no_border {
@@ -37,7 +37,7 @@
 
   width: 100%;
   padding-bottom: 6px;
-  color: var(--gray-900);
+  color: var(--monochrome-900);
   background-color: var(--back-primary);
   cursor: pointer;
   transition: color var(--transition);

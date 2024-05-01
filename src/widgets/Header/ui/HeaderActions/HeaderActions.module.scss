@@ -17,13 +17,13 @@
   display: block;
   width: 1px;
   height: 24px;
-  background-color: var(--gray-200);
+  background-color: var(--monochrome-200);
 }
 
 .favoriteIcon {
   @include box(33px);
 
   stroke-width: 1.3px;
-  color: var(--gray-900);
+  color: var(--monochrome-900);
   fill: transparent;
 }

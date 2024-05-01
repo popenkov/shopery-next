@@ -10,7 +10,7 @@
   @include box(16px);
 
   position: relative;
-  color: var(--gray-200);
+  color: var(--monochrome-200);
 
   &.filled {
     color: var(--orange);

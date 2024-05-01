@@ -35,14 +35,14 @@
 .homeIcon {
   @include box(24px);
 
-  color: var(--gray-400);
+  color: var(--monochrome-400);
 }
 
 .link {
   @include flex-center-vertical;
 
   gap: 8px;
-  color: var(--gray-400);
+  color: var(--monochrome-400);
   white-space: nowrap;
   text-decoration: none;
 
@@ -70,6 +70,6 @@
 .chevron {
   @include box(12px);
 
-  color: var(--gray-400);
+  color: var(--monochrome-400);
   transform: rotate(-90deg);
 }

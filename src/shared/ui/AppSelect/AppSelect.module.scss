@@ -8,7 +8,7 @@
   :global(.custom-select__control) {
     min-width: 166px;
     padding: 0 16px;
-    border: 1px solid var(--gray-300);
+    border: 1px solid var(--monochrome-300);
   }
 
   :global(.custom-select__indicator) {
@@ -18,7 +18,7 @@
     svg {
       @include box(16px);
 
-      color: var(--gray-700);
+      color: var(--monochrome-700);
     }
   }
 

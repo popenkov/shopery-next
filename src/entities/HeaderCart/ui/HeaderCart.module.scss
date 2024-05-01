@@ -16,7 +16,7 @@
   @include box(34px);
 
   stroke-width: 1.3px;
-  color: var(--gray-900);
+  color: var(--monochrome-900);
 }
 
 .cartItemsAmount {
@@ -47,5 +47,5 @@
 
 .cartTitle {
   margin: 0;
-  color: var(--gray-700);
+  color: var(--monochrome-700);
 }

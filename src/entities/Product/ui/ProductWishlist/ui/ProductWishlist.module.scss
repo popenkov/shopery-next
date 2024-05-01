@@ -51,24 +51,26 @@
   &Photo {
     @include box(100px);
 
-    object-fit: contain;
+    position: relative;
+    
 
     @media screen and (max-width: $screen-t) {
       width: 100%;
       height: auto;
-      max-height: 250px;
+      min-height: 250px;
+      max-height: 350px;
+    }
+
+    img {
+      object-fit: contain;
     }
   }
 
-  &Title {
-    @include body-m;
 
-    margin: 0;
-  }
 
   &Price {
     @include flex-center-vertical;
-    @include body-m(500);
+
 
     gap: 4px;
     margin: 0;

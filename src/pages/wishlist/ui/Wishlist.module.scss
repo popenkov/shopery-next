@@ -1,6 +1,12 @@
 @import '@/shared/styles/_breakpoints';
 @import '@/shared/styles/mixins/container.scss';
+@import '@/shared/styles/mixins/flexbox.scss';
 
 .wishlist {
   @include container;
+  @include flex-column;
+
+  
+  gap: 32px;
+    padding: 40px 0 80px;
 }
