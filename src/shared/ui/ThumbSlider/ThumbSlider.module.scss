@@ -42,13 +42,12 @@
   }
 
   .thumbSlide {
+    position: relative;
     width: 80px;
     height: 90px;
     border-radius: 2px;
 
-    &--active {
-      position: relative;
-
+    &:global(.swiper-slide-thumb-active) {
       &::after {
         position: absolute;
         border: 1px solid var(--primary);

@@ -1,25 +1,38 @@
 'use client';
 
-import { FC } from 'react';
+import { FC, useRef, useState } from 'react';
 
-import type { Swiper as SwiperType } from 'swiper';
-import 'swiper/css/effect-fade';
-import 'swiper/css/pagination';
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
+import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
+import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import type { Swiper as SwiperType } from 'swiper';
+import 'swiper/css/pagination';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
-import cn from 'classnames';
 
-// import required modules
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import cn from 'classnames';
+import ChevronIcon from '@public/icons/icon__chevron-down.svg';
 
 import cls from './ThumbSlider.module.scss';
+
+export const onBeforeInit = (
+    swiper: SwiperType,
+    prevRef: React.RefObject<HTMLButtonElement>,
+    nextRef: React.RefObject<HTMLButtonElement>,
+) => {
+    if (typeof swiper.params.navigation !== 'boolean') {
+        const navigation = swiper.params.navigation;
+        if (navigation) {
+            navigation.prevEl = prevRef.current;
+            navigation.nextEl = nextRef.current;
+        }
+    }
+
+    swiper.navigation.init();
+    swiper.navigation.update();
+};
 
 type Props = {
     data: {
@@ -32,6 +45,9 @@ type Props = {
 export const ThumbSlider: FC<Props> = ({ data, className }) => {
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType>();
 
+    const buttonPrevRef = useRef<HTMLButtonElement | null>(null);
+    const buttonNextRef = useRef<HTMLButtonElement | null>(null);
+
     return (
         <div className={cn(cls.ThumbSlider, className)}>
             <>
@@ -39,35 +55,57 @@ export const ThumbSlider: FC<Props> = ({ data, className }) => {
                     <div className={cls.thumb}>
                         <Swiper
                             onSwiper={setThumbsSwiper}
+                            direction="vertical"
                             loop={true}
-                            spaceBetween={10}
-                            slidesPerView={4}
+                            spaceBetween={8}
+                            slidesPerView="auto"
                             freeMode={true}
+                            navigation={{
+                                nextEl: buttonNextRef.current,
+                                prevEl: buttonPrevRef.current,
+                            }}
                             watchSlidesProgress={true}
-                            // todo
-                            // modules={[FreeMode, Navigation, Thumbs]}
-                            modules={[FreeMode, Thumbs]}
-                            className="mySwiper"
+                            modules={[FreeMode, Navigation, Thumbs]}
+                            onInit={(swiper: SwiperType) => {
+                                onBeforeInit(
+                                    swiper,
+                                    buttonPrevRef,
+                                    buttonNextRef,
+                                );
+                            }}
                         >
                             {data.thumb.map((photo) => {
                                 return (
                                     <SwiperSlide className={cls.thumbSlide}>
-                                        <img src={photo} />
+                                        {/* <img src={photo} /> */}
+                                        <Image
+                                            src={photo}
+                                            alt="product image"
+                                            fill
+                                        />
                                     </SwiperSlide>
                                 );
                             })}
                         </Swiper>
                     </div>
-                    <div className="card-slider__navigation js-card-slider-navigation">
-                        <button className="card-slider__navigation-btn card-slider__navigation-btn-prev js-card-slider-navigation-prev">
-                            <svg className="card-slider__navigation-btn-icon">
-                                <use href="img/svgSprite.svg#icon__chevron-down"></use>
-                            </svg>
+                    <div className={cls.navigation}>
+                        <button
+                            className={cn(
+                                cls.navigationButton,
+                                cls.navigationButtonPrev,
+                            )}
+                            ref={buttonPrevRef}
+                        >
+                            <ChevronIcon className={cls.navigationButtonIcon} />
                         </button>
-                        <button className="card-slider__navigation-btn card-slider__navigation-btn-next js-card-slider-navigation-next">
-                            <svg className="card-slider__navigation-btn-icon">
-                                <use href="img/svgSprite.svg#icon__chevron-down"></use>
-                            </svg>
+                        <button
+                            className={cn(
+                                cls.navigationButton,
+                                cls.navigationButtonNext,
+                            )}
+                            ref={buttonNextRef}
+                        >
+                            <ChevronIcon className={cls.navigationButtonIcon} />
                         </button>
                     </div>
                 </div>
@@ -75,12 +113,8 @@ export const ThumbSlider: FC<Props> = ({ data, className }) => {
                     <Swiper
                         loop={true}
                         spaceBetween={10}
-                        navigation={true}
                         thumbs={{ swiper: thumbsSwiper }}
-                        // todo
-                        // modules={[FreeMode, Navigation, Thumbs]}
                         modules={[FreeMode, Thumbs]}
-                        className="mySwiper2"
                     >
                         {data.thumb.map((photo) => {
                             return (

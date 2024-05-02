@@ -4,233 +4,31 @@ import { Breadcrumbs } from '@/entities/Breadcrumps';
 
 import cls from './Product.module.scss';
 import { AppRouteNames } from '@/shared/interfaces/router';
-import { ThumbSlider } from '@/shared/ui/ThumbSlider/ThumbSlider';
 import { getProductDetails } from '@/entities/Product/api/get-product-details';
+import { ProductDescription } from '@/entities/Product';
+import { AddToCartCounter } from '@/features/Product/add-to-cart-counter/AddToCartCounter';
+import { AddToFavorites } from '@/features/Product/add-to-favorites/AddToFavorites';
 
 const Product: FC = () => {
-    const crumbs: AppRouteNames[] = [AppRouteNames.HOME, AppRouteNames.CATALOG];
+    const { sliderImages, title } = getProductDetails();
 
-    const { sliderImages } = getProductDetails();
+    const crumbs = [AppRouteNames.HOME, AppRouteNames.CATALOG, title];
+
     return (
         <div data-testid="productPage" className={cls.product}>
             <Breadcrumbs items={crumbs} />
             <div className="product-page">
-                <div
-                    className="product-description product-page__description-section container"
-                    aria-hidden="true"
-                >
-                    <div className="product-description__content">
-                        {/* product-description__slider  */}
-                        <ThumbSlider
-                            data={sliderImages}
-                            className="product-description__slider"
-                        />
-                        <div className="product-description__about">
-                            <div className="product-description__header">
-                                <div className="product-description__title-wrapper">
-                                    <h2 className="product-description__title">
-                                        Chinese Cabbage
-                                    </h2>
-                                    <div className="product-description__tags">
-                                        <div className="tag tag--in-stock">
-                                            In Stock
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="product-description__review-wrapper">
-                                    <div className="product-description__review">
-                                        <div className="star-rating product-description__rating">
-                                            <svg className="star-rating__star star-rating__star--full">
-                                                <use href="img/svgSprite.svg#icon__star"></use>
-                                            </svg>
-                                            <svg className="star-rating__star star-rating__star--full">
-                                                <use href="img/svgSprite.svg#icon__star"></use>
-                                            </svg>
-                                            <svg className="star-rating__star star-rating__star--full">
-                                                <use href="img/svgSprite.svg#icon__star"></use>
-                                            </svg>
-                                            <svg className="star-rating__star star-rating__star--full">
-                                                <use href="img/svgSprite.svg#icon__star"></use>
-                                            </svg>
-                                            <svg className="star-rating__star">
-                                                <use href="img/svgSprite.svg#icon__star"></use>
-                                            </svg>
-                                        </div>
-                                        <span className="product-description__review-text">
-                                            4 Review
-                                        </span>
-                                    </div>
-                                    <span className="product-description__separator">
-                                        .
-                                    </span>
-                                    <div className="product-description__sku">
-                                        <span className="product-description__sku-text">
-                                            SKU:
-                                        </span>
-                                        <span className="product-description__sku-value">
-                                            2,51,594
-                                        </span>
-                                    </div>
-                                </div>
-                                <div className="product-description__price-wrapper">
-                                    <span className="product-description__price--old">
-                                        $48.00
-                                    </span>
-                                    <span className="product-description__price">
-                                        $17.28
-                                    </span>
-                                    <div className="product-description__price-tags">
-                                        <div className="tag tag--red">
-                                            64% Off
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="product-description__info">
-                                <div className="product-description__brand">
-                                    <span className="product-description__brand-text">
-                                        Brand:
-                                    </span>
-                                    <img
-                                        className="product-description__brand-value"
-                                        src="img/brand-farmary.svg"
-                                        alt="image"
-                                    />
-                                </div>
-                                <div className="share-block product-description__share">
-                                    <span className="share-block__text">
-                                        Share item:
-                                    </span>
-                                    <div className="share-block__container">
-                                        <a className="button-round button-round--ghost">
-                                            <svg className="button-round__icon share-block__icon">
-                                                <use href="img/svgSprite.svg#icon__facebook"></use>
-                                            </svg>
-                                        </a>
-                                        <a className="button-round button-round--ghost">
-                                            <svg className="button-round__icon share-block__icon">
-                                                <use href="img/svgSprite.svg#icon__twitter"></use>
-                                            </svg>
-                                        </a>
-                                        <a className="button-round button-round--ghost">
-                                            <svg className="button-round__icon share-block__icon">
-                                                <use href="img/svgSprite.svg#icon__pinterest"></use>
-                                            </svg>
-                                        </a>
-                                        <a className="button-round button-round--ghost">
-                                            <svg className="button-round__icon share-block__icon">
-                                                <use href="img/svgSprite.svg#icon__instagram"></use>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                                <p className="product-description__description">
-                                    Class aptent taciti sociosqu ad litora
-                                    torquent per conubia nostra, per inceptos
-                                    himenaeos. Nulla nibh diam, blandit vel
-                                    consequat nec, ultrices et ipsum. Nulla
-                                    varius magna a consequat pulvinar.{' '}
-                                </p>
-                            </div>
-                            <div className="product-description__cart">
-                                <div
-                                    className="cart-widget js-cart-widget"
-                                    data-item-id="1"
-                                >
-                                    <div className="amount-actions cart-widget__amount">
-                                        <button className="amount-actions__button js-quantity-minus">
-                                            <svg className="amount-actions__button-icon">
-                                                <use href="img/svgSprite.svg#icon__minus"></use>
-                                            </svg>
-                                        </button>
-                                        <div className="amount-actions__input-wrapper">
-                                            <input
-                                                className="amount-actions__input js-quantity-input"
-                                                type="number"
-                                                value="5"
-                                                min="1"
-                                                readOnly
-                                            />
-                                        </div>
-                                        <button className="amount-actions__button js-quantity-plus">
-                                            <svg className="amount-actions__button-icon">
-                                                <use href="img/svgSprite.svg#icon__plus"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <a
-                                        className="button  button--fill button--large cart-widget__cart-button js-add-to-cart"
-                                        href="#"
-                                    >
-                                        <span className="cart-widget__cart-button-text">
-                                            Add to Cart
-                                        </span>
-                                        <svg className="cart-widget__cart-button-icon">
-                                            <use href="img/svgSprite.svg#icon__cart"></use>
-                                        </svg>
-                                    </a>
-                                    <button className="button-round cart-widget__favorite-button">
-                                        <svg className="cart-widget__favorite-icon">
-                                            <use href="img/svgSprite.svg#icon__heart-lined"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div className="product-description__categories">
-                                <div className="product-description__category">
-                                    <span className="product-description__categories-text">
-                                        Category:
-                                    </span>
-                                    <div className="product-description__categories-container">
-                                        <a
-                                            className="product-description__categories-link"
-                                            href="#"
-                                        >
-                                            Vegetables
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="product-description__tags">
-                                    <span className="product-description__tags-text">
-                                        Tag:
-                                    </span>
-                                    <div className="product-description__tags-container">
-                                        <a
-                                            className="product-description__tags-link"
-                                            href="#"
-                                        >
-                                            Vegetables
-                                        </a>
-                                        <a
-                                            className="product-description__tags-link"
-                                            href="#"
-                                        >
-                                            Healthy
-                                        </a>
-                                        <a
-                                            className="product-description__tags-link"
-                                            href="#"
-                                        >
-                                            Chinese
-                                        </a>
-                                        <a
-                                            className="product-description__tags-link"
-                                            href="#"
-                                        >
-                                            Cabbage
-                                        </a>
-                                        <a
-                                            className="product-description__tags-link"
-                                            href="#"
-                                        >
-                                            Green Cabbage
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <ProductDescription
+                    sliderImages={sliderImages}
+                    actions={
+                        <>
+                            <AddToCartCounter />
+                            <AddToFavorites
+                                className={cls.productFavoriteButton}
+                            />
+                        </>
+                    }
+                />
                 {/* tabs */}
                 {/* <div className="product-page__tabs">
                     <div className="tabs section__content">

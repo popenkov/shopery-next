@@ -1,0 +1,72 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/text-styles.scss';
+
+
+
+.AddToCartCounter {
+
+
+  @include flex-center-vertical;
+
+  gap: 12px;
+
+  @media screen and (max-width: $screen-t) {
+    display: grid;
+    grid-template-areas: "amount fav" "button button";
+    grid-template-columns: 124px auto;
+  }
+
+ 
+}
+
+ .AddToCartCounterAmount {
+    @include flex-center-vertical;
+
+    border-radius: 170px;
+
+    @media screen and (max-width: $screen-t) {
+      grid-area: amount;
+    }
+  }
+
+  .AddToCartCounterCartButton {
+    @include flex-center;
+
+    flex-grow: 1;
+    gap: 16px;
+
+    @media screen and (max-width: $screen-t) {
+      grid-area: button;
+    }
+  }
+
+  .AddToCartCounterCartButtonText {
+    @include body-m(600);
+  }
+
+  .AddToCartCounterCartButtonIcon {
+    @include box(20px);
+  }
+// todo
+//   .AddToCartCounterfavorite-icon {
+//     @include box(20px);
+//   }
+
+//   .AddToCartCounterfavorite-button {
+//     @include box(52px);
+
+//     background-color: var(--green-gray-100);
+
+//     @media screen and (max-width: $screen-t) {
+//       grid-area: fav;
+//     }
+
+//     @media (hover: hover) {
+//       &:hover {
+//         color: var(--front-primary-inversed);
+//         background-color: var(--primary);
+//       }
+//     }
+//   }
