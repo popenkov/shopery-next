@@ -1,0 +1,55 @@
+@import '@/shared/styles/breakpoints';
+@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/box.scss';
+
+.productReview {
+  @include flex-column;
+
+  gap: 13px;
+
+
+}
+
+  .productReviewHeader {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .productReviewAuthor {
+    display: grid;
+    grid-template-areas: "avatar name" "avatar rating";
+    grid-template-columns: 41px auto;
+    gap: 1px 12px;
+  }
+
+  .productReviewAvatar {
+    @include box(40px);
+
+    grid-area: avatar;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  .productReviewName {
+    @include body-small(500);
+
+    grid-area: name;
+    margin: 0;
+  }
+
+  .productReviewRating {
+    grid-area: rating;
+  }
+
+  .productReviewDate {
+    margin: 0;
+    color: var(--monochrome-400);
+  }
+
+  .productReviewMain {
+
+    margin: 0;
+    color: var(--monochrome-500);
+  }

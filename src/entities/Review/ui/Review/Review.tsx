@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import { Text } from '@/shared/ui/Text';
 import QuoteIcon from '@public/icons/icon__quote.svg';
-import { TPreview } from '../model/types/Review.types';
+import { TPreview } from '../../model/types/Review.types';
 
 import cls from './Review.module.scss';
 
