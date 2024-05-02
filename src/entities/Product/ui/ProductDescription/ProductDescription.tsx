@@ -4,22 +4,20 @@ import { FC, ReactNode } from 'react';
 import cls from './ProductDescription.module.scss';
 import { StarRating } from '@/entities/StarRating';
 import { SocialShare } from '@/shared/ui/SocialShare/SocialShare';
+import { TProductDetailed } from '../..';
 
 type Props = {
-    sliderImages: {
-        thumb: string[];
-        main: string[];
-    };
+    data: TProductDetailed;
     className?: string;
     actions?: ReactNode;
 };
 
-export const ProductDescription: FC<Props> = ({ sliderImages, actions }) => {
+export const ProductDescription: FC<Props> = ({ data, actions }) => {
     return (
         <div className={cls.productDescription} aria-hidden="true">
             <div className={cls.productDescriptionContent}>
                 <ThumbSlider
-                    data={sliderImages}
+                    data={data.sliderImages}
                     className={cls.productDescriptionSlider}
                 />
                 <div className="product-description__about">

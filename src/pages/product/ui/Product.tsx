@@ -8,18 +8,34 @@ import { getProductDetails } from '@/entities/Product/api/get-product-details';
 import { ProductDescription } from '@/entities/Product';
 import { AddToCartCounter } from '@/features/Product/add-to-cart-counter/AddToCartCounter';
 import { AddToFavorites } from '@/features/Product/add-to-favorites/AddToFavorites';
+import Tabs from '@/shared/ui/Tabs/Tabs';
+
+const tabs = [
+    {
+        label: 'Descriptions',
+        content: <p>This is the content of Tab 1.</p>,
+    },
+    {
+        label: 'Additional Information',
+        content: <p>This is the content of Tab 2.</p>,
+    },
+    {
+        label: 'Customer Feedback',
+        content: <p>This is the content of Tab 3.</p>,
+    },
+];
 
 const Product: FC = () => {
-    const { sliderImages, title } = getProductDetails();
+    const data = getProductDetails();
 
-    const crumbs = [AppRouteNames.HOME, AppRouteNames.CATALOG, title];
+    const crumbs = [AppRouteNames.HOME, AppRouteNames.CATALOG, data.title];
 
     return (
         <div data-testid="productPage" className={cls.product}>
             <Breadcrumbs items={crumbs} />
             <div className="product-page">
                 <ProductDescription
-                    sliderImages={sliderImages}
+                    data={data}
                     actions={
                         <>
                             <AddToCartCounter />
@@ -29,6 +45,7 @@ const Product: FC = () => {
                         </>
                     }
                 />
+                <Tabs tabs={tabs} />
                 {/* tabs */}
                 {/* <div className="product-page__tabs">
                     <div className="tabs section__content">

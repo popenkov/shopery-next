@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useRef, useState } from 'react';
+import { FC, useId, useRef, useState } from 'react';
 
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -75,8 +75,12 @@ export const ThumbSlider: FC<Props> = ({ data, className }) => {
                             }}
                         >
                             {data.thumb.map((photo) => {
+                                const id = useId();
                                 return (
-                                    <SwiperSlide className={cls.thumbSlide}>
+                                    <SwiperSlide
+                                        className={cls.thumbSlide}
+                                        key={id}
+                                    >
                                         {/* <img src={photo} /> */}
                                         <Image
                                             src={photo}
@@ -117,8 +121,9 @@ export const ThumbSlider: FC<Props> = ({ data, className }) => {
                         modules={[FreeMode, Thumbs]}
                     >
                         {data.thumb.map((photo) => {
+                            const id = useId();
                             return (
-                                <SwiperSlide className={cls.mainSlide}>
+                                <SwiperSlide className={cls.mainSlide} key={id}>
                                     <img src={photo} className={cls.mainImg} />
                                 </SwiperSlide>
                             );

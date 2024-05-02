@@ -1,60 +1,35 @@
 'use client';
-import { useEffect, useState } from 'react';
 
+import { FC, ReactNode, useId, useState } from 'react';
 import cn from 'classnames';
-
 import cls from './Tabs.module.scss';
 
-interface SliderProps<T> {
-    data: T[];
-}
-
-export interface TabItem<T> {
-    id: string;
+interface Tab {
     label: string;
-    content: T[];
+    content: ReactNode;
 }
 
-interface TabsProps<T> {
-    tabs: TabItem<T>[];
-    onTabChange?: (value: string) => void;
-    tabContent: (item: T) => JSX.Element;
-    sliderContent?: (props: SliderProps<T>) => JSX.Element;
+interface TabsProps {
+    tabs: Tab[];
 }
 
-export const Tabs = <T extends unknown>({
-    tabs,
-    onTabChange,
-    tabContent,
-    sliderContent,
-}: TabsProps<T>) => {
-    const [selectedTab, setSelectedTab] = useState<string>(tabs[0].id);
-    const [tabContentState, setTabContentState] = useState<T[]>([]);
-
-    const handleTabChange = (value: string) => {
-        setSelectedTab(value);
-
-        onTabChange?.(value);
-    };
-
-    useEffect(() => {
-        const activeContent = tabs.find((t) => t.id === selectedTab)?.content;
-        setTabContentState(activeContent || []);
-    }, [selectedTab, tabs]);
+const Tabs: FC<TabsProps> = ({ tabs }) => {
+    const [selectedTab, setSelectedTab] = useState(0);
 
     return (
         <div className={cls.tabs}>
             <div className={cls.labels}>
                 <div className={cls.labelsContent}>
                     <div className={cls.scrollContainer}>
-                        {tabs.map((tab) => {
+                        {tabs.map((tab, index) => {
+                            const id = useId();
                             return (
                                 <button
                                     className={cn(cls.label, {
-                                        [cls.active]: selectedTab === tab.id,
+                                        [cls.active]: selectedTab === index,
                                     })}
-                                    onClick={() => handleTabChange(tab.id)}
-                                    key={tab.id}
+                                    onClick={() => setSelectedTab(index)}
+                                    key={id}
                                 >
                                     {tab.label}
                                 </button>
@@ -66,17 +41,12 @@ export const Tabs = <T extends unknown>({
             <div className={cls.panes}>
                 <div className={cls.pane}>
                     <div className={cls.paneContent}>
-                        {tabContentState?.map((item) => {
-                            return tabContent(item);
-                        })}
+                        {tabs[selectedTab].content}
                     </div>
-                    {sliderContent && (
-                        <div className={cls.sliderContent}>
-                            {sliderContent({ data: tabContentState })}
-                        </div>
-                    )}
                 </div>
             </div>
         </div>
     );
 };
+
+export default Tabs;

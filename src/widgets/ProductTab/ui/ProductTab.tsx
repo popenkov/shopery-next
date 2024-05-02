@@ -7,7 +7,7 @@ import { ProductLarge, TProduct } from '@/entities/Product';
 
 import { getProductTab } from '../api/getProductTabs';
 import { Text } from '@/shared/ui/Text';
-import { Tabs } from '@/shared/ui/Tabs';
+import { ProductTabs } from '@/shared/ui/ProductTabs';
 
 import cls from './ProductTab.module.scss';
 
@@ -28,7 +28,7 @@ export const ProductTab: FC = async () => {
                 Introducing Our Products
             </Text>
 
-            <Tabs<TProduct>
+            <ProductTabs<TProduct>
                 tabs={productTabs}
                 tabContent={(item) => (
                     <ProductLarge data={item} key={item.id} />

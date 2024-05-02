@@ -16,3 +16,20 @@ export type TProduct = {
         text: string;
     };
 };
+
+export type TProductDetailed = {
+    id: string;
+    title: string;
+    price: number;
+    priceOld?: number;
+    rating: number;
+    tags?: TTag[];
+    stock?: {
+        type: StockVariant;
+        text: string;
+    };
+    sliderImages: {
+        thumb: string[];
+        main: string[];
+    };
+};
