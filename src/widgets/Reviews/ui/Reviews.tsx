@@ -2,11 +2,11 @@
 
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
-import { MobileSlider } from '@/entities/MobileSlider';
+import { MobileSlider } from '@/shared/ui/MobileSlider/MobileSlider';
 import { Review } from '@/entities/Review';
 
 import { getReviewsData } from '../api/getReviewsData';
-import { TPreview } from '@/entities/Review/model/types/Review.types';
+import { TReview } from '@/entities/Review/model/types/Review.types';
 
 import cls from './Reviews.module.scss';
 
@@ -25,9 +25,9 @@ export const Reviews: FC<Props> = () => {
                     })}
                 </div>
                 <div className={cls.reviewsMobile}>
-                    <MobileSlider<TPreview>
+                    <MobileSlider<TReview>
                         data={reviews}
-                        render={(child: TPreview) => <Review {...child} />}
+                        render={(child: TReview) => <Review {...child} />}
                     />
                 </div>
             </div>

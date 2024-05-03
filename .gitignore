@@ -40,7 +40,7 @@ next-env.d.ts
 #examples
 /src/stories
 
-/api
+api
 /json-server
 .env
 *storybook.log

@@ -142,23 +142,6 @@
 
 .paneContent {
 @include container;
-  @include grid(4);
-  @include display-desktop;
 
-        @media screen and (max-width: $screen-tl) {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    @media screen and (max-width: $screen-ti) {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    @media screen and (max-width: $screen-t) {
-      grid-template-columns: 1fr;
-    }
 }
 
-.sliderContent {
-  @include container;
-  @include display-mobile;
-}

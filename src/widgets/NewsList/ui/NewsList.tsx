@@ -5,7 +5,7 @@ import { FC } from 'react';
 import { News, TNews } from '@/entities/News';
 
 import { getNewsData } from '../api/getNewsData';
-import { MobileSlider } from '@/entities/MobileSlider';
+import { MobileSlider } from '@/shared/ui/MobileSlider/MobileSlider';
 
 import cls from './NewsList.module.scss';
 

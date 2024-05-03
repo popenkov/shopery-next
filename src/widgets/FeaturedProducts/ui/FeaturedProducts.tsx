@@ -2,7 +2,7 @@
 
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
-import { MobileSlider } from '@/entities/MobileSlider';
+import { MobileSlider } from '@/shared/ui/MobileSlider/MobileSlider';
 import { Product, TProduct } from '@/entities/Product';
 import { getFeaturedProducts } from '../api/getFeaturedProducts';
 

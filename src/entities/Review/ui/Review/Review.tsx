@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import { Text } from '@/shared/ui/Text';
 import QuoteIcon from '@public/icons/icon__quote.svg';
-import { TPreview } from '../../model/types/Review.types';
+import { TReview } from '../../model/types/Review.types';
 
 import cls from './Review.module.scss';
 
@@ -13,7 +13,7 @@ interface Props
             DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
             'id' | 'role'
         >,
-        TPreview {}
+        TReview {}
 
 export const Review: FC<Props> = ({ text, photo, name, role }) => {
     return (

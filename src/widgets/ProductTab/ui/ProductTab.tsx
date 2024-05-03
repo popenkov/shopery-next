@@ -2,7 +2,7 @@
 
 import React, { FC } from 'react';
 
-import { MobileSlider } from '@/entities/MobileSlider';
+import { MobileSlider } from '@/shared/ui/MobileSlider/MobileSlider';
 import { ProductLarge, TProduct } from '@/entities/Product';
 
 import { getProductTab } from '../api/getProductTabs';

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AdvantageCard } from '@/entities/AdvantageCard';
+import { AdvantageCard } from '@/entities/Advantage';
 import { getAdvantagesData } from '../api/getAdvantagesData';
 
 import cls from './Advantages.module.scss';

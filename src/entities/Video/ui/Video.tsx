@@ -12,22 +12,29 @@ import React, {
 import cn from 'classnames';
 
 import { Text } from '@/shared/ui/Text';
-import PlayIcon from '@public/icons/icon__play-button.svg';
+// todo
+// import PlayIcon from '@public/icons/icon__play-button.svg';
+import PlayIcon from '@public/icons/icon__play.svg';
 import { TVideo } from '..';
 
 import cls from './Video.module.scss';
 
 interface Props
     extends Omit<
-            DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
-            'title'
-        >,
-        TVideo {
+        DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
+        'title'
+    > {
+    data: TVideo;
     hasOverlay?: boolean;
+    buttonType?: 'primary' | 'secondary';
 }
 
-export const Video: FC<{ data: Props }> = ({ data }) => {
-    const { src, background, title, hasOverlay = true } = data;
+export const Video: FC<Props> = ({
+    data,
+    hasOverlay = true,
+    buttonType = 'primary',
+}) => {
+    const { src, background, title, subtitle } = data;
 
     const containerRef = useRef<HTMLDivElement>(null);
     const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -56,17 +63,24 @@ export const Video: FC<{ data: Props }> = ({ data }) => {
             >
                 {!isVideoShown && (
                     <div className={cls.videoText}>
-                        <p className={cls.videoSubtitle}>Video</p>
-                        <Text
-                            variant="heading_4"
-                            align="center"
-                            as="h2"
-                            className={cls.videoTitle}
-                        >
-                            {title}
-                        </Text>
+                        {subtitle && (
+                            <p className={cls.videoSubtitle}>{subtitle}</p>
+                        )}
+                        {title && (
+                            <Text
+                                variant="heading_4"
+                                align="center"
+                                as="h2"
+                                className={cls.videoTitle}
+                            >
+                                {title}
+                            </Text>
+                        )}
                         <button
-                            className={cls.videoPlayButton}
+                            className={cn(cls.videoPlayButton, {
+                                [cls.primary]: buttonType === 'primary',
+                                [cls.secondary]: buttonType === 'secondary',
+                            })}
                             onClick={handlePlayButtonClick}
                         >
                             <PlayIcon className={cls.videoPlayIcon} />

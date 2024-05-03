@@ -17,6 +17,21 @@ export type TProduct = {
     };
 };
 
+type TAdIcons = 'icon__price_tag' | 'icon__leaf';
+
+type SpecType = {
+    title: string;
+    value: { title: string; path: string }[];
+};
+
+type TReview = {
+    id: string;
+    text: string;
+    photo: string;
+    name: string;
+    role: string;
+};
+
 export type TProductDetailed = {
     id: string;
     title: string;
@@ -32,4 +47,19 @@ export type TProductDetailed = {
         thumb: string[];
         main: string[];
     };
+    descriptions: string;
+    specs: SpecType[];
+    feedback: TReview[];
+    ad: {
+        video: {
+            background: string;
+            src: string;
+        };
+        advantages: {
+            icon: TAdIcons;
+            title: string;
+            text: string;
+        }[];
+    };
+    relatedProducts: TProduct[];
 };

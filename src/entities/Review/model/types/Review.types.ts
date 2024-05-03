@@ -1,4 +1,4 @@
-export type TPreview = {
+export type TReview = {
     id: string;
     text: string;
     photo: string;

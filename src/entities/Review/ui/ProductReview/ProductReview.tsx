@@ -1,14 +1,14 @@
 import { FC } from 'react';
 
 import cn from 'classnames';
-import { TPreview } from '../../model/types/Review.types';
+import { TReview } from '../../model/types/Review.types';
 import { Text } from '@/shared/ui/Text';
 
 import cls from './ProductReview.module.scss';
 import { StarRating } from '@/entities/StarRating';
 
 type Props = {
-    data: TPreview;
+    data: TReview;
     className?: string;
 };
 

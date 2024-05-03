@@ -1,6 +1,7 @@
 @import '@/shared/styles/breakpoints';
 @import '@/shared/styles/mixins/flexbox.scss';
 @import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/text-styles.scss';
 
 .productReview {
   @include flex-column;
@@ -33,7 +34,7 @@
   }
 
   .productReviewName {
-    @include body-small(500);
+    @include body-s(500);
 
     grid-area: name;
     margin: 0;
