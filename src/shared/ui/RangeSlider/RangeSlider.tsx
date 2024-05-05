@@ -1,9 +1,7 @@
 'use client';
 
 import { DetailedHTMLProps, FC, HTMLAttributes, memo, useState } from 'react';
-
 import Slider from 'rc-slider';
-
 import 'rc-slider/assets/index.css';
 
 import cls from './RangeSlider.module.scss';

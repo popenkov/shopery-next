@@ -1,35 +1,33 @@
 import { ReactNode } from 'react';
-
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 
-import { Footer } from '@/widgets/Footer';
-import { Header } from '@/widgets/Header';
-
+import { Footer } from 'widgets/Footer';
+import { Header } from 'widgets/Header';
 import '@/app/styles/globals.scss';
 
 const poppins = Poppins({
-    weight: ['300', '400', '500', '600', '700'],
-    subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-    title: 'Ecobazar',
-    description: 'Ecobazar description',
+  title: 'Ecobazar',
+  description: 'Ecobazar description',
 };
 
 export default function RootLayout({
-    children,
+  children,
 }: Readonly<{
-    children: ReactNode;
+  children: ReactNode;
 }>) {
-    return (
-        <html lang="en">
-            <body className={poppins.className}>
-                <Header />
-                {children}
-                <Footer />
-            </body>
-        </html>
-    );
+  return (
+    <html lang="en">
+      <body className={poppins.className}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
+    </html>
+  );
 }

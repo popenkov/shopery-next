@@ -1,36 +1,47 @@
-import { getWishlistItems } from '@/entities/Product/api/get-wishlist-items';
-import { ProductWishlist } from '@/entities/Product/ui/ProductWishlist';
-
 import { FC } from 'react';
-import { WishlistTableHeader } from './WishlistTableHeader/WishlistTableHeader';
-import { WishlistTableFooter } from './WishlistTableFooter/WishlistTableFooter';
+
+import { AddToCartFromWishlist } from 'features/Product/add-to-cart-from-wishlist';
+import { RemoveFromFavorites } from 'features/Product/remove-from-favorites/ui/RemoveFromFavorites';
+import { getWishlistItems } from 'entities/Product/';
+import { ProductWishlist } from 'entities/Product/';
 
 import cls from './WishlistTable.module.scss';
-import { AddToCartFromWishlist } from '@/features/Product/add-to-cart-from-wishlist';
-import { RemoveFromFavorites } from '@/features/Product/remove-from-favorites/ui/RemoveFromFavorites';
+import { WishlistTableFooter } from './WishlistTableFooter/WishlistTableFooter';
+import { WishlistTableHeader } from './WishlistTableHeader/WishlistTableHeader';
+
+
+
+
+
+
+
+
+
+
+
 
 export const WishlistTable: FC = () => {
-    const { items } = getWishlistItems();
-    return (
-        <div className={cls.wishlistTable}>
-            <WishlistTableHeader />
-            <div className={cls.wishlistTableBody}>
-                {items.map((item) => {
-                    return (
-                        <ProductWishlist
-                            key={item.id}
-                            data={item}
-                            actions={
-                                <>
-                                    <AddToCartFromWishlist />
-                                    <RemoveFromFavorites />
-                                </>
-                            }
-                        />
-                    );
-                })}
-            </div>
-            <WishlistTableFooter />
-        </div>
-    );
+  const { items } = getWishlistItems();
+  return (
+    <div className={cls.wishlistTable}>
+      <WishlistTableHeader />
+      <div className={cls.wishlistTableBody}>
+        {items.map((item) => {
+          return (
+            <ProductWishlist
+              key={item.id}
+              data={item}
+              actions={
+                <>
+                  <AddToCartFromWishlist />
+                  <RemoveFromFavorites />
+                </>
+              }
+            />
+          );
+        })}
+      </div>
+      <WishlistTableFooter />
+    </div>
+  );
 };

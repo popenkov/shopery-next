@@ -1,11 +1,108 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
-
 import cn from 'classnames';
 
 import ChevronIcon from '@public/icons/icon__chevron-down.svg';
+
 import { Text } from '../Text';
 
 import cls from './CategoriesButton.module.scss';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 interface Props
     extends DetailedHTMLProps<

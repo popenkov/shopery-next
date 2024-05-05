@@ -1,4 +1,5 @@
 import { nanoid } from 'nanoid';
+
 import { TProduct } from '..';
 
 const data: Omit<TProduct, 'rating'>[] = [

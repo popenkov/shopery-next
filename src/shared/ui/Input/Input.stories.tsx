@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { fn, userEvent, within } from '@storybook/test';
 
 import { Input } from './Input';
-import { fn, userEvent, within } from '@storybook/test';
 
 const meta = {
     title: 'shared/Input',

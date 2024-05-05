@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { fn } from '@storybook/test';
 
 import { BurgerButton } from './BurgerButton';
-import { fn } from '@storybook/test';
 
 const meta = {
     title: 'shared/BurgerButton',

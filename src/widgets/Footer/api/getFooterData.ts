@@ -1,4 +1,5 @@
 import { nanoid } from 'nanoid';
+
 import { Footer } from '../model/types/footer.types';
 
 const data: Footer = {

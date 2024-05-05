@@ -1,48 +1,45 @@
 import { FC } from 'react';
 
-import { Breadcrumbs } from '@/entities/Breadcrumps';
+import { RelatedProducts } from 'widgets/ProductDetailed/RelatedProducts/RelatedProducts';
+import { ProductDetailedTabs } from 'widgets/ProductDetailed/Tabs';
+import { AddToCartCounter } from 'features/Product/add-to-cart-counter/AddToCartCounter';
+import { AddToFavorites } from 'features/Product/add-to-favorites/AddToFavorites';
+import { Breadcrumbs } from 'entities/Breadcrumps';
+import { ProductDescription, getProductDetails } from 'entities/Product';
+import { AppRouteNames } from 'shared/interfaces/router';
 
 import cls from './Product.module.scss';
-import { AppRouteNames } from '@/shared/interfaces/router';
-import { getProductDetails } from '@/entities/Product/api/get-product-details';
-import { ProductDescription } from '@/entities/Product';
-import { AddToCartCounter } from '@/features/Product/add-to-cart-counter/AddToCartCounter';
-import { AddToFavorites } from '@/features/Product/add-to-favorites/AddToFavorites';
-import { ProductDetailedTabs } from '@/widgets/ProductDetailed/Tabs';
-import { RelatedProducts } from '@/widgets/ProductDetailed/RelatedProducts/RelatedProducts';
 
 const Product: FC = () => {
-    const data = getProductDetails();
+  const data = getProductDetails();
 
-    const crumbs = [AppRouteNames.HOME, AppRouteNames.CATALOG, data.title];
+  const crumbs = [AppRouteNames.HOME, AppRouteNames.CATALOG, data.title];
 
-    return (
-        <div data-testid="productPage" className={cls.product}>
-            <Breadcrumbs items={crumbs} />
-            <div className="product-page">
-                <ProductDescription
-                    data={data}
-                    actions={
-                        <>
-                            <AddToCartCounter />
-                            <AddToFavorites
-                                className={cls.productFavoriteButton}
-                            />
-                        </>
-                    }
-                />
+  return (
+    <div data-testid="productPage" className={cls.product}>
+      <Breadcrumbs items={crumbs} />
+      <div className="product-page">
+        <ProductDescription
+          data={data}
+          actions={
+            <>
+              <AddToCartCounter />
+              <AddToFavorites className={cls.productFavoriteButton} />
+            </>
+          }
+        />
 
-                <ProductDetailedTabs
-                    ad={data.ad}
-                    descriptions={data.descriptions}
-                    specs={data.specs}
-                    feedback={data.feedback}
-                />
+        <ProductDetailedTabs
+          ad={data.ad}
+          descriptions={data.descriptions}
+          specs={data.specs}
+          feedback={data.feedback}
+        />
 
-                <RelatedProducts data={data.relatedProducts} />
+        <RelatedProducts data={data.relatedProducts} />
 
-                {/* related products */}
-                {/* <div className="product-page__related-products">
+        {/* related products */}
+        {/* <div className="product-page__related-products">
                     <h2 className="product-page__related-products-title container">
                         Related Products
                     </h2>
@@ -574,7 +571,7 @@ const Product: FC = () => {
                         </div>
                     </div>
                 </div> */}
-                {/* <div className="subscription js-subscription product-page__subscription">
+        {/* <div className="subscription js-subscription product-page__subscription">
                     <div className="subscription__container container">
                         <div className="logo  logo--large subscription__logo">
                             <svg className="logo__icon">
@@ -606,9 +603,9 @@ const Product: FC = () => {
                         </form>
                     </div>
                 </div> */}
-            </div>
-        </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Product;

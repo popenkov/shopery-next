@@ -1,18 +1,18 @@
 'use client';
 
-import { FC, useId, useRef, useState } from 'react';
 
+import { FC, useId, useRef, useState } from 'react';
+import cn from 'classnames';
 import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import type { Swiper as SwiperType } from 'swiper';
 import 'swiper/css/pagination';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
+import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import cn from 'classnames';
 import ChevronIcon from '@public/icons/icon__chevron-down.svg';
 
 import cls from './ThumbSlider.module.scss';

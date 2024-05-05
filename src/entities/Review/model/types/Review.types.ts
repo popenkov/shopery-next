@@ -1,7 +1,7 @@
 export type TReview = {
-    id: string;
-    text: string;
-    photo: string;
-    name: string;
-    role: string;
+  text: string;
+  photo: string;
+  name: string;
+  id?: string;
+  role?: string;
 };

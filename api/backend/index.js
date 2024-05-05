@@ -1,15 +1,16 @@
+import fs from 'fs';
+
+import cors from 'cors';
+import dotenv from 'dotenv';
 import express from 'express';
 
 // import mongoose from 'mongoose';
-import fs from 'fs';
 import multer from 'multer';
-import cors from 'cors';
-import { db } from './app/models/index.js';
-
-import { handleValidationErrors, checkAuth } from './app/utils/index.js';
 
 import { ProductsController } from './app/controllers/index.js';
-import dotenv from 'dotenv';
+import { db } from './app/models/index.js';
+import { checkAuth } from './app/utils/index.js';
+
 
 dotenv.config();
 

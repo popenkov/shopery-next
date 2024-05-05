@@ -11,7 +11,6 @@ import React, {
 import ChevronIcon from '@public/icons/icon__chevron-down.svg';
 
 import { DropdownItem } from './Dropdown.interface';
-
 import cls from './Dropdown.module.scss';
 
 interface DropdownProps

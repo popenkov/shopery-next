@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
-
 import cn from 'classnames';
+
 
 import cls from './ProductTabs.module.scss';
 

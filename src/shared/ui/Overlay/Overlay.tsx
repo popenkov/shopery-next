@@ -1,6 +1,6 @@
 import { memo } from 'react';
-
 import cn from 'classnames';
+
 
 import cls from './Overlay.module.scss';
 

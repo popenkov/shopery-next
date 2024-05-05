@@ -1,9 +1,105 @@
 import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode, memo } from 'react';
-
 import cn from 'classnames';
 
-import cls from './Tag.module.scss';
 import { Text } from '../../Text';
+
+import cls from './Tag.module.scss';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 type TagVariant =
     | 'sale'
