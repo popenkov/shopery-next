@@ -1,7 +1,7 @@
 @import '@/shared/styles/breakpoints';
-@import '@/shared/styles/mixins/flexbox.scss';
-@import '@/shared/styles/mixins/box.scss';
-@import '@/shared/styles/mixins/text-styles.scss';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/text-styles';
 
 .productReview {
   @include flex-column;
@@ -50,7 +50,6 @@
   }
 
   .productReviewMain {
-
     margin: 0;
     color: var(--monochrome-500);
   }

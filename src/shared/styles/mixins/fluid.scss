@@ -1,13 +1,13 @@
-//- Принимает:
-//-   $min    {number} - минимальный размер
-//-   $max    {number} - максимальный размер
-//-   $wMin   {number} - минимальная ширина экрана
-//-   $wMax   {number} - максимальная ширина экрана
+// Принимает:
+//   $min    {number} - минимальный размер
+//  $max    {number} - максимальный размер
+//   $wMin   {number} - минимальная ширина экрана
+//  $wMax   {number} - максимальная ширина экрана
 // Примеры использования:
 //   font-size: fluid(16, 20, 992, 1440)
 
 @function fluid($min, $max, $wMin, $wMax) {
-  $result: calc(#{$min}px + ( #{$max} - #{$min} ) * ( (100vw - #{$wMin}px) / ( #{$wMax} - #{$wMin}) ));
+    $result: calc(#{$min}px + (#{$max} - #{$min}) * ((100vw - #{$wMin}px) / (#{$wMax} - #{$wMin})));
 
-  @return $result;
+    @return $result;
 }

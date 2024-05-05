@@ -1,81 +1,78 @@
-@import '@/shared/styles/mixins/text-styles.scss';
-@import '@/shared/styles/mixins/box.scss';
-@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/text-styles';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/flexbox';
 
 .button {
-  @include flex-center;
-  @include box(40px);
+    @include flex-center;
+    @include box(40px);
 
-  padding: 0;
-  border: none;
-  border-radius: 50%;
-  outline: none;
-  cursor: pointer;
-  transition: background-color var(--transition);
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    transition: background-color var(--transition);
 
-  svg {
-    @include box(20px);
+    svg {
+        @include box(20px);
 
-    transition: color var(--transition);
-  }
-
-  &.primary {
-    background-color: var(--primary);
-
-   svg {
-      color: var(--front-primary-inversed);
+        transition: color var(--transition);
     }
-    @media (hover: hover) {
-      &:hover {
-        background-color: var(--hard-primary);
+
+    &.primary {
+        background-color: var(--primary);
 
         svg {
-          color: var(--front-primary-inversed);
+            color: var(--front-primary-inversed);
         }
-      }
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: var(--hard-primary);
+
+                svg {
+                    color: var(--front-primary-inversed);
+                }
+            }
+        }
+    }
+
+    &.secondary {
+        background-color: var(--back-primary);
+        box-shadow: 0 0 8px 0 var(--monochrome-200);
+
+        svg {
+            color: var(--monochrome-900);
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: var(--primary);
+
+                svg {
+                    color: var(--front-primary-inversed);
+                }
+            }
+        }
+    }
+
+    &.ghost {
+        @media (hover: hover) {
+            &:hover {
+                background-color: var(--primary);
+
+                svg {
+                    color: var(--front-primary-inversed);
+                }
+            }
+        }
     }
 
     &:disabled {
-      background-color: var(--monochrome-50);
-
-      svg {
-        color: var(--monochrome-900);
-      }
-    }
-
- 
-  }
-
-  &.secondary {
-    background-color: var(--back-primary);
-    box-shadow: 0 0 8px 0 var(--monochrome-200);
-
-      svg {
-      color: var(--monochrome-900);
-    }
-
-    @media (hover: hover) {
-      &:hover {
-        background-color: var(--primary);
+        background-color: var(--monochrome-50);
 
         svg {
-          color: var(--front-primary-inversed);
+            color: var(--monochrome-900);
         }
-      }
     }
-
-  
-  }
-
-  &.ghost {
-    @media (hover: hover) {
-      &:hover {
-        background-color: var(--primary);
-
-        svg {
-          color: var(--front-primary-inversed);
-        }
-      }
-    }
-  }
 }

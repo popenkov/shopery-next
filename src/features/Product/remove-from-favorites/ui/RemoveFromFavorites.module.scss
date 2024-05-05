@@ -1,17 +1,15 @@
-@import '@/shared/styles/mixins/box.scss';
-@import '@/shared/styles/mixins/flexbox.scss';
-@import '@/shared/styles/mixins/button-reset.scss';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/button-reset';
 
 
 .removeButtonIcon {
-
     @include box(16px);
 
     color: var(--green-gray-600);
   }
 
 .removeButton {
-
   @include flex-center;
   @include box(22px);
 

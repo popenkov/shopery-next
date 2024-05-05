@@ -1,13 +1,11 @@
 @import '@/shared/styles/_breakpoints';
-@import '@/shared/styles/mixins/flexbox.scss';
-@import '@/shared/styles/mixins/box.scss';
-@import '@/shared/styles/mixins/text-styles.scss';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/text-styles';
 
 
 
 .AddToCartCounter {
-
-
   @include flex-center-vertical;
 
   gap: 12px;
@@ -49,6 +47,7 @@
   .AddToCartCounterCartButtonIcon {
     @include box(20px);
   }
+
 // todo
 //   .AddToCartCounterfavorite-icon {
 //     @include box(20px);

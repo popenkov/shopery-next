@@ -1,6 +1,6 @@
 @import '@/shared/styles/_breakpoints';
-@import '@/shared/styles/mixins/flexbox.scss';
-@import '@/shared/styles/mixins/container.scss';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/container';
 
 .catalog {
     @include container;
@@ -49,6 +49,7 @@
 .bannerMobile {
   display: none;
   grid-area: banner;
+
   @media screen and (max-width: $screen-tl) {
     display: block;
   }
@@ -61,12 +62,14 @@
 
   @media screen and (max-width: $screen-tl) {
     @include flex-column;
+
     gap: 10px;
   }
 }
 
 .pagination {
   @include flex-center;
+
   grid-area: pagination;
   justify-content: center;
   margin-top: 14px;

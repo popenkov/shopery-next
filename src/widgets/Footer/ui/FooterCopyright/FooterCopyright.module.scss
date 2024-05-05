@@ -1,5 +1,5 @@
 @import '@/shared/styles/_breakpoints';
-@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/flexbox';
 
 .copyright {
   @include flex-center-sb;

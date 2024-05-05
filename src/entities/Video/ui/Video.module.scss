@@ -1,14 +1,14 @@
 @import '@/shared/styles/_breakpoints';
-@import '@/shared/styles/mixins/button-reset.scss';
-@import '@/shared/styles/mixins/flexbox.scss';
-@import '@/shared/styles/mixins/box.scss';
-@import '@/shared/styles/mixins/text-styles.scss';
+@import '@/shared/styles/mixins/button-reset';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/text-styles';
 
 .video {
-  $block-name: &;
-
   overflow: hidden;
   border-radius: 20px;
+
+  $block-name: &;
 }
 
 .videoPreview {
@@ -77,8 +77,6 @@
 
 
 .videoPlayIcon {
-
-
   // &.primary {
   //     width: 20px;
   //     height: 24px;
@@ -133,13 +131,6 @@
         @include box(70px);
       }
 
-      .videoPlayIcon  {
-     width: 20px;
-      height: 24px;
-      color: var(--color-white);
-      transition: color var(--transition);
-      }
-
       @media (hover: hover) {
         &:hover {
           outline-color: var(--primary);
@@ -148,6 +139,13 @@
             color: var(--primary);
           }
         }
+      }
+
+      .videoPlayIcon  {
+     width: 20px;
+      height: 24px;
+      color: var(--color-white);
+      transition: color var(--transition);
       }
    }
 
@@ -165,18 +163,18 @@
         @include box(40px);
       }
 
-            .videoPlayIcon  {
-         width: 14px;
-      height: 18px;
-      color: var(--color-white);
-      transition: color var(--transition);
-      }
-
 
       @media (hover: hover) {
         &:hover {
           background-color: var(--hard-primary);
         }
+      }
+
+            .videoPlayIcon  {
+         width: 14px;
+      height: 18px;
+      color: var(--color-white);
+      transition: color var(--transition);
       }
    }
 }

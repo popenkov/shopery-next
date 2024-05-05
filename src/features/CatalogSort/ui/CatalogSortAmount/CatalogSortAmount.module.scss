@@ -1,4 +1,4 @@
-@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/flexbox';
 
 .itemsFound {
   @include flex-center-vertical;

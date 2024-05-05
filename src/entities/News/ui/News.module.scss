@@ -1,7 +1,7 @@
 @import '@/shared/styles/breakpoints';
-@import '@/shared/styles/mixins/flexbox.scss';
-@import '@/shared/styles/mixins/box.scss';
-@import '@/shared/styles/mixins/text-styles.scss';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/text-styles';
 
 .news {
   @include flex-column;
@@ -19,6 +19,7 @@
 .imgWrapper {
   position: relative;
   height: 100%;
+
   // todo заменить
   height: 276px;
   overflow: hidden;

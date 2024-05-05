@@ -1,6 +1,6 @@
 @import '@/shared/styles/_breakpoints';
-@import '@/shared/styles/mixins/container.scss';
-@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/container';
+@import '@/shared/styles/mixins/flexbox';
 
 .wishlist {
   @include container;

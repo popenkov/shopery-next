@@ -1,5 +1,5 @@
 @import '@/shared/styles/_breakpoints';
-@import '@/shared/styles/mixins/grid.scss';
+@import '@/shared/styles/mixins/grid';
 
 
 .catalogDesktopWrapper {
@@ -15,6 +15,7 @@
 
   @media screen and (max-width: $screen-tl) {
     @include grid(3, 24px);
+
      @media screen and (max-width: $screen-ti) {
       grid-template-columns: 1fr 1fr; 
     }

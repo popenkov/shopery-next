@@ -1,7 +1,7 @@
 @import '@/shared/styles/breakpoints';
-@import '@/shared/styles/mixins/flexbox.scss';
-@import '@/shared/styles/mixins/box.scss';
-@import '@/shared/styles/mixins/text-styles.scss';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/text-styles';
 
 
 .productImageLink {@include box(102px);
@@ -11,8 +11,6 @@
 }
 
   .image {
-
-
     object-fit: contain;
   }
 
@@ -74,7 +72,6 @@
   }
 
 .productSmall {
-
   @include flex-center-vertical;
 
   min-width: 282px;

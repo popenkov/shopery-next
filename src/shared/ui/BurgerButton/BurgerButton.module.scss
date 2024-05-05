@@ -1,5 +1,5 @@
-@import '@/shared/styles/mixins/button-reset.scss';
-@import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/button-reset';
+@import '@/shared/styles/mixins/box';
 
 .button {
   @include button-reset;

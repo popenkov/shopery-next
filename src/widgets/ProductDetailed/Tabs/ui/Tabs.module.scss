@@ -16,8 +16,6 @@
   }
 
 .tabsDescription {
-     
-
   @include flex-column;
     @include body-s;
 
@@ -74,10 +72,7 @@
 
 
 .tabsAside {
-
-
     flex-grow: 1;
-
     min-width: 400px;
     max-width: 536px;
 

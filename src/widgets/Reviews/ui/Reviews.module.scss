@@ -19,7 +19,6 @@
 }
 
 .reviewsDesktop {
-    
     @include grid(3, 24px);
     @include display-desktop;
 
@@ -33,6 +32,5 @@
 }
 
 .reviewsMobile {
-
     @include display-mobile;
 }

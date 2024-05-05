@@ -1,8 +1,8 @@
 @import '@/shared/styles/_breakpoints';
-@import '@/shared/styles/mixins/flexbox.scss';
-@import '@/shared/styles/mixins/box.scss';
-@import '@/shared/styles/mixins/button-reset.scss';
-@import '@/shared/styles/mixins/text-styles.scss';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/button-reset';
+@import '@/shared/styles/mixins/text-styles';
 
 .pagination {
   @include flex-center-vertical;
@@ -22,7 +22,6 @@
 }
 
 .page {
-  
   @include button-reset;
   @include box(36px);
   @include flex-center;

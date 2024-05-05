@@ -1,8 +1,7 @@
-@import '@/shared/styles/mixins/text-styles.scss';
-@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/text-styles';
+@import '@/shared/styles/mixins/flexbox';
 
 .socialShare {
-
   @include flex-center-vertical;
 
   gap: 9px;

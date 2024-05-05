@@ -1,54 +1,51 @@
 @import '@/shared/styles/breakpoints';
-@import '@/shared/styles/mixins/text-styles.scss';
+@import '@/shared/styles/mixins/text-styles';
 
-@mixin section () {
-      padding: 100px 0;
+@mixin section() {
+    padding: 100px 0;
 
-  @media screen and (max-width: $screen-tl) {
-    padding: 40px 0;
-  }
+    @media screen and (max-width: $screen-tl) {
+        padding: 40px 0;
+    }
 }
 
-@mixin section-green () {
-
+@mixin section-green() {
     padding: 100px 0;
     background-color: var(--green-gray-50);
-  @media screen and (max-width: $screen-tl) {
-    padding: 40px 0;
-  }
 
+    @media screen and (max-width: $screen-tl) {
+        padding: 40px 0;
+    }
 }
 
-@mixin section-title () {
-       @include heading-3(600);
+@mixin section-title() {
+    @include heading-3(600);
 
     margin: 0 auto;
     text-align: center;
 
     @media screen and (max-width: $screen-tl) {
-      @include heading-5(600);
+        @include heading-5(600);
     }
 }
 
-@mixin section-green-bg--bottom () {
-      position: relative;
+@mixin section-green-bg-bottom() {
+    position: relative;
 
-     &::after {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
-      height: 50%;
-      background-color: var(--green-gray-50);
-      content: '';
+    &::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        height: 50%;
+        background-color: var(--green-gray-50);
+        content: '';
     }
-
 }
 
-
-@mixin section-green-bg--top () {
-      position: relative;
+@mixin section-green-bg-top() {
+    position: relative;
 
     &::after {
         position: absolute;
@@ -59,9 +56,9 @@
         height: 50%;
         background-color: var(--green-gray-50);
         content: '';
-      }
+    }
 }
 
-@mixin section-content () {
+@mixin section-content() {
     margin-top: 20px;
 }

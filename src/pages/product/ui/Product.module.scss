@@ -1,11 +1,8 @@
 @import '@/shared/styles/_breakpoints';
-@import '@/shared/styles/mixins/flexbox.scss';
-@import '@/shared/styles/mixins/box.scss';
-@import '@/shared/styles/mixins/container.scss';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/container';
 
-.Product {
-
-}
 
 
 .productFavoriteButton {
@@ -23,7 +20,7 @@
     //   grid-area: fav;
     // }
 
-    @media (hover: hover) {
+     @media (hover: hover) {
       &:hover {
         color: var(--front-primary-inversed);
         background-color: var(--primary);

@@ -1,13 +1,13 @@
 @import '@/shared/styles/breakpoints';
 
 
-@mixin display-desktop () {
+@mixin display-desktop() {
   @media screen and (max-width: $screen-ti) {
     display: none !important;
   }
 }
 
-@mixin display-mobile () {
+@mixin display-mobile() {
       display: none !important;
 
   @media screen and (max-width: $screen-ti) {

@@ -1,24 +1,21 @@
 .Modal {
     position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    opacity: 0;
-    pointer-events: none;
+    inset: 0;
     z-index: 100;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .content {
+    z-index: var(--modal-z-index);
+    max-width: 60%;
     padding: 20px;
     border-radius: 12px;
-    transition: 0.3s transform;
     transform: scale(0.5);
-    max-width: 60%;
-    z-index: var(--modal-z-index);
+    transition: 0.3s transform;
 }
 
 .modalNew {
@@ -26,6 +23,7 @@
         background: var(--light-bg-redesigned);
     }
 }
+
 .modalOld {
     .content {
         background: var(--bg-color);
@@ -33,9 +31,9 @@
 }
 
 .opened {
-    pointer-events: auto;
-    opacity: 1;
     z-index: var(--modal-z-index);
+    opacity: 1;
+    pointer-events: auto;
 
     .content {
         transform: scale(1);

@@ -6,35 +6,32 @@
 
 .newsList {
     @include section;
-    @include section-green-bg--bottom;
-   
+    @include section-green-bg-bottom;
 }
 
 .newsListTitle {
-     @include container;
+    @include container;
     @include section-title;
 }
 
 .newsListContent {
     @include section-content;
-     @include container;
+    @include container;
 }
 
 .newsListDesktop {
-    
     @include grid(3, 24px);
     @include display-desktop;
 
     @media screen and (max-width: $screen-tl) {
-      grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     @media screen and (max-width: $screen-ti) {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
 }
 
 .newsListMobile {
-
     @include display-mobile;
 }

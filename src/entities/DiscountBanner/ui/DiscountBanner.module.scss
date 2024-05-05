@@ -1,11 +1,10 @@
 
 @import '@/shared/styles/breakpoints';
-@import '@/shared/styles/mixins/flexbox.scss';
-@import '@/shared/styles/mixins/box.scss';
-@import '@/shared/styles/mixins/text-styles.scss';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/text-styles';
 
 .discountBanner {
-
   position: relative;
   width: 100%;
   min-height: 295px;
@@ -26,7 +25,6 @@
 }
 
   .bannerImage {
-
     object-fit: cover;
 
   }
