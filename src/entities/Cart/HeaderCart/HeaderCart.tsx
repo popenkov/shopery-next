@@ -5,80 +5,9 @@ import CartIcon from '@public/icons/icon__cart.svg';
 import { getFormattedPrice } from 'shared/lib/utils/getFormattedPrice';
 import { Text } from 'shared/ui/Text';
 
-import { getCartAmount } from '../api/getCartAmount';
+import { getCartAmount } from '../../../../entities/Cart/api/getCartAmount';
 
 import cls from './HeaderCart.module.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 

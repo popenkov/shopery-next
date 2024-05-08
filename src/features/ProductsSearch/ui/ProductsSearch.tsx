@@ -1,6 +1,6 @@
 'use client';
 
-import { DetailedHTMLProps, FC, HTMLAttributes, useCallback, useState } from 'react';
+import { ChangeEvent, DetailedHTMLProps, FC, HTMLAttributes, useCallback, useState } from 'react';
 import { redirect } from 'next/navigation';
 
 import { getRouteCatalog } from 'shared/constants/routes';
@@ -19,16 +19,28 @@ export const ProductSearch: FC<Props> = () => {
     redirect(getRouteCatalog());
   }, [searchValue]);
 
+  // todo перенести валидацию
+
+  const handleInputChange = useCallback(
+    (evt: ChangeEvent<HTMLInputElement>) => {
+      const value = evt.target.value;
+      setSearchValue(value);
+    },
+    [searchValue],
+  );
+
   return (
     <div className={cls.search}>
       <Input
-        value={searchValue}
-        onChange={setSearchValue}
         type="search"
         placeholder="search"
+        hasValidation={false}
         className={cls.searchField}
+        value={searchValue}
+        onChange={handleInputChange}
       />
-      <Button className={cls.searchButton} onClick={handleSearchButtonClick}>
+
+      <Button type="submit" className={cls.searchButton} onClick={handleSearchButtonClick}>
         Search
       </Button>
     </div>

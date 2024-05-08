@@ -1,12 +1,16 @@
 'use client';
 
-import { ChangeEvent, InputHTMLAttributes, memo, useRef, useState } from 'react';
+import { ChangeEvent, InputHTMLAttributes, memo, useId, useRef, useState } from 'react';
 import cn from 'classnames';
 
 import SearchIcon from '@public/icons/icon__search.svg';
+import AlertIcon from '@public/icons/icon__alert.svg';
+import WarningIcon from '@public/icons/icon__warning.svg';
+import SuccessIcon from '@public/icons/icon__success.svg';
 import { checkEmailValidation } from 'shared/lib/utils/checkEmailValidation/checkEmailValidation';
 
 import cls from './Input.module.scss';
+import { Text } from '../Text';
 
 type HTMLInputProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
@@ -15,45 +19,75 @@ type HTMLInputProps = Omit<
 
 interface Props extends HTMLInputProps {
   className?: string;
+  label?: string;
+  errorText?: string;
   hasValidation?: boolean;
   value?: string | number;
-  onChange?: (value: string) => void;
+  onChange: (evt: ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const Input = memo((props: Props) => {
-  const { className, value, onChange, type = 'text', hasValidation = false, ...otherProps } = props;
+  const {
+    className,
+    value,
+    label,
+    // onChange,
+    type = 'text',
+    errorText,
+    hasValidation = true,
+    ...otherProps
+  } = props;
   const ref = useRef<HTMLInputElement>(null);
 
   const [isInvalid, setIsInvalid] = useState(true);
 
-  const handleInputChange = (evt: ChangeEvent<HTMLInputElement>) => {
-    if (type === 'email') {
-      setIsInvalid(!checkEmailValidation(value?.toString() || ''));
-    }
+  // todo
+  // const handleInputChange = (evt: ChangeEvent<HTMLInputElement>) => {
+  //   // if (type === 'email') {
+  //   //   setIsInvalid(!checkEmailValidation(value?.toString() || ''));
+  //   // }
 
-    onChange?.(evt.target.value);
-  };
+  //   onChange?.(evt.target.value);
+  // };
 
   const handleLoupeClick = () => {
     ref.current?.focus();
   };
 
+  const uniqueId = useId();
+
   return (
     <>
       <div className={cn(cls.inputWrapper, className)}>
+        {label && <label htmlFor={uniqueId}>{label}</label>}
         <input
+          id={uniqueId}
           ref={ref}
           type={type}
           value={value}
-          onChange={handleInputChange}
+          // onChange={handleInputChange}
           className={cn(cls.input, {
             [cls.search]: type === 'search',
           })}
           {...otherProps}
         />
         {type === 'search' && <SearchIcon className={cls.searchIcon} onClick={handleLoupeClick} />}
+        {/* todo */}
+        {hasValidation && (
+          <>
+            <AlertIcon className="field__icon field__icon--error" />
+            <WarningIcon className="field__icon field__icon--warning" />
+            <SuccessIcon className="field__icon field__icon--success" />
+          </>
+        )}
       </div>
-      {isInvalid && hasValidation && <span>error</span>}
+      {/* todo */}
+      {/* {isInvalid && hasValidation && <span>error</span>} */}
+      {errorText && (
+        <Text variant="body_s" weight="medium" className={cls.errorMessage} as="span">
+          {errorText}
+        </Text>
+      )}
     </>
   );
 });

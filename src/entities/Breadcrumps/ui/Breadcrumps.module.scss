@@ -3,12 +3,11 @@
 @import '@/shared/styles/mixins/container';
 
 .breadcrumps {
-  background: linear-gradient(
-      95.02deg,
-      rgb(0 0 0 / 70%) 0.034%,
-      rgb(0 0 0 / 0%) 91.306%
-    ),
+  background: linear-gradient(95.02deg, rgb(0 0 0 / 70%) 0.034%, rgb(0 0 0 / 0%) 91.306%),
     url('/images/breadcrumbs-img.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .breadcrumpsContent {
@@ -52,7 +51,6 @@
   }
 }
 
-
 .item {
   @include flex-center-vertical;
 
@@ -65,7 +63,6 @@
     }
   }
 }
-
 
 .chevron {
   @include box(12px);
