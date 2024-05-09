@@ -15,6 +15,7 @@ interface AppButtonProps
   size?: ButtonSize;
   children: ReactNode;
   ref?: Ref<HTMLButtonElement>;
+  form?: string;
 }
 
 export const Button: FC<AppButtonProps> = (props) => {
@@ -22,6 +23,7 @@ export const Button: FC<AppButtonProps> = (props) => {
     className,
     children,
     ref,
+    form,
     theme = 'primary',
     size = 'normal',
     type = 'button',
@@ -39,6 +41,7 @@ export const Button: FC<AppButtonProps> = (props) => {
       )}
       ref={ref}
       type={type}
+      form={form}
       {...otherProps}
     >
       {children}

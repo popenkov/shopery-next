@@ -2,9 +2,9 @@ import { FC } from 'react';
 import Link from 'next/link';
 
 import LikeIcon from '@public/icons/icon__heart.svg';
-import { HeaderCart } from '@/entities/Cart';
 
 import cls from './HeaderActions.module.scss';
+import { HeaderCart } from '../HeaderCart';
 
 export const HeaderActions: FC = () => {
   return (

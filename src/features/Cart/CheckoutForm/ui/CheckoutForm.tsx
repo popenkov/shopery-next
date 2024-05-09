@@ -17,13 +17,18 @@ import { TextArea } from '@/shared/ui/TextArea';
 type FormData = {
   firstName: string;
   lastName: string;
-  companyName: string;
+  companyName?: string;
   streetAddress: string;
   countryAddress: string;
   countryState: string;
   zipAddress: string;
   email: string;
   phone: string;
+  shippingStreetAddress: string;
+  shippingCountryAddress: string;
+  shippingCountryState: string;
+  shippingZipAddress: string;
+  comment: string;
 };
 
 export const CheckoutForm: FC = () => {
@@ -53,13 +58,9 @@ export const CheckoutForm: FC = () => {
   };
 
   return (
-    <form
-      className="checkout-page__form js-checkout-form"
-      id="checkoutForm"
-      onSubmit={handleSubmit(onSubmit)}
-    >
-      <div className="checkout-page__form-main">
-        <div className="checkout-page__form-row grid grid__three-items">
+    <form className={cls.checkoutForm} id="checkoutForm" onSubmit={handleSubmit(onSubmit)}>
+      <div className={cls.checkoutFormMain}>
+        <div className={cls.checkoutFormRowGridThree}>
           <Controller
             control={control}
             name="firstName"
@@ -69,7 +70,7 @@ export const CheckoutForm: FC = () => {
                 placeholder="Your first name"
                 errorText={error?.message}
                 {...field}
-                className="checkout-page__input-container"
+                className={cls.checkoutFormInput}
               />
             )}
           />
@@ -83,7 +84,7 @@ export const CheckoutForm: FC = () => {
                 placeholder="Your Last name"
                 errorText={error?.message}
                 {...field}
-                className="checkout-page__input-container"
+                className={cls.checkoutFormInput}
               />
             )}
           />
@@ -97,12 +98,12 @@ export const CheckoutForm: FC = () => {
                 placeholder="Company name"
                 errorText={error?.message}
                 {...field}
-                className="checkout-page__input-container"
+                className={cls.checkoutFormInput}
               />
             )}
           />
         </div>
-        <div className="checkout-page__form-row">
+        <div className={cls.checkoutFormRow}>
           <Controller
             control={control}
             name="streetAddress"
@@ -112,12 +113,12 @@ export const CheckoutForm: FC = () => {
                 placeholder="Street Address"
                 errorText={error?.message}
                 {...field}
-                className="checkout-page__input-container"
+                className={cls.checkoutFormInput}
               />
             )}
           />
         </div>
-        <div className="checkout-page__form-row grid grid__three-items">
+        <div className={cls.checkoutFormRowGridThree}>
           <Controller
             control={control}
             name="countryAddress"
@@ -128,9 +129,9 @@ export const CheckoutForm: FC = () => {
                 options={COUNTRIES_LIST}
                 // selectedOption={getSelectedOption(selectedGender, genderOptions)}
                 // value={getSelectValue(value, COUNTRIES_LIST) as SelectOption}
-                // onChange={(newValue) => onChange(newValue.value)}
+                onChange={(newValue) => onChange(newValue)}
                 error={error?.message}
-                className="checkout-page__input-container"
+                className={cls.checkoutFormInput}
               />
             )}
           />
@@ -147,7 +148,7 @@ export const CheckoutForm: FC = () => {
                 // value={getSelectValue(value, COUNTRIES_LIST) as SelectOption}
                 // onChange={(newValue) => onChange(newValue.value)}
                 error={error?.message}
-                className="checkout-page__input-container"
+                className={cls.checkoutFormInput}
               />
             )}
           />
@@ -165,12 +166,12 @@ export const CheckoutForm: FC = () => {
                 placeholder="Zip Code"
                 errorText={error?.message}
                 {...field}
-                className="checkout-page__input-container"
+                className={cls.checkoutFormInput}
               />
             )}
           />
 
-          <div className="checkout-page__form-row grid grid__two-items">
+          <div className={cls.checkoutFormRowGridTwo}>
             <Controller
               control={control}
               name="email"
@@ -180,7 +181,7 @@ export const CheckoutForm: FC = () => {
                   placeholder="Email Address"
                   errorText={error?.message}
                   {...field}
-                  className="checkout-page__input-container"
+                  className={cls.checkoutFormInput}
                 />
               )}
             />
@@ -198,123 +199,109 @@ export const CheckoutForm: FC = () => {
                   placeholder="Phone number"
                   errorText={error?.message}
                   {...field}
-                  className="checkout-page__input-container"
+                  className={cls.checkoutFormInput}
                 />
               )}
             />
           </div>
         </div>
         <Checkbox
-          value="5"
           text="Ship to a different address"
           onChange={handleAddressCheckboxChange}
+          className={cls.checkoutFormCheckbox}
         />
 
         {showAddAddress && (
-          <div className="checkout-page__shipping-address js-checkout-shipping-address">
-            <div className="checkout-page__form-row">
-              <div className="checkout-page__input-container">
-                <label className="field">
-                  <span className="field__label">Street Address</span>
-                  <div className="field__input-container">
-                    <input
-                      className="field__input field__input--text checkout-page__input"
-                      type="text"
-                      name="shipping-address-street"
-                      placeholder="Street Address"
-                      id="shippingAddressStreet"
-                    />
-                    <svg className="field__icon field__icon--error">
-                      <use href="img/svgSprite.svg#icon__alert"></use>
-                    </svg>
-                    <svg className="field__icon field__icon--warning">
-                      <use href="img/svgSprite.svg#icon__warning"></use>
-                    </svg>
-                    <svg className="field__icon field__icon--success">
-                      <use href="img/svgSprite.svg#icon__success"></use>
-                    </svg>
-                  </div>
-                </label>
-              </div>
+          <div className={cls.checkoutFormShippingAddress}>
+            <div className={cls.checkoutFormRow}>
+              <Controller
+                control={control}
+                name="shippingStreetAddress"
+                render={({ field, fieldState: { error } }) => (
+                  <Input
+                    label="Street Address"
+                    placeholder="Street Address"
+                    errorText={error?.message}
+                    {...field}
+                    className={cls.checkoutFormInput}
+                  />
+                )}
+              />
             </div>
-            <div className="checkout-page__form-row grid grid__three-items">
-              <div className="checkout-page__input-container">
-                <div className="checkout-page__input-label">Country / Region</div>
-                <div className="select">
-                  <select
-                    className="select__field js-nice-select"
-                    id="shippingAddressCountry"
-                    data-placeholder="Select"
-                    data-searchable="true"
-                  >
-                    <option className="select__option select__placeholder-value">Select</option>
-                    <option className="select__option" value="AX">
-                      Åland Islands
-                    </option>
-                  </select>
-                </div>
-              </div>
-              <div className="checkout-page__input-container">
-                <div className="checkout-page__input-label">States</div>
-                <div className="select">
-                  <select
-                    className="select__field js-nice-select"
-                    id="shippingAddressStates"
-                    data-placeholder="Select"
-                    data-searchable="true"
-                  >
-                    <option className="select__option select__placeholder-value">Select</option>
-                    <option className="select__option" value="AL">
-                      Alabama
-                    </option>
-                  </select>
-                </div>
-              </div>
-              <div className="checkout-page__input-container">
-                <label className="field">
-                  <span className="field__label">Zip Code</span>
-                  <div className="field__input-container">
-                    <input
-                      className="field__input field__input--text checkout-page__input"
-                      type="text"
-                      name="shipping-address-zip-code"
-                      placeholder="Zip Code"
-                      id="shippingAddressZipCode"
-                    />
-                    <svg className="field__icon field__icon--error">
-                      <use href="img/svgSprite.svg#icon__alert"></use>
-                    </svg>
-                    <svg className="field__icon field__icon--warning">
-                      <use href="img/svgSprite.svg#icon__warning"></use>
-                    </svg>
-                    <svg className="field__icon field__icon--success">
-                      <use href="img/svgSprite.svg#icon__success"></use>
-                    </svg>
-                  </div>
-                </label>
-              </div>
+            <div className={cls.checkoutFormRowGridThree}>
+              <Controller
+                control={control}
+                name="shippingCountryAddress"
+                render={({ field: { onChange, value }, fieldState: { error } }) => (
+                  <AppSelect
+                    label="Country / Region"
+                    placeholder="Select"
+                    options={COUNTRIES_LIST}
+                    // selectedOption={getSelectedOption(selectedGender, genderOptions)}
+                    // value={getSelectValue(value, COUNTRIES_LIST) as SelectOption}
+                    onChange={(newValue) => onChange(newValue)}
+                    error={error?.message}
+                    className={cls.checkoutFormInput}
+                  />
+                )}
+              />
+
+              <Controller
+                control={control}
+                name="shippingCountryState"
+                render={({ field: { onChange, value }, fieldState: { error } }) => (
+                  <AppSelect
+                    label="Country / Region"
+                    placeholder="Select"
+                    options={STATES_LIST}
+                    // selectedOption={getSelectedOption(selectedGender, genderOptions)}
+                    // value={getSelectValue(value, COUNTRIES_LIST) as SelectOption}
+                    // onChange={(newValue) => onChange(newValue.value)}
+                    error={error?.message}
+                    className={cls.checkoutFormInput}
+                  />
+                )}
+              />
+
+              <Controller
+                control={control}
+                name="shippingZipAddress"
+                render={({ field, fieldState: { error } }) => (
+                  <MaskedInput
+                    inputMode="numeric"
+                    mask="000 000"
+                    type="text"
+                    unmask={true}
+                    label="Zip Code"
+                    placeholder="Zip Code"
+                    errorText={error?.message}
+                    {...field}
+                    className={cls.checkoutFormInput}
+                  />
+                )}
+              />
             </div>
           </div>
         )}
       </div>
 
-      <div className="checkout-page__form-comment">
-        <h3 className="checkout-page__title">Additional Info</h3>
-        <div className="checkout-page__input-container">
-          <Controller
-            control={control}
-            name="comment"
-            render={({ field, fieldState: { error } }) => (
-              <TextArea
-                label="Order Notes (Optional)"
-                placeholder="Notes about your order, e.g. special notes for delivery"
-                errorText={error?.message}
-                {...field}
-                className="checkout-page__form-comment"
-              />
-            )}
-          />
-        </div>
+      <div className={cls.checkoutFormComment}>
+        <Text variant="body_xxl" weight="medium" as="h3">
+          Additional Info
+        </Text>
+        <Controller
+          control={control}
+          name="comment"
+          render={({ field, fieldState: { error } }) => (
+            <TextArea
+              label="Order Notes (Optional)"
+              placeholder="Notes about your order, e.g. special notes for delivery"
+              errorText={error?.message}
+              {...field}
+              className={cls.checkoutFormInput}
+            />
+          )}
+        />
       </div>
 
       {/* todo test */}

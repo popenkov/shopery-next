@@ -18,7 +18,7 @@ interface CheckboxProps extends HTMLCheckboxProps {
   className?: string;
   children?: ReactNode;
   name?: string;
-  value: string | number;
+  value?: string | number;
   text?: string;
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 }

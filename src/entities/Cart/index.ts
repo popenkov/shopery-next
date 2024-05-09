@@ -1,1 +1,1 @@
-export { HeaderCart } from '../../widgets/Header/ui/HeaderCart';
+export { getCartData } from './api/getCartData';
