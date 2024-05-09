@@ -1,6 +1,6 @@
 'use client';
 
-import { ChangeEvent, InputHTMLAttributes, memo, useId, useRef, useState } from 'react';
+import { ChangeEvent, InputHTMLAttributes, forwardRef, memo, useId, useState } from 'react';
 import cn from 'classnames';
 
 import SearchIcon from '@public/icons/icon__search.svg';
@@ -23,73 +23,77 @@ interface Props extends HTMLInputProps {
   errorText?: string;
   hasValidation?: boolean;
   value?: string | number;
-  onChange: (evt: ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (evt: ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const Input = memo((props: Props) => {
-  const {
-    className,
-    value,
-    label,
-    // onChange,
-    type = 'text',
-    errorText,
-    hasValidation = true,
-    ...otherProps
-  } = props;
-  const ref = useRef<HTMLInputElement>(null);
+export const Input = memo(
+  forwardRef<HTMLInputElement, Props>((props, ref) => {
+    const {
+      className,
+      value,
+      label,
+      type = 'text',
+      errorText,
+      hasValidation = true,
+      onChange,
+      ...otherProps
+    } = props;
 
-  const [isInvalid, setIsInvalid] = useState(true);
+    const [isInvalid, setIsInvalid] = useState(true);
 
-  // todo
-  // const handleInputChange = (evt: ChangeEvent<HTMLInputElement>) => {
-  //   // if (type === 'email') {
-  //   //   setIsInvalid(!checkEmailValidation(value?.toString() || ''));
-  //   // }
+    //   // todo
+    //   // const handleInputChange = (evt: ChangeEvent<HTMLInputElement>) => {
+    //   //   // if (type === 'email') {
+    //   //   //   setIsInvalid(!checkEmailValidation(value?.toString() || ''));
+    //   //   // }
 
-  //   onChange?.(evt.target.value);
-  // };
+    //   //   onChange?.(evt.target.value);
+    //   // };
 
-  const handleLoupeClick = () => {
-    ref.current?.focus();
-  };
+    // todo
+    const handleLoupeClick = () => {
+      // ref?.current?.focus();
+    };
 
-  const uniqueId = useId();
+    const uniqueId = useId();
 
-  return (
-    <>
-      <div className={cn(cls.inputWrapper, className)}>
-        {label && <label htmlFor={uniqueId}>{label}</label>}
-        <input
-          id={uniqueId}
-          ref={ref}
-          type={type}
-          value={value}
-          // onChange={handleInputChange}
-          className={cn(cls.input, {
-            [cls.search]: type === 'search',
-          })}
-          {...otherProps}
-        />
-        {type === 'search' && <SearchIcon className={cls.searchIcon} onClick={handleLoupeClick} />}
+    return (
+      <>
+        <div className={cn(cls.inputWrapper, className)}>
+          {label && <label htmlFor={uniqueId}>{label}</label>}
+          <input
+            id={uniqueId}
+            ref={ref}
+            type={type}
+            value={value}
+            onChange={(evt) => onChange?.(evt)}
+            className={cn(cls.input, {
+              [cls.search]: type === 'search',
+            })}
+            {...otherProps}
+          />
+          {type === 'search' && (
+            <SearchIcon className={cls.searchIcon} onClick={handleLoupeClick} />
+          )}
+          {/* todo */}
+          {hasValidation && (
+            <>
+              <AlertIcon className="field__icon field__icon--error" />
+              <WarningIcon className="field__icon field__icon--warning" />
+              <SuccessIcon className="field__icon field__icon--success" />
+            </>
+          )}
+        </div>
         {/* todo */}
-        {hasValidation && (
-          <>
-            <AlertIcon className="field__icon field__icon--error" />
-            <WarningIcon className="field__icon field__icon--warning" />
-            <SuccessIcon className="field__icon field__icon--success" />
-          </>
+        {/* {isInvalid && hasValidation && <span>error</span>} */}
+        {errorText && (
+          <Text variant="body_s" weight="medium" className={cls.errorMessage} as="span">
+            {errorText}
+          </Text>
         )}
-      </div>
-      {/* todo */}
-      {/* {isInvalid && hasValidation && <span>error</span>} */}
-      {errorText && (
-        <Text variant="body_s" weight="medium" className={cls.errorMessage} as="span">
-          {errorText}
-        </Text>
-      )}
-    </>
-  );
-});
+      </>
+    );
+  }),
+);
 
 Input.displayName = 'Input';
