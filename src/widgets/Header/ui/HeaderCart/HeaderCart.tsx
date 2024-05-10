@@ -2,10 +2,10 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import Link from 'next/link';
 
 import CartIcon from '@public/icons/icon__cart.svg';
+import { getCartData } from 'entities/Cart/';
 import { getFormattedPrice } from 'shared/lib/utils/getFormattedPrice';
 import { Text } from 'shared/ui/Text';
 
-import { getCartData } from 'entities/Cart/';
 
 import cls from './HeaderCart.module.scss';
 

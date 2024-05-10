@@ -1,4 +1,4 @@
-import { FC, ReactNode, useId } from 'react';
+import { FC, ReactNode } from 'react';
 import cn from 'classnames';
 
 import { Text } from 'shared/ui/Text';
@@ -8,78 +8,6 @@ import { TAdvertisement } from '../../model/ad.types';
 
 import cls from './VideoAd.module.scss';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 type Props = {
   adData: TAdvertisement[];
   video: ReactNode;
@@ -88,15 +16,14 @@ type Props = {
 
 export const VideoAd: FC<Props> = ({ adData, video, className }) => {
   return (
-    <div className={cn(cls.videoAd, 'product-page__right-aside')}>
+    <div className={cn(cls.videoAd, className, 'product-page__right-aside')}>
       <div className={cls.videoAdContent}>{video}</div>
       <div className={cls.videoAdAdvantages}>
         {adData.map((ad) => {
-          const id = useId();
           const { icon, title, text } = ad;
           const Icon = getVideoAdIcon(icon);
           return (
-            <div className={cls.videoAdAdvantage} key={id}>
+            <div className={cls.videoAdAdvantage} key={ad.title}>
               {/* <svg className="advantage-label__icon">
                                 <use href="img/svgSprite.svg#icon__price-tag"></use>
                             </svg> */}

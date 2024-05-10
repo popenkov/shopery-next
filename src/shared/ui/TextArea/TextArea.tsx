@@ -1,10 +1,11 @@
 'use client';
 
-import { ChangeEvent, InputHTMLAttributes, forwardRef, memo, useId, useState } from 'react';
+import { ChangeEvent, InputHTMLAttributes, forwardRef, memo, useId } from 'react';
 import cn from 'classnames';
 
-import cls from './TextArea.module.scss';
 import { Text } from '../Text';
+
+import cls from './TextArea.module.scss';
 
 type HTMLTextAreaProps = Omit<
   InputHTMLAttributes<HTMLTextAreaElement>,
@@ -15,24 +16,13 @@ interface Props extends HTMLTextAreaProps {
   className?: string;
   label?: string;
   errorText?: string;
-  hasValidation?: boolean;
   value?: string | number;
   onChange?: (evt: ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
 export const TextArea = memo(
   forwardRef<HTMLTextAreaElement, Props>((props, ref) => {
-    const {
-      className,
-      value,
-      label,
-      errorText,
-      hasValidation = true,
-      onChange,
-      ...otherProps
-    } = props;
-
-    const [isInvalid, setIsInvalid] = useState(true);
+    const { className, value, label, errorText, onChange, ...otherProps } = props;
 
     const uniqueId = useId();
 
@@ -49,8 +39,6 @@ export const TextArea = memo(
             {...otherProps}
           />
         </div>
-        {/* todo */}
-        {/* {isInvalid && hasValidation && <span>error</span>} */}
         {errorText && (
           <Text variant="body_s" weight="medium" className={cls.errorMessage} as="span">
             {errorText}

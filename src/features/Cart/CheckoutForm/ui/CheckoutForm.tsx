@@ -1,18 +1,18 @@
 'use client';
 import { ChangeEvent, FC, useState } from 'react';
-
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
-import { IMaskInput } from 'react-imask';
-import cls from './CheckoutForm.module.scss';
-import { Input } from '@/shared/ui/Input';
+
 import { VALIDATION_MESSAGES } from '@/shared/constants/validation-messages';
-import { AppSelect, SelectOption } from '@/shared/ui/AppSelect';
-import { COUNTRIES_LIST, STATES_LIST } from '../constants/countries-list';
-import { getSelectValue } from '@/shared/lib/utils/getSelectOption';
-import { MaskedInput } from '@/shared/ui/MaskedInput/MaskedInput';
+import { AppSelect } from '@/shared/ui/AppSelect';
 import { Checkbox } from '@/shared/ui/Checkbox';
+import { Input } from '@/shared/ui/Input';
+import { MaskedInput } from '@/shared/ui/MaskedInput/MaskedInput';
 import { Text } from '@/shared/ui/Text';
 import { TextArea } from '@/shared/ui/TextArea';
+
+import { COUNTRIES_LIST, STATES_LIST } from '../constants/countries-list';
+
+import cls from './CheckoutForm.module.scss';
 
 type FormData = {
   firstName: string;
@@ -34,23 +34,21 @@ type FormData = {
 export const CheckoutForm: FC = () => {
   const [showAddAddress, setShowAddAddress] = useState(false);
   const {
-    register,
     reset,
     handleSubmit,
-    getValues,
-    watch,
-    setValue,
+    // getValues,
     control,
-    resetField,
-    getFieldState,
-    clearErrors,
-    formState: { errors, isValid, isDirty, dirtyFields, touchedFields },
+    formState: { isValid },
   } = useForm<FormData>({
     mode: 'onChange',
   });
 
   const onSubmit: SubmitHandler<FormData> = (data) => {
     console.log('data', data);
+    if (isValid) {
+      console.log('form sent');
+      reset();
+    }
   };
 
   const handleAddressCheckboxChange = (evt: ChangeEvent<HTMLInputElement>) => {
@@ -64,6 +62,9 @@ export const CheckoutForm: FC = () => {
           <Controller
             control={control}
             name="firstName"
+            rules={{
+              required: VALIDATION_MESSAGES.REQUIRED,
+            }}
             render={({ field, fieldState: { error } }) => (
               <Input
                 label="First name"
@@ -78,6 +79,9 @@ export const CheckoutForm: FC = () => {
           <Controller
             control={control}
             name="lastName"
+            rules={{
+              required: VALIDATION_MESSAGES.REQUIRED,
+            }}
             render={({ field, fieldState: { error } }) => (
               <Input
                 label="Last name"
@@ -107,6 +111,9 @@ export const CheckoutForm: FC = () => {
           <Controller
             control={control}
             name="streetAddress"
+            rules={{
+              required: VALIDATION_MESSAGES.REQUIRED,
+            }}
             render={({ field, fieldState: { error } }) => (
               <Input
                 label="Street Address"
@@ -122,15 +129,16 @@ export const CheckoutForm: FC = () => {
           <Controller
             control={control}
             name="countryAddress"
-            render={({ field: { onChange, value }, fieldState: { error } }) => (
+            rules={{
+              required: VALIDATION_MESSAGES.REQUIRED,
+            }}
+            render={({ field: { onChange }, fieldState: { error } }) => (
               <AppSelect
                 label="Country / Region"
                 placeholder="Select"
                 options={COUNTRIES_LIST}
-                // selectedOption={getSelectedOption(selectedGender, genderOptions)}
-                // value={getSelectValue(value, COUNTRIES_LIST) as SelectOption}
                 onChange={(newValue) => onChange(newValue)}
-                error={error?.message}
+                errorText={error?.message}
                 className={cls.checkoutFormInput}
               />
             )}
@@ -139,15 +147,16 @@ export const CheckoutForm: FC = () => {
           <Controller
             control={control}
             name="countryState"
-            render={({ field: { onChange, value }, fieldState: { error } }) => (
+            rules={{
+              required: VALIDATION_MESSAGES.REQUIRED,
+            }}
+            render={({ field: { onChange }, fieldState: { error } }) => (
               <AppSelect
-                label="Country / Region"
+                label="States"
                 placeholder="Select"
                 options={STATES_LIST}
-                // selectedOption={getSelectedOption(selectedGender, genderOptions)}
-                // value={getSelectValue(value, COUNTRIES_LIST) as SelectOption}
-                // onChange={(newValue) => onChange(newValue.value)}
-                error={error?.message}
+                onChange={(newValue) => onChange(newValue)}
+                errorText={error?.message}
                 className={cls.checkoutFormInput}
               />
             )}
@@ -156,6 +165,13 @@ export const CheckoutForm: FC = () => {
           <Controller
             control={control}
             name="zipAddress"
+            rules={{
+              required: VALIDATION_MESSAGES.REQUIRED,
+              pattern: {
+                value: /^\d{3} \d{3}$/,
+                message: VALIDATION_MESSAGES.WRONG_FORMAT,
+              },
+            }}
             render={({ field, fieldState: { error } }) => (
               <MaskedInput
                 inputMode="numeric"
@@ -175,6 +191,14 @@ export const CheckoutForm: FC = () => {
             <Controller
               control={control}
               name="email"
+              rules={{
+                required: VALIDATION_MESSAGES.REQUIRED,
+                pattern: {
+                  value:
+                    /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu,
+                  message: VALIDATION_MESSAGES.WRONG_EMAIL,
+                },
+              }}
               render={({ field, fieldState: { error } }) => (
                 <Input
                   label="Email"
@@ -189,6 +213,13 @@ export const CheckoutForm: FC = () => {
             <Controller
               control={control}
               name="phone"
+              rules={{
+                required: VALIDATION_MESSAGES.REQUIRED,
+                pattern: {
+                  value: /^\+\d \(\d{3}\) \d{3}-\d{2}-\d{2}$/,
+                  message: VALIDATION_MESSAGES.WRONG_PHONE,
+                },
+              }}
               render={({ field, fieldState: { error } }) => (
                 <MaskedInput
                   inputMode="numeric"
@@ -217,6 +248,9 @@ export const CheckoutForm: FC = () => {
               <Controller
                 control={control}
                 name="shippingStreetAddress"
+                rules={{
+                  required: showAddAddress ? VALIDATION_MESSAGES.REQUIRED : false,
+                }}
                 render={({ field, fieldState: { error } }) => (
                   <Input
                     label="Street Address"
@@ -232,15 +266,16 @@ export const CheckoutForm: FC = () => {
               <Controller
                 control={control}
                 name="shippingCountryAddress"
-                render={({ field: { onChange, value }, fieldState: { error } }) => (
+                rules={{
+                  required: showAddAddress ? VALIDATION_MESSAGES.REQUIRED : false,
+                }}
+                render={({ field: { onChange }, fieldState: { error } }) => (
                   <AppSelect
                     label="Country / Region"
                     placeholder="Select"
                     options={COUNTRIES_LIST}
-                    // selectedOption={getSelectedOption(selectedGender, genderOptions)}
-                    // value={getSelectValue(value, COUNTRIES_LIST) as SelectOption}
                     onChange={(newValue) => onChange(newValue)}
-                    error={error?.message}
+                    errorText={error?.message}
                     className={cls.checkoutFormInput}
                   />
                 )}
@@ -249,15 +284,16 @@ export const CheckoutForm: FC = () => {
               <Controller
                 control={control}
                 name="shippingCountryState"
-                render={({ field: { onChange, value }, fieldState: { error } }) => (
+                rules={{
+                  required: showAddAddress ? VALIDATION_MESSAGES.REQUIRED : false,
+                }}
+                render={({ field: { onChange }, fieldState: { error } }) => (
                   <AppSelect
-                    label="Country / Region"
+                    label="States"
                     placeholder="Select"
                     options={STATES_LIST}
-                    // selectedOption={getSelectedOption(selectedGender, genderOptions)}
-                    // value={getSelectValue(value, COUNTRIES_LIST) as SelectOption}
-                    // onChange={(newValue) => onChange(newValue.value)}
-                    error={error?.message}
+                    onChange={(newValue) => onChange(newValue)}
+                    errorText={error?.message}
                     className={cls.checkoutFormInput}
                   />
                 )}
@@ -266,6 +302,13 @@ export const CheckoutForm: FC = () => {
               <Controller
                 control={control}
                 name="shippingZipAddress"
+                rules={{
+                  required: showAddAddress ? VALIDATION_MESSAGES.REQUIRED : false,
+                  pattern: {
+                    value: /^\d{3} \d{3}$/,
+                    message: VALIDATION_MESSAGES.WRONG_FORMAT,
+                  },
+                }}
                 render={({ field, fieldState: { error } }) => (
                   <MaskedInput
                     inputMode="numeric"
@@ -303,10 +346,6 @@ export const CheckoutForm: FC = () => {
           )}
         />
       </div>
-
-      {/* todo test */}
-
-      <button type="submit">test submit</button>
     </form>
   );
 };

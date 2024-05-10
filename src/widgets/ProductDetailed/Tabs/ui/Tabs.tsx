@@ -1,4 +1,4 @@
-import { FC, useId } from 'react';
+import { FC } from 'react';
 import cn from 'classnames';
 
 import { VideoAd } from 'entities/Advertisement/ui/VideoAd/VideoAd';
@@ -37,16 +37,17 @@ export const ProductDetailedTabs: FC<Props> = ({ ad, descriptions, specs, feedba
         <div className={cls.tabsContent}>
           <div className={cls.tabsDescription}>
             <div className="product-page__specs">
-              {specs.map((spec) => {
-                const id = useId();
+              {specs.map((spec, index) => {
                 return (
-                  <div className="product-page__spec" key={id}>
+                  <div className="product-page__spec" key={`spec/${index}`}>
                     <span className="product-page__spec-title">{spec.title}</span>
                     <span className="product-page__spec-value">
-                      {spec.value.map((value) => {
-                        const id = useId();
+                      {spec.value.map((value, index) => {
                         return (
-                          <span className="product-page__spec-value-item" key={id}>
+                          <span
+                            className="product-page__spec-value-item"
+                            key={`spec-value/${index}`}
+                          >
                             {value.title}
                           </span>
                         );
@@ -69,9 +70,8 @@ export const ProductDetailedTabs: FC<Props> = ({ ad, descriptions, specs, feedba
       label: 'Customer Feedback',
       content: (
         <div className={cn(cls.tabsContent, cls.tabReviews)}>
-          {feedback.map((item) => {
-            const id = useId();
-            return <ProductReview data={item} key={id} />;
+          {feedback.map((item, index) => {
+            return <ProductReview data={item} key={`feedback/${index}`} />;
           })}
         </div>
       ),

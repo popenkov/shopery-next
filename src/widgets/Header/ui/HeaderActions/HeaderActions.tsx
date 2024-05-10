@@ -3,8 +3,9 @@ import Link from 'next/link';
 
 import LikeIcon from '@public/icons/icon__heart.svg';
 
-import cls from './HeaderActions.module.scss';
 import { HeaderCart } from '../HeaderCart';
+
+import cls from './HeaderActions.module.scss';
 
 export const HeaderActions: FC = () => {
   return (

@@ -15,6 +15,7 @@ export type TProduct = {
     type: StockVariant;
     text: string;
   };
+  amount?: number;
 };
 
 type TAdIcons = 'icon__price_tag' | 'icon__leaf';

@@ -1,16 +1,15 @@
 'use client';
 
-import { ChangeEvent, InputHTMLAttributes, forwardRef, memo, useId, useState } from 'react';
+import { ChangeEvent, InputHTMLAttributes, forwardRef, memo, useId } from 'react';
 import cn from 'classnames';
 
-import SearchIcon from '@public/icons/icon__search.svg';
 import AlertIcon from '@public/icons/icon__alert.svg';
-import WarningIcon from '@public/icons/icon__warning.svg';
+import SearchIcon from '@public/icons/icon__search.svg';
 import SuccessIcon from '@public/icons/icon__success.svg';
-import { checkEmailValidation } from 'shared/lib/utils/checkEmailValidation/checkEmailValidation';
+
+import { Text } from '../Text';
 
 import cls from './Input.module.scss';
-import { Text } from '../Text';
 
 type HTMLInputProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
@@ -39,8 +38,6 @@ export const Input = memo(
       ...otherProps
     } = props;
 
-    const [isInvalid, setIsInvalid] = useState(true);
-
     //   // todo
     //   // const handleInputChange = (evt: ChangeEvent<HTMLInputElement>) => {
     //   //   // if (type === 'email') {
@@ -58,9 +55,13 @@ export const Input = memo(
     const uniqueId = useId();
 
     return (
-      <>
+      <div className={cls.inputContainer}>
+        {label && (
+          <label htmlFor={uniqueId} className={cls.inputLabel}>
+            {label}
+          </label>
+        )}
         <div className={cn(cls.inputWrapper, className)}>
-          {label && <label htmlFor={uniqueId}>{label}</label>}
           <input
             id={uniqueId}
             ref={ref}
@@ -69,29 +70,37 @@ export const Input = memo(
             onChange={(evt) => onChange?.(evt)}
             className={cn(cls.input, {
               [cls.search]: type === 'search',
+              [cls.error]: errorText,
+              [cls.success]: value && !errorText,
             })}
             {...otherProps}
           />
           {type === 'search' && (
-            <SearchIcon className={cls.searchIcon} onClick={handleLoupeClick} />
+            <SearchIcon
+              className={cn(cls.inputIcon, cls.inputIconSearch)}
+              onClick={handleLoupeClick}
+            />
           )}
           {/* todo */}
           {hasValidation && (
             <>
-              <AlertIcon className="field__icon field__icon--error" />
-              <WarningIcon className="field__icon field__icon--warning" />
-              <SuccessIcon className="field__icon field__icon--success" />
+              {errorText && <AlertIcon className={cn(cls.inputIcon, cls.inputIconError)} />}
+              {/* <WarningIcon className={cn(cls.inputIcon, cls.inputIconWarning)} /> */}
+              {value && !errorText && (
+                <SuccessIcon className={cn(cls.inputIcon, cls.inputIconSuccess)} />
+              )}
             </>
+          )}
+
+          {errorText && (
+            <Text variant="body_s" weight="medium" className={cls.errorMessage} as="span">
+              {errorText}
+            </Text>
           )}
         </div>
         {/* todo */}
         {/* {isInvalid && hasValidation && <span>error</span>} */}
-        {errorText && (
-          <Text variant="body_s" weight="medium" className={cls.errorMessage} as="span">
-            {errorText}
-          </Text>
-        )}
-      </>
+      </div>
     );
   }),
 );

@@ -2,11 +2,30 @@
 @import '@/shared/styles/mixins/container';
 @import '@/shared/styles/mixins/flexbox';
 
-.wishlist {
+.checkout {
   @include container;
-  @include flex-column;
 
-  
-  gap: 32px;
-    padding: 40px 0 80px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 30px 0 80px;
+
+  @media screen and (max-width: $screen-ti) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.checkoutMain {
+  flex-grow: 1;
+}
+
+.checkoutAside {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 424px;
+
+  @media screen and (max-width: $screen-ti) {
+    max-width: unset;
+  }
 }

@@ -1,72 +1,57 @@
 'use client';
 
-import React, { FC } from 'react';
+import { FC } from 'react';
+import cn from 'classnames';
 
-import cls from './CheckoutTotal.module.scss';
-import { Text } from '@/shared/ui/Text';
-import { Radio } from '@/shared/ui/Radio';
+import { ProductCheckout } from '@/entities/Product';
+import { getFormattedPrice } from '@/shared/lib/utils/getFormattedPrice';
 import { Button } from '@/shared/ui/Buttons';
+import { Radio } from '@/shared/ui/Radio';
+import { Text } from '@/shared/ui/Text';
 import { getCartData } from 'entities/Cart';
 
-export const CheckoutTotal: FC = () => {
-  const { items } = getCartData();
+import cls from './CheckoutTotal.module.scss';
+
+type Props = {
+  className: string;
+};
+
+export const CheckoutTotal: FC<Props> = ({ className }) => {
+  const { items, price, shipping, totalPrice } = getCartData();
 
   const handlePaymentMethodChoose = () => {
     console.log('handlePaymentMethodChoose');
   };
 
   return (
-    <div className={cls.CheckoutTotal}>
+    <div className={cn(cls.CheckoutTotal, className)}>
       <Text variant="body_xxl" weight="medium" as="h3">
         Cart Total
       </Text>
 
-      <div className="checkout-total__items">
-        {/* todo items */}
-        <div className="checkout-product cart-page__item">
-          <div className="checkout-product__info">
-            <img className="checkout-product__photo" src="img/product-green-capsicum.jpg" alt="" />
-            <h3 className="checkout-product__title">
-              Green Capsicum<span className="checkout-product__quantity">x</span>
-              <span className="checkout-product__quantity">5</span>
-            </h3>
-          </div>
-          <div className="checkout-product__price">
-            <span className="checkout-product__price-new">$14.99</span>
-          </div>
-        </div>
-        <div className="checkout-product cart-page__item">
-          <div className="checkout-product__info">
-            <img
-              className="checkout-product__photo"
-              src="img/product-small--red-capsicum.jpg"
-              alt=""
-            />
-            <h3 className="checkout-product__title">
-              Red Capsicum<span className="checkout-product__quantity">x</span>
-              <span className="checkout-product__quantity">5</span>
-            </h3>
-          </div>
-          <div className="checkout-product__price">
-            <span className="checkout-product__price-new">$14.99</span>
-          </div>
-        </div>
+      <div className={cls.CheckoutTotalItems}>
+        {items.map((item) => {
+          return <ProductCheckout data={item} key={item.id} />;
+        })}
       </div>
       <div className={cls.CheckoutTotalValues}>
         <div className={cls.CheckoutTotalRow}>
           <span className={cls.CheckoutTotalKey}>Subtotal:</span>
-          <span className={cls.CheckoutTotalValue}>$84.00</span>
+          <span className={cls.CheckoutTotalValue}>{getFormattedPrice(price)}</span>
         </div>
         <div className={cls.CheckoutTotalRow}>
           <span className={cls.CheckoutTotalKey}>Shipping:</span>
-          <span className={cls.CheckoutTotalValue}>Free</span>
+          <span className={cls.CheckoutTotalValue}>
+            {shipping ? getFormattedPrice(shipping) : 'Free'}
+          </span>
         </div>
         <div className={cls.CheckoutTotalRow}>
           <span className={cls.CheckoutTotalKey}>Total:</span>
-          <span className={cls.CheckoutTotalValue}>$84.00</span>
+          <span className={cls.CheckoutTotalValue}>{getFormattedPrice(totalPrice)}</span>
         </div>
       </div>
       <div className={cls.CheckoutPaymentMethods}>
+        {/* todo привязать к форме */}
         <Radio
           value={'cash'}
           name="payment-method"

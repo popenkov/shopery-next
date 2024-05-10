@@ -6,19 +6,8 @@ import { getWishlistItems } from 'entities/Product/';
 import { ProductWishlist } from 'entities/Product/';
 
 import cls from './WishlistTable.module.scss';
-import { WishlistTableFooter } from './WishlistTableFooter/WishlistTableFooter';
-import { WishlistTableHeader } from './WishlistTableHeader/WishlistTableHeader';
-
-
-
-
-
-
-
-
-
-
-
+import { WishlistTableFooter } from './WishlistTableFooter';
+import { WishlistTableHeader } from './WishlistTableHeader';
 
 export const WishlistTable: FC = () => {
   const { items } = getWishlistItems();

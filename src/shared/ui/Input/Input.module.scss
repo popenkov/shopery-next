@@ -1,5 +1,16 @@
 @import '@/shared/styles/mixins/text-styles';
 @import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/flexbox';
+
+.inputContainer {
+  @include flex-column;
+
+  gap: 8px;
+}
+
+.inputLabel {
+  @include body-s;
+}
 
 .inputWrapper {
   position: relative;
@@ -34,6 +45,14 @@
     border-radius: 6px;
     outline: none;
   }
+
+  &.error {
+    border-color: var(--status-danger);
+  }
+
+  &.success {
+    border-color: var(--primary);
+  }
 }
 
 .searchIcon {
@@ -42,4 +61,26 @@
   position: absolute;
   top: 12px;
   left: 15px;
+}
+
+.inputIcon {
+  @include box(20px);
+
+  position: absolute;
+
+  &Search {
+    top: 12px;
+    left: 15px;
+  }
+
+  &Warning,
+  &Error,
+  &Success {
+    top: 15px;
+    right: 15px;
+  }
+}
+
+.errorMessage {
+  color: var(--status-danger);
 }

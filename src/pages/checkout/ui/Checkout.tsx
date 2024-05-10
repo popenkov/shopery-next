@@ -1,11 +1,11 @@
 import { FC } from 'react';
 
+import { CheckoutForm } from '@/features/Cart/CheckoutForm';
 import { Breadcrumbs } from 'entities/Breadcrumps';
 import { AppRouteNames } from 'shared/interfaces/router';
 import { Text } from 'shared/ui/Text';
 
 import cls from './Checkout.module.scss';
-import { CheckoutForm } from '@/features/Cart/CheckoutForm';
 import { CheckoutTotal } from './CheckoutTotal/CheckoutTotal';
 
 const CheckoutPage: FC = () => {
@@ -17,19 +17,21 @@ const CheckoutPage: FC = () => {
     <div data-testid="checkout">
       <Breadcrumbs items={crumbs} />
       <div className={cls.checkout}>
-        <Text
-          variant="heading_5"
-          weight="semibold"
-          align="center"
-          as="h2"
-          className={cls.checkoutTitle}
-        >
-          Billing Information
-        </Text>
+        <div className={cls.checkoutMain}>
+          <Text
+            variant="heading_5"
+            weight="semibold"
+            align="center"
+            as="h2"
+            className={cls.checkoutTitle}
+          >
+            Billing Information
+          </Text>
 
-        <CheckoutForm />
+          <CheckoutForm />
+        </div>
+        <CheckoutTotal className={cls.checkoutAside} />
       </div>
-      <CheckoutTotal />
     </div>
   );
 };

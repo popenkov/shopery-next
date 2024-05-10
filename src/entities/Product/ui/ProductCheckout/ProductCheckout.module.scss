@@ -1,0 +1,25 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+
+.productCheckout {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+
+  &Info {
+    @include flex-center-vertical;
+
+    gap: 12px;
+  }
+
+  &Photo {
+    @include box(60px);
+
+    position: relative;
+
+    img {
+      object-fit: contain;
+    }
+  }
+}
