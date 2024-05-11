@@ -4,7 +4,7 @@ import { FC } from 'react';
 import cn from 'classnames';
 
 import { ProductCheckout } from '@/entities/Product';
-import { getFormattedPrice } from '@/shared/lib/utils/getFormattedPrice';
+import { getFormattedPrice } from '@/shared/lib/utils';
 import { Button } from '@/shared/ui/Buttons';
 import { Radio } from '@/shared/ui/Radio';
 import { Text } from '@/shared/ui/Text';
@@ -19,14 +19,15 @@ type Props = {
 export const CheckoutTotal: FC<Props> = ({ className }) => {
   const { items, price, shipping, totalPrice } = getCartData();
 
+  // todo
   const handlePaymentMethodChoose = () => {
     console.log('handlePaymentMethodChoose');
   };
 
   return (
     <div className={cn(cls.CheckoutTotal, className)}>
-      <Text variant="body_xxl" weight="medium" as="h3">
-        Cart Total
+      <Text variant="body_xl" weight="medium" as="h3">
+        Order Summery
       </Text>
 
       <div className={cls.CheckoutTotalItems}>
@@ -52,31 +53,36 @@ export const CheckoutTotal: FC<Props> = ({ className }) => {
       </div>
       <div className={cls.CheckoutPaymentMethods}>
         {/* todo привязать к форме */}
-        <Radio
-          value={'cash'}
-          name="payment-method"
-          text="Cash on Delivery"
-          onChange={handlePaymentMethodChoose}
-          className="filter-accordion__content-item"
-        />
-        <Radio
-          value={'cash'}
-          name="payment-method"
-          text="Paypal"
-          onChange={handlePaymentMethodChoose}
-          className="filter-accordion__content-item"
-        />
-        <Radio
-          value={'amazon-pay'}
-          name="payment-method"
-          text="Amazon Pay"
-          onChange={handlePaymentMethodChoose}
-          className="filter-accordion__content-item"
-        />
+        <Text variant="body_xl" weight="medium" className={cls.CheckoutPaymentMethodsTitle}>
+          Payment Method
+        </Text>
+        <div className={cls.CheckoutPaymentMethodsItems}>
+          <Radio
+            value={'cash'}
+            name="payment-method"
+            text="Cash on Delivery"
+            onChange={handlePaymentMethodChoose}
+            className="filter-accordion__content-item"
+          />
+          <Radio
+            value={'cash'}
+            name="payment-method"
+            text="Paypal"
+            onChange={handlePaymentMethodChoose}
+            className="filter-accordion__content-item"
+          />
+          <Radio
+            value={'amazon-pay'}
+            name="payment-method"
+            text="Amazon Pay"
+            onChange={handlePaymentMethodChoose}
+            className="filter-accordion__content-item"
+          />
+        </div>
       </div>
 
       <Button size="large" className={cls.filterButtonDesktop} form="checkoutForm" type="submit">
-        Proceed to checkout
+        Place Order
       </Button>
     </div>
   );

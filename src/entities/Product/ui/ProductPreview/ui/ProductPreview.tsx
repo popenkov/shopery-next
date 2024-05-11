@@ -1,4 +1,3 @@
-
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,7 +7,7 @@ import PreviewIcon from '@public/icons/icon__eye.svg';
 import LikeIcon from '@public/icons/icon__heart.svg';
 import { TProduct } from 'entities/Product';
 import { StarRating } from 'entities/StarRating';
-import { getFormattedPrice } from 'shared/lib/utils/getFormattedPrice';
+import { getFormattedPrice } from 'shared/lib/utils';
 import { RoundButton } from 'shared/ui/Buttons';
 import { Text } from 'shared/ui/Text';
 

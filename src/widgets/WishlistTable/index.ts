@@ -1,1 +1,1 @@
-export { WishlistTable } from './ui/WishlistTable';
+export { WishlistTable } from './ui';

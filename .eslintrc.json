@@ -49,7 +49,6 @@
         "allowSingleExtends": true
       }
     ],
-    // todo
     "import/order": [
       "error",
       {

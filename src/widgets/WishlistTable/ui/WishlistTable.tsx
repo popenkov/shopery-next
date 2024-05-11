@@ -1,7 +1,6 @@
 import { FC } from 'react';
 
-import { AddToCartFromWishlist } from 'features/Product/add-to-cart-from-wishlist';
-import { RemoveFromFavorites } from 'features/Product/remove-from-favorites/ui/RemoveFromFavorites';
+import { AddToCartFromWishlist, RemoveFromFavorites } from 'features/Product';
 import { getWishlistItems } from 'entities/Product/';
 import { ProductWishlist } from 'entities/Product/';
 

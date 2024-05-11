@@ -1,13 +1,11 @@
 'use client';
 import { FC } from 'react';
 
-import { CatalogFilter } from 'widgets/CatalogFilter';
-import { getCatalogFilterData } from 'widgets/CatalogFilter/api/getCatalogFilterData';
-import { CatalogItems } from 'widgets/CatalogItems';
-import { getCatalogItems } from 'widgets/CatalogItems/api/getCatalogItems';
+import { CatalogFilter, getCatalogFilterData } from 'widgets/CatalogFilter';
+import { CatalogItems, getCatalogItems } from 'widgets/CatalogItems';
 import { CatalogSort } from 'features/CatalogSort';
 import { Breadcrumbs } from 'entities/Breadcrumps';
-import { DiscountBanner } from 'entities/DiscountBanner/ui';
+import { DiscountBanner } from 'entities/DiscountBanner';
 import { ProductSmall } from 'entities/Product';
 import { AppRouteNames } from 'shared/interfaces/router';
 import { Pagination } from 'shared/ui/Pagination';

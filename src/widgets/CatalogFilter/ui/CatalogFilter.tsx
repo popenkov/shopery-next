@@ -4,111 +4,13 @@ import { DetailedHTMLProps, FC, HTMLAttributes, useCallback, useState } from 're
 import cn from 'classnames';
 
 import { Filter } from 'features/Filter';
-import { TDiscountBanner } from 'entities/DiscountBanner/model/banner';
-import { DiscountBanner } from 'entities/DiscountBanner/ui';
+import { TDiscountBanner, DiscountBanner } from 'entities/DiscountBanner';
 import { ProductSmall, TProduct } from 'entities/Product';
 import { FilterButton } from 'shared/ui/FilterButton';
 
 import cls from './CatalogFilter.module.scss';
 import { CatalogFilterFooter } from './CatalogFilterFooter';
-import { CatalogFilterHeader } from './CatalogFilterHeader/CatalogFilterHeader';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import { CatalogFilterHeader } from './CatalogFilterHeader';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   banner: TDiscountBanner;

@@ -1,74 +1,12 @@
 import { FC, ReactNode } from 'react';
 
+import { TProductDetailed } from 'entities/Product';
 import { StarRating } from 'entities/StarRating';
 import { SocialShare } from 'shared/ui/SocialShare/SocialShare';
 import { ThumbSlider } from 'shared/ui/ThumbSlider/ThumbSlider';
 
-import { TProductDetailed } from '../..';
 
 import cls from './ProductDescription.module.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 type Props = {
   data: TProductDetailed;
@@ -89,6 +27,8 @@ export const ProductDescription: FC<Props> = ({ data, actions }) => {
                 <div className="tag tag--in-stock">In Stock</div>
               </div>
             </div>
+
+            {/* todo replace static data */}
             <div className={cls.productDescriptionReviewWrapper}>
               <div className={cls.productDescriptionReview}>
                 <StarRating value={5} className={cls.productDescriptionRating} />

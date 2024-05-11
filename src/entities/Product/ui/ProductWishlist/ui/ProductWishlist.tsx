@@ -1,11 +1,10 @@
-
 import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode } from 'react';
 import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import { TProduct } from 'entities/Product';
-import { getFormattedPrice } from 'shared/lib/utils/getFormattedPrice';
+import { getFormattedPrice } from 'shared/lib/utils';
 import { Tag } from 'shared/ui/Tag';
 import { Text } from 'shared/ui/Text';
 

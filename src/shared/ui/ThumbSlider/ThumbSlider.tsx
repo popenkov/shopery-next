@@ -104,7 +104,7 @@ export const ThumbSlider: FC<Props> = ({ data, className }) => {
             {data.thumb.map((photo, index) => {
               return (
                 <SwiperSlide className={cls.mainSlide} key={`main-slide/${index}`}>
-                  <img src={photo} className={cls.mainImg} />
+                  <img src={photo} alt="product image" className={cls.mainImg} />
                 </SwiperSlide>
               );
             })}

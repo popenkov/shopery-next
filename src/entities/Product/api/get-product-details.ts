@@ -78,11 +78,11 @@ const data: TProductDetailed = {
       value: [
         { title: 'Vegetables', path: '/' },
         { title: 'Healthy', path: '/' },
-        ,
+
         { title: 'Chinese', path: '/' },
-        ,
+
         { title: 'Cabbage', path: '/' },
-        ,
+
         { title: ' Green Cabbage,', path: '/' },
       ],
     },

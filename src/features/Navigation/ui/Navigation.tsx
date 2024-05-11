@@ -2,105 +2,11 @@ import { FC } from 'react';
 
 import { PhoneLink } from 'entities/PhoneLink';
 
-
-import { getNavigationData } from '../api/getNavigationData';
+import { getNavigationData } from '../api';
 
 import cls from './Navigation.module.scss';
 import { NavigationCategories } from './NavigationCategories';
 import { NavigationLinks } from './NavigationLinks';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export const Navigation: FC = () => {
   const { navigation, categories } = getNavigationData();

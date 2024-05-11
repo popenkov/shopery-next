@@ -3,81 +3,9 @@ import Link from 'next/link';
 
 import { Text } from 'shared/ui/Text';
 
-import { getFooterData } from '../../api/getFooterData';
+import { getFooterData } from '../../api';
 
 import cls from './FooterNavigation.module.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 

@@ -1,1 +1,1 @@
-export { MainVideo } from './ui/MainVideo';
+export { MainVideo } from './ui';

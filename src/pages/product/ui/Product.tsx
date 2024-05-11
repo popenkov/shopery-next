@@ -1,9 +1,7 @@
 import { FC } from 'react';
 
-import { RelatedProducts } from 'widgets/ProductDetailed/RelatedProducts/RelatedProducts';
-import { ProductDetailedTabs } from 'widgets/ProductDetailed/Tabs';
-import { AddToCartCounter } from 'features/Product/add-to-cart-counter/AddToCartCounter';
-import { AddToFavorites } from 'features/Product/add-to-favorites/AddToFavorites';
+import { ProductDetailedTabs, RelatedProducts } from 'widgets/ProductDetailed';
+import { AddToCartCounter, AddToFavorites } from 'features/Product';
 import { Breadcrumbs } from 'entities/Breadcrumps';
 import { ProductDescription, getProductDetails } from 'entities/Product';
 import { AppRouteNames } from 'shared/interfaces/router';

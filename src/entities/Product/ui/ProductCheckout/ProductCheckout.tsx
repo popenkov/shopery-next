@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { TProduct } from 'entities/Product';
-import { getFormattedPrice } from 'shared/lib/utils/getFormattedPrice';
+import { getFormattedPrice } from 'shared/lib/utils';
 import { Text } from 'shared/ui/Text';
 
 import cls from './ProductCheckout.module.scss';

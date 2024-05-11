@@ -3,73 +3,11 @@
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import { Product, TProduct } from 'entities/Product';
-import { MobileSlider } from 'shared/ui/MobileSlider/MobileSlider';
+import { MobileSlider } from 'shared/ui/MobileSlider';
 
-import { getFeaturedProducts } from '../api/getFeaturedProducts';
+import { getFeaturedProducts } from '../api';
 
 import cls from './FeaturedProducts.module.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 

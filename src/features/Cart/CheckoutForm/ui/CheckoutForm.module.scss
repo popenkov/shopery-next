@@ -1,3 +1,4 @@
+@import '@/shared/styles/_breakpoints';
 @import '@/shared/styles/mixins/flexbox';
 @import '@/shared/styles/mixins/grid';
 @import '@/shared/styles/mixins/text-styles';
@@ -12,7 +13,7 @@
   @include flex-column;
 
   gap: 14px;
-  padding-bottom: 32px;
+  padding-bottom: 28px;
   border-bottom: 1px solid var(--monochrome-100);
 }
 
@@ -24,12 +25,24 @@
   @include grid(2);
 
   gap: 16px;
+
+  @media screen and (max-width: $screen-tl) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .checkoutFormRowGridThree {
   @include grid(3);
 
   gap: 16px;
+
+  @media screen and (max-width: $screen-d) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: $screen-tl) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .checkoutFormComment {
@@ -49,16 +62,13 @@
     margin: 0;
   }
 
-  .select .nice-select {
+  // select
+  :global(.react-select__control) {
     width: 100%;
     height: 49px;
-    padding: 5px 13px;
+    font-style: 16px;
+    line-height: 130%;
     border: 1px solid var(--monochrome-100);
-
-    .current {
-      font-style: 16px;
-      line-height: 130%;
-    }
   }
 }
 

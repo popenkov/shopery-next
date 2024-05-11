@@ -21,7 +21,7 @@ interface Props extends HTMLInputProps {
   label?: string;
   errorText?: string;
   hasValidation?: boolean;
-  value?: string | number;
+  value?: string;
   onChange?: (evt: ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -66,7 +66,7 @@ export const Input = memo(
             id={uniqueId}
             ref={ref}
             type={type}
-            value={value}
+            // value={value}
             onChange={(evt) => onChange?.(evt)}
             className={cn(cls.input, {
               [cls.search]: type === 'search',

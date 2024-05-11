@@ -2,71 +2,9 @@ import React from 'react';
 
 import { AdvantageCard } from 'entities/Advantage';
 
-import { getAdvantagesData } from '../api/getAdvantagesData';
+import { getAdvantagesData } from '../api';
 
 import cls from './Advantages.module.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export const Advantages = () => {
   const { advantages } = getAdvantagesData();

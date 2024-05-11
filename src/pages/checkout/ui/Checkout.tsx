@@ -18,13 +18,7 @@ const CheckoutPage: FC = () => {
       <Breadcrumbs items={crumbs} />
       <div className={cls.checkout}>
         <div className={cls.checkoutMain}>
-          <Text
-            variant="heading_5"
-            weight="semibold"
-            align="center"
-            as="h2"
-            className={cls.checkoutTitle}
-          >
+          <Text variant="body_xxl" weight="medium" as="h2" className={cls.checkoutTitle}>
             Billing Information
           </Text>
 

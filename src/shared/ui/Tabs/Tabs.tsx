@@ -14,7 +14,7 @@ interface TabsProps {
   tabs: Tab[];
 }
 
-const Tabs: FC<TabsProps> = ({ tabs }) => {
+export const Tabs: FC<TabsProps> = ({ tabs }) => {
   const [selectedTab, setSelectedTab] = useState(0);
 
   return (
@@ -46,5 +46,3 @@ const Tabs: FC<TabsProps> = ({ tabs }) => {
     </div>
   );
 };
-
-export default Tabs;

@@ -5,12 +5,13 @@
 .productCheckout {
   display: flex;
   gap: 20px;
+  align-items: center;
   justify-content: space-between;
 
   &Info {
     @include flex-center-vertical;
 
-    gap: 12px;
+    gap: 5px;
   }
 
   &Photo {

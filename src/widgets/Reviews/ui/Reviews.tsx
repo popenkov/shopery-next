@@ -2,75 +2,12 @@
 
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
-import { Review } from 'entities/Review';
-import { TReview } from 'entities/Review/model/types/Review.types';
-import { MobileSlider } from 'shared/ui/MobileSlider/MobileSlider';
+import { Review, TReview } from 'entities/Review';
+import { MobileSlider } from 'shared/ui/MobileSlider';
 
-import { getReviewsData } from '../api/getReviewsData';
+import { getReviewsData } from '../api';
 
 import cls from './Reviews.module.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 

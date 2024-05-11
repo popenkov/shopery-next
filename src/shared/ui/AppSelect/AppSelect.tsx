@@ -1,6 +1,7 @@
 'use client';
 
 import { ComponentType, DetailedHTMLProps, HTMLAttributes, forwardRef, memo } from 'react';
+import cn from 'classnames';
 import Select, {
   components,
   type DropdownIndicatorProps,
@@ -60,7 +61,11 @@ export const AppSelect = memo(
     };
 
     return (
-      <div className={cls.selectWrappper}>
+      <div
+        className={cn(cls.selectWrappper, {
+          [cls.error]: errorText,
+        })}
+      >
         {label && <label className={cls.selectLabel}>{label}</label>}
         <Select
           components={{ DropdownIndicator }}
@@ -71,6 +76,8 @@ export const AppSelect = memo(
           className={cls.select}
           menuIsOpen={menuIsOpen}
           isSearchable={isSearchable!}
+          classNamePrefix="react-select"
+          instanceId={'selectInstanceId'}
           {...otherPops}
         />
         {errorText && (

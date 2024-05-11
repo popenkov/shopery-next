@@ -3,73 +3,11 @@
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import { Banner, TBanner } from 'entities/Banner';
-import { MobileSlider } from 'shared/ui/MobileSlider/MobileSlider';
+import { MobileSlider } from 'shared/ui/MobileSlider';
 
-import { getBannerData } from '../api/getBannerData';
+import { getBannerData } from '../api';
 
 import cls from './Banner.module.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 

@@ -1,1 +1,1 @@
-export { NewsSubscription } from './ui/NewsSubscription';
+export { NewsSubscription } from './ui';

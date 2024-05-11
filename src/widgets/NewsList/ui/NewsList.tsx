@@ -3,73 +3,11 @@
 import { FC } from 'react';
 
 import { News, TNews } from 'entities/News';
-import { MobileSlider } from 'shared/ui/MobileSlider/MobileSlider';
+import { MobileSlider } from 'shared/ui/MobileSlider';
 
-import { getNewsData } from '../api/getNewsData';
+import { getNewsData } from '../api';
 
 import cls from './NewsList.module.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export const NewsList: FC = () => {
   const { news } = getNewsData();

@@ -3,7 +3,7 @@ export { ProductLarge } from './ui/ProductLarge';
 export { ProductPreview } from './ui/ProductPreview';
 export { ProductSmall } from './ui/ProductSmall';
 export { ProductWishlist } from './ui/ProductWishlist';
-export { ProductDescription } from './ui/ProductDescription/ProductDescription';
+export { ProductDescription } from '../../widgets/ProductDescription/ProductDescription';
 export { ProductCheckout } from './ui/ProductCheckout/ProductCheckout';
 export { type TProduct, type TProductDetailed } from './model/types/product.types';
 

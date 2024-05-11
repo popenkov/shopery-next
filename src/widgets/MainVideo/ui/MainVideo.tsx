@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import { Video } from 'entities/Video';
 
-import { getVideoData } from '../api/getVideoData';
+import { getVideoData } from '../api';
 
 import cls from './MainVideo.module.scss';
 

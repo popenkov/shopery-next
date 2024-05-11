@@ -186,55 +186,54 @@ export const CheckoutForm: FC = () => {
               />
             )}
           />
+        </div>
+        <div className={cls.checkoutFormRowGridTwo}>
+          <Controller
+            control={control}
+            name="email"
+            rules={{
+              required: VALIDATION_MESSAGES.REQUIRED,
+              pattern: {
+                value:
+                  /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu,
+                message: VALIDATION_MESSAGES.WRONG_EMAIL,
+              },
+            }}
+            render={({ field, fieldState: { error } }) => (
+              <Input
+                label="Email"
+                placeholder="Email Address"
+                errorText={error?.message}
+                {...field}
+                className={cls.checkoutFormInput}
+              />
+            )}
+          />
 
-          <div className={cls.checkoutFormRowGridTwo}>
-            <Controller
-              control={control}
-              name="email"
-              rules={{
-                required: VALIDATION_MESSAGES.REQUIRED,
-                pattern: {
-                  value:
-                    /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu,
-                  message: VALIDATION_MESSAGES.WRONG_EMAIL,
-                },
-              }}
-              render={({ field, fieldState: { error } }) => (
-                <Input
-                  label="Email"
-                  placeholder="Email Address"
-                  errorText={error?.message}
-                  {...field}
-                  className={cls.checkoutFormInput}
-                />
-              )}
-            />
-
-            <Controller
-              control={control}
-              name="phone"
-              rules={{
-                required: VALIDATION_MESSAGES.REQUIRED,
-                pattern: {
-                  value: /^\+\d \(\d{3}\) \d{3}-\d{2}-\d{2}$/,
-                  message: VALIDATION_MESSAGES.WRONG_PHONE,
-                },
-              }}
-              render={({ field, fieldState: { error } }) => (
-                <MaskedInput
-                  inputMode="numeric"
-                  mask="+0 (000) 000-00-00"
-                  type="text"
-                  unmask={true}
-                  label="Phone"
-                  placeholder="Phone number"
-                  errorText={error?.message}
-                  {...field}
-                  className={cls.checkoutFormInput}
-                />
-              )}
-            />
-          </div>
+          <Controller
+            control={control}
+            name="phone"
+            rules={{
+              required: VALIDATION_MESSAGES.REQUIRED,
+              pattern: {
+                value: /^\+\d \(\d{3}\) \d{3}-\d{2}-\d{2}$/,
+                message: VALIDATION_MESSAGES.WRONG_PHONE,
+              },
+            }}
+            render={({ field, fieldState: { error } }) => (
+              <MaskedInput
+                inputMode="numeric"
+                mask="+0 (000) 000-00-00"
+                type="text"
+                unmask={true}
+                label="Phone"
+                placeholder="Phone number"
+                errorText={error?.message}
+                {...field}
+                className={cls.checkoutFormInput}
+              />
+            )}
+          />
         </div>
         <Checkbox
           text="Ship to a different address"
@@ -254,7 +253,7 @@ export const CheckoutForm: FC = () => {
                 render={({ field, fieldState: { error } }) => (
                   <Input
                     label="Street Address"
-                    placeholder="Street Address"
+                    placeholder="Street"
                     errorText={error?.message}
                     {...field}
                     className={cls.checkoutFormInput}

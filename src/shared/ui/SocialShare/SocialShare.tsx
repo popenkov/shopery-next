@@ -8,13 +8,6 @@ import { RoundButton } from '../Buttons';
 
 import cls from './SocialShare.module.scss';
 
-
-
-
-
-
-
-
 type Props = {
   className?: string;
 };

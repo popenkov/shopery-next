@@ -18,71 +18,9 @@ import { RangeSlider } from 'shared/ui/RangeSlider';
 import { TagCheckbox } from 'shared/ui/TagCheckbox';
 import { Text } from 'shared/ui/Text';
 
-import { getFilterData } from '../api/getFilterData';
+import { getFilterData } from '../api';
 
 import cls from './Filter.module.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   classname?: string;

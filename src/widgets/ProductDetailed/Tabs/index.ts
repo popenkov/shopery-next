@@ -1,1 +1,1 @@
-export { ProductDetailedTabs } from './ui/Tabs';
+export * from './ui';

@@ -3,75 +3,13 @@
 import React, { FC } from 'react';
 
 import { ProductLarge, TProduct } from 'entities/Product';
-import { MobileSlider } from 'shared/ui/MobileSlider/MobileSlider';
+import { MobileSlider } from 'shared/ui/MobileSlider';
 import { ProductTabs } from 'shared/ui/ProductTabs';
 import { Text } from 'shared/ui/Text';
 
-import { getProductTab } from '../api/getProductTabs';
+import { getProductTab } from '../api';
 
 import cls from './ProductTab.module.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export const ProductTab: FC = async () => {
   const { productTabs } = getProductTab();

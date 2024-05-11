@@ -4,81 +4,9 @@ import Link from 'next/link';
 import { Accordion } from 'shared/ui/Accordion';
 import { Text } from 'shared/ui/Text';
 
-import { getNavigationData } from '../../api/getNavigationData';
+import { getNavigationData } from '../../api';
 
 import cls from './NavigationMobile.module.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export const NavigationMobile = () => {
   const { navigation } = getNavigationData();

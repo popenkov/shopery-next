@@ -11,71 +11,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { HeroSlide } from 'entities/HeroSlide';
 
-
-
-import { getHeroSliderData } from '../api/getHeroSliderData';
+import { getHeroSliderData } from '../api';
 
 import { HeroNavigation } from './HeroNavigation';
 import cls from './HeroSlider.module.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export const onBeforeInit = (
   swiper: SwiperType,
