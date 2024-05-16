@@ -3,7 +3,7 @@
 import { ChangeEvent, DetailedHTMLProps, FC, HTMLAttributes, useCallback, useState } from 'react';
 import { redirect } from 'next/navigation';
 
-import { getRouteCatalog } from 'shared/constants/routes';
+import { getRouteCatalog } from 'shared/constants';
 import { Button } from 'shared/ui/Buttons';
 import { Input } from 'shared/ui/Input';
 

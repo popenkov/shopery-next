@@ -2,15 +2,15 @@
 import { ChangeEvent, FC, useState } from 'react';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 
-import { VALIDATION_MESSAGES } from '@/shared/constants/validation-messages';
+import { VALIDATION_MESSAGES } from '@/shared/constants';
 import { AppSelect } from '@/shared/ui/AppSelect';
 import { Checkbox } from '@/shared/ui/Checkbox';
 import { Input } from '@/shared/ui/Input';
-import { MaskedInput } from '@/shared/ui/MaskedInput/MaskedInput';
+import { MaskedInput } from '@/shared/ui/MaskedInput';
 import { Text } from '@/shared/ui/Text';
 import { TextArea } from '@/shared/ui/TextArea';
 
-import { COUNTRIES_LIST, STATES_LIST } from '../constants/countries-list';
+import { COUNTRIES_LIST, STATES_LIST } from '../constants';
 
 import cls from './CheckoutForm.module.scss';
 

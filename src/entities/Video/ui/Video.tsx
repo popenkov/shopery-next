@@ -3,11 +3,9 @@
 import React, { DetailedHTMLProps, FC, HTMLAttributes, useEffect, useRef, useState } from 'react';
 import cn from 'classnames';
 
-import PlayIcon from '@public/icons/icon__play.svg';
+import { PlayIcon } from 'shared/ui/icons';
 import { Text } from 'shared/ui/Text';
 
-// todo
-// import PlayIcon from '@public/icons/icon__play-button.svg';
 import { TVideo } from '..';
 
 import cls from './Video.module.scss';

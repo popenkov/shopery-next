@@ -1,7 +1,7 @@
 import { DetailedHTMLProps, FC, HTMLAttributes, memo } from 'react';
 import cn from 'classnames';
 
-import StarIcon from '@public/icons/icon__star.svg';
+import { StarIcon } from 'shared/ui/icons';
 
 import cls from './StarRating.module.scss';
 

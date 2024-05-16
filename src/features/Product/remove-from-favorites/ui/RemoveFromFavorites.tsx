@@ -1,7 +1,7 @@
 'use client';
 import React, { FC } from 'react';
 
-import CloseIcon from '@public/icons/icon__close.svg';
+import { CloseIcon } from 'shared/ui/icons';
 
 import cls from './RemoveFromFavorites.module.scss';
 

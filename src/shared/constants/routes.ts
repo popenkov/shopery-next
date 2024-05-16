@@ -1,7 +1,8 @@
 import { AppRouteNames, AppRoutesProps } from 'shared/interfaces/router';
 
-export const getRouteHome = () => '/';
-export const getRouteCatalog = () => '/catalog';
+const getRouteHome = () => '/';
+const getRouteCatalog = () => '/catalog';
+const getRouteProduct = () => '/product/:id';
 
 export const PAGE_ROUTES: AppRoutesProps[] = [
   {
@@ -13,3 +14,5 @@ export const PAGE_ROUTES: AppRoutesProps[] = [
     name: AppRouteNames.CATALOG,
   },
 ];
+
+export { getRouteHome, getRouteCatalog, getRouteProduct };

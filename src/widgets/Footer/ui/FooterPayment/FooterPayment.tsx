@@ -20,7 +20,7 @@ export const FooterPayment: FC<Props> = () => {
         return (
           <li
             className={cn(cls.paymentItem, {
-              [cls.large]: icon === 'icon__secure',
+              [cls.large]: icon === 'SecureIcon',
             })}
             key={id}
           >

@@ -3,117 +3,129 @@
 @import '@/shared/styles/mixins/box';
 @import '@/shared/styles/mixins/button-reset';
 
-
-.ThumbSlider{
+.ThumbSlider {
   display: flex;
   gap: 12px;
-
-
 }
 
+.thumbContainer {
+  position: relative;
+  max-height: 556px;
 
-  .thumbContainer {
-    position: relative;
-    max-height: 556px;
-
-    @media screen and (max-width: $screen-d) {
-      max-height: 400px;
-    }
-
-    @media screen and (max-width: $screen-tl) {
-      display: none;
-    }
-  }
-
-  .thumb {
-    max-width: 80px;
+  @media screen and (max-width: $screen-d) {
     max-height: 400px;
-    margin: 80px 0;
-    overflow-y: hidden;
-
-    @media screen and (max-width: $screen-d) {
-      max-height: 240px;
-    }
-
-    @media screen and (max-width: $screen-tl) {
-      display: none;
-    }
   }
 
-  .thumbSlide {
-    position: relative;
-    width: 80px;
-    height: 90px;
-    border-radius: 2px;
+  @media screen and (max-width: $screen-tl) {
+    display: none;
+  }
+}
 
-    &:global(.swiper-slide-thumb-active) {
-      &::after {
-        position: absolute;
-        border: 1px solid var(--primary);
-        border-radius: 5px;
-        content: "";
-        inset: 0;
-      }
+.thumb {
+  max-width: 80px;
+  max-height: 400px;
+  margin: 80px 0;
+  overflow-y: hidden;
+
+  @media screen and (max-width: $screen-d) {
+    max-height: 240px;
+  }
+
+  @media screen and (max-width: $screen-tl) {
+    display: none;
+  }
+}
+
+.thumbSlide {
+  position: relative;
+  width: 80px;
+  height: 90px;
+  border-radius: 2px;
+
+  &:global(.swiper-slide-thumb-active) {
+    &::after {
+      position: absolute;
+      border: 1px solid var(--primary);
+      border-radius: 5px;
+      content: '';
+      inset: 0;
     }
   }
+}
 
-  .main {
-    max-width: 556px;
+.main {
+  max-width: 556px;
 
-    @media screen and (max-width: $screen-d) {
-      max-height: 400px;
-    }
-
-    @media screen and (max-width: $screen-tl) {
-      max-width: unset;
-      max-height: 300px;
-    }
+  @media screen and (max-width: $screen-d) {
+    max-height: 400px;
   }
 
-  .mainImg {
-    object-fit: contain;
+  @media screen and (max-width: $screen-tl) {
+    width: calc(100vw - 40px);
+    max-width: unset;
+    max-height: 300px;
+  }
+}
 
-    @media screen and (max-width: $screen-d) {
-      max-height: 400px;
-    }
+.mainImgWrapper {
+  position: relative;
+  width: 556px;
+  height: 563px;
 
-    @media screen and (max-width: $screen-tl) {
-      width: 100%;
-      max-height: 300px;
-    }
+  @media screen and (max-width: $screen-d) {
+    height: 400px;
   }
 
-  .navigation {
-    @media screen and (max-width: $screen-tl) {
-      display: none;
-    }
+  @media screen and (max-width: $screen-tl) {
+    width: calc(100vw - 40px);
+    height: 300px;
+  }
+}
+
+.mainImg {
+  object-fit: contain;
+
+  @media screen and (max-width: $screen-d) {
+    max-height: 400px;
   }
 
-  .navigationButtonPrev {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%) rotate(180deg);
+  @media screen and (max-width: $screen-tl) {
+    width: 100%;
+    max-height: 300px;
   }
+}
 
-  .navigationButtonNext {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+.navigation {
+  @media screen and (max-width: $screen-tl) {
+    display: none;
   }
+}
 
-  .navigationButtonIcon {
-    @include box(22px);
+.navigationButtonPrev {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+}
 
-    color: var(--monochrome-400);
+.navigationButtonNext {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navigationButtonIcon {
+  @include box(22px);
+
+  color: var(--monochrome-400);
+}
+
+.navigationButton {
+  @include button-reset;
+
+  &.swiper-button-disabled .navigationButtonIcon {
+    color: var(--monochrome-100);
+    cursor: not-allowed;
   }
-
-  .navigationButton {
-    @include button-reset;
-
-    &.swiper-button-disabled .navigationButtonIcon {
-      color: var(--monochrome-100);
-      cursor: not-allowed;
-    }
-  }
+}

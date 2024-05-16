@@ -1,7 +1,7 @@
 import { DetailedHTMLProps, FC, HTMLAttributes, memo } from 'react';
 import cn from 'classnames';
 
-import MapPinIcon from '@public/icons/icon__map-pin.svg';
+import { MapPinIcon } from 'shared/ui/icons';
 import { Text } from 'shared/ui/Text';
 
 import cls from './Location.module.scss';

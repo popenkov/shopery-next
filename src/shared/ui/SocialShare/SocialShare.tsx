@@ -2,10 +2,10 @@ import { FC } from 'react';
 import cn from 'classnames';
 
 import { getFooterData } from 'widgets/Footer/api/getFooterData';
-import { getSocialIcon } from 'widgets/Footer/ui/FooterSocials/getSocialIcon';
 
 import { RoundButton } from '../Buttons';
 
+import { getSocialIcon } from './getSocialIcon';
 import cls from './SocialShare.module.scss';
 
 type Props = {

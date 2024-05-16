@@ -6,7 +6,7 @@ import { AppRouteNames } from 'shared/interfaces/router';
 import { Text } from 'shared/ui/Text';
 
 import cls from './Checkout.module.scss';
-import { CheckoutTotal } from './CheckoutTotal/CheckoutTotal';
+import { CheckoutTotal } from './CheckoutTotal';
 
 const CheckoutPage: FC = () => {
   const crumbs: AppRouteNames[] = [AppRouteNames.HOME, AppRouteNames.CHECKOUT];

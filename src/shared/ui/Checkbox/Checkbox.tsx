@@ -3,7 +3,7 @@
 import { ChangeEvent, InputHTMLAttributes, ReactNode, memo, useRef } from 'react';
 import cn from 'classnames';
 
-import CheckIcon from '@public/icons/icon__check.svg';
+import { CheckIcon } from 'shared/ui/icons';
 
 import { Text } from '../Text';
 

@@ -3,9 +3,7 @@
 import { ChangeEvent, InputHTMLAttributes, forwardRef, memo, useId } from 'react';
 import cn from 'classnames';
 
-import AlertIcon from '@public/icons/icon__alert.svg';
-import SearchIcon from '@public/icons/icon__search.svg';
-import SuccessIcon from '@public/icons/icon__success.svg';
+import { AlertIcon, SearchIcon, SuccessIcon } from 'shared/ui/icons';
 
 import { Text } from '../Text';
 
@@ -38,15 +36,6 @@ export const Input = memo(
       ...otherProps
     } = props;
 
-    //   // todo
-    //   // const handleInputChange = (evt: ChangeEvent<HTMLInputElement>) => {
-    //   //   // if (type === 'email') {
-    //   //   //   setIsInvalid(!checkEmailValidation(value?.toString() || ''));
-    //   //   // }
-
-    //   //   onChange?.(evt.target.value);
-    //   // };
-
     // todo
     const handleLoupeClick = () => {
       // ref?.current?.focus();
@@ -66,7 +55,6 @@ export const Input = memo(
             id={uniqueId}
             ref={ref}
             type={type}
-            // value={value}
             onChange={(evt) => onChange?.(evt)}
             className={cn(cls.input, {
               [cls.search]: type === 'search',
@@ -81,11 +69,9 @@ export const Input = memo(
               onClick={handleLoupeClick}
             />
           )}
-          {/* todo */}
           {hasValidation && (
             <>
               {errorText && <AlertIcon className={cn(cls.inputIcon, cls.inputIconError)} />}
-              {/* <WarningIcon className={cn(cls.inputIcon, cls.inputIconWarning)} /> */}
               {value && !errorText && (
                 <SuccessIcon className={cn(cls.inputIcon, cls.inputIconSuccess)} />
               )}
@@ -98,8 +84,6 @@ export const Input = memo(
             </Text>
           )}
         </div>
-        {/* todo */}
-        {/* {isInvalid && hasValidation && <span>error</span>} */}
       </div>
     );
   }),

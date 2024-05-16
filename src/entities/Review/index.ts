@@ -1,3 +1,3 @@
-export { Review } from './ui/Review/Review';
-export { ProductReview } from './ui/ProductReview/ProductReview';
-export { type TReview } from './model/types/Review.types';
+export { Review } from './ui/Review';
+export { ProductReview } from './ui/ProductReview';
+export { type TReview } from './model/Review.types';

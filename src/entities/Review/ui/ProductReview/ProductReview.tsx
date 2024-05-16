@@ -4,71 +4,9 @@ import cn from 'classnames';
 import { StarRating } from 'entities/StarRating';
 import { Text } from 'shared/ui/Text';
 
-import { TReview } from '../../model/types/Review.types';
+import { TReview } from '../../model/Review.types';
 
 import cls from './ProductReview.module.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 type Props = {
   data: TReview;

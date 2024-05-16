@@ -1,13 +1,8 @@
 import { NavigationLink } from 'features/Navigation';
 
-type TSocialIcons = 'icon__facebook' | 'icon__twitter' | 'icon__pinterest' | 'icon__instagram';
+type TSocialIcons = 'FacebookIcon' | 'TwitterIcon' | 'PinterestIcon' | 'InstagramIcon';
 
-type TPaymentIcons =
-  | 'icon__secure'
-  | 'icon__applepay'
-  | 'icon__visa'
-  | 'icon__discover'
-  | 'icon__mastercard';
+type TPaymentIcons = 'SecureIcon' | 'ApplePayIcon' | 'VisaIcon' | 'DiscoverIcon' | 'MastercardIcon';
 
 type SocialLink = {
   icon: TSocialIcons;

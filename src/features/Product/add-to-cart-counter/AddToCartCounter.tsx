@@ -2,9 +2,9 @@
 
 import { FC } from 'react';
 
-import CartIcon from '@public/icons/icon__cart.svg';
 import { AmountCounter } from 'shared/ui/AmountCounter/AmountCounter';
 import { Button } from 'shared/ui/Buttons';
+import { CartIcon } from 'shared/ui/icons';
 
 import cls from './AddToCartCounter.module.scss';
 

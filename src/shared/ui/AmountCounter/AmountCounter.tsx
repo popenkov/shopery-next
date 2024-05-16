@@ -1,8 +1,7 @@
 import { FC, useState } from 'react';
 import cn from 'classnames';
 
-import MinusIcon from '@public/icons/icon__minus.svg';
-import PlusIcon from '@public/icons/icon__plus.svg';
+import { MinusIcon, PlusIcon } from 'shared/ui/icons';
 
 import cls from './AmountCounter.module.scss';
 

@@ -1,8 +1,8 @@
 import { FC, memo } from 'react';
 import Link from 'next/link';
 
-import HomeIcon from '@public/icons/icon__home.svg';
-import { PAGE_ROUTES } from 'shared/constants/routes';
+import { PAGE_ROUTES } from 'shared/constants';
+import { HomeIcon } from 'shared/ui/icons';
 import { ChevronDownIcon } from 'shared/ui/icons';
 
 import cls from './Breadcrumps.module.scss';
