@@ -1,7 +1,7 @@
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
-import ArrowIcon from '@public/icons/icon__arrow.svg';
 import { AppLink } from 'shared/ui/AppLink';
+import { ArrowIcon } from 'shared/ui/icons';
 import { Text } from 'shared/ui/Text';
 
 import { THeroSlide } from '..';

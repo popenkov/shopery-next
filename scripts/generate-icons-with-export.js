@@ -36,7 +36,7 @@ fs.readdir(inputDir, (err, files) => {
       .replace('clip-rule', 'clipRule');
 
     return `
-export const ${componentName}: FC<{className:string}> = ({className}) => {
+export const ${componentName}: FC<{className?:string}> = ({className}) => {
   return (
     ${updatedSvgContent}
   );

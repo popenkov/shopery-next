@@ -12,7 +12,7 @@ import 'swiper/css/thumbs';
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import ChevronIcon from '@public/icons/icon__chevron-down.svg';
+import { ChevronDownIcon } from 'shared/ui/icons';
 
 import cls from './ThumbSlider.module.scss';
 
@@ -84,13 +84,13 @@ export const ThumbSlider: FC<Props> = ({ data, className }) => {
               className={cn(cls.navigationButton, cls.navigationButtonPrev)}
               ref={buttonPrevRef}
             >
-              <ChevronIcon className={cls.navigationButtonIcon} />
+              <ChevronDownIcon className={cls.navigationButtonIcon} />
             </button>
             <button
               className={cn(cls.navigationButton, cls.navigationButtonNext)}
               ref={buttonNextRef}
             >
-              <ChevronIcon className={cls.navigationButtonIcon} />
+              <ChevronDownIcon className={cls.navigationButtonIcon} />
             </button>
           </div>
         </div>

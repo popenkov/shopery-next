@@ -2,13 +2,12 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import CartIcon from '@public/icons/icon__cart.svg';
-import PreviewIcon from '@public/icons/icon__eye.svg';
-import LikeIcon from '@public/icons/icon__heart-lined.svg';
+// todo перенести превью и корзину в фичи и экшны
 import { TProduct } from 'entities/Product';
 import { StarRating } from 'entities/StarRating';
 import { getFormattedPrice } from 'shared/lib/utils';
 import { RoundButton } from 'shared/ui/Buttons';
+import { HeartLinedIcon, EyeIcon, CartIcon } from 'shared/ui/icons';
 import { Text } from 'shared/ui/Text';
 
 import cls from './ProductLarge.module.scss';
@@ -26,10 +25,10 @@ export const ProductLarge: FC<ProductLargeProps> = ({ data }) => {
       <div className={cls.imageContainer}>
         <div className={cls.buttons}>
           <RoundButton theme="secondary" className={cls.imageButton}>
-            <LikeIcon />
+            <HeartLinedIcon />
           </RoundButton>
           <RoundButton theme="secondary" className={cls.imageButton}>
-            <PreviewIcon />
+            <EyeIcon />
           </RoundButton>
         </div>
         <Image src={img} fill alt={title} className={cls.image} />

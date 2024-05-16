@@ -2,7 +2,7 @@
 
 import React, { DetailedHTMLProps, FC, HTMLAttributes, memo, useState } from 'react';
 
-import ChevronIcon from '@public/icons/icon__chevron-down.svg';
+import { ChevronDownIcon } from 'shared/ui/icons';
 
 import { DropdownItem } from './Dropdown.interface';
 import cls from './Dropdown.module.scss';
@@ -29,7 +29,7 @@ export const Dropdown: FC<DropdownProps> = memo(({ data, onChange }) => {
     <div className={cls.dropdown}>
       <button className={cls.dropdownButton}>
         <span>{chosenElement.label}</span>
-        <ChevronIcon className={cls.dropdownButtonIcon} />
+        <ChevronDownIcon className={cls.dropdownButtonIcon} />
       </button>
       <ul className={cls.dropdownContent}>
         {data.map((item) => {

@@ -10,7 +10,7 @@ import Select, {
   GroupBase,
 } from 'react-select';
 
-import ChevronIcon from '@public/icons/icon__chevron-down.svg';
+import { ChevronDownIcon } from 'shared/ui/icons';
 
 import { Text } from '../Text';
 
@@ -37,7 +37,7 @@ const DropdownIndicator: ComponentType<
 > = (props) => {
   return (
     <components.DropdownIndicator {...props}>
-      <ChevronIcon />
+      <ChevronDownIcon />
     </components.DropdownIndicator>
   );
 };

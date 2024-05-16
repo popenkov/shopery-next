@@ -2,7 +2,6 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import cn from 'classnames';
 import Link from 'next/link';
 
-// import ArrowIcon from '@public/icons/icon__arrow.svg';
 import { Button } from 'shared/ui/Buttons';
 import { ArrowIcon } from 'shared/ui/icons';
 import { Text } from 'shared/ui/Text';

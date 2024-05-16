@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import Link from 'next/link';
 
-import LikeIcon from '@public/icons/icon__heart.svg';
+import { HeartIcon } from 'shared/ui/icons';
 
 import { HeaderCart } from '../HeaderCart';
 
@@ -11,7 +11,7 @@ export const HeaderActions: FC = () => {
   return (
     <div className={cls.actions}>
       <Link className={cls.favoriteLink} href="#">
-        <LikeIcon className={cls.favoriteIcon} />
+        <HeartIcon className={cls.favoriteIcon} />
       </Link>
       <span className={cls.actionsSeparator} />
       <HeaderCart />

@@ -2,11 +2,10 @@ import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import CartIcon from '@public/icons/icon__cart.svg';
-import PreviewIcon from '@public/icons/icon__eye.svg';
-import LikeIcon from '@public/icons/icon__heart.svg';
+// todo перенести превью и корзину в фичи и экшны
 import { StarRating } from 'entities/StarRating';
 import { RoundButton } from 'shared/ui/Buttons';
+import { HeartIcon, EyeIcon, CartIcon } from 'shared/ui/icons';
 
 import { TProduct } from '../../../';
 
@@ -43,10 +42,10 @@ export const ProductSmall: FC<Props> = ({ data }) => {
                 <CartIcon />
               </RoundButton>
               <RoundButton theme="secondary">
-                <PreviewIcon />
+                <EyeIcon />
               </RoundButton>
               <RoundButton theme="secondary">
-                <LikeIcon />
+                <HeartIcon />
               </RoundButton>
             </div>
           </div>

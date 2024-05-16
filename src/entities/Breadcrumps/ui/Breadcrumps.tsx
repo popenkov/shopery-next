@@ -1,9 +1,9 @@
 import { FC, memo } from 'react';
 import Link from 'next/link';
 
-import ChevronIcon from '@public/icons/icon__chevron-down.svg';
 import HomeIcon from '@public/icons/icon__home.svg';
 import { PAGE_ROUTES } from 'shared/constants/routes';
+import { ChevronDownIcon } from 'shared/ui/icons';
 
 import cls from './Breadcrumps.module.scss';
 
@@ -15,7 +15,7 @@ export const Breadcrumbs: FC<BreadcrumbsProps> = memo(({ items }) => {
   const homeLink = (
     <Link className={cls.link} href="/">
       <HomeIcon className={cls.homeIcon} />
-      <ChevronIcon className={cls.chevron} />
+      <ChevronDownIcon className={cls.chevron} />
     </Link>
   );
 
@@ -46,7 +46,7 @@ export const Breadcrumbs: FC<BreadcrumbsProps> = memo(({ items }) => {
           <Link href={link} className={cls.link}>
             {crumb}
           </Link>
-          <ChevronIcon className={cls.chevron} />
+          <ChevronDownIcon className={cls.chevron} />
         </li>
       );
     }

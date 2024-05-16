@@ -2,7 +2,7 @@
 import { FC, ReactNode, useState } from 'react';
 import cn from 'classnames';
 
-import ChevronIcon from '@public/icons/icon__chevron-down.svg';
+import { ChevronDownIcon } from 'shared/ui/icons';
 
 import cls from './Accordion.module.scss';
 
@@ -36,7 +36,7 @@ export const Accordion: FC<Props> = ({
         })}
       >
         {title}
-        <ChevronIcon className={cls.accordionButtonIcon} />
+        <ChevronDownIcon className={cls.accordionButtonIcon} />
       </button>
       {isOpen && (
         <div

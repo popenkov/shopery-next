@@ -2,8 +2,8 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import cn from 'classnames';
 import Image from 'next/image';
 
-import ArrowIcon from '@public/icons/icon__arrow.svg';
 import { AppLink } from 'shared/ui/AppLink';
+import { ArrowIcon } from 'shared/ui/icons';
 import { Text } from 'shared/ui/Text';
 
 import { TDiscountBanner } from '../model/banner';
