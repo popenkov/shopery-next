@@ -7,49 +7,43 @@ import PlusIcon from '@public/icons/icon__plus.svg';
 import cls from './AmountCounter.module.scss';
 
 type Props = {
-    value: number;
-    onChange: (value: number) => void;
-    className?: string;
+  value: number;
+  onChange: (value: number) => void;
+  className?: string;
 };
 
 export const AmountCounter: FC<Props> = ({ value, onChange, className }) => {
-    const [currentValue, setCurrentValue] = useState<number>(value || 1);
+  const [currentValue, setCurrentValue] = useState<number>(value || 1);
 
-    const handleMinusButtonClick = () => {
-        if (currentValue > 1) {
-            setCurrentValue(currentValue - 1);
-            onChange(currentValue - 1);
-        }
-    };
+  const handleMinusButtonClick = () => {
+    if (currentValue > 1) {
+      setCurrentValue(currentValue - 1);
+      onChange(currentValue - 1);
+    }
+  };
 
-    const handlePlusButtonClick = () => {
-        setCurrentValue(currentValue + 1);
-        onChange(currentValue + 1);
-    };
+  const handlePlusButtonClick = () => {
+    setCurrentValue(currentValue + 1);
+    onChange(currentValue + 1);
+  };
 
-    return (
-        <div className={cn(cls.AmountCounter, className)}>
-            <button
-                className={cls.AmountCounterButton}
-                onClick={handleMinusButtonClick}
-            >
-                <MinusIcon className={cls.AmountCounterButtonIcon} />
-            </button>
-            <div className={cls.AmountCounterInputWrapper}>
-                <input
-                    className={cls.AmountCounterInput}
-                    type="number"
-                    value={currentValue}
-                    min="1"
-                    readOnly
-                />
-            </div>
-            <button
-                className={cls.AmountCounterButton}
-                onClick={handlePlusButtonClick}
-            >
-                <PlusIcon className={cls.AmountCounterButtonIcon} />
-            </button>
-        </div>
-    );
+  return (
+    <div className={cn(cls.AmountCounter, className)}>
+      <button className={cls.AmountCounterButton} onClick={handleMinusButtonClick}>
+        <MinusIcon className={cls.AmountCounterButtonIcon} />
+      </button>
+      <div className={cls.AmountCounterInputWrapper}>
+        <input
+          className={cls.AmountCounterInput}
+          type="number"
+          value={currentValue}
+          min="1"
+          readOnly
+        />
+      </div>
+      <button className={cls.AmountCounterButton} onClick={handlePlusButtonClick}>
+        <PlusIcon className={cls.AmountCounterButtonIcon} />
+      </button>
+    </div>
+  );
 };

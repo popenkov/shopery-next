@@ -1,4 +1,3 @@
-
 @import '@/shared/styles/_breakpoints';
 @import '@/shared/styles/mixins/flexbox';
 @import '@/shared/styles/mixins/box';
@@ -7,241 +6,246 @@
 @import '@/shared/styles/mixins/text-styles';
 
 .productDescription {
-@include container;
+  @include container;
 }
 
-  .productDescriptionContent {
-    display: flex;
-    gap: 22px;
+.productDescriptionContent {
+  display: flex;
+  gap: 22px;
 
-    @media screen and (max-width: $screen-d) {
-      flex-direction: column;
-      overflow-y: auto;
+  @media screen and (max-width: $screen-d) {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+}
+
+.productDescriptionSlider {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.productDescriptionHeader {
+  @include flex-column;
+
+  gap: 11px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid var(--monochrome-100);
+}
+
+.productDescriptionTitleWrapper {
+  @include flex-center-vertical;
+
+  gap: 8px;
+}
+
+.productDescriptionTitle {
+  @include heading-4(600);
+
+  margin: 0;
+}
+
+.productDescriptionReviewWrapper {
+  @include flex-center-vertical;
+
+  gap: 14px;
+}
+
+.productDescriptionReview {
+  @include flex-center-vertical;
+
+  gap: 4px;
+}
+
+.productDescriptionRating {
+  svg {
+    @include box(18px);
+  }
+}
+
+.productDescriptionReviewText {
+  @include body-s;
+
+  color: var(--monochrome-600);
+}
+
+.productDescriptionSeparator {
+  @include body-s(500);
+
+  color: var(--monochrome-300);
+}
+
+.productDescriptionSku {
+  @include flex-center-vertical;
+
+  gap: 4px;
+}
+
+.productDescriptionSkuText {
+  @include body-s(500);
+
+  color: var(--monochrome-800);
+}
+
+.productDescriptionSkuValue {
+  @include body-s;
+
+  color: var(--monochrome-600);
+}
+
+.productDescriptionPriceWrapper {
+  @include flex-center-vertical;
+
+  gap: 4px;
+}
+
+.productDescriptionReviewWrapper + .productDescriptionPriceWrapper {
+  margin-top: 10px;
+}
+
+.productDescriptionPriceOld {
+  color: var(--monochrome-300);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: left;
+  text-decoration-line: line-through;
+}
+
+.productDescriptionPrice {
+  @include body-xxl(500);
+
+  color: var(--primary);
+}
+
+.productDescriptionPriceTags {
+  @include flex-center-vertical;
+
+  gap: 4px;
+}
+
+.productDescriptionPrice + .productDescriptionPriceTags {
+  margin-left: 12px;
+}
+
+.productDescriptionInfo {
+  display: grid;
+  grid-template-areas: 'brand share' 'description description';
+  grid-template-columns: 1fr 1fr;
+  gap: 19px 40px;
+  padding: 25px 0 23px;
+  border-bottom: 1px solid var(--monochrome-100);
+
+  @media screen and (max-width: $screen-t) {
+    grid-template-areas: 'brand' 'share' 'description';
+    grid-template-columns: 1fr;
+  }
+}
+
+.productDescriptionBrand {
+  @include flex-center-vertical;
+
+  grid-area: brand;
+  gap: 8px;
+}
+
+.productDescriptionBrandText {
+  @include body-s;
+}
+
+.productDescriptionBrandValue {
+  position: relative;
+  padding: 10px 8px;
+  border: 1px solid var(--monochrome-100);
+  border-radius: 4px;
+
+  img {
+    object-fit: contain;
+  }
+}
+
+.productDescriptionShare {
+  grid-area: share;
+  justify-content: flex-end;
+}
+
+.productDescriptionDescription {
+  @include body-s;
+
+  grid-area: description;
+  margin: 0;
+  color: var(--monochrome-500);
+}
+
+.productDescriptionCart {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--monochrome-100);
+}
+
+.productDescriptionCategories {
+  @include flex-column;
+
+  gap: 12px;
+  padding-top: 23px;
+}
+
+.productDescriptionCategory {
+  @include flex-center-vertical;
+
+  gap: 7px;
+}
+
+.productDescriptionCategoriesText {
+  @include body-s(500);
+}
+
+.productDescriptionCategoriesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.productDescriptionCategoriesLink {
+  @include body-s;
+
+  color: var(--monochrome-500);
+  white-space: nowrap;
+  text-decoration: none;
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--monochrome-900);
+      text-decoration: underline;
     }
   }
+}
 
-  .productDescriptionSlider {
-    flex-grow: 1;
-    flex-shrink: 0;
-  }
+.productDescriptionTags {
+  display: flex;
+  gap: 7px;
+}
 
-  .productDescriptionHeader {
-    @include flex-column;
+.productDescriptionTagsText {
+  @include body-s(500);
+}
 
-    gap: 11px;
-    padding-bottom: 19px;
-    border-bottom: 1px solid var(--monochrome-100);
-  }
+.productDescriptionTagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
 
-  .productDescriptionTitleWrapper {
-    @include flex-center-vertical;
+.productDescriptionTagsLink {
+  @include body-s;
 
-    gap: 8px;
-  }
+  color: var(--monochrome-500);
+  white-space: nowrap;
+  text-decoration: none;
 
-  .productDescriptionTitle {
-    @include heading-4(600);
-
-    margin: 0;
-  }
-
-  .productDescriptionReviewWrapper {
-    @include flex-center-vertical;
-
-    gap: 14px;
-  }
-
-  .productDescriptionReview {
-    @include flex-center-vertical;
-
-    gap: 4px;
-  }
-
-  .productDescriptionRating {
-    svg {
-      @include box(18px);
+  @media (hover: hover) {
+    &:hover {
+      color: var(--monochrome-900);
+      text-decoration: underline;
     }
   }
-
-  .productDescriptionReviewText {
-    @include body-s;
-
-    color: var(--monochrome-600);
-  }
-
-  .productDescriptionSeparator {
-    @include body-s(500);
-
-    color: var(--monochrome-300);
-  }
-
-  .productDescriptionSku {
-    @include flex-center-vertical;
-
-    gap: 4px;
-  }
-
-  .productDescriptionSkuText {
-    @include body-s(500);
-
-    color: var(--monochrome-800);
-  }
-
-  .productDescriptionSkuValue {
-    @include body-s;
-
-    color: var(--monochrome-600);
-  }
-
-  .productDescriptionPriceWrapper {
-    @include flex-center-vertical;
-
-    gap: 4px;
-  }
-
-  .productDescriptionReviewWrapper + .productDescriptionPriceWrapper {
-    margin-top: 10px;
-  }
-
-  .productDescriptionPriceOld {
-    color: var(--monochrome-300);
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 150%;
-    letter-spacing: 0%;
-    text-align: left;
-    text-decoration-line: line-through;
-  }
-
-  .productDescriptionPrice {
-    @include body-xxl(500);
-
-    color: var(--primary);
-  }
-
-  .productDescriptionPriceTags {
-    @include flex-center-vertical;
-
-    gap: 4px;
-  }
-
-  .productDescriptionPrice + .productDescriptionPriceTags {
-    margin-left: 12px;
-  }
-
-  .productDescriptionInfo {
-    display: grid;
-    grid-template-areas: "brand share" "description description";
-    grid-template-columns: 1fr 1fr;
-    gap: 19px 40px;
-    padding: 25px 0 23px;
-    border-bottom: 1px solid var(--monochrome-100);
-
-    @media screen and (max-width: $screen-t) {
-      grid-template-areas: "brand" "share" "description";
-      grid-template-columns: 1fr;
-    }
-  }
-
-  .productDescriptionBrand {
-    @include flex-center-vertical;
-
-    grid-area: brand;
-    gap: 8px;
-  }
-
-  .productDescriptionBrandText {
-    @include body-s;
-  }
-
-  .productDescriptionBrandValue {
-    padding: 10px 8px;
-    border: 1px solid var(--monochrome-100);
-    border-radius: 4px;
-  }
-
-  .productDescriptionShare {
-    grid-area: share;
-    justify-content: flex-end;
-  }
-
-  .productDescriptionDescription {
-    @include body-s;
-
-    grid-area: description;
-    margin: 0;
-    color: var(--monochrome-500);
-  }
-
-  .productDescriptionCart {
-    padding: 18px 0;
-    border-bottom: 1px solid var(--monochrome-100);
-  }
-
-  .productDescriptionCategories {
-    @include flex-column;
-
-    gap: 12px;
-    padding-top: 23px;
-  }
-
-  .productDescriptionCategory {
-    @include flex-center-vertical;
-
-    gap: 7px;
-  }
-
-  .productDescriptionCategoriesText {
-    @include body-s(500);
-  }
-
-  .productDescriptionCategoriesContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-  }
-
-  .productDescriptionCategoriesLink {
-    @include body-s;
-
-    color: var(--monochrome-500);
-    white-space: nowrap;
-    text-decoration: none;
-
-    @media (hover: hover) {
-      &:hover {
-        color: var(--monochrome-900);
-        text-decoration: underline;
-      }
-    }
-  }
-
-  .productDescriptionTags {
-    display: flex;
-    gap: 7px;
-  }
-
-  .productDescriptionTagsText {
-    @include body-s(500);
-  }
-
-  .productDescriptionTagsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-  }
-
-  .productDescriptionTagsLink {
-    @include body-s;
-
-    color: var(--monochrome-500);
-    white-space: nowrap;
-    text-decoration: none;
-
-    @media (hover: hover) {
-      &:hover {
-        color: var(--monochrome-900);
-        text-decoration: underline;
-      }
-    }
-  }
+}

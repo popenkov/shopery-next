@@ -21,9 +21,6 @@
     "@feature-sliced/eslint-config/rules/import-order",
     "@feature-sliced/eslint-config/rules/public-api",
     "@feature-sliced/eslint-config/rules/layers-slices"
-    // "plugin:css-import-order/recommended"
-    // todo многие ошибки фсд изза порядка импортов
-    // "@feature-sliced/eslint-config/rules/import-order"
   ],
   "processor": "@feature-sliced/messages/fs",
   "settings": {
@@ -111,6 +108,12 @@
     ],
     // feature-sliced/public-api
     "import/no-internal-modules": "warn", // ~ 1,
+    // "import/no-internal-modules": [
+    //   "warn",
+    //   {
+    //     "allow": ["@public/*"]
+    //   }
+    // ],
     // feature-sliced/layers-slices
     "boundaries/element-types": "warn" // ~ 1,
   }

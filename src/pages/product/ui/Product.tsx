@@ -20,6 +20,7 @@ const Product: FC = () => {
         <ProductDescription
           data={data}
           actions={
+            // todo поправить кнопки
             <>
               <AddToCartCounter />
               <AddToFavorites className={cls.productFavoriteButton} />

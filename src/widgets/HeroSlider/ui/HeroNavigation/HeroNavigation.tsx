@@ -1,8 +1,8 @@
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import cn from 'classnames';
 
-import ArrowIcon from '@public/icons/icon__arrow.svg';
 import { RoundButton } from 'shared/ui/Buttons';
+import { ArrowIcon } from 'shared/ui/icons';
 
 import cls from './HeroNavigation.module.scss';
 

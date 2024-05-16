@@ -4,12 +4,12 @@ import icon__package from '@public/icons/icon__package.svg';
 import icon__shopping_bag from '@public/icons/icon__shopping_bag.svg';
 
 const advantageIcons = {
-    icon__delivery_truck: icon__delivery_truck,
-    icon__headphones: icon__headphones,
-    icon__shopping_bag: icon__shopping_bag,
-    icon__package: icon__package,
+  icon__delivery_truck: icon__delivery_truck,
+  icon__headphones: icon__headphones,
+  icon__shopping_bag: icon__shopping_bag,
+  icon__package: icon__package,
 };
 
 export const getAdvantageIcon = (iconName: keyof typeof advantageIcons) => {
-    return advantageIcons[iconName];
+  return advantageIcons[iconName];
 };

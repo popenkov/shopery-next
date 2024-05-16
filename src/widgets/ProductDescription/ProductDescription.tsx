@@ -1,10 +1,10 @@
 import { FC, ReactNode } from 'react';
+import Image from 'next/image';
 
 import { TProductDetailed } from 'entities/Product';
 import { StarRating } from 'entities/StarRating';
-import { SocialShare } from 'shared/ui/SocialShare/SocialShare';
-import { ThumbSlider } from 'shared/ui/ThumbSlider/ThumbSlider';
-
+import { SocialShare } from 'shared/ui/SocialShare';
+import { ThumbSlider } from 'shared/ui/ThumbSlider';
 
 import cls from './ProductDescription.module.scss';
 
@@ -13,6 +13,8 @@ type Props = {
   className?: string;
   actions?: ReactNode;
 };
+
+// todo заполнить данными из  data
 
 export const ProductDescription: FC<Props> = ({ data, actions }) => {
   return (
@@ -51,11 +53,9 @@ export const ProductDescription: FC<Props> = ({ data, actions }) => {
           <div className={cls.productDescriptionInfo}>
             <div className={cls.productDescriptionBrand}>
               <span className={cls.productDescriptionBrandText}>Brand:</span>
-              <img
-                className={cls.productDescriptionBrandValue}
-                src="/images/brand-farmary.svg"
-                alt="image"
-              />
+              <span className={cls.productDescriptionBrandValue}>
+                <Image src="/images/brand-farmary.svg" alt="image" fill />
+              </span>
             </div>
             <SocialShare className={cls.productDescriptionShare} />
             <p className={cls.productDescriptionDescription}>

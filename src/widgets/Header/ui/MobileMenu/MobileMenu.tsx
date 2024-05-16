@@ -1,12 +1,11 @@
 import React, { DetailedHTMLProps, FC, HTMLAttributes, useRef } from 'react';
 import cn from 'classnames';
 
-import CloseIcon from '@public/icons/icon__cross.svg';
 import { NavigationMobile } from 'features/Navigation';
 import { ProductSearch } from 'features/ProductsSearch';
 import { Location } from 'entities/Location';
 import { PhoneLink } from 'entities/PhoneLink';
-
+import { CrossIcon } from 'shared/ui/icons';
 
 import cls from './MobileMenu.module.scss';
 
@@ -37,7 +36,7 @@ export const MobileMenu: FC<Props> = ({ isOpen, handleMenuToggle }) => {
     >
       <div className={cls.content}>
         <button className={cls.closeButton} onClick={handleCloseButtonClick}>
-          <CloseIcon className={cls.closeIcon} />
+          <CrossIcon className={cls.closeIcon} />
         </button>
         <ProductSearch className={cls.mobileMenuSearch} />
         <NavigationMobile />
