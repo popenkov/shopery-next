@@ -1,9 +1,9 @@
 import { FC, ReactNode } from 'react';
 import Image from 'next/image';
 
+import { SocialShare } from '@/entities/SocialShare';
 import { TProductDetailed } from 'entities/Product';
-import { StarRating } from 'entities/StarRating';
-import { SocialShare } from 'shared/ui/SocialShare';
+import { StarRating } from 'shared/ui/StarRating';
 import { ThumbSlider } from 'shared/ui/ThumbSlider';
 
 import cls from './ProductDescription.module.scss';

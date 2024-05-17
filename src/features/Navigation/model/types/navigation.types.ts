@@ -1,8 +1,7 @@
 import { HeaderCategory } from 'entities/NavigationCategory';
-
-import { NavigationLink } from './navigation-link.types';
+import { TLink } from 'shared/model/navigation-link.types';
 
 export type TNavigation = {
   categories: HeaderCategory[];
-  navigation: NavigationLink[];
+  navigation: TLink[];
 };

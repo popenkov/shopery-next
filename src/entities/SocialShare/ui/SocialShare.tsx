@@ -1,11 +1,10 @@
 import { FC } from 'react';
 import cn from 'classnames';
 
-import { getFooterData } from 'widgets/Footer/api/getFooterData';
+import { getSocialData } from '../api';
+import { getSocialIcon } from '../lib/getSocialIcon';
+import { RoundButton } from '../../../shared/ui/Buttons';
 
-import { RoundButton } from '../Buttons';
-
-import { getSocialIcon } from './getSocialIcon';
 import cls from './SocialShare.module.scss';
 
 type Props = {
@@ -13,7 +12,7 @@ type Props = {
 };
 
 export const SocialShare: FC<Props> = ({ className }) => {
-  const { socialLinks } = getFooterData();
+  const socialLinks = getSocialData();
   return (
     <div className={cn(cls.socialShare, className)}>
       <span className={cls.socialShareText}>Share:</span>

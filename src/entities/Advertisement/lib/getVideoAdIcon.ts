@@ -1,9 +1,8 @@
-import icon__leaf from '@public/icons/icon__leaf.svg';
-import icon__price_tag from '@public/icons/icon__price_tag.svg';
+import { LeafIcon, PriceTagIcon } from 'shared/ui/icons';
 
 const icons = {
-  icon__price_tag: icon__price_tag,
-  icon__leaf: icon__leaf,
+  PriceTagIcon: PriceTagIcon,
+  LeafIcon: LeafIcon,
 };
 
 export const getVideoAdIcon = (iconName: keyof typeof icons) => {

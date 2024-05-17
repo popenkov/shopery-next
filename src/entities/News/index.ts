@@ -1,2 +1,2 @@
-export { News } from './ui/News';
-export { type TNews } from './model/types/news.types';
+export { News } from './ui';
+export { type TNews } from './model';

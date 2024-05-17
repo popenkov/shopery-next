@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { SocialShare } from 'shared/ui/SocialShare';
+import { SocialShare } from '@/entities/SocialShare';
 
 import cls from '../WishlistTable.module.scss';
 

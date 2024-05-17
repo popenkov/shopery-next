@@ -1,7 +1,7 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
+import { getSocialIcon } from '@/entities/SocialShare';
 import { RoundButton } from 'shared/ui/Buttons';
-import { getSocialIcon } from 'shared/ui/SocialShare';
 
 import { getFooterData } from '../../api';
 

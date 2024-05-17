@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import cn from 'classnames';
 
-import { StarRating } from 'entities/StarRating';
+import { StarRating } from 'shared/ui/StarRating';
 import { Text } from 'shared/ui/Text';
 
 import { TReview } from '../../model/Review.types';
@@ -13,6 +13,7 @@ type Props = {
   className?: string;
 };
 
+// todo заменить статику
 export const ProductReview: FC<Props> = ({ data, className }) => {
   return (
     <div className={cn(cls.productReview, className)}>

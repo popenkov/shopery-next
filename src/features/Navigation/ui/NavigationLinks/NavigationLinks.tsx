@@ -1,14 +1,13 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import Link from 'next/link';
 
+import { TLink } from 'shared/model/navigation-link.types';
 import { ChevronDownIcon } from 'shared/ui/icons';
-
-import { NavigationLink } from '../../model/types/navigation-link.types';
 
 import cls from './NavigationLinks.module.scss';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLUListElement>, HTMLUListElement> {
-  links: NavigationLink[];
+  links: TLink[];
 }
 
 export const NavigationLinks: FC<Props> = ({ links }) => {

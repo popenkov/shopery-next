@@ -72,17 +72,13 @@
   }
 }
 
-
-
-
-
 .videoPlayIcon {
   // &.primary {
   //     width: 20px;
   //     height: 24px;
   //     color: var(--color-white);
   //     transition: color var(--transition);
-    
+
   // }
   // &.secondary {
 
@@ -91,7 +87,6 @@
   //     color: var(--color-white);
   //     transition: color var(--transition);
   // }
-
 
   // @include box(82px);
 
@@ -107,7 +102,7 @@
   // @include button-reset;
   // @include box(82px);
 
-  // stroke-width: 1.5px;
+  // strokeWidth: 1.5px;
 
   // @media (hover: hover) {
   //   &:hover {
@@ -117,66 +112,63 @@
   //   }
   // }
 
+  &.primary {
+    @include button-reset('flex');
+    @include flex-center;
+    @include box(82px);
 
-   &.primary {
-      @include button-reset("flex");
-      @include flex-center;
-      @include box(82px);
+    border-radius: 50%;
+    outline: 1px solid var(--color-white);
+    transition: outline-color var(--transition);
 
-      border-radius: 50%;
-      outline: 1px solid var(--color-white);
-      transition: outline-color var(--transition);
+    @media screen and (max-width: $screen-ti) {
+      @include box(70px);
+    }
 
-      @media screen and (max-width: $screen-ti) {
-        @include box(70px);
-      }
+    @media (hover: hover) {
+      &:hover {
+        outline-color: var(--primary);
 
-      @media (hover: hover) {
-        &:hover {
-          outline-color: var(--primary);
-
-          .videoPlayIcon  {
-            color: var(--primary);
-          }
+        .videoPlayIcon {
+          color: var(--primary);
         }
       }
+    }
 
-      .videoPlayIcon  {
-     width: 20px;
+    .videoPlayIcon {
+      width: 20px;
       height: 24px;
       color: var(--color-white);
       transition: color var(--transition);
+    }
+  }
+
+  &.secondary {
+    @include button-reset('flex');
+    @include flex-center;
+    @include box(50px);
+
+    background-color: var(--primary);
+    border-radius: 50%;
+    transition: background-color var(--transition);
+
+    @media screen and (max-width: $screen-ti) {
+      @include box(40px);
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--hard-primary);
       }
-   }
+    }
 
-
-   &.secondary {
-      @include button-reset("flex");
-      @include flex-center;
-      @include box(50px);
-
-      background-color: var(--primary);
-      border-radius: 50%;
-      transition: background-color var(--transition);
-
-      @media screen and (max-width: $screen-ti) {
-        @include box(40px);
-      }
-
-
-      @media (hover: hover) {
-        &:hover {
-          background-color: var(--hard-primary);
-        }
-      }
-
-            .videoPlayIcon  {
-         width: 14px;
+    .videoPlayIcon {
+      width: 14px;
       height: 18px;
       color: var(--color-white);
       transition: color var(--transition);
-      }
-   }
+    }
+  }
 }
 
 .videoTitle + .videoPlayButton {

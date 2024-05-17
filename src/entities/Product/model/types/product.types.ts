@@ -1,3 +1,4 @@
+import { TLink } from '@/shared/model/navigation-link.types';
 import { TTag } from 'shared/ui/Tag';
 
 type StockVariant = 'not-available' | 'in-stock';
@@ -18,7 +19,7 @@ export type TProduct = {
   amount?: number;
 };
 
-type TAdIcons = 'icon__price_tag' | 'icon__leaf';
+type TAdIcons = 'PriceTagIcon' | 'LeafIcon';
 
 type SpecType = {
   title: string;
@@ -36,9 +37,12 @@ type TReview = {
 export type TProductDetailed = {
   id: string;
   title: string;
+  sku: string;
+  brandLogo: string;
   price: number;
   priceOld?: number;
   rating: number;
+  priceTags: TTag[];
   tags?: TTag[];
   stock?: {
     type: StockVariant;
@@ -48,6 +52,9 @@ export type TProductDetailed = {
     thumb: string[];
     main: string[];
   };
+  description: string;
+  categories: TLink[];
+  categoryTags: TLink[];
   descriptions: string;
   specs: SpecType[];
   feedback: TReview[];
@@ -61,6 +68,10 @@ export type TProductDetailed = {
       title: string;
       text: string;
     }[];
+  };
+  reviews?: {
+    amount: number;
+    path: string;
   };
   relatedProducts: TProduct[];
 };

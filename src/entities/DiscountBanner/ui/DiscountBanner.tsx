@@ -6,7 +6,7 @@ import { AppLink } from 'shared/ui/AppLink';
 import { ArrowIcon } from 'shared/ui/icons';
 import { Text } from 'shared/ui/Text';
 
-import { TDiscountBanner } from '../model/banner';
+import { TDiscountBanner } from '../model';
 
 import cls from './DiscountBanner.module.scss';
 

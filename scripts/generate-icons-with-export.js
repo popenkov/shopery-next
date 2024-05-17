@@ -33,6 +33,9 @@ fs.readdir(inputDir, (err, files) => {
     const updatedSvgContent = ['<svg' + ' className={className}' + svgContent.split('<svg')[1]]
       .join('<svg')
       .replace('fill-rule', 'fillRule')
+      .replace('stroke-linecap', 'strokeLinecap')
+      .replace('stroke-linejoin', 'strokeLinejoin')
+      .replace('stroke-width', 'strokeWidth')
       .replace('clip-rule', 'clipRule');
 
     return `

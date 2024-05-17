@@ -4,7 +4,6 @@ import { TProductDetailed } from '..';
 
 const data: TProductDetailed = {
   id: 'test',
-  img: '/images/product-big-potatos.jpg',
   sliderImages: {
     thumb: [
       '/images/preview-image.jpg',
@@ -45,19 +44,19 @@ const data: TProductDetailed = {
   ],
   reviews: {
     amount: 4,
-    href: '#',
+    path: '#',
   },
   sku: '2,51,594',
   brandLogo: 'brand-farmary.svg',
   description:
     'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et ipsum. Nulla varius magna a consequat pulvinar. ',
-  categories: [{ title: 'Vegetables', href: '#' }],
+  categories: [{ title: 'Vegetables', path: '#' }],
   categoryTags: [
-    { title: 'Vegetables', href: '#' },
-    { title: 'Healthy', href: '#' },
-    { title: 'Chinese', href: '#' },
-    { title: 'Cabbage', href: '#' },
-    { title: 'Green Cabbage', href: '#' },
+    { title: 'Vegetables', path: '#' },
+    { title: 'Healthy', path: '#' },
+    { title: 'Chinese', path: '#' },
+    { title: 'Cabbage', path: '#' },
+    { title: 'Green Cabbage', path: '#' },
   ],
   descriptions:
     '<p> Sed commodo aliquam dui ac porta. Fusce ipsum felis, imperdiet at posuere ac, viverra at mauris. Maecenas tincidunt ligula a sem vestibulum pharetra. Maecenas auctor tortor lacus, nec laoreet nisi porttitor vel. Etiam tincidunt metus vel dui interdum sollicitudin. Mauris sem ante, vestibulum nec orci vitae, aliquam mollis lacus. Sed et condimentum arcu, id molestie tellus. Nulla facilisi. Nam scelerisque vitae justo a convallis. Morbi urna ipsum, placerat quis commodo quis, egestas elementum leo. Donec convallis mollis enim. Aliquam id mi quam. Phasellus nec fringilla elit.</p> <p>  Nulla mauris tellus, feugiat quis pharetra sed, gravida ac dui. Sed iaculis, metus faucibus elementum tincidunt, turpis mi viverra velit, pellentesque tristique neque mi eget nulla. Proin luctus elementum neque et pharetra. </p> <ul>  <li> 100 g of fresh leaves provides. </li> <li> Aliquam ac est at augue volutpat elementum. </li> <li> Quisque nec enim eget sapien molestie. </li> <li> Proin convallis odio volutpat finibus posuere.  </li>  </ul>  <p>  Cras et diam maximus, accumsan  sapien et, sollicitudin velit. Nulla  blandit eros non turpis lobortis iaculis at ut massa.  </p>',

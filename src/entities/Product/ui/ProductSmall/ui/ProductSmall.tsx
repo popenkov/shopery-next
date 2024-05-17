@@ -3,9 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 // todo перенести превью и корзину в фичи и экшны
-import { StarRating } from 'entities/StarRating';
 import { RoundButton } from 'shared/ui/Buttons';
 import { HeartIcon, EyeIcon, CartIcon } from 'shared/ui/icons';
+import { StarRating } from 'shared/ui/StarRating';
 
 import { TProduct } from '../../../';
 

@@ -13,23 +13,23 @@ export const AlertIcon: FC<{ className?: string }> = ({ className }) => {
       <path
         d="M8.57465 3.21667L1.51632 15C1.37079 15.252 1.29379 15.5378 1.29298 15.8288C1.29216 16.1198 1.36756 16.4059 1.51167 16.6588C1.65579 16.9116 1.86359 17.1223 2.11441 17.2699C2.36523 17.4175 2.65032 17.4968 2.94132 17.5H17.058C17.349 17.4968 17.6341 17.4175 17.8849 17.2699C18.1357 17.1223 18.3435 16.9116 18.4876 16.6588C18.6317 16.4059 18.7071 16.1198 18.7063 15.8288C18.7055 15.5378 18.6285 15.252 18.483 15L11.4247 3.21667C11.2761 2.97176 11.0669 2.76927 10.8173 2.62874C10.5677 2.48821 10.2861 2.41438 9.99965 2.41438C9.71321 2.41438 9.43159 2.48821 9.18199 2.62874C8.93238 2.76927 8.72321 2.97176 8.57465 3.21667V3.21667Z"
         stroke="#EA4B48"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M10 7.5V10.8333"
         stroke="#EA4B48"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M10 14.1667H10.0083"
         stroke="#EA4B48"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -158,12 +158,12 @@ export const CalendarIcon: FC<{ className?: string }> = ({ className }) => {
       <path
         d="M14.25 3.5H3.75C2.92157 3.5 2.25 4.17157 2.25 5V15.5C2.25 16.3284 2.92157 17 3.75 17H14.25C15.0784 17 15.75 16.3284 15.75 15.5V5C15.75 4.17157 15.0784 3.5 14.25 3.5Z"
         stroke="#00B307"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
-      <path d="M12 2V5" stroke="#00B307" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M6 2V5" stroke="#00B307" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M2.25 8H15.75" stroke="#00B307" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M12 2V5" stroke="#00B307" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M6 2V5" stroke="#00B307" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M2.25 8H15.75" stroke="#00B307" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 };
@@ -174,9 +174,9 @@ export const CartIcon: FC<{ className?: string }> = ({ className }) => {
       <path
         d="M10.0833 12.9167H5.83333L3 28.5H28.5L25.6667 12.9167H21.4167M10.0833 12.9167V8.66667C10.0833 5.53705 12.6204 3 15.75 3V3C18.8796 3 21.4167 5.53705 21.4167 8.66667V12.9167M10.0833 12.9167H21.4167M10.0833 12.9167V17.1667M21.4167 12.9167V17.1667"
         stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -195,9 +195,9 @@ export const ChatMessageIcon: FC<{ className?: string }> = ({ className }) => {
       <path
         d="M10.5238 14.2728L9.48206 16.0087C9.43209 16.092 9.36139 16.1609 9.27687 16.2088C9.19234 16.2566 9.09686 16.2818 8.99972 16.2818C8.90258 16.2818 8.8071 16.2566 8.72257 16.2088C8.63804 16.1609 8.56735 16.092 8.51738 16.0087L7.47675 14.2728C7.42671 14.1895 7.35596 14.1206 7.27138 14.0728C7.1868 14.025 7.09128 13.9999 6.99413 14H2.8125C2.66332 14 2.52024 13.9407 2.41475 13.8352C2.30926 13.7298 2.25 13.5867 2.25 13.4375V4.4375C2.25 4.28832 2.30926 4.14524 2.41475 4.03975C2.52024 3.93426 2.66332 3.875 2.8125 3.875H15.1875C15.3367 3.875 15.4798 3.93426 15.5852 4.03975C15.6907 4.14524 15.75 4.28832 15.75 4.4375V13.4375C15.75 13.5867 15.6907 13.7298 15.5852 13.8352C15.4798 13.9407 15.3367 14 15.1875 14H11.0059C10.9088 14 10.8134 14.0252 10.7289 14.073C10.6445 14.1208 10.5738 14.1896 10.5238 14.2728V14.2728Z"
         stroke="#B3B3B3"
-        stroke-width="1.2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -216,9 +216,9 @@ export const CheckIcon: FC<{ className?: string }> = ({ className }) => {
       <path
         d="M13.3337 4L6.00033 11.3333L2.66699 8"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -227,12 +227,7 @@ export const CheckIcon: FC<{ className?: string }> = ({ className }) => {
 export const ChevronDownIcon: FC<{ className?: string }> = ({ className }) => {
   return (
     <svg className={className} viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M10 4L6 8L2 4"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
+      <path d="M10 4L6 8L2 4" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 };
@@ -250,16 +245,16 @@ export const CloseBtnIcon: FC<{ className?: string }> = ({ className }) => {
       <path
         d="M9 1L1 9"
         stroke="#666666"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M9 9L1 1"
         stroke="#666666"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -271,16 +266,16 @@ export const CloseIcon: FC<{ className?: string }> = ({ className }) => {
       <path
         d="M18.75 6.25L6.25 18.75"
         stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M6.25 6.25L18.75 18.75"
         stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -314,16 +309,16 @@ export const CrossIcon: FC<{ className?: string }> = ({ className }) => {
       <path
         d="M18.75 6.25L6.25 18.75"
         stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M6.25 6.25L18.75 18.75"
         stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -514,16 +509,16 @@ export const EmailIcon: FC<{ className?: string }> = ({ className }) => {
       <path
         d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
         stroke="#00B307"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M22 6L12 13L2 6"
         stroke="#00B307"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -542,16 +537,16 @@ export const EyeOpenIcon: FC<{ className?: string }> = ({ className }) => {
       <path
         d="M1.66675 10.5003C1.66675 10.5003 4.69675 4.66699 10.0001 4.66699C15.3034 4.66699 18.3334 10.5003 18.3334 10.5003C18.3334 10.5003 15.3034 16.3337 10.0001 16.3337C4.69675 16.3337 1.66675 10.5003 1.66675 10.5003Z"
         stroke="#1A1A1A"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M10 13C10.663 13 11.2989 12.7366 11.7678 12.2678C12.2366 11.7989 12.5 11.163 12.5 10.5C12.5 9.83696 12.2366 9.20107 11.7678 8.73223C11.2989 8.26339 10.663 8 10 8C9.33696 8 8.70107 8.26339 8.23223 8.73223C7.76339 9.20107 7.5 9.83696 7.5 10.5C7.5 11.163 7.76339 11.7989 8.23223 12.2678C8.70107 12.7366 9.33696 13 10 13V13Z"
         stroke="#1A1A1A"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -563,16 +558,16 @@ export const EyeIcon: FC<{ className?: string }> = ({ className }) => {
       <path
         d="M10 3.54103C3.75 3.54103 1.25 10.0001 1.25 10.0001C1.25 10.0001 3.75 16.4577 10 16.4577C16.25 16.4577 18.75 10.0001 18.75 10.0001C18.75 10.0001 16.25 3.54103 10 3.54103V3.54103Z"
         stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M10 13.125C10.8288 13.125 11.6237 12.7958 12.2097 12.2097C12.7958 11.6237 13.125 10.8288 13.125 10C13.125 9.1712 12.7958 8.37634 12.2097 7.79029C11.6237 7.20424 10.8288 6.875 10 6.875C9.1712 6.875 8.37634 7.20424 7.79029 7.79029C7.20424 8.37634 6.875 9.1712 6.875 10C6.875 10.8288 7.20424 11.6237 7.79029 12.2097C8.37634 12.7958 9.1712 13.125 10 13.125V13.125Z"
         stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -585,7 +580,7 @@ export const FacebookIcon: FC<{ className?: string }> = ({ className }) => {
         id="Vector"
         d="M11.998 2.98874L13.6416 2.98874L13.6416 0.12674C13.3574 0.0877457 12.3828 -7.62939e-06 11.2471 -7.62939e-06C8.87793 -7.62939e-06 7.25488 1.49024 7.25488 4.22924L7.25488 6.74999L4.64062 6.74999L4.64062 9.94949L7.25488 9.94949L7.25488 18L10.4609 18L10.4609 9.95024L12.9697 9.95024L13.3672 6.75074L10.46 6.75074L10.46 4.54649C10.4609 3.62174 10.71 2.98874 11.998 2.98874Z"
         fill="currentColor"
-        fill-opacity="1.000000"
+        fillOpacity="1.000000"
         fillRule="nonzero"
       />
     </svg>
@@ -730,7 +725,7 @@ export const HeartLinedIcon: FC<{ className?: string }> = ({ className }) => {
       <path
         d="M9.9996 17.5451C-6.66672 8.3333 4.99993 -1.6667 9.9996 4.65668C14.9999 -1.6667 26.6666 8.3333 9.9996 17.5451Z"
         stroke="currentColor"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
     </svg>
   );
@@ -749,7 +744,7 @@ export const HeartStrokeIcon: FC<{ className?: string }> = ({ className }) => {
       <path
         d="M15.9995 28.5722C-10.6667 13.8333 7.99999 -2.16666 15.9995 7.95075C24 -2.16666 42.6666 13.8333 15.9995 28.5722Z"
         stroke="#1A1A1A"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
     </svg>
   );
@@ -762,8 +757,8 @@ export const HeartIcon: FC<{ className?: string }> = ({ className }) => {
         id="Vector"
         d="M15.9995 7.45074C24 -2.66667 42.6665 13.3333 15.9995 28.0722C-10.6665 13.3333 8 -2.66666 15.9995 7.45074Z"
         stroke="currentColor"
-        stroke-opacity="1.000000"
-        stroke-width="1.500000"
+        strokeOpacity="1.000000"
+        strokeWidth="1.500000"
       />
     </svg>
   );
@@ -782,9 +777,9 @@ export const HomeIcon: FC<{ className?: string }> = ({ className }) => {
       <path
         d="M4 10L12 3L20 10V20H15V16C15 15.2044 14.6839 14.4413 14.1213 13.8787C13.5587 13.3161 12.7956 13 12 13C11.2043 13 10.4413 13.3161 9.87868 13.8787C9.31607 14.4413 9 15.2044 9 16V20H4V10Z"
         stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -857,21 +852,21 @@ export const InstagramIcon: FC<{ className?: string }> = ({ className }) => {
         id="Vector"
         d="M17.9824 5.29205C17.9395 4.33564 17.7852 3.67812 17.5635 3.10837C17.335 2.50359 16.9834 1.96213 16.5225 1.51202C16.0723 1.05489 15.5273 0.699692 14.9297 0.474701C14.3564 0.253143 13.7031 0.0984879 12.7461 0.0563126C11.7832 0.0105743 11.4766 0 9.0332 0C6.58887 0 6.2832 0.0105743 5.32324 0.052742C4.36719 0.0949097 3.70898 0.24971 3.13965 0.47113C2.53516 0.699692 1.99316 1.05132 1.54297 1.51202C1.08594 1.96213 0.731445 2.50716 0.505859 3.10493C0.28418 3.67812 0.129883 4.33207 0.0878906 5.28848C0.0419922 6.25203 0.03125 6.55792 0.03125 9.00175C0.03125 11.4456 0.0419922 11.7515 0.0839844 12.7115C0.125977 13.6679 0.28125 14.3254 0.50293 14.8951C0.731445 15.4999 1.08594 16.0414 1.54297 16.4915C1.99316 16.9486 2.53809 17.3038 3.13574 17.5288C3.70898 17.7504 4.36328 17.905 5.32031 17.9472C6.2793 17.9895 6.58594 17.9999 9.0293 17.9999C11.4736 17.9999 11.7793 17.9895 12.7393 17.9472C13.6953 17.905 14.3535 17.7504 14.9229 17.5288C16.1328 17.0611 17.0889 16.1047 17.5566 14.8951C17.7783 14.322 17.9326 13.6679 17.9746 12.7115C18.0176 11.7515 18.0273 11.4456 18.0273 9.00175C18.0273 6.55792 18.0244 6.25203 17.9824 5.29205ZM16.3613 12.6411C16.3223 13.5202 16.1748 13.9949 16.0518 14.3114C15.749 15.0956 15.127 15.7179 14.3428 16.0204C14.0264 16.1434 13.5479 16.2911 12.6729 16.3297C11.7227 16.372 11.4385 16.3824 9.03613 16.3824C6.63477 16.3824 6.34668 16.372 5.40039 16.3297C4.52148 16.2911 4.04688 16.1434 3.73047 16.0204C3.33984 15.8761 2.98535 15.6476 2.69629 15.3487C2.39746 15.0568 2.16895 14.7052 2.02539 14.315C1.90234 13.9985 1.75391 13.5202 1.71582 12.6447C1.67285 11.6953 1.66309 11.4104 1.66309 9.00877C1.66309 6.60709 1.67285 6.31879 1.71582 5.37296C1.75391 4.49387 1.90234 4.01917 2.02539 3.70271C2.16895 3.31234 2.39746 2.95728 2.7002 2.66882C2.99219 2.36994 3.34375 2.14138 3.73438 1.99729C4.05078 1.87422 4.52832 1.72656 5.4043 1.68783C6.35352 1.64566 6.63867 1.63509 9.04004 1.63509C11.4453 1.63509 11.7295 1.64566 12.6758 1.68783C13.5547 1.72656 14.0293 1.87422 14.3457 1.99729C14.7363 2.14138 15.0918 2.36994 15.3799 2.66882C15.6787 2.96071 15.9072 3.31234 16.0518 3.70271C16.1748 4.01917 16.3223 4.49731 16.3613 5.37296C16.4033 6.32236 16.4141 6.60709 16.4141 9.00877C16.4141 11.4104 16.4033 11.6917 16.3613 12.6411Z"
         fill="currentColor"
-        fill-opacity="1.000000"
+        fillOpacity="1.000000"
         fillRule="nonzero"
       />
       <path
         id="Vector"
         d="M9.0332 4.37778C6.48047 4.37778 4.40918 6.44883 4.40918 9.00172C4.40918 11.5546 6.48047 13.6257 9.0332 13.6257C11.5859 13.6257 13.6572 11.5546 13.6572 9.00172C13.6572 6.44883 11.5859 4.37778 9.0332 4.37778ZM9.0332 12.0012C7.37695 12.0012 6.0332 10.658 6.0332 9.00172C6.0332 7.34549 7.37695 6.00229 9.0332 6.00229C10.6895 6.00229 12.0322 7.34549 12.0322 9.00172C12.0322 10.658 10.6895 12.0012 9.0332 12.0012Z"
         fill="currentColor"
-        fill-opacity="1.000000"
+        fillOpacity="1.000000"
         fillRule="nonzero"
       />
       <path
         id="Vector"
         d="M14.9199 4.19498C14.9199 4.79111 14.4365 5.27446 13.8398 5.27446C13.2441 5.27446 12.7607 4.79111 12.7607 4.19498C12.7607 3.59872 13.2441 3.11549 13.8398 3.11549C14.4365 3.11549 14.9199 3.59872 14.9199 4.19498Z"
         fill="currentColor"
-        fill-opacity="1.000000"
+        fillOpacity="1.000000"
         fillRule="nonzero"
       />
     </svg>
@@ -903,7 +898,7 @@ export const LinkIcon: FC<{ className?: string }> = ({ className }) => {
         id="Vector"
         d="M5.83301 6.66667C4.94922 6.66667 4.10156 7.01785 3.47559 7.64297C2.85059 8.2681 2.5 9.11595 2.5 10C2.5 10.884 2.85059 11.7319 3.47559 12.357C4.10156 12.9821 4.94922 13.3333 5.83301 13.3333L7.5 13.3333C7.7207 13.3333 7.93262 13.4211 8.08887 13.5774C8.24512 13.7337 8.33301 13.9456 8.33301 14.1667C8.33301 14.3877 8.24512 14.5996 8.08887 14.7559C7.93262 14.9122 7.7207 15 7.5 15L5.83301 15C4.50684 15 3.23535 14.4732 2.29785 13.5355C1.35938 12.5979 0.833008 11.3261 0.833008 10C0.833008 8.67392 1.35938 7.40215 2.29785 6.46446C3.23535 5.52678 4.50684 5 5.83301 5L7.5 5C7.7207 5 7.93262 5.0878 8.08887 5.24408C8.24512 5.40036 8.33301 5.61232 8.33301 5.83333C8.33301 6.05435 8.24512 6.26631 8.08887 6.42259C7.93262 6.57887 7.7207 6.66667 7.5 6.66667L5.83301 6.66667ZM11.666 5.83333C11.666 5.61232 11.7539 5.40036 11.9102 5.24408C12.0664 5.0878 12.2783 5 12.5 5L14.166 5C15.4922 5 16.7646 5.52678 17.7021 6.46446C18.6396 7.40215 19.166 8.67392 19.166 10C19.166 11.3261 18.6396 12.5979 17.7021 13.5355C16.7646 14.4732 15.4922 15 14.166 15L12.5 15C12.2783 15 12.0664 14.9122 11.9102 14.7559C11.7539 14.5996 11.666 14.3877 11.666 14.1667C11.666 13.9456 11.7539 13.7337 11.9102 13.5774C12.0664 13.4211 12.2783 13.3333 12.5 13.3333L14.166 13.3333C15.0508 13.3333 15.8984 12.9821 16.5234 12.357C17.1484 11.7319 17.5 10.884 17.5 10C17.5 9.11595 17.1484 8.2681 16.5234 7.64297C15.8984 7.01785 15.0508 6.66667 14.166 6.66667L12.5 6.66667C12.2783 6.66667 12.0664 6.57887 11.9102 6.42259C11.7539 6.26631 11.666 6.05435 11.666 5.83333ZM5.83301 10C5.83301 9.77899 5.9209 9.56703 6.07715 9.41075C6.2334 9.25447 6.44531 9.16667 6.66602 9.16667L13.333 9.16667C13.5537 9.16667 13.7656 9.25447 13.9219 9.41075C14.0781 9.56703 14.166 9.77899 14.166 10C14.166 10.221 14.0781 10.433 13.9219 10.5892C13.7656 10.7455 13.5537 10.8333 13.333 10.8333L6.66602 10.8333C6.44531 10.8333 6.2334 10.7455 6.07715 10.5892C5.9209 10.433 5.83301 10.221 5.83301 10Z"
         fill="currentColor"
-        fill-opacity="1.000000"
+        fillOpacity="1.000000"
         fillRule="nonzero"
       />
     </svg>
@@ -925,9 +920,9 @@ export const ListCheckboxIcon: FC<{ className?: string }> = ({ className }) => {
         <path
           d="M14.4173 7.125L8.68815 12.8542L6.08398 10.25"
           stroke="white"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </g>
       <defs>
@@ -952,16 +947,16 @@ export const LockIcon: FC<{ className?: string }> = ({ className }) => {
       <path
         d="M8.70833 5.04199H2.29167C1.78541 5.04199 1.375 5.4524 1.375 5.95866V9.16699C1.375 9.67325 1.78541 10.0837 2.29167 10.0837H8.70833C9.21459 10.0837 9.625 9.67325 9.625 9.16699V5.95866C9.625 5.4524 9.21459 5.04199 8.70833 5.04199Z"
         stroke="white"
-        stroke-width="0.916667"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="0.916667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M3.2085 5.04199V3.20866C3.2085 2.60087 3.44994 2.01798 3.87971 1.58821C4.30948 1.15843 4.89237 0.916992 5.50016 0.916992C6.10795 0.916992 6.69084 1.15843 7.12062 1.58821C7.55039 2.01798 7.79183 2.60087 7.79183 3.20866V5.04199"
         stroke="white"
-        stroke-width="0.916667"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="0.916667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -991,14 +986,14 @@ export const MapPinIcon: FC<{ className?: string }> = ({ className }) => {
       <path
         d="M16 8.36364C16 14.0909 8.5 19 8.5 19C8.5 19 1 14.0909 1 8.36364C1 6.41068 1.79018 4.53771 3.1967 3.15676C4.60322 1.77581 6.51088 1 8.5 1C10.4891 1 12.3968 1.77581 13.8033 3.15676C15.2098 4.53771 16 6.41068 16 8.36364Z"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M8.5 10.8182C9.88071 10.8182 11 9.71925 11 8.36364C11 7.00803 9.88071 5.90909 8.5 5.90909C7.11929 5.90909 6 7.00803 6 8.36364C6 9.71925 7.11929 10.8182 8.5 10.8182Z"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -1079,9 +1074,9 @@ export const MinusIcon: FC<{ className?: string }> = ({ className }) => {
       <path
         d="M3.33301 8H12.6663"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -1147,23 +1142,23 @@ export const PhoneIcon: FC<{ className?: string }> = ({ className }) => {
       <path
         d="M17.436 4.375C18.9194 4.77396 20.2719 5.55567 21.3581 6.64184C22.4442 7.72801 23.226 9.08051 23.6249 10.5639"
         stroke="#1A1A1A"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M16.5308 7.75687C17.4206 7.99625 18.2319 8.46521 18.8835 9.11678C19.535 9.76835 20.004 10.5797 20.2434 11.4695"
         stroke="#1A1A1A"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M10.115 13.6517C11.0224 15.5074 12.5263 17.0049 14.3859 17.9042C14.522 17.9688 14.6727 17.9966 14.8229 17.9851C14.9731 17.9736 15.1178 17.9231 15.2425 17.8386L17.9812 16.0134C18.1022 15.9326 18.2414 15.8833 18.3862 15.8698C18.5311 15.8564 18.677 15.8793 18.8107 15.9364L23.9339 18.1326C24.1079 18.2065 24.2532 18.335 24.3479 18.4987C24.4426 18.6623 24.4815 18.8523 24.4589 19.04C24.2967 20.307 23.6784 21.4714 22.7196 22.3154C21.7608 23.1593 20.5273 23.6249 19.25 23.625C15.3049 23.625 11.5214 22.0578 8.73179 19.2682C5.94218 16.4786 4.375 12.6951 4.375 8.75C4.37512 7.47279 4.84074 6.23941 5.68471 5.28077C6.52867 4.32213 7.6931 3.70396 8.96 3.542C9.14771 3.51936 9.33769 3.55832 9.50134 3.653C9.66499 3.74769 9.79345 3.89298 9.86738 4.067L12.0654 9.1945C12.1219 9.32698 12.1449 9.47137 12.1322 9.61485C12.1195 9.75833 12.0716 9.89647 11.9928 10.017L10.1728 12.7977C10.0901 12.923 10.0414 13.0675 10.0313 13.2171C10.0212 13.3668 10.05 13.5165 10.115 13.6517V13.6517Z"
         stroke="#1A1A1A"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -1206,7 +1201,7 @@ export const PinterestIcon: FC<{ className?: string }> = ({ className }) => {
         id="Vector"
         d="M9.24414 0C4.31152 0 1.6875 3.16139 1.6875 6.60855C1.6875 8.20724 2.58105 10.2008 4.01074 10.8331C4.22754 10.931 4.3457 10.8894 4.39453 10.688C4.4375 10.535 4.625 9.79807 4.71582 9.45042C4.74414 9.33904 4.72949 9.24229 4.63965 9.13766C4.16504 8.58863 3.78809 7.58847 3.78809 6.65017C3.78809 4.24594 5.69922 1.91146 8.95215 1.91146C11.7646 1.91146 13.7324 3.73854 13.7324 6.35204C13.7324 9.30529 12.1699 11.3484 10.1387 11.3484C9.01465 11.3484 8.17773 10.4663 8.44336 9.37505C8.76367 8.07561 9.39258 6.6783 9.39258 5.74113C9.39258 4.90072 8.91797 4.20544 7.94824 4.20544C6.80469 4.20544 5.87598 5.33836 5.87598 6.85943C5.87598 7.82585 6.21777 8.47838 6.21777 8.47838C6.21777 8.47838 5.08594 13.0506 4.87598 13.9045C4.52051 15.3502 4.92383 17.6914 4.95898 17.8928C4.98047 18.0042 5.10547 18.0391 5.1748 17.9479C5.28613 17.8017 6.6543 15.8497 7.03809 14.4389C7.17773 13.9248 7.75 11.84 7.75 11.84C8.12695 12.5207 9.21484 13.0911 10.374 13.0911C13.8213 13.0911 16.3125 10.0613 16.3125 6.30141C16.2998 2.69675 13.2148 0 9.24414 0Z"
         fill="currentColor"
-        fill-opacity="1.000000"
+        fillOpacity="1.000000"
         fillRule="nonzero"
       />
     </svg>
@@ -1216,7 +1211,7 @@ export const PinterestIcon: FC<{ className?: string }> = ({ className }) => {
 export const PlayButtonIcon: FC<{ className?: string }> = ({ className }) => {
   return (
     <svg className={className} viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="42" cy="42" r="40.75" stroke="currentColor" stroke-width="1.5" />
+      <circle cx="42" cy="42" r="40.75" stroke="currentColor" strokeWidth="1.5" />
       <path d="M34 30V54L54 42L34 30Z" fill="currentColor" />
     </svg>
   );
@@ -1243,9 +1238,9 @@ export const PlusIcon: FC<{ className?: string }> = ({ className }) => {
       <path
         d="M2.33398 6.99998H11.6673M7.00065 2.33331V11.6666V2.33331Z"
         stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -1455,16 +1450,16 @@ export const SearchIcon: FC<{ className?: string }> = ({ className }) => {
       <path
         d="M9.16667 16.3333C12.8486 16.3333 15.8333 13.3486 15.8333 9.66667C15.8333 5.98477 12.8486 3 9.16667 3C5.48477 3 2.5 5.98477 2.5 9.66667C2.5 13.3486 5.48477 16.3333 9.16667 16.3333Z"
         stroke="#1A1A1A"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M17.5 18L13.875 14.375"
         stroke="#1A1A1A"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -1687,9 +1682,9 @@ export const SuccessIcon: FC<{ className?: string }> = ({ className }) => {
       <path
         d="M16.6663 5.5L7.49967 14.6667L3.33301 10.5"
         stroke="#00B307"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -1742,16 +1737,16 @@ export const TagIcon: FC<{ className?: string }> = ({ className }) => {
       <path
         d="M17.1582 11.675L11.1832 17.65C11.0284 17.805 10.8446 17.9279 10.6422 18.0118C10.4399 18.0956 10.223 18.1388 10.004 18.1388C9.78498 18.1388 9.5681 18.0956 9.36577 18.0118C9.16344 17.9279 8.97963 17.805 8.82484 17.65L1.6665 10.5V2.16666H9.99984L17.1582 9.32499C17.4686 9.63726 17.6428 10.0597 17.6428 10.5C17.6428 10.9403 17.4686 11.3627 17.1582 11.675V11.675Z"
         stroke="#B3B3B3"
-        stroke-width="1.2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M5.83301 6.33331H5.84134"
         stroke="#B3B3B3"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -1782,7 +1777,7 @@ export const TwitterIcon: FC<{ className?: string }> = ({ className }) => {
         id="Vector"
         d="M18 3.41887C17.3311 3.7125 16.6172 3.90713 15.874 4.00163C16.6387 3.54488 17.2227 2.82713 17.4971 1.962C16.7842 2.38725 15.9961 2.68763 15.1572 2.85525C14.4795 2.13412 13.5146 1.6875 12.4619 1.6875C10.4189 1.6875 8.77344 3.34575 8.77344 5.37863C8.77344 5.67113 8.79883 5.95238 8.85938 6.22013C5.79102 6.0705 3.07715 4.60013 1.25293 2.36025C0.93457 2.91262 0.748047 3.54488 0.748047 4.2255C0.748047 5.5035 1.40625 6.63638 2.3877 7.29225C1.79395 7.281 1.21289 7.10888 0.719727 6.83775C0.719727 6.849 0.719727 6.86363 0.719727 6.87825C0.719727 8.6715 1.99902 10.161 3.67676 10.5041C3.37598 10.5863 3.04883 10.6256 2.70898 10.6256C2.47266 10.6256 2.23438 10.6121 2.01074 10.5626C2.48828 12.024 3.8457 13.0984 5.45898 13.1333C4.20312 14.1154 2.6084 14.7071 0.882812 14.7071C0.580078 14.7071 0.290039 14.6936 0 14.6565C1.63477 15.7106 3.57227 16.3125 5.66113 16.3125C12.4512 16.3125 16.1641 10.6875 16.1641 5.81175C16.1641 5.64863 16.1582 5.49113 16.1504 5.33475C16.8828 4.815 17.498 4.16588 18 3.41887Z"
         fill="currentColor"
-        fill-opacity="1.000000"
+        fillOpacity="1.000000"
         fillRule="nonzero"
       />
     </svg>
@@ -1802,12 +1797,12 @@ export const UserIcon: FC<{ className?: string }> = ({ className }) => {
       <path
         d="M10.0003 9.66667C11.8413 9.66667 13.3337 8.17428 13.3337 6.33333C13.3337 4.49238 11.8413 3 10.0003 3C8.15938 3 6.66699 4.49238 6.66699 6.33333C6.66699 8.17428 8.15938 9.66667 10.0003 9.66667Z"
         stroke="#B3B3B3"
-        stroke-width="1.2"
+        strokeWidth="1.2"
       />
       <path
         d="M12.5002 12.1667H7.50019C5.19852 12.1667 3.13769 14.2917 4.65186 16.0242C5.68186 17.2025 7.38519 18 10.0002 18C12.6152 18 14.3177 17.2025 15.3477 16.0242C16.8627 14.2909 14.801 12.1667 12.5002 12.1667Z"
         stroke="#B3B3B3"
-        stroke-width="1.2"
+        strokeWidth="1.2"
       />
     </svg>
   );
@@ -1866,23 +1861,23 @@ export const WarningIcon: FC<{ className?: string }> = ({ className }) => {
       <path
         d="M10.0003 18.8333C14.6027 18.8333 18.3337 15.1024 18.3337 10.5C18.3337 5.89763 14.6027 2.16667 10.0003 2.16667C5.39795 2.16667 1.66699 5.89763 1.66699 10.5C1.66699 15.1024 5.39795 18.8333 10.0003 18.8333Z"
         stroke="#FF8A00"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M10 7.16667V10.5"
         stroke="#FF8A00"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M10 13.8333H10.0083"
         stroke="#FF8A00"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -1901,7 +1896,7 @@ export const WishListIcon: FC<{ className?: string }> = ({ className }) => {
       <path
         d="M12.1667 21.0543C-7.83288 10.0001 6.1671 -1.99988 12.1667 5.58817C18.1671 -1.99989 32.1671 10.0001 12.1667 21.0543Z"
         stroke="#CCCCCC"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
     </svg>
   );

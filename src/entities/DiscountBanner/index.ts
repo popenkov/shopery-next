@@ -1,2 +1,2 @@
-export { type TDiscountBanner } from './model/banner';
+export { type TDiscountBanner } from './model';
 export { DiscountBanner } from './ui';

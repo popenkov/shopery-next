@@ -1,7 +1,7 @@
-type TAdIcons = 'icon__price_tag' | 'icon__leaf';
+type TAdIcons = 'PriceTagIcon' | 'LeafIcon';
 
 export type TAdvertisement = {
-    icon: TAdIcons;
-    title: string;
-    text: string;
+  icon: TAdIcons;
+  title: string;
+  text: string;
 };

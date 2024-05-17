@@ -4,10 +4,10 @@ import Link from 'next/link';
 
 // todo перенести превью и корзину в фичи и экшны
 import { TProduct } from 'entities/Product';
-import { StarRating } from 'entities/StarRating';
 import { getFormattedPrice } from 'shared/lib/utils';
 import { RoundButton } from 'shared/ui/Buttons';
 import { HeartLinedIcon, EyeIcon, CartIcon } from 'shared/ui/icons';
+import { StarRating } from 'shared/ui/StarRating';
 import { Text } from 'shared/ui/Text';
 
 import cls from './ProductLarge.module.scss';

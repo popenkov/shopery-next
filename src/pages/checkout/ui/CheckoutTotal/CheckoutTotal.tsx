@@ -5,10 +5,10 @@ import cn from 'classnames';
 
 import { ProductCheckout } from '@/entities/Product';
 import { getFormattedPrice } from '@/shared/lib/utils';
-import { Button } from '@/shared/ui/Buttons';
-import { Radio } from '@/shared/ui/Radio';
-import { Text } from '@/shared/ui/Text';
 import { getCartData } from 'entities/Cart';
+import { Button } from 'shared/ui/Buttons';
+import { Radio } from 'shared/ui/Radio';
+import { Text } from 'shared/ui/Text';
 
 import cls from './CheckoutTotal.module.scss';
 

@@ -1,1 +1,1 @@
-export { getCartData } from './api/getCartData';
+export { getCartData } from './api';

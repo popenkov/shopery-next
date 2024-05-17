@@ -1,14 +1,8 @@
-import { NavigationLink } from 'features/Navigation';
-
-type TSocialIcons = 'FacebookIcon' | 'TwitterIcon' | 'PinterestIcon' | 'InstagramIcon';
+import { TLink } from '@/shared/model/navigation-link.types';
+import { SocialLink } from 'entities/SocialShare';
 
 type TPaymentIcons = 'SecureIcon' | 'ApplePayIcon' | 'VisaIcon' | 'DiscoverIcon' | 'MastercardIcon';
 
-type SocialLink = {
-  icon: TSocialIcons;
-  id: string;
-  path: string;
-};
 type PaymentIcon = {
   icon: TPaymentIcons;
   id: string;
@@ -16,7 +10,7 @@ type PaymentIcon = {
 };
 
 export type Footer = {
-  navigation: NavigationLink[];
+  navigation: TLink[];
   socialLinks: SocialLink[];
   paymentMethods: PaymentIcon[];
 };
