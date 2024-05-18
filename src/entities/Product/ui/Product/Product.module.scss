@@ -32,14 +32,6 @@
   transition: opacity var(--transition-long);
 }
 
-.imageButton {
-  box-shadow: none;
-
-  @media (hover: hover) {
-    box-shadow: 0 0 8px 0 var(--monochrome-200);
-  }
-}
-
 .image {
   padding: 5px;
   object-fit: contain;

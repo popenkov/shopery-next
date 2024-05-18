@@ -30,6 +30,21 @@
   visibility: hidden;
   opacity: 0;
   transition: opacity var(--transition-long);
+
+  button {
+    @include box(50px);
+
+    background-color: var(--green-gray-100);
+    box-shadow: none;
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--color-white);
+        background-color: var(--primary);
+        box-shadow: 0 0 8px 2px var(--monochrome-200);
+      }
+    }
+  }
 }
 
 .imageButton {
@@ -94,21 +109,6 @@
 
 .price + .rating {
   margin-top: 4px;
-}
-
-.button {
-  @include box(50px);
-
-  background-color: var(--green-gray-100);
-  box-shadow: none;
-
-  @media (hover: hover) {
-    &:hover {
-      color: var(--color-white);
-      background-color: var(--primary);
-      box-shadow: 0 0 8px 2px var(--monochrome-200);
-    }
-  }
 }
 
 .product {

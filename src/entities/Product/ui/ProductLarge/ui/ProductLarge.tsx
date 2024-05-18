@@ -1,12 +1,10 @@
-import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 // todo перенести превью и корзину в фичи и экшны
 import { TProduct } from 'entities/Product';
 import { getFormattedPrice } from 'shared/lib/utils';
-import { RoundButton } from 'shared/ui/Buttons';
-import { HeartLinedIcon, EyeIcon, CartIcon } from 'shared/ui/icons';
 import { StarRating } from 'shared/ui/StarRating';
 import { Text } from 'shared/ui/Text';
 
@@ -15,22 +13,17 @@ import cls from './ProductLarge.module.scss';
 interface ProductLargeProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   data: TProduct;
+  actions: ReactNode;
+  cartAction: ReactNode;
 }
 
-export const ProductLarge: FC<ProductLargeProps> = ({ data }) => {
+export const ProductLarge: FC<ProductLargeProps> = ({ data, actions, cartAction }) => {
   const { img, title, path, price, priceOld, rating } = data;
 
   return (
     <div className={cls.product}>
       <div className={cls.imageContainer}>
-        <div className={cls.buttons}>
-          <RoundButton theme="secondary" className={cls.imageButton}>
-            <HeartLinedIcon />
-          </RoundButton>
-          <RoundButton theme="secondary" className={cls.imageButton}>
-            <EyeIcon />
-          </RoundButton>
-        </div>
+        <div className={cls.buttons}>{actions}</div>
         <Image src={img} fill alt={title} className={cls.image} />
       </div>
       <div className={cls.description}>
@@ -52,9 +45,7 @@ export const ProductLarge: FC<ProductLargeProps> = ({ data }) => {
           </div>
           <StarRating value={rating} />
         </div>
-        <RoundButton theme="primary" className={cls.button}>
-          <CartIcon />
-        </RoundButton>
+        {cartAction}
       </div>
     </div>
   );

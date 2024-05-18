@@ -23,7 +23,7 @@ const Product: FC = () => {
           actions={
             <>
               <AddToCartCounter className={cls.productCartCounter} />
-              <AddToFavorites className={cls.productFavoriteButton} />
+              <AddToFavorites className={cls.productFavoriteButton} itemID={data.id} />
             </>
           }
         />
