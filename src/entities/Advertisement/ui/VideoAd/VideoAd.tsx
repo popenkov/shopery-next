@@ -4,7 +4,7 @@ import cn from 'classnames';
 import { Text } from 'shared/ui/Text';
 
 import { getVideoAdIcon } from '../../lib';
-import { TAdvertisement } from '../../model/ad.types';
+import { TAdvertisement } from '../../model';
 
 import cls from './VideoAd.module.scss';
 

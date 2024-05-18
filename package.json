@@ -130,6 +130,12 @@
     "**/*.{ts,tsx}": [
       "prettier --list-different",
       "next lint"
-    ]
+    ],
+    "*.scss": "lint:scss"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }

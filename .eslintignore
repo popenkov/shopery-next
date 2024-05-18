@@ -2,6 +2,6 @@
 /cypress
 cypress.config.ts
 /node_modules
-
+/src/app/configs
 # todo
 /app

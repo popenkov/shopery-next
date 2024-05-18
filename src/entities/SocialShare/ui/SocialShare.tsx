@@ -1,9 +1,10 @@
 import { FC } from 'react';
 import cn from 'classnames';
 
+import { RoundButton } from 'shared/ui/Buttons';
+
 import { getSocialData } from '../api';
-import { getSocialIcon } from '../lib/getSocialIcon';
-import { RoundButton } from '../../../shared/ui/Buttons';
+import { getSocialIcon } from '../lib';
 
 import cls from './SocialShare.module.scss';
 
