@@ -8,6 +8,7 @@ import Select, {
   OnChangeValue,
   Options,
   GroupBase,
+  PropsValue,
 } from 'react-select';
 
 import { ChevronDownIcon } from 'shared/ui/icons';
@@ -43,7 +44,8 @@ const DropdownIndicator: ComponentType<
 };
 
 export const AppSelect = memo(
-  forwardRef<HTMLSelectElement, SelectProps>((props, ref) => {
+  // todo проверить без forwardRef
+  forwardRef<HTMLSelectElement, SelectProps>((props) => {
     const {
       options,
       onChange,
@@ -52,7 +54,6 @@ export const AppSelect = memo(
       label,
       placeholder,
       isSearchable = false,
-      ...otherPops
     } = props;
 
     const handleSelectChange = (newValue: OnChangeValue<SelectOption, boolean>) => {
@@ -78,7 +79,7 @@ export const AppSelect = memo(
           isSearchable={isSearchable!}
           classNamePrefix="react-select"
           instanceId={'selectInstanceId'}
-          {...otherPops}
+          defaultValue={options[0] as PropsValue<SelectOption>}
         />
         {errorText && (
           <Text variant="body_s" weight="medium" className={cls.errorMessage} as="span">

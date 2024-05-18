@@ -1,3 +1,7 @@
 /api
-
+/cypress
+cypress.config.ts
 /node_modules
+
+# todo
+/app

@@ -23,7 +23,7 @@
 .favoriteIcon {
   @include box(33px);
 
-  strokewidth: 1.3px;
+  stroke-width: 1.3px;
   color: var(--monochrome-900);
   fill: transparent;
 }

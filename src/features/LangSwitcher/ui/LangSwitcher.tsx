@@ -4,7 +4,7 @@ import { FC, memo } from 'react';
 
 import { Dropdown, DropdownItem } from 'shared/ui/Dropdown';
 
-import { CHANGE_LANG_DATA } from '../../model/constants';
+import { CHANGE_LANG_DATA } from './constants';
 
 export const LangSwitcher: FC = memo(() => {
   const handleLanguageChange = (item: DropdownItem) => console.log(item);

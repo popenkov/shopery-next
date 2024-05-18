@@ -2,7 +2,7 @@
 import { ChangeEvent, FC, useState } from 'react';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 
-import { VALIDATION_MESSAGES } from '@/shared/constants';
+import { VALIDATION_MESSAGES } from '@/shared/lib/constants';
 import { AppSelect } from 'shared/ui/AppSelect';
 import { Checkbox } from 'shared/ui/Checkbox';
 import { Input } from 'shared/ui/Input';

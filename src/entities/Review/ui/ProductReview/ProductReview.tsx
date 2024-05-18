@@ -1,41 +1,47 @@
 import { FC } from 'react';
 import cn from 'classnames';
+import Image from 'next/image';
 
 import { StarRating } from 'shared/ui/StarRating';
 import { Text } from 'shared/ui/Text';
 
-import { TReview } from '../../model/Review.types';
-
 import cls from './ProductReview.module.scss';
 
+type TProductReview = {
+  text: string;
+  photo: string;
+  rating: number;
+  name: string;
+  date: string;
+};
+
 type Props = {
-  data: TReview;
+  data: TProductReview;
   className?: string;
 };
 
 // todo заменить статику
 export const ProductReview: FC<Props> = ({ data, className }) => {
+  const { name, photo, rating, text, date } = data;
   return (
     <div className={cn(cls.productReview, className)}>
       <div className={cls.productReviewHeader}>
         <div className={cls.productReviewAuthor}>
-          <img
-            className={cls.productReviewAvatar}
-            src="/images/review-avatar--1.jpg"
-            alt="avatar"
-          />
+          <div className={cls.productReviewAvatarWrapper}>
+            <Image fill className={cls.productReviewAvatar} src={photo} alt="avatar" />
+          </div>
           <Text className={cls.productReviewName} variant="body_s" as="span">
-            Kristin Watson
+            {name}
           </Text>
-          <StarRating value={4} className={cls.productReviewRating} />
+          <StarRating value={rating} className={cls.productReviewRating} />
         </div>
 
-        <Text className={cls.productReviewDate} variant="body_s" as="div">
-          2 min ago
+        <Text className={cls.productReviewDate} variant="body_s" as="p">
+          {date}
         </Text>
       </div>
       <Text className={cls.productReviewMain} variant="body_s" as="p">
-        2 min ago
+        {text}
       </Text>
     </div>
   );

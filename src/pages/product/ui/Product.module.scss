@@ -3,28 +3,28 @@
 @import '@/shared/styles/mixins/box';
 @import '@/shared/styles/mixins/container';
 
-
+.productCartCounter {
+  flex-grow: 1;
+}
 
 .productFavoriteButton {
-      svg {
+  svg {
     @include box(20px);
   }
 
+  @include box(52px);
 
-    @include box(52px);
+  background-color: var(--green-gray-100);
 
-    background-color: var(--green-gray-100);
+  // todo
+  // @media screen and (max-width: $screen-t) {
+  //   grid-area: fav;
+  // }
 
-    // todo
-    // @media screen and (max-width: $screen-t) {
-    //   grid-area: fav;
-    // }
-
-     @media (hover: hover) {
-      &:hover {
-        color: var(--front-primary-inversed);
-        background-color: var(--primary);
-      }
+  @media (hover: hover) {
+    &:hover {
+      color: var(--front-primary-inversed);
+      background-color: var(--primary);
     }
-  
+  }
 }

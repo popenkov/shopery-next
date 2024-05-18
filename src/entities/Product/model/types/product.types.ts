@@ -26,7 +26,7 @@ type SpecType = {
   value: { title: string; path: string }[];
 };
 
-type TReview = {
+type TProductReview = {
   text: string;
   photo: string;
   rating: number;
@@ -57,7 +57,7 @@ export type TProductDetailed = {
   categoryTags: TLink[];
   descriptions: string;
   specs: SpecType[];
-  feedback: TReview[];
+  feedback: TProductReview[];
   ad: {
     video: {
       background: string;

@@ -3,11 +3,11 @@ import { FC } from 'react';
 
 import { CatalogFilter, getCatalogFilterData } from 'widgets/CatalogFilter';
 import { CatalogItems, getCatalogItems } from 'widgets/CatalogItems';
+import { AppRouteNames } from '@/shared/model';
 import { CatalogSort } from 'features/CatalogSort';
 import { Breadcrumbs } from 'entities/Breadcrumps';
 import { DiscountBanner } from 'entities/DiscountBanner';
 import { ProductSmall } from 'entities/Product';
-import { AppRouteNames } from 'shared/interfaces/router';
 import { Pagination } from 'shared/ui/Pagination';
 
 import cls from './catalog.module.scss';

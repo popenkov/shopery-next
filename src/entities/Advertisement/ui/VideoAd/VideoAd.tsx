@@ -3,7 +3,7 @@ import cn from 'classnames';
 
 import { Text } from 'shared/ui/Text';
 
-import { getVideoAdIcon } from '../../lib/getVideoAdIcon';
+import { getVideoAdIcon } from '../../lib';
 import { TAdvertisement } from '../../model/ad.types';
 
 import cls from './VideoAd.module.scss';
@@ -16,17 +16,15 @@ type Props = {
 
 export const VideoAd: FC<Props> = ({ adData, video, className }) => {
   return (
-    <div className={cn(cls.videoAd, className, 'product-page__right-aside')}>
+    <div className={cn(cls.videoAd, className)}>
       <div className={cls.videoAdContent}>{video}</div>
       <div className={cls.videoAdAdvantages}>
         {adData.map((ad) => {
           const { icon, title, text } = ad;
+          console.log('icon', icon);
           const Icon = getVideoAdIcon(icon);
           return (
             <div className={cls.videoAdAdvantage} key={ad.title}>
-              {/* <svg className="advantage-label__icon">
-                                <use href="img/svgSprite.svg#icon__price-tag"></use>
-                            </svg> */}
               <Icon className={cls.videoAdAdvantageIcon} />
               <div className={cls.videoAdAdvantageText}>
                 <Text variant="body_s" weight="medium" as="h3">

@@ -1,4 +1,5 @@
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+import Image from 'next/image';
 
 import { AppLink } from 'shared/ui/AppLink';
 import { ArrowIcon } from 'shared/ui/icons';
@@ -16,7 +17,7 @@ export const HeroSlide: FC<Props> = ({ path, image, note, title, text }) => {
   return (
     <div className={cls.slide}>
       <div className={cls.imgContainer}>
-        <img className={cls.img} src={image} alt={title} />
+        <Image fill className={cls.img} src={image} alt={title} />
       </div>
       <div className={cls.description}>
         <span className={cls.note}>{note}</span>

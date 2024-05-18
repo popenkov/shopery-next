@@ -1,4 +1,4 @@
-import { AppRouteNames, AppRoutesProps } from 'shared/interfaces/router';
+import { AppRouteNames, AppRoutesProps } from '@/shared/model';
 
 const getRouteHome = () => '/';
 const getRouteCatalog = () => '/catalog';

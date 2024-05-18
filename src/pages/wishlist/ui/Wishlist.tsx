@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
 import { WishlistTable } from 'widgets/WishlistTable';
+import { AppRouteNames } from '@/shared/model';
 import { Breadcrumbs } from 'entities/Breadcrumps';
-import { AppRouteNames } from 'shared/interfaces/router';
 import { Text } from 'shared/ui/Text';
 
 import cls from './Wishlist.module.scss';

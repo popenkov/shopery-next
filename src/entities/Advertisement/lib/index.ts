@@ -1,0 +1,1 @@
+export { getVideoAdIcon } from './getVideoAdIcon';

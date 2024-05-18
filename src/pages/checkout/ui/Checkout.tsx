@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
-import { CheckoutForm } from '@/features/Cart/CheckoutForm';
+import { AppRouteNames } from '@/shared/model';
+import { CheckoutForm } from 'features/Cart';
 import { Breadcrumbs } from 'entities/Breadcrumps';
-import { AppRouteNames } from 'shared/interfaces/router';
 import { Text } from 'shared/ui/Text';
 
 import cls from './Checkout.module.scss';

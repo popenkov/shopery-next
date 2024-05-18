@@ -7,8 +7,8 @@ export enum AppRouteNames {
   CHECKOUT = 'Checkout',
 }
 
-export interface AppRoutesProps {
+export type AppRoutesProps = {
   href: Route;
   name?: AppRouteNames;
   authOnly?: boolean;
-}
+};

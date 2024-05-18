@@ -3,7 +3,7 @@
 import { ChangeEvent, DetailedHTMLProps, FC, HTMLAttributes, useCallback, useState } from 'react';
 import { redirect } from 'next/navigation';
 
-import { getRouteCatalog } from 'shared/constants';
+import { getRouteCatalog } from '@/shared/lib/constants';
 import { Button } from 'shared/ui/Buttons';
 import { Input } from 'shared/ui/Input';
 
@@ -21,13 +21,10 @@ export const ProductSearch: FC<Props> = () => {
 
   // todo перенести валидацию
 
-  const handleInputChange = useCallback(
-    (evt: ChangeEvent<HTMLInputElement>) => {
-      const value = evt.target.value;
-      setSearchValue(value);
-    },
-    [searchValue],
-  );
+  const handleInputChange = useCallback((evt: ChangeEvent<HTMLInputElement>) => {
+    const value = evt.target.value;
+    setSearchValue(value);
+  }, []);
 
   return (
     <div className={cls.search}>
