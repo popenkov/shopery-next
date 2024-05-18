@@ -12,7 +12,7 @@
     "start": "next start",
     "start:dev": "concurrently \"npm run start:dev:server\" \"next dev\"",
     "start:dev:server": "node ./json-server/index.js",
-    "lint:ts": "next lint",
+    "lint:ts": "eslint -c ./.eslintrc.json \"./**/*.{js,jsx,ts,tsx}\"",
     "lint:ts:fix": "eslint -c ./.eslintrc.json \"./**/*.{js,jsx,ts,tsx}\" --fix",
     "lint:scss": "stylelint \"**/*.scss\"",
     "lint:scss:fix": "stylelint \"**/*.scss\" --fix",
@@ -28,7 +28,8 @@
     "depcruise:win": "npx depcruise src --include-only \"^src\" --output-type dot | cmd /c path C:/Program Files/Graphviz/bin/dot.exe -T svg > dependency-graph.svg",
     "storybook": "storybook dev -p 6006 -c ./src/app/configs/storybook --debug-webpack",
     "build-storybook": "storybook build -c ./src/app/configs/storybook",
-    "generate-icons-with-export": "node ./scripts/generate-icons-with-export.js"
+    "generate-icons-with-export": "node ./scripts/generate-icons-with-export.js",
+    "lint-staged": "lint-staged"
   },
   "dependencies": {
     "@types/circular-dependency-plugin": "^5.0.8",
@@ -128,8 +129,8 @@
   },
   "lint-staged": {
     "**/*.{ts,tsx}": [
-      "prettier --list-different",
-      "next lint"
+      "npm run prettier",
+      "npm run lint:ts"
     ],
     "*.scss": "lint:scss"
   },
