@@ -11,23 +11,23 @@ import '../../styles/globals.scss';
 // initialize();
 
 const preview: Preview = {
-    // todo разобраться
-    // decorators: [mswDecorator],
-    parameters: {
-        actions: { argTypesRegex: '^on.*' },
-        controls: {
-            matchers: {
-                color: /(background|color)$/i,
-                date: /Date$/i,
-            },
-        },
-        backgrounds: {
-            values: [
-                { name: 'light', value: '#fff' },
-                { name: 'dark', value: '#333' },
-            ],
-        },
+  // todo разобраться
+  // decorators: [mswDecorator],
+  parameters: {
+    actions: { argTypesRegex: '^on.*' },
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/i,
+      },
     },
+    backgrounds: {
+      values: [
+        { name: 'light', value: '#fff' },
+        { name: 'dark', value: '#333' },
+      ],
+    },
+  },
 };
 
 export default preview;
