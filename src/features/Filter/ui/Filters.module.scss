@@ -4,12 +4,11 @@
 @import '@/shared/styles/mixins/button-reset';
 @import '@/shared/styles/mixins/text-styles';
 
-
-.filter {
+.filters {
   position: relative;
 }
 
-.filterAccordion {
+.filtersAccordion {
   @include flex-column;
 
   gap: 20px;
@@ -33,7 +32,7 @@
   .star-rating {
     gap: 2px;
   }
-  
+
   .star-rating__star {
     @include box(16px);
   }
@@ -44,24 +43,22 @@
 
   flex-wrap: wrap;
   gap: 8px;
-  padding-top: 12px !important;
+  padding-top: 12px;
 }
 
-
 .priceAccordion :global(.rc-slider) {
-    max-width: calc(100% - 20px);
+  max-width: calc(100% - 20px);
   margin-left: 10px;
 }
 
-
 // todo  кнопка фильтра
-.filterButtonDesktop {
-position: fixed;
-bottom: 50px;
+.filtersButtonDesktop {
+  position: fixed;
+  bottom: 50px;
 
-// left: 0;
-z-index: 3;
-width: 100%;
-max-width: 312px;
-     box-shadow: 0 10px 85px 42px rgb(240 240 240 / 100%);
+  // left: 0;
+  z-index: 3;
+  width: 100%;
+  max-width: 312px;
+  box-shadow: 0 10px 85px 42px rgb(240 240 240 / 100%);
 }

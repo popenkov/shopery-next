@@ -16,8 +16,11 @@ export const AddToFavorites: FC<Props> = ({ className, itemID, theme = 'primary'
   };
 
   return (
-    <RoundButton theme={theme} className={className} onClick={handleFavButtonClick}>
-      <HeartLinedIcon />
-    </RoundButton>
+    <RoundButton
+      icon={<HeartLinedIcon />}
+      theme={theme}
+      className={className}
+      onClick={handleFavButtonClick}
+    />
   );
 };

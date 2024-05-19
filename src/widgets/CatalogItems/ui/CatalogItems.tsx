@@ -1,7 +1,6 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import cn from 'classnames';
 
-
 import { AddToFavorites } from '@/features/Product';
 import { AddToCart } from '@/features/Product/add-to-cart';
 import { ShowProductPreview } from '@/features/Product/show-preview/ui';
@@ -44,7 +43,27 @@ export const CatalogItems: FC<Props> = ({ products, className }) => {
       </div>
       <div className={cls.catalogMobileWrapper}>
         {products.map((product) => {
-          return <ProductSmall data={product} key={product.id} />;
+          return (
+            <ProductSmall
+              data={product}
+              key={product.id}
+              actions={
+                <>
+                  <AddToCart itemID={product.id} className={cls.button} />
+                  <ShowProductPreview
+                    itemID={product.id}
+                    theme="secondary"
+                    className={cls.imageButton}
+                  />
+                  <AddToFavorites
+                    className={cls.imageButton}
+                    itemID={product.id}
+                    theme="secondary"
+                  />
+                </>
+              }
+            />
+          );
         })}
       </div>
     </div>

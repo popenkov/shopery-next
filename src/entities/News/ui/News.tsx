@@ -17,21 +17,21 @@ export const News: FC<Props> = ({ data }) => {
   const { dateDay, dateMonth, img, title, text, path } = data;
   return (
     <div className={cls.news}>
-      <div className={cls.imgWrapper}>
-        <Image className={cls.img} fill src={img} alt={title} />
-        <div className={cls.date}>
-          <span className={cls.dateDay}>{dateDay}</span>
-          <span className={cls.dateMonth}>{dateMonth}</span>
+      <div className={cls.newsImgWrapper}>
+        <Image className={cls.newsImg} fill src={img} alt={title} />
+        <div className={cls.newsDate}>
+          <span className={cls.newsDateDay}>{dateDay}</span>
+          <span className={cls.newsDateMonth}>{dateMonth}</span>
         </div>
       </div>
-      <div className={cls.description}>
-        <Text variant="body_l" weight="medium" as="h3" className={cls.title}>
+      <div className={cls.newsDescription}>
+        <Text variant="body_l" weight="medium" as="h3" className={cls.newsTitle}>
           {title}
         </Text>
-        <p className={cls.text}>{text}</p>
-        <AppLink href={path} theme="text" className={cls.link}>
+        <p className={cls.newsText}>{text}</p>
+        <AppLink href={path} theme="text" className={cls.newsLink}>
           Read More
-          <ArrowIcon className={cls.linkIcon} />
+          <ArrowIcon className={cls.newsLinkIcon} />
         </AppLink>
       </div>
     </div>

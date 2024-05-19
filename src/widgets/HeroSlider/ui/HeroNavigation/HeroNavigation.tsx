@@ -18,19 +18,17 @@ export const HeroNavigation: FC<Props> = ({ prevRef, nextRef, fractionRef }) => 
       <div className={cls.pagination} ref={fractionRef}></div>
       <div className={cls.navigation}>
         <RoundButton
+          icon={<ArrowIcon className={cls.navigationButtonIcon} />}
           theme="secondary"
           className={cn(cls.navigationButton, cls.navigationButtonPrev)}
           ref={prevRef}
-        >
-          <ArrowIcon className={cls.navigationButtonIcon} />
-        </RoundButton>
+        />
         <RoundButton
+          icon={<ArrowIcon className={cls.navigationButtonIcon} />}
           theme="secondary"
           className={cn(cls.navigationButton, cls.navigationButtonNext)}
           ref={nextRef}
-        >
-          <ArrowIcon className={cls.navigationButtonIcon} />
-        </RoundButton>
+        />
       </div>
     </>
   );

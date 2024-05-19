@@ -1,7 +1,6 @@
 import { FC } from 'react';
 
-import { RoundButtonTheme } from '@/shared/ui/Buttons/RoundButton/ui';
-import { RoundButton } from 'shared/ui/Buttons';
+import { RoundButton, RoundButtonTheme } from 'shared/ui/Buttons';
 import { CartIcon } from 'shared/ui/icons';
 
 import { addToCart } from '../api';
@@ -18,8 +17,11 @@ export const AddToCart: FC<Props> = ({ className, itemID, theme = 'primary' }) =
   };
 
   return (
-    <RoundButton theme={theme} className={className} onClick={handleAddToCartButtonClick}>
-      <CartIcon />
-    </RoundButton>
+    <RoundButton
+      icon={<CartIcon />}
+      theme={theme}
+      className={className}
+      onClick={handleAddToCartButtonClick}
+    />
   );
 };

@@ -4,8 +4,8 @@ import cn from 'classnames';
 import { VideoAd } from 'entities/Advertisement';
 import { TProductDetailed } from 'entities/Product';
 import { ProductReview } from 'entities/Review';
-import { Video } from 'entities/Video';
 import { Tabs } from 'shared/ui/Tabs';
+import { Video } from 'shared/ui/Video';
 
 import cls from './Tabs.module.scss';
 

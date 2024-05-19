@@ -1,19 +1,26 @@
 'use client';
 
-import React, { FC, useCallback, useState } from 'react';
+import React, { ChangeEvent, FC, useCallback, useState } from 'react';
 
 import { Button } from 'shared/ui/Buttons';
 import { Input } from 'shared/ui/Input';
 import { Logo } from 'shared/ui/Logo';
 import { Text } from 'shared/ui/Text';
 
+import { subscribeOnNews } from '../api/subscribe-on-news';
+
 import cls from './Subscription.module.scss';
 
 export const Subscription: FC = () => {
   const [searchValue, setSearchValue] = useState('');
 
+  const getEmailAddress = (evt: ChangeEvent<HTMLInputElement>) => {
+    const value = evt.target.value;
+    setSearchValue(value);
+  };
+
   const handleSearchButtonClick = useCallback(() => {
-    console.log(searchValue);
+    subscribeOnNews(searchValue);
   }, [searchValue]);
 
   return (
@@ -33,7 +40,7 @@ export const Subscription: FC = () => {
             type="email"
             placeholder="Your email address"
             value={searchValue}
-            onChange={setSearchValue}
+            onChange={getEmailAddress}
           />
 
           <Button className={cls.button} size="large" onClick={handleSearchButtonClick}>

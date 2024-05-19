@@ -1,15 +1,16 @@
 import { ComponentProps, ElementType, ReactNode, Ref, forwardRef, memo } from 'react';
 import cn from 'classnames';
 
-import style from './RoundButton.module.scss';
 import { RoundButtonTheme } from '../model';
+
+import style from './RoundButton.module.scss';
 
 const DEFAULT_ELEMENT: ElementType = 'button';
 
 interface ButtonOwnProps<E extends ElementType = ElementType> {
   className?: string;
   theme?: RoundButtonTheme;
-  children: ReactNode;
+  icon: ReactNode;
   as?: E;
 }
 
@@ -18,7 +19,7 @@ type Props<E extends ElementType = ElementType> = ButtonOwnProps<E> &
   Ref<HTMLButtonElement>;
 
 const ButtonElement = forwardRef<HTMLButtonElement, Props>((props, ref) => {
-  const { className, children, as, theme = 'primary', ...otherProps } = props;
+  const { className, icon, as, theme = 'primary', ...otherProps } = props;
 
   const Element = as || DEFAULT_ELEMENT;
 
@@ -30,7 +31,7 @@ const ButtonElement = forwardRef<HTMLButtonElement, Props>((props, ref) => {
       ref={ref}
       {...otherProps}
     >
-      {children}
+      {icon}
     </Element>
   );
 });

@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 
-import { RoundButton } from '@/shared/ui/Buttons';
-import { RoundButtonTheme } from '@/shared/ui/Buttons/RoundButton/ui';
+import { RoundButton, RoundButtonTheme } from '@/shared/ui/Buttons';
 import { EyeIcon } from '@/shared/ui/icons';
 
 type Props = {
@@ -16,8 +15,11 @@ export const ShowProductPreview: FC<Props> = ({ className, itemID, theme = 'prim
   };
 
   return (
-    <RoundButton theme={theme} className={className} onClick={handlePreviewButtonClick}>
-      <EyeIcon />
-    </RoundButton>
+    <RoundButton
+      icon={<EyeIcon />}
+      theme={theme}
+      className={className}
+      onClick={handlePreviewButtonClick}
+    />
   );
 };

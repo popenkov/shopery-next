@@ -1,21 +1,19 @@
-import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+import React, { DetailedHTMLProps, FC, HTMLAttributes, ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-// todo перенести превью и корзину в фичи и экшны
-import { RoundButton } from 'shared/ui/Buttons';
-import { HeartIcon, EyeIcon, CartIcon } from 'shared/ui/icons';
 import { StarRating } from 'shared/ui/StarRating';
 
-import { TProduct } from '../../../';
+import { TProduct } from '../..';
 
 import cls from './ProductSmall.module.scss';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   data: TProduct;
+  actions: ReactNode;
 }
 
-export const ProductSmall: FC<Props> = ({ data }) => {
+export const ProductSmall: FC<Props> = ({ data, actions }) => {
   const { img, title, path, price, priceOld, rating } = data;
   return (
     <div className={cls.productSmall}>
@@ -37,17 +35,7 @@ export const ProductSmall: FC<Props> = ({ data }) => {
             </div>
           </div>
           <div className={cls.productDescriptionHover}>
-            <div className={cls.productActions}>
-              <RoundButton theme="primary">
-                <CartIcon />
-              </RoundButton>
-              <RoundButton theme="secondary">
-                <EyeIcon />
-              </RoundButton>
-              <RoundButton theme="secondary">
-                <HeartIcon />
-              </RoundButton>
-            </div>
+            <div className={cls.productActions}>{actions}</div>
           </div>
         </div>
       </div>

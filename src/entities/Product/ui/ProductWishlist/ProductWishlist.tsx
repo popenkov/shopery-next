@@ -3,10 +3,11 @@ import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { TProduct } from 'entities/Product';
 import { getFormattedPrice } from 'shared/lib/utils';
 import { Tag } from 'shared/ui/Tag';
 import { Text } from 'shared/ui/Text';
+
+import { TProduct } from '../../';
 
 import cls from './ProductWishlist.module.scss';
 

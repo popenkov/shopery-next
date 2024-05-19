@@ -3,7 +3,10 @@
 import { DetailedHTMLProps, FC, HTMLAttributes, useCallback, useState } from 'react';
 import cn from 'classnames';
 
-import { Filter } from 'features/Filter';
+import { AddToFavorites } from '@/features/Product';
+import { AddToCart } from '@/features/Product/add-to-cart';
+import { ShowProductPreview } from '@/features/Product/show-preview/ui';
+import { Filters } from 'features/Filter';
 import { TDiscountBanner, DiscountBanner } from 'entities/DiscountBanner';
 import { ProductSmall, TProduct } from 'entities/Product';
 import { FilterButton } from 'shared/ui/FilterButton';
@@ -44,12 +47,32 @@ export const CatalogFilter: FC<Props> = ({ banner, featuredItems }) => {
         <div className={cls.filterMenu}>
           <CatalogFilterHeader handleClose={handleFilterClose} />
 
-          <Filter className={cls.filter} />
+          <Filters className={cls.filter} />
 
           <DiscountBanner {...banner} className={cls.banner} />
           <div className={cls.products}>
             {featuredItems.map((item) => {
-              return <ProductSmall data={item} key={item.id} />;
+              return (
+                <ProductSmall
+                  data={item}
+                  key={item.id}
+                  actions={
+                    <>
+                      <AddToCart itemID={item.id} className={cls.button} />
+                      <ShowProductPreview
+                        itemID={item.id}
+                        theme="secondary"
+                        className={cls.imageButton}
+                      />
+                      <AddToFavorites
+                        className={cls.imageButton}
+                        itemID={item.id}
+                        theme="secondary"
+                      />
+                    </>
+                  }
+                />
+              );
             })}
           </div>
 

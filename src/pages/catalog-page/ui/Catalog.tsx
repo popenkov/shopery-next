@@ -4,8 +4,11 @@ import { FC } from 'react';
 import { CatalogFilter, getCatalogFilterData } from 'widgets/CatalogFilter';
 import { CatalogItems, getCatalogItems } from 'widgets/CatalogItems';
 import { AppRouteNames } from '@/shared/model';
+import { Breadcrumbs } from '@/shared/ui/Breadcrumps';
 import { CatalogSort } from 'features/CatalogSort';
-import { Breadcrumbs } from 'entities/Breadcrumps';
+import { AddToFavorites } from 'features/Product';
+import { AddToCart } from 'features/Product/add-to-cart';
+import { ShowProductPreview } from 'features/Product/show-preview/ui';
 import { DiscountBanner } from 'entities/DiscountBanner';
 import { ProductSmall } from 'entities/Product';
 import { Pagination } from 'shared/ui/Pagination';
@@ -36,7 +39,27 @@ const Catalog: FC = () => {
 
         <div className={cls.saleProductsMobile}>
           {featuredItems.map((item) => {
-            return <ProductSmall data={item} key={item.id} />;
+            return (
+              <ProductSmall
+                data={item}
+                key={item.id}
+                actions={
+                  <>
+                    <AddToCart itemID={item.id} className={cls.button} />
+                    <ShowProductPreview
+                      itemID={item.id}
+                      theme="secondary"
+                      className={cls.imageButton}
+                    />
+                    <AddToFavorites
+                      className={cls.imageButton}
+                      itemID={item.id}
+                      theme="secondary"
+                    />
+                  </>
+                }
+              />
+            );
           })}
         </div>
 

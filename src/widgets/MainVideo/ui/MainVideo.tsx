@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { Video } from 'entities/Video';
+import { Video } from 'shared/ui/Video';
 
 import { getVideoData } from '../api';
 

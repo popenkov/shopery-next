@@ -20,7 +20,7 @@ import { Text } from 'shared/ui/Text';
 
 import { getFilterData } from '../api';
 
-import cls from './Filter.module.scss';
+import cls from './Filters.module.scss';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   classname?: string;
@@ -36,7 +36,7 @@ type TState = {
   category: string;
 };
 
-export const Filter: FC<Props> = ({ classname }) => {
+export const Filters: FC<Props> = ({ classname }) => {
   const { categories, priceRange, tags } = getFilterData();
 
   const [isButtonShown, setIsButtonShown] = useState(false);
@@ -104,7 +104,7 @@ export const Filter: FC<Props> = ({ classname }) => {
   );
 
   return (
-    <div className={cn(cls.filter, classname)}>
+    <div className={cn(cls.filters, classname)}>
       <Accordion
         title={
           <Text variant="body_l" weight="medium">
@@ -196,7 +196,7 @@ export const Filter: FC<Props> = ({ classname }) => {
       </Accordion>
 
       {isButtonShown && (
-        <Button size="large" className={cls.filterButtonDesktop} onClick={handleFilterButtonClick}>
+        <Button size="large" className={cls.filtersButtonDesktop} onClick={handleFilterButtonClick}>
           Apply filter
         </Button>
       )}

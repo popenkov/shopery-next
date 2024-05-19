@@ -1,23 +1,22 @@
-import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-// todo перенести превью и корзину в фичи и экшны
-import { TProduct } from 'entities/Product';
 import { getFormattedPrice } from 'shared/lib/utils';
-import { RoundButton } from 'shared/ui/Buttons';
-import { HeartIcon, EyeIcon, CartIcon } from 'shared/ui/icons';
 import { StarRating } from 'shared/ui/StarRating';
 import { Text } from 'shared/ui/Text';
+
+import { TProduct } from '../../';
 
 import cls from './ProductPreview.module.scss';
 
 interface ProductPreviewProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   data: TProduct;
+  actions: ReactNode;
 }
 
-export const ProductPreview: FC<ProductPreviewProps> = ({ data }) => {
+export const ProductPreview: FC<ProductPreviewProps> = ({ data, actions }) => {
   const { img, title, path, price, priceOld, rating } = data;
 
   return (
@@ -46,17 +45,7 @@ export const ProductPreview: FC<ProductPreviewProps> = ({ data }) => {
             <StarRating value={rating} />
           </div>
           <div className={cls.descriptionHover}>
-            <div className={cls.buttons}>
-              <RoundButton theme="primary">
-                <CartIcon />
-              </RoundButton>
-              <RoundButton theme="secondary">
-                <EyeIcon />
-              </RoundButton>
-              <RoundButton theme="secondary">
-                <HeartIcon />
-              </RoundButton>
-            </div>
+            <div className={cls.buttons}>{actions}</div>
           </div>
         </div>
       </div>

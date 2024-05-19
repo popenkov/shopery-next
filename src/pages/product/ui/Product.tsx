@@ -3,8 +3,8 @@ import { FC } from 'react';
 import { ProductDescription } from 'widgets/ProductDescription';
 import { ProductDetailedTabs, RelatedProducts } from 'widgets/ProductDetailed';
 import { AppRouteNames } from '@/shared/model';
+import { Breadcrumbs } from '@/shared/ui/Breadcrumps';
 import { AddToCartCounter, AddToFavorites } from 'features/Product';
-import { Breadcrumbs } from 'entities/Breadcrumps';
 import { getProductDetails } from 'entities/Product';
 
 import cls from './Product.module.scss';

@@ -21,7 +21,7 @@ export const WishlistTable: FC = () => {
               data={item}
               actions={
                 <>
-                  <AddToCartFromWishlist />
+                  <AddToCartFromWishlist itemID={item.id} />
                   <RemoveFromFavorites />
                 </>
               }

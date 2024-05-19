@@ -17,9 +17,13 @@ export const FooterSocials: FC<Props> = () => {
         const { icon, id } = socialLink;
         const Icon = getSocialIcon(icon);
         return (
-          <RoundButton key={id} className={cls.link} theme="ghost" as="a">
-            <Icon className={cls.linkIcon} />
-          </RoundButton>
+          <RoundButton
+            icon={<Icon className={cls.linkIcon} />}
+            key={id}
+            className={cls.link}
+            theme="ghost"
+            as="a"
+          />
         );
       })}
     </ul>
