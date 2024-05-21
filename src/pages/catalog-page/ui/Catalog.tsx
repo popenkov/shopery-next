@@ -7,7 +7,7 @@ import { AppRouteNames } from '@/shared/model';
 import { Breadcrumbs } from '@/shared/ui/Breadcrumps';
 import { CatalogSort } from 'features/CatalogSort';
 import { AddToFavorites } from 'features/Product';
-import { AddToCart } from 'features/Product/add-to-cart';
+import { AddToCart } from 'features/Cart/add-to-cart';
 import { ShowProductPreview } from 'features/Product/show-preview/ui';
 import { DiscountBanner } from 'entities/DiscountBanner';
 import { ProductSmall } from 'entities/Product';

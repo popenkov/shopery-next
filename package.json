@@ -32,6 +32,7 @@
     "lint-staged": "lint-staged"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.5",
     "@types/circular-dependency-plugin": "^5.0.8",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
@@ -45,6 +46,7 @@
     "rc-slider": "10.5.0",
     "react": "18",
     "react-dom": "18",
+    "react-redux": "^9.1.2",
     "react-select": "5.8.0",
     "regenerator-runtime": "^0.14.1",
     "sass": "1.70.0",

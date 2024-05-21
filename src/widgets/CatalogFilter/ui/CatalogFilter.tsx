@@ -4,7 +4,7 @@ import { DetailedHTMLProps, FC, HTMLAttributes, useCallback, useState } from 're
 import cn from 'classnames';
 
 import { AddToFavorites } from '@/features/Product';
-import { AddToCart } from '@/features/Product/add-to-cart';
+import { AddToCart } from 'features/Cart/add-to-cart';
 import { ShowProductPreview } from '@/features/Product/show-preview/ui';
 import { Filters } from 'features/Filter';
 import { TDiscountBanner, DiscountBanner } from 'entities/DiscountBanner';

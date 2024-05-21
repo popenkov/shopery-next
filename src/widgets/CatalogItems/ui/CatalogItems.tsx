@@ -2,7 +2,7 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import cn from 'classnames';
 
 import { AddToFavorites } from '@/features/Product';
-import { AddToCart } from '@/features/Product/add-to-cart';
+import { AddToCart } from 'features/Cart/add-to-cart';
 import { ShowProductPreview } from '@/features/Product/show-preview/ui';
 import { Product, ProductSmall, TProduct } from 'entities/Product';
 
