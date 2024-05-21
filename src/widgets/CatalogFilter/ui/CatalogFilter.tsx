@@ -58,17 +58,13 @@ export const CatalogFilter: FC<Props> = ({ banner, featuredItems }) => {
                   key={item.id}
                   actions={
                     <>
-                      <AddToCart itemID={item.id} className={cls.button} />
+                      <AddToCart item={item} className={cls.button} />
                       <ShowProductPreview
-                        itemID={item.id}
+                        item={item}
                         theme="secondary"
                         className={cls.imageButton}
                       />
-                      <AddToFavorites
-                        className={cls.imageButton}
-                        itemID={item.id}
-                        theme="secondary"
-                      />
+                      <AddToFavorites className={cls.imageButton} item={item} theme="secondary" />
                     </>
                   }
                 />

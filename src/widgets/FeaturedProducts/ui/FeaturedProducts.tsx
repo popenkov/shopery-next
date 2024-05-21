@@ -30,19 +30,11 @@ export const FeaturedProducts: FC<Props> = () => {
                 key={item.id}
                 actions={
                   <>
-                    <AddToFavorites
-                      className={cls.imageButton}
-                      itemID={item.id}
-                      theme="secondary"
-                    />
-                    <ShowProductPreview
-                      itemID={item.id}
-                      theme="secondary"
-                      className={cls.imageButton}
-                    />
+                    <AddToFavorites className={cls.imageButton} item={item} theme="secondary" />
+                    <ShowProductPreview item={item} theme="secondary" className={cls.imageButton} />
                   </>
                 }
-                cartAction={<AddToCart itemID={item.id} className={cls.button} />}
+                cartAction={<AddToCart item={item} className={cls.button} />}
               />
             );
           })}

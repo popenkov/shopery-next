@@ -12,6 +12,8 @@ export const StoreProvider: FC<Props> = ({ children }) => {
   if (!storeRef.current) {
     storeRef.current = makeStore();
   }
+  alert(123);
+  console.log('storeRef', storeRef);
 
   return <Provider store={storeRef.current}>{children}</Provider>;
 };

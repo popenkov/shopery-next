@@ -45,17 +45,9 @@ const Catalog: FC = () => {
                 key={item.id}
                 actions={
                   <>
-                    <AddToCart itemID={item.id} className={cls.button} />
-                    <ShowProductPreview
-                      itemID={item.id}
-                      theme="secondary"
-                      className={cls.imageButton}
-                    />
-                    <AddToFavorites
-                      className={cls.imageButton}
-                      itemID={item.id}
-                      theme="secondary"
-                    />
+                    <AddToCart item={item} className={cls.button} />
+                    <ShowProductPreview item={item} theme="secondary" className={cls.imageButton} />
+                    <AddToFavorites className={cls.imageButton} item={item} theme="secondary" />
                   </>
                 }
               />

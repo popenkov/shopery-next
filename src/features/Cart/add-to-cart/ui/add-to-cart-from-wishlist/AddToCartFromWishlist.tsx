@@ -6,7 +6,7 @@ import { Button } from 'shared/ui/Buttons';
 import cls from './AddToCartFromWishlist.module.scss';
 
 type Props = {
-  itemID: string;
+  item: TProduct;
 };
 
 export const AddToCartFromWishlist: FC<Props> = ({ itemID }) => {

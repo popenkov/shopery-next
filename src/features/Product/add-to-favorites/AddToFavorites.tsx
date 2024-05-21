@@ -5,7 +5,7 @@ import { RoundButton } from 'shared/ui/Buttons';
 import { HeartLinedIcon } from 'shared/ui/icons';
 
 type Props = {
-  itemID: string;
+  item: TProduct;
   theme?: RoundButtonTheme;
   className?: string;
 };

@@ -4,7 +4,7 @@ import { RoundButton, RoundButtonTheme } from '@/shared/ui/Buttons';
 import { EyeIcon } from '@/shared/ui/icons';
 
 type Props = {
-  itemID: string;
+  item: TProduct;
   theme?: RoundButtonTheme;
   className?: string;
 };

@@ -3,17 +3,22 @@ import { FC } from 'react';
 import { RoundButton, RoundButtonTheme } from 'shared/ui/Buttons';
 import { CartIcon } from 'shared/ui/icons';
 
-import { addToCart } from '../api';
+import { useAppDispatch } from '@/shared/lib/store/hooks';
+import { addToCart, CartProduct } from 'entities/Cart/';
+import { TProduct } from '@/entities/Product';
 
 type Props = {
-  itemID: string;
+  item: TProduct;
   theme?: RoundButtonTheme;
   className?: string;
 };
 
-export const AddToCart: FC<Props> = ({ className, itemID, theme = 'primary' }) => {
+export const AddToCart: FC<Props> = ({ className, item, theme = 'primary' }) => {
+  const dispatch = useAppDispatch();
   const handleAddToCartButtonClick = () => {
-    addToCart(itemID);
+    const CartModel = { ...item, amount: 1 };
+    console.log('CartModel', CartModel);
+    dispatch(addToCart(CartModel));
   };
 
   return (
