@@ -1,5 +1,5 @@
 'use client';
-import { AppStore, makeStore } from '@/shared/lib/store/store';
+import { AppStore, makeStore } from '@/app/lib/store/store';
 import { FC, ReactNode, useRef } from 'react';
 import { Provider } from 'react-redux';
 
@@ -12,8 +12,8 @@ export const StoreProvider: FC<Props> = ({ children }) => {
   if (!storeRef.current) {
     storeRef.current = makeStore();
   }
-  alert(123);
-  console.log('storeRef', storeRef);
+
+  console.log('storeRef', storeRef.current.getState());
 
   return <Provider store={storeRef.current}>{children}</Provider>;
 };

@@ -3,7 +3,7 @@
 @import '@/shared/styles/breakpoints';
 
 .navigation {
-  @media screen and (max-width: $screen-dxl) {
+  @media screen and (max-width: $df-screen-dl) {
     @include flex-center-vertical;
 
     position: absolute;
@@ -13,7 +13,7 @@
     gap: 30px;
   }
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     display: none;
   }
 }
@@ -27,14 +27,14 @@
   box-shadow: none;
   transform: translateY(-50%);
 
-  @media screen and (max-width: $screen-dxl) {
+  @media screen and (max-width: $df-screen-dl) {
     position: static;
     top: auto;
     margin-bottom: 75px;
     transform: none;
   }
 
-  @media screen and (max-width: $screen-ti) {
+  @media screen and (max-width: $df-screen-t) {
     margin-bottom: 60px;
   }
 
@@ -70,7 +70,7 @@
     display: flex;
     justify-content: center;
 
-    @media screen and (max-width: $screen-tl) {
+    @media screen and (max-width: $df-screen-ti) {
       bottom: 60px;
     }
 

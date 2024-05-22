@@ -4,35 +4,32 @@
 @import '@/shared/styles/mixins/section';
 @import '@/shared/styles/breakpoints';
 
-
 .featuredProducts {
-    @include section;
-       @include container;
+  @include section;
+  @include container;
 }
 
 .featuredProductsTitle {
-    @include section-title;
-    
-
+  @include section-title;
 }
 
 .featuredProductsContent {
-@include section-content;
+  @include section-content;
 }
 
 .featuredProductsDesktop {
-    @include grid(5);
-    @include display-desktop;
+  @include grid(5);
+  @include display-desktop;
 
-    @media screen and (max-width: $screen-tl) {
-      grid-template-columns: 1fr 1fr;
-    }
+  @media screen and (max-width: $df-screen-ti) {
+    grid-template-columns: 1fr 1fr;
+  }
 
-    @media screen and (max-width: $screen-ti) {
-      grid-template-columns: 1fr;
-    }
+  @media screen and (max-width: $df-screen-t) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .featuredProductsMobile {
-    @include display-mobile;
+  @include display-mobile;
 }

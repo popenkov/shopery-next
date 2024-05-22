@@ -1,19 +1,19 @@
 @import '@/shared/styles/_breakpoints';
 
 .footer {
- display: none ;
+  display: none;
 
-    @media screen and (max-width: $screen-tl) {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  display: flex;
-  justify-content: flex-end;
-  max-width: 390px;
-  padding: 10px 16px;
-  background-color: var(--back-primary);
-  border-top: 1px solid var(--monochrome-300);
+  @media screen and (max-width: $df-screen-ti) {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 390px;
+    padding: 10px 16px;
+    background-color: var(--back-primary);
+    border-top: 1px solid var(--monochrome-300);
   }
 }

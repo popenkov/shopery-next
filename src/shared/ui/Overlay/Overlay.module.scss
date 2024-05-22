@@ -1,10 +1,10 @@
 .Overlay {
-    position: fixed;
-    inset: 0;
-    z-index: var(--overlay-z-index);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--overlay-color);
-    cursor: pointer;
+  position: fixed;
+  inset: 0;
+  z-index: var(--overlay-z-index);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--modal-bg);
+  cursor: pointer;
 }

@@ -1,17 +1,17 @@
-@use "sass:color";
+@use 'sass:color';
 
 :root {
   --body-color: var(--front-primary);
   --body-bg: var(--back-primary);
   --font-base: var(--font-sans);
-  --font-sans: poppins, -apple-system, blinkmacsystemfont, "Segoe UI", "Roboto", "Ubuntu",
-    "Droid Sans", "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
-  --font-segoe: segoescript, -apple-system, blinkmacsystemfont, "Segoe UI", "Roboto", "Ubuntu",
-    "Droid Sans", "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
-  --font-serif: georgia, "Times New Roman", times, serif;
-  --font-mono: sfmono-regular, menlo, monaco, consolas, liberation mono, "Courier New", monospace;
+  --font-sans: poppins, -apple-system, blinkmacsystemfont, 'Segoe UI', 'Roboto', 'Ubuntu',
+    'Droid Sans', 'Helvetica Neue', arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  --font-segoe: segoescript, -apple-system, blinkmacsystemfont, 'Segoe UI', 'Roboto', 'Ubuntu',
+    'Droid Sans', 'Helvetica Neue', arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  --font-serif: georgia, 'Times New Roman', times, serif;
+  --font-mono: sfmono-regular, menlo, monaco, consolas, liberation mono, 'Courier New', monospace;
   --font-size-root: 100%;
   --font-size-base: 1rem;
   --font-weight-base: 400;
@@ -65,5 +65,6 @@
   --header-dropdown-z-index: 3;
   --mobile-menu-z-index: 3;
   --hero-navigation-z-index: 11;
-  --cart-widget-z-index: 20;
+  --overlay-z-index: 12;
+  --modal-content-z-index: 20;
 }

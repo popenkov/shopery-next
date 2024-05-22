@@ -10,7 +10,7 @@
   border: 1px solid var(--green-gray-100);
   border-radius: 50%;
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     @include box(50px);
   }
 }
@@ -20,7 +20,7 @@
 
   color: var(--primary);
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     @include box(30px);
   }
 }
@@ -32,7 +32,7 @@
 .iconWrapper + .title {
   margin-top: 16px;
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     margin-top: 10px;
   }
 }
@@ -50,11 +50,11 @@
 
   padding: 40px;
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     padding: 20px;
   }
 
-  @media screen and (max-width: $screen-t) {
+  @media screen and (max-width: $df-screen-m) {
     border: none;
     border-bottom: 1px solid rgb(230 230 230);
   }
@@ -73,7 +73,7 @@
   &:not(:first-child, :last-child) {
     border-right: 1px solid rgb(230 230 230);
 
-    @media screen and (max-width: $screen-tl) {
+    @media screen and (max-width: $df-screen-ti) {
       border-right: none;
     }
   }
@@ -81,13 +81,13 @@
   // todo переписать
 
   &:nth-child(2) {
-    @media screen and (max-width: $screen-tl) {
+    @media screen and (max-width: $df-screen-ti) {
       border-bottom: 1px solid rgb(230 230 230);
     }
   }
 
   &:nth-child(3) {
-    @media screen and (max-width: $screen-tl) {
+    @media screen and (max-width: $df-screen-ti) {
       border-right: 1px solid rgb(230 230 230);
     }
   }

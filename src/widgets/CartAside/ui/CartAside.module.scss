@@ -1,0 +1,9 @@
+@import '@/shared/styles/mixins/flexbox';
+
+.CartAside {
+  @include flex-column;
+}
+
+.cartAsideItems {
+  flex-grow: 1;
+}

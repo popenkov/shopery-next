@@ -9,7 +9,7 @@
   margin: 0;
   padding: 0;
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     display: none;
   }
 }

@@ -40,7 +40,7 @@
 .mobileMenu {
   display: none;
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     position: fixed;
     z-index: var(--mobile-menu-z-index);
     display: block;
@@ -62,13 +62,12 @@
 }
 
 .menuLocation {
-      @include flex-center-vertical;
+  @include flex-center-vertical;
 
-    gap: 8px;
+  gap: 8px;
 
-    @media screen and (max-width: $screen-tl) {
-        display: flex;
-        align-items: flex-end;
-      
-    }
+  @media screen and (max-width: $df-screen-ti) {
+    display: flex;
+    align-items: flex-end;
+  }
 }

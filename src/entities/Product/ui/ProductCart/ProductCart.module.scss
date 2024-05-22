@@ -1,0 +1,55 @@
+@import '@/shared/styles/breakpoints';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/text-styles';
+
+.ProductCart {
+  $block-name: &; // #{$block-name}__element
+
+  @include flex-center-vertical;
+
+  gap: 8px;
+  width: 100%;
+}
+
+.ProductCartImage {
+  width: 100%;
+  max-width: 120px;
+  max-height: 100px;
+  object-fit: contain;
+}
+
+.ProductCartDescription {
+  flex-grow: 1;
+}
+
+.ProductCartLink {
+  text-decoration: none;
+}
+
+.ProductCartTitle {
+  @include body-s;
+
+  margin: 0;
+  color: var(--front-primary);
+}
+
+.ProductCartAmount {
+  @include body-s;
+
+  margin: 0;
+  color: var(--monochrome-500);
+}
+
+.ProductCartSeparator {
+  padding: 0 5px;
+}
+
+.ProductCartPriceValue {
+  color: var(--monochrome-900);
+  font-weight: 600;
+}
+
+.ProductCartCloseButton {
+  cursor: pointer;
+}

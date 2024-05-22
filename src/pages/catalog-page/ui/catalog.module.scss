@@ -3,7 +3,7 @@
 @import '@/shared/styles/mixins/container';
 
 .catalog {
-    @include container;
+  @include container;
 
   display: grid;
   grid-template-areas: 'filter sort' 'filter result' 'filter pagination';
@@ -11,7 +11,7 @@
   gap: 26px 24px;
   padding: 32px 0 82px;
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     grid-template-areas: 'filter' 'sort' 'result' 'pagination' 'banner' 'saleItems';
     grid-template-columns: 1fr;
   }
@@ -31,36 +31,32 @@
 }
 
 .itemsDesktop {
-  @media screen and (max-width: $screen-tl) {
-    display: none ;
+  @media screen and (max-width: $df-screen-ti) {
+    display: none;
   }
 }
 
 .itemsMobile {
-  display: none ;
+  display: none;
 
-  @media screen and (max-width: $screen-tl) {
-    display: grid ;
+  @media screen and (max-width: $df-screen-ti) {
+    display: grid;
   }
 }
-
-
 
 .bannerMobile {
   display: none;
   grid-area: banner;
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     display: block;
   }
 }
 
-
-
 .saleProductsMobile {
   display: none;
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     @include flex-column;
 
     gap: 10px;

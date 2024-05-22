@@ -23,7 +23,7 @@
   background-color: var(--primary);
   transition: all var(--transition);
 
-  @media screen and (max-width: $screen-t) {
+  @media screen and (max-width: $df-screen-m) {
     justify-content: space-between;
     width: 100%;
   }
@@ -42,7 +42,7 @@
     background-color: #fff;
     border-radius: 4px;
 
-    @media screen and (max-width: $screen-t) {
+    @media screen and (max-width: $df-screen-m) {
       display: none;
     }
 

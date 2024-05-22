@@ -12,11 +12,11 @@
   position: relative;
   max-height: 556px;
 
-  @media screen and (max-width: $screen-d) {
+  @media screen and (max-width: $df-screen-tl) {
     max-height: 400px;
   }
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     display: none;
   }
 }
@@ -27,11 +27,11 @@
   margin: 80px 0;
   overflow-y: hidden;
 
-  @media screen and (max-width: $screen-d) {
+  @media screen and (max-width: $df-screen-tl) {
     max-height: 240px;
   }
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     display: none;
   }
 }
@@ -56,11 +56,11 @@
 .main {
   max-width: 556px;
 
-  @media screen and (max-width: $screen-d) {
+  @media screen and (max-width: $df-screen-tl) {
     max-height: 400px;
   }
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     width: calc(100vw - 40px);
     max-width: unset;
     max-height: 300px;
@@ -72,11 +72,11 @@
   width: 556px;
   height: 563px;
 
-  @media screen and (max-width: $screen-d) {
+  @media screen and (max-width: $df-screen-tl) {
     height: 400px;
   }
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     width: calc(100vw - 40px);
     height: 300px;
   }
@@ -85,18 +85,18 @@
 .mainImg {
   object-fit: contain;
 
-  @media screen and (max-width: $screen-d) {
+  @media screen and (max-width: $df-screen-tl) {
     max-height: 400px;
   }
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     width: 100%;
     max-height: 300px;
   }
 }
 
 .navigation {
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     display: none;
   }
 }

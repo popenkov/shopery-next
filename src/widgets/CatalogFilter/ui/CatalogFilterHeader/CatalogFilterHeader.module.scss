@@ -4,25 +4,24 @@
 @import '@/shared/styles/mixins/button-reset';
 
 .header {
-display: none;
+  display: none;
 
-  @media screen and (max-width: $screen-ti) {
-  @include flex-center-vertical;
+  @media screen and (max-width: $df-screen-t) {
+    @include flex-center-vertical;
 
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1;
-  gap: 20px;
-  justify-content: space-between;
-  max-width: 390px;
-  padding: 10px 16px;
-  background-color: var(--back-primary);
-  border-bottom: 1px solid var(--monochrome-300);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    gap: 20px;
+    justify-content: space-between;
+    max-width: 390px;
+    padding: 10px 16px;
+    background-color: var(--back-primary);
+    border-bottom: 1px solid var(--monochrome-300);
   }
 }
-
 
 .headerCloseButton {
   @include button-reset;

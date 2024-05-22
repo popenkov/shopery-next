@@ -4,7 +4,6 @@
 @import '@/shared/styles/mixins/box';
 @import '@/shared/styles/mixins/text-styles';
 
-
 .productWishlist {
   $block-name: &; // #{$block-name}__element
 
@@ -13,22 +12,22 @@
   gap: 20px;
   align-items: center;
 
-  @media screen and (max-width: $screen-d) {
+  @media screen and (max-width: $df-screen-tl) {
     grid-template-columns: 2fr 1fr 1fr 194px;
   }
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     grid-template-columns: 2fr 1fr 1fr 178px;
   }
 
-  @media screen and (max-width: $screen-ti) {
-    grid-template-areas: "info price stock" "info price actions";
+  @media screen and (max-width: $df-screen-t) {
+    grid-template-areas: 'info price stock' 'info price actions';
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
   }
 
-  @media screen and (max-width: $screen-t) {
-    grid-template-areas: "info info" "price stock" "actions actions";
+  @media screen and (max-width: $df-screen-m) {
+    grid-template-areas: 'info info' 'price stock' 'actions actions';
     grid-template-columns: auto 1fr;
   }
 
@@ -37,13 +36,13 @@
 
     gap: 20px;
 
-    @media screen and (max-width: $screen-tl) {
+    @media screen and (max-width: $df-screen-ti) {
       flex-direction: column;
       gap: 6px;
       align-items: flex-start;
     }
 
-    @media screen and (max-width: $screen-ti) {
+    @media screen and (max-width: $df-screen-t) {
       grid-area: info;
     }
   }
@@ -52,9 +51,8 @@
     @include box(100px);
 
     position: relative;
-    
 
-    @media screen and (max-width: $screen-t) {
+    @media screen and (max-width: $df-screen-m) {
       width: 100%;
       height: auto;
       min-height: 250px;
@@ -66,22 +64,19 @@
     }
   }
 
-
-
   &Price {
     @include flex-center-vertical;
-
 
     gap: 4px;
     margin: 0;
 
-    @media screen and (max-width: $screen-ti) {
+    @media screen and (max-width: $df-screen-t) {
       flex-direction: column;
       grid-area: price;
       align-items: flex-start;
     }
 
-    @media screen and (max-width: $screen-t) {
+    @media screen and (max-width: $df-screen-m) {
       flex-direction: row;
     }
   }
@@ -98,13 +93,13 @@
   &Stock {
     width: fit-content;
 
-    @media screen and (max-width: $screen-ti) {
+    @media screen and (max-width: $df-screen-t) {
       grid-area: stock;
       width: auto;
       text-align: center;
     }
 
-    @media screen and (max-width: $screen-t) {
+    @media screen and (max-width: $df-screen-m) {
       width: fit-content;
     }
   }
@@ -115,11 +110,11 @@
     gap: 10px;
     justify-content: space-between;
 
-    @media screen and (max-width: $screen-ti) {
+    @media screen and (max-width: $df-screen-t) {
       grid-area: actions;
     }
 
-    @media screen and (max-width: $screen-t) {
+    @media screen and (max-width: $df-screen-m) {
       flex-direction: row;
       align-items: center;
       justify-content: flex-start;
@@ -130,7 +125,7 @@
     max-height: 45px;
     white-space: nowrap;
 
-    @media screen and (max-width: $screen-ti) {
+    @media screen and (max-width: $df-screen-t) {
       flex-grow: 1;
     }
   }

@@ -1,10 +1,10 @@
 @import '@/shared/styles/_breakpoints';
 
 .addToCardButton {
-    max-height: 45px;
-    white-space: nowrap;
+  max-height: 45px;
+  white-space: nowrap;
 
-    @media screen and (max-width: $screen-ti) {
-      flex-grow: 1;
-    }
+  @media screen and (max-width: $df-screen-t) {
+    flex-grow: 1;
+  }
 }

@@ -1,0 +1,12 @@
+.Drawer {
+  position: fixed;
+  z-index: var(--modal-content-z-index);
+  background-color: var(--back-primary);
+  transition: all var(--transition);
+
+  &.right {
+    top: 0;
+    right: 0;
+    height: 100vh;
+  }
+}

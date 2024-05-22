@@ -7,7 +7,7 @@
   grid-area: instagram;
   gap: 20px;
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     @include flex-column-center;
   }
 }
@@ -22,11 +22,11 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
 
-  @media screen and (max-width: $screen-d) {
+  @media screen and (max-width: $df-screen-tl) {
     grid-template-columns: repeat(4, 80px);
   }
 
-  @media screen and (max-width: $screen-t) {
+  @media screen and (max-width: $df-screen-m) {
     grid-template-columns: repeat(3, 1fr);
   }
 }

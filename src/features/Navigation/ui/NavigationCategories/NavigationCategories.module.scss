@@ -5,7 +5,7 @@
 .categories {
   position: relative;
 
-  @media screen and (max-width: $screen-t) {
+  @media screen and (max-width: $df-screen-m) {
     width: 100%;
   }
 }
@@ -27,7 +27,7 @@
   opacity: 0;
   transition: all var(--transition);
 
-  @media screen and (max-width: $screen-t) {
+  @media screen and (max-width: $df-screen-m) {
     width: 100%;
     max-width: unset;
   }

@@ -10,7 +10,7 @@
   align-items: flex-start;
   padding: 32px 0 80px;
 
-  @media screen and (max-width: $screen-ti) {
+  @media screen and (max-width: $df-screen-t) {
     flex-direction: column;
     align-items: stretch;
   }
@@ -28,7 +28,7 @@
   width: 100%;
   max-width: 424px;
 
-  @media screen and (max-width: $screen-ti) {
+  @media screen and (max-width: $df-screen-t) {
     max-width: unset;
   }
 }

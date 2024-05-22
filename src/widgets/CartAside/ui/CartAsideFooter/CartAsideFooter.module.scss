@@ -1,0 +1,42 @@
+&__footer {
+  @include flex-column;
+
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  gap: 23px;
+  width: 100%;
+  max-width: 456px;
+  padding: 10px 40px 39px;
+  background-color: var(--back-primary);
+
+  @media screen and (max-width: $df-screen-t) {
+    padding: 10px 20px 39px;
+  }
+}
+
+&__total {
+  @include flex-center-vertical;
+
+  gap: 20px;
+  justify-content: space-between;
+}
+
+&__total-amount {
+  @include body-m;
+}
+
+&__total-price {
+  @include body-m(600);
+}
+
+&__buttons {
+  @include flex-column;
+
+  gap: 12px;
+}
+
+&__button {
+  @include flex-center;
+}

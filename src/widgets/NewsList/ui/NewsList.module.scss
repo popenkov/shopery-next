@@ -5,33 +5,33 @@
 @import '@/shared/styles/breakpoints';
 
 .newsList {
-    @include section;
-    @include section-green-bg-bottom;
+  @include section;
+  @include section-green-bg-bottom;
 }
 
 .newsListTitle {
-    @include container;
-    @include section-title;
+  @include container;
+  @include section-title;
 }
 
 .newsListContent {
-    @include section-content;
-    @include container;
+  @include section-content;
+  @include container;
 }
 
 .newsListDesktop {
-    @include grid(3, 24px);
-    @include display-desktop;
+  @include grid(3, 24px);
+  @include display-desktop;
 
-    @media screen and (max-width: $screen-tl) {
-        grid-template-columns: 1fr 1fr;
-    }
+  @media screen and (max-width: $df-screen-ti) {
+    grid-template-columns: 1fr 1fr;
+  }
 
-    @media screen and (max-width: $screen-ti) {
-        grid-template-columns: 1fr;
-    }
+  @media screen and (max-width: $df-screen-t) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .newsListMobile {
-    @include display-mobile;
+  @include display-mobile;
 }

@@ -1,9 +1,14 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { cartReducer } from 'entities/Cart';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+
+const rootReducer = combineReducers({
+  cart: cartReducer,
+});
 
 // makeStore function  returns a new store for each request
 export const makeStore = () => {
   return configureStore({
-    reducer: {},
+    reducer: rootReducer,
   });
 };
 

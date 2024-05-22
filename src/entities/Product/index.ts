@@ -5,6 +5,7 @@ export {
   ProductSmall,
   ProductWishlist,
   ProductCheckout,
+  ProductCart,
 } from './ui';
 
 export { type TProduct, type TProductDetailed } from './model';

@@ -10,7 +10,7 @@
   gap: 20px;
   padding: 24px 0 22px;
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     justify-content: flex-start;
   }
 }
@@ -18,7 +18,7 @@
 button.mobileBurger {
   display: none;
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     @include flex-center;
     @include box(38px);
 
@@ -37,7 +37,7 @@ button.mobileBurger {
 .logoDesktop {
   max-width: 183px;
 
-  @media screen and (max-width: $screen-t) {
+  @media screen and (max-width: $df-screen-m) {
     display: none;
   }
 }
@@ -45,7 +45,7 @@ button.mobileBurger {
 .logoMobile {
   display: none;
 
-  @media screen and (max-width: $screen-t) {
+  @media screen and (max-width: $df-screen-m) {
     display: block;
   }
 }
@@ -57,7 +57,7 @@ button.mobileBurger {
 }
 
 .searchDesktop {
-  @media screen and (max-width: $screen-ti) {
+  @media screen and (max-width: $df-screen-t) {
     display: none;
   }
 }

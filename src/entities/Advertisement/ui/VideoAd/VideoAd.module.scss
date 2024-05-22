@@ -16,7 +16,7 @@
   max-height: 300px;
   aspect-ratio: 50 / 28;
 
-  @media screen and (max-width: $screen-tablet-content) {
+  @media screen and (max-width: $df-screen-mablet-content) {
     max-width: unset;
     max-height: unset;
   }

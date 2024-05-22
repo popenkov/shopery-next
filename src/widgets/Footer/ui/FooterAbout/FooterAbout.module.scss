@@ -8,7 +8,7 @@
   grid-area: about;
   gap: 16px;
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     align-items: center;
   }
 }
@@ -22,7 +22,7 @@
   margin: 0;
   color: var(--green-gray-500);
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     text-align: center;
   }
 }

@@ -7,7 +7,7 @@
 
   gap: 19px;
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     flex-direction: column;
   }
 }
@@ -17,7 +17,7 @@
   width: 58%;
   height: 564px;
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     @include flex-center;
 
     width: 100%;
@@ -38,7 +38,7 @@
   align-items: flex-start;
   width: 40%;
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     width: 100%;
   }
 }

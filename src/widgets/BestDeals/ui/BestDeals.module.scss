@@ -3,27 +3,28 @@
 @import '@/shared/styles/mixins/box';
 @import '@/shared/styles/mixins/text-styles';
 
-
 .bestDeals {
-background-color: var(--green-gray-50);
+  background-color: var(--green-gray-50);
 }
 
 .bgContainer {
   padding: 100px 0;
-  background: url('/images/deals-bg-left.png') no-repeat 10% center,
+  background:
+    url('/images/deals-bg-left.png') no-repeat 10% center,
     url('/images/deals-bg-right.png') no-repeat 93% bottom;
 
-  @media screen and (max-width: $screen-d) {
-    background: url('/images/deals-bg-left.png') no-repeat left center,
+  @media screen and (max-width: $df-screen-tl) {
+    background:
+      url('/images/deals-bg-left.png') no-repeat left center,
       url('/images/deals-bg-right.png') no-repeat right bottom;
     background-size: 40%;
   }
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     background: url('/images/deals-bg-left.png') no-repeat left center;
   }
 
-  @media screen and (max-width: $screen-t) {
+  @media screen and (max-width: $df-screen-m) {
     background: none;
   }
 }
@@ -61,7 +62,6 @@ background-color: var(--green-gray-50);
 .counter + .button {
   margin-top: 20px;
 }
-
 
 .buttonText {
   white-space: nowrap;

@@ -4,7 +4,7 @@
 .text {
   margin: 0;
   padding: 0;
-  
+
   &.error {
     color: var(--front-primary);
   }
@@ -36,9 +36,9 @@
   &.heading_1 {
     @include heading-1;
 
-     @media screen and (max-width: $screen-tl) {
+    @media screen and (max-width: $df-screen-ti) {
       @include heading-3;
-     }
+    }
   }
 
   &.heading_2 {
@@ -48,9 +48,9 @@
   &.heading_3 {
     @include heading-3;
 
-      @media screen and (max-width: $screen-tl) {
+    @media screen and (max-width: $df-screen-ti) {
       @include heading-5;
-     }
+    }
   }
 
   &.heading_4 {
@@ -72,9 +72,9 @@
   &.body_l {
     @include body-l;
 
-     @media screen and (max-width: $screen-tl) {
+    @media screen and (max-width: $df-screen-ti) {
       @include body-m;
-     }
+    }
   }
 
   &.body_m {

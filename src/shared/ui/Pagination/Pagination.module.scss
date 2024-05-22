@@ -31,7 +31,9 @@
   color: var(--monochrome-400);
   border-radius: 50%;
   cursor: pointer;
-  transition: background-color var(--transition), border-color var(--transition);
+  transition:
+    background-color var(--transition),
+    border-color var(--transition);
 
   &:hover {
     color: var(--front-primary-inversed);
@@ -44,17 +46,15 @@
     background-color: var(--primary);
   }
 
-
   &:disabled {
     background-color: var(--monochrome-50);
     border-color: var(--monochrome-50);
-    pointer-events: none;}
+    pointer-events: none;
+  }
 }
 
 .pageButton {
-   @include button-reset;
-
-   
+  @include button-reset;
 }
 
 .dots {
@@ -73,11 +73,9 @@
   border-radius: 50%;
   cursor: pointer;
 
-  @media screen and (max-width: $screen-t) {
+  @media screen and (max-width: $df-screen-m) {
     display: none;
   }
-
-  
 }
 
 .pagePrev .icon {
@@ -90,11 +88,11 @@
 
 .pagePrev:disabled,
 .pageNext:disabled {
-    background-color: var(--monochrome-50);
-    border-color: var(--monochrome-50);
-    pointer-events: none;
+  background-color: var(--monochrome-50);
+  border-color: var(--monochrome-50);
+  pointer-events: none;
 
-    .icon {
-      color: var(--monochrome-300);
-    }
+  .icon {
+    color: var(--monochrome-300);
   }
+}

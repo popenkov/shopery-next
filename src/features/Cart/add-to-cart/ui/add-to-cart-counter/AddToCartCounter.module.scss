@@ -3,50 +3,46 @@
 @import '@/shared/styles/mixins/box';
 @import '@/shared/styles/mixins/text-styles';
 
-
-
 .AddToCartCounter {
   @include flex-center-vertical;
 
   gap: 12px;
 
-  @media screen and (max-width: $screen-t) {
+  @media screen and (max-width: $df-screen-m) {
     display: grid;
-    grid-template-areas: "amount fav" "button button";
+    grid-template-areas: 'amount fav' 'button button';
     grid-template-columns: 124px auto;
   }
-
- 
 }
 
- .AddToCartCounterAmount {
-    @include flex-center-vertical;
+.AddToCartCounterAmount {
+  @include flex-center-vertical;
 
-    border-radius: 170px;
+  border-radius: 170px;
 
-    @media screen and (max-width: $screen-t) {
-      grid-area: amount;
-    }
+  @media screen and (max-width: $df-screen-m) {
+    grid-area: amount;
   }
+}
 
-  .AddToCartCounterCartButton {
-    @include flex-center;
+.AddToCartCounterCartButton {
+  @include flex-center;
 
-    flex-grow: 1;
-    gap: 16px;
+  flex-grow: 1;
+  gap: 16px;
 
-    @media screen and (max-width: $screen-t) {
-      grid-area: button;
-    }
+  @media screen and (max-width: $df-screen-m) {
+    grid-area: button;
   }
+}
 
-  .AddToCartCounterCartButtonText {
-    @include body-m(600);
-  }
+.AddToCartCounterCartButtonText {
+  @include body-m(600);
+}
 
-  .AddToCartCounterCartButtonIcon {
-    @include box(20px);
-  }
+.AddToCartCounterCartButtonIcon {
+  @include box(20px);
+}
 
 // todo
 //   .AddToCartCounterfavorite-icon {
@@ -58,7 +54,7 @@
 
 //     background-color: var(--green-gray-100);
 
-//     @media screen and (max-width: $screen-t) {
+//     @media screen and (max-width: $df-screen-m) {
 //       grid-area: fav;
 //     }
 

@@ -3,7 +3,22 @@ import { CartProduct } from '../types/cart';
 import { CartSchema } from '../types/cart-schema';
 
 const initialState: CartSchema = {
+  isAsideCartOpen: false,
   cart: [],
+  totalAmount: 0,
+  totalPrice: 0,
+};
+
+const getTotalPrice = (state: CartSchema) => {
+  return state.cart.reduce((acc, item) => {
+    return acc + item.price * item.amount;
+  }, 0);
+};
+
+const getTotalAmount = (state: CartSchema) => {
+  return state.cart.reduce((acc, item) => {
+    return acc + item.amount;
+  }, 0);
 };
 
 const cartSlice = createSlice({
@@ -18,6 +33,8 @@ const cartSlice = createSlice({
       } else {
         state.cart[findItemIndex].amount += action.payload.amount;
       }
+      state.totalPrice = getTotalPrice(state);
+      state.totalAmount = getTotalAmount(state);
       return state;
     },
     changeNumItemsInCart: (state, action: PayloadAction<{ id: string; amount: number }>) => {
@@ -30,10 +47,25 @@ const cartSlice = createSlice({
 
       return state;
     },
+    // cart menu
+    openAsideCartMenu: (state) => {
+      state.isAsideCartOpen = false;
+      return state;
+    },
+    closeAsideCartMenu: (state) => {
+      state.isAsideCartOpen = false;
+      return state;
+    },
   },
 });
 
 export const {
-  actions: { addToCart, changeNumItemsInCart, removeItemFromCart },
+  actions: {
+    addToCart,
+    changeNumItemsInCart,
+    removeItemFromCart,
+    openAsideCartMenu,
+    closeAsideCartMenu,
+  },
   reducer: cartReducer,
 } = cartSlice;

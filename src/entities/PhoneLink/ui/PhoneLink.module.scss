@@ -10,7 +10,7 @@
   color: var(--monochrome-900);
   text-decoration: none;
 
-  @media screen and (max-width: $screen-t) {
+  @media screen and (max-width: $df-screen-m) {
     display: none;
 
     &--mobile {
@@ -25,7 +25,7 @@
 
   stroke-width: 1.3px;
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     @include box(26px);
   }
 }

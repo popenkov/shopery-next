@@ -5,77 +5,77 @@
 @import '@/shared/styles/mixins/text-styles';
 
 .filter {
-    @include flex-column;
+  @include flex-column;
 
-    grid-area: filter;
-    gap: 24px;
-    align-items: flex-start;
+  grid-area: filter;
+  gap: 24px;
+  align-items: flex-start;
 }
 
 .filterButton {
-    display: none;
+  display: none;
 
-    @media screen and (max-width: $screen-tl) {
-        display: flex;
-    }
+  @media screen and (max-width: $df-screen-ti) {
+    display: flex;
+  }
 }
 
 .filterMenuBackground {
-    width: 100%;
+  width: 100%;
 
-    @media screen and (max-width: $screen-tl) {
-        position: fixed;
-        background-color: var(--modal-bg);
-        opacity: 0;
-        pointer-events: none;
-        inset: 0;
+  @media screen and (max-width: $df-screen-ti) {
+    position: fixed;
+    background-color: var(--modal-bg);
+    opacity: 0;
+    pointer-events: none;
+    inset: 0;
+  }
+
+  &.opened {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: var(--mobile-menu-z-index);
+    opacity: 1;
+    transition: all var(--transition);
+    pointer-events: auto;
+
+    .filterMenu {
+      display: block;
+      max-width: 390px;
+      height: 100vh;
+      padding: 80px 16px;
+      overflow-y: auto;
+      background-color: var(--back-primary);
     }
-
-    &.opened {
-        top: 0;
-        bottom: 0;
-        left: 0;
-        z-index: var(--mobile-menu-z-index);
-        opacity: 1;
-        transition: all var(--transition);
-        pointer-events: auto;
-
-        .filterMenu {
-            display: block;
-            max-width: 390px;
-            height: 100vh;
-            padding: 80px 16px;
-            overflow-y: auto;
-            background-color: var(--back-primary);
-        }
-    }
+  }
 }
 
 // todo
 .banner {
-    display: block;
-    margin-top: -8px;
+  display: block;
+  margin-top: -8px;
 
-    @media screen and (max-width: $screen-tl) {
-        display: none;
-    }
+  @media screen and (max-width: $df-screen-ti) {
+    display: none;
+  }
 }
 
 .products {
-    @include flex-column;
+  @include flex-column;
 
-    gap: 12px;
-    width: 100%;
+  gap: 12px;
+  width: 100%;
 }
 
 .banner + .products {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .products--desktop {
-    @media screen and (max-width: $screen-tl) {
-        display: none;
-    }
+  @media screen and (max-width: $df-screen-ti) {
+    display: none;
+  }
 }
 
 // .product-cards {

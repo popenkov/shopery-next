@@ -3,37 +3,35 @@
 @import '@/shared/styles/mixins/text-styles';
 @import '@/shared/styles/_breakpoints';
 
+.tabsContent {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
 
- .tabsContent {
-    display: flex;
-    gap: 40px;
-    justify-content: space-between;
-
-    @media screen and (max-width: $screen-tablet-content) {
-      flex-direction: column;
-      justify-content: flex-start;
-    }
+  @media screen and (max-width: $df-screen-mablet-content) {
+    flex-direction: column;
+    justify-content: flex-start;
   }
+}
 
 .tabsDescription {
   @include flex-column;
-    @include body-s;
+  @include body-s;
 
-    flex-grow: 1;
-    gap: 19px;
-    max-width: 648px;
-    color: var(--monochrome-500);
+  flex-grow: 1;
+  gap: 19px;
+  max-width: 648px;
+  color: var(--monochrome-500);
 
-    @media screen and (max-width: $screen-tablet-content) {
-      flex-grow: unset;
-    }
+  @media screen and (max-width: $df-screen-mablet-content) {
+    flex-grow: unset;
+  }
 
-    @media screen and (max-width: $screen-ti) {
-      max-width: calc(100vw - 40px);
-    }
+  @media screen and (max-width: $df-screen-t) {
+    max-width: calc(100vw - 40px);
+  }
 
-
-      p {
+  p {
     margin: 0;
   }
 
@@ -64,26 +62,25 @@
       position: absolute;
       top: 0;
       left: 0;
-      background-image: url("/images/svgSprite.svg#icon__list-checkbox.svg");
-      content: "";
+      background-image: url('/images/svgSprite.svg#icon__list-checkbox.svg');
+      content: '';
     }
   }
 }
 
-
 .tabsAside {
-    flex-grow: 1;
-    min-width: 400px;
-    max-width: 536px;
+  flex-grow: 1;
+  min-width: 400px;
+  max-width: 536px;
 
-    @media screen and (max-width: $screen-tablet-content) {
-      flex-grow: unset;
-      width: 100%;
-      min-width: unset;
-      max-width: unset;
-    }
+  @media screen and (max-width: $df-screen-mablet-content) {
+    flex-grow: unset;
+    width: 100%;
+    min-width: unset;
+    max-width: unset;
+  }
 
-    @media screen and (max-width: $screen-ti) {
-      max-width: calc(100vw - 40px);
-    }
+  @media screen and (max-width: $df-screen-t) {
+    max-width: calc(100vw - 40px);
+  }
 }
