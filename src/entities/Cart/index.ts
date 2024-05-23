@@ -1,5 +1,3 @@
-export { getCartData } from './api';
-
 export {
   addToCart,
   cartReducer,

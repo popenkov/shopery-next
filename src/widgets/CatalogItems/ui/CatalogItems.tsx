@@ -2,8 +2,8 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import cn from 'classnames';
 
 import { AddToFavorites } from '@/features/Product';
-import { AddToCart } from 'features/Cart/add-to-cart';
 import { ShowProductPreview } from '@/features/Product/show-preview/ui';
+import { AddToCart } from 'features/Cart/add-to-cart';
 import { Product, ProductSmall, TProduct } from 'entities/Product';
 
 import cls from './CatalogItems.module.scss';

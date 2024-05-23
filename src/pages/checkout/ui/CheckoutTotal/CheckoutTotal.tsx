@@ -3,9 +3,11 @@
 import { FC } from 'react';
 import cn from 'classnames';
 
+import { useAppSelector } from '@/app/lib/store/hooks';
+import { selectCart } from '@/entities/Cart';
+import { selectTotalAmount, selectTotalPrice } from '@/entities/Cart/model/selectors/cart';
 import { ProductCheckout } from '@/entities/Product';
 import { getFormattedPrice } from '@/shared/lib/utils';
-import { getCartData } from 'entities/Cart';
 import { Button } from 'shared/ui/Buttons';
 import { Radio } from 'shared/ui/Radio';
 import { Text } from 'shared/ui/Text';
@@ -17,7 +19,8 @@ type Props = {
 };
 
 export const CheckoutTotal: FC<Props> = ({ className }) => {
-  const { items, price, shipping, totalPrice } = getCartData();
+  const cartItems = useAppSelector(selectCart);
+  const totalPrice = useAppSelector(selectTotalPrice);
 
   // todo
   const handlePaymentMethodChoose = () => {
@@ -31,19 +34,20 @@ export const CheckoutTotal: FC<Props> = ({ className }) => {
       </Text>
 
       <div className={cls.CheckoutTotalItems}>
-        {items.map((item) => {
+        {cartItems.map((item) => {
           return <ProductCheckout data={item} key={item.id} />;
         })}
       </div>
       <div className={cls.CheckoutTotalValues}>
         <div className={cls.CheckoutTotalRow}>
           <span className={cls.CheckoutTotalKey}>Subtotal:</span>
-          <span className={cls.CheckoutTotalValue}>{getFormattedPrice(price)}</span>
+          <span className={cls.CheckoutTotalValue}>{getFormattedPrice(totalPrice)}</span>
         </div>
         <div className={cls.CheckoutTotalRow}>
           <span className={cls.CheckoutTotalKey}>Shipping:</span>
           <span className={cls.CheckoutTotalValue}>
-            {shipping ? getFormattedPrice(shipping) : 'Free'}
+            {/* todo */}
+            {getFormattedPrice(totalPrice) ? getFormattedPrice(totalPrice) : 'Free'}
           </span>
         </div>
         <div className={cls.CheckoutTotalRow}>

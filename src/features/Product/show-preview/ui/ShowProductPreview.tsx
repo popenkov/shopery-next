@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 
+import { TProduct } from '@/entities/Product';
 import { RoundButton, RoundButtonTheme } from '@/shared/ui/Buttons';
 import { EyeIcon } from '@/shared/ui/icons';
 
@@ -9,9 +10,9 @@ type Props = {
   className?: string;
 };
 
-export const ShowProductPreview: FC<Props> = ({ className, itemID, theme = 'primary' }) => {
+export const ShowProductPreview: FC<Props> = ({ className, item, theme = 'primary' }) => {
   const handlePreviewButtonClick = () => {
-    console.log('show preview for item', itemID);
+    console.log('show preview for item', item);
   };
 
   return (

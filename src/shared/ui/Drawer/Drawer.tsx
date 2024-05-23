@@ -1,12 +1,14 @@
 'use client';
 
 import { FC, ReactNode } from 'react';
-import { Portal } from '../Portal';
 import cn from 'classnames';
 
-import cls from './Drawer.module.scss';
 import { useModal } from '@/shared/lib/hooks';
+
 import { Overlay } from '../Overlay';
+import { Portal } from '../Portal';
+
+import cls from './Drawer.module.scss';
 
 type Props = {
   position?: 'left' | 'top' | 'right';

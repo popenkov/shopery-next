@@ -10,7 +10,7 @@ export type TProduct = {
   title: string;
   price: number;
   priceOld?: number;
-  rating: number;
+  rating?: number;
   tags?: TTag[];
   stock?: {
     type: StockVariant;

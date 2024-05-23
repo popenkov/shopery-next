@@ -1,11 +1,12 @@
+'use client';
 import { FC } from 'react';
 
+import { useAppDispatch } from '@/app/lib/store/hooks';
+import { TProduct } from '@/entities/Product';
+import { addToCart, openAsideCartMenu } from 'entities/Cart/';
 import { RoundButton, RoundButtonTheme } from 'shared/ui/Buttons';
 import { CartIcon } from 'shared/ui/icons';
 
-import { useAppDispatch } from '@/app/lib/store/hooks';
-import { addToCart } from 'entities/Cart/';
-import { TProduct } from '@/entities/Product';
 
 type Props = {
   item: TProduct;
@@ -18,6 +19,7 @@ export const AddToCart: FC<Props> = ({ className, item, theme = 'primary' }) => 
   const handleAddToCartButtonClick = () => {
     const CartModel = { ...item, amount: 1 };
     dispatch(addToCart(CartModel));
+    dispatch(openAsideCartMenu());
   };
 
   return (

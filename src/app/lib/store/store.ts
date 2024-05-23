@@ -1,5 +1,6 @@
-import { cartReducer } from 'entities/Cart';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
+
+import { cartReducer } from 'entities/Cart';
 
 const rootReducer = combineReducers({
   cart: cartReducer,

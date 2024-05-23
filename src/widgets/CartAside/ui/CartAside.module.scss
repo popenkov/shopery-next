@@ -2,8 +2,21 @@
 
 .CartAside {
   @include flex-column;
+
+  width: 100vw;
+  max-width: 456px;
 }
 
 .cartAsideItems {
   flex-grow: 1;
+  max-height: calc(100vh - 300px);
+  overflow-y: auto;
+}
+
+.cartAsideItem {
+  padding: 12px 32px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--monochrome-100);
+  }
 }

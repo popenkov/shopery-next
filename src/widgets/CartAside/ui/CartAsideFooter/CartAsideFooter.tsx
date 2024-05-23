@@ -1,27 +1,47 @@
 import { FC } from 'react';
 
+import { getWordDeclination } from '@/shared/lib/utils';
+import { AppLink } from '@/shared/ui/AppLink';
+import { Text } from '@/shared/ui/Text';
+
 import cls from './CartAsideFooter.module.scss';
 
 type Props = {
   closeDrawer: () => void;
-  price: number;
+  price: string;
   amount: number;
 };
 
 export const CartAsideFooter: FC<Props> = ({ closeDrawer, price, amount }) => {
   return (
-    <div className="cart-aside-widget__footer">
-      <div className="cart-aside-widget__total">
-        <span className="cart-aside-widget__total-amount">2 Product</span>
-        <span className="cart-aside-widget__total-price">$26.00</span>
+    <div className={cls.CartAsideFooter}>
+      <div className={cls.CartAsideFooterTotal}>
+        <Text variant="body_m" as="span">
+          {amount} {getWordDeclination(amount, ['Product', 'Products'])}
+        </Text>
+        <Text variant="body_m" weight="semibold" as="span">
+          {price}
+        </Text>
       </div>
-      <div className="cart-aside-widget__buttons">
-        <a className="button  button--fill button--large cart-aside-widget__button" href="#">
-          <span>Checkout</span>
-        </a>
-        <a className="button  button--light button--large cart-aside-widget__button" href="#">
-          <span>Go To Cart</span>
-        </a>
+      <div className={cls.CartAsideFooterButtons}>
+        <AppLink
+          href="/checkout"
+          theme="primary"
+          size="normal"
+          className={cls.CartAsideFooterButton}
+          onClick={closeDrawer}
+        >
+          Checkout
+        </AppLink>
+        <AppLink
+          href="/cart"
+          theme="ghost"
+          size="normal"
+          className={cls.CartAsideFooterButton}
+          onClick={closeDrawer}
+        >
+          Go To Cart
+        </AppLink>
       </div>
     </div>
   );

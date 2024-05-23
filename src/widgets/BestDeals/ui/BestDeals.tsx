@@ -22,7 +22,7 @@ export const BestDeals: FC<Props> = () => {
           <Text variant="heading_3" weight="semibold" align="center" className={cls.title} as="h2">
             Our Special Products Deal of the Month
           </Text>
-          <Countdown date="2024-05-17T03:24:00" className={cls.counter} />
+          <Countdown date="2025-05-17T03:24:00" className={cls.counter} />
           <AppLink href={'path'} className={cls.button}>
             <span className={cls.buttonText}>Shop now</span>
             <ArrowIcon className={cls.buttonIcon} />

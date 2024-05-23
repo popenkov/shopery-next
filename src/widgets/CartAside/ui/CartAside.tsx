@@ -1,5 +1,7 @@
 'use client';
 
+import React from 'react';
+
 import { useAppDispatch, useAppSelector } from '@/app/lib/store/hooks';
 import { closeAsideCartMenu, selectCart } from '@/entities/Cart';
 import {
@@ -7,23 +9,23 @@ import {
   selectTotalAmount,
   selectTotalPrice,
 } from '@/entities/Cart/model/selectors/cart';
-import { CartSchema } from '@/entities/Cart/model/types/cart-schema';
+import { ProductCart } from '@/entities/Product';
+import { RemoveFromCart } from '@/features/Cart/remove-from-cart';
+import { getFormattedPrice } from '@/shared/lib/utils';
 import { Drawer } from '@/shared/ui/Drawer/Drawer';
-import React from 'react';
-import { CartAsideHeader } from './CartAsideHeader';
 
 import cls from './CartAside.module.scss';
 import { CartAsideFooter } from './CartAsideFooter';
-import { ProductCart } from '@/entities/Product';
+import { CartAsideHeader } from './CartAsideHeader';
 
 export const CartAside = () => {
   const dispatch = useAppDispatch();
 
   // todo разобраться с типами
-  const cartItems = useAppSelector<{ cart: CartSchema }>(selectCart);
-  const isMenuOpen = useAppSelector<{ cart: CartSchema }>(selectMenuState);
-  const totalAmount = useAppSelector<{ cart: CartSchema }>(selectTotalAmount);
-  const totalPrice = useAppSelector<{ cart: CartSchema }>(selectTotalPrice);
+  const cartItems = useAppSelector(selectCart);
+  const isMenuOpen = useAppSelector(selectMenuState);
+  const totalAmount = useAppSelector(selectTotalAmount);
+  const totalPrice = useAppSelector(selectTotalPrice);
 
   const handleDrawerClose = () => {
     dispatch(closeAsideCartMenu());
@@ -32,17 +34,30 @@ export const CartAside = () => {
   if (!cartItems.length) {
     return null;
   }
-  console.log('data', cartItems);
+
+  const formattedPrice = getFormattedPrice(totalPrice);
+
   return (
-    <Drawer isOpen={true} onClose={handleDrawerClose} hasOverlay={false}>
+    <Drawer isOpen={isMenuOpen} onClose={handleDrawerClose} hasOverlay={false}>
       <div className={cls.CartAside}>
         <CartAsideHeader closeDrawer={handleDrawerClose} amount={totalAmount} />
         <div className={cls.cartAsideItems}>
           {cartItems.map((item) => {
-            return <ProductCart data={item} key={item.id} />;
+            return (
+              <ProductCart
+                className={cls.cartAsideItem}
+                data={item}
+                key={item.id}
+                actions={<RemoveFromCart id={item.id} />}
+              />
+            );
           })}
         </div>
-        <CartAsideFooter closeDrawer={handleDrawerClose} amount={totalAmount} price={totalPrice} />
+        <CartAsideFooter
+          closeDrawer={handleDrawerClose}
+          amount={totalAmount}
+          price={formattedPrice}
+        />
       </div>
     </Drawer>
   );

@@ -10,9 +10,9 @@ import { MaskedInput } from 'shared/ui/MaskedInput';
 import { Text } from 'shared/ui/Text';
 import { TextArea } from 'shared/ui/TextArea';
 
-import { COUNTRIES_LIST, STATES_LIST } from '../constants';
-
 import cls from './CheckoutForm.module.scss';
+import { COUNTRIES_LIST, STATES_LIST } from './countries-list';
+
 
 type FormData = {
   firstName: string;
@@ -43,6 +43,7 @@ export const CheckoutForm: FC = () => {
     mode: 'onChange',
   });
 
+  // todo   сделать модел для запроса из формы и из стора и отправить
   const onSubmit: SubmitHandler<FormData> = (data) => {
     console.log('data', data);
     if (isValid) {

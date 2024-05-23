@@ -1,9 +1,9 @@
 import { FC } from 'react';
 
+import { Text } from '@/shared/ui/Text';
 import { CrossIcon } from 'shared/ui/icons';
 
 import cls from './CartAsideHeader.module.scss';
-import { Text } from '@/shared/ui/Text';
 
 type Props = {
   closeDrawer: () => void;

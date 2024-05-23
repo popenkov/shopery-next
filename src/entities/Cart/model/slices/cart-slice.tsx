@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+
 import { CartProduct } from '../types/cart';
 import { CartSchema } from '../types/cart-schema';
 
@@ -41,15 +42,19 @@ const cartSlice = createSlice({
       const findItemIndex = state.cart?.findIndex((item) => item.id === action.payload.id);
 
       state.cart[findItemIndex].amount = action.payload.amount;
+      state.totalPrice = getTotalPrice(state);
+      state.totalAmount = getTotalAmount(state);
+      return state;
     },
     removeItemFromCart: (state, action: PayloadAction<{ id: string }>) => {
       state.cart = state.cart.filter((item) => item.id !== action.payload.id);
-
+      state.totalPrice = getTotalPrice(state);
+      state.totalAmount = getTotalAmount(state);
       return state;
     },
     // cart menu
     openAsideCartMenu: (state) => {
-      state.isAsideCartOpen = false;
+      state.isAsideCartOpen = true;
       return state;
     },
     closeAsideCartMenu: (state) => {

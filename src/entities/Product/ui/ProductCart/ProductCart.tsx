@@ -1,5 +1,5 @@
-import { FC } from 'react';
-import { CrossIcon } from 'shared/ui/icons';
+import { FC, ReactNode } from 'react';
+import cn from 'classnames';
 
 import { TProduct } from '../../model';
 
@@ -7,12 +7,14 @@ import cls from './ProductCart.module.scss';
 
 type Props = {
   data: TProduct;
+  actions: ReactNode;
+  className?: string;
 };
 
-export const ProductCart: FC<Props> = ({ data }) => {
-  const { img, title, path, price, priceOld, rating, amount } = data;
+export const ProductCart: FC<Props> = ({ data, actions, className }) => {
+  const { img, title, path, price, amount } = data;
   return (
-    <div className={cls.ProductCart}>
+    <div className={cn(cls.ProductCart, className)}>
       <img className={cls.ProductCartImage} src={img} alt={data.title} />
       <div className={cls.ProductCartDescription}>
         <a className={cls.ProductCartLink} href={path}>
@@ -25,9 +27,7 @@ export const ProductCart: FC<Props> = ({ data }) => {
           <span className={cls.ProductCartPriceValue}>{price}</span>
         </p>
       </div>
-      <button className="}cart-aside-widget__close-button close-button js-close-cart-menu-btn}">
-        <CrossIcon className="}close-button__icon}" />
-      </button>
+      {actions}
     </div>
   );
 };

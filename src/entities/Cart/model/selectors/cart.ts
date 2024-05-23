@@ -1,7 +1,8 @@
 import { createSelector } from '@reduxjs/toolkit';
 
-import { CartProduct } from '../types/cart';
 import { RootState } from '@/app/lib/store/store';
+
+import { CartProduct } from '../types/cart';
 
 const selectBase = createSelector(
   (state: RootState) => state,
@@ -25,5 +26,5 @@ export const selectTotalPrice = createSelector(
 
 export const selectTotalAmount = createSelector(
   selectBase,
-  (state: { totalPrice: number }) => state.totalPrice,
+  (state: { totalAmount: number }) => state.totalAmount,
 );
