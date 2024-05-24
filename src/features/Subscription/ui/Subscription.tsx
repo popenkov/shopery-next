@@ -1,6 +1,8 @@
 'use client';
 
-import React, { ChangeEvent, FC, useCallback, useState } from 'react';
+import { ChangeEvent, FC, useCallback, useState } from 'react';
+
+import cn from 'classnames';
 
 import { Button } from 'shared/ui/Buttons';
 import { Input } from 'shared/ui/Input';
@@ -11,7 +13,11 @@ import { subscribeOnNews } from '../api/subscribe-on-news';
 
 import cls from './Subscription.module.scss';
 
-export const Subscription: FC = () => {
+type Props = {
+  variant?: 'transparent' | 'gray';
+};
+
+export const Subscription: FC<Props> = ({ variant = 'transparent' }) => {
   const [searchValue, setSearchValue] = useState('');
 
   const getEmailAddress = (evt: ChangeEvent<HTMLInputElement>) => {
@@ -24,7 +30,12 @@ export const Subscription: FC = () => {
   }, [searchValue]);
 
   return (
-    <div className={cls.subscription}>
+    <div
+      className={cn(cls.subscription, {
+        [cls.gray]: variant === 'gray',
+        [cls.transparent]: variant === 'transparent',
+      })}
+    >
       <div className={cls.container}>
         <Logo className={cls.logo} />
         <div className={cls.text}>

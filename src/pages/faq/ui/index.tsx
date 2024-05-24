@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Breadcrumbs } from '@/shared/ui/Breadcrumps';
 import { AppRouteNames } from '@/shared/model';
 import { Accordion } from '@/shared/ui/Accordion';
+import { Subscription } from '@/features/Subscription';
 
 export const Faq: FC = () => {
   const crumbs: AppRouteNames[] = [AppRouteNames.HOME, AppRouteNames.FAQ];
@@ -15,7 +16,7 @@ export const Faq: FC = () => {
       <div data-testid="Faq" className={cls.Faq}>
         <div className={cls.FaqTextContainer}>
           <Text variant="heading_2" weight="semibold" as="h2" className={cls.FaqTitle}>
-            Welcome, Let’s Talk About Our Ecobazar
+            Welcome, Let’s Talk <br /> About Our Ecobazar
           </Text>
           <div className={cls.FaqTextContent}>
             <Accordion
@@ -27,14 +28,13 @@ export const Faq: FC = () => {
               }
               isOpenByDefault
             >
-              <Text>
+              <Text variant="body_s" className={cls.FaqText}>
                 Morbi porttitor ligula in nunc varius sagittis. Proin dui nisi, laoreet ut tempor
                 ac, cursus vitae eros. Cras quis ultricies elit. Proin ac lectus arcu. Maecenas
                 aliquet vel tellus at accumsan. Donec a eros non massa vulputate ornare. Vivamus
                 ornare commodo ante, at commodo felis congue vitae.
               </Text>
             </Accordion>
-
             <Accordion
               variant="border"
               title={
@@ -43,7 +43,7 @@ export const Faq: FC = () => {
                 </Text>
               }
             >
-              <Text>
+              <Text variant="body_s" className={cls.FaqText}>
                 Morbi porttitor ligula in nunc varius sagittis. Proin dui nisi, laoreet ut tempor
                 ac, cursus vitae eros. Cras quis ultricies elit. Proin ac lectus arcu. Maecenas
                 aliquet vel tellus at accumsan. Donec a eros non massa vulputate ornare. Vivamus
@@ -59,14 +59,13 @@ export const Faq: FC = () => {
                 </Text>
               }
             >
-              <Text>
+              <Text variant="body_s" className={cls.FaqText}>
                 Morbi porttitor ligula in nunc varius sagittis. Proin dui nisi, laoreet ut tempor
                 ac, cursus vitae eros. Cras quis ultricies elit. Proin ac lectus arcu. Maecenas
                 aliquet vel tellus at accumsan. Donec a eros non massa vulputate ornare. Vivamus
                 ornare commodo ante, at commodo felis congue vitae.
               </Text>
             </Accordion>
-
             <Accordion
               variant="border"
               title={
@@ -75,14 +74,13 @@ export const Faq: FC = () => {
                 </Text>
               }
             >
-              <Text>
+              <Text variant="body_s" className={cls.FaqText}>
                 Morbi porttitor ligula in nunc varius sagittis. Proin dui nisi, laoreet ut tempor
                 ac, cursus vitae eros. Cras quis ultricies elit. Proin ac lectus arcu. Maecenas
                 aliquet vel tellus at accumsan. Donec a eros non massa vulputate ornare. Vivamus
                 ornare commodo ante, at commodo felis congue vitae.
               </Text>
             </Accordion>
-
             <Accordion
               variant="border"
               title={
@@ -91,7 +89,7 @@ export const Faq: FC = () => {
                 </Text>
               }
             >
-              <Text>
+              <Text variant="body_s" className={cls.FaqText}>
                 Morbi porttitor ligula in nunc varius sagittis. Proin dui nisi, laoreet ut tempor
                 ac, cursus vitae eros. Cras quis ultricies elit. Proin ac lectus arcu. Maecenas
                 aliquet vel tellus at accumsan. Donec a eros non massa vulputate ornare. Vivamus
@@ -101,9 +99,10 @@ export const Faq: FC = () => {
           </div>
         </div>
         <div className={cls.FaqImageContainer}>
-          <Image src="/images/404-image.svg" fill alt="not found image" />
+          <Image src="/images/faq-image.jpeg" fill alt="not found image" className={cls.FaqImage} />
         </div>
       </div>
+      <Subscription variant="gray" />
     </>
   );
 };

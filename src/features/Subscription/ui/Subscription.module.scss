@@ -5,7 +5,13 @@
 @import '@/shared/styles/mixins/text-styles';
 
 .subscription {
-  border-top: 1px solid rgb(180 204 180 / 70%);
+  &.transparent {
+    border-top: 1px solid rgb(180 204 180 / 70%);
+  }
+
+  &.gray {
+    background-color: rgb(247 247 247);
+  }
 }
 
 .container {
