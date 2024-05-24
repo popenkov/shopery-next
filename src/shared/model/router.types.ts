@@ -5,6 +5,8 @@ export enum AppRouteNames {
   CATALOG = 'Catalog',
   WISHLIST = 'Wishlist',
   CHECKOUT = 'Checkout',
+  NOT_FOUND = '404 Error Page',
+  FAQ = 'faqs',
 }
 
 export type AppRoutesProps = {

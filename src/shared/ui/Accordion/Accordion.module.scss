@@ -3,10 +3,6 @@
 @import '@/shared/styles/mixins/box';
 @import '@/shared/styles/mixins/button-reset';
 
-.accordion {
-  list-style: none;
-}
-
 .accordionContent {
   margin: 0;
   padding: 0;
@@ -29,6 +25,18 @@
   transform: rotate(0deg);
   transition: all var(--transition);
   stroke-width: 1.6px;
+}
+
+.accordionButtonPlusButton {
+  @include box(32px);
+  @include flex-center;
+
+  background-color: var(--back-primary);
+  border-radius: 50%;
+}
+
+.accordionButtonPlusIcon {
+  @include box(15px);
 }
 
 .accordionButton {
@@ -61,4 +69,35 @@
 
 .contentItem {
   padding: 10px 0;
+}
+
+.accordion {
+  list-style: none;
+
+  &.border {
+    overflow: hidden;
+    border-radius: 6px;
+
+    .accordionButton {
+      padding: 12px 16px;
+      background-color: var(--monochrome-50);
+      border-radius: 6px;
+    }
+
+    .accordionContent {
+      padding: 16px;
+    }
+
+    &.open {
+      border: 1px solid rgb(132 209 135);
+
+      .accordionButtonPlusButton {
+        background-color: var(--monochrome-50);
+      }
+
+      .accordionButton {
+        background-color: var(--back-primary);
+      }
+    }
+  }
 }
