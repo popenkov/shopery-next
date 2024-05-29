@@ -14,7 +14,7 @@ const CheckoutPage: FC = () => {
   // todo возможно здесь сделать форму и передать методы регистрации ниже. так как поля есть в разных компонентах
 
   return (
-    <div data-testid="checkout">
+    <main className="main" data-testid="checkout">
       <Breadcrumbs items={crumbs} />
       <div className={cls.checkout}>
         <div className={cls.checkoutMain}>
@@ -26,7 +26,7 @@ const CheckoutPage: FC = () => {
         </div>
         <CheckoutTotal className={cls.checkoutAside} />
       </div>
-    </div>
+    </main>
   );
 };
 

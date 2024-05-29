@@ -1,0 +1,38 @@
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+
+.UserAddress {
+  @include flex-column;
+
+  gap: 6px;
+  padding: 32px;
+  border: 1px solid var(--monochrome-50);
+  border-radius: 8px;
+}
+
+.UserAddressTitle {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+
+.UserAddressTitle + .UserAddressName {
+  margin-top: 12px;
+}
+
+.UserAddressStreet {
+  color: var(--monochrome-600);
+}
+
+.UserAddressName + .UserAddressStreet {
+  margin-top: 2px;
+}
+
+.UserAddressStreet + .UserAddressEmail {
+  margin-top: 2px;
+}
+
+.UserAddressPhone + .UserAddressActions {
+  margin-top: 13px;
+}

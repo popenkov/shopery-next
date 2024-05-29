@@ -1,0 +1,63 @@
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+
+.AccountNavigation {
+  @include flex-column;
+
+  border: 1px solid var(--monochrome-100);
+  border-radius: 8px;
+}
+
+.AccountNavigationTitle {
+  padding: 24px 16px 20px;
+}
+
+.AccountNavigationList {
+  @include flex-column;
+}
+
+.AccountNavigationItem {
+  list-style: none;
+}
+
+.AccountNavigationIcon {
+  @include box(20px);
+
+  color: var(--monochrome-200);
+}
+
+.AccountNavigationText {
+  color: var(--monochrome-600);
+}
+
+.AccountNavigationLink {
+  @include flex-center-vertical;
+
+  position: relative;
+  gap: 12px;
+  padding: 16px 20px;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--green-gray-50);
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: -1px;
+        width: 3px;
+        height: 100%;
+        background-color: var(--primary);
+        content: '';
+      }
+
+      .AccountNavigationIcon {
+        color: var(--monochrome-900);
+      }
+
+      .AccountNavigationText {
+        color: var(--monochrome-900);
+      }
+    }
+  }
+}

@@ -24,7 +24,7 @@ const Catalog: FC = () => {
     console.log('handlePageChange');
   };
   return (
-    <div data-testid="mainPage">
+    <main className="main" data-testid="catalogPage">
       <Breadcrumbs items={crumbs} />
       <div className={cls.catalog}>
         <div className={cls.filter}>
@@ -63,7 +63,7 @@ const Catalog: FC = () => {
           className={cls.pagination}
         />
       </div>
-    </div>
+    </main>
   );
 };
 

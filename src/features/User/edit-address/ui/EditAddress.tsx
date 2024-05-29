@@ -1,0 +1,26 @@
+'use client';
+import { FC } from 'react';
+import cn from 'classnames';
+import { useAppDispatch } from '@/app/lib/store/hooks';
+
+import cls from './EditAddress.module.scss';
+import { Text } from '@/shared/ui/Text';
+
+type Props = {
+  className?: string;
+};
+
+export const EditAddress: FC<Props> = ({ className }) => {
+  const dispatch = useAppDispatch();
+  const handleEditAddressButtonClick = () => {
+    // dispatch(EditAddress({ id }));
+    console.log('Edit address');
+  };
+  return (
+    <button className={cn(cls.Button, className)} onClick={handleEditAddressButtonClick}>
+      <Text variant="body_m" weight="medium" as="span">
+        Edit address
+      </Text>
+    </button>
+  );
+};

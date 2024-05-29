@@ -1,0 +1,1 @@
+export { getCatalogFilterData } from './getCatalogFilterData';

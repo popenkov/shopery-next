@@ -1,0 +1,51 @@
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+
+.UserOrders {
+  @include flex-column;
+
+  gap: 2px;
+  border: 1px solid var(--monochrome-50);
+  border-radius: 8px;
+}
+
+.UserOrdersHeader {
+  @include flex-center-vertical;
+
+  gap: 12px;
+  justify-content: space-between;
+  padding: 12px 24px;
+}
+
+.UserOrdersTitles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) minmax(85px, auto);
+  gap: 20px;
+  padding: 12px 24px;
+  background-color: var(--monochrome-50);
+}
+
+.UserOrdersTitle {
+  color: var(--monochrome-700);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 3%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.UserOrdersItem {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) auto;
+  gap: 20px;
+  padding: 12px 24px;
+}
+
+.UserOrdersItemText {
+  color: var(--monochrome-800);
+}
+
+.UserOrdersItemLink {
+  color: var(--primary);
+}

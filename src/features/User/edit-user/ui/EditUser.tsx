@@ -1,0 +1,26 @@
+'use client';
+import { FC } from 'react';
+import cn from 'classnames';
+import { useAppDispatch } from '@/app/lib/store/hooks';
+
+import cls from './EditUser.module.scss';
+import { Text } from '@/shared/ui/Text';
+
+type Props = {
+  className?: string;
+};
+
+export const EditUser: FC<Props> = ({ className }) => {
+  const dispatch = useAppDispatch();
+  const handleEditUserButtonClick = () => {
+    // dispatch(editUser({ id }));
+    console.log('Edit user');
+  };
+  return (
+    <button className={cn(cls.Button, className)} onClick={handleEditUserButtonClick}>
+      <Text variant="body_m" weight="medium" as="span">
+        Edit user
+      </Text>
+    </button>
+  );
+};

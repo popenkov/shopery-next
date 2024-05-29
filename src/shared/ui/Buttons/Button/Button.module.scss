@@ -82,4 +82,16 @@
 
     padding: 15px 40px;
   }
+
+  &.text {
+    padding: 0;
+    color: var(--primary);
+    background-color: inherit;
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--hard-primary);
+      }
+    }
+  }
 }

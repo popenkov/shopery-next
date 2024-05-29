@@ -13,7 +13,7 @@ import { Reviews } from 'widgets/Reviews';
 
 const HomePage: FC = () => {
   return (
-    <div data-testid="mainPage">
+    <main className="main" data-testid="mainPage">
       <HeroSlider />
       <Advantages />
       <ProductTab />
@@ -24,7 +24,7 @@ const HomePage: FC = () => {
       <MainVideo />
       <NewsList />
       <NewsSubscription />
-    </div>
+    </main>
   );
 };
 

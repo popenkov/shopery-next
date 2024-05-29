@@ -11,7 +11,7 @@ import { AppRouteNames } from '@/shared/model';
 const NotFoundPage: FC = () => {
   const crumbs: AppRouteNames[] = [AppRouteNames.HOME, AppRouteNames.NOT_FOUND];
   return (
-    <>
+    <main className="main">
       <Breadcrumbs items={crumbs} />
       <div data-testid="notFoundPage" className={cls.NotFoundPage}>
         <div className={cls.NotFoundPageImageContainer}>
@@ -39,7 +39,7 @@ const NotFoundPage: FC = () => {
           <span className={cls.NotFoundPageButtonText}>Back to Home</span>
         </AppLink>
       </div>
-    </>
+    </main>
   );
 };
 

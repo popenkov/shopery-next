@@ -1,0 +1,19 @@
+.DashboardPage {
+  display: grid;
+  flex-grow: 1;
+  grid-template-areas: 'user address' 'orders orders';
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.DashboardPageUser {
+  grid-area: user;
+}
+
+.DashboardPageAddress {
+  grid-area: address;
+}
+
+.DashboardPageOrders {
+  grid-area: orders;
+}

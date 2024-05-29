@@ -42,7 +42,7 @@ export const Product: FC<Props> = ({ data, actions, cartAction }) => {
               </Text>
             )}
           </div>
-          <StarRating value={rating} />
+          <StarRating value={rating!} />
         </div>
         {cartAction}
       </div>

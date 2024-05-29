@@ -4,10 +4,12 @@ import { ProductDescription } from 'widgets/ProductDescription';
 import { ProductDetailedTabs, RelatedProducts } from 'widgets/ProductDetailed';
 import { AppRouteNames } from '@/shared/model';
 import { Breadcrumbs } from '@/shared/ui/Breadcrumps';
-import { AddToCartCounter, AddToFavorites } from 'features/Product';
+import { AddToFavorites } from 'features/Product';
 import { getProductDetails } from 'entities/Product';
+import cn from 'classnames';
 
 import cls from './Product.module.scss';
+import { AddToCartCounter } from '@/features/Cart';
 
 const Product: FC = () => {
   const data = getProductDetails();
@@ -15,7 +17,7 @@ const Product: FC = () => {
   const crumbs = [AppRouteNames.HOME, AppRouteNames.CATALOG, data.title];
 
   return (
-    <div data-testid="productPage" className={cls.product}>
+    <main data-testid="productPage" className={cn(cls.product, 'main')}>
       <Breadcrumbs items={crumbs} />
       <div className="product-page">
         <ProductDescription
@@ -23,7 +25,8 @@ const Product: FC = () => {
           actions={
             <>
               <AddToCartCounter className={cls.productCartCounter} />
-              <AddToFavorites className={cls.productFavoriteButton} itemID={data.id} />
+              {/* todo */}
+              <AddToFavorites className={cls.productFavoriteButton} item={data} />
             </>
           }
         />
@@ -37,7 +40,7 @@ const Product: FC = () => {
 
         <RelatedProducts data={data.relatedProducts} />
       </div>
-    </div>
+    </main>
   );
 };
 

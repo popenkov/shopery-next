@@ -1,0 +1,1 @@
+export { getCatalogItems } from './getCatalogItems';

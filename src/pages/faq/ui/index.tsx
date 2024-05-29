@@ -11,7 +11,7 @@ import { Subscription } from '@/features/Subscription';
 export const Faq: FC = () => {
   const crumbs: AppRouteNames[] = [AppRouteNames.HOME, AppRouteNames.FAQ];
   return (
-    <>
+    <main className="main">
       <Breadcrumbs items={crumbs} />
       <div data-testid="Faq" className={cls.Faq}>
         <div className={cls.FaqTextContainer}>
@@ -103,6 +103,6 @@ export const Faq: FC = () => {
         </div>
       </div>
       <Subscription variant="gray" />
-    </>
+    </main>
   );
 };
