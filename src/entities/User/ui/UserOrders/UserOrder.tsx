@@ -28,7 +28,9 @@ export const UserOrder: FC<Props> = ({ order }) => {
         {getFormattedPrice(order.price)} ({order.amount}{' '}
         {getWordDeclination(order.amount, ['Product', 'Products'])})
       </Text>
-      <Text className={cls.UserOrdersItemText}>{order.status}</Text>
+      <Text variant="body_s" className={cls.UserOrdersItemText}>
+        {order.status}
+      </Text>
       <Link href={`/orders/${order.id}`} className={cls.UserOrdersItemLink}>
         <Text variant="body_s">View Details</Text>
       </Link>

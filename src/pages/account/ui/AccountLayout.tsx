@@ -10,13 +10,14 @@ export default function AccountLayout({
 }: Readonly<{
   children: ReactNode;
 }>) {
+  // todo
   const crumbs: AppRouteNames[] = [AppRouteNames.HOME, AppRouteNames.CATALOG];
 
   return (
     <>
       <Breadcrumbs items={crumbs} />
       <main className={cls.AccountLayout}>
-        <AccountNavigation />
+        <AccountNavigation className={cls.AccountAside} />
         {children}
       </main>
     </>

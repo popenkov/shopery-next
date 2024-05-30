@@ -1,5 +1,6 @@
 import { FC, ReactNode } from 'react';
 
+import cn from 'classnames';
 import cls from './UserAddress.module.scss';
 import { getUserAddress } from '../../api';
 import { Text } from '@/shared/ui/Text';
@@ -12,8 +13,8 @@ type Props = {
 export const UserAddress: FC<Props> = ({ actions, className }) => {
   const { street, name, email, phone } = getUserAddress();
   return (
-    <div className={cls.UserAddress}>
-      <Text as="h3" className={cls.UserAddressTitle}>
+    <div className={cn(cls.UserAddress, className)}>
+      <Text variant="body_s" weight="medium" as="h3" className={cls.UserAddressTitle}>
         Billing Address
       </Text>
       <Text variant="body_l" weight="medium" className={cls.UserAddressName}>

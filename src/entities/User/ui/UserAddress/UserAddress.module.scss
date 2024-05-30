@@ -11,17 +11,20 @@
 }
 
 .UserAddressTitle {
+  color: var(--monochrome-400);
   font-weight: 500;
   font-size: 18px;
   line-height: 150%;
   letter-spacing: 0%;
+  text-transform: uppercase;
 }
 
 .UserAddressTitle + .UserAddressName {
-  margin-top: 12px;
+  margin-top: 8px;
 }
 
 .UserAddressStreet {
+  max-width: 264px;
   color: var(--monochrome-600);
 }
 

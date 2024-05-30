@@ -1,22 +1,40 @@
 @import '@/shared/styles/mixins/flexbox';
 @import '@/shared/styles/mixins/box';
+@import '@/shared/styles/_breakpoints';
 
 .AccountNavigation {
   @include flex-column;
 
   border: 1px solid var(--monochrome-100);
   border-radius: 8px;
+
+  @media screen and (max-width: $df-screen-tl) {
+    flex-direction: row;
+  }
 }
 
-.AccountNavigationTitle {
-  padding: 24px 16px 20px;
+h2.AccountNavigationTitle {
+  padding: 24px 19px 16px;
+
+  @media screen and (max-width: $df-screen-tl) {
+    display: none;
+  }
 }
 
 .AccountNavigationList {
   @include flex-column;
+
+  padding-bottom: 10px;
+
+  @media screen and (max-width: $df-screen-tl) {
+    flex-direction: row;
+    padding-bottom: 0;
+    overflow-x: auto;
+  }
 }
 
 .AccountNavigationItem {
+  flex-shrink: 0;
   list-style: none;
 }
 

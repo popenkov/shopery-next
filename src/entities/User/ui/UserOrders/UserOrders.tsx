@@ -35,10 +35,8 @@ export const UserOrders: FC<Props> = ({ className }) => {
           Recet Order History
         </Text>
         {!areAllOrdersShown && (
-          <Button onClick={handleShowAllClick} theme="text" size="small">
-            <Text variant="body_xl" weight="medium" className={cls.UserOrdersName}>
-              View All
-            </Text>
+          <Button onClick={handleShowAllClick} theme="text" size="large">
+            View All
           </Button>
         )}
       </div>
@@ -46,7 +44,7 @@ export const UserOrders: FC<Props> = ({ className }) => {
         <div className={cls.UserOrdersTitles}>
           {ORDERS_LIST_TITLES.map((title) => {
             return (
-              <Text key={title} className={cls.UserOrdersTitle}>
+              <Text key={title} variant="body_tiny" weight="medium" className={cls.UserOrdersTitle}>
                 {title}
               </Text>
             );

@@ -1,14 +1,19 @@
 import { FC } from 'react';
 
+import cn from 'classnames';
 import cls from './AccountNavigation.module.scss';
 import { ACCOUNT_NAVIGATION_DATA } from './constants';
 import Link from 'next/link';
 import { getAccountNavigationIcon, accountNavigationIcons } from './lib';
 import { Text } from '@/shared/ui/Text';
 
-export const AccountNavigation: FC = () => {
+type Props = {
+  className?: string;
+};
+
+export const AccountNavigation: FC<Props> = ({ className }) => {
   return (
-    <aside className={cls.AccountNavigation}>
+    <aside className={cn(cls.AccountNavigation, className)}>
       <Text variant="body_xl" weight="medium" as="h2" className={cls.AccountNavigationTitle}>
         Navigation
       </Text>
