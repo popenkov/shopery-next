@@ -1,12 +1,13 @@
 import { FC } from 'react';
-
-import cls from './Faq.module.scss';
-import { Text } from '@/shared/ui/Text';
 import Image from 'next/image';
-import { Breadcrumbs } from '@/shared/ui/Breadcrumps';
+
+import { Subscription } from '@/features/Subscription';
 import { AppRouteNames } from '@/shared/model';
 import { Accordion } from '@/shared/ui/Accordion';
-import { Subscription } from '@/features/Subscription';
+import { Breadcrumbs } from '@/shared/ui/Breadcrumps';
+import { Text } from '@/shared/ui/Text';
+
+import cls from './Faq.module.scss';
 
 export const Faq: FC = () => {
   const crumbs: AppRouteNames[] = [AppRouteNames.HOME, AppRouteNames.FAQ];

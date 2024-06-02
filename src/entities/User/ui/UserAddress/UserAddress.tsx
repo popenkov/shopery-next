@@ -1,9 +1,11 @@
 import { FC, ReactNode } from 'react';
-
 import cn from 'classnames';
-import cls from './UserAddress.module.scss';
-import { getUserAddress } from '../../api';
+
 import { Text } from '@/shared/ui/Text';
+
+import { getUserAddress } from '../../api';
+
+import cls from './UserAddress.module.scss';
 
 type Props = {
   actions: ReactNode;

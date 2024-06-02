@@ -1,10 +1,12 @@
 import React, { FC, ReactNode } from 'react';
-
 import cn from 'classnames';
-import cls from './UserCard.module.scss';
 import Image from 'next/image';
+
 import { Text } from '@/shared/ui/Text';
+
 import { getUserData } from '../../api';
+
+import cls from './UserCard.module.scss';
 
 type Props = {
   actions: ReactNode;

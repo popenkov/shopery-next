@@ -2,42 +2,53 @@
 
 import { FC, useMemo, useState } from 'react';
 import cn from 'classnames';
-import cls from './UserOrders.module.scss';
 import { AnimatePresence } from 'framer-motion';
-import { Text } from '@/shared/ui/Text';
-import { Button } from '@/shared/ui/Buttons';
-import { getUserOrders } from '../../api/getUserOrders';
-import { ORDERS_LIST_TITLES, ORDERS_PREVIEW_AMOUNT } from './constants';
 
+import { getRouteOrderHistory } from '@/shared/lib/constants';
+import { AppLink } from '@/shared/ui/AppLink';
+import { Text } from '@/shared/ui/Text';
+
+import { TUserOrderPreview } from '../../model/types';
+
+import { ORDERS_LIST_TITLES, ORDERS_PREVIEW_AMOUNT } from './constants';
 import { UserOrder } from './UserOrder';
+import cls from './UserOrders.module.scss';
 
 type Props = {
+  data: TUserOrderPreview[];
   className?: string;
+  isPreview?: boolean;
 };
 
-export const UserOrders: FC<Props> = ({ className }) => {
-  const data = getUserOrders();
+export const UserOrders: FC<Props> = ({ data, className, isPreview }) => {
   const [areAllOrdersShown, setAreAllOrdersShown] = useState(false);
 
   const orders = useMemo(() => {
     const slicedData = data.slice(0, ORDERS_PREVIEW_AMOUNT);
-    return areAllOrdersShown ? data : slicedData;
+    return isPreview ? slicedData : data;
   }, [areAllOrdersShown]);
 
   const handleShowAllClick = () => {
     setAreAllOrdersShown(true);
   };
 
+  const componentTitleText = isPreview ? 'Recent Order History' : 'Order History';
+
   return (
     <div className={cn(cls.UserOrders, className)}>
       <div className={cls.UserOrdersHeader}>
         <Text variant="body_xl" weight="medium" className={cls.UserOrdersName} as="h2">
-          Recet Order History
+          {componentTitleText}
         </Text>
-        {!areAllOrdersShown && (
-          <Button onClick={handleShowAllClick} theme="text" size="large">
-            View All
-          </Button>
+        {isPreview && (
+          <AppLink
+            href={getRouteOrderHistory()}
+            onClick={handleShowAllClick}
+            theme="text"
+            size="large"
+          >
+            Show All
+          </AppLink>
         )}
       </div>
       <div className={cls.UserOrdersMain}>

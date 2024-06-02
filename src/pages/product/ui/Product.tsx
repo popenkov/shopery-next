@@ -1,15 +1,15 @@
 import { FC } from 'react';
+import cn from 'classnames';
 
 import { ProductDescription } from 'widgets/ProductDescription';
 import { ProductDetailedTabs, RelatedProducts } from 'widgets/ProductDetailed';
+import { AddToCartCounter } from '@/features/Cart';
 import { AppRouteNames } from '@/shared/model';
 import { Breadcrumbs } from '@/shared/ui/Breadcrumps';
 import { AddToFavorites } from 'features/Product';
 import { getProductDetails } from 'entities/Product';
-import cn from 'classnames';
 
 import cls from './Product.module.scss';
-import { AddToCartCounter } from '@/features/Cart';
 
 const Product: FC = () => {
   const data = getProductDetails();

@@ -1,12 +1,15 @@
 import { FC } from 'react';
-import { TUserOrder } from '../../model/types';
-import { Text } from '@/shared/ui/Text';
 import { motion } from 'framer-motion';
-import { getFormattedPrice, getWordDeclination } from '@/shared/lib/utils';
 import Link from 'next/link';
+
+import { getFormattedPrice, getWordDeclination } from '@/shared/lib/utils';
+import { Text } from '@/shared/ui/Text';
+
+import { TUserOrderPreview } from '../../model/types';
+
 import cls from './UserOrders.module.scss';
 type Props = {
-  order: TUserOrder;
+  order: TUserOrderPreview;
 };
 
 export const UserOrder: FC<Props> = ({ order }) => {
@@ -31,7 +34,7 @@ export const UserOrder: FC<Props> = ({ order }) => {
       <Text variant="body_s" className={cls.UserOrdersItemText}>
         {order.status}
       </Text>
-      <Link href={`/orders/${order.id}`} className={cls.UserOrdersItemLink}>
+      <Link href={`/account/order/${order.id}`} className={cls.UserOrdersItemLink}>
         <Text variant="body_s">View Details</Text>
       </Link>
     </motion.li>

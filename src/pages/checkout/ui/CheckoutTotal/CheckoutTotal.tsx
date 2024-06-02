@@ -5,7 +5,7 @@ import cn from 'classnames';
 
 import { useAppSelector } from '@/app/lib/store/hooks';
 import { selectCart } from '@/entities/Cart';
-import { selectTotalAmount, selectTotalPrice } from '@/entities/Cart/model/selectors/cart';
+import { selectTotalPrice } from '@/entities/Cart/model/selectors/cart';
 import { ProductCheckout } from '@/entities/Product';
 import { getFormattedPrice } from '@/shared/lib/utils';
 import { Button } from 'shared/ui/Buttons';

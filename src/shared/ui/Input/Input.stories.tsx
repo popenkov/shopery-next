@@ -4,51 +4,51 @@ import { fn, userEvent, within } from '@storybook/test';
 import { Input } from './Input';
 
 const meta = {
-    title: 'shared/Input',
-    component: Input,
-    parameters: {
-        layout: 'centered',
-    },
-    args: {
-        onBlur: fn(),
-        onChange: fn(),
-        onFocus: fn(),
-    },
-    tags: ['autodocs'],
+  title: 'shared/Input',
+  component: Input,
+  parameters: {
+    layout: 'centered',
+  },
+  args: {
+    onBlur: fn(),
+    onChange: fn(),
+    onFocus: fn(),
+  },
+  tags: ['autodocs'],
 } satisfies Meta<typeof Input>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const InputComponent: Story = {
-    decorators: [
-        (Story) => (
-            <div style={{ maxWidth: '400px' }}>
-                <Story />
-            </div>
-        ),
-    ],
-    args: { placeholder: 'name' },
+  decorators: [
+    (Story) => (
+      <div style={{ maxWidth: '400px' }}>
+        <Story />
+      </div>
+    ),
+  ],
+  args: { placeholder: 'name' },
 };
 
 export const InputFilledComponent: Story = {
-    decorators: [
-        (Story) => (
-            <div style={{ maxWidth: '400px' }}>
-                <Story />
-            </div>
-        ),
-    ],
-    args: {
-        placeholder: 'name',
-    },
-    play: async ({ canvasElement }) => {
-        const canvas = within(canvasElement);
+  decorators: [
+    (Story) => (
+      <div style={{ maxWidth: '400px' }}>
+        <Story />
+      </div>
+    ),
+  ],
+  args: {
+    placeholder: 'name',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
 
-        const emailInput = canvas.getByPlaceholderText('name');
+    const emailInput = canvas.getByPlaceholderText('name');
 
-        await userEvent.type(emailInput, 'example-email@email.com', {
-            delay: 100,
-        });
-    },
+    await userEvent.type(emailInput, 'example-email@email.com', {
+      delay: 100,
+    });
+  },
 };

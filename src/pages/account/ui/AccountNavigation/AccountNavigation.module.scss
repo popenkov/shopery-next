@@ -55,6 +55,28 @@ h2.AccountNavigationTitle {
   gap: 12px;
   padding: 16px 20px;
 
+  &.active {
+    background-color: var(--green-gray-50);
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -1px;
+      width: 3px;
+      height: 100%;
+      background-color: var(--primary);
+      content: '';
+    }
+
+    .AccountNavigationIcon {
+      color: var(--monochrome-900);
+    }
+
+    .AccountNavigationText {
+      color: var(--monochrome-900);
+    }
+  }
+
   @media (hover: hover) {
     &:hover {
       background-color: var(--green-gray-50);

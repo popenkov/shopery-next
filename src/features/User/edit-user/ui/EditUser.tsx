@@ -1,10 +1,11 @@
 'use client';
 import { FC } from 'react';
 import cn from 'classnames';
+
 import { useAppDispatch } from '@/app/lib/store/hooks';
+import { Text } from '@/shared/ui/Text';
 
 import cls from './EditUser.module.scss';
-import { Text } from '@/shared/ui/Text';
 
 type Props = {
   className?: string;

@@ -9,7 +9,7 @@ export const ACCOUNT_NAVIGATION_DATA: TLink[] = [
   {
     icon: 'OrderHistoryIcon',
     title: 'Order History',
-    path: '/account/orders',
+    path: '/account/history',
   },
   {
     icon: 'HeartStrokeIcon',

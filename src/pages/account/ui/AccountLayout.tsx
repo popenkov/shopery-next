@@ -1,9 +1,10 @@
 import React, { ReactNode } from 'react';
 
+import { AppRouteNames } from '@/shared/model';
+import { Breadcrumbs } from '@/shared/ui/Breadcrumps';
+
 import cls from './AccountLayout.module.scss';
 import { AccountNavigation } from './AccountNavigation';
-import { Breadcrumbs } from '@/shared/ui/Breadcrumps';
-import { AppRouteNames } from '@/shared/model';
 
 export default function AccountLayout({
   children,

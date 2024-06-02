@@ -4,13 +4,13 @@ import { fn } from '@storybook/test';
 import { CategoriesButton } from '.';
 
 const meta = {
-    title: 'shared/CategoriesButton',
-    component: CategoriesButton,
-    parameters: {
-        layout: 'centered',
-    },
-    args: { onClick: fn() },
-    tags: ['autodocs'],
+  title: 'shared/CategoriesButton',
+  component: CategoriesButton,
+  parameters: {
+    layout: 'centered',
+  },
+  args: { onClick: fn() },
+  tags: ['autodocs'],
 } satisfies Meta<typeof CategoriesButton>;
 
 export default meta;

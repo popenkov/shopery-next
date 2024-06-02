@@ -1,7 +1,6 @@
 'use client';
 
 import { ChangeEvent, FC, useCallback, useState } from 'react';
-
 import cn from 'classnames';
 
 import { Button } from 'shared/ui/Buttons';

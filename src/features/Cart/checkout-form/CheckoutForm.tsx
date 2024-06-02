@@ -13,7 +13,6 @@ import { TextArea } from 'shared/ui/TextArea';
 import cls from './CheckoutForm.module.scss';
 import { COUNTRIES_LIST, STATES_LIST } from './countries-list';
 
-
 type FormData = {
   firstName: string;
   lastName: string;

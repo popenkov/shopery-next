@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { DetailedHTMLProps, FC, HTMLAttributes, useState } from 'react';
 import cn from 'classnames';
 import Link from 'next/link';

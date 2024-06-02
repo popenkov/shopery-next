@@ -1,12 +1,13 @@
 import { FC } from 'react';
+import Image from 'next/image';
+
+import { getRouteHome } from '@/shared/lib/constants';
+import { AppRouteNames } from '@/shared/model';
+import { AppLink } from '@/shared/ui/AppLink';
+import { Breadcrumbs } from '@/shared/ui/Breadcrumps';
+import { Text } from '@/shared/ui/Text';
 
 import cls from './NotFoundPage.module.scss';
-import { Text } from '@/shared/ui/Text';
-import { AppLink } from '@/shared/ui/AppLink';
-import { getRouteHome } from '@/shared/lib/constants';
-import Image from 'next/image';
-import { Breadcrumbs } from '@/shared/ui/Breadcrumps';
-import { AppRouteNames } from '@/shared/model';
 
 const NotFoundPage: FC = () => {
   const crumbs: AppRouteNames[] = [AppRouteNames.HOME, AppRouteNames.NOT_FOUND];

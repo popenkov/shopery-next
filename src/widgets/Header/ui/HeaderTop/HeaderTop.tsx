@@ -1,11 +1,9 @@
-
 import { FC } from 'react';
 import Link from 'next/link';
 
 import { CurrencySwitcher } from 'features/CurrencySwitcher';
 import { LangSwitcher } from 'features/LangSwitcher';
 import { Location } from 'entities/Location';
-
 
 import cls from './HeaderTop.module.scss';
 

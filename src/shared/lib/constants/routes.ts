@@ -3,6 +3,7 @@ import { AppRouteNames, AppRoutesProps } from '@/shared/model';
 const getRouteHome = () => '/';
 const getRouteCatalog = () => '/catalog';
 const getRouteProduct = () => '/product/:id';
+const getRouteOrderHistory = () => '/account/history';
 
 export const PAGE_ROUTES: AppRoutesProps[] = [
   {
@@ -15,4 +16,4 @@ export const PAGE_ROUTES: AppRoutesProps[] = [
   },
 ];
 
-export { getRouteHome, getRouteCatalog, getRouteProduct };
+export { getRouteHome, getRouteCatalog, getRouteProduct, getRouteOrderHistory };
