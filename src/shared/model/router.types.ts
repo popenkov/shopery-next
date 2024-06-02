@@ -7,6 +7,10 @@ export enum AppRouteNames {
   CHECKOUT = 'Checkout',
   NOT_FOUND = '404 Error Page',
   FAQ = 'faqs',
+  ACCOUNT_DASHBOARD = 'Dashboard',
+  ACCOUNT_HISTORY = 'Order history',
+  ORDER_DETAILS = 'Order details',
+  SETTINGS = 'Settings',
 }
 
 export type AppRoutesProps = {

@@ -1,18 +1,18 @@
 'use client';
 
-import { FC, useMemo, useState } from 'react';
+import { FC } from 'react';
 import cn from 'classnames';
-import { AnimatePresence } from 'framer-motion';
+import { Text } from '@/shared/ui/Text';
+import { ORDERS_LIST_TITLES, ORDERS_PREVIEW_AMOUNT } from './constants';
 
 import { getRouteOrderHistory } from '@/shared/lib/constants';
 import { AppLink } from '@/shared/ui/AppLink';
-import { Text } from '@/shared/ui/Text';
 
 import { TUserOrderPreview } from '../../model/types';
 
-import { ORDERS_LIST_TITLES, ORDERS_PREVIEW_AMOUNT } from './constants';
 import { UserOrder } from './UserOrder';
 import cls from './UserOrders.module.scss';
+i;
 
 type Props = {
   data: TUserOrderPreview[];
@@ -20,18 +20,7 @@ type Props = {
   isPreview?: boolean;
 };
 
-export const UserOrders: FC<Props> = ({ data, className, isPreview }) => {
-  const [areAllOrdersShown, setAreAllOrdersShown] = useState(false);
-
-  const orders = useMemo(() => {
-    const slicedData = data.slice(0, ORDERS_PREVIEW_AMOUNT);
-    return isPreview ? slicedData : data;
-  }, [areAllOrdersShown]);
-
-  const handleShowAllClick = () => {
-    setAreAllOrdersShown(true);
-  };
-
+export const UserOrders: FC<Props> = ({ className, isPreview, data }) => {
   const componentTitleText = isPreview ? 'Recent Order History' : 'Order History';
 
   return (
@@ -41,12 +30,7 @@ export const UserOrders: FC<Props> = ({ data, className, isPreview }) => {
           {componentTitleText}
         </Text>
         {isPreview && (
-          <AppLink
-            href={getRouteOrderHistory()}
-            onClick={handleShowAllClick}
-            theme="text"
-            size="large"
-          >
+          <AppLink href={getRouteOrderHistory()} theme="text" size="large">
             Show All
           </AppLink>
         )}
@@ -62,11 +46,9 @@ export const UserOrders: FC<Props> = ({ data, className, isPreview }) => {
           })}
         </div>
         <ul className={cls.UserOrdersOrders}>
-          <AnimatePresence>
-            {orders.map((order) => {
-              return <UserOrder order={order} key={order.id} />;
-            })}
-          </AnimatePresence>
+          {data.slice(0, ORDERS_PREVIEW_AMOUNT).map((order) => {
+            return <UserOrder order={order} key={order.id} />;
+          })}
         </ul>
       </div>
     </div>
