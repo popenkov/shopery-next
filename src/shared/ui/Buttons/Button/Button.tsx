@@ -3,7 +3,14 @@ import cn from 'classnames';
 
 import style from './Button.module.scss';
 
-type ButtonTheme = 'primary' | 'ghost' | 'secondary' | 'outlined' | 'gray' | 'text';
+type ButtonTheme =
+  | 'primary'
+  | 'ghost'
+  | 'secondary'
+  | 'outlined'
+  | 'gray'
+  | 'text'
+  | 'monochrome-light';
 
 type ButtonSize = 'small' | 'normal' | 'large';
 

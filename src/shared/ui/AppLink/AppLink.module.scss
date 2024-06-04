@@ -98,4 +98,14 @@
       }
     }
   }
+
+  &.monochrome-light {
+    color: var(--monochrome-300);
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--monochrome-500);
+      }
+    }
+  }
 }

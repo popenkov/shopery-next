@@ -7,6 +7,8 @@ const getRouteDashboard = () => '/account/dashboard';
 const getRouteOrderHistory = () => '/account/history';
 const getRouteOrderDetails = () => '/account/order/:id';
 const getRouteAccountSettings = () => '/account/settings';
+const getRouteCheckout = () => '/checkout';
+const getRouteCart = () => '/checkout';
 
 export const PAGE_ROUTES: AppRoutesProps[] = [
   {
@@ -33,6 +35,21 @@ export const PAGE_ROUTES: AppRoutesProps[] = [
     href: getRouteOrderDetails(),
     name: AppRouteNames.ORDER_DETAILS,
   },
+  {
+    href: getRouteCheckout(),
+    name: AppRouteNames.CHECKOUT,
+  },
+  {
+    href: getRouteCart(),
+    name: AppRouteNames.CART,
+  },
 ];
 
-export { getRouteHome, getRouteCatalog, getRouteProduct, getRouteOrderHistory };
+export {
+  getRouteHome,
+  getRouteCatalog,
+  getRouteProduct,
+  getRouteOrderHistory,
+  getRouteCheckout,
+  getRouteCart,
+};

@@ -4,7 +4,14 @@ import Link, { LinkProps } from 'next/link';
 
 import style from './AppLink.module.scss';
 
-type AppLinkTheme = 'primary' | 'ghost' | 'secondary' | 'outlined' | 'gray' | 'text';
+type AppLinkTheme =
+  | 'primary'
+  | 'ghost'
+  | 'secondary'
+  | 'outlined'
+  | 'gray'
+  | 'text'
+  | 'monochrome-light';
 
 type AppLinkSize = 'small' | 'normal' | 'large';
 

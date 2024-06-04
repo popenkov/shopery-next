@@ -64,6 +64,17 @@
     }
   }
 
+  &.monochrome-light {
+    color: var(--monochrome-700);
+    background-color: var(--monochrome-50);
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--monochrome-200);
+      }
+    }
+  }
+
   &.small {
     @include body-tiny(600);
 

@@ -1,4 +1,5 @@
-@import '@/shared/styles/breakpoints';
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/container';
 @import '@/shared/styles/mixins/flexbox';
 @import '@/shared/styles/mixins/box';
 @import '@/shared/styles/mixins/text-styles';
@@ -6,46 +7,145 @@
 .ProductCart {
   $block-name: &; // #{$block-name}__element
 
-  @include flex-center-vertical;
+  display: grid;
+  grid-template-columns: 1fr minmax(194px, 317px) minmax(108px, 187px) 194px 22px;
+  grid-template-columns: 6fr 1.6fr 2.8fr 1.7fr 22px;
+  gap: 20px;
+  align-items: center;
 
-  gap: 8px;
-  width: 100%;
-}
+  @media screen and (max-width: $df-screen-ti) {
+    grid-template-columns: 27% 14% 126px 14% 22px;
+    justify-content: space-between;
+  }
 
-.ProductCartImage {
-  width: 100%;
-  max-width: 120px;
-  max-height: 100px;
-  object-fit: contain;
-}
+  @media screen and (max-width: $df-screen-m) {
+    grid-template-areas: 'info info' 'price price' 'quantity quantity' 'subtotal actions';
+    grid-template-columns: auto 1fr;
+  }
 
-.ProductCartDescription {
-  flex-grow: 1;
-}
+  &Info {
+    @include flex-center-vertical;
 
-.ProductCartLink {
-  text-decoration: none;
-}
+    gap: 12px;
 
-.ProductCartTitle {
-  @include body-s;
+    @media screen and (max-width: $df-screen-ti) {
+      flex-direction: column;
+      gap: 6px;
+      align-items: flex-start;
+    }
 
-  margin: 0;
-  color: var(--front-primary);
-}
+    @media screen and (max-width: $df-screen-m) {
+      grid-area: info;
+    }
+  }
 
-.ProductCartAmount {
-  @include body-s;
+  &Photo {
+    @include box(100px);
 
-  margin: 0;
-  color: var(--monochrome-500);
-}
+    object-fit: contain;
 
-.ProductCartSeparator {
-  padding: 0 5px;
-}
+    @media screen and (max-width: $df-screen-m) {
+      width: 100%;
+      height: auto;
+      max-height: 250px;
+    }
 
-.ProductCartPriceValue {
-  color: var(--monochrome-900);
-  font-weight: 600;
+    img {
+      object-fit: contain;
+    }
+  }
+
+  &Price {
+    @include flex-center-vertical;
+
+    gap: 4px;
+    margin: 0;
+
+    @media screen and (max-width: $df-screen-t) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @media screen and (max-width: $df-screen-m) {
+      flex-direction: row;
+      grid-area: price;
+    }
+  }
+
+  &Quantity {
+    width: fit-content;
+
+    @media screen and (max-width: $df-screen-m) {
+      display: flex;
+      grid-area: quantity;
+      gap: 10px;
+      align-items: center;
+    }
+  }
+
+  &PriceNew {
+    color: var(--monochrome-900);
+  }
+
+  &PriceOld {
+    color: var(--monochrome-400);
+    text-decoration-line: line-through;
+  }
+
+  &Actions {
+    @include flex-center-vertical;
+
+    gap: 10px;
+    justify-content: space-between;
+
+    @media screen and (max-width: $df-screen-t) {
+      grid-area: actions;
+    }
+
+    @media screen and (max-width: $df-screen-m) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+
+  &Subtotal {
+    display: flex;
+    gap: 10px;
+
+    @media screen and (max-width: $df-screen-t) {
+      flex-direction: column;
+    }
+
+    @media screen and (max-width: $df-screen-m) {
+      flex-direction: row;
+      grid-area: subtotal;
+    }
+  }
+
+  &DeleteButton {
+    @media screen and (max-width: $df-screen-m) {
+      grid-area: actions;
+    }
+  }
+
+  &KeyMobile {
+    display: none;
+
+    @media screen and (max-width: $df-screen-ti) {
+      display: block;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+  }
+
+  &KeyMobileAmount {
+    display: none;
+
+    @media screen and (max-width: $df-screen-m) {
+      display: block;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+  }
 }

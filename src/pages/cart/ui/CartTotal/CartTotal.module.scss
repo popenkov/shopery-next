@@ -1,0 +1,47 @@
+@import '@/shared/styles/mixins/container';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/_breakpoints';
+
+.CartTotal {
+  $block-name: &; // #{$block-name}__element
+
+  @include flex-column;
+
+  gap: 7px;
+  padding: 24px;
+  border: 1px solid var(--monochrome-100);
+  border-radius: 8px;
+}
+
+.CartTotalTitle {
+  margin: 0;
+}
+
+.CartTotalValues {
+  @include flex-column;
+}
+
+.CartTotalRow {
+  @include flex-center-vertical;
+
+  gap: 12px;
+  justify-content: space-between;
+  padding: 12px 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--monochrome-100);
+  }
+}
+
+.CartTotalKey {
+  color: var(--monochrome-700);
+}
+
+.CartTotalButton {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.CartTotalValues + .CartTotalButton {
+  margin-top: 14px;
+}

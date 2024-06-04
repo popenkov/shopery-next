@@ -11,6 +11,7 @@ export enum AppRouteNames {
   ACCOUNT_HISTORY = 'Order history',
   ORDER_DETAILS = 'Order details',
   SETTINGS = 'Settings',
+  CART = 'Shopping cart',
 }
 
 export type AppRoutesProps = {

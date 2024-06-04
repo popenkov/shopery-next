@@ -9,7 +9,7 @@ import {
   selectTotalAmount,
   selectTotalPrice,
 } from '@/entities/Cart/model/selectors/cart';
-import { ProductCart } from '@/entities/Product';
+import { ProductCartPreview } from '@/entities/Product';
 import { RemoveFromCart } from '@/features/Cart/remove-from-cart';
 import { getFormattedPrice } from '@/shared/lib/utils';
 import { Drawer } from '@/shared/ui/Drawer/Drawer';
@@ -44,7 +44,7 @@ export const CartAside = () => {
         <div className={cls.cartAsideItems}>
           {cartItems.map((item) => {
             return (
-              <ProductCart
+              <ProductCartPreview
                 className={cls.cartAsideItem}
                 data={item}
                 key={item.id}
