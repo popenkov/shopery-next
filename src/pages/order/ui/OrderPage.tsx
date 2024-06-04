@@ -7,10 +7,9 @@ import cls from './OrderPage.module.scss';
 
 import { OrderPageHeader } from './OrderPageHeader';
 import { OrderProducts } from './OrderProducts';
-import { OrderPageAddresses } from './OrderPageAddresses';
+
 import { OrderPagePayment } from './OrderPagePayment';
 import { OrderPageStatus } from './OrderPageStatus';
-import { UserAddress } from '@/entities/User/ui/UserAddress/UserAddress';
 import { OrderPageAddress } from './OrderPageAddress';
 
 export const OrderPage: FC<{ params: { slug: string } }> = ({ params }) => {
