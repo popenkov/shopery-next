@@ -51,6 +51,7 @@ export const Subscription: FC<Props> = ({ variant = 'transparent' }) => {
             placeholder="Your email address"
             value={searchValue}
             onChange={getEmailAddress}
+            className={cls.input}
           />
 
           <Button className={cls.button} size="large" onClick={handleSearchButtonClick}>

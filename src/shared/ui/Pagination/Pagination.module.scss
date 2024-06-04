@@ -21,6 +21,10 @@
   transition: color var(--transition);
 }
 
+.pageButton {
+  @include button-reset;
+}
+
 .page {
   @include button-reset;
   @include box(36px);
@@ -36,14 +40,20 @@
     border-color var(--transition);
 
   &:hover {
-    color: var(--front-primary-inversed);
     background-color: var(--primary);
     border-color: var(--primary);
+
+    .pageButton {
+      color: var(--front-primary-inversed);
+    }
   }
 
   &.active {
-    color: var(--front-primary-inversed);
     background-color: var(--primary);
+
+    .pageButton {
+      color: var(--front-primary-inversed);
+    }
   }
 
   &:disabled {
@@ -51,10 +61,6 @@
     border-color: var(--monochrome-50);
     pointer-events: none;
   }
-}
-
-.pageButton {
-  @include button-reset;
 }
 
 .dots {

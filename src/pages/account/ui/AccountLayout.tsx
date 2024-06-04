@@ -5,6 +5,7 @@ import { Breadcrumbs } from '@/shared/ui/Breadcrumps';
 
 import cls from './AccountLayout.module.scss';
 import { AccountNavigation } from './AccountNavigation';
+import { Subscription } from '@/features/Subscription';
 
 export default function AccountLayout({
   children,
@@ -21,6 +22,7 @@ export default function AccountLayout({
         <AccountNavigation className={cls.AccountAside} />
         {children}
       </main>
+      <Subscription variant="gray" />
     </>
   );
 }

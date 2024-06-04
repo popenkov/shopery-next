@@ -1,6 +1,6 @@
 'use client';
 
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import cn from 'classnames';
 import { Text } from '@/shared/ui/Text';
 import { ORDERS_LIST_TITLES, ORDERS_PREVIEW_AMOUNT } from './constants';
@@ -12,15 +12,15 @@ import { TUserOrderPreview } from '../../model/types';
 
 import { UserOrder } from './UserOrder';
 import cls from './UserOrders.module.scss';
-i;
 
 type Props = {
   data: TUserOrderPreview[];
   className?: string;
   isPreview?: boolean;
+  actions?: ReactNode;
 };
 
-export const UserOrders: FC<Props> = ({ className, isPreview, data }) => {
+export const UserOrders: FC<Props> = ({ className, isPreview, data, actions }) => {
   const componentTitleText = isPreview ? 'Recent Order History' : 'Order History';
 
   return (
@@ -46,11 +46,12 @@ export const UserOrders: FC<Props> = ({ className, isPreview, data }) => {
           })}
         </div>
         <ul className={cls.UserOrdersOrders}>
-          {data.slice(0, ORDERS_PREVIEW_AMOUNT).map((order) => {
+          {data.map((order) => {
             return <UserOrder order={order} key={order.id} />;
           })}
         </ul>
       </div>
+      {actions && <div className={cls.UserOrderFooter}>{actions}</div>}
     </div>
   );
 };

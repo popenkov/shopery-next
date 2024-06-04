@@ -6,7 +6,7 @@ import { getUserOrderById } from '@/entities/User/api/getUserOrderById';
 import cls from './OrderPage.module.scss';
 
 export const OrderPage: FC<{ params: { slug: string } }> = ({ params }) => {
-  const data = getUserOrderById(params.slug);
+  const data = getUserOrderById(params?.slug || '1');
   return (
     <div className={cls.OrderPage}>
       <div className={cls.OrderPageHeader}></div>

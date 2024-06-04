@@ -8,9 +8,10 @@ import { EditAddress } from '@/features/User/edit-address';
 import { EditUser } from '@/features/User/edit-user';
 
 import cls from './DashboardPage.module.scss';
+import { ORDERS_PREVIEW_AMOUNT } from '@/entities/User/ui/UserOrders/constants';
 
 export const DashboardPage: FC = () => {
-  const orders = getUserOrders();
+  const orders = getUserOrders().slice(0, ORDERS_PREVIEW_AMOUNT);
   return (
     <div className={cls.DashboardPage}>
       <UserCard actions={<EditUser />} className={cls.DashboardPageUser} />

@@ -6,6 +6,7 @@
   @include flex-column;
 
   gap: 2px;
+  width: 100%;
   border: 1px solid var(--monochrome-50);
   border-radius: 8px;
 }
@@ -48,6 +49,10 @@
   text-transform: uppercase;
 }
 
+.UserOrdersMain {
+  width: 100%;
+}
+
 .UserOrdersOrders {
   padding: 12px 0 23px;
 }
@@ -75,4 +80,8 @@
 
 .UserOrdersItemLink {
   color: var(--primary);
+}
+
+.UserOrderFooter {
+  padding-bottom: 30px;
 }

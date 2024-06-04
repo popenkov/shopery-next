@@ -44,13 +44,13 @@ export const Input = memo(
     const uniqueId = useId();
 
     return (
-      <div className={cls.inputContainer}>
+      <div className={cn(cls.inputContainer, className)}>
         {label && (
           <label htmlFor={uniqueId} className={cls.inputLabel}>
             {label}
           </label>
         )}
-        <div className={cn(cls.inputWrapper, className)}>
+        <div className={cn(cls.inputWrapper)}>
           <input
             id={uniqueId}
             ref={ref}
