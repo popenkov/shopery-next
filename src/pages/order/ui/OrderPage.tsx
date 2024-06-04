@@ -5,13 +5,30 @@ import { getUserOrderById } from '@/entities/User/api/getUserOrderById';
 
 import cls from './OrderPage.module.scss';
 
+import { OrderPageHeader } from './OrderPageHeader';
+import { OrderProducts } from './OrderProducts';
+import { OrderPageAddresses } from './OrderPageAddresses';
+import { OrderPagePayment } from './OrderPagePayment';
+import { OrderPageStatus } from './OrderPageStatus';
+import { UserAddress } from '@/entities/User/ui/UserAddress/UserAddress';
+import { OrderPageAddress } from './OrderPageAddress';
+
 export const OrderPage: FC<{ params: { slug: string } }> = ({ params }) => {
-  const data = getUserOrderById(params?.slug || '1');
+  const { date, amount, items, status, address } = getUserOrderById(params?.slug || '1');
   return (
     <div className={cls.OrderPage}>
-      <div className={cls.OrderPageHeader}></div>
-      <div className={cls.OrderPageInfo}></div>
+      <OrderPageHeader date={date} amount={amount} />
+
+      <div className={cls.OrderPageInfo}>
+        <div>
+          <OrderPageAddress title="Billing address" data={address} />
+          <OrderPageAddress title="Shipping address" data={address} />
+        </div>
+        <OrderPagePayment />
+        <OrderPageStatus status={status} />
+      </div>
       <div className={cls.OrderPageItems}>{/* todo перенести похожую таблицу из дашборда */}</div>
+      <OrderProducts products={items} className={cls.OrderPageItems} />
     </div>
   );
 };

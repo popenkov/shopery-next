@@ -1,6 +1,15 @@
 @import '@/shared/styles/mixins/container';
 @import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/text-styles';
 
 .OrderPage {
-  display: flex;
+  @include flex-column;
+
+  width: 100%;
+  border: 1px solid var(--monochrome-100);
+  border-radius: 8px;
+}
+
+.OrderPageInfo {
+  display: grid;
 }

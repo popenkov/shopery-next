@@ -1,0 +1,22 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/text-styles';
+
+.OrderProductsHeader {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  padding: 12px 20px;
+  background-color: var(--monochrome-50);
+  border-bottom: 1px solid var(--monochrome-100);
+
+  @media screen and (max-width: $df-screen-t) {
+    display: none;
+  }
+}
+
+.OrderProductsColumnTitle {
+  @include body-s(500);
+
+  color: var(--monochrome-700);
+  letter-spacing: 3%;
+  text-transform: uppercase;
+}

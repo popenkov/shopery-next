@@ -19,8 +19,9 @@ export type TUserOrderPreview = {
   status: 'Processing' | 'On the way' | 'Completed';
 };
 
-type TUserOrderItem = {
+export type TUserOrderItem = {
   id: number;
+  path: string;
   img: string;
   name: string;
   price: number;
@@ -30,6 +31,8 @@ type TUserOrderItem = {
 
 export type TUserOrder = {
   id: number;
+  amount: number;
+  date: string;
   paymentMethod: 'PayPal';
   items: TUserOrderItem[];
   subtotal: number;

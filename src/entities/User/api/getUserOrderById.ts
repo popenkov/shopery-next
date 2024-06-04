@@ -2,10 +2,14 @@ import { TUserOrder } from '../model/types';
 
 const ORDER_DATA: TUserOrder = {
   id: 1,
+  date: 'April 24, 2021',
+  amount: 3,
+
   paymentMethod: 'PayPal',
   items: [
     {
       id: 1,
+      path: '#',
       img: '/images/product-small--red-capsicum.jpg',
       name: 'Red Capsicum',
       price: 14,
@@ -14,6 +18,7 @@ const ORDER_DATA: TUserOrder = {
     },
     {
       id: 2,
+      path: '#',
       img: '/images/product-small--green-capsicum.jpg',
       name: 'Green Capsicum',
       price: 14,
@@ -22,6 +27,7 @@ const ORDER_DATA: TUserOrder = {
     },
     {
       id: 3,
+      path: '#',
       img: '/images/product-green-chilli.jpg',
       name: 'Green Chili',
       price: 26.7,
