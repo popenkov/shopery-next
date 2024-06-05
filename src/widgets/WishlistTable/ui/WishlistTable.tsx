@@ -1,5 +1,6 @@
 import { FC } from 'react';
 
+import { AddToCartFromWishlist } from '@/features/Cart';
 import { RemoveFromFavorites } from 'features/Product';
 import { getWishlistItems } from 'entities/Product/';
 import { ProductWishlist } from 'entities/Product/';
@@ -7,7 +8,6 @@ import { ProductWishlist } from 'entities/Product/';
 import cls from './WishlistTable.module.scss';
 import { WishlistTableFooter } from './WishlistTableFooter';
 import { WishlistTableHeader } from './WishlistTableHeader';
-import { AddToCartFromWishlist } from '@/features/Cart';
 
 export const WishlistTable: FC = () => {
   const { items } = getWishlistItems();

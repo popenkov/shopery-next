@@ -1,10 +1,12 @@
 import { FC } from 'react';
-import { OrderProductsHeader } from '../OrderProductsHeader';
-
 import cn from 'classnames';
-import cls from './OrderProducts.module.scss';
+
 import { ProductOrder } from '@/entities/Product/ui/ProductOrder';
 import { TUserOrderItem } from '@/entities/User/model/types';
+
+import { OrderProductsHeader } from '../OrderProductsHeader';
+
+import cls from './OrderProducts.module.scss';
 
 type Props = {
   products: TUserOrderItem[];

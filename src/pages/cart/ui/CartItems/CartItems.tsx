@@ -1,14 +1,14 @@
 'use client';
 
 import React, { FC } from 'react';
-
 import cn from 'classnames';
 
-import cls from './CartItems.module.scss';
 import { useAppSelector } from '@/app/lib/store/hooks';
 import { selectCart } from '@/entities/Cart';
 import { getRouteCart, getRouteCatalog } from '@/shared/lib/constants';
 import { AppLink } from '@/shared/ui/AppLink';
+
+import cls from './CartItems.module.scss';
 
 type Props = {
   className?: string;
@@ -16,6 +16,7 @@ type Props = {
 
 export const CartItems: FC<Props> = ({ className }) => {
   const cartItems = useAppSelector(selectCart);
+  console.log(cartItems);
   return (
     <div className={cn('cart-page__items', className)}>
       <div className="cart-page__header">

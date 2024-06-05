@@ -1,13 +1,13 @@
 'use client';
 
 import { ChangeEvent, FC, useCallback, useState } from 'react';
-
 import cn from 'classnames';
-import { Input } from '@/shared/ui/Input';
+
 import { Button } from '@/shared/ui/Buttons';
+import { Input } from '@/shared/ui/Input';
+import { Text } from '@/shared/ui/Text';
 
 import cls from './ApplyCoupon.module.scss';
-import { Text } from '@/shared/ui/Text';
 
 type Props = {
   className?: string;

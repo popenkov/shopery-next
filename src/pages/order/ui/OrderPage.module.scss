@@ -13,3 +13,13 @@
 .OrderPageInfo {
   display: grid;
 }
+
+.OrderPageAddresses {
+  display: flex;
+  border: 1px solid var(--monochrome-100);
+  border-radius: 6px;
+}
+
+.OrderPageAddresse {
+  border-right: 1px solid var(--monochrome-100);
+}

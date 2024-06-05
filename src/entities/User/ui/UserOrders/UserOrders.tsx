@@ -2,14 +2,15 @@
 
 import { FC, ReactNode } from 'react';
 import cn from 'classnames';
-import { Text } from '@/shared/ui/Text';
-import { ORDERS_LIST_TITLES, ORDERS_PREVIEW_AMOUNT } from './constants';
+
 
 import { getRouteOrderHistory } from '@/shared/lib/constants';
 import { AppLink } from '@/shared/ui/AppLink';
+import { Text } from '@/shared/ui/Text';
 
 import { TUserOrderPreview } from '../../model/types';
 
+import { ORDERS_LIST_TITLES } from './constants';
 import { UserOrder } from './UserOrder';
 import cls from './UserOrders.module.scss';
 

@@ -1,13 +1,13 @@
 import { FC } from 'react';
 
+import { ApplyCoupon } from '@/features/Cart';
 import { AppRouteNames } from '@/shared/model';
 import { Breadcrumbs } from '@/shared/ui/Breadcrumps';
 import { Text } from 'shared/ui/Text';
 
-import cls from './CartPage.module.scss';
-import { ApplyCoupon } from '@/features/Cart';
-import { CartTotal } from './CartTotal/CartTotal';
 import { CartItems } from './CartItems';
+import cls from './CartPage.module.scss';
+import { CartTotal } from './CartTotal/CartTotal';
 
 const CartPage: FC = () => {
   const crumbs: AppRouteNames[] = [AppRouteNames.HOME, AppRouteNames.CART];

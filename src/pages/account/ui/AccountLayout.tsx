@@ -1,11 +1,11 @@
 import React, { ReactNode } from 'react';
 
+import { Subscription } from '@/features/Subscription';
 import { AppRouteNames } from '@/shared/model';
 import { Breadcrumbs } from '@/shared/ui/Breadcrumps';
 
 import cls from './AccountLayout.module.scss';
 import { AccountNavigation } from './AccountNavigation';
-import { Subscription } from '@/features/Subscription';
 
 export default function AccountLayout({
   children,

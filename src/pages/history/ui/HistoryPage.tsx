@@ -6,7 +6,6 @@ import { UserOrders } from '@/entities/User/ui/UserOrders/UserOrders';
 import { Pagination } from '@/shared/ui/Pagination';
 
 import cls from './HistoryPage.module.scss';
-import { Subscription } from '@/features/Subscription';
 
 export const HistoryPage: FC = () => {
   const orders = getUserOrders();

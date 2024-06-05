@@ -1,11 +1,12 @@
 import { FC } from 'react';
-
 import cn from 'classnames';
-import cls from './OrderPageHeader.module.scss';
-import { Text } from '@/shared/ui/Text';
-import { getWordDeclination } from '@/shared/lib/utils';
+
 import { getRouteOrderHistory } from '@/shared/lib/constants';
+import { getWordDeclination } from '@/shared/lib/utils';
 import { AppLink } from '@/shared/ui/AppLink';
+import { Text } from '@/shared/ui/Text';
+
+import cls from './OrderPageHeader.module.scss';
 
 type Props = {
   date: string;

@@ -2,7 +2,6 @@
 import { FC } from 'react';
 import cn from 'classnames';
 
-import { useAppDispatch } from '@/app/lib/store/hooks';
 import { Text } from '@/shared/ui/Text';
 
 import cls from './EditUser.module.scss';
@@ -12,7 +11,7 @@ type Props = {
 };
 
 export const EditUser: FC<Props> = ({ className }) => {
-  const dispatch = useAppDispatch();
+  // const dispatch = useAppDispatch();
   const handleEditUserButtonClick = () => {
     // dispatch(editUser({ id }));
     console.log('Edit user');

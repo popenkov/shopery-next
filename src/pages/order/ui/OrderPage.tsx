@@ -4,13 +4,12 @@ import { FC } from 'react';
 import { getUserOrderById } from '@/entities/User/api/getUserOrderById';
 
 import cls from './OrderPage.module.scss';
-
+import { OrderPageAddress } from './OrderPageAddress';
 import { OrderPageHeader } from './OrderPageHeader';
-import { OrderProducts } from './OrderProducts';
-
 import { OrderPagePayment } from './OrderPagePayment';
 import { OrderPageStatus } from './OrderPageStatus';
-import { OrderPageAddress } from './OrderPageAddress';
+import { OrderProducts } from './OrderProducts';
+
 
 export const OrderPage: FC<{ params: { slug: string } }> = ({ params }) => {
   const { date, amount, items, status, address } = getUserOrderById(params?.slug || '1');
@@ -19,8 +18,12 @@ export const OrderPage: FC<{ params: { slug: string } }> = ({ params }) => {
       <OrderPageHeader date={date} amount={amount} />
 
       <div className={cls.OrderPageInfo}>
-        <div>
-          <OrderPageAddress title="Billing address" data={address} />
+        <div className={cls.OrderPageAddresses}>
+          <OrderPageAddress
+            title="Billing address"
+            className={cls.OrderPageAddresse}
+            data={address}
+          />
           <OrderPageAddress title="Shipping address" data={address} />
         </div>
         <OrderPagePayment />

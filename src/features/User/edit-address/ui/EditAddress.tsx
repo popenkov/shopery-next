@@ -2,7 +2,6 @@
 import { FC } from 'react';
 import cn from 'classnames';
 
-import { useAppDispatch } from '@/app/lib/store/hooks';
 import { Text } from '@/shared/ui/Text';
 
 import cls from './EditAddress.module.scss';
@@ -12,7 +11,7 @@ type Props = {
 };
 
 export const EditAddress: FC<Props> = ({ className }) => {
-  const dispatch = useAppDispatch();
+  // const dispatch = useAppDispatch();
   const handleEditAddressButtonClick = () => {
     // dispatch(EditAddress({ id }));
     console.log('Edit address');

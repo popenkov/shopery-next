@@ -1,12 +1,11 @@
 import { FC } from 'react';
-
 import cn from 'classnames';
 
-import cls from './CartTotal.module.scss';
-import { Text } from '@/shared/ui/Text';
-import { Button } from '@/shared/ui/Buttons';
-import { AppLink } from '@/shared/ui/AppLink';
 import { getRouteCheckout } from '@/shared/lib/constants';
+import { AppLink } from '@/shared/ui/AppLink';
+import { Text } from '@/shared/ui/Text';
+
+import cls from './CartTotal.module.scss';
 
 type Props = {
   className?: string;

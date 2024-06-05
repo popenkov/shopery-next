@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { getFormattedPrice } from 'shared/lib/utils';
-import { Tag } from 'shared/ui/Tag';
 import { Text } from 'shared/ui/Text';
 
 import { TProduct } from '../..';
@@ -18,7 +17,7 @@ interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDi
 }
 
 export const ProductCart: FC<Props> = ({ data, className, actions }) => {
-  const { img, title, path, price, priceOld, stock } = data;
+  const { img, title, path, price } = data;
   return (
     <div className={cn(cls.ProductCart, className)}>
       <div className={cls.ProductCartInfo}>

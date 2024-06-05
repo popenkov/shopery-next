@@ -6,7 +6,7 @@ type Props = {
 };
 
 export const OrderPageStatus: FC<Props> = memo(({ status }) => {
-  return <div className={cls.OrderPageStatus}>OrderPageStatus</div>;
+  return <div className={cls.OrderPageStatus}>{status}</div>;
 });
 
 OrderPageStatus.displayName = 'OrderPageStatus';
