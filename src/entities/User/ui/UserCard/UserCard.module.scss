@@ -1,0 +1,31 @@
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+
+.UserCard {
+  @include flex-column-center;
+
+  gap: 2px;
+  padding: 32px;
+  border: 1px solid var(--monochrome-50);
+  border-radius: 8px;
+}
+
+.UserCardPhotoWrapper {
+  @include box(120px);
+
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.UserCardPhotoWrapper + .UserCardName {
+  margin-top: 6px;
+}
+
+.UserCardRole {
+  color: var(--monochrome-500);
+}
+
+.UserCardRole + .UserCardActions {
+  margin-top: 7px;
+}

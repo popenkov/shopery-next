@@ -1,0 +1,1 @@
+export { ThumbSlider } from './ThumbSlider';

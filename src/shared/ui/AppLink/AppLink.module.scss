@@ -1,5 +1,5 @@
-@import '@/shared/styles/mixins/text-styles.scss';
-@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/text-styles';
+@import '@/shared/styles/mixins/flexbox';
 
 .link {
   @include flex-center-vertical;
@@ -95,6 +95,16 @@
     @media (hover: hover) {
       &:hover {
         color: var(--hard-primary);
+      }
+    }
+  }
+
+  &.monochrome-light {
+    color: var(--monochrome-300);
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--monochrome-500);
       }
     }
   }

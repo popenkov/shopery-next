@@ -1,9 +1,9 @@
-@import '@/shared/styles/mixins/flexbox.scss';
-@import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
 @import '@/shared/styles/breakpoints';
 
 .navigation {
-  @media screen and (max-width: $screen-dxl) {
+  @media screen and (max-width: $df-screen-dl) {
     @include flex-center-vertical;
 
     position: absolute;
@@ -13,8 +13,8 @@
     gap: 30px;
   }
 
-  @media screen and (max-width: $screen-tl) {
-    display: none !important;
+  @media screen and (max-width: $df-screen-ti) {
+    display: none;
   }
 }
 
@@ -24,30 +24,28 @@
   position: absolute;
   top: 46.7%;
   border: 1px solid var(--green-gray-100);
-  box-shadow: none !important;
+  box-shadow: none;
   transform: translateY(-50%);
 
-  @media screen and (max-width: $screen-dxl) {
+  @media screen and (max-width: $df-screen-dl) {
     position: static;
     top: auto;
     margin-bottom: 75px;
     transform: none;
   }
 
-  @media screen and (max-width: $screen-ti) {
+  @media screen and (max-width: $df-screen-t) {
     margin-bottom: 60px;
   }
 
-
   @media (hover: hover) {
     &:hover {
-      box-shadow: 0 0 8px 0 var(--gray-200) !important;
+      box-shadow: 0 0 8px 0 var(--monochrome-200);
     }
   }
 
   .navigationButtonIcon {
     @include box(24px);
-
   }
 
   &Prev {
@@ -72,7 +70,7 @@
     display: flex;
     justify-content: center;
 
-    @media screen and (max-width: $screen-tl) {
+    @media screen and (max-width: $df-screen-ti) {
       bottom: 60px;
     }
 

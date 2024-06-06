@@ -1,1 +1,1 @@
-export { CatalogSort } from './ui/CatalogSort';
+export { CatalogSort } from './ui';

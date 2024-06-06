@@ -1,0 +1,59 @@
+@import '@/shared/styles/breakpoints';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+
+.videoAd {
+  @include flex-column;
+
+  gap: 20px;
+  width: 100%;
+}
+
+.videoAdContent {
+  position: relative;
+  max-width: 536px;
+  height: 100%;
+  max-height: 300px;
+  aspect-ratio: 50 / 28;
+
+  @media screen and (max-width: $df-screen-mablet-content) {
+    max-width: unset;
+    max-height: unset;
+  }
+}
+
+.videoAdAdvantages {
+  @include flex-center-vertical;
+
+  gap: 27px;
+  padding: 24px 20px;
+  border: 1px solid var(--monochrome-100);
+  border-radius: 6px;
+}
+
+.videoAdAdvantage {
+  @include flex-center-vertical;
+
+  gap: 12px;
+}
+
+.videoAdAdvantageIcon {
+  @include box(32px);
+
+  color: #00b307;
+}
+
+.videoAdAdvantageText {
+  @include flex-column;
+
+  gap: 6px;
+}
+
+.videoAdAdvantageSubtitle {
+  margin: 0;
+  color: var(--monochrome-500);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 150%;
+  letter-spacing: 0%;
+}

@@ -1,16 +1,16 @@
 @import '@/shared/styles/_breakpoints';
-@import '@/shared/styles/mixins/flexbox.scss';
-@import '@/shared/styles/mixins/box.scss';
-@import '@/shared/styles/mixins/text-styles.scss';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/text-styles';
 
 .phone {
   @include flex-center-vertical;
 
   gap: 8px;
-  color: var(--gray-900);
+  color: var(--monochrome-900);
   text-decoration: none;
 
-  @media screen and (max-width: $screen-t) {
+  @media screen and (max-width: $df-screen-m) {
     display: none;
 
     &--mobile {
@@ -25,7 +25,7 @@
 
   stroke-width: 1.3px;
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     @include box(26px);
   }
 }

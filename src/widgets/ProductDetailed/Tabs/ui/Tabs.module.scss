@@ -1,0 +1,86 @@
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/text-styles';
+@import '@/shared/styles/_breakpoints';
+
+.tabsContent {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+
+  @media screen and (max-width: $df-screen-mablet-content) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.tabsDescription {
+  @include flex-column;
+  @include body-s;
+
+  flex-grow: 1;
+  gap: 19px;
+  max-width: 648px;
+  color: var(--monochrome-500);
+
+  @media screen and (max-width: $df-screen-mablet-content) {
+    flex-grow: unset;
+  }
+
+  @media screen and (max-width: $df-screen-t) {
+    max-width: calc(100vw - 40px);
+  }
+
+  p {
+    margin: 0;
+  }
+
+  p + p {
+    margin-top: 2px;
+  }
+
+  ul {
+    @include flex-column;
+
+    gap: 13px;
+    margin: 0;
+    padding: 0;
+  }
+
+  p + ul {
+    margin-top: 1px;
+  }
+
+  li {
+    position: relative;
+    padding-left: 28px;
+    list-style-type: none;
+
+    &::before {
+      @include box(20px);
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url('/images/svgSprite.svg#icon__list-checkbox.svg');
+      content: '';
+    }
+  }
+}
+
+.tabsAside {
+  flex-grow: 1;
+  min-width: 400px;
+  max-width: 536px;
+
+  @media screen and (max-width: $df-screen-mablet-content) {
+    flex-grow: unset;
+    width: 100%;
+    min-width: unset;
+    max-width: unset;
+  }
+
+  @media screen and (max-width: $df-screen-t) {
+    max-width: calc(100vw - 40px);
+  }
+}

@@ -1,0 +1,26 @@
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/text-styles';
+
+.OrderPageHeader {
+  @include flex-center-vertical;
+
+  gap: 8px;
+  width: 100%;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--monochrome-100);
+  border-radius: 8px;
+}
+
+.OrderPageHeaderSeparator {
+  @include body-s;
+
+  color: var(--monochrome-700);
+}
+
+.OrderPageHeaderText {
+  color: var(--monochrome-700);
+}
+
+.OrderPageHeaderLink {
+  margin-left: auto;
+}

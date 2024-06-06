@@ -1,0 +1,33 @@
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/button-reset';
+
+
+.removeButtonIcon {
+    @include box(16px);
+
+    color: var(--green-gray-600);
+  }
+
+.removeButton {
+  @include flex-center;
+  @include box(22px);
+
+  border: 1px solid var(--monochrome-200);
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  transition: all var(--transition);
+
+  @media (hover: hover) {
+    &:hover {
+      border-color: var(--monochrome-900);
+
+      .removeButtonIconn {
+        color: var(--green-gray-900);
+      }
+    }
+  }
+
+
+}

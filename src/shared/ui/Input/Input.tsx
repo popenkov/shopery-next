@@ -1,80 +1,92 @@
 'use client';
 
-import {
-    ChangeEvent,
-    InputHTMLAttributes,
-    memo,
-    useRef,
-    useState,
-} from 'react';
-
+import { ChangeEvent, InputHTMLAttributes, forwardRef, memo, useId } from 'react';
 import cn from 'classnames';
 
-import { checkEmailValidation } from '@/shared/lib/utils/checkEmailValidation/checkEmailValidation';
-import SearchIcon from '@public/icons/icon__search.svg';
+import { AlertIcon, SearchIcon, SuccessIcon } from 'shared/ui/icons';
+
+import { Text } from '../Text';
 
 import cls from './Input.module.scss';
 
 type HTMLInputProps = Omit<
-    InputHTMLAttributes<HTMLInputElement>,
-    'value' | 'onChange' | 'readOnly'
+  InputHTMLAttributes<HTMLInputElement>,
+  'value' | 'onChange' | 'readOnly'
 >;
 
 interface Props extends HTMLInputProps {
-    className?: string;
-    hasValidation?: boolean;
-    value?: string | number;
-    onChange?: (value: string) => void;
+  className?: string;
+  label?: string;
+  errorText?: string;
+  hasValidation?: boolean;
+  value?: string;
+  onChange?: (evt: ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const Input = memo((props: Props) => {
+export const Input = memo(
+  forwardRef<HTMLInputElement, Props>((props, ref) => {
     const {
-        className,
-        value,
-        onChange,
-        type = 'text',
-        hasValidation = false,
-        ...otherProps
+      className,
+      value,
+      label,
+      type = 'text',
+      errorText,
+      hasValidation = true,
+      onChange,
+      ...otherProps
     } = props;
-    const ref = useRef<HTMLInputElement>(null);
 
-    const [isInvalid, setIsInvalid] = useState(true);
-
-    const handleInputChange = (evt: ChangeEvent<HTMLInputElement>) => {
-        if (type === 'email') {
-            setIsInvalid(!checkEmailValidation(value?.toString() || ''));
-        }
-
-        onChange?.(evt.target.value);
-    };
-
+    // todo
     const handleLoupeClick = () => {
-        ref.current?.focus();
+      // ref?.current?.focus();
     };
+
+    const uniqueId = useId();
 
     return (
-        <>
-            <div className={cn(cls.inputWrapper, className)}>
-                <input
-                    ref={ref}
-                    type={type}
-                    value={value}
-                    onChange={handleInputChange}
-                    className={cn(cls.input, {
-                        [cls.search]: type === 'search',
-                    })}
-                    {...otherProps}
-                />
-                {type === 'search' && (
-                    <SearchIcon
-                        className={cls.searchIcon}
-                        onClick={handleLoupeClick}
-                    />
-                )}
-            </div>
-            {isInvalid && hasValidation && <span>error</span>}
-        </>
+      <div className={cn(cls.inputContainer, className)}>
+        {label && (
+          <label htmlFor={uniqueId} className={cls.inputLabel}>
+            {label}
+          </label>
+        )}
+        <div className={cn(cls.inputWrapper)}>
+          <input
+            id={uniqueId}
+            ref={ref}
+            type={type}
+            onChange={(evt) => onChange?.(evt)}
+            className={cn(cls.input, {
+              [cls.search]: type === 'search',
+              [cls.error]: errorText,
+              [cls.success]: value && !errorText,
+            })}
+            {...otherProps}
+          />
+          {type === 'search' && (
+            <SearchIcon
+              className={cn(cls.inputIcon, cls.inputIconSearch)}
+              onClick={handleLoupeClick}
+            />
+          )}
+          {hasValidation && (
+            <>
+              {errorText && <AlertIcon className={cn(cls.inputIcon, cls.inputIconError)} />}
+              {value && !errorText && (
+                <SuccessIcon className={cn(cls.inputIcon, cls.inputIconSuccess)} />
+              )}
+            </>
+          )}
+
+          {errorText && (
+            <Text variant="body_s" weight="medium" className={cls.errorMessage} as="span">
+              {errorText}
+            </Text>
+          )}
+        </div>
+      </div>
     );
-});
+  }),
+);
 
 Input.displayName = 'Input';

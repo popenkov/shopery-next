@@ -20,6 +20,11 @@
   font-weight: $weight;
   font-size: 48px;
   line-height: 120%;
+
+  @media screen and (max-width: $df-screen-ti) {
+    font-size: 36px;
+    line-height: 120%;
+  }
 }
 
 @mixin heading-3($weight: 400) {
@@ -64,9 +69,7 @@
 
   @if $weight == 600 {
     line-height: 1.3125;
-  }
-
- @else {
+  } @else {
     line-height: 1.5;
   }
 }
@@ -77,9 +80,7 @@
 
   @if $weight == 600 {
     line-height: 1.215;
-  }
-
- @else {
+  } @else {
     line-height: 1.5;
   }
 }

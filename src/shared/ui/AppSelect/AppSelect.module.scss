@@ -1,4 +1,20 @@
-@import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/text-styles';
+
+.selectWrappper {
+  @include flex-column;
+
+  gap: 8px;
+
+  &.error :global(.react-select__control) {
+    border-color: var(--status-danger);
+  }
+}
+
+.selectLabel {
+  @include body-s;
+}
 
 .select {
   :global(.custom-select__indicator-separator) {
@@ -8,7 +24,7 @@
   :global(.custom-select__control) {
     min-width: 166px;
     padding: 0 16px;
-    border: 1px solid var(--gray-300);
+    border: 1px solid var(--monochrome-300);
   }
 
   :global(.custom-select__indicator) {
@@ -18,12 +34,15 @@
     svg {
       @include box(16px);
 
-      color: var(--gray-700);
+      color: var(--monochrome-700);
     }
   }
 
-  :global(.custom-select__control--menu-is-open)
-    :global(.custom-select__indicator) {
+  :global(.custom-select__control--menu-is-open) :global(.custom-select__indicator) {
     transform: rotate(180deg);
   }
+}
+
+.errorMessage {
+  color: var(--status-danger);
 }

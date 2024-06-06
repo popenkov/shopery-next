@@ -1,10 +1,10 @@
 @import '@/shared/styles/_breakpoints';
-@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/flexbox';
 
 .sorting {
   @include flex-center-sb;
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     flex-direction: column;
     gap: 10px;
     align-items: flex-start;

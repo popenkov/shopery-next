@@ -1,31 +1,17 @@
 import { FC } from 'react';
 
-import { Navigation } from '@/features/Navigation';
+import { Navigation } from 'features/Navigation';
+
+import cls from './Header.module.scss';
 import { HeaderMiddle } from './HeaderMiddle';
 import { HeaderTop } from './HeaderTop';
 
-import cls from './Header.module.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export const Header: FC = () => {
-    return (
-        <header className={cls.header}>
-            <HeaderTop />
-            <HeaderMiddle />
-            <Navigation />
-        </header>
-    );
+  return (
+    <header className={cls.header}>
+      <HeaderTop />
+      <HeaderMiddle />
+      <Navigation />
+    </header>
+  );
 };

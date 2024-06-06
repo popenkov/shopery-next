@@ -1,0 +1,30 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/container';
+
+.ProductCartPreviewCounter {
+  flex-grow: 1;
+}
+
+.productFavoriteButton {
+  svg {
+    @include box(20px);
+  }
+
+  @include box(52px);
+
+  background-color: var(--green-gray-100);
+
+  // todo
+  // @media screen and (max-width: $df-screen-m) {
+  //   grid-area: fav;
+  // }
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--front-primary-inversed);
+      background-color: var(--primary);
+    }
+  }
+}

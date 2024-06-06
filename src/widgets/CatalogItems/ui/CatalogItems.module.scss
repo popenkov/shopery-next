@@ -1,26 +1,34 @@
 @import '@/shared/styles/_breakpoints';
-@import '@/shared/styles/mixins/grid.scss';
-
+@import '@/shared/styles/mixins/grid';
 
 .catalogDesktopWrapper {
-    @include grid(3, 24px);
+  @include grid(3, 24px);
 
-  @media screen and (max-width: $screen-tl) {
-    display: none ;
+  @media screen and (max-width: $df-screen-ti) {
+    display: none;
   }
 }
 
 .catalogMobileWrapper {
-      display: none ;
+  display: none;
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     @include grid(3, 24px);
-     @media screen and (max-width: $screen-ti) {
-      grid-template-columns: 1fr 1fr; 
+
+    @media screen and (max-width: $df-screen-t) {
+      grid-template-columns: 1fr 1fr;
     }
 
-    @media screen and (max-width: $screen-t) {
+    @media screen and (max-width: $df-screen-m) {
       grid-template-columns: 1fr;
     }
+  }
+}
+
+.imageButton {
+  box-shadow: none;
+
+  @media (hover: hover) {
+    box-shadow: 0 0 8px 0 var(--monochrome-200);
   }
 }

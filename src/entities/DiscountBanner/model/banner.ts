@@ -1,6 +1,6 @@
 export type TDiscountBanner = {
-    image: string;
-    title: string;
-    subtitle: string;
-    path: string;
+  image: string;
+  title: string;
+  subtitle: string;
+  path: string;
 };

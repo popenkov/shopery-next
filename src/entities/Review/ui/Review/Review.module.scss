@@ -1,0 +1,70 @@
+@import '@/shared/styles/breakpoints';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+
+.review {
+  @include flex-column-center;
+
+  gap: 29px;
+  height: 100%;
+
+  .content {
+    @include flex-column-center;
+
+    position: relative;
+    flex-grow: 1;
+    gap: 21px;
+    padding: 28px 32px 30px;
+    background-color: var(--back-primary);
+    border-radius: 10px;
+
+    &::after {
+      @include box(24px);
+
+      position: absolute;
+      bottom: -9px;
+      left: 50%;
+      background-color: var(--back-primary);
+      transform: translateX(-50%) rotate(45deg);
+      content: '';
+    }
+  }
+
+  .icon {
+    @include box(40px);
+  }
+
+  .text {
+    margin: 0;
+    color: var(--green-gray-600);
+  }
+
+  .author {
+    @include flex-column-center;
+  }
+
+  .photoContainer {
+    @include box(64px);
+
+    position: relative;
+  }
+
+  .photo {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+  }
+
+  .name {
+    margin: 0;
+  }
+
+  .photoContainer + .name {
+    margin-top: 15px;
+  }
+
+  .role {
+    margin: 0;
+    color: var(--green-gray-600);
+  }
+}

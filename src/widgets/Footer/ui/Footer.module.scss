@@ -1,18 +1,19 @@
 @import '@/shared/styles/_breakpoints';
-@import '@/shared/styles/mixins/flexbox.scss';
-@import '@/shared/styles/mixins/box.scss';
-@import '@/shared/styles/mixins/text-styles.scss';
-@import '@/shared/styles/mixins/container.scss';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/text-styles';
+@import '@/shared/styles/mixins/container';
 
 .footer {
   background-color: var(--green-gray-900);
 }
 
 .footerInner {
-  background: url('/images/left.svg') no-repeat left bottom,
+  background:
+    url('/images/left.svg') no-repeat left bottom,
     url('/images/right.svg') no-repeat right bottom;
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     background: none;
   }
 }
@@ -29,7 +30,7 @@
   align-items: start;
   padding-top: 100px;
 
-  @media screen and (max-width: $screen-d) {
+  @media screen and (max-width: $df-screen-tl) {
     grid-template: repeat(2, auto) / repeat(2, 1fr);
     grid-template-areas:
       'about navigation'
@@ -37,7 +38,7 @@
       'copyright copyright';
   }
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     grid-template: repeat(2, auto) / repeat(2, 1fr);
     grid-template-areas:
       'about about'

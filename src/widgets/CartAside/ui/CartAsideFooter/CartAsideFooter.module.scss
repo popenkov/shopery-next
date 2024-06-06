@@ -1,0 +1,33 @@
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/_breakpoints';
+
+.CartAsideFooter {
+  @include flex-column;
+
+  gap: 23px;
+  width: 100%;
+  max-width: 456px;
+  padding: 10px 40px 39px;
+  background-color: var(--back-primary);
+
+  @media screen and (max-width: $df-screen-t) {
+    padding: 10px 20px 39px;
+  }
+}
+
+.CartAsideFooterTotal {
+  @include flex-center-vertical;
+
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.CartAsideFooterButtons {
+  @include flex-column;
+
+  gap: 12px;
+}
+
+.CartAsideFooterButton {
+  @include flex-center;
+}

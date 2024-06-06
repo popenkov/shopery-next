@@ -1,0 +1,35 @@
+@import '@/shared/styles/mixins/container';
+@import '@/shared/styles/mixins/grid';
+@import '@/shared/styles/mixins/display';
+@import '@/shared/styles/mixins/section';
+@import '@/shared/styles/breakpoints';
+
+.relatedProducts {
+  @include section;
+  @include container;
+}
+
+.relatedProductsTitle {
+  @include section-title;
+}
+
+.relatedProductsContent {
+  @include section-content;
+}
+
+.relatedProductsDesktop {
+  @include grid(5);
+  @include display-desktop;
+
+  @media screen and (max-width: $df-screen-ti) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: $df-screen-t) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.relatedProductsMobile {
+  @include display-mobile;
+}

@@ -1,4 +1,4 @@
 export type TTag = {
-    type: string;
-    text: string;
+  type: string;
+  text: string;
 };

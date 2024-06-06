@@ -5,25 +5,24 @@
 @import '@/shared/styles/breakpoints';
 
 .banners {
-    @include section;
-
+  @include section;
 }
 
 .bannersDesktop {
-    @include container;
-    @include grid(3, 24px);
-    @include display-desktop;
+  @include container;
+  @include grid(3, 24px);
+  @include display-desktop;
 
-    @media screen and (max-width: $screen-tl) {
-      grid-template-columns: 1fr 1fr;
-    }
+  @media screen and (max-width: $df-screen-ti) {
+    grid-template-columns: 1fr 1fr;
+  }
 
-    @media screen and (max-width: $screen-ti) {
-      grid-template-columns: 1fr;
-    }
+  @media screen and (max-width: $df-screen-t) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .bannersMobile {
-      @include container;
-    @include display-mobile;
+  @include container;
+  @include display-mobile;
 }

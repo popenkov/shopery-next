@@ -1,0 +1,26 @@
+@import '@/shared/styles/mixins/container';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/text-styles';
+
+.OrderPage {
+  @include flex-column;
+
+  width: 100%;
+  border: 1px solid var(--monochrome-100);
+  border-radius: 8px;
+}
+
+.OrderPageInfo {
+  display: grid;
+  padding: 24px;
+}
+
+.OrderPageAddresses {
+  display: flex;
+  border: 1px solid var(--monochrome-100);
+  border-radius: 6px;
+}
+
+.OrderPageAddresse {
+  border-right: 1px solid var(--monochrome-100);
+}

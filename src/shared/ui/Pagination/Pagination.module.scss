@@ -1,8 +1,8 @@
 @import '@/shared/styles/_breakpoints';
-@import '@/shared/styles/mixins/flexbox.scss';
-@import '@/shared/styles/mixins/box.scss';
-@import '@/shared/styles/mixins/button-reset.scss';
-@import '@/shared/styles/mixins/text-styles.scss';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/button-reset';
+@import '@/shared/styles/mixins/text-styles';
 
 .pagination {
   @include flex-center-vertical;
@@ -21,48 +21,53 @@
   transition: color var(--transition);
 }
 
+.pageButton {
+  @include button-reset;
+}
+
 .page {
-  
   @include button-reset;
   @include box(36px);
   @include flex-center;
   @include body-m;
 
   padding: 8px;
-  color: var(--gray-400);
+  color: var(--monochrome-400);
   border-radius: 50%;
   cursor: pointer;
-  transition: background-color var(--transition), border-color var(--transition);
+  transition:
+    background-color var(--transition),
+    border-color var(--transition);
 
   &:hover {
-    color: var(--front-primary-inversed);
     background-color: var(--primary);
     border-color: var(--primary);
+
+    .pageButton {
+      color: var(--front-primary-inversed);
+    }
   }
 
   &.active {
-    color: var(--front-primary-inversed);
     background-color: var(--primary);
+
+    .pageButton {
+      color: var(--front-primary-inversed);
+    }
   }
 
-
   &:disabled {
-    background-color: var(--gray-50);
-    border-color: var(--gray-50);
-    pointer-events: none;}
-}
-
-.pageButton {
-   @include button-reset;
-
-   
+    background-color: var(--monochrome-50);
+    border-color: var(--monochrome-50);
+    pointer-events: none;
+  }
 }
 
 .dots {
   @include body-m;
 
   padding: 0 13px 5px;
-  color: var(--gray-400);
+  color: var(--monochrome-400);
 }
 
 .pagePrev,
@@ -70,15 +75,13 @@
   @include flex-center;
 
   padding: 5px 10px;
-  border: 1px solid var(--gray-100);
+  border: 1px solid var(--monochrome-100);
   border-radius: 50%;
   cursor: pointer;
 
-  @media screen and (max-width: $screen-t) {
+  @media screen and (max-width: $df-screen-m) {
     display: none;
   }
-
-  
 }
 
 .pagePrev .icon {
@@ -91,11 +94,11 @@
 
 .pagePrev:disabled,
 .pageNext:disabled {
-    background-color: var(--gray-50);
-    border-color: var(--gray-50);
-    pointer-events: none;
+  background-color: var(--monochrome-50);
+  border-color: var(--monochrome-50);
+  pointer-events: none;
 
-    .icon {
-      color: var(--gray-300);
-    }
+  .icon {
+    color: var(--monochrome-300);
   }
+}

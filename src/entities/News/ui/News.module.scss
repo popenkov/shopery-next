@@ -1,7 +1,7 @@
 @import '@/shared/styles/breakpoints';
-@import '@/shared/styles/mixins/flexbox.scss';
-@import '@/shared/styles/mixins/box.scss';
-@import '@/shared/styles/mixins/text-styles.scss';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/text-styles';
 
 .news {
   @include flex-column;
@@ -11,26 +11,27 @@
   border-radius: 8px;
   box-shadow: 0 10px 80px 0 rgb(0 0 0 / 10%);
 
-  @media screen and (max-width: $screen-ti) {
+  @media screen and (max-width: $df-screen-t) {
     box-shadow: none;
   }
 }
 
-.imgWrapper {
+.newsImgWrapper {
   position: relative;
   height: 100%;
+
   // todo заменить
   height: 276px;
   overflow: hidden;
   border-radius: 4px;
 }
 
-.img {
+.newsImg {
   width: 100%;
   object-fit: cover;
 }
 
-.date {
+.newsDate {
   @include box(58px);
   @include flex-column;
 
@@ -43,7 +44,7 @@
   border-radius: 4px;
 }
 
-.dateDay {
+.newsDateDay {
   color: var(--green-gray-900);
   font-weight: 500;
   font-size: 20px;
@@ -51,8 +52,8 @@
   letter-spacing: 0%;
 }
 
-.dateMonth {
-  color: var(--gray-500);
+.newsDateMonth {
+  color: var(--monochrome-500);
   font-weight: 500;
   font-size: 12px;
   line-height: 100%;
@@ -60,7 +61,7 @@
   text-transform: uppercase;
 }
 
-.description {
+.newsDescription {
   @include flex-column;
 
   gap: 8px;
@@ -69,12 +70,12 @@
   border-radius: 8px;
 }
 
-.title {
+.newsTitle {
   margin: 0;
   color: var(--green-gray-900);
 }
 
-.text {
+.newsText {
   display: -webkit-box;
   margin: 0;
   overflow: hidden;
@@ -86,13 +87,13 @@
   -webkit-box-orient: vertical;
 }
 
-.link {
+.newsLink {
   gap: 7px;
   font-weight: 600;
   font-size: 16px;
   line-height: 120%;
 }
 
-.linkIcon {
+.newsLinkIcon {
   @include box(24px);
 }

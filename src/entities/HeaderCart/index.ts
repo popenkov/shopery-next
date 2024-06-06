@@ -1,1 +1,0 @@
-export { HeaderCart } from './ui';

@@ -1,0 +1,54 @@
+@import '@/shared/styles/mixins/container';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/_breakpoints';
+
+.Faq {
+  @include container;
+  @include flex-center-vertical;
+
+  gap: 73px;
+  padding-top: 80px;
+
+  @media screen and (max-width: $df-screen-ti) {
+    border-top: 40px;
+  }
+}
+
+.FaqImageContainer {
+  position: relative;
+  align-self: flex-end;
+  width: 50%;
+  max-width: 731px;
+  max-height: 808px;
+  aspect-ratio: 371 / 404;
+
+  @media screen and (max-width: $df-screen-tl) {
+    width: 33%;
+  }
+
+  @media screen and (max-width: $df-screen-ti) {
+    display: none;
+  }
+}
+
+.FaqTextContainer {
+  @include flex-column;
+
+  gap: 32px;
+  width: 54%;
+
+  @media screen and (max-width: $df-screen-ti) {
+    width: 100%;
+  }
+}
+
+.FaqTextContent {
+  @include flex-column;
+
+  gap: 12px;
+  padding-bottom: 40px;
+}
+
+.FaqText {
+  color: var(--monochrome-600);
+}

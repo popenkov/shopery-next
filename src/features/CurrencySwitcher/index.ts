@@ -1,1 +1,1 @@
-export { CurrencySwitcher } from './ui/CurrencySwitcher';
+export { CurrencySwitcher } from './ui';

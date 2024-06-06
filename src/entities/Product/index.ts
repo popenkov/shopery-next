@@ -1,5 +1,13 @@
-export { Product } from './ui/Product';
-export { ProductLarge } from './ui/ProductLarge';
-export { ProductPreview } from './ui/ProductPreview';
-export { ProductSmall } from './ui/ProductSmall';
-export { type TProduct } from './model/types/product.types';
+export {
+  Product,
+  ProductLarge,
+  ProductPreview,
+  ProductSmall,
+  ProductWishlist,
+  ProductCheckout,
+  ProductCartPreview,
+} from './ui';
+
+export { type TProduct, type TProductDetailed } from './model';
+
+export { getWishlistItems, getProductDetails } from './api';

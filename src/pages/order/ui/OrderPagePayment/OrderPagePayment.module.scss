@@ -1,0 +1,54 @@
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/_breakpoints';
+
+.OrderPagePayment {
+  @include flex-column;
+
+  gap: 7px;
+  padding: 24px;
+  border: 1px solid var(--monochrome-100);
+  border-radius: 8px;
+}
+
+.OrderPagePaymentHeader {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 18px 20px;
+}
+
+.OrderPagePaymentColumn {
+  @include flex-column;
+
+  gap: 6px;
+}
+
+.OrderPagePaymentColumnKey {
+  color: var(--monochrome-400);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 3%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.OrderPagePaymentRow {
+  @include flex-center-vertical;
+
+  gap: 12px;
+  justify-content: space-between;
+  padding: 12px 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--monochrome-100);
+  }
+}
+
+.OrderPagePaymentKey {
+  color: var(--monochrome-700);
+}
+
+.OrderPagePaymentTotalPrice {
+  color: var(--hard-primary);
+}

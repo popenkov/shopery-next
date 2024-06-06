@@ -1,14 +1,14 @@
 @import '@/shared/styles/_breakpoints';
-@import '@/shared/styles/mixins/flexbox.scss';
-@import '@/shared/styles/mixins/box.scss';
-@import '@/shared/styles/mixins/text-styles.scss';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/text-styles';
 
 .content {
   @include flex-center-sb;
 
   gap: 35px;
 
-  @media screen and (max-width: $screen-d) {
+  @media screen and (max-width: $df-screen-tl) {
     gap: 15px;
   }
 }

@@ -1,7 +1,17 @@
 # Ignore artifacts:
 build
 coverage
-node_modules
+bower_components/
+node_modules/
+.vscode/
+.publish/
+.DS_Store
+*.log
+*.sublime-*
+*.rar
+*.zip
+.idea
+ex_files
+Thumbs.db
 *.html
 *.css
-*.scss

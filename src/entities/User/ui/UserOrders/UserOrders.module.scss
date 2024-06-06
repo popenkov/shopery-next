@@ -1,0 +1,87 @@
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/_breakpoints';
+
+.UserOrders {
+  @include flex-column;
+
+  gap: 2px;
+  width: 100%;
+  border: 1px solid var(--monochrome-50);
+  border-radius: 8px;
+}
+
+.UserOrdersHeader {
+  @include flex-center-vertical;
+
+  gap: 12px;
+  justify-content: space-between;
+  padding: 13px 23px;
+
+  @media screen and (max-width: $df-screen-m) {
+    border-bottom: 1px solid var(--monochrome-50);
+  }
+
+  @media screen and (max-width: $df-screen-m) {
+    flex-direction: column;
+  }
+}
+
+.UserOrdersTitles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) minmax(85px, auto);
+  grid-template-columns: 1.5fr 1.5fr 1.5fr 2fr minmax(85px, auto);
+  gap: 20px;
+  padding: 11px 24px;
+  background-color: var(--monochrome-50);
+
+  @media screen and (max-width: $df-screen-t) {
+    grid-template-columns: 1fr 1.5fr 2fr 1fr minmax(85px, auto);
+  }
+
+  @media screen and (max-width: $df-screen-m) {
+    display: none;
+  }
+}
+
+.UserOrdersTitle {
+  color: var(--monochrome-700);
+  text-transform: uppercase;
+}
+
+.UserOrdersMain {
+  width: 100%;
+}
+
+.UserOrdersOrders {
+  padding: 12px 0 23px;
+}
+
+.UserOrdersItem {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1.5fr 2fr auto;
+  gap: 20px;
+  padding: 11px 24px 10px;
+
+  @media screen and (max-width: $df-screen-t) {
+    grid-template-columns: 1fr 1.5fr 2fr 1fr auto;
+  }
+
+  @media screen and (max-width: $df-screen-m) {
+    grid-template-columns: 1fr 1fr;
+    padding: 11px 16px 10px;
+    border-bottom: 1px solid var(--monochrome-50);
+  }
+}
+
+.UserOrdersItemText {
+  color: var(--monochrome-800);
+}
+
+.UserOrdersItemLink {
+  color: var(--primary);
+}
+
+.UserOrderFooter {
+  padding-bottom: 30px;
+}

@@ -1,1 +1,2 @@
-export { CatalogFilter } from './ui/CatalogFilter';
+export { CatalogFilter } from './ui';
+export { getCatalogFilterData } from './api';

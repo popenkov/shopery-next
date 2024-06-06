@@ -1,18 +1,18 @@
 @import '@/shared/styles/_breakpoints';
-@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/flexbox';
 
 .navigation {
   display: flex;
   grid-area: navigation;
   gap: 78px;
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     @include flex-center;
 
     align-items: flex-start;
   }
 
-  @media screen and (max-width: $screen-t) {
+  @media screen and (max-width: $df-screen-m) {
     flex-wrap: wrap;
     gap: 50px;
     justify-content: flex-start;
@@ -25,7 +25,7 @@
   gap: 20px;
   list-style: none;
 
-  @media screen and (max-width: $screen-t) {
+  @media screen and (max-width: $df-screen-m) {
     align-items: center;
     width: 100%;
     text-align: center;

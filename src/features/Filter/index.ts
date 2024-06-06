@@ -1,1 +1,1 @@
-export { Filter } from './ui';
+export { Filters } from './ui';

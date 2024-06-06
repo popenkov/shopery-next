@@ -1,2 +1,2 @@
 export { InstagramCard } from './ui';
-export { type TInstagramCard } from './model/types/instagramCard';
+export { type TInstagramCard } from './model';

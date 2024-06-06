@@ -1,0 +1,35 @@
+@import '@/shared/styles/mixins/container';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/_breakpoints';
+
+.NotFoundPage {
+  @include container;
+  @include flex-column-center;
+
+  gap: 20px;
+  padding: 80px 0;
+
+  @media screen and (max-width: $df-screen-ti) {
+    padding: 40px 0;
+  }
+}
+
+.NotFoundPageImageContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 59 / 38;
+  max-width: 583px;
+  max-height: 354px;
+}
+
+.NotFoundPageImageContainer + .NotFoundPageTitle {
+  margin-top: 12px;
+}
+
+.NotFoundPageText {
+  color: var(--monochrome-500);
+}
+
+.NotFoundPageText + .NotFoundPageButton {
+  margin-top: 4px;
+}

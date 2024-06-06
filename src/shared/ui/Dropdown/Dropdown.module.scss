@@ -1,6 +1,6 @@
-@import '@/shared/styles/mixins/flexbox.scss';
-@import '@/shared/styles/mixins/box.scss';
-@import '@/shared/styles/mixins/button-reset.scss';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/button-reset';
 
 .dropdownContent {
   @include flex-column;
@@ -11,7 +11,7 @@
   gap: 12px;
   width: 100px;
   padding: 16px 22px;
-  background-color: var(--gray-800);
+  background-color: var(--monochrome-800);
   border-radius: 4px;
   box-shadow: 0 6px 20px 0 rgb(0 0 0 / 12%);
   transform: translateX(-50%);
@@ -37,7 +37,7 @@
 
   gap: 3px;
   padding: 0;
-  color: var(--gray-300);
+  color: var(--monochrome-300);
   border: none;
   outline: none;
   cursor: pointer;
@@ -53,7 +53,7 @@
   @include button-reset;
 
   padding: 0;
-  color: var(--gray-300);
+  color: var(--monochrome-300);
   text-decoration: none;
   border: none;
   cursor: pointer;

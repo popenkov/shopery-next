@@ -1,0 +1,64 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/button-reset';
+@import '@/shared/styles/mixins/text-styles';
+
+.filters {
+  position: relative;
+}
+
+.filtersAccordion {
+  @include flex-column;
+
+  gap: 20px;
+}
+
+.checkbox {
+  padding: 10px 0 11px;
+
+  &:first-child {
+    padding-top: 21px;
+  }
+
+  &:last-child {
+    padding-bottom: 9px;
+  }
+
+  .checkbox {
+    gap: 9px;
+  }
+
+  .star-rating {
+    gap: 2px;
+  }
+
+  .star-rating__star {
+    @include box(16px);
+  }
+}
+
+.tagsContainer {
+  @include flex-center-vertical;
+
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 12px;
+}
+
+.priceAccordion :global(.rc-slider) {
+  max-width: calc(100% - 20px);
+  margin-left: 10px;
+}
+
+// todo  кнопка фильтра
+.filtersButtonDesktop {
+  position: fixed;
+  bottom: 50px;
+
+  // left: 0;
+  z-index: 3;
+  width: 100%;
+  max-width: 312px;
+  box-shadow: 0 10px 85px 42px rgb(240 240 240 / 100%);
+}

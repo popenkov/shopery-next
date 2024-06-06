@@ -1,0 +1,35 @@
+@import '@/shared/styles/_breakpoints';
+
+.DashboardPage {
+  display: grid;
+  flex-grow: 1;
+  grid-template-areas: 'user address' 'orders orders';
+  grid-template-columns: calc(56% - 12px) calc(44% - 12px);
+  gap: 24px;
+  width: 100%;
+
+  @media screen and (max-width: $df-screen-t) {
+    grid-template-columns: calc(44% - 12px) calc(56% - 12px);
+  }
+
+  @media screen and (max-width: $df-screen-m) {
+    grid-template-areas: 'user' 'address' 'orders';
+    grid-template-columns: 1fr;
+  }
+}
+
+.DashboardPageUser {
+  grid-area: user;
+}
+
+.DashboardPageAddress {
+  grid-area: address;
+
+  @media screen and (max-width: $df-screen-m) {
+    max-width: calc(100vw - 40px);
+  }
+}
+
+.DashboardPageOrders {
+  grid-area: orders;
+}

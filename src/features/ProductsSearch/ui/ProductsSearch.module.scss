@@ -1,5 +1,5 @@
-@import '@/shared/styles/_breakpoints.scss';
-@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox';
 
 .search {
   @include flex-center-vertical;
@@ -18,13 +18,13 @@
   height: 45px;
   border-radius: 6px 0 0 6px;
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     padding: 8px;
   }
 }
 
 .searchField svg {
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     display: none;
   }
 }

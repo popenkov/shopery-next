@@ -1,35 +1,35 @@
 import { nanoid } from 'nanoid';
 
-import { TAdvantage } from '@/entities/AdvantageCard';
+import { TAdvantage } from '@/entities/Advantage';
 
 const data: TAdvantage[] = [
-    {
-        id: nanoid(),
-        icon: 'icon__delivery_truck',
-        title: 'Free Shipping',
-        text: 'Free shipping with discount',
-        isHighlighted: true,
-    },
-    {
-        id: nanoid(),
-        icon: 'icon__headphones',
-        title: 'Great Support 24/7',
-        text: 'Instant access to Contact ',
-    },
-    {
-        id: nanoid(),
-        icon: 'icon__shopping_bag',
-        title: '100% Secure Payment',
-        text: 'We ensure your money is save',
-    },
-    {
-        id: nanoid(),
-        icon: 'icon__package',
-        title: 'Money-Back Guarantee',
-        text: '30 days money-back guarantee',
-    },
+  {
+    id: nanoid(),
+    icon: 'DeliveryTruckIcon',
+    title: 'Free Shipping',
+    text: 'Free shipping with discount',
+    isHighlighted: true,
+  },
+  {
+    id: nanoid(),
+    icon: 'HeadphonesIcon',
+    title: 'Great Support 24/7',
+    text: 'Instant access to Contact ',
+  },
+  {
+    id: nanoid(),
+    icon: 'ShoppingBagIcon',
+    title: '100% Secure Payment',
+    text: 'We ensure your money is save',
+  },
+  {
+    id: nanoid(),
+    icon: 'PackageIcon',
+    title: 'Money-Back Guarantee',
+    text: '30 days money-back guarantee',
+  },
 ];
 
 export const getAdvantagesData = () => {
-    return { advantages: data };
+  return { advantages: data };
 };

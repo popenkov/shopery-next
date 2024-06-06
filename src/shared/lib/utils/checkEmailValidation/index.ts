@@ -1,0 +1,1 @@
+export { checkEmailValidation } from './checkEmailValidation';

@@ -1,0 +1,35 @@
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+
+.OrderPageAddress {
+  @include flex-column;
+
+  gap: 6px;
+  padding: 32px;
+}
+
+.OrderPageAddressTitle {
+  color: var(--monochrome-400);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+
+.OrderPageAddressTitle + .OrderPageAddressName {
+  margin-top: 8px;
+}
+
+.OrderPageAddressStreet {
+  max-width: 264px;
+  color: var(--monochrome-600);
+}
+
+.OrderPageAddressName + .OrderPageAddressStreet {
+  margin-top: 2px;
+}
+
+.OrderPageAddressStreet + .OrderPageAddressEmail {
+  margin-top: 2px;
+}

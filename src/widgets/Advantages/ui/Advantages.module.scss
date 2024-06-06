@@ -1,15 +1,14 @@
 @import '@/shared/styles/_breakpoints';
-@import '@/shared/styles/mixins/container.scss';
-@import '@/shared/styles/mixins/section.scss';
+@import '@/shared/styles/mixins/container';
+@import '@/shared/styles/mixins/section';
 
 .advantages {
-  @include section-green-bg--bottom;
-
+  @include section-green-bg-bottom;
 }
 
 .content {
-    @include container;
-    
+  @include container;
+
   position: relative;
   z-index: 1;
   display: grid;
@@ -20,15 +19,15 @@
   outline: 1px solid rgb(230 230 230);
   box-shadow: 0 16px 48px 0 rgb(14 107 21 / 8%);
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     grid-template-columns: 1fr 1fr;
   }
 
-  @media screen and (max-width: $screen-ti) {
+  @media screen and (max-width: $df-screen-t) {
     grid-template-columns: 1fr 1fr;
   }
 
-  @media screen and (max-width: $screen-t) {
+  @media screen and (max-width: $df-screen-m) {
     grid-template-columns: 1fr;
   }
 }

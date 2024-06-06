@@ -1,0 +1,93 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/grid';
+@import '@/shared/styles/mixins/text-styles';
+
+.checkoutForm {
+  @include flex-column;
+
+  gap: 32px;
+}
+
+.checkoutFormMain {
+  @include flex-column;
+
+  gap: 14px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--monochrome-100);
+}
+
+.checkoutFormRow {
+  gap: 16px;
+}
+
+.checkoutFormRowGridTwo {
+  @include grid(2);
+
+  gap: 16px;
+
+  @media screen and (max-width: $df-screen-ti) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.checkoutFormRowGridThree {
+  @include grid(3);
+
+  gap: 16px;
+
+  @media screen and (max-width: $df-screen-tl) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: $df-screen-ti) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.checkoutFormComment {
+  @include flex-column;
+
+  gap: 21px;
+}
+
+.checkoutFormInput {
+  @include flex-column;
+
+  gap: 8px;
+
+  label {
+    @include body-s;
+
+    margin: 0;
+  }
+
+  // select
+  :global(.react-select__control) {
+    width: 100%;
+    height: 49px;
+    font-style: 16px;
+    line-height: 130%;
+    border: 1px solid var(--monochrome-100);
+  }
+}
+
+.checkoutFormCheckbox {
+  gap: 6px;
+
+  p {
+    @include body-s;
+
+    margin: 0;
+  }
+}
+
+.checkoutFormRowGridTwo + .checkoutFormCheckbox {
+  margin-top: 4px;
+}
+
+.checkoutFormShippingAddress {
+  @include flex-column;
+
+  gap: 16px;
+}

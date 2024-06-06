@@ -1,17 +1,17 @@
 import { defineConfig } from 'cypress';
 
 export default defineConfig({
-    e2e: {
-        setupNodeEvents(on, config) {
-            // implement node event listeners here
-        },
-        baseUrl: process.env.BASE_URL,
+  e2e: {
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
     },
+    baseUrl: process.env.BASE_URL,
+  },
 
-    component: {
-        devServer: {
-            framework: 'next',
-            bundler: 'webpack',
-        },
+  component: {
+    devServer: {
+      framework: 'next',
+      bundler: 'webpack',
     },
+  },
 });

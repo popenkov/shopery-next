@@ -1,7 +1,7 @@
 @import '@/shared/styles/_breakpoints';
-@import '@/shared/styles/mixins/text-styles.scss';
-@import '@/shared/styles/mixins/flexbox.scss';
-@import '@/shared/styles/mixins/box.scss';
+@import '@/shared/styles/mixins/text-styles';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
 
 .image {
   position: absolute;
@@ -20,7 +20,7 @@
   max-width: 183px;
   height: 100%;
 
-  @media screen and (max-width: $screen-t) {
+  @media screen and (max-width: $df-screen-m) {
     width: 50%;
     max-width: unset;
   }
@@ -66,7 +66,7 @@
 }
 
 .buttonIcon {
-  @include box(24px)
+  @include box(24px);
 }
 
 .banner {

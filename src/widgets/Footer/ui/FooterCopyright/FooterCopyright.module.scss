@@ -1,5 +1,5 @@
 @import '@/shared/styles/_breakpoints';
-@import '@/shared/styles/mixins/flexbox.scss';
+@import '@/shared/styles/mixins/flexbox';
 
 .copyright {
   @include flex-center-sb;
@@ -8,7 +8,7 @@
   padding: 24px 0 23px;
   border-top: 1px solid var(--green-gray-800);
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     flex-direction: column;
     gap: 30px;
   }
@@ -18,7 +18,7 @@
   margin-left: 114px;
   color: var(--green-gray-500);
 
-  @media screen and (max-width: $screen-tl) {
+  @media screen and (max-width: $df-screen-ti) {
     margin-left: 0;
     text-align: center;
   }

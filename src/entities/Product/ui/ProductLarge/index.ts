@@ -1,1 +1,1 @@
-export { ProductLarge } from './ui';
+export * from './ProductLarge';

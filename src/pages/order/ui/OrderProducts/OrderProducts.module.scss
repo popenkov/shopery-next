@@ -1,0 +1,10 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox';
+
+.OrderProducts {
+  @include flex-column;
+}
+
+.OrderProductsBody {
+  padding: 0 20px;
+}

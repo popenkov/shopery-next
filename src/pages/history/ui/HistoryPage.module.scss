@@ -1,0 +1,29 @@
+@import '@/shared/styles/mixins/container';
+@import '@/shared/styles/mixins/flexbox';
+
+.HistoryPage {
+  @include flex-column-center;
+
+  flex-grow: 1;
+  width: 100%;
+}
+
+.HistoryPageOrders {
+  h2 {
+    text-align: left;
+  }
+
+  li {
+    padding: 12px 24px;
+  }
+}
+
+.HistoryPagePagination {
+  @include flex-center;
+
+  width: 100%;
+
+  li {
+    padding: 0;
+  }
+}
