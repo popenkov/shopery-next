@@ -1,4 +1,4 @@
-export type CartProduct = {
+export type TCartProduct = {
   id: string;
   path: string;
   img: string;

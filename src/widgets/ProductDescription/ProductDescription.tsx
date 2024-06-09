@@ -2,7 +2,7 @@ import { FC, ReactNode } from 'react';
 import Image from 'next/image';
 
 import { SocialShare } from '@/entities/SocialShare';
-import { TProductDetailed } from 'entities/Product';
+import { type TProductDetailed } from 'entities/Product';
 import { StarRating } from 'shared/ui/StarRating';
 import { ThumbSlider } from 'shared/ui/ThumbSlider';
 

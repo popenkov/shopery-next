@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import cn from 'classnames';
 
-import { TUserAddress } from '@/entities/User/model/types';
+import { type TUserAddress } from '@/entities/User/model/types';
 import { Text } from '@/shared/ui/Text';
 
 import cls from './OrderPageAddress.module.scss';

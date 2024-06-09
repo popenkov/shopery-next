@@ -1,4 +1,4 @@
-import { AppRouteNames, AppRoutesProps } from '@/shared/model';
+import { AppRouteNames, TAppRoutesProps } from '@/shared/model';
 
 const getRouteHome = () => '/';
 const getRouteCatalog = () => '/catalog';
@@ -10,7 +10,7 @@ const getRouteAccountSettings = () => '/account/settings';
 const getRouteCheckout = () => '/checkout';
 const getRouteCart = () => '/checkout';
 
-export const PAGE_ROUTES: AppRoutesProps[] = [
+export const PAGE_ROUTES: TAppRoutesProps[] = [
   {
     href: getRouteHome(),
     name: AppRouteNames.HOME,

@@ -1,4 +1,4 @@
-import { TBanner } from '@/entities/Banner';
+import { type TBanner } from '@/entities/Banner';
 
 const data: TBanner[] = [
   {

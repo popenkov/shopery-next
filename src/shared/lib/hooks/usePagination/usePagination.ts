@@ -7,7 +7,7 @@ const range = (start: number, end: number) => {
   return Array.from({ length }, (_, idx) => idx + start);
 };
 
-type UsePaginationType = {
+type TUsePagination = {
   totalCount: number;
   pageSize: number;
   siblingCount: number;
@@ -19,7 +19,7 @@ export const usePagination = ({
   //   pageSize,  // todo
   siblingCount = 1,
   currentPage,
-}: UsePaginationType) => {
+}: TUsePagination) => {
   const paginationRange = useMemo(() => {
     const totalPageCount = totalCount;
 

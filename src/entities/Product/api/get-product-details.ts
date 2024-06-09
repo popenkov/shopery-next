@@ -1,6 +1,6 @@
 import { nanoid } from 'nanoid';
 
-import { TProductDetailed } from '..';
+import { type TProductDetailed } from '..';
 
 const data: TProductDetailed = {
   id: 'test',

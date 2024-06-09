@@ -13,9 +13,7 @@ export const FooterPayment: FC<Props> = () => {
 
   return (
     <ul className={cls.payment}>
-      {paymentMethods.map((item) => {
-        const { id, icon } = item;
-
+      {paymentMethods.map(({ id, icon }) => {
         const Icon = getPaymentIcon(icon);
         return (
           <li

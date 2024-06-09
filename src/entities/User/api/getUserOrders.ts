@@ -1,4 +1,4 @@
-import { TUserOrderPreview } from '../model/types';
+import { type TUserOrderPreview } from '../model/types';
 
 const UserOrders: TUserOrderPreview[] = [
   {

@@ -4,9 +4,10 @@ import Link from 'next/link';
 
 import { StarRating } from 'shared/ui/StarRating';
 
-import { TProduct } from '../..';
+import { type TProduct } from '../..';
 
 import cls from './ProductSmall.module.scss';
+import { Text } from '@/shared/ui/Text';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   data: TProduct;
@@ -21,18 +22,18 @@ export const ProductSmall: FC<Props> = ({ data, actions }) => {
         <Image className={cls.productImage} src={img} alt={title} fill />
       </Link>
       <div className={cls.productDescription}>
-        <Link className={cls.link} href="#">
-          <h3 className={cls.productTitle}>{title}</h3>
+        <Link className={cls.link} href={path}>
+          <Text variant="body_s" className={cls.productTitle}>
+            {title}
+          </Text>
         </Link>
         <div>
           <div className={cls.productDescriptionMain}>
-            <p className={cls.productPrice}>
+            <Text variant="body_m" weight="medium" className={cls.productPrice}>
               <span>${price}</span>
               <span className={cls.productPriceOld}>${priceOld}</span>
-            </p>
-            <div className={cls.productRating}>
-              <StarRating value={rating} />
-            </div>
+            </Text>
+            <div className={cls.productRating}>{rating && <StarRating value={rating} />}</div>
           </div>
           <div className={cls.productDescriptionHover}>
             <div className={cls.productActions}>{actions}</div>

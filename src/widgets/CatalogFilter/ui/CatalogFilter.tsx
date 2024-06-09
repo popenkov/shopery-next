@@ -7,7 +7,7 @@ import { AddToFavorites } from '@/features/Product';
 import { ShowProductPreview } from '@/features/Product/show-preview/ui';
 import { AddToCart } from 'features/Cart/add-to-cart';
 import { Filters } from 'features/Filter';
-import { TDiscountBanner, DiscountBanner } from 'entities/DiscountBanner';
+import { type TDiscountBanner, DiscountBanner } from 'entities/DiscountBanner';
 import { ProductSmall, TProduct } from 'entities/Product';
 import { FilterButton } from 'shared/ui/FilterButton';
 

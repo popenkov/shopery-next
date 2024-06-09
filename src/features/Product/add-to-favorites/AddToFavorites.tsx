@@ -1,13 +1,13 @@
 import { FC } from 'react';
 
-import { TProduct } from '@/entities/Product';
-import { RoundButtonTheme } from '@/shared/ui/Buttons/RoundButton';
+import { type TProduct } from '@/entities/Product';
+import { type TRoundButtonTheme } from '@/shared/ui/Buttons/RoundButton';
 import { RoundButton } from 'shared/ui/Buttons';
 import { HeartLinedIcon } from 'shared/ui/icons';
 
 type Props = {
   item: TProduct;
-  theme?: RoundButtonTheme;
+  theme?: TRoundButtonTheme;
   className?: string;
 };
 

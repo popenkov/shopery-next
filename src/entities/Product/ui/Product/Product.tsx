@@ -2,8 +2,7 @@ import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-// todo перенести превью и корзину в фичи и экшны
-import { TProduct } from 'entities/Product';
+import { type TProduct } from 'entities/Product';
 import { getFormattedPrice } from 'shared/lib/utils';
 import { StarRating } from 'shared/ui/StarRating';
 import { Text } from 'shared/ui/Text';

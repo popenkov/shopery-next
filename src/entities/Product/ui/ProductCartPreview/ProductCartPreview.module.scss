@@ -1,11 +1,8 @@
 @import '@/shared/styles/breakpoints';
 @import '@/shared/styles/mixins/flexbox';
 @import '@/shared/styles/mixins/box';
-@import '@/shared/styles/mixins/text-styles';
 
 .ProductCartPreview {
-  $block-name: &; // #{$block-name}__element
-
   @include flex-center-vertical;
 
   gap: 8px;
@@ -28,15 +25,11 @@
 }
 
 .ProductCartPreviewTitle {
-  @include body-s;
-
   margin: 0;
   color: var(--front-primary);
 }
 
 .ProductCartPreviewAmount {
-  @include body-s;
-
   margin: 0;
   color: var(--monochrome-500);
 }

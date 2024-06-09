@@ -14,6 +14,6 @@ const meta = {
 } satisfies Meta<typeof BurgerButton>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type TStory = StoryObj<typeof meta>;
 
-export const BurgerButtonComponent: Story = {};
+export const BurgerButtonComponent: TStory = {};

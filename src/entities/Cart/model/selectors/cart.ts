@@ -2,7 +2,7 @@ import { createSelector } from '@reduxjs/toolkit';
 
 import { RootState } from '@/app/lib/store/store';
 
-import { CartProduct } from '../types/cart';
+import { type TCartProduct } from '../types/cart';
 
 const selectBase = createSelector(
   (state: RootState) => state,
@@ -11,7 +11,7 @@ const selectBase = createSelector(
 
 export const selectCart = createSelector(
   selectBase,
-  (state: { cart: CartProduct[] }) => state.cart,
+  (state: { cart: TCartProduct[] }) => state.cart,
 );
 
 export const selectMenuState = createSelector(

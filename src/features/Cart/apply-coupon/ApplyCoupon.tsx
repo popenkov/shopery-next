@@ -21,6 +21,7 @@ export const ApplyCoupon: FC<Props> = ({ className }) => {
     setCouponValue(value);
   };
 
+  // todo  Доделать
   const handleApplyButtonClick = useCallback(() => {
     // applyCoupon(couponValue);
   }, [couponValue]);

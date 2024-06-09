@@ -1,4 +1,4 @@
-import { TUserOrder } from '../model/types';
+import { type TUserOrder } from '../model/types';
 
 const ORDER_DATA: TUserOrder = {
   id: 1,

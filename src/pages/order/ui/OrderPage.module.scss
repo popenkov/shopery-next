@@ -1,6 +1,4 @@
-@import '@/shared/styles/mixins/container';
 @import '@/shared/styles/mixins/flexbox';
-@import '@/shared/styles/mixins/text-styles';
 
 .OrderPage {
   @include flex-column;

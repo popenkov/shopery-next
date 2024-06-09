@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { getFormattedPrice } from 'shared/lib/utils';
 import { Text } from 'shared/ui/Text';
 
-import { TProduct } from '../..';
+import { type TProduct } from '../..';
 
 import cls from './ProductCart.module.scss';
 

@@ -72,46 +72,7 @@
   }
 }
 
-.videoPlayIcon {
-  // &.primary {
-  //     width: 20px;
-  //     height: 24px;
-  //     color: var(--color-white);
-  //     transition: color var(--transition);
-
-  // }
-  // &.secondary {
-
-  //     width: 14px;
-  //     height: 18px;
-  //     color: var(--color-white);
-  //     transition: color var(--transition);
-  // }
-
-  // @include box(82px);
-
-  // color: var(--front-primary-inversed);
-  // transition: color var(--transition);
-
-  // @media screen and (max-width: $df-screen-t) {
-  //   @include box(70px);
-  // }
-}
-
 .videoPlayButton {
-  // @include button-reset;
-  // @include box(82px);
-
-  // stroke-width: 1.5px;
-
-  // @media (hover: hover) {
-  //   &:hover {
-  //     .videoPlayIcon {
-  //       color: var(--primary);
-  //     }
-  //   }
-  // }
-
   &.primary {
     @include button-reset('flex');
     @include flex-center;

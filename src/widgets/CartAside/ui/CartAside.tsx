@@ -21,7 +21,6 @@ import { CartAsideHeader } from './CartAsideHeader';
 export const CartAside = () => {
   const dispatch = useAppDispatch();
 
-  // todo разобраться с типами
   const cartItems = useAppSelector(selectCart);
   const isMenuOpen = useAppSelector(selectMenuState);
   const totalAmount = useAppSelector(selectTotalAmount);

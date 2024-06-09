@@ -6,7 +6,7 @@ import { getFormattedPrice } from 'shared/lib/utils';
 import { StarRating } from 'shared/ui/StarRating';
 import { Text } from 'shared/ui/Text';
 
-import { TProduct } from '../../';
+import { type TProduct } from '../../';
 
 import cls from './ProductLarge.module.scss';
 
@@ -43,7 +43,7 @@ export const ProductLarge: FC<ProductLargeProps> = ({ data, actions, cartAction 
               </Text>
             )}
           </div>
-          <StarRating value={rating} />
+          {rating && <StarRating value={rating} />}
         </div>
         {cartAction}
       </div>

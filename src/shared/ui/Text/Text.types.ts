@@ -1,10 +1,10 @@
-export type TextTheme = 'primary' | 'inverted' | 'error';
+export type TTextTheme = 'primary' | 'inverted' | 'error';
 
-export type TextAlign = 'right' | 'left' | 'center';
+export type TTextAlign = 'right' | 'left' | 'center';
 
-export type TextWeight = 'light' | 'regular' | 'medium' | 'semibold' | 'bold';
+export type TTextWeight = 'light' | 'regular' | 'medium' | 'semibold' | 'bold';
 
-export type TextVariant =
+export type TTextVariant =
   | 'search-field'
   | 'display_1'
   | 'heading_1'

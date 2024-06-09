@@ -5,11 +5,11 @@ import { Text } from '../../Text';
 
 import cls from './Tag.module.scss';
 
-type TagVariant = 'sale' | 'not-available' | 'best-sale' | 'new' | 'out-of-stock' | 'in-stock';
+type TTagVariant = 'sale' | 'not-available' | 'best-sale' | 'new' | 'out-of-stock' | 'in-stock';
 
 interface TagProps extends DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement> {
   children: ReactNode;
-  variant: TagVariant;
+  variant: TTagVariant;
 }
 
 export const Tag: FC<TagProps> = memo(({ children, variant }) => {

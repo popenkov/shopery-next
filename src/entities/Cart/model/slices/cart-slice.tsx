@@ -1,7 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { CartProduct } from '../types/cart';
+import { type TCartProduct } from '../types/cart';
 import { CartSchema } from '../types/cart-schema';
+import { getTotalAmount, getTotalPrice } from '../lib/constants';
 
 const initialState: CartSchema = {
   isAsideCartOpen: false,
@@ -10,26 +11,14 @@ const initialState: CartSchema = {
   totalPrice: 0,
 };
 
-const getTotalPrice = (state: CartSchema) => {
-  return state.cart.reduce((acc, item) => {
-    return acc + item.price * item.amount;
-  }, 0);
-};
-
-const getTotalAmount = (state: CartSchema) => {
-  return state.cart.reduce((acc, item) => {
-    return acc + item.amount;
-  }, 0);
-};
-
 const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
-    addToCart: (state, action: PayloadAction<CartProduct>) => {
+    addToCart: (state, action: PayloadAction<TCartProduct>) => {
       const findItemIndex = state.cart?.findIndex((item) => item.id === action.payload.id);
 
-      if (findItemIndex === -1) {
+      if (findItemIndex < 0) {
         state.cart = [...state.cart, action.payload];
       } else {
         state.cart[findItemIndex].amount += action.payload.amount;

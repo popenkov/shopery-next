@@ -1,5 +1,4 @@
 @import '@/shared/styles/_breakpoints';
-@import '@/shared/styles/mixins/text-styles';
 
 .OrderProductsHeader {
   display: grid;
@@ -14,8 +13,6 @@
 }
 
 .OrderProductsColumnTitle {
-  @include body-s(500);
-
   color: var(--monochrome-700);
   letter-spacing: 3%;
   text-transform: uppercase;

@@ -12,9 +12,9 @@ const meta = {
 } satisfies Meta<typeof RangeSlider>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type TStory = StoryObj<typeof meta>;
 
-export const RangeSliderComponent: Story = {
+export const RangeSliderComponent: TStory = {
   args: {
     min: 0,
     max: 550,

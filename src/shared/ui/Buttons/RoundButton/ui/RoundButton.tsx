@@ -1,7 +1,7 @@
 import { ComponentProps, ElementType, ReactNode, Ref, forwardRef, memo } from 'react';
 import cn from 'classnames';
 
-import { RoundButtonTheme } from '../model';
+import { type TRoundButtonTheme } from '../model';
 
 import style from './RoundButton.module.scss';
 
@@ -9,7 +9,7 @@ const DEFAULT_ELEMENT: ElementType = 'button';
 
 interface ButtonOwnProps<E extends ElementType = ElementType> {
   className?: string;
-  theme?: RoundButtonTheme;
+  theme?: TRoundButtonTheme;
   icon: ReactNode;
   as?: E;
 }

@@ -14,7 +14,7 @@ export enum AppRouteNames {
   CART = 'Shopping cart',
 }
 
-export type AppRoutesProps = {
+export type TAppRoutesProps = {
   href: Route;
   name?: AppRouteNames;
   authOnly?: boolean;

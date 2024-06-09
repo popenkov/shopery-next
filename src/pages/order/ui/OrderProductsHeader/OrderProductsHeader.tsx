@@ -1,14 +1,23 @@
 import { FC } from 'react';
 
 import cls from './OrderProductsHeader.module.scss';
+import { Text } from '@/shared/ui/Text';
 
 export const OrderProductsHeader: FC = () => {
   return (
     <div className={cls.OrderProductsHeader}>
-      <span className={cls.OrderProductsColumnTitle}>Product</span>
-      <span className={cls.OrderProductsColumnTitle}>price</span>
-      <span className={cls.OrderProductsColumnTitle}>Quantity</span>
-      <span className={cls.OrderProductsColumnTitle}>Subtotal</span>
+      <Text variant="body_s" weight="medium" className={cls.OrderProductsColumnTitle}>
+        Product
+      </Text>
+      <Text variant="body_s" weight="medium" className={cls.OrderProductsColumnTitle}>
+        price
+      </Text>
+      <Text variant="body_s" weight="medium" className={cls.OrderProductsColumnTitle}>
+        Quantity
+      </Text>
+      <Text variant="body_s" weight="medium" className={cls.OrderProductsColumnTitle}>
+        Subtotal
+      </Text>
     </div>
   );
 };

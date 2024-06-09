@@ -2,7 +2,7 @@ import { FC } from 'react';
 import cn from 'classnames';
 
 import { VideoAd } from 'entities/Advertisement';
-import { TProductDetailed } from 'entities/Product';
+import { type TProductDetailed } from 'entities/Product';
 import { ProductReview } from 'entities/Review';
 import { Tabs } from 'shared/ui/Tabs';
 import { Video } from 'shared/ui/Video';

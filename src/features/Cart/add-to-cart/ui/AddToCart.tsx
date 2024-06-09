@@ -2,14 +2,14 @@
 import { FC } from 'react';
 
 import { useAppDispatch } from '@/app/lib/store/hooks';
-import { TProduct } from '@/entities/Product';
+import { type TProduct } from '@/entities/Product';
 import { addToCart, openAsideCartMenu } from 'entities/Cart/';
-import { RoundButton, RoundButtonTheme } from 'shared/ui/Buttons';
+import { RoundButton, TRoundButtonTheme } from 'shared/ui/Buttons';
 import { CartIcon } from 'shared/ui/icons';
 
 type Props = {
   item: TProduct;
-  theme?: RoundButtonTheme;
+  theme?: TRoundButtonTheme;
   className?: string;
 };
 

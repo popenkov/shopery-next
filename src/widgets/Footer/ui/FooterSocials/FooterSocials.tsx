@@ -13,8 +13,7 @@ export const FooterSocials: FC<Props> = () => {
   const { socialLinks } = getFooterData();
   return (
     <ul className={cls.socials}>
-      {socialLinks.map((socialLink) => {
-        const { icon, id } = socialLink;
+      {socialLinks.map(({ icon, id }) => {
         const Icon = getSocialIcon(icon);
         return (
           <RoundButton

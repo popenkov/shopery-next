@@ -1,6 +1,6 @@
 import { nanoid } from 'nanoid';
 
-import { TAdvantage } from '@/entities/Advantage';
+import { type TAdvantage } from '@/entities/Advantage';
 
 const data: TAdvantage[] = [
   {

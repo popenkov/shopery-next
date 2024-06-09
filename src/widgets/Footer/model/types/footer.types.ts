@@ -1,9 +1,9 @@
 import { TLink } from '@/shared/model/navigation-link.types';
-import { SocialLink } from 'entities/SocialShare';
+import { type TSocialLink } from 'entities/SocialShare';
 
 type TPaymentIcons = 'SecureIcon' | 'ApplePayIcon' | 'VisaIcon' | 'DiscoverIcon' | 'MastercardIcon';
 
-type PaymentIcon = {
+type TPaymentIcon = {
   icon: TPaymentIcons;
   id: string;
   path: string;
@@ -11,6 +11,6 @@ type PaymentIcon = {
 
 export type Footer = {
   navigation: TLink[];
-  socialLinks: SocialLink[];
-  paymentMethods: PaymentIcon[];
+  socialLinks: TSocialLink[];
+  paymentMethods: TPaymentIcon[];
 };

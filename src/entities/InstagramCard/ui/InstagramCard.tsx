@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import { InstagramIcon } from 'shared/ui/icons';
 
-import { TInstagramCard } from '..';
+import { type TInstagramCard } from '..';
 
 import cls from './InstagramCard.module.scss';
 

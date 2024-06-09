@@ -3,7 +3,12 @@ import type { ComponentProps, ElementType, ReactNode } from 'react';
 import cn from 'classnames';
 
 import cls from './Text.module.scss';
-import { TextAlign, TextTheme, TextVariant, TextWeight } from './Text.types';
+import {
+  type TTextAlign,
+  type TTextTheme,
+  type TTextVariant,
+  type TTextWeight,
+} from './Text.types';
 
 interface TextOwnProps<E extends ElementType = ElementType> {
   children: ReactNode;
@@ -11,19 +16,18 @@ interface TextOwnProps<E extends ElementType = ElementType> {
   href?: string;
   title?: string;
   text?: string;
-  theme?: TextTheme;
-  align?: TextAlign;
-  variant?: TextVariant;
-  weight?: TextWeight;
+  theme?: TTextTheme;
+  align?: TTextAlign;
+  variant?: TTextVariant;
+  weight?: TTextWeight;
   as?: E;
 }
 
 const DEFAULT_ELEMENT: ElementType = 'p';
 
-export type TextProps<E extends ElementType> = TextOwnProps<E> &
-  Omit<ComponentProps<E>, keyof TextOwnProps>;
+type Props<E extends ElementType> = TextOwnProps<E> & Omit<ComponentProps<E>, keyof TextOwnProps>;
 
-const T = <E extends ElementType = typeof DEFAULT_ELEMENT>(props: TextProps<E>) => {
+const T = <E extends ElementType = typeof DEFAULT_ELEMENT>(props: Props<E>) => {
   const {
     className,
     children,

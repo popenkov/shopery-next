@@ -1,2 +1,2 @@
 export * from './Dropdown';
-export { type DropdownItem } from './Dropdown.interface';
+export { type TDropdownItem } from './Dropdown.interface';

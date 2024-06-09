@@ -18,8 +18,7 @@ export const SocialShare: FC<Props> = ({ className }) => {
     <div className={cn(cls.socialShare, className)}>
       <span className={cls.socialShareText}>Share:</span>
       <div className={cls.socialShareContainer}>
-        {socialLinks.map((socialLink) => {
-          const { icon, id } = socialLink;
+        {socialLinks.map(({ icon, id }) => {
           const Icon = getSocialIcon(icon);
           return (
             <RoundButton

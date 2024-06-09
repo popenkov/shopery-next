@@ -1,4 +1,4 @@
-export interface DropdownItem {
+export type TDropdownItem = {
   value: string;
   label: string;
-}
+};

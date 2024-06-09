@@ -5,7 +5,7 @@ import { AppLink } from 'shared/ui/AppLink';
 import { ArrowIcon } from 'shared/ui/icons';
 import { Text } from 'shared/ui/Text';
 
-import { THeroSlide } from '..';
+import { type THeroSlide } from '..';
 
 import cls from './HeroSlide.module.scss';
 

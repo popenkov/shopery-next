@@ -1,1 +1,1 @@
-export { type HeaderCategory } from './header-categories.types';
+export { type THeaderCategory } from './header-categories.types';

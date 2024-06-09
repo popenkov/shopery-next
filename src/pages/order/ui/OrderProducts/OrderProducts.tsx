@@ -2,7 +2,7 @@ import { FC } from 'react';
 import cn from 'classnames';
 
 import { ProductOrder } from '@/entities/Product/ui/ProductOrder';
-import { TUserOrderItem } from '@/entities/User/model/types';
+import { type TUserOrderItem } from '@/entities/User/model/types';
 
 import { OrderProductsHeader } from '../OrderProductsHeader';
 

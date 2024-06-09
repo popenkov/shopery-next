@@ -5,12 +5,12 @@ import cn from 'classnames';
 
 import cls from './Radio.module.scss';
 
-type HTMLRadioProps = Omit<
+type THTMLRadioProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
   'value' | 'onChange' | 'readOnly'
 >;
 
-interface RadioProps extends HTMLRadioProps {
+interface RadioProps extends THTMLRadioProps {
   className?: string;
   name: string;
   value: string | number;

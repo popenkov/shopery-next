@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { getFormattedPrice, getWordDeclination } from '@/shared/lib/utils';
 import { Text } from '@/shared/ui/Text';
 
-import { TUserOrderPreview } from '../../model/types';
+import { type TUserOrderPreview } from '../../model/types';
 
 import cls from './UserOrders.module.scss';
 type Props = {

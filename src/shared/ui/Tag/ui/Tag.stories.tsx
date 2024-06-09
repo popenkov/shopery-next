@@ -12,32 +12,46 @@ const meta = {
 } satisfies Meta<typeof Tag>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type TStory = StoryObj<typeof meta>;
 
-export const RedTag: Story = {
+export const SaleTag: TStory = {
   args: {
     children: 'Text',
-    variant: 'red',
+    variant: 'sale',
   },
 };
 
-export const BlueTag: Story = {
+export const NotAvailableTag: TStory = {
   args: {
     children: 'Text',
-    variant: 'blue',
+    variant: 'not-available',
   },
 };
 
-export const OrangeTag: Story = {
+export const BestSaleTag: TStory = {
   args: {
     children: 'Text',
-    variant: 'orange',
+    variant: 'best-sale',
   },
 };
 
-export const BlackTag: Story = {
+export const NewTag: TStory = {
   args: {
     children: 'Text',
-    variant: 'black',
+    variant: 'new',
+  },
+};
+
+export const OutOfStockTag: TStory = {
+  args: {
+    children: 'Text',
+    variant: 'out-of-stock',
+  },
+};
+
+export const InStockTag: TStory = {
+  args: {
+    children: 'Text',
+    variant: 'in-stock',
   },
 };

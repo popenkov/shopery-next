@@ -40,19 +40,29 @@ export const CheckoutTotal: FC<Props> = ({ className }) => {
       </div>
       <div className={cls.CheckoutTotalValues}>
         <div className={cls.CheckoutTotalRow}>
-          <span className={cls.CheckoutTotalKey}>Subtotal:</span>
-          <span className={cls.CheckoutTotalValue}>{getFormattedPrice(totalPrice)}</span>
+          <Text variant="body_s" className={cls.CheckoutTotalKey}>
+            Subtotal:
+          </Text>
+          <Text variant="body_s" weight="medium" className={cls.CheckoutTotalValue}>
+            {getFormattedPrice(totalPrice)}
+          </Text>
         </div>
         <div className={cls.CheckoutTotalRow}>
-          <span className={cls.CheckoutTotalKey}>Shipping:</span>
-          <span className={cls.CheckoutTotalValue}>
+          <Text variant="body_s" className={cls.CheckoutTotalKey}>
+            Shipping:
+          </Text>
+          <Text variant="body_s" weight="medium" className={cls.CheckoutTotalValue}>
             {/* todo */}
             {getFormattedPrice(totalPrice) ? getFormattedPrice(totalPrice) : 'Free'}
-          </span>
+          </Text>
         </div>
         <div className={cls.CheckoutTotalRow}>
-          <span className={cls.CheckoutTotalKey}>Total:</span>
-          <span className={cls.CheckoutTotalValue}>{getFormattedPrice(totalPrice)}</span>
+          <Text variant="body_s" className={cls.CheckoutTotalKey}>
+            Total:
+          </Text>
+          <Text variant="body_s" weight="medium" className={cls.CheckoutTotalValue}>
+            {getFormattedPrice(totalPrice)}
+          </Text>
         </div>
       </div>
       <div className={cls.CheckoutPaymentMethods}>

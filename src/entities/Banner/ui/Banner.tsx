@@ -6,7 +6,7 @@ import { Button } from 'shared/ui/Buttons';
 import { ArrowIcon } from 'shared/ui/icons';
 import { Text } from 'shared/ui/Text';
 
-import { TBanner } from '../model';
+import { type TBanner } from '../model';
 
 import cls from './Banner.module.scss';
 

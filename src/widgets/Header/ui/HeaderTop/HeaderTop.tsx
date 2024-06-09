@@ -6,6 +6,7 @@ import { LangSwitcher } from 'features/LangSwitcher';
 import { Location } from 'entities/Location';
 
 import cls from './HeaderTop.module.scss';
+import { Text } from '@/shared/ui/Text';
 
 export const HeaderTop: FC = () => {
   return (
@@ -18,7 +19,7 @@ export const HeaderTop: FC = () => {
             <CurrencySwitcher />
           </div>
           <div className={cls.actionsSeparator}></div>
-          <div className={cls.auth}>
+          <Text variant="body_tiny" className={cls.auth}>
             <Link className={cls.authLink} href="#">
               Sign in
             </Link>
@@ -26,7 +27,7 @@ export const HeaderTop: FC = () => {
             <Link className={cls.authLink} href="#">
               Sign up
             </Link>
-          </div>
+          </Text>
         </div>
       </div>
     </div>

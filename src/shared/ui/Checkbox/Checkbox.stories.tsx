@@ -18,9 +18,9 @@ const meta = {
 } satisfies Meta<typeof Checkbox>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type TStory = StoryObj<typeof meta>;
 
-export const CheckboxComponent: Story = {
+export const CheckboxComponent: TStory = {
   args: {
     name: 'name',
     value: 'value',

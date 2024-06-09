@@ -5,7 +5,7 @@ import { AppLink } from 'shared/ui/AppLink';
 import { ArrowIcon } from 'shared/ui/icons';
 import { Text } from 'shared/ui/Text';
 
-import { TNews } from '..';
+import { type TNews } from '..';
 
 import cls from './News.module.scss';
 

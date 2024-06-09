@@ -1,6 +1,5 @@
 @import '@/shared/styles/mixins/flexbox';
 @import '@/shared/styles/mixins/grid';
-@import '@/shared/styles/mixins/text-styles';
 
 .CheckoutTotal {
   @include flex-column;
@@ -28,13 +27,7 @@
 }
 
 .CheckoutTotalKey {
-  @include body-s;
-
   color: var(--monochrome-700);
-}
-
-.CheckoutTotalValue {
-  @include body-s(500);
 }
 
 .CheckoutTotalButton {

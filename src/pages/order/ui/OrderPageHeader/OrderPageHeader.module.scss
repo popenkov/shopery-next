@@ -1,5 +1,4 @@
 @import '@/shared/styles/mixins/flexbox';
-@import '@/shared/styles/mixins/text-styles';
 
 .OrderPageHeader {
   @include flex-center-vertical;
@@ -12,8 +11,6 @@
 }
 
 .OrderPageHeaderSeparator {
-  @include body-s;
-
   color: var(--monochrome-700);
 }
 

@@ -19,8 +19,6 @@ export const ProductSearch: FC<Props> = () => {
     redirect(getRouteCatalog());
   }, [searchValue]);
 
-  // todo перенести валидацию
-
   const handleInputChange = useCallback((evt: ChangeEvent<HTMLInputElement>) => {
     const value = evt.target.value;
     setSearchValue(value);

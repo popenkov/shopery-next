@@ -6,6 +6,7 @@ import cn from 'classnames';
 import { useCountDown } from 'shared/lib/hooks';
 
 import cls from './Countdown.module.scss';
+import { Text } from '@/shared/ui/Text';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   date: string;
@@ -18,22 +19,36 @@ export const Countdown: FC<Props> = ({ date, className }) => {
   return (
     <div className={cn(cls.counter, className)}>
       <div className={cls.counterItem}>
-        <span className={cls.counterValue}>{days}</span>
+        <Text variant="heading_5" className={cls.counterValue}>
+          {days}
+        </Text>
         <span className={cls.counterDescription}>Days</span>
       </div>
-      <span className={cls.counterSeparator}>:</span>
+      <Text variant="body_xl" className={cls.counterSeparator}>
+        :
+      </Text>
       <div className={cls.counterItem}>
-        <span className={cls.counterValue}>{hours}</span>
+        <Text variant="heading_5" className={cls.counterValue}>
+          {hours}
+        </Text>
         <span className={cls.counterDescription}>Hours</span>
       </div>
-      <span className={cls.counterSeparator}>:</span>
+      <Text variant="body_xl" className={cls.counterSeparator}>
+        :
+      </Text>
       <div className={cls.counterItem}>
-        <span className={cls.counterValue}>{minutes}</span>
+        <Text variant="heading_5" className={cls.counterValue}>
+          {minutes}
+        </Text>
         <span className={cls.counterDescription}>Mins</span>
       </div>
-      <span className={cls.counterSeparator}>:</span>
+      <Text variant="body_xl" className={cls.counterSeparator}>
+        :
+      </Text>
       <div className={cls.counterItem}>
-        <span className={cls.counterValue}>{seconds}</span>
+        <Text variant="heading_5" className={cls.counterValue}>
+          {seconds}
+        </Text>
         <span className={cls.counterDescription}>Secs</span>
       </div>
     </div>

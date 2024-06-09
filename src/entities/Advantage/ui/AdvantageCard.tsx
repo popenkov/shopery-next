@@ -3,7 +3,7 @@ import cn from 'classnames';
 
 import { Text } from 'shared/ui/Text';
 
-import { TAdvantage } from '..';
+import { type TAdvantage } from '..';
 
 import cls from './AdvantageCard.module.scss';
 import { getAdvantageIcon } from './getAdvantageIcon';

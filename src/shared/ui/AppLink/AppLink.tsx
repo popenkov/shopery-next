@@ -4,7 +4,7 @@ import Link, { LinkProps } from 'next/link';
 
 import style from './AppLink.module.scss';
 
-type AppLinkTheme =
+type TAppLinkTheme =
   | 'primary'
   | 'ghost'
   | 'secondary'
@@ -13,19 +13,19 @@ type AppLinkTheme =
   | 'text'
   | 'monochrome-light';
 
-type AppLinkSize = 'small' | 'normal' | 'large';
+type TAppLinkSize = 'small' | 'normal' | 'large';
 
-interface AppLinkProps
+interface Props
   extends LinkProps,
     DetailedHTMLProps<HTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement> {
   className?: string;
-  theme?: AppLinkTheme;
-  size?: AppLinkSize;
+  theme?: TAppLinkTheme;
+  size?: TAppLinkSize;
   children: ReactNode;
   ref?: Ref<HTMLAnchorElement>;
 }
 
-export const AppLink: FC<AppLinkProps> = (props) => {
+export const AppLink: FC<Props> = (props) => {
   const {
     href,
     className,

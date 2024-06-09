@@ -3,7 +3,7 @@ import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { TUserOrderItem } from '@/entities/User/model/types';
+import { type TUserOrderItem } from '@/entities/User/model/types';
 import { getFormattedPrice } from 'shared/lib/utils';
 import { Text } from 'shared/ui/Text';
 

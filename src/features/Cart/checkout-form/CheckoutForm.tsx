@@ -13,7 +13,7 @@ import { TextArea } from 'shared/ui/TextArea';
 import cls from './CheckoutForm.module.scss';
 import { COUNTRIES_LIST, STATES_LIST } from './countries-list';
 
-type FormData = {
+type TFormData = {
   firstName: string;
   lastName: string;
   companyName?: string;
@@ -35,15 +35,14 @@ export const CheckoutForm: FC = () => {
   const {
     reset,
     handleSubmit,
-    // getValues,
     control,
     formState: { isValid },
-  } = useForm<FormData>({
+  } = useForm<TFormData>({
     mode: 'onChange',
   });
 
   // todo   сделать модел для запроса из формы и из стора и отправить
-  const onSubmit: SubmitHandler<FormData> = (data) => {
+  const onSubmit: SubmitHandler<TFormData> = (data) => {
     console.log('data', data);
     if (isValid) {
       console.log('form sent');

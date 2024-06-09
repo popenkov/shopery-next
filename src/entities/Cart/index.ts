@@ -7,4 +7,4 @@ export {
   openAsideCartMenu,
 } from './model/slices/cart-slice';
 export { selectCart } from './model/selectors/cart';
-export { type CartProduct } from './model/types/cart';
+export { type TCartProduct } from './model/types/cart';
