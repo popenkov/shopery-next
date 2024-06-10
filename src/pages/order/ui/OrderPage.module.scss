@@ -10,15 +10,26 @@
 
 .OrderPageInfo {
   display: grid;
+  grid-template-areas: 'address payment' 'status status';
+  gap: 40px 24px;
   padding: 24px;
 }
 
 .OrderPageAddresses {
   display: flex;
+  grid-area: address;
   border: 1px solid var(--monochrome-100);
   border-radius: 6px;
 }
 
-.OrderPageAddresse {
+.OrderPageAddress {
   border-right: 1px solid var(--monochrome-100);
+}
+
+.OrderPagePayment {
+  grid-area: payment;
+}
+
+.OrderPageStatus {
+  grid-area: status;
 }

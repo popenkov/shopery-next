@@ -10,7 +10,6 @@ import { OrderPagePayment } from './OrderPagePayment';
 import { OrderPageStatus } from './OrderPageStatus';
 import { OrderProducts } from './OrderProducts';
 
-
 export const OrderPage: FC<{ params: { slug: string } }> = ({ params }) => {
   const { date, amount, items, status, address } = getUserOrderById(params?.slug || '1');
   return (
@@ -21,13 +20,13 @@ export const OrderPage: FC<{ params: { slug: string } }> = ({ params }) => {
         <div className={cls.OrderPageAddresses}>
           <OrderPageAddress
             title="Billing address"
-            className={cls.OrderPageAddresse}
+            className={cls.OrderPageAddress}
             data={address}
           />
           <OrderPageAddress title="Shipping address" data={address} />
         </div>
-        <OrderPagePayment />
-        <OrderPageStatus status={status} />
+        <OrderPagePayment className={cls.OrderPagePayment} />
+        <OrderPageStatus status={status} className={cls.OrderPageStatus} />
       </div>
       <div className={cls.OrderPageItems}>{/* todo перенести похожую таблицу из дашборда */}</div>
       <OrderProducts products={items} className={cls.OrderPageItems} />

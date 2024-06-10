@@ -1,14 +1,14 @@
 @import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
 @import '@/shared/styles/_breakpoints';
-
-// todo
-// .OrderPageStatus {
-// }
 
 .OrderPageStatusContent {
   @include flex-center-vertical;
 
+  position: relative;
+  top: -10px;
   gap: 20px;
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -25,6 +25,38 @@
   border-radius: 8px;
 }
 
-.OrderPageStatus {
+.OrderPageStatusText {
+  color: var(--hard-primary);
+}
+
+.OrderPageBullet {
+  @include flex-center;
+  @include box(40px);
+
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 40px;
+  background-color: var(--back-primary);
+  border: 1px dashed var(--primary);
+  border-radius: 50%;
+}
+
+.OrderPageBulletIcon {
+  color: var(--front-primary-inversed);
+}
+
+.OrderPageStatusItem {
   @include flex-column;
+
+  gap: 8px;
+  align-items: center;
+
+  &.active {
+    .OrderPageBullet {
+      color: var(--front-primary-inversed);
+      background-color: var(--primary);
+      border-style: solid;
+    }
+  }
 }
