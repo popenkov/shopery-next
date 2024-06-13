@@ -5,31 +5,37 @@
   @include flex-column;
 
   gap: 7px;
-  padding: 24px;
   border: 1px solid var(--monochrome-100);
   border-radius: 8px;
 }
 
 .OrderPagePaymentHeader {
   display: flex;
-  gap: 20px;
-  justify-content: space-between;
-  padding: 18px 20px;
+  gap: 30px;
+  padding: 15px 20px 18px;
+  border-bottom: 1px solid var(--monochrome-100);
+
+  @media screen and (max-width: $df-screen-ti) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.OrderPagePaymentHeaderSeparator {
+  width: 1px;
+  height: 100%;
+  background-color: var(--monochrome-100);
 }
 
 .OrderPagePaymentColumn {
   @include flex-column;
 
-  gap: 6px;
+  gap: 4px;
+  width: 100%;
 }
 
 .OrderPagePaymentColumnKey {
   color: var(--monochrome-400);
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 100%;
-  letter-spacing: 3%;
-  text-align: left;
   text-transform: uppercase;
 }
 
@@ -51,4 +57,8 @@
 
 .OrderPagePaymentTotalPrice {
   color: var(--hard-primary);
+}
+
+.OrderPagePaymentValues {
+  padding: 0 20px;
 }

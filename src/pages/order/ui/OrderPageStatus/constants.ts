@@ -15,13 +15,13 @@ export const STATUS_DATA = [
   },
   {
     id: nanoid(),
-    percent: 50,
+    percent: 75,
     bulletContent: '03',
     text: 'On the way',
   },
   {
     id: nanoid(),
-    percent: 75,
+    percent: 100,
     bulletContent: '04',
     text: 'Delivered',
   },

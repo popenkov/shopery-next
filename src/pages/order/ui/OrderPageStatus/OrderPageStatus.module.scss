@@ -2,21 +2,37 @@
 @import '@/shared/styles/mixins/box';
 @import '@/shared/styles/_breakpoints';
 
+.OrderPageStatus {
+  padding: 0 56px 0 34px;
+
+  @media screen and (max-width: $df-screen-ti) {
+    padding: 0;
+  }
+}
+
 .OrderPageStatusContent {
   @include flex-center-vertical;
 
   position: relative;
-  top: -10px;
+  top: -24px;
   gap: 20px;
   justify-content: space-between;
   width: 100%;
+
+  @media screen and (max-width: $df-screen-m) {
+    display: none;
+  }
 }
 
 .OrderPageStatusBar {
-  width: 100%;
   height: 8px;
+  margin: 0 32px;
   background-color: var(--monochrome-50);
   border-radius: 8px;
+
+  @media screen and (max-width: $df-screen-m) {
+    margin: 0;
+  }
 }
 
 .OrderPageStatusBarActive {
@@ -58,5 +74,15 @@
       background-color: var(--primary);
       border-style: solid;
     }
+  }
+}
+
+.OrderPageStatusMobile {
+  display: none;
+  color: var(--primary);
+
+  @media screen and (max-width: $df-screen-m) {
+    display: block;
+    margin-top: 4px;
   }
 }

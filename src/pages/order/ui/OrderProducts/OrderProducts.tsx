@@ -19,7 +19,7 @@ export const OrderProducts: FC<Props> = ({ products, className }) => {
       <OrderProductsHeader />
       <div className={cls.OrderProductsBody}>
         {products.map((item) => {
-          return <ProductOrder key={item.id} data={item} />;
+          return <ProductOrder key={item.id} data={item} className={cls.OrderProductsItem} />;
         })}
       </div>
     </div>

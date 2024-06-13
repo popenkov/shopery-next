@@ -7,7 +7,7 @@
 
 .ProductOrder {
   display: grid;
-  grid-template-columns: 2fr repeat(3, 1fr);
+  grid-template-columns: 2.3fr repeat(3, 1fr);
   gap: 20px;
   align-items: center;
 
@@ -25,7 +25,7 @@
   &Info {
     @include flex-center-vertical;
 
-    gap: 20px;
+    gap: 12px;
 
     @media screen and (max-width: $df-screen-ti) {
       flex-direction: column;
@@ -39,7 +39,7 @@
   }
 
   &Photo {
-    @include box(100px);
+    @include box(70px);
 
     position: relative;
 

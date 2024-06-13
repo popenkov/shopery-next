@@ -21,7 +21,7 @@ export const OrderPageStatus: FC<Props> = memo(({ status, className }) => {
         setCurrentPercent(15);
         break;
       case 'Processing':
-        setCurrentPercent(45);
+        setCurrentPercent(55);
         break;
       case 'On the way':
         setCurrentPercent(75);
@@ -58,6 +58,9 @@ export const OrderPageStatus: FC<Props> = memo(({ status, className }) => {
           );
         })}
       </div>
+      <Text variant="body_m" weight="medium" className={cls.OrderPageStatusMobile}>
+        {status}
+      </Text>
     </div>
   );
 });

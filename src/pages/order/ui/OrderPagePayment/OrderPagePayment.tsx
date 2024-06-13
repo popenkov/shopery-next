@@ -14,19 +14,35 @@ export const OrderPagePayment: FC<Props> = ({ className }) => {
     <div className={cn(cls.OrderPagePayment, className)}>
       <div className={cls.OrderPagePaymentHeader}>
         <div className={cls.OrderPagePaymentColumn}>
-          <Text variant="body_s" className={cls.OrderPagePaymentColumnKey} as="span">
+          <Text
+            variant="body_tiny"
+            weight="medium"
+            className={cls.OrderPagePaymentColumnKey}
+            as="span"
+          >
             Order ID:
           </Text>
-          <span className={cls.OrderPagePaymentHeaderSeparator} />
+
           <Text variant="body_s" className={cls.OrderPagePaymentColumnValue} as="span">
             #4152
           </Text>
         </div>
+        <span className={cls.OrderPagePaymentHeaderSeparator} />
         <div className={cls.OrderPagePaymentColumn}>
-          <Text variant="body_s" className={cls.OrderPagePaymentKey} as="span">
+          <Text
+            variant="body_tiny"
+            weight="medium"
+            className={cls.OrderPagePaymentColumnKey}
+            as="span"
+          >
             Payment Method:
           </Text>
-          <Text variant="body_s" weight="medium" className={cls.OrderPagePaymentValue} as="span">
+          <Text
+            variant="body_s"
+            weight="medium"
+            className={cls.OrderPagePaymentColumnValue}
+            as="span"
+          >
             Paypal
           </Text>
         </div>

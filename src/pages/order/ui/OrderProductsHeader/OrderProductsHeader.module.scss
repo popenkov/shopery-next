@@ -2,8 +2,8 @@
 
 .OrderProductsHeader {
   display: grid;
-  grid-template-columns: 2fr repeat(3, 1fr);
-  padding: 12px 20px;
+  grid-template-columns: 2.2fr repeat(3, 1fr);
+  padding: 10px 20px;
   background-color: var(--monochrome-50);
   border-bottom: 1px solid var(--monochrome-100);
 
