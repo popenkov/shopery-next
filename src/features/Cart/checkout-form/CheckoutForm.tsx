@@ -12,6 +12,7 @@ import { TextArea } from 'shared/ui/TextArea';
 
 import cls from './CheckoutForm.module.scss';
 import { COUNTRIES_LIST, STATES_LIST } from './countries-list';
+import { EMAIL_REGEX } from '@/shared/lib/constants/validation-regex';
 
 type TFormData = {
   firstName: string;
@@ -193,8 +194,7 @@ export const CheckoutForm: FC = () => {
             rules={{
               required: VALIDATION_MESSAGES.REQUIRED,
               pattern: {
-                value:
-                  /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu,
+                value: EMAIL_REGEX,
                 message: VALIDATION_MESSAGES.WRONG_EMAIL,
               },
             }}
