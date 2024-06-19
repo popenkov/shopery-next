@@ -108,4 +108,10 @@
       }
     }
   }
+
+  &.disabled {
+    color: var(--primary);
+    background-color: var(--green-gray-100);
+    pointer-events: none;
+  }
 }

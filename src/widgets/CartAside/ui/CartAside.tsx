@@ -3,7 +3,7 @@
 import React from 'react';
 
 import { useAppDispatch, useAppSelector } from '@/app/lib/store/hooks';
-import { closeAsideCartMenu, selectCart } from '@/entities/Cart';
+import { closeAsideCartMenu, selectCartProducts } from '@/entities/Cart';
 import {
   selectMenuState,
   selectTotalAmount,
@@ -21,7 +21,7 @@ import { CartAsideHeader } from './CartAsideHeader';
 export const CartAside = () => {
   const dispatch = useAppDispatch();
 
-  const cartItems = useAppSelector(selectCart);
+  const cartItems = useAppSelector(selectCartProducts);
   const isMenuOpen = useAppSelector(selectMenuState);
   const totalAmount = useAppSelector(selectTotalAmount);
   const totalPrice = useAppSelector(selectTotalPrice);

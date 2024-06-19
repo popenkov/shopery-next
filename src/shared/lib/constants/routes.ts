@@ -8,7 +8,7 @@ const getRouteOrderHistory = () => '/account/history';
 const getRouteOrderDetails = () => '/account/order/:id';
 const getRouteAccountSettings = () => '/account/settings';
 const getRouteCheckout = () => '/checkout';
-const getRouteCart = () => '/checkout';
+const getRouteCart = () => '/cart';
 
 export const PAGE_ROUTES: TAppRoutesProps[] = [
   {

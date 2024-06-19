@@ -12,9 +12,6 @@ import { CartTotal } from './CartTotal/CartTotal';
 const CartPage: FC = () => {
   const crumbs: AppRouteNames[] = [AppRouteNames.HOME, AppRouteNames.CART];
 
-  // todo
-  // const totalPrice = useAppSelector(selectTotalPrice);
-
   return (
     <main className="main" data-testid="CartPage">
       <Breadcrumbs items={crumbs} />
@@ -28,13 +25,11 @@ const CartPage: FC = () => {
         >
           My Shopping Cart
         </Text>
+        <div className={cls.CartPageContent}>
+          <CartItems className={cls.CartPageItems} />
 
-        {/* todo */}
-        <div className="section__content cart-page">
-          <CartItems className="cart-page__items" />
-
-          <ApplyCoupon className="cart-page__coupon" />
-          <CartTotal className="cart-page__total" />
+          <ApplyCoupon className={cls.CartPageCoupon} />
+          <CartTotal className={cls.CartPageTotal} />
         </div>
       </div>
     </main>

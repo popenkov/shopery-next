@@ -4,7 +4,7 @@ import { FC } from 'react';
 import cn from 'classnames';
 
 import { useAppSelector } from '@/app/lib/store/hooks';
-import { selectCart } from '@/entities/Cart';
+import { selectCartProducts } from '@/entities/Cart';
 import { selectTotalPrice } from '@/entities/Cart/model/selectors/cart';
 import { ProductCheckout } from '@/entities/Product';
 import { getFormattedPrice } from '@/shared/lib/utils';
@@ -19,7 +19,7 @@ type Props = {
 };
 
 export const CheckoutTotal: FC<Props> = ({ className }) => {
-  const cartItems = useAppSelector(selectCart);
+  const cartItems = useAppSelector(selectCartProducts);
   const totalPrice = useAppSelector(selectTotalPrice);
 
   // todo

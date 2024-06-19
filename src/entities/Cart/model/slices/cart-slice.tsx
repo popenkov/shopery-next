@@ -3,6 +3,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { type TCartProduct } from '../types/cart';
 import { CartSchema } from '../types/cart-schema';
 import { getTotalAmount, getTotalPrice } from '../lib/constants';
+import { changeItemsAmountInCart } from '../lib/helpers';
 
 const initialState: CartSchema = {
   isAsideCartOpen: false,
@@ -27,12 +28,14 @@ const cartSlice = createSlice({
       state.totalAmount = getTotalAmount(state);
       return state;
     },
-    changeNumItemsInCart: (state, action: PayloadAction<{ id: string; amount: number }>) => {
-      const findItemIndex = state.cart?.findIndex((item) => item.id === action.payload.id);
+    changeNumItemsInCart: (state, action: PayloadAction<CartSchema>) => {
+      // todo
+      // const findItemIndex = state.cart?.findIndex((item) => item.id === action.payload.id);
 
-      state.cart[findItemIndex].amount = action.payload.amount;
-      state.totalPrice = getTotalPrice(state);
-      state.totalAmount = getTotalAmount(state);
+      // state.cart[findItemIndex].amount = action.payload.amount;
+      // state.totalPrice = getTotalPrice(state);
+      // state.totalAmount = getTotalAmount(state);
+      state = action.payload;
       return state;
     },
     removeItemFromCart: (state, action: PayloadAction<{ id: string }>) => {
@@ -41,7 +44,6 @@ const cartSlice = createSlice({
       state.totalAmount = getTotalAmount(state);
       return state;
     },
-    // cart menu
     openAsideCartMenu: (state) => {
       state.isAsideCartOpen = true;
       return state;

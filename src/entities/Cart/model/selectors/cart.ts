@@ -9,7 +9,9 @@ const selectBase = createSelector(
   (state) => state.cart,
 );
 
-export const selectCart = createSelector(
+export const selectCartData = createSelector(selectBase, (state) => state);
+
+export const selectCartProducts = createSelector(
   selectBase,
   (state: { cart: TCartProduct[] }) => state.cart,
 );

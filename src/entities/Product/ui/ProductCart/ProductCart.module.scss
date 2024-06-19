@@ -41,10 +41,12 @@
   &Photo {
     @include box(100px);
 
+    position: relative;
     object-fit: contain;
 
     @media screen and (max-width: $df-screen-m) {
       width: 100%;
+      aspect-ratio: 1 / 1;
       height: auto;
       max-height: 250px;
     }

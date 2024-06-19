@@ -1,5 +1,6 @@
 @import '@/shared/styles/mixins/container';
 @import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/_breakpoints';
 
 .CartPage {
   @include container;
@@ -7,4 +8,35 @@
 
   gap: 32px;
   padding: 40px 0 80px;
+}
+
+.CartPageContent {
+  display: grid;
+  grid-template-areas: 'items total' 'coupon total';
+  grid-template-columns: 1fr 424px;
+  gap: 24px;
+  align-items: start;
+
+  @media screen and (max-width: $df-screen-tl) {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  @media screen and (max-width: $df-screen-ti) {
+    grid-template-areas: 'items' 'coupon' 'total';
+    grid-template-columns: 1fr;
+  }
+}
+
+.CartPageItems {
+  grid-area: items;
+  border: 1px solid var(--monochrome-100);
+  border-radius: 8px;
+}
+
+.CartPageCoupon {
+  grid-area: coupon;
+}
+
+.CartPageTotal {
+  grid-area: total;
 }

@@ -1,0 +1,56 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/button-reset';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/text-styles';
+
+.ChangeAmount {
+  @include flex-center-vertical;
+
+  gap: 2px;
+  padding: 8px;
+  border: 1px solid var(--monochrome-100);
+  border-radius: 170px;
+}
+
+.ChangeAmountButtonIcon {
+  @include box(14px);
+
+  color: var(--monochrome-900);
+}
+
+.ChangeAmountButton {
+  @include button-reset('flex');
+  @include box(34px);
+  @include flex-center;
+
+  background-color: var(--monochrome-50);
+  border-radius: 50%;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--primary);
+
+      .ChangeAmountamount-button-icon {
+        color: var(--front-primary-inversed);
+      }
+    }
+  }
+}
+
+.ChangeAmountButtonInputWrapper {
+  @include flex-center-vertical;
+}
+
+.ChangeAmountButtonInput {
+  @include body-m;
+
+  width: 36px;
+  min-width: 36px;
+  text-align: center;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}

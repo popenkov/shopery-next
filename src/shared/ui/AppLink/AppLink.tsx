@@ -2,7 +2,7 @@ import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode, Ref } from 'react';
 import cn from 'classnames';
 import Link, { LinkProps } from 'next/link';
 
-import style from './AppLink.module.scss';
+import cls from './AppLink.module.scss';
 
 type TAppLinkTheme =
   | 'primary'
@@ -23,6 +23,7 @@ interface Props
   size?: TAppLinkSize;
   children: ReactNode;
   ref?: Ref<HTMLAnchorElement>;
+  isDisabled?: boolean;
 }
 
 export const AppLink: FC<Props> = (props) => {
@@ -33,14 +34,16 @@ export const AppLink: FC<Props> = (props) => {
     ref,
     theme = 'primary',
     size = 'normal',
+    isDisabled,
     ...otherProps
   } = props;
   return (
     <Link
       href={href}
-      className={cn(style.link, className, {
-        [style[theme]]: true,
-        [style[size]]: true,
+      className={cn(cls.link, className, {
+        [cls[theme]]: true,
+        [cls[size]]: true,
+        [cls.disabled]: isDisabled,
       })}
       ref={ref}
       {...otherProps}
