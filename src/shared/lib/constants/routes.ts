@@ -9,6 +9,9 @@ const getRouteOrderDetails = () => '/account/order/:id';
 const getRouteAccountSettings = () => '/account/settings';
 const getRouteCheckout = () => '/checkout';
 const getRouteCart = () => '/cart';
+const getRouteLogin = () => '/login';
+const getRouteRegistation = () => '/registration';
+const getRoutePasswordReset = () => '/password-reset';
 
 export const PAGE_ROUTES: TAppRoutesProps[] = [
   {
@@ -52,4 +55,7 @@ export {
   getRouteOrderHistory,
   getRouteCheckout,
   getRouteCart,
+  getRouteLogin,
+  getRouteRegistation,
+  getRoutePasswordReset,
 };

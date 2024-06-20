@@ -7,3 +7,5 @@ export {
   getRouteCart,
 } from './routes';
 export { VALIDATION_MESSAGES } from './validation-messages';
+
+export { USER_LOCALSTORAGE_KEY } from './localstorage';

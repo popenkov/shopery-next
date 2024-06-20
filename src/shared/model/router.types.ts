@@ -12,6 +12,8 @@ export enum AppRouteNames {
   ORDER_DETAILS = 'Order details',
   SETTINGS = 'Settings',
   CART = 'Shopping cart',
+  LOGIN = 'Login',
+  REGISTRATION = 'Create Account',
 }
 
 export type TAppRoutesProps = {

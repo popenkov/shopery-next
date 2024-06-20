@@ -1,9 +1,11 @@
+import { userReducer } from '@/entities/User/slice/user-slice';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
 import { cartReducer } from 'entities/Cart';
 
 const rootReducer = combineReducers({
   cart: cartReducer,
+  user: userReducer,
 });
 
 export const makeStore = () => {

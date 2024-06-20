@@ -3,7 +3,6 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { type TCartProduct } from '../types/cart';
 import { CartSchema } from '../types/cart-schema';
 import { getTotalAmount, getTotalPrice } from '../lib/constants';
-import { changeItemsAmountInCart } from '../lib/helpers';
 
 const initialState: CartSchema = {
   isAsideCartOpen: false,
@@ -29,12 +28,6 @@ const cartSlice = createSlice({
       return state;
     },
     changeNumItemsInCart: (state, action: PayloadAction<CartSchema>) => {
-      // todo
-      // const findItemIndex = state.cart?.findIndex((item) => item.id === action.payload.id);
-
-      // state.cart[findItemIndex].amount = action.payload.amount;
-      // state.totalPrice = getTotalPrice(state);
-      // state.totalAmount = getTotalAmount(state);
       state = action.payload;
       return state;
     },

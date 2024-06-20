@@ -1,3 +1,5 @@
+'use client';
+
 import { FC } from 'react';
 import Link from 'next/link';
 
@@ -7,8 +9,12 @@ import { Location } from 'entities/Location';
 
 import cls from './HeaderTop.module.scss';
 import { Text } from '@/shared/ui/Text';
+import { useAppSelector } from '@/app/lib/store/hooks';
+import { selectAuthData } from '@/entities/User/selectors/user';
 
 export const HeaderTop: FC = () => {
+  const authData = useAppSelector(selectAuthData);
+
   return (
     <div className={cls.top}>
       <div className={cls.content}>
@@ -19,15 +25,21 @@ export const HeaderTop: FC = () => {
             <CurrencySwitcher />
           </div>
           <div className={cls.actionsSeparator}></div>
-          <Text variant="body_tiny" className={cls.auth}>
-            <Link className={cls.authLink} href="#">
-              Sign in
-            </Link>
-            <span className={cls.authSeparator}>/</span>
-            <Link className={cls.authLink} href="#">
-              Sign up
-            </Link>
-          </Text>
+          {authData ? (
+            <Text variant="body_tiny" className={cls.auth}>
+              {authData.name}
+            </Text>
+          ) : (
+            <Text variant="body_tiny" className={cls.auth}>
+              <Link className={cls.authLink} href="#">
+                Sign in
+              </Link>
+              <span className={cls.authSeparator}>/</span>
+              <Link className={cls.authLink} href="#">
+                Sign up
+              </Link>
+            </Text>
+          )}
         </div>
       </div>
     </div>
