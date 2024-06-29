@@ -11,6 +11,7 @@ import cls from './HeaderTop.module.scss';
 import { Text } from '@/shared/ui/Text';
 import { useAppSelector } from '@/app/lib/store/hooks';
 import { selectAuthData } from '@/entities/User/selectors/user';
+import { getRouteLogin, getRouteRegistation } from '@/shared/lib/constants/routes';
 
 export const HeaderTop: FC = () => {
   const authData = useAppSelector(selectAuthData);
@@ -31,11 +32,11 @@ export const HeaderTop: FC = () => {
             </Text>
           ) : (
             <Text variant="body_tiny" className={cls.auth}>
-              <Link className={cls.authLink} href="#">
+              <Link className={cls.authLink} href={getRouteLogin()}>
                 Sign in
               </Link>
               <span className={cls.authSeparator}>/</span>
-              <Link className={cls.authLink} href="#">
+              <Link className={cls.authLink} href={getRouteRegistation()}>
                 Sign up
               </Link>
             </Text>

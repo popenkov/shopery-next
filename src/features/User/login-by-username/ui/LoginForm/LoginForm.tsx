@@ -1,6 +1,6 @@
 'use client';
 
-import { memo } from 'react';
+import { memo, useEffect, useState } from 'react';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
 import cls from './LoginForm.module.scss';
@@ -14,10 +14,12 @@ import { VALIDATION_MESSAGES } from '@/shared/lib/constants';
 import { Input } from '@/shared/ui/Input';
 import { Checkbox } from '@/shared/ui/Checkbox';
 import { Button } from '@/shared/ui/Buttons';
+import cn from 'classnames';
+import { FormError } from '@/shared/ui/FormError';
 
 export interface LoginFormProps {
   className?: string;
-  onSuccess?: () => void; //todo
+  onSuccess?: () => void;
 }
 
 const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
@@ -27,26 +29,34 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     reset,
     handleSubmit,
     control,
-    formState: { isValid, errors },
+    formState: { isValid },
   } = useForm<LoginSchema>({
     mode: 'onChange',
   });
 
+  const [hasError, setHasError] = useState(false);
+
   // todo   сделать модел для запроса из формы и из стора и отправить
   const onSubmit: SubmitHandler<LoginSchema> = async (data) => {
-    console.log('data', data);
     if (isValid) {
-      console.log('form sent');
-      const result = await dispatch(loginByUsername(data));
-      console.log('result', result);
-      if (result.meta.requestStatus === 'fulfilled') {
-        reset();
+      const response = await dispatch(loginByUsername(data));
+
+      if (response.payload === 'error') {
+        setHasError(true);
+        reset({ email: '', password: '' });
+        return;
       }
+      reset({ email: '', password: '' });
+      onSuccess?.();
     }
   };
 
+  useEffect(() => {
+    console.log('reset', reset);
+  }, [reset]);
+
   return (
-    <form className={cls.LoginForm} onSubmit={handleSubmit(onSubmit)}>
+    <form className={cn(cls.LoginForm, className)} onSubmit={handleSubmit(onSubmit)}>
       <Text variant="heading_5" weight="semibold" as="h2" className="LoginFormTitle">
         Sign in
       </Text>
@@ -92,15 +102,11 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
         />
       </div>
       <div className={cls.LoginFormRow}>
-        <Controller
-          control={control}
-          name="remember-me"
-          rules={{
-            required: 'Required field',
-          }}
-          render={({ field, fieldState: { error } }) => (
-            <Checkbox text="Remember me" {...field} className={cls.checkoutFormCheckbox} />
-          )}
+        <Checkbox
+          value="remember"
+          onChange={() => false}
+          text="Remember me"
+          className={cls.checkoutFormCheckbox}
         />
 
         <Link className={cls.LoginFormforgotPassLink} href={getRoutePasswordReset()}>
@@ -110,6 +116,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
       <Button type="submit" className={cls.LoginFormsubmitButton}>
         Login
       </Button>
+      {hasError && <FormError text="email: user-1@mail.com, password: 123" />}
       <div className={cls.LoginFormRegistration}>
         <Text variant="body_s" className={cls.LoginFormRegistrationText} as="span">
           Don’t have account?

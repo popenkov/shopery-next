@@ -1,21 +1,18 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { setAuthData } from '@/entities/User/slice/user-slice';
 import { LoginSchema } from '../../types/loginSchema';
-import { AppDispatch, RootState } from '@/app/lib/store/store';
-import axios from 'axios';
+import { ThunkConfig } from '@/app/providers/StoreProvider/StateSchema';
 
 interface LoginByUsernameProps extends LoginSchema {}
 
 export const loginByUsername = createAsyncThunk<
   LoginSchema,
   LoginByUsernameProps,
-  { rejectValue: { error: string } }
+  ThunkConfig<string>
 >('login/loginByUsername', async (data: LoginSchema, thunkApi) => {
-  console.log('thunkApi', thunkApi);
-
-  const dispatch = thunkApi.dispatch as AppDispatch;
+  const { extra, dispatch, rejectWithValue } = thunkApi;
   try {
-    const response = await axios.post('/login', {
+    const response = await extra.api.post('/login', {
       data,
     });
 
@@ -26,8 +23,7 @@ export const loginByUsername = createAsyncThunk<
     dispatch(setAuthData(response.data));
     return response.data;
   } catch (e) {
-    throw thunkApi.rejectWithValue({
-      error: 'Error!',
-    });
+    console.log(e);
+    return rejectWithValue('error');
   }
 });

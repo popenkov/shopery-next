@@ -45,19 +45,15 @@ export const RelatedProducts: FC<Props> = ({ data }) => {
                 data={child}
                 actions={
                   <>
-                    <AddToFavorites
-                      className={cls.imageButton}
-                      itemID={child.id}
-                      theme="secondary"
-                    />
+                    <AddToFavorites className={cls.imageButton} item={child} theme="secondary" />
                     <ShowProductPreview
-                      itemID={child.id}
+                      item={child}
                       theme="secondary"
                       className={cls.imageButton}
                     />
                   </>
                 }
-                cartAction={<AddToCart itemID={child.id} className={cls.button} />}
+                cartAction={<AddToCart item={child} className={cls.button} />}
               />
             )}
           />

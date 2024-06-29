@@ -24,19 +24,15 @@ export const CatalogItems: FC<Props> = ({ products, className }) => {
               key={product.id}
               actions={
                 <>
-                  <AddToFavorites
-                    className={cls.imageButton}
-                    itemID={product.id}
-                    theme="secondary"
-                  />
+                  <AddToFavorites className={cls.imageButton} item={product} theme="secondary" />
                   <ShowProductPreview
-                    itemID={product.id}
+                    item={product}
                     theme="secondary"
                     className={cls.imageButton}
                   />
                 </>
               }
-              cartAction={<AddToCart itemID={product.id} className={cls.button} />}
+              cartAction={<AddToCart item={product} className={cls.button} />}
             />
           );
         })}
@@ -49,17 +45,13 @@ export const CatalogItems: FC<Props> = ({ products, className }) => {
               key={product.id}
               actions={
                 <>
-                  <AddToCart itemID={product.id} className={cls.button} />
+                  <AddToCart item={product} className={cls.button} />
                   <ShowProductPreview
-                    itemID={product.id}
+                    item={product}
                     theme="secondary"
                     className={cls.imageButton}
                   />
-                  <AddToFavorites
-                    className={cls.imageButton}
-                    itemID={product.id}
-                    theme="secondary"
-                  />
+                  <AddToFavorites className={cls.imageButton} item={product} theme="secondary" />
                 </>
               }
             />
