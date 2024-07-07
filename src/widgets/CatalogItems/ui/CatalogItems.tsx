@@ -1,7 +1,7 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import cn from 'classnames';
 
-import { AddToFavorites } from '@/features/Product';
+import { AddToWishlist } from '@/features/Product';
 import { ShowProductPreview } from '@/features/Product/show-preview/ui';
 import { AddToCart } from 'features/Cart/add-to-cart';
 import { Product, ProductSmall, TProduct } from 'entities/Product';
@@ -24,7 +24,7 @@ export const CatalogItems: FC<Props> = ({ products, className }) => {
               key={product.id}
               actions={
                 <>
-                  <AddToFavorites className={cls.imageButton} item={product} theme="secondary" />
+                  <AddToWishlist className={cls.imageButton} item={product} theme="secondary" />
                   <ShowProductPreview
                     item={product}
                     theme="secondary"
@@ -51,7 +51,7 @@ export const CatalogItems: FC<Props> = ({ products, className }) => {
                     theme="secondary"
                     className={cls.imageButton}
                   />
-                  <AddToFavorites className={cls.imageButton} item={product} theme="secondary" />
+                  <AddToWishlist className={cls.imageButton} item={product} theme="secondary" />
                 </>
               }
             />

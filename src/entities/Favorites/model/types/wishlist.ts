@@ -1,4 +1,4 @@
-export type TFavoriteProduct = {
+export type TWishlistProduct = {
   id: string;
   path: string;
   img: string;

@@ -3,7 +3,7 @@
 import { DetailedHTMLProps, FC, HTMLAttributes, useCallback, useState } from 'react';
 import cn from 'classnames';
 
-import { AddToFavorites } from '@/features/Product';
+import { AddToWishlist } from '@/features/Product';
 import { ShowProductPreview } from '@/features/Product/show-preview/ui';
 import { AddToCart } from 'features/Cart/add-to-cart';
 import { Filters } from 'features/Filter';
@@ -64,7 +64,7 @@ export const CatalogFilter: FC<Props> = ({ banner, featuredItems }) => {
                         theme="secondary"
                         className={cls.imageButton}
                       />
-                      <AddToFavorites className={cls.imageButton} item={item} theme="secondary" />
+                      <AddToWishlist className={cls.imageButton} item={item} theme="secondary" />
                     </>
                   }
                 />

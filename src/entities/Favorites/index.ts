@@ -1,7 +1,7 @@
 export {
-  favoritesReducer,
-  addToFavorites,
-  removeProductFromFavorites,
-} from './model/slices/cart-slice';
-export { selectFavoritesProducts } from './model/selectors/favorites';
-export { type TFavoriteProduct } from './model/types/favorites';
+  wishlistReducer,
+  addToWishlist,
+  removeProductFromWishlist,
+} from './model/slices/wishlist-slice';
+export { selectWishlistProducts } from './model/selectors/wishlist';
+export { type TWishlistProduct } from './model/types/wishlist';

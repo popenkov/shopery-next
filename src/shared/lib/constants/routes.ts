@@ -11,6 +11,7 @@ const getRouteCheckout = () => '/checkout';
 const getRouteCart = () => '/cart';
 const getRouteLogin = () => '/login';
 const getRouteRegistation = () => '/registration';
+const getRouteWishlist = () => '/wishlist';
 const getRoutePasswordReset = () => '/password-reset';
 
 export const PAGE_ROUTES: TAppRoutesProps[] = [
@@ -43,8 +44,8 @@ export const PAGE_ROUTES: TAppRoutesProps[] = [
     name: AppRouteNames.CHECKOUT,
   },
   {
-    href: getRouteCart(),
-    name: AppRouteNames.CART,
+    href: getRouteWishlist(),
+    name: AppRouteNames.WISHLIST,
   },
 ];
 
@@ -58,4 +59,5 @@ export {
   getRouteLogin,
   getRouteRegistation,
   getRoutePasswordReset,
+  getRouteWishlist,
 };

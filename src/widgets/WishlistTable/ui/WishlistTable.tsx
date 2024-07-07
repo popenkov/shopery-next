@@ -1,16 +1,27 @@
+'use client';
+
 import { FC } from 'react';
 
 import { AddToCartFromWishlist } from '@/features/Cart';
-import { RemoveFromFavorites } from 'features/Product';
-import { getWishlistItems } from 'entities/Product/';
+import { RemoveFromWishlist } from 'features/Product';
 import { ProductWishlist } from 'entities/Product/';
 
 import cls from './WishlistTable.module.scss';
 import { WishlistTableFooter } from './WishlistTableFooter';
 import { WishlistTableHeader } from './WishlistTableHeader';
+import { useAppSelector } from '@/app/lib/store/hooks';
+import { selectWishlistProducts } from '@/entities/Favorites';
 
 export const WishlistTable: FC = () => {
-  const { items } = getWishlistItems();
+  const items = useAppSelector(selectWishlistProducts);
+
+  if (!items.length) {
+    return (
+      <div className={cls.wishlistTable}>
+        <p className={cls.wishlistTableNoItems}>No products in the wishlist</p>
+      </div>
+    );
+  }
   return (
     <div className={cls.wishlistTable}>
       <WishlistTableHeader />
@@ -23,7 +34,7 @@ export const WishlistTable: FC = () => {
               actions={
                 <>
                   <AddToCartFromWishlist item={item} />
-                  <RemoveFromFavorites />
+                  <RemoveFromWishlist id={item.id} />
                 </>
               }
             />

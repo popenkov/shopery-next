@@ -1,5 +1,5 @@
 import { ThunkExtraArg } from '@/app/providers/StoreProvider/StateSchema';
-import { favoritesReducer } from '@/entities/Favorites';
+import { wishlistReducer } from '@/entities/Favorites';
 import { userReducer } from '@/entities/User/slice/user-slice';
 import { $api } from '@/shared/api/api';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
@@ -9,7 +9,7 @@ import { cartReducer } from 'entities/Cart';
 const rootReducer = combineReducers({
   cart: cartReducer,
   user: userReducer,
-  favorites: favoritesReducer,
+  wishlist: wishlistReducer,
 });
 
 const extraArg: ThunkExtraArg = {

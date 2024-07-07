@@ -6,7 +6,7 @@ import { ProductDetailedTabs, RelatedProducts } from 'widgets/ProductDetailed';
 import { AddToCartCounter } from '@/features/Cart';
 import { AppRouteNames } from '@/shared/model';
 import { Breadcrumbs } from '@/shared/ui/Breadcrumps';
-import { AddToFavorites } from 'features/Product';
+import { AddToWishlist } from 'features/Product';
 import { getProductDetails } from 'entities/Product';
 
 import cls from './Product.module.scss';
@@ -25,8 +25,7 @@ const Product: FC = () => {
           actions={
             <>
               <AddToCartCounter className={cls.ProductCartPreviewCounter} />
-              {/* todo */}
-              <AddToFavorites className={cls.productFavoriteButton} item={data} />
+              <AddToWishlist className={cls.productFavoriteButton} item={data} />
             </>
           }
         />

@@ -2,7 +2,7 @@
 
 import React, { FC } from 'react';
 
-import { AddToFavorites } from '@/features/Product';
+import { AddToWishlist } from '@/features/Product';
 import { ShowProductPreview } from '@/features/Product/show-preview/ui';
 import { AddToCart } from 'features/Cart/add-to-cart';
 import { ProductLarge, TProduct } from 'entities/Product';
@@ -34,7 +34,7 @@ export const ProductTab: FC = () => {
             key={item.id}
             actions={
               <>
-                <AddToFavorites className={cls.imageButton} item={item} theme="secondary" />
+                <AddToWishlist className={cls.imageButton} item={item} theme="secondary" />
                 <ShowProductPreview item={item} theme="secondary" className={cls.imageButton} />
               </>
             }
@@ -50,7 +50,7 @@ export const ProductTab: FC = () => {
                 key={child.id}
                 actions={
                   <>
-                    <AddToFavorites className={cls.imageButton} item={child} theme="secondary" />
+                    <AddToWishlist className={cls.imageButton} item={child} theme="secondary" />
                     <ShowProductPreview
                       item={child}
                       theme="secondary"

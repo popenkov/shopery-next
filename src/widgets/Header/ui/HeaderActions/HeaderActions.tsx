@@ -6,11 +6,12 @@ import { HeartIcon } from 'shared/ui/icons';
 import { HeaderCart } from '../HeaderCart';
 
 import cls from './HeaderActions.module.scss';
+import { getRouteWishlist } from '@/shared/lib/constants/routes';
 
 export const HeaderActions: FC = () => {
   return (
     <div className={cls.actions}>
-      <Link className={cls.favoriteLink} href="#">
+      <Link className={cls.favoriteLink} href={getRouteWishlist()}>
         <HeartIcon className={cls.favoriteIcon} />
       </Link>
       <span className={cls.actionsSeparator} />

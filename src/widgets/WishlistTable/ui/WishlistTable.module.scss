@@ -30,6 +30,12 @@
   text-transform: uppercase;
 }
 
+.wishlistTableNoItems {
+  padding: 32px 24px;
+  color: var(--monochrome-500);
+  text-align: center;
+}
+
 .wishlistTableBody {
   padding: 0 24px;
 }
