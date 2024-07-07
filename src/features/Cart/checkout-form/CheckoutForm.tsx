@@ -13,9 +13,9 @@ import { TextArea } from 'shared/ui/TextArea';
 import cls from './CheckoutForm.module.scss';
 import { COUNTRIES_LIST, STATES_LIST } from './countries-list';
 import { EMAIL_REGEX } from '@/shared/lib/constants/validation-regex';
-import { useAppSelector } from '@/app/lib/store/hooks';
+import { useAppDispatch, useAppSelector } from '@/app/lib/store/hooks';
 import { selectCartProducts } from '@/entities/Cart';
-import { TOrder, TOrderProduct } from '@/entities/Order';
+import { TOrder, TOrderProduct, addToOrders } from '@/entities/Order';
 
 type TFormData = {
   firstName: string;
@@ -35,6 +35,7 @@ type TFormData = {
 };
 
 export const CheckoutForm: FC = () => {
+  const dispatch = useAppDispatch();
   const cartItems = useAppSelector(selectCartProducts);
   const [showAddAddress, setShowAddAddress] = useState(false);
   const {
@@ -45,8 +46,6 @@ export const CheckoutForm: FC = () => {
   } = useForm<TFormData>({
     mode: 'onChange',
   });
-
-  console.log(cartItems);
 
   // todo   сделать модел для запроса из формы и из стора и отправить
   const onSubmit: SubmitHandler<TFormData> = (data) => {
@@ -97,7 +96,8 @@ export const CheckoutForm: FC = () => {
       },
       date: new Date(),
     };
-    console.log('orderDate', orderDate);
+    dispatch(addToOrders(orderDate));
+
     if (isValid) {
       console.log('form sent');
       reset();

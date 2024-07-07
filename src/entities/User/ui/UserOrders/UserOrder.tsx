@@ -5,11 +5,10 @@ import Link from 'next/link';
 import { getFormattedPrice, getWordDeclination } from '@/shared/lib/utils';
 import { Text } from '@/shared/ui/Text';
 
-import { type TUserOrderPreview } from '../../model/types';
-
 import cls from './UserOrders.module.scss';
+import { TOrder } from '@/entities/Order';
 type Props = {
-  order: TUserOrderPreview;
+  order: TOrder;
 };
 
 export const UserOrder: FC<Props> = ({ order }) => {
@@ -24,11 +23,12 @@ export const UserOrder: FC<Props> = ({ order }) => {
       <Text variant="body_s" className={cls.UserOrdersItemText}>
         #{order.id}
       </Text>
+      {/* todo */}
       <Text variant="body_s" className={cls.UserOrdersItemText}>
-        {order.date}
+        {new Date(order.date).toDateString()}
       </Text>
       <Text variant="body_s" className={cls.UserOrdersItemText}>
-        {getFormattedPrice(order.price)} ({order.amount}{' '}
+        {getFormattedPrice(order.subtotal)} ({order.amount}{' '}
         {getWordDeclination(order.amount, ['Product', 'Products'])})
       </Text>
       <Text variant="body_s" className={cls.UserOrdersItemText}>
