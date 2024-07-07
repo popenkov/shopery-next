@@ -5,6 +5,7 @@ import { AppLink } from '@/shared/ui/AppLink';
 import { Text } from '@/shared/ui/Text';
 
 import cls from './CartAsideFooter.module.scss';
+import { getRouteCart, getRouteCheckout } from '@/shared/lib/constants';
 
 type Props = {
   closeDrawer: () => void;
@@ -25,7 +26,7 @@ export const CartAsideFooter: FC<Props> = ({ closeDrawer, price, amount }) => {
       </div>
       <div className={cls.CartAsideFooterButtons}>
         <AppLink
-          href="/checkout"
+          href={getRouteCheckout()}
           theme="primary"
           size="normal"
           className={cls.CartAsideFooterButton}
@@ -34,7 +35,7 @@ export const CartAsideFooter: FC<Props> = ({ closeDrawer, price, amount }) => {
           Checkout
         </AppLink>
         <AppLink
-          href="/cart"
+          href={getRouteCart()}
           theme="ghost"
           size="normal"
           className={cls.CartAsideFooterButton}

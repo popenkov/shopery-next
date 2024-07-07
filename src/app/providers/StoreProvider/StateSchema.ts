@@ -7,6 +7,7 @@ export interface StateSchema {
   cart: CartSchema;
   user: UserSchema;
   wishlist: WishlistSchema;
+  orders: CartSchema;
 }
 
 export interface ThunkExtraArg {

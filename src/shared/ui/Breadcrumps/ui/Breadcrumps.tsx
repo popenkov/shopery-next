@@ -1,7 +1,7 @@
 import { FC, memo } from 'react';
 import Link from 'next/link';
 
-import { PAGE_ROUTES } from '@/shared/lib/constants';
+import { PAGE_ROUTES, getRouteHome } from '@/shared/lib/constants';
 import { HomeIcon, ChevronDownIcon } from 'shared/ui/icons';
 
 import cls from './Breadcrumps.module.scss';
@@ -12,7 +12,7 @@ interface BreadcrumbsProps {
 
 export const Breadcrumbs: FC<BreadcrumbsProps> = memo(({ items }) => {
   const homeLink = (
-    <Link className={cls.link} href="/">
+    <Link className={cls.link} href={getRouteHome()}>
       <HomeIcon className={cls.homeIcon} />
       <ChevronDownIcon className={cls.chevron} />
     </Link>

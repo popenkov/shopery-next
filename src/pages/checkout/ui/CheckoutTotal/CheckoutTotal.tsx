@@ -1,6 +1,6 @@
 'use client';
 
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import cn from 'classnames';
 
 import { useAppSelector } from '@/app/lib/store/hooks';
@@ -21,10 +21,11 @@ type Props = {
 export const CheckoutTotal: FC<Props> = ({ className }) => {
   const cartItems = useAppSelector(selectCartProducts);
   const totalPrice = useAppSelector(selectTotalPrice);
+  const [activePaymentMethod, setActivePaymentMethod] = useState('cash');
 
   // todo
-  const handlePaymentMethodChoose = () => {
-    console.log('handlePaymentMethodChoose');
+  const handlePaymentMethodChoose = (method: string) => {
+    setActivePaymentMethod(method);
   };
 
   return (
@@ -77,13 +78,15 @@ export const CheckoutTotal: FC<Props> = ({ className }) => {
             text="Cash on Delivery"
             onChange={handlePaymentMethodChoose}
             className="filter-accordion__content-item"
+            checked={activePaymentMethod === 'cash'}
           />
           <Radio
-            value={'cash'}
+            value={'paypal'}
             name="payment-method"
             text="Paypal"
             onChange={handlePaymentMethodChoose}
             className="filter-accordion__content-item"
+            checked={activePaymentMethod === 'paypal'}
           />
           <Radio
             value={'amazon-pay'}
@@ -91,6 +94,7 @@ export const CheckoutTotal: FC<Props> = ({ className }) => {
             text="Amazon Pay"
             onChange={handlePaymentMethodChoose}
             className="filter-accordion__content-item"
+            checked={activePaymentMethod === 'amazon-pay'}
           />
         </div>
       </div>

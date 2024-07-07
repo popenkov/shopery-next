@@ -20,7 +20,6 @@ type Props = {
 
 export const CartItems: FC<Props> = ({ className }) => {
   const cartItems = useAppSelector(selectCartProducts);
-  console.log(cartItems);
   return (
     <div className={cn(cls.CartItems, className)}>
       <div className={cls.CartItemsHeader}>

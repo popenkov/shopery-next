@@ -13,6 +13,9 @@ import { TextArea } from 'shared/ui/TextArea';
 import cls from './CheckoutForm.module.scss';
 import { COUNTRIES_LIST, STATES_LIST } from './countries-list';
 import { EMAIL_REGEX } from '@/shared/lib/constants/validation-regex';
+import { useAppSelector } from '@/app/lib/store/hooks';
+import { selectCartProducts } from '@/entities/Cart';
+import { TOrder, TOrderProduct } from '@/entities/Order';
 
 type TFormData = {
   firstName: string;
@@ -32,6 +35,7 @@ type TFormData = {
 };
 
 export const CheckoutForm: FC = () => {
+  const cartItems = useAppSelector(selectCartProducts);
   const [showAddAddress, setShowAddAddress] = useState(false);
   const {
     reset,
@@ -42,9 +46,58 @@ export const CheckoutForm: FC = () => {
     mode: 'onChange',
   });
 
+  console.log(cartItems);
+
   // todo   сделать модел для запроса из формы и из стора и отправить
   const onSubmit: SubmitHandler<TFormData> = (data) => {
-    console.log('data', data);
+    const orderItems: TOrderProduct[] = cartItems.map((item) => {
+      return {
+        id: item.id,
+        name: item.title,
+        price: item.price,
+        quantity: item.amount,
+        total: item.price * item.amount,
+        img: item.img,
+        // todo
+        path: '/',
+      };
+    });
+
+    const orderDate: TOrder = {
+      id: Date.now().toString(),
+      items: orderItems,
+      subtotal: orderItems.reduce((acc, item) => acc + item.price * item.quantity, 0),
+      amount: orderItems.reduce((acc, item) => acc + item.quantity, 0),
+      discount: 0,
+      delivery: null,
+      // todo
+      paymentMethod: 'PayPal',
+      status: 'Processing',
+      shippingAddress: {
+        firstName: data.firstName,
+        lastName: data.lastName,
+        companyName: data.companyName,
+        email: data.email,
+        phone: data.phone,
+        street: data.shippingStreetAddress,
+        country: data.shippingCountryAddress,
+        state: data.shippingCountryState,
+        zipCode: data.shippingZipAddress,
+      },
+      billingAddress: {
+        firstName: data.firstName,
+        lastName: data.lastName,
+        companyName: data.companyName,
+        email: data.email,
+        phone: data.phone,
+        street: data.streetAddress,
+        country: data.countryAddress,
+        state: data.countryState,
+        zipCode: data.zipAddress,
+      },
+      date: new Date(),
+    };
+    console.log('orderDate', orderDate);
     if (isValid) {
       console.log('form sent');
       reset();

@@ -16,11 +16,12 @@ interface RadioProps extends THTMLRadioProps {
   value: string | number;
   text?: string;
   amount?: number;
+  checked?: boolean;
   onChange?: (value: string) => void;
 }
 
 export const Radio = memo((props: RadioProps) => {
-  const { className, value, onChange, text, name, amount, ...otherProps } = props;
+  const { className, value, onChange, text, name, amount, checked, ...otherProps } = props;
   const ref = useRef<HTMLInputElement>(null);
 
   const handleRadioChange = (evt: ChangeEvent<HTMLInputElement>) => {
@@ -36,6 +37,7 @@ export const Radio = memo((props: RadioProps) => {
         value={value}
         onChange={handleRadioChange}
         className={cls.input}
+        checked={checked}
         {...otherProps}
       />
       <span className={cls.fakeInput} />
