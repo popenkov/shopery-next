@@ -1,10 +1,11 @@
 import { FC, ReactNode } from 'react';
 import cn from 'classnames';
 
+import { Text } from '@/shared/ui/Text';
+
 import { type TProduct } from '../../model';
 
 import cls from './ProductCartPreview.module.scss';
-import { Text } from '@/shared/ui/Text';
 
 type Props = {
   data: TProduct;

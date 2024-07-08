@@ -1,18 +1,19 @@
 'use client';
 
 import { FC } from 'react';
-
 import cn from 'classnames';
-
-import cls from './EditUserSettings.module.scss';
-import { TFormData } from '../model';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
+
+import { VALIDATION_MESSAGES } from '@/shared/lib/constants';
+import { EMAIL_REGEX } from '@/shared/lib/constants/validation-regex';
+import { Button } from '@/shared/ui/Buttons';
+import { ImageUploader } from '@/shared/ui/ImageUploader/ImageUploader';
 import { Input } from '@/shared/ui/Input';
 import { MaskedInput } from '@/shared/ui/MaskedInput';
-import { EMAIL_REGEX } from '@/shared/lib/constants/validation-regex';
-import { ImageUploader } from '@/shared/ui/ImageUploader/ImageUploader';
-import { Button } from '@/shared/ui/Buttons';
-import { VALIDATION_MESSAGES } from '@/shared/lib/constants';
+
+import { TFormData } from '../model';
+
+import cls from './EditUserSettings.module.scss';
 
 type Props = {
   className?: string;

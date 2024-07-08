@@ -3,15 +3,15 @@
 import { FC } from 'react';
 import Link from 'next/link';
 
+import { useAppSelector } from '@/app/lib/store/hooks';
+import { selectAuthData } from '@/entities/User/selectors/user';
+import { getRouteLogin, getRouteRegistation } from '@/shared/lib/constants/routes';
+import { Text } from '@/shared/ui/Text';
 import { CurrencySwitcher } from 'features/CurrencySwitcher';
 import { LangSwitcher } from 'features/LangSwitcher';
 import { Location } from 'entities/Location';
 
 import cls from './HeaderTop.module.scss';
-import { Text } from '@/shared/ui/Text';
-import { useAppSelector } from '@/app/lib/store/hooks';
-import { selectAuthData } from '@/entities/User/selectors/user';
-import { getRouteLogin, getRouteRegistation } from '@/shared/lib/constants/routes';
 
 export const HeaderTop: FC = () => {
   const authData = useAppSelector(selectAuthData);

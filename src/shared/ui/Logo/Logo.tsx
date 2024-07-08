@@ -1,6 +1,7 @@
 import { DetailedHTMLProps, FC, HTMLAttributes, memo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+
 import { getRouteHome } from '@/shared/lib/constants';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement> {

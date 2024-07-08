@@ -1,6 +1,8 @@
 import { FC } from 'react';
 import cn from 'classnames';
+
 import { Text } from '../Text';
+
 import cls from './FormError.module.scss';
 
 interface Props {

@@ -1,7 +1,8 @@
 import { FC } from 'react';
 
-import cls from './OrderProductsHeader.module.scss';
 import { Text } from '@/shared/ui/Text';
+
+import cls from './OrderProductsHeader.module.scss';
 
 export const OrderProductsHeader: FC = () => {
   return (

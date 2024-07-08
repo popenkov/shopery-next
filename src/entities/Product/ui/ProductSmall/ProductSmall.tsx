@@ -2,12 +2,12 @@ import React, { DetailedHTMLProps, FC, HTMLAttributes, ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { Text } from '@/shared/ui/Text';
 import { StarRating } from 'shared/ui/StarRating';
 
 import { type TProduct } from '../..';
 
 import cls from './ProductSmall.module.scss';
-import { Text } from '@/shared/ui/Text';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   data: TProduct;

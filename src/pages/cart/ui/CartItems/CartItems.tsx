@@ -5,14 +5,14 @@ import cn from 'classnames';
 
 import { useAppSelector } from '@/app/lib/store/hooks';
 import { selectCartProducts } from '@/entities/Cart';
-import { getRouteCart, getRouteCatalog } from '@/shared/lib/constants';
-import { AppLink } from '@/shared/ui/AppLink';
-
-import cls from './CartItems.module.scss';
 import { ProductCart } from '@/entities/Product/ui/ProductCart';
-import { Text } from '@/shared/ui/Text';
 import { ChangeAmount } from '@/features/Cart';
 import { RemoveFromCart } from '@/features/Cart/remove-from-cart';
+import { getRouteCart, getRouteCatalog } from '@/shared/lib/constants';
+import { AppLink } from '@/shared/ui/AppLink';
+import { Text } from '@/shared/ui/Text';
+
+import cls from './CartItems.module.scss';
 
 type Props = {
   className?: string;

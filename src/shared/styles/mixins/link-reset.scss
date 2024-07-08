@@ -1,0 +1,10 @@
+/* stylelint-disable */
+@mixin link-reset() {
+  cursor: pointer;
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--hard-primary);
+    }
+  }
+}

@@ -3,14 +3,14 @@
 import { FC } from 'react';
 import cn from 'classnames';
 
+import { useAppSelector } from '@/app/lib/store/hooks';
+import { selectCartData } from '@/entities/Cart/model/selectors/cart';
 import { getRouteCheckout } from '@/shared/lib/constants';
+import { getFormattedPrice } from '@/shared/lib/utils';
 import { AppLink } from '@/shared/ui/AppLink';
 import { Text } from '@/shared/ui/Text';
 
 import cls from './CartTotal.module.scss';
-import { useAppSelector } from '@/app/lib/store/hooks';
-import { selectCartData, selectTotalPrice } from '@/entities/Cart/model/selectors/cart';
-import { getFormattedPrice } from '@/shared/lib/utils';
 
 type Props = {
   className?: string;

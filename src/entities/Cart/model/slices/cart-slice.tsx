@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
+import { getTotalAmount, getTotalPrice } from '../lib/constants';
 import { type TCartProduct } from '../types/cart';
 import { CartSchema } from '../types/cart-schema';
-import { getTotalAmount, getTotalPrice } from '../lib/constants';
 
 const initialState: CartSchema = {
   isAsideCartOpen: false,

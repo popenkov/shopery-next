@@ -1,7 +1,9 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { setAuthData } from '@/entities/User/slice/user-slice';
-import { LoginSchema } from '../../types/loginSchema';
+
 import { ThunkConfig } from '@/app/providers/StoreProvider/StateSchema';
+import { setAuthData } from '@/entities/User/slice/user-slice';
+
+import { LoginSchema } from '../../types/loginSchema';
 
 interface LoginByUsernameProps extends LoginSchema {}
 

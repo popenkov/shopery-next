@@ -1,10 +1,10 @@
 import { FC } from 'react';
-
 import cn from 'classnames';
 
-import cls from './SettingsAccount.module.scss';
-import { Text } from '@/shared/ui/Text';
 import { EditUserSettings } from '@/features/User';
+import { Text } from '@/shared/ui/Text';
+
+import cls from './SettingsAccount.module.scss';
 
 type Props = {
   className?: string;

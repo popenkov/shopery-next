@@ -6,6 +6,7 @@
   @include container;
   @include flex-center-vertical;
 
+  position: relative;
   gap: 73px;
   padding-top: 80px;
 
@@ -15,25 +16,33 @@
 }
 
 .FaqImageContainer {
-  position: relative;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
   align-self: flex-end;
   width: 50%;
   max-width: 731px;
+  height: 100%;
   max-height: 808px;
   aspect-ratio: 371 / 404;
-
-  @media screen and (max-width: $df-screen-tl) {
-    width: 33%;
-  }
 
   @media screen and (max-width: $df-screen-ti) {
     display: none;
   }
 }
 
+.FaqImage {
+  padding-top: 40px;
+  object-fit: contain;
+  object-position: bottom;
+}
+
 .FaqTextContainer {
   @include flex-column;
 
+  position: relative;
+  z-index: 2;
   gap: 32px;
   width: 54%;
 

@@ -1,7 +1,8 @@
 import { FC } from 'react';
 
-import cls from '../WishlistTable.module.scss';
 import { Text } from '@/shared/ui/Text';
+
+import cls from '../WishlistTable.module.scss';
 
 export const WishlistTableHeader: FC = () => {
   return (

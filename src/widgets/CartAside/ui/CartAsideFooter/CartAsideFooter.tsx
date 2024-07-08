@@ -1,11 +1,11 @@
 import { FC } from 'react';
 
+import { getRouteCart, getRouteCheckout } from '@/shared/lib/constants';
 import { getWordDeclination } from '@/shared/lib/utils';
 import { AppLink } from '@/shared/ui/AppLink';
 import { Text } from '@/shared/ui/Text';
 
 import cls from './CartAsideFooter.module.scss';
-import { getRouteCart, getRouteCheckout } from '@/shared/lib/constants';
 
 type Props = {
   closeDrawer: () => void;

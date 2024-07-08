@@ -1,13 +1,11 @@
 'use client';
 
 import { FC, forwardRef, useState } from 'react';
-
 import cn from 'classnames';
-
-import cls from './ImageUploader.module.scss';
 import Image from 'next/image';
 import { ChangeHandler } from 'react-hook-form';
-import { Button } from '../Buttons';
+
+import cls from './ImageUploader.module.scss';
 
 type Props = {
   onChange: ChangeHandler;

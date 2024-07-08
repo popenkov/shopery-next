@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
-import cls from './SettingsPage.module.scss';
 import { SettingsAccount } from './SettingsAccount/SettingsAccount';
+import cls from './SettingsPage.module.scss';
 
 export const SettingsPage: FC = () => {
   return (

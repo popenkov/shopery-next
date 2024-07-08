@@ -1,12 +1,12 @@
 import { FC } from 'react';
 import Link from 'next/link';
 
+import { getRouteWishlist } from '@/shared/lib/constants/routes';
 import { HeartIcon } from 'shared/ui/icons';
 
 import { HeaderCart } from '../HeaderCart';
 
 import cls from './HeaderActions.module.scss';
-import { getRouteWishlist } from '@/shared/lib/constants/routes';
 
 export const HeaderActions: FC = () => {
   return (

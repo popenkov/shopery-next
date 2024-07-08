@@ -1,7 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import { TOrder } from '../types/order';
-
 import { OrderSchema } from '../types/order-schema';
 import { ORDERS_LOCALSTORAGE_KEY } from '../../lib/constants';
 

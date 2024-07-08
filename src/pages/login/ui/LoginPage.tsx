@@ -1,5 +1,6 @@
-import LoginForm from '@/features/User/login-by-username/ui/LoginForm/LoginForm';
 import { FC } from 'react';
+
+import LoginForm from '@/features/User/login-by-username/ui/LoginForm/LoginForm';
 
 import cls from './LoginPage.module.scss';
 

@@ -2,11 +2,11 @@ import { FC } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
+import { TOrder } from '@/entities/Order';
 import { getFormattedPrice, getWordDeclination } from '@/shared/lib/utils';
 import { Text } from '@/shared/ui/Text';
 
 import cls from './UserOrders.module.scss';
-import { TOrder } from '@/entities/Order';
 type Props = {
   order: TOrder;
 };

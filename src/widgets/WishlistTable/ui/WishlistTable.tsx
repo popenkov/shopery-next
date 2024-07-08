@@ -2,6 +2,8 @@
 
 import { FC } from 'react';
 
+import { useAppSelector } from '@/app/lib/store/hooks';
+import { selectWishlistProducts } from '@/entities/Favorites';
 import { AddToCartFromWishlist } from '@/features/Cart';
 import { RemoveFromWishlist } from 'features/Product';
 import { ProductWishlist } from 'entities/Product/';
@@ -9,8 +11,6 @@ import { ProductWishlist } from 'entities/Product/';
 import cls from './WishlistTable.module.scss';
 import { WishlistTableFooter } from './WishlistTableFooter';
 import { WishlistTableHeader } from './WishlistTableHeader';
-import { useAppSelector } from '@/app/lib/store/hooks';
-import { selectWishlistProducts } from '@/entities/Favorites';
 
 export const WishlistTable: FC = () => {
   const items = useAppSelector(selectWishlistProducts);

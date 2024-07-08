@@ -3,11 +3,11 @@
 import React, { FC } from 'react';
 import cn from 'classnames';
 
+import { useAppDispatch } from '@/app/lib/store/hooks';
+import { removeProductFromWishlist } from '@/entities/Favorites';
 import { CloseIcon } from 'shared/ui/icons';
 
 import cls from './RemoveFromWishlist.module.scss';
-import { useAppDispatch } from '@/app/lib/store/hooks';
-import { removeProductFromWishlist } from '@/entities/Favorites';
 
 interface Props {
   id: string;

@@ -1,21 +1,24 @@
 'use client';
 
 import { memo, useEffect, useState } from 'react';
-import { useForm, Controller, SubmitHandler } from 'react-hook-form';
-import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
-import cls from './LoginForm.module.scss';
-import { useAppDispatch } from '@/app/lib/store/hooks';
-import Link from 'next/link';
-import { getRoutePasswordReset, getRouteRegistation } from '@/shared/lib/constants/routes';
-import { Text } from '@/shared/ui/Text';
-import { LoginSchema } from '../../model/types/loginSchema';
-import { EMAIL_REGEX } from '@/shared/lib/constants/validation-regex';
-import { VALIDATION_MESSAGES } from '@/shared/lib/constants';
-import { Input } from '@/shared/ui/Input';
-import { Checkbox } from '@/shared/ui/Checkbox';
-import { Button } from '@/shared/ui/Buttons';
 import cn from 'classnames';
+import Link from 'next/link';
+import { useForm, Controller, SubmitHandler } from 'react-hook-form';
+
+import { useAppDispatch } from '@/app/lib/store/hooks';
+import { VALIDATION_MESSAGES } from '@/shared/lib/constants';
+import { getRoutePasswordReset, getRouteRegistation } from '@/shared/lib/constants/routes';
+import { EMAIL_REGEX } from '@/shared/lib/constants/validation-regex';
+import { Button } from '@/shared/ui/Buttons';
+import { Checkbox } from '@/shared/ui/Checkbox';
 import { FormError } from '@/shared/ui/FormError';
+import { Input } from '@/shared/ui/Input';
+import { Text } from '@/shared/ui/Text';
+
+import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
+import { LoginSchema } from '../../model/types/loginSchema';
+
+import cls from './LoginForm.module.scss';
 
 export interface LoginFormProps {
   className?: string;
@@ -130,5 +133,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     </form>
   );
 });
+
+LoginForm.displayName = 'LoginForm';
 
 export default LoginForm;

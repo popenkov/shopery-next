@@ -1,15 +1,16 @@
 'use client';
 
 import { FC, useEffect, useState } from 'react';
-
 import cn from 'classnames';
+
+
+import { useAppDispatch, useAppSelector } from '@/app/lib/store/hooks';
+import { changeNumItemsInCart, removeItemFromCart } from '@/entities/Cart';
+import { changeItemsAmountInCart } from '@/entities/Cart/model/lib/helpers';
+import { selectCartData } from '@/entities/Cart/model/selectors/cart';
 import { MinusIcon, PlusIcon } from 'shared/ui/icons';
 
 import cls from './ChangeAmount.module.scss';
-import { changeItemsAmountInCart } from '@/entities/Cart/model/lib/helpers';
-import { useAppDispatch, useAppSelector } from '@/app/lib/store/hooks';
-import { changeNumItemsInCart, removeItemFromCart } from '@/entities/Cart';
-import { selectCartData } from '@/entities/Cart/model/selectors/cart';
 
 interface Props {
   id: string;

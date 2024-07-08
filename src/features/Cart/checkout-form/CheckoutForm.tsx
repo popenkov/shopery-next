@@ -2,7 +2,11 @@
 import { ChangeEvent, FC, useState } from 'react';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 
+import { useAppDispatch, useAppSelector } from '@/app/lib/store/hooks';
+import { selectCartProducts } from '@/entities/Cart';
+import { TOrder, TOrderProduct, addToOrders } from '@/entities/Order';
 import { VALIDATION_MESSAGES } from '@/shared/lib/constants';
+import { EMAIL_REGEX } from '@/shared/lib/constants/validation-regex';
 import { AppSelect } from 'shared/ui/AppSelect';
 import { Checkbox } from 'shared/ui/Checkbox';
 import { Input } from 'shared/ui/Input';
@@ -12,10 +16,6 @@ import { TextArea } from 'shared/ui/TextArea';
 
 import cls from './CheckoutForm.module.scss';
 import { COUNTRIES_LIST, STATES_LIST } from './countries-list';
-import { EMAIL_REGEX } from '@/shared/lib/constants/validation-regex';
-import { useAppDispatch, useAppSelector } from '@/app/lib/store/hooks';
-import { selectCartProducts } from '@/entities/Cart';
-import { TOrder, TOrderProduct, addToOrders } from '@/entities/Order';
 
 type TFormData = {
   firstName: string;

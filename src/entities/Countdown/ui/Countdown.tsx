@@ -3,10 +3,10 @@
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import cn from 'classnames';
 
+import { Text } from '@/shared/ui/Text';
 import { useCountDown } from 'shared/lib/hooks';
 
 import cls from './Countdown.module.scss';
-import { Text } from '@/shared/ui/Text';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   date: string;

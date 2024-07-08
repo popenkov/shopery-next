@@ -1,11 +1,11 @@
 import { FC, memo, useEffect, useState } from 'react';
 import cn from 'classnames';
-import { CheckIcon } from '@/shared/ui/icons';
 
+import { CheckIcon } from '@/shared/ui/icons';
 import { Text } from '@/shared/ui/Text';
 
-import cls from './OrderPageStatus.module.scss';
 import { STATUS_DATA } from './constants';
+import cls from './OrderPageStatus.module.scss';
 
 type Props = {
   status: 'Order Received' | 'Processing' | 'On the way' | 'Delivered';

@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 import { USER_LOCALSTORAGE_KEY } from '@/shared/lib/constants';
 
 export const $api = axios.create({
