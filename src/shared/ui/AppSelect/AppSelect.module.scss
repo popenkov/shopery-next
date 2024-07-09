@@ -17,17 +17,22 @@
 }
 
 .select {
-  :global(.custom-select__indicator-separator) {
+  :global(.react-select__indicator-separator) {
     display: none;
   }
 
-  :global(.custom-select__control) {
-    min-width: 166px;
-    padding: 0 16px;
-    border: 1px solid var(--monochrome-300);
+  :global(.react-select__single-value) {
+    @include search-field;
   }
 
-  :global(.custom-select__indicator) {
+  :global(.react-select__control) {
+    min-width: 166px;
+    min-height: 49px;
+    padding: 0 4px;
+    border: 1px solid rgb(230 230 230);
+  }
+
+  :global(.react-select__indicator) {
     transform: rotate(0deg);
     transition: transform var(--transition);
 
@@ -38,7 +43,7 @@
     }
   }
 
-  :global(.custom-select__control--menu-is-open) :global(.custom-select__indicator) {
+  :global(.react-select__control--menu-is-open) :global(.react-select__indicator) {
     transform: rotate(180deg);
   }
 }

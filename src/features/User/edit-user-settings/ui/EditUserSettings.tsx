@@ -114,13 +114,13 @@ export const EditUserSettings: FC<Props> = ({ className }) => {
           )}
         />
 
-        <Button type="submit" className={cls.SettingsPageHeaderButton}>
+        <Button type="submit" className={cls.EditUserSettingsButton}>
           Save Changes
         </Button>
       </div>
 
       <ImageUploader
-        imageSrc="/test"
+        imageSrc="/images/product-red-capsicum.jpg"
         className={cls.EditUserSettingsImageUploader}
         {...register('photo', { required: true })}
       />

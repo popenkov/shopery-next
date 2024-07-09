@@ -6,6 +6,7 @@ import { useAppDispatch, useAppSelector } from '@/app/lib/store/hooks';
 import { selectCartProducts } from '@/entities/Cart';
 import { TOrder, TOrderProduct, addToOrders } from '@/entities/Order';
 import { VALIDATION_MESSAGES } from '@/shared/lib/constants';
+import { COUNTRIES_LIST, STATES_LIST } from '@/shared/lib/constants/countries-list';
 import { EMAIL_REGEX } from '@/shared/lib/constants/validation-regex';
 import { AppSelect } from 'shared/ui/AppSelect';
 import { Checkbox } from 'shared/ui/Checkbox';
@@ -15,7 +16,6 @@ import { Text } from 'shared/ui/Text';
 import { TextArea } from 'shared/ui/TextArea';
 
 import cls from './CheckoutForm.module.scss';
-import { COUNTRIES_LIST, STATES_LIST } from './countries-list';
 
 type TFormData = {
   firstName: string;

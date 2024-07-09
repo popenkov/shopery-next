@@ -23,7 +23,6 @@ export const ImageUploader: FC<Props> = forwardRef<HTMLInputElement, Props>(
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       const file = event.target.files?.[0];
 
-      console.log('file', file);
       if (!file) return;
 
       if (file.size > maxSize) {
@@ -43,11 +42,10 @@ export const ImageUploader: FC<Props> = forwardRef<HTMLInputElement, Props>(
 
     return (
       <div className={cn(cls.ImageUploader, className)}>
-        {/* {preview && ( */}
         <div className={cls.ImageUploaderPreviewWrapper}>
           <Image className={cls.ImageUploaderPreview} fill src={preview} alt="image preview" />
         </div>
-        {/* )} */}
+
         <input
           ref={ref}
           type="file"
@@ -65,3 +63,5 @@ export const ImageUploader: FC<Props> = forwardRef<HTMLInputElement, Props>(
     );
   },
 );
+
+ImageUploader.displayName = 'ImageUploader';
