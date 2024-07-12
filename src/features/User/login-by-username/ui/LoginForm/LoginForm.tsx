@@ -7,7 +7,11 @@ import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 
 import { useAppDispatch } from '@/app/lib/store/hooks';
 import { VALIDATION_MESSAGES } from '@/shared/lib/constants';
-import { getRoutePasswordReset, getRouteRegistation } from '@/shared/lib/constants/routes';
+import {
+  getRouteHome,
+  getRoutePasswordReset,
+  getRouteRegistation,
+} from '@/shared/lib/constants/routes';
 import { EMAIL_REGEX } from '@/shared/lib/constants/validation-regex';
 import { Button } from '@/shared/ui/Buttons';
 import { Checkbox } from '@/shared/ui/Checkbox';
@@ -19,13 +23,13 @@ import { loginByUsername } from '../../model/services/loginByUsername/loginByUse
 import { LoginSchema } from '../../model/types/loginSchema';
 
 import cls from './LoginForm.module.scss';
+import { redirect } from 'next/navigation';
 
 export interface LoginFormProps {
   className?: string;
-  onSuccess?: () => void;
 }
 
-const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
+const LoginForm = memo(({ className }: LoginFormProps) => {
   const dispatch = useAppDispatch();
 
   const {
@@ -50,13 +54,9 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
         return;
       }
       reset({ email: '', password: '' });
-      onSuccess?.();
+      redirect(getRouteHome());
     }
   };
-
-  useEffect(() => {
-    console.log('reset', reset);
-  }, [reset]);
 
   return (
     <form className={cn(cls.LoginForm, className)} onSubmit={handleSubmit(onSubmit)}>

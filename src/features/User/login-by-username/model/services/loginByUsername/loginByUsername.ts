@@ -13,6 +13,7 @@ export const loginByUsername = createAsyncThunk<
   ThunkConfig<string>
 >('login/loginByUsername', async (data: LoginSchema, thunkApi) => {
   const { extra, dispatch, rejectWithValue } = thunkApi;
+  console.log('data', data);
   try {
     const response = await extra.api.post('/login', {
       data,
