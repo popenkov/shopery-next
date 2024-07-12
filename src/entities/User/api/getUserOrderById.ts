@@ -46,7 +46,7 @@ const ORDER_DATA: TUserOrder = {
     email: 'dainne.ressell@gmail.com',
     phone: '(671) 555-0110',
   },
-  user: { photo: '/images/user-photo--1.jpg', name: 'Dianne Russell', role: 'Customer' },
+  user: { id: '1', photo: '/images/user-photo--1.jpg', name: 'Dianne Russell', role: 'Customer' },
 };
 export const getUserOrderById = (id: string) => {
   console.log(id);
