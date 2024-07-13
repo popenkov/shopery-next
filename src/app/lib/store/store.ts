@@ -6,12 +6,14 @@ import { orderReducer } from '@/entities/Order/model/slices/order-slice';
 import { userReducer } from '@/entities/User/slice/user-slice';
 import { $api } from '@/shared/api/api';
 import { cartReducer } from 'entities/Cart';
+import { rtkApi } from '@/shared/api/rtkApi';
 
 const rootReducer = combineReducers({
   cart: cartReducer,
   user: userReducer,
   wishlist: wishlistReducer,
   orders: orderReducer,
+  // [rtkApi.reducerPath]: rtkApi.reducer,
 });
 
 const extraArg: ThunkExtraArg = {
