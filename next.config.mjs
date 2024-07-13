@@ -6,6 +6,15 @@ const nextConfig = {
   experimental: {
     forceSwcTransforms: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '*',
+        port: '',
+      },
+    ],
+  },
   webpack: (config) => {
     config.plugins.push(
       new CircularDependencyPlugin({

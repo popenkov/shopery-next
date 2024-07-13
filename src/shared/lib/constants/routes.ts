@@ -60,4 +60,6 @@ export {
   getRouteRegistation,
   getRoutePasswordReset,
   getRouteWishlist,
+  getRouteDashboard,
+  getRouteAccountSettings,
 };

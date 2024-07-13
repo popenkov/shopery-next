@@ -12,6 +12,17 @@ import { LangSwitcher } from 'features/LangSwitcher';
 import { Location } from 'entities/Location';
 
 import cls from './HeaderTop.module.scss';
+import { UserMenu } from '../UserMenu';
+
+const TEST_DATA = {
+  id: '1',
+  name: 'Tony Soprano',
+  username: 'honest_tony',
+  email: 'user-1@mail.com',
+  password: '123',
+  photo:
+    'https://images.unsplash.com/photo-1493106819501-66d381c466f1?q=80&w=300&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+};
 
 export const HeaderTop: FC = () => {
   const authData = useAppSelector(selectAuthData);
@@ -26,10 +37,9 @@ export const HeaderTop: FC = () => {
             <CurrencySwitcher />
           </div>
           <div className={cls.actionsSeparator}></div>
+
           {authData ? (
-            <Text variant="body_tiny" className={cls.auth}>
-              {authData.name}
-            </Text>
+            <UserMenu user={authData} />
           ) : (
             <Text variant="body_tiny" className={cls.auth}>
               <Link className={cls.authLink} href={getRouteLogin()}>

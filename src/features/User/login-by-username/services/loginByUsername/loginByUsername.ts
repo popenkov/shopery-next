@@ -3,7 +3,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from '@/app/providers/StoreProvider/StateSchema';
 import { setAuthData } from '@/entities/User/slice/user-slice';
 
-import { LoginSchema } from '../../types/loginSchema';
+import { LoginSchema } from '../../model/types/loginSchema';
 
 interface LoginByUsernameProps extends LoginSchema {}
 
@@ -13,7 +13,6 @@ export const loginByUsername = createAsyncThunk<
   ThunkConfig<string>
 >('login/loginByUsername', async (data: LoginSchema, thunkApi) => {
   const { extra, dispatch, rejectWithValue } = thunkApi;
-  console.log('data', data);
   try {
     const response = await extra.api.post('/login', {
       data,

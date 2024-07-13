@@ -19,7 +19,7 @@ import { FormError } from '@/shared/ui/FormError';
 import { Input } from '@/shared/ui/Input';
 import { Text } from '@/shared/ui/Text';
 
-import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
+import { loginByUsername } from '../../services/loginByUsername/loginByUsername';
 import { LoginSchema } from '../../model/types/loginSchema';
 
 import cls from './LoginForm.module.scss';
