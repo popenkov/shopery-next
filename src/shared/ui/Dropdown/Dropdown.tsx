@@ -2,7 +2,7 @@
 
 import React, { DetailedHTMLProps, FC, HTMLAttributes, memo, useState } from 'react';
 
-import { ChevronDownIcon } from 'shared/ui/icons';
+import { ChevronDownIcon } from '@/shared/ui/icons';
 
 import { type TDropdownItem } from './Dropdown.interface';
 import cls from './Dropdown.module.scss';

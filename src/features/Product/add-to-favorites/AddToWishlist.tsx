@@ -3,7 +3,6 @@
 import { FC, useEffect, useState } from 'react';
 import cn from 'classnames';
 
-import { useAppDispatch, useAppSelector } from '@/app/lib/store/hooks';
 import {
   TWishlistProduct,
   addToWishlist,
@@ -11,9 +10,11 @@ import {
   selectWishlistProducts,
 } from '@/entities/Favorites';
 import { TProduct } from '@/entities/Product';
+import { useAppSelector } from '@/shared/lib/hooks';
+import { useAppDispatch } from '@/shared/lib/hooks';
+import { RoundButton } from '@/shared/ui/Buttons';
 import { type TRoundButtonTheme } from '@/shared/ui/Buttons/RoundButton';
-import { RoundButton } from 'shared/ui/Buttons';
-import { HeartIcon, HeartLinedIcon } from 'shared/ui/icons';
+import { HeartIcon, HeartLinedIcon } from '@/shared/ui/icons';
 
 import cls from './AddToWishlist.module.scss';
 

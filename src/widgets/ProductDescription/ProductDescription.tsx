@@ -1,10 +1,10 @@
 import { FC, ReactNode } from 'react';
 import Image from 'next/image';
 
+import { type TProductDetailed } from '@/entities/Product';
 import { SocialShare } from '@/entities/SocialShare';
-import { type TProductDetailed } from 'entities/Product';
-import { StarRating } from 'shared/ui/StarRating';
-import { ThumbSlider } from 'shared/ui/ThumbSlider';
+import { StarRating } from '@/shared/ui/StarRating';
+import { ThumbSlider } from '@/shared/ui/ThumbSlider';
 
 import cls from './ProductDescription.module.scss';
 

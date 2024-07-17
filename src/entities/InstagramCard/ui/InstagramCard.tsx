@@ -1,7 +1,7 @@
 import { FC, DetailedHTMLProps, HTMLAttributes } from 'react';
 import Image from 'next/image';
 
-import { InstagramIcon } from 'shared/ui/icons';
+import { InstagramIcon } from '@/shared/ui/icons';
 
 import { type TInstagramCard } from '..';
 

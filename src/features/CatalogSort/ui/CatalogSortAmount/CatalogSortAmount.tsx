@@ -1,6 +1,6 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
-import { Text } from 'shared/ui/Text';
+import { Text } from '@/shared/ui/Text';
 
 import cls from './CatalogSortAmount.module.scss';
 

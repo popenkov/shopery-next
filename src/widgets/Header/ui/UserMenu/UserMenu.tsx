@@ -1,17 +1,21 @@
 'use client';
 
-import { TUser } from '@/entities/User/model/types';
 import React, { FC, memo, useState } from 'react';
 import cn from 'classnames';
-import cls from './UserMenu.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getRouteOrderHistory } from '@/shared/lib/constants';
-import { getRouteAccountSettings, getRouteDashboard } from '@/shared/lib/constants/routes';
+
+import { TUser, logout } from '@/entities/User';
+import {
+  getRouteOrderHistory,
+  getRouteAccountSettings,
+  getRouteDashboard,
+} from '@/shared/lib/constants';
+import {} from '@/shared/lib/constants';
+import { useOutsideClick, useAppDispatch } from '@/shared/lib/hooks';
 import { Text } from '@/shared/ui/Text';
-import { useAppDispatch } from '@/app/lib/store/hooks';
-import { logout } from '@/entities/User/slice/user-slice';
-import { useOutsideClick } from '@/shared/lib/hooks';
+
+import cls from './UserMenu.module.scss';
 
 interface Props {
   user: TUser;
@@ -76,3 +80,5 @@ export const UserMenu: FC<Props> = memo(({ user, className }) => {
     </div>
   );
 });
+
+UserMenu.displayName = 'UserMenu';

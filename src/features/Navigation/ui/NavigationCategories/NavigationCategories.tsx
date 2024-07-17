@@ -4,9 +4,9 @@ import React, { DetailedHTMLProps, FC, HTMLAttributes, useState } from 'react';
 import cn from 'classnames';
 import Link from 'next/link';
 
-import { type THeaderCategory } from 'entities/NavigationCategory';
-import { CategoriesButton } from 'shared/ui/CategoriesButton';
-import { Text } from 'shared/ui/Text';
+import { type THeaderCategory } from '@/entities/NavigationCategory';
+import { CategoriesButton } from '@/shared/ui/CategoriesButton';
+import { Text } from '@/shared/ui/Text';
 
 import { getCategoryIcon } from './getCategoryIcon';
 import cls from './NavigationCategories.module.scss';

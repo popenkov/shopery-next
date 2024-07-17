@@ -6,5 +6,12 @@ export {
   closeAsideCartMenu,
   openAsideCartMenu,
 } from './model/slices/cart-slice';
-export { selectCartProducts } from './model/selectors/cart';
-export { type TCartProduct } from './model/types/cart';
+export {
+  selectCartData,
+  selectCartProducts,
+  selectMenuState,
+  selectTotalPrice,
+  selectTotalAmount,
+  type TCartProduct,
+  type CartSchema,
+} from './model';

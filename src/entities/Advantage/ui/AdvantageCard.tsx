@@ -1,7 +1,7 @@
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import cn from 'classnames';
 
-import { Text } from 'shared/ui/Text';
+import { Text } from '@/shared/ui/Text';
 
 import { type TAdvantage } from '..';
 

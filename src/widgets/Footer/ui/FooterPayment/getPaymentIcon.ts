@@ -1,4 +1,10 @@
-import { ApplePayIcon, DiscoverIcon, MastercardIcon, SecureIcon, VisaIcon } from 'shared/ui/icons';
+import {
+  ApplePayIcon,
+  DiscoverIcon,
+  MastercardIcon,
+  SecureIcon,
+  VisaIcon,
+} from '@/shared/ui/icons';
 
 const icons = {
   ApplePayIcon: ApplePayIcon,

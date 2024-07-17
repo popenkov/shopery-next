@@ -1,12 +1,11 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
 import { ThunkExtraArg } from '@/app/providers/StoreProvider/StateSchema';
+import { cartReducer } from '@/entities/Cart';
 import { wishlistReducer } from '@/entities/Favorites';
 import { orderReducer } from '@/entities/Order/model/slices/order-slice';
 import { userReducer } from '@/entities/User/slice/user-slice';
 import { $api } from '@/shared/api/api';
-import { cartReducer } from 'entities/Cart';
-import { rtkApi } from '@/shared/api/rtkApi';
 
 const rootReducer = combineReducers({
   cart: cartReducer,

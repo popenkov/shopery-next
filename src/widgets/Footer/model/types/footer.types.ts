@@ -1,5 +1,5 @@
+import { type TSocialLink } from '@/entities/SocialShare';
 import { TLink } from '@/shared/model/navigation-link.types';
-import { type TSocialLink } from 'entities/SocialShare';
 
 type TPaymentIcons = 'SecureIcon' | 'ApplePayIcon' | 'VisaIcon' | 'DiscoverIcon' | 'MastercardIcon';
 

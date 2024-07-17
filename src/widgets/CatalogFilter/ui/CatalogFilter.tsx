@@ -3,13 +3,13 @@
 import { DetailedHTMLProps, FC, HTMLAttributes, useCallback, useState } from 'react';
 import cn from 'classnames';
 
+import { type TDiscountBanner, DiscountBanner } from '@/entities/DiscountBanner';
+import { ProductSmall, TProduct } from '@/entities/Product';
+import { AddToCart } from '@/features/Cart/add-to-cart';
+import { Filters } from '@/features/Filter';
 import { AddToWishlist } from '@/features/Product';
-import { ShowProductPreview } from '@/features/Product/show-preview/ui';
-import { AddToCart } from 'features/Cart/add-to-cart';
-import { Filters } from 'features/Filter';
-import { type TDiscountBanner, DiscountBanner } from 'entities/DiscountBanner';
-import { ProductSmall, TProduct } from 'entities/Product';
-import { FilterButton } from 'shared/ui/FilterButton';
+import { ShowProductPreview } from '@/features/Product';
+import { FilterButton } from '@/shared/ui/FilterButton';
 
 import cls from './CatalogFilter.module.scss';
 import { CatalogFilterFooter } from './CatalogFilterFooter';

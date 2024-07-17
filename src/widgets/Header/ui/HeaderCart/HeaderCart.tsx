@@ -1,11 +1,11 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import Link from 'next/link';
 
-import { useAppSelector } from '@/app/lib/store/hooks';
-import { selectTotalAmount, selectTotalPrice } from '@/entities/Cart/model/selectors/cart';
-import { getFormattedPrice } from 'shared/lib/utils';
-import { CartIcon } from 'shared/ui/icons';
-import { Text } from 'shared/ui/Text';
+import { selectTotalAmount, selectTotalPrice } from '@/entities/Cart';
+import { useAppSelector } from '@/shared/lib/hooks';
+import { getFormattedPrice } from '@/shared/lib/utils';
+import { CartIcon } from '@/shared/ui/icons';
+import { Text } from '@/shared/ui/Text';
 
 import cls from './HeaderCart.module.scss';
 

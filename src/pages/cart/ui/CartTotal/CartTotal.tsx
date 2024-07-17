@@ -3,9 +3,9 @@
 import { FC } from 'react';
 import cn from 'classnames';
 
-import { useAppSelector } from '@/app/lib/store/hooks';
-import { selectCartData } from '@/entities/Cart/model/selectors/cart';
+import { selectCartData } from '@/entities/Cart';
 import { getRouteCheckout } from '@/shared/lib/constants';
+import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice } from '@/shared/lib/utils';
 import { AppLink } from '@/shared/ui/AppLink';
 import { Text } from '@/shared/ui/Text';

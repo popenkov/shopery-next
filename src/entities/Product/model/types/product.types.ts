@@ -1,5 +1,5 @@
 import { type TLink } from '@/shared/model/navigation-link.types';
-import { type TTag } from 'shared/ui/Tag';
+import { type TTag } from '@/shared/ui/Tag';
 
 type TStockVariant = 'not-available' | 'in-stock';
 

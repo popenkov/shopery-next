@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react';
 import cn from 'classnames';
 
-import { Text } from 'shared/ui/Text';
+import { Text } from '@/shared/ui/Text';
 
 import { getVideoAdIcon } from '../../lib';
 import { type TAdvertisement } from '../../model';

@@ -1,4 +1,4 @@
-import { LeafIcon, PriceTagIcon } from 'shared/ui/icons';
+import { LeafIcon, PriceTagIcon } from '@/shared/ui/icons';
 
 const icons = {
   PriceTagIcon: PriceTagIcon,

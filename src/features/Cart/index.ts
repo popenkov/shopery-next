@@ -4,3 +4,4 @@ export { AddToCartFromWishlist } from './add-to-cart/ui/add-to-cart-from-wishlis
 export { AddToCart } from './add-to-cart';
 export { ApplyCoupon } from './apply-coupon';
 export { ChangeAmount } from './change-amount';
+export { RemoveFromCart } from './remove-from-cart';

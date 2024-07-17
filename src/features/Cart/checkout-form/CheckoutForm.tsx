@@ -8,12 +8,12 @@ import { TOrder, TOrderProduct, addToOrders } from '@/entities/Order';
 import { VALIDATION_MESSAGES } from '@/shared/lib/constants';
 import { COUNTRIES_LIST, STATES_LIST } from '@/shared/lib/constants/countries-list';
 import { EMAIL_REGEX } from '@/shared/lib/constants/validation-regex';
-import { AppSelect } from 'shared/ui/AppSelect';
-import { Checkbox } from 'shared/ui/Checkbox';
-import { Input } from 'shared/ui/Input';
-import { MaskedInput } from 'shared/ui/MaskedInput';
-import { Text } from 'shared/ui/Text';
-import { TextArea } from 'shared/ui/TextArea';
+import { AppSelect } from '@/shared/ui/AppSelect';
+import { Checkbox } from '@/shared/ui/Checkbox';
+import { Input } from '@/shared/ui/Input';
+import { MaskedInput } from '@/shared/ui/MaskedInput';
+import { Text } from '@/shared/ui/Text';
+import { TextArea } from '@/shared/ui/TextArea';
 
 import cls from './CheckoutForm.module.scss';
 

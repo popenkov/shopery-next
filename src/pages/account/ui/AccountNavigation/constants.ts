@@ -1,4 +1,4 @@
-import { type TLink } from 'shared/model/navigation-link.types';
+import { type TLink } from '@/shared/model/navigation-link.types';
 
 export const ACCOUNT_NAVIGATION_DATA: TLink[] = [
   {

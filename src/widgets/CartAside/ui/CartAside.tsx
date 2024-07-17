@@ -2,15 +2,16 @@
 
 import React from 'react';
 
-import { useAppDispatch, useAppSelector } from '@/app/lib/store/hooks';
-import { closeAsideCartMenu, selectCartProducts } from '@/entities/Cart';
 import {
+  closeAsideCartMenu,
+  selectCartProducts,
   selectMenuState,
   selectTotalAmount,
   selectTotalPrice,
-} from '@/entities/Cart/model/selectors/cart';
+} from '@/entities/Cart';
 import { ProductCartPreview } from '@/entities/Product';
-import { RemoveFromCart } from '@/features/Cart/remove-from-cart';
+import { RemoveFromCart } from '@/features/Cart';
+import { useAppSelector, useAppDispatch } from '@/shared/lib/hooks';
 import { getFormattedPrice } from '@/shared/lib/utils';
 import { Drawer } from '@/shared/ui/Drawer/Drawer';
 

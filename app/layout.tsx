@@ -2,10 +2,10 @@ import { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 
-import { Footer } from 'widgets/Footer';
-import { Header } from 'widgets/Header';
+import { Footer } from '@/widgets/Footer';
+import { Header } from '@/widgets/Header';
 import '@/app/styles/globals.scss';
-import { StoreProvider } from 'app/providers';
+import { StoreProvider } from '@/app/providers';
 import { CartAside } from '@/widgets/CartAside/ui/CartAside';
 
 const poppins = Poppins({

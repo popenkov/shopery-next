@@ -5,7 +5,7 @@ import {
   CartIcon,
   SettingsIcon,
   LogoutIcon,
-} from 'shared/ui/icons';
+} from '@/shared/ui/icons';
 
 export const accountNavigationIcons = {
   DashboardIcon: DashboardIcon,

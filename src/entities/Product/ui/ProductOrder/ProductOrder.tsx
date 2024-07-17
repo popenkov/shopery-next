@@ -4,8 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { type TUserOrderItem } from '@/entities/User/model/types';
-import { getFormattedPrice } from 'shared/lib/utils';
-import { Text } from 'shared/ui/Text';
+import { getFormattedPrice } from '@/shared/lib/utils';
+import { Text } from '@/shared/ui/Text';
 
 import cls from './ProductOrder.module.scss';
 

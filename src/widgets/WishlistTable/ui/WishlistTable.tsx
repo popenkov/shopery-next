@@ -2,11 +2,11 @@
 
 import { FC } from 'react';
 
-import { useAppSelector } from '@/app/lib/store/hooks';
 import { selectWishlistProducts } from '@/entities/Favorites';
+import { ProductWishlist } from '@/entities/Product/';
 import { AddToCartFromWishlist } from '@/features/Cart';
-import { RemoveFromWishlist } from 'features/Product';
-import { ProductWishlist } from 'entities/Product/';
+import { RemoveFromWishlist } from '@/features/Product';
+import { useAppSelector } from '@/shared/lib/hooks';
 
 import cls from './WishlistTable.module.scss';
 import { WishlistTableFooter } from './WishlistTableFooter';

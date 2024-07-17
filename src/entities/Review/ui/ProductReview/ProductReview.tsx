@@ -2,8 +2,8 @@ import { FC } from 'react';
 import cn from 'classnames';
 import Image from 'next/image';
 
-import { StarRating } from 'shared/ui/StarRating';
-import { Text } from 'shared/ui/Text';
+import { StarRating } from '@/shared/ui/StarRating';
+import { Text } from '@/shared/ui/Text';
 
 import cls from './ProductReview.module.scss';
 

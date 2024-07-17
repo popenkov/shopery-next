@@ -2,7 +2,7 @@
 
 import { FC, memo } from 'react';
 
-import { Dropdown, TDropdownItem } from 'shared/ui/Dropdown';
+import { Dropdown, TDropdownItem } from '@/shared/ui/Dropdown';
 
 import { CHANGE_LANG_DATA } from './constants';
 

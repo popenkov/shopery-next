@@ -1,6 +1,6 @@
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
-import { Button } from 'shared/ui/Buttons';
+import { Button } from '@/shared/ui/Buttons';
 
 import cls from './CatalogFilterFooter.module.scss';
 

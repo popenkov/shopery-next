@@ -2,7 +2,7 @@
 import { FC, ReactNode, useEffect, useState } from 'react';
 import cn from 'classnames';
 
-import { ChevronDownIcon, PlusIcon } from 'shared/ui/icons';
+import { ChevronDownIcon, PlusIcon } from '@/shared/ui/icons';
 
 import cls from './Accordion.module.scss';
 

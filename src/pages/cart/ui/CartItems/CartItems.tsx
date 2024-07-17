@@ -3,12 +3,11 @@
 import React, { FC } from 'react';
 import cn from 'classnames';
 
-import { useAppSelector } from '@/app/lib/store/hooks';
 import { selectCartProducts } from '@/entities/Cart';
-import { ProductCart } from '@/entities/Product/ui/ProductCart';
-import { ChangeAmount } from '@/features/Cart';
-import { RemoveFromCart } from '@/features/Cart/remove-from-cart';
+import { ProductCart } from '@/entities/Product';
+import { ChangeAmount, RemoveFromCart } from '@/features/Cart';
 import { getRouteCart, getRouteCatalog } from '@/shared/lib/constants';
+import { useAppSelector } from '@/shared/lib/hooks';
 import { AppLink } from '@/shared/ui/AppLink';
 import { Text } from '@/shared/ui/Text';
 

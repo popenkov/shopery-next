@@ -1,10 +1,7 @@
 import { FC } from 'react';
 
-import { UserAddress } from '@/entities/User/ui/UserAddress/UserAddress';
-import { UserCard } from '@/entities/User/ui/UserCard/UserCard';
-import { UserOrders } from '@/entities/User/ui/UserOrders/UserOrders';
-import { EditAddress } from '@/features/User/edit-address';
-import { EditUser } from '@/features/User/edit-user';
+import { UserAddress, UserCard, UserOrders } from '@/entities/User';
+import { EditAddress, EditUser } from '@/features/User';
 
 import cls from './DashboardPage.module.scss';
 

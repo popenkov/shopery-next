@@ -1,11 +1,11 @@
 'use client';
 import { FC } from 'react';
 
-import { useAppDispatch } from '@/app/lib/store/hooks';
+import { addToCart, openAsideCartMenu } from '@/entities/Cart/';
 import { type TProduct } from '@/entities/Product';
-import { addToCart, openAsideCartMenu } from 'entities/Cart/';
-import { RoundButton, TRoundButtonTheme } from 'shared/ui/Buttons';
-import { CartIcon } from 'shared/ui/icons';
+import { useAppDispatch } from '@/shared/lib/hooks';
+import { RoundButton, TRoundButtonTheme } from '@/shared/ui/Buttons';
+import { CartIcon } from '@/shared/ui/icons';
 
 type Props = {
   item: TProduct;

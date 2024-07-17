@@ -7,7 +7,7 @@ import {
   IceCreamIcon,
   PieIcon,
   SaladIcon,
-} from 'shared/ui/icons';
+} from '@/shared/ui/icons';
 
 const categoryIcons = {
   AppleIcon: AppleIcon,

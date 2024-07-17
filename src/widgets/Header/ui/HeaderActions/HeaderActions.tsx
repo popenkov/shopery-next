@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import Link from 'next/link';
 
-import { getRouteWishlist } from '@/shared/lib/constants/routes';
-import { HeartIcon } from 'shared/ui/icons';
+import { getRouteWishlist } from '@/shared/lib/constants';
+import { HeartIcon } from '@/shared/ui/icons';
 
 import { HeaderCart } from '../HeaderCart';
 

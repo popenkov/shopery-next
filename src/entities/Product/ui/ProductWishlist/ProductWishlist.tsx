@@ -3,9 +3,9 @@ import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { getFormattedPrice } from 'shared/lib/utils';
-import { Tag } from 'shared/ui/Tag';
-import { Text } from 'shared/ui/Text';
+import { getFormattedPrice } from '@/shared/lib/utils';
+import { Tag } from '@/shared/ui/Tag';
+import { Text } from '@/shared/ui/Text';
 
 import { type TProduct } from '../../';
 

@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { ApplyCoupon } from '@/features/Cart';
 import { AppRouteNames } from '@/shared/model';
 import { Breadcrumbs } from '@/shared/ui/Breadcrumps';
-import { Text } from 'shared/ui/Text';
+import { Text } from '@/shared/ui/Text';
 
 import { CartItems } from './CartItems';
 import cls from './CartPage.module.scss';

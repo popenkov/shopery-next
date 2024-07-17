@@ -6,7 +6,7 @@ import { ORDERS_LOCALSTORAGE_KEY } from '../../lib/constants';
 import { getOrderById } from '../../services/getOrderById';
 
 const initialState: OrderSchema = {
-  orders: localStorage.getItem(ORDERS_LOCALSTORAGE_KEY)
+  orders: localStorage?.getItem(ORDERS_LOCALSTORAGE_KEY)
     ? JSON.parse(localStorage.getItem(ORDERS_LOCALSTORAGE_KEY)!)
     : [],
   // todo order detailed data with request

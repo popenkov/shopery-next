@@ -1,12 +1,12 @@
 'use client';
 import { FC } from 'react';
 
-import { Button } from 'shared/ui/Buttons';
+import { addToCart, openAsideCartMenu } from '@/entities/Cart';
+import { TProduct } from '@/entities/Product';
+import { useAppDispatch } from '@/shared/lib/hooks';
+import { Button } from '@/shared/ui/Buttons';
 
 import cls from './AddToCartFromWishlist.module.scss';
-import { TProduct } from '@/entities/Product';
-import { useAppDispatch } from '@/app/lib/store/hooks';
-import { addToCart, openAsideCartMenu } from '@/entities/Cart';
 
 type Props = {
   item: TProduct;

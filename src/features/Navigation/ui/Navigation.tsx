@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { PhoneLink } from 'entities/PhoneLink';
+import { PhoneLink } from '@/entities/PhoneLink';
 
 import { getNavigationData } from '../api';
 

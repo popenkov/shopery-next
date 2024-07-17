@@ -2,13 +2,13 @@
 
 import React, { FC } from 'react';
 
+import { ProductLarge, TProduct } from '@/entities/Product';
+import { AddToCart } from '@/features/Cart/add-to-cart';
 import { AddToWishlist } from '@/features/Product';
-import { ShowProductPreview } from '@/features/Product/show-preview/ui';
-import { AddToCart } from 'features/Cart/add-to-cart';
-import { ProductLarge, TProduct } from 'entities/Product';
-import { MobileSlider } from 'shared/ui/MobileSlider';
-import { ProductTabs } from 'shared/ui/ProductTabs';
-import { Text } from 'shared/ui/Text';
+import { ShowProductPreview } from '@/features/Product';
+import { MobileSlider } from '@/shared/ui/MobileSlider';
+import { ProductTabs } from '@/shared/ui/ProductTabs';
+import { Text } from '@/shared/ui/Text';
 
 import { getProductTab } from '../api';
 

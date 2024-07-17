@@ -1,11 +1,11 @@
 import React, { DetailedHTMLProps, FC, HTMLAttributes, useRef } from 'react';
 import cn from 'classnames';
 
-import { NavigationMobile } from 'features/Navigation';
-import { ProductSearch } from 'features/ProductsSearch';
-import { Location } from 'entities/Location';
-import { PhoneLink } from 'entities/PhoneLink';
-import { CrossIcon } from 'shared/ui/icons';
+import { Location } from '@/entities/Location';
+import { PhoneLink } from '@/entities/PhoneLink';
+import { NavigationMobile } from '@/features/Navigation';
+import { ProductSearch } from '@/features/ProductsSearch';
+import { CrossIcon } from '@/shared/ui/icons';
 
 import cls from './MobileMenu.module.scss';
 

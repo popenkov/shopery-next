@@ -3,14 +3,13 @@
 import { FC, useState } from 'react';
 import cn from 'classnames';
 
-import { useAppSelector } from '@/app/lib/store/hooks';
-import { selectCartProducts } from '@/entities/Cart';
-import { selectTotalPrice } from '@/entities/Cart/model/selectors/cart';
+import { selectCartProducts, selectTotalPrice } from '@/entities/Cart';
 import { ProductCheckout } from '@/entities/Product';
+import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice } from '@/shared/lib/utils';
-import { Button } from 'shared/ui/Buttons';
-import { Radio } from 'shared/ui/Radio';
-import { Text } from 'shared/ui/Text';
+import { Button } from '@/shared/ui/Buttons';
+import { Radio } from '@/shared/ui/Radio';
+import { Text } from '@/shared/ui/Text';
 
 import cls from './CheckoutTotal.module.scss';
 

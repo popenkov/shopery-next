@@ -11,7 +11,7 @@ import Select, {
   PropsValue,
 } from 'react-select';
 
-import { ChevronDownIcon } from 'shared/ui/icons';
+import { ChevronDownIcon } from '@/shared/ui/icons';
 
 import { Text } from '../Text';
 

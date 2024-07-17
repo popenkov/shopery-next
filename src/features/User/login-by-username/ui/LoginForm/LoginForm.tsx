@@ -1,29 +1,25 @@
 'use client';
 
-import { memo, useEffect, useState } from 'react';
+import { memo, useState } from 'react';
 import cn from 'classnames';
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 
-import { useAppDispatch } from '@/app/lib/store/hooks';
 import { VALIDATION_MESSAGES } from '@/shared/lib/constants';
-import {
-  getRouteHome,
-  getRoutePasswordReset,
-  getRouteRegistation,
-} from '@/shared/lib/constants/routes';
+import { getRouteHome, getRoutePasswordReset, getRouteRegistation } from '@/shared/lib/constants';
 import { EMAIL_REGEX } from '@/shared/lib/constants/validation-regex';
+import { useAppDispatch } from '@/shared/lib/hooks';
 import { Button } from '@/shared/ui/Buttons';
 import { Checkbox } from '@/shared/ui/Checkbox';
 import { FormError } from '@/shared/ui/FormError';
 import { Input } from '@/shared/ui/Input';
 import { Text } from '@/shared/ui/Text';
 
-import { loginByUsername } from '../../services/loginByUsername/loginByUsername';
 import { LoginSchema } from '../../model/types/loginSchema';
+import { loginByUsername } from '../../services/loginByUsername/loginByUsername';
 
 import cls from './LoginForm.module.scss';
-import { redirect } from 'next/navigation';
 
 export interface LoginFormProps {
   className?: string;

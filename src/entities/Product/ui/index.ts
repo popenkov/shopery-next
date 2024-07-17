@@ -5,3 +5,4 @@ export * from './ProductPreview';
 export * from './ProductSmall';
 export * from './ProductWishlist';
 export * from './ProductCartPreview';
+export * from './ProductCart';

@@ -2,8 +2,8 @@
 
 import { FC } from 'react';
 
-import { News, TNews } from 'entities/News';
-import { MobileSlider } from 'shared/ui/MobileSlider';
+import { News, TNews } from '@/entities/News';
+import { MobileSlider } from '@/shared/ui/MobileSlider';
 
 import { getNewsData } from '../api';
 

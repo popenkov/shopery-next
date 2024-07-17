@@ -1,7 +1,7 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
-import { InstagramCard } from 'entities/InstagramCard';
-import { Text } from 'shared/ui/Text';
+import { InstagramCard } from '@/entities/InstagramCard';
+import { Text } from '@/shared/ui/Text';
 
 import { getInstagramPosts } from '../api';
 

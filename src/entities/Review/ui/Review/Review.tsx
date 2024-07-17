@@ -1,8 +1,8 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import Image from 'next/image';
 
-import { QuoteIcon } from 'shared/ui/icons';
-import { Text } from 'shared/ui/Text';
+import { QuoteIcon } from '@/shared/ui/icons';
+import { Text } from '@/shared/ui/Text';
 
 import { type TReview } from '../../';
 

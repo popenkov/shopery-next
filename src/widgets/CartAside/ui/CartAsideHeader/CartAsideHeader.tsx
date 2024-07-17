@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
+import { CrossIcon } from '@/shared/ui/icons';
 import { Text } from '@/shared/ui/Text';
-import { CrossIcon } from 'shared/ui/icons';
 
 import cls from './CartAsideHeader.module.scss';
 

@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 import { ThunkConfig } from '@/app/providers/StoreProvider/StateSchema';
-import { setAuthData } from '@/entities/User/slice/user-slice';
+import { setAuthData } from '@/entities/User';
 
 import { LoginSchema } from '../../model/types/loginSchema';
 

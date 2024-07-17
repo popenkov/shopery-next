@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import cn from 'classnames';
 
-import { RoundButton } from 'shared/ui/Buttons';
+import { RoundButton } from '@/shared/ui/Buttons';
 
 import { getSocialData } from '../api';
 import { getSocialIcon } from '../lib';

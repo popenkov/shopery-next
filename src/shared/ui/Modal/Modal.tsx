@@ -3,7 +3,7 @@
 import React, { ReactNode } from 'react';
 import cn from 'classnames';
 
-import { useModal } from 'shared/lib/hooks';
+import { useModal } from '@/shared/lib/hooks';
 
 import { Overlay } from '../Overlay';
 import { Portal } from '../Portal';
