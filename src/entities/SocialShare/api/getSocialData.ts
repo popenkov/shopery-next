@@ -1,8 +1,8 @@
 import { nanoid } from 'nanoid';
 
-import { SocialLink } from '../model';
+import { type TSocialLink } from '../model';
 
-const DATA: SocialLink[] = [
+const DATA: TSocialLink[] = [
   {
     id: nanoid(),
     icon: 'FacebookIcon',

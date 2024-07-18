@@ -1,10 +1,11 @@
 'use client';
+
 import React, { FC } from 'react';
 import cn from 'classnames';
 
-import { useAppDispatch } from '@/app/lib/store/hooks';
 import { removeItemFromCart } from '@/entities/Cart';
-import { CrossIcon } from 'shared/ui/icons';
+import { useAppDispatch } from '@/shared/lib/hooks';
+import { CrossIcon } from '@/shared/ui/icons';
 
 import cls from './RemoveFromCart.module.scss';
 

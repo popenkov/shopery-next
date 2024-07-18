@@ -1,6 +1,6 @@
 import { nanoid } from 'nanoid';
 
-import { TProduct } from '@/entities/Product';
+import { type TProduct } from '@/entities/Product';
 
 const data: TProduct[] = [
   {

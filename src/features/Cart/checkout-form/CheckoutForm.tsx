@@ -2,18 +2,22 @@
 import { ChangeEvent, FC, useState } from 'react';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 
+import { useAppDispatch, useAppSelector } from '@/app/lib/store/hooks';
+import { selectCartProducts } from '@/entities/Cart';
+import { TOrder, TOrderProduct, addToOrders } from '@/entities/Order';
 import { VALIDATION_MESSAGES } from '@/shared/lib/constants';
-import { AppSelect } from 'shared/ui/AppSelect';
-import { Checkbox } from 'shared/ui/Checkbox';
-import { Input } from 'shared/ui/Input';
-import { MaskedInput } from 'shared/ui/MaskedInput';
-import { Text } from 'shared/ui/Text';
-import { TextArea } from 'shared/ui/TextArea';
+import { COUNTRIES_LIST, STATES_LIST } from '@/shared/lib/constants/countries-list';
+import { EMAIL_REGEX } from '@/shared/lib/constants/validation-regex';
+import { AppSelect } from '@/shared/ui/AppSelect';
+import { Checkbox } from '@/shared/ui/Checkbox';
+import { Input } from '@/shared/ui/Input';
+import { MaskedInput } from '@/shared/ui/MaskedInput';
+import { Text } from '@/shared/ui/Text';
+import { TextArea } from '@/shared/ui/TextArea';
 
 import cls from './CheckoutForm.module.scss';
-import { COUNTRIES_LIST, STATES_LIST } from './countries-list';
 
-type FormData = {
+type TFormData = {
   firstName: string;
   lastName: string;
   companyName?: string;
@@ -31,20 +35,69 @@ type FormData = {
 };
 
 export const CheckoutForm: FC = () => {
+  const dispatch = useAppDispatch();
+  const cartItems = useAppSelector(selectCartProducts);
   const [showAddAddress, setShowAddAddress] = useState(false);
   const {
     reset,
     handleSubmit,
-    // getValues,
     control,
     formState: { isValid },
-  } = useForm<FormData>({
+  } = useForm<TFormData>({
     mode: 'onChange',
   });
 
   // todo   сделать модел для запроса из формы и из стора и отправить
-  const onSubmit: SubmitHandler<FormData> = (data) => {
-    console.log('data', data);
+  const onSubmit: SubmitHandler<TFormData> = (data) => {
+    const orderItems: TOrderProduct[] = cartItems.map((item) => {
+      return {
+        id: item.id,
+        name: item.title,
+        price: item.price,
+        quantity: item.amount,
+        total: item.price * item.amount,
+        img: item.img,
+        // todo
+        path: '/',
+      };
+    });
+
+    const orderDate: TOrder = {
+      id: Date.now().toString(),
+      items: orderItems,
+      subtotal: orderItems.reduce((acc, item) => acc + item.price * item.quantity, 0),
+      amount: orderItems.reduce((acc, item) => acc + item.quantity, 0),
+      discount: 0,
+      delivery: null,
+      // todo
+      paymentMethod: 'PayPal',
+      status: 'Processing',
+      shippingAddress: {
+        firstName: data.firstName,
+        lastName: data.lastName,
+        companyName: data.companyName,
+        email: data.email,
+        phone: data.phone,
+        street: data.shippingStreetAddress,
+        country: data.shippingCountryAddress,
+        state: data.shippingCountryState,
+        zipCode: data.shippingZipAddress,
+      },
+      billingAddress: {
+        firstName: data.firstName,
+        lastName: data.lastName,
+        companyName: data.companyName,
+        email: data.email,
+        phone: data.phone,
+        street: data.streetAddress,
+        country: data.countryAddress,
+        state: data.countryState,
+        zipCode: data.zipAddress,
+      },
+      date: new Date(),
+    };
+    dispatch(addToOrders(orderDate));
+
     if (isValid) {
       console.log('form sent');
       reset();
@@ -194,8 +247,7 @@ export const CheckoutForm: FC = () => {
             rules={{
               required: VALIDATION_MESSAGES.REQUIRED,
               pattern: {
-                value:
-                  /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu,
+                value: EMAIL_REGEX,
                 message: VALIDATION_MESSAGES.WRONG_EMAIL,
               },
             }}

@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 
-import { TProduct } from '@/entities/Product';
-import { RoundButton, RoundButtonTheme } from '@/shared/ui/Buttons';
+import { type TProduct } from '@/entities/Product';
+import { RoundButton, TRoundButtonTheme } from '@/shared/ui/Buttons';
 import { EyeIcon } from '@/shared/ui/icons';
 
 type Props = {
   item: TProduct;
-  theme?: RoundButtonTheme;
+  theme?: TRoundButtonTheme;
   className?: string;
 };
 

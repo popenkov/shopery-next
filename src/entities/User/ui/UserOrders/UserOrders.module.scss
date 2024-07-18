@@ -1,5 +1,6 @@
 @import '@/shared/styles/mixins/flexbox';
 @import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/link-reset';
 @import '@/shared/styles/_breakpoints';
 
 .UserOrders {
@@ -79,6 +80,8 @@
 }
 
 .UserOrdersItemLink {
+  @include link-reset;
+
   color: var(--primary);
 }
 

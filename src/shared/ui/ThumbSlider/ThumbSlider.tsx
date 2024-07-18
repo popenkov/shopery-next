@@ -13,7 +13,7 @@ import 'swiper/css/thumbs';
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { ChevronDownIcon } from 'shared/ui/icons';
+import { ChevronDownIcon } from '@/shared/ui/icons';
 
 import cls from './ThumbSlider.module.scss';
 

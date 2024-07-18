@@ -1,15 +1,15 @@
 'use client';
 import { FC } from 'react';
 
-import { useAppDispatch } from '@/app/lib/store/hooks';
-import { TProduct } from '@/entities/Product';
-import { addToCart, openAsideCartMenu } from 'entities/Cart/';
-import { RoundButton, RoundButtonTheme } from 'shared/ui/Buttons';
-import { CartIcon } from 'shared/ui/icons';
+import { addToCart, openAsideCartMenu } from '@/entities/Cart/';
+import { type TProduct } from '@/entities/Product';
+import { useAppDispatch } from '@/shared/lib/hooks';
+import { RoundButton, TRoundButtonTheme } from '@/shared/ui/Buttons';
+import { CartIcon } from '@/shared/ui/icons';
 
 type Props = {
   item: TProduct;
-  theme?: RoundButtonTheme;
+  theme?: TRoundButtonTheme;
   className?: string;
 };
 

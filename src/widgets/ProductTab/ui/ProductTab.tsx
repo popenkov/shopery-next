@@ -2,13 +2,13 @@
 
 import React, { FC } from 'react';
 
-import { AddToFavorites } from '@/features/Product';
-import { ShowProductPreview } from '@/features/Product/show-preview/ui';
-import { AddToCart } from 'features/Cart/add-to-cart';
-import { ProductLarge, TProduct } from 'entities/Product';
-import { MobileSlider } from 'shared/ui/MobileSlider';
-import { ProductTabs } from 'shared/ui/ProductTabs';
-import { Text } from 'shared/ui/Text';
+import { ProductLarge, TProduct } from '@/entities/Product';
+import { AddToCart } from '@/features/Cart/add-to-cart';
+import { AddToWishlist } from '@/features/Product';
+import { ShowProductPreview } from '@/features/Product';
+import { MobileSlider } from '@/shared/ui/MobileSlider';
+import { ProductTabs } from '@/shared/ui/ProductTabs';
+import { Text } from '@/shared/ui/Text';
 
 import { getProductTab } from '../api';
 
@@ -34,7 +34,7 @@ export const ProductTab: FC = () => {
             key={item.id}
             actions={
               <>
-                <AddToFavorites className={cls.imageButton} item={item} theme="secondary" />
+                <AddToWishlist className={cls.imageButton} item={item} theme="secondary" />
                 <ShowProductPreview item={item} theme="secondary" className={cls.imageButton} />
               </>
             }
@@ -50,19 +50,15 @@ export const ProductTab: FC = () => {
                 key={child.id}
                 actions={
                   <>
-                    <AddToFavorites
-                      className={cls.imageButton}
-                      itemID={child.id}
-                      theme="secondary"
-                    />
+                    <AddToWishlist className={cls.imageButton} item={child} theme="secondary" />
                     <ShowProductPreview
-                      itemID={child.id}
+                      item={child}
                       theme="secondary"
                       className={cls.imageButton}
                     />
                   </>
                 }
-                cartAction={<AddToCart itemID={child.id} className={cls.button} />}
+                cartAction={<AddToCart item={child} className={cls.button} />}
               />
             )}
           />

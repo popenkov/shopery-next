@@ -1,0 +1,70 @@
+@import '@/shared/styles/breakpoints';
+@import '@/shared/styles/mixins/flexbox';
+
+.LoginForm {
+  @include flex-column;
+
+  gap: 12px;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 24px 24px 32px;
+  border: 1px solid var(--monochrome-50);
+  border-radius: 8px;
+  box-shadow: 0 0 56px 0 rgb(0 38 3 / 8%);
+}
+
+.LoginFormTitle {
+  margin: 0;
+  text-align: center;
+}
+
+.LoginFormInputContainer {
+  @include flex-column;
+
+  gap: 8px;
+}
+
+.LoginFormtitle + .LoginFormInputContainer {
+  margin-top: 8px;
+}
+
+.LoginFormInput input {
+  max-height: 49px;
+}
+
+.LoginFormforgotPassLink {
+  color: var(--monochrome-600);
+  text-decoration: none;
+}
+
+.LoginFormRow {
+  @include flex-center-vertical;
+
+  gap: 20px;
+  justify-content: space-between;
+
+  @media screen and (max-width: $df-screen-t) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.LoginFormRow + .LoginFormsubmitButton {
+  margin-top: 9px;
+}
+
+.LoginFormRegistration {
+  margin: 0 auto;
+}
+
+.LoginFormsubmitButton + .LoginFormRegistration {
+  margin-top: 12px;
+}
+
+.LoginFormRegistrationText {
+  color: var(--monochrome-600);
+}
+
+.LoginFormRegistrationLink {
+  text-decoration: none;
+}

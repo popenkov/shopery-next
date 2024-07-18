@@ -3,9 +3,9 @@
 import React, { FC, useState } from 'react';
 import cn from 'classnames';
 
-import { ProductSearch } from 'features/ProductsSearch';
-import { BurgerButton } from 'shared/ui/BurgerButton';
-import { Logo } from 'shared/ui/Logo';
+import { ProductSearch } from '@/features/ProductsSearch';
+import { BurgerButton } from '@/shared/ui/BurgerButton';
+import { Logo } from '@/shared/ui/Logo';
 
 import { HeaderActions } from '../HeaderActions';
 import { MobileMenu } from '../MobileMenu';

@@ -1,0 +1,9 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/container';
+
+.LoginPage {
+  @include container;
+
+  padding: 80px 0;
+}

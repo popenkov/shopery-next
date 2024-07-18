@@ -16,11 +16,6 @@
 
   background-color: var(--green-gray-100);
 
-  // todo
-  // @media screen and (max-width: $df-screen-m) {
-  //   grid-area: fav;
-  // }
-
   @media (hover: hover) {
     &:hover {
       color: var(--front-primary-inversed);

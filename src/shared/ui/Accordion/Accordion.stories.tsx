@@ -12,9 +12,9 @@ const meta = {
 } satisfies Meta<typeof Accordion>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type TStory = StoryObj<typeof meta>;
 
-export const AccordionComponent: Story = {
+export const AccordionComponent: TStory = {
   decorators: [
     (Story) => (
       <div style={{ width: '200px' }}>

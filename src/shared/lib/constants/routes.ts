@@ -1,4 +1,4 @@
-import { AppRouteNames, AppRoutesProps } from '@/shared/model';
+import { AppRouteNames, TAppRoutesProps } from '@/shared/model';
 
 const getRouteHome = () => '/';
 const getRouteCatalog = () => '/catalog';
@@ -8,9 +8,13 @@ const getRouteOrderHistory = () => '/account/history';
 const getRouteOrderDetails = () => '/account/order/:id';
 const getRouteAccountSettings = () => '/account/settings';
 const getRouteCheckout = () => '/checkout';
-const getRouteCart = () => '/checkout';
+const getRouteCart = () => '/cart';
+const getRouteLogin = () => '/login';
+const getRouteRegistation = () => '/registration';
+const getRouteWishlist = () => '/wishlist';
+const getRoutePasswordReset = () => '/password-reset';
 
-export const PAGE_ROUTES: AppRoutesProps[] = [
+export const PAGE_ROUTES: TAppRoutesProps[] = [
   {
     href: getRouteHome(),
     name: AppRouteNames.HOME,
@@ -40,8 +44,8 @@ export const PAGE_ROUTES: AppRoutesProps[] = [
     name: AppRouteNames.CHECKOUT,
   },
   {
-    href: getRouteCart(),
-    name: AppRouteNames.CART,
+    href: getRouteWishlist(),
+    name: AppRouteNames.WISHLIST,
   },
 ];
 
@@ -52,4 +56,10 @@ export {
   getRouteOrderHistory,
   getRouteCheckout,
   getRouteCart,
+  getRouteLogin,
+  getRouteRegistation,
+  getRoutePasswordReset,
+  getRouteWishlist,
+  getRouteDashboard,
+  getRouteAccountSettings,
 };

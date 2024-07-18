@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 
-import { CartIcon } from 'shared/ui/icons';
+import { CartIcon } from '@/shared/ui/icons';
 
 import { RoundButton } from './RoundButton';
 

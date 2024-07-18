@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { InstagramPosts } from 'features/InstagramPosts';
+import { InstagramPosts } from '@/features/InstagramPosts';
 
 import cls from './Footer.module.scss';
 import { FooterAbout } from './FooterAbout';

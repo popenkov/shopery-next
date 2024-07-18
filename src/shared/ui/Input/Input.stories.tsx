@@ -18,9 +18,9 @@ const meta = {
 } satisfies Meta<typeof Input>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type TStory = StoryObj<typeof meta>;
 
-export const InputComponent: Story = {
+export const InputComponent: TStory = {
   decorators: [
     (Story) => (
       <div style={{ maxWidth: '400px' }}>
@@ -31,7 +31,7 @@ export const InputComponent: Story = {
   args: { placeholder: 'name' },
 };
 
-export const InputFilledComponent: Story = {
+export const InputFilledComponent: TStory = {
   decorators: [
     (Story) => (
       <div style={{ maxWidth: '400px' }}>

@@ -1,3 +1,10 @@
+// todo перенести в сущность заказа
+
+export interface UserSchema {
+  _inited: boolean;
+  authData?: TUser;
+}
+
 export type TUserAddress = {
   name: string;
   street: string;
@@ -6,9 +13,11 @@ export type TUserAddress = {
 };
 
 export type TUser = {
+  id: string;
   photo: string;
   name: string;
-  role: string;
+  role?: string;
+  avatar?: string;
 };
 
 export type TUserOrderPreview = {

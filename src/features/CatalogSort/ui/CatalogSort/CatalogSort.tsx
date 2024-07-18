@@ -1,6 +1,6 @@
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
-import { AppSelect } from 'shared/ui/AppSelect';
+import { AppSelect } from '@/shared/ui/AppSelect';
 
 import { CatalogSortAmount } from '../CatalogSortAmount';
 

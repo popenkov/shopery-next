@@ -2,11 +2,11 @@ import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { getFormattedPrice } from 'shared/lib/utils';
-import { StarRating } from 'shared/ui/StarRating';
-import { Text } from 'shared/ui/Text';
+import { getFormattedPrice } from '@/shared/lib/utils';
+import { StarRating } from '@/shared/ui/StarRating';
+import { Text } from '@/shared/ui/Text';
 
-import { TProduct } from '../../';
+import { type TProduct } from '../../';
 
 import cls from './ProductPreview.module.scss';
 
@@ -42,7 +42,7 @@ export const ProductPreview: FC<ProductPreviewProps> = ({ data, actions }) => {
                 </Text>
               )}
             </div>
-            <StarRating value={rating} />
+            {rating && <StarRating value={rating} />}
           </div>
           <div className={cls.descriptionHover}>
             <div className={cls.buttons}>{actions}</div>

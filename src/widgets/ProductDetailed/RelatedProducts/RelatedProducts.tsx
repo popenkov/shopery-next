@@ -2,11 +2,11 @@
 
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
-import { AddToFavorites } from '@/features/Product';
-import { ShowProductPreview } from '@/features/Product/show-preview/ui';
-import { AddToCart } from 'features/Cart/add-to-cart';
-import { Product, TProduct } from 'entities/Product';
-import { MobileSlider } from 'shared/ui/MobileSlider';
+import { Product, TProduct } from '@/entities/Product';
+import { AddToCart } from '@/features/Cart/add-to-cart';
+import { AddToWishlist } from '@/features/Product';
+import { ShowProductPreview } from '@/features/Product';
+import { MobileSlider } from '@/shared/ui/MobileSlider';
 
 import cls from './RelatedProducts.module.scss';
 
@@ -28,7 +28,7 @@ export const RelatedProducts: FC<Props> = ({ data }) => {
                 key={item.id}
                 actions={
                   <>
-                    <AddToFavorites className={cls.imageButton} item={item} theme="secondary" />
+                    <AddToWishlist className={cls.imageButton} item={item} theme="secondary" />
                     <ShowProductPreview item={item} theme="secondary" className={cls.imageButton} />
                   </>
                 }
@@ -45,19 +45,15 @@ export const RelatedProducts: FC<Props> = ({ data }) => {
                 data={child}
                 actions={
                   <>
-                    <AddToFavorites
-                      className={cls.imageButton}
-                      itemID={child.id}
-                      theme="secondary"
-                    />
+                    <AddToWishlist className={cls.imageButton} item={child} theme="secondary" />
                     <ShowProductPreview
-                      itemID={child.id}
+                      item={child}
                       theme="secondary"
                       className={cls.imageButton}
                     />
                   </>
                 }
-                cartAction={<AddToCart itemID={child.id} className={cls.button} />}
+                cartAction={<AddToCart item={child} className={cls.button} />}
               />
             )}
           />

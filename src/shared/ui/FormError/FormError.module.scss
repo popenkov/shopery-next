@@ -1,0 +1,9 @@
+.FormError {
+  padding: 12px 20px;
+  background-color: var(--status-danger);
+  border-radius: 8px;
+}
+
+.FormErrorText {
+  color: var(--front-primary-inversed);
+}

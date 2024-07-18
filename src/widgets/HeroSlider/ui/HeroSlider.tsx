@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { HeroSlide } from 'entities/HeroSlide';
+import { HeroSlide } from '@/entities/HeroSlide';
 
 import { getHeroSliderData } from '../api';
 

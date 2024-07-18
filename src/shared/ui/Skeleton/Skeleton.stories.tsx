@@ -12,9 +12,9 @@ const meta = {
 } satisfies Meta<typeof Skeleton>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type TStory = StoryObj<typeof meta>;
 
-export const SkeletonComponent: Story = {
+export const SkeletonComponent: TStory = {
   args: {
     width: 200,
     height: 550,

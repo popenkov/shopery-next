@@ -8,7 +8,7 @@ type THeaderIcon =
   | 'PieIcon'
   | 'FoodIcon';
 
-export type HeaderCategory = {
+export type THeaderCategory = {
   path: string;
   icon: THeaderIcon;
   title: string;

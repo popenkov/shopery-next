@@ -3,10 +3,10 @@
 import React, { DetailedHTMLProps, FC, HTMLAttributes, useEffect, useRef, useState } from 'react';
 import cn from 'classnames';
 
-import { PlayIcon } from 'shared/ui/icons';
-import { Text } from 'shared/ui/Text';
+import { PlayIcon } from '@/shared/ui/icons';
+import { Text } from '@/shared/ui/Text';
 
-import { TVideo } from '..';
+import { type TVideo } from '..';
 
 import cls from './Video.module.scss';
 

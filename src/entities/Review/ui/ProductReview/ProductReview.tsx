@@ -2,8 +2,8 @@ import { FC } from 'react';
 import cn from 'classnames';
 import Image from 'next/image';
 
-import { StarRating } from 'shared/ui/StarRating';
-import { Text } from 'shared/ui/Text';
+import { StarRating } from '@/shared/ui/StarRating';
+import { Text } from '@/shared/ui/Text';
 
 import cls from './ProductReview.module.scss';
 
@@ -20,7 +20,6 @@ type Props = {
   className?: string;
 };
 
-// todo заменить статику
 export const ProductReview: FC<Props> = ({ data, className }) => {
   const { name, photo, rating, text, date } = data;
   return (
@@ -30,7 +29,7 @@ export const ProductReview: FC<Props> = ({ data, className }) => {
           <div className={cls.productReviewAvatarWrapper}>
             <Image fill className={cls.productReviewAvatar} src={photo} alt="avatar" />
           </div>
-          <Text className={cls.productReviewName} variant="body_s" as="span">
+          <Text className={cls.productReviewName} variant="body_s" weight="medium" as="span">
             {name}
           </Text>
           <StarRating value={rating} className={cls.productReviewRating} />

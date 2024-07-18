@@ -3,9 +3,9 @@
 import { FC } from 'react';
 import cn from 'classnames';
 
-import { AmountCounter } from 'shared/ui/AmountCounter';
-import { Button } from 'shared/ui/Buttons';
-import { CartIcon } from 'shared/ui/icons';
+import { AmountCounter } from '@/shared/ui/AmountCounter';
+import { Button } from '@/shared/ui/Buttons';
+import { CartIcon } from '@/shared/ui/icons';
 
 import cls from './AddToCartCounter.module.scss';
 
@@ -13,7 +13,7 @@ type Props = {
   className: string;
 };
 
-// todo
+// todo  Доделать
 export const AddToCartCounter: FC<Props> = ({ className }) => {
   const handleAmountChange = (value: number) => {
     console.log(value);

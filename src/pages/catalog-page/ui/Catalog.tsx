@@ -1,17 +1,17 @@
 'use client';
 import { FC } from 'react';
 
-import { CatalogFilter, getCatalogFilterData } from 'widgets/CatalogFilter';
-import { CatalogItems, getCatalogItems } from 'widgets/CatalogItems';
+import { DiscountBanner } from '@/entities/DiscountBanner';
+import { ProductSmall } from '@/entities/Product';
+import { AddToCart } from '@/features/Cart/add-to-cart';
+import { CatalogSort } from '@/features/CatalogSort';
+import { AddToWishlist } from '@/features/Product';
+import { ShowProductPreview } from '@/features/Product';
 import { AppRouteNames } from '@/shared/model';
 import { Breadcrumbs } from '@/shared/ui/Breadcrumps';
-import { AddToCart } from 'features/Cart/add-to-cart';
-import { CatalogSort } from 'features/CatalogSort';
-import { AddToFavorites } from 'features/Product';
-import { ShowProductPreview } from 'features/Product/show-preview/ui';
-import { DiscountBanner } from 'entities/DiscountBanner';
-import { ProductSmall } from 'entities/Product';
-import { Pagination } from 'shared/ui/Pagination';
+import { Pagination } from '@/shared/ui/Pagination';
+import { CatalogFilter, getCatalogFilterData } from '@/widgets/CatalogFilter';
+import { CatalogItems, getCatalogItems } from '@/widgets/CatalogItems';
 
 import cls from './catalog.module.scss';
 
@@ -47,7 +47,7 @@ const Catalog: FC = () => {
                   <>
                     <AddToCart item={item} className={cls.button} />
                     <ShowProductPreview item={item} theme="secondary" className={cls.imageButton} />
-                    <AddToFavorites className={cls.imageButton} item={item} theme="secondary" />
+                    <AddToWishlist className={cls.imageButton} item={item} theme="secondary" />
                   </>
                 }
               />

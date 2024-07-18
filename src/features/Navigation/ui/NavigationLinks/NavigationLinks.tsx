@@ -1,8 +1,8 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import Link from 'next/link';
 
-import { TLink } from 'shared/model/navigation-link.types';
-import { ChevronDownIcon } from 'shared/ui/icons';
+import { type TLink } from '@/shared/model/navigation-link.types';
+import { ChevronDownIcon } from '@/shared/ui/icons';
 
 import cls from './NavigationLinks.module.scss';
 

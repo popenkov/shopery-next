@@ -12,9 +12,11 @@ export enum AppRouteNames {
   ORDER_DETAILS = 'Order details',
   SETTINGS = 'Settings',
   CART = 'Shopping cart',
+  LOGIN = 'Login',
+  REGISTRATION = 'Create Account',
 }
 
-export type AppRoutesProps = {
+export type TAppRoutesProps = {
   href: Route;
   name?: AppRouteNames;
   authOnly?: boolean;

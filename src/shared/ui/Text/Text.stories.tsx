@@ -36,9 +36,9 @@ const meta = {
 } satisfies Meta<typeof Text>;
 
 export default meta;
-type Story = StoryObj<typeof Text>;
+type TStory = StoryObj<typeof Text>;
 
-export const TextStory: Story = {
+export const TextStory: TStory = {
   args: {
     children: 'Text',
     theme: 'primary',

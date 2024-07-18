@@ -14,6 +14,6 @@ const meta = {
 } satisfies Meta<typeof CategoriesButton>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type TStory = StoryObj<typeof meta>;
 
-export const CategoriesButtonComponent: Story = {};
+export const CategoriesButtonComponent: TStory = {};

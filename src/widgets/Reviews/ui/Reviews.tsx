@@ -2,8 +2,8 @@
 
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
-import { Review, TReview } from 'entities/Review';
-import { MobileSlider } from 'shared/ui/MobileSlider';
+import { Review, TReview } from '@/entities/Review';
+import { MobileSlider } from '@/shared/ui/MobileSlider';
 
 import { getReviewsData } from '../api';
 

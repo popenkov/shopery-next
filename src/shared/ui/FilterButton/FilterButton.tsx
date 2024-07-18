@@ -1,7 +1,7 @@
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import cn from 'classnames';
 
-import { FilterIcon } from 'shared/ui/icons';
+import { FilterIcon } from '@/shared/ui/icons';
 
 import { Text } from '../Text';
 

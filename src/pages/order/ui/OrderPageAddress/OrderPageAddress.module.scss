@@ -1,11 +1,20 @@
 @import '@/shared/styles/mixins/flexbox';
 @import '@/shared/styles/mixins/box';
+@import '@/shared/styles/_breakpoints';
 
 .OrderPageAddress {
   @include flex-column;
 
-  gap: 6px;
-  padding: 32px;
+  width: 100%;
+
+  @media screen and (max-width: $df-screen-m) {
+    width: auto;
+  }
+}
+
+.OrderPageAddressHeader {
+  padding: 15px 19px 12px;
+  border-bottom: 1px solid var(--monochrome-100);
 }
 
 .OrderPageAddressTitle {
@@ -13,7 +22,30 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 150%;
-  letter-spacing: 0%;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.OrderPageAddressMain {
+  @include flex-column;
+
+  gap: 6px;
+  padding: 13px 19px 18px;
+}
+
+.OrderPageAddressContainer {
+  @include flex-column;
+
+  gap: 4px;
+}
+
+.OrderPageAddressKey {
+  color: var(--monochrome-400);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 3%;
+  text-align: left;
   text-transform: uppercase;
 }
 
@@ -31,5 +63,5 @@
 }
 
 .OrderPageAddressStreet + .OrderPageAddressEmail {
-  margin-top: 2px;
+  margin-top: 28px;
 }

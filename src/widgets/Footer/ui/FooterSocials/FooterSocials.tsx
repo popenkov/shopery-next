@@ -1,7 +1,7 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import { getSocialIcon } from '@/entities/SocialShare';
-import { RoundButton } from 'shared/ui/Buttons';
+import { RoundButton } from '@/shared/ui/Buttons';
 
 import { getFooterData } from '../../api';
 
@@ -13,8 +13,7 @@ export const FooterSocials: FC<Props> = () => {
   const { socialLinks } = getFooterData();
   return (
     <ul className={cls.socials}>
-      {socialLinks.map((socialLink) => {
-        const { icon, id } = socialLink;
+      {socialLinks.map(({ icon, id }) => {
         const Icon = getSocialIcon(icon);
         return (
           <RoundButton

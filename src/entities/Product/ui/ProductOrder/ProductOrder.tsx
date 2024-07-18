@@ -3,9 +3,9 @@ import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { TUserOrderItem } from '@/entities/User/model/types';
-import { getFormattedPrice } from 'shared/lib/utils';
-import { Text } from 'shared/ui/Text';
+import { type TUserOrderItem } from '@/entities/User/model/types';
+import { getFormattedPrice } from '@/shared/lib/utils';
+import { Text } from '@/shared/ui/Text';
 
 import cls from './ProductOrder.module.scss';
 
@@ -23,20 +23,20 @@ export const ProductOrder: FC<Props> = ({ data, className }) => {
           <Image src={img} alt={name} fill />
         </div>
         <Link href={path}>
-          <Text variant="body_m" weight="medium" as="h3">
+          <Text variant="body_s" as="h3">
             {name}
           </Text>
         </Link>
       </div>
       <div className={cls.ProductOrderPrice}>
-        <Text variant="body_m" weight="medium" className={cls.ProductOrderPriceNew}>
+        <Text variant="body_s" className={cls.ProductOrderPriceNew}>
           {getFormattedPrice(price)}
         </Text>
       </div>
-      <Text variant="body_m" weight="medium" className={cls.ProductOrderQuantity}>
+      <Text variant="body_s" className={cls.ProductOrderQuantity}>
         x{quantity}
       </Text>
-      <Text variant="body_m" weight="medium" className={cls.ProductOrderTotal}>
+      <Text variant="body_s" weight="medium" className={cls.ProductOrderTotal}>
         {getFormattedPrice(total)}
       </Text>
     </div>

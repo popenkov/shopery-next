@@ -1,16 +1,15 @@
 'use client';
 
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import cn from 'classnames';
 
-import { useAppSelector } from '@/app/lib/store/hooks';
-import { selectCart } from '@/entities/Cart';
-import { selectTotalPrice } from '@/entities/Cart/model/selectors/cart';
+import { selectCartProducts, selectTotalPrice } from '@/entities/Cart';
 import { ProductCheckout } from '@/entities/Product';
+import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice } from '@/shared/lib/utils';
-import { Button } from 'shared/ui/Buttons';
-import { Radio } from 'shared/ui/Radio';
-import { Text } from 'shared/ui/Text';
+import { Button } from '@/shared/ui/Buttons';
+import { Radio } from '@/shared/ui/Radio';
+import { Text } from '@/shared/ui/Text';
 
 import cls from './CheckoutTotal.module.scss';
 
@@ -19,12 +18,13 @@ type Props = {
 };
 
 export const CheckoutTotal: FC<Props> = ({ className }) => {
-  const cartItems = useAppSelector(selectCart);
+  const cartItems = useAppSelector(selectCartProducts);
   const totalPrice = useAppSelector(selectTotalPrice);
+  const [activePaymentMethod, setActivePaymentMethod] = useState('cash');
 
   // todo
-  const handlePaymentMethodChoose = () => {
-    console.log('handlePaymentMethodChoose');
+  const handlePaymentMethodChoose = (method: string) => {
+    setActivePaymentMethod(method);
   };
 
   return (
@@ -40,19 +40,29 @@ export const CheckoutTotal: FC<Props> = ({ className }) => {
       </div>
       <div className={cls.CheckoutTotalValues}>
         <div className={cls.CheckoutTotalRow}>
-          <span className={cls.CheckoutTotalKey}>Subtotal:</span>
-          <span className={cls.CheckoutTotalValue}>{getFormattedPrice(totalPrice)}</span>
+          <Text variant="body_s" className={cls.CheckoutTotalKey}>
+            Subtotal:
+          </Text>
+          <Text variant="body_s" weight="medium" className={cls.CheckoutTotalValue}>
+            {getFormattedPrice(totalPrice)}
+          </Text>
         </div>
         <div className={cls.CheckoutTotalRow}>
-          <span className={cls.CheckoutTotalKey}>Shipping:</span>
-          <span className={cls.CheckoutTotalValue}>
+          <Text variant="body_s" className={cls.CheckoutTotalKey}>
+            Shipping:
+          </Text>
+          <Text variant="body_s" weight="medium" className={cls.CheckoutTotalValue}>
             {/* todo */}
             {getFormattedPrice(totalPrice) ? getFormattedPrice(totalPrice) : 'Free'}
-          </span>
+          </Text>
         </div>
         <div className={cls.CheckoutTotalRow}>
-          <span className={cls.CheckoutTotalKey}>Total:</span>
-          <span className={cls.CheckoutTotalValue}>{getFormattedPrice(totalPrice)}</span>
+          <Text variant="body_s" className={cls.CheckoutTotalKey}>
+            Total:
+          </Text>
+          <Text variant="body_s" weight="medium" className={cls.CheckoutTotalValue}>
+            {getFormattedPrice(totalPrice)}
+          </Text>
         </div>
       </div>
       <div className={cls.CheckoutPaymentMethods}>
@@ -67,13 +77,15 @@ export const CheckoutTotal: FC<Props> = ({ className }) => {
             text="Cash on Delivery"
             onChange={handlePaymentMethodChoose}
             className="filter-accordion__content-item"
+            checked={activePaymentMethod === 'cash'}
           />
           <Radio
-            value={'cash'}
+            value={'paypal'}
             name="payment-method"
             text="Paypal"
             onChange={handlePaymentMethodChoose}
             className="filter-accordion__content-item"
+            checked={activePaymentMethod === 'paypal'}
           />
           <Radio
             value={'amazon-pay'}
@@ -81,6 +93,7 @@ export const CheckoutTotal: FC<Props> = ({ className }) => {
             text="Amazon Pay"
             onChange={handlePaymentMethodChoose}
             className="filter-accordion__content-item"
+            checked={activePaymentMethod === 'amazon-pay'}
           />
         </div>
       </div>

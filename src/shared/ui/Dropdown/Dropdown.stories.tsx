@@ -12,9 +12,9 @@ const meta = {
 } satisfies Meta<typeof Dropdown>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type TStory = StoryObj<typeof meta>;
 
-export const DropdownComponent: Story = {
+export const DropdownComponent: TStory = {
   args: {
     data: [
       {

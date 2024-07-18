@@ -1,8 +1,10 @@
 import { FC, memo, useEffect, useState } from 'react';
 import cn from 'classnames';
 
+import { CheckIcon } from '@/shared/ui/icons';
 import { Text } from '@/shared/ui/Text';
 
+import { STATUS_DATA } from './constants';
 import cls from './OrderPageStatus.module.scss';
 
 type Props = {
@@ -11,46 +13,54 @@ type Props = {
 };
 
 export const OrderPageStatus: FC<Props> = memo(({ status, className }) => {
-  const [percent, setPercent] = useState(0);
+  const [currentPercent, setCurrentPercent] = useState(0);
 
   useEffect(() => {
     switch (status) {
       case 'Order Received':
-        setPercent(15);
+        setCurrentPercent(15);
         break;
       case 'Processing':
-        setPercent(45);
+        setCurrentPercent(55);
         break;
       case 'On the way':
-        setPercent(75);
+        setCurrentPercent(75);
         break;
       case 'Delivered':
-        setPercent(100);
+        setCurrentPercent(100);
         break;
       default:
-        setPercent(0);
+        setCurrentPercent(0);
     }
   }, [status]);
 
   return (
     <div className={cn(cls.OrderPageStatus, className)}>
       <div className={cls.OrderPageStatusBar}>
-        <div className={cls.OrderPageStatusBarActive} style={{ width: `${percent}%` }}></div>
+        <div className={cls.OrderPageStatusBarActive} style={{ width: `${currentPercent}%` }}></div>
       </div>
       <div className={cls.OrderPageStatusContent}>
-        <div className={cls.OrderPageStatus}>
-          <Text>Order received</Text>
-        </div>
-        <div className={cls.OrderPageStatus}>
-          <Text>Processing</Text>
-        </div>
-        <div className={cls.OrderPageStatus}>
-          <Text>On the way</Text>
-        </div>
-        <div className={cls.OrderPageStatus}>
-          <Text>Delivered</Text>
-        </div>
+        {STATUS_DATA.map(({ id, bulletContent, text, percent }, index) => {
+          return (
+            <div
+              className={cn(cls.OrderPageStatusItem, {
+                [cls.active]: percent <= currentPercent,
+              })}
+              key={id}
+            >
+              <div className={cls.OrderPageBullet}>
+                {index === 0 ? <CheckIcon className={cls.OrderPageBulletIcon} /> : bulletContent}
+              </div>
+              <Text variant="body_s" weight="medium" className={cls.OrderPageStatusText}>
+                {text}
+              </Text>
+            </div>
+          );
+        })}
       </div>
+      <Text variant="body_m" weight="medium" className={cls.OrderPageStatusMobile}>
+        {status}
+      </Text>
     </div>
   );
 });

@@ -1,1 +1,1 @@
-export type RoundButtonTheme = 'primary' | 'secondary' | 'ghost';
+export type TRoundButtonTheme = 'primary' | 'secondary' | 'ghost';

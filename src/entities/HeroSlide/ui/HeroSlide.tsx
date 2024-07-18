@@ -1,11 +1,11 @@
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import Image from 'next/image';
 
-import { AppLink } from 'shared/ui/AppLink';
-import { ArrowIcon } from 'shared/ui/icons';
-import { Text } from 'shared/ui/Text';
+import { AppLink } from '@/shared/ui/AppLink';
+import { ArrowIcon } from '@/shared/ui/icons';
+import { Text } from '@/shared/ui/Text';
 
-import { THeroSlide } from '..';
+import { type THeroSlide } from '..';
 
 import cls from './HeroSlide.module.scss';
 

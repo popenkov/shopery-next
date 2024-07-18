@@ -12,9 +12,9 @@ const meta = {
 } satisfies Meta<typeof AppSelect>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type TStory = StoryObj<typeof meta>;
 
-export const AppSelectComponent: Story = {
+export const AppSelectComponent: TStory = {
   args: {
     options: [
       { label: 'test 1', value: 'test 1' },

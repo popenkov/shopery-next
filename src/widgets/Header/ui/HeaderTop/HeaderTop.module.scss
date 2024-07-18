@@ -1,7 +1,6 @@
 @import '@/shared/styles/_breakpoints';
 @import '@/shared/styles/mixins/flexbox';
 @import '@/shared/styles/mixins/container';
-@import '@/shared/styles/mixins/text-styles';
 
 .top {
   padding: 11px 0 13px;
@@ -52,8 +51,6 @@
 }
 
 .auth {
-  @include body-tiny;
-
   position: relative;
 
   @media screen and (max-width: $df-screen-t) {

@@ -1,75 +1,68 @@
 @import '@/shared/styles/breakpoints';
 @import '@/shared/styles/mixins/flexbox';
 @import '@/shared/styles/mixins/box';
-@import '@/shared/styles/mixins/text-styles';
 
-
-.productImageLink {@include box(102px);
+.productImageLink {
+  @include box(102px);
 
   position: relative;
-
 }
 
-  .image {
-    object-fit: contain;
+.image {
+  object-fit: contain;
+}
+
+.productImage {
+  @include flex-column;
+
+  gap: 1px;
+  padding: 24px 12px 24px 20px;
+}
+
+.productDescriptionMain {
+  @include flex-column;
+
+  gap: 5px;
+  height: 40px;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity var(--transition);
+}
+
+.productTitle {
+  margin: 0;
+  color: var(--monochrome-700);
+}
+
+.productPrice {
+  @include flex-center-vertical;
+
+  gap: 4px;
+  margin: 0;
+  color: var(--monochrome-900);
+
+  &Old {
+    color: var(--green-gray-400);
+    text-decoration-line: line-through;
   }
+}
 
-  .productImage {
-    @include flex-column;
+.productRating svg {
+  @include box(12px);
+}
 
-    gap: 1px;
-    padding: 24px 12px 24px 20px;
-  }
+.productDescriptionHover {
+  position: absolute;
+  height: 40px;
+  visibility: hidden;
+  opacity: 0;
+}
 
-  .productDescriptionMain {
-    @include flex-column;
+.productActions {
+  @include flex-center-vertical;
 
-    gap: 5px;
-    height: 40px;
-    visibility: visible;
-    opacity: 1;
-    transition: opacity var(--transition);
-  }
-
-
-
-  .productTitle {
-    @include body-s;
-
-    margin: 0;
-    color: var(--monochrome-700);
-  }
-
-  .productPrice {
-    @include flex-center-vertical;
-    @include body-m(500);
-
-    gap: 4px;
-    margin: 0;
-    color: var(--monochrome-900);
-
-    &Old {
-      color: var(--green-gray-400);
-      text-decoration-line: line-through;
-    }
-  }
-
-  .productRating svg {
-    @include box(12px);
-  }
-
-  .productDescriptionHover {
-    position: absolute;
-    height: 40px;
-    visibility: hidden;
-    opacity: 0;
-  }
-
-  .productActions {
-    @include flex-center-vertical;
-
-    gap: 12px;
-  }
+  gap: 12px;
+}
 
 .productSmall {
   @include flex-center-vertical;
@@ -107,6 +100,4 @@
       }
     }
   }
-
-
 }

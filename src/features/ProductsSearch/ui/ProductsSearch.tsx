@@ -4,8 +4,8 @@ import { ChangeEvent, DetailedHTMLProps, FC, HTMLAttributes, useCallback, useSta
 import { redirect } from 'next/navigation';
 
 import { getRouteCatalog } from '@/shared/lib/constants';
-import { Button } from 'shared/ui/Buttons';
-import { Input } from 'shared/ui/Input';
+import { Button } from '@/shared/ui/Buttons';
+import { Input } from '@/shared/ui/Input';
 
 import cls from './ProductsSearch.module.scss';
 
@@ -18,8 +18,6 @@ export const ProductSearch: FC<Props> = () => {
     console.log(searchValue);
     redirect(getRouteCatalog());
   }, [searchValue]);
-
-  // todo перенести валидацию
 
   const handleInputChange = useCallback((evt: ChangeEvent<HTMLInputElement>) => {
     const value = evt.target.value;

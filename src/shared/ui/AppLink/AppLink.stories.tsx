@@ -22,9 +22,9 @@ const meta = {
 } satisfies Meta<typeof AppLink>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type TStory = StoryObj<typeof meta>;
 
-export const PrimarySmall: Story = {
+export const PrimarySmall: TStory = {
   args: {
     children: 'Text',
     theme: 'primary',
@@ -32,14 +32,14 @@ export const PrimarySmall: Story = {
   },
 };
 
-export const Primary: Story = {
+export const Primary: TStory = {
   args: {
     children: 'Text',
     theme: 'primary',
   },
 };
 
-export const PrimaryLarge: Story = {
+export const PrimaryLarge: TStory = {
   args: {
     children: 'Text',
     theme: 'primary',
@@ -47,28 +47,28 @@ export const PrimaryLarge: Story = {
   },
 };
 
-export const Ghost: Story = {
+export const Ghost: TStory = {
   args: {
     children: 'Text',
     theme: 'ghost',
   },
 };
 
-export const Secondary: Story = {
+export const Secondary: TStory = {
   args: {
     children: 'Text',
     theme: 'secondary',
   },
 };
 
-export const Outlined: Story = {
+export const Outlined: TStory = {
   args: {
     children: 'Text',
     theme: 'outlined',
   },
 };
 
-export const Gray: Story = {
+export const Gray: TStory = {
   args: {
     children: 'Text',
     theme: 'gray',

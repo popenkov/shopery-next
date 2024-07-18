@@ -8,14 +8,14 @@ interface SliderProps<T> {
   data: T[];
 }
 
-export interface TabItem<T> {
+export type TTabItem<T> = {
   id: string;
   label: string;
   content: T[];
-}
+};
 
 interface TabsProps<T> {
-  tabs: TabItem<T>[];
+  tabs: TTabItem<T>[];
   onTabChange?: (value: string) => void;
   tabContent: (item: T) => JSX.Element;
   sliderContent?: (props: SliderProps<T>) => JSX.Element;

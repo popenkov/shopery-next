@@ -6,6 +6,7 @@ export {
   ProductWishlist,
   ProductCheckout,
   ProductCartPreview,
+  ProductCart,
 } from './ui';
 
 export { type TProduct, type TProductDetailed } from './model';

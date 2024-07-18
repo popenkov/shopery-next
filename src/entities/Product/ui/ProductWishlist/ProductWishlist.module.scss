@@ -5,8 +5,6 @@
 @import '@/shared/styles/mixins/text-styles';
 
 .productWishlist {
-  $block-name: &; // #{$block-name}__element
-
   display: grid;
   grid-template-columns: 1fr minmax(194px, 317px) minmax(108px, 187px) 194px;
   gap: 20px;

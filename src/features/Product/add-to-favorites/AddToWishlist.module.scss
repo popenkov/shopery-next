@@ -1,0 +1,13 @@
+.AddToWishlistAddedIcon {
+  fill: var(--front-primary);
+}
+
+.AddToWishlistButton {
+  @media (hover: hover) {
+    &:hover {
+      .AddToWishlistAddedIcon {
+        fill: var(--back-primary);
+      }
+    }
+  }
+}

@@ -1,5 +1,4 @@
 @import '@/shared/styles/_breakpoints';
-@import '@/shared/styles/mixins/text-styles';
 
 .wishlistTable {
   border: 1px solid var(--monochrome-100);
@@ -26,11 +25,15 @@
 }
 
 .wishlistTableColumnTitle {
-  @include body-s(500);
-
   color: var(--monochrome-500);
   letter-spacing: 3%;
   text-transform: uppercase;
+}
+
+.wishlistTableNoItems {
+  padding: 32px 24px;
+  color: var(--monochrome-500);
+  text-align: center;
 }
 
 .wishlistTableBody {

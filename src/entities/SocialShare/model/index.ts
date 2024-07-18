@@ -1,1 +1,1 @@
-export { type SocialLink } from './social.types';
+export { type TSocialLink } from './social.types';

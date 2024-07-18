@@ -1,4 +1,4 @@
-import { DeliveryTruckIcon, HeadphonesIcon, PackageIcon, ShoppingBagIcon } from 'shared/ui/icons';
+import { DeliveryTruckIcon, HeadphonesIcon, PackageIcon, ShoppingBagIcon } from '@/shared/ui/icons';
 
 const advantageIcons = {
   DeliveryTruckIcon: DeliveryTruckIcon,

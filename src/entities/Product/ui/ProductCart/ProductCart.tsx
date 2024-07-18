@@ -3,20 +3,21 @@ import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { getFormattedPrice } from 'shared/lib/utils';
-import { Text } from 'shared/ui/Text';
+import { getFormattedPrice } from '@/shared/lib/utils';
+import { Text } from '@/shared/ui/Text';
 
-import { TProduct } from '../..';
+import { type TProduct } from '../..';
 
 import cls from './ProductCart.module.scss';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   data: Omit<TProduct, 'rating'>;
-  actions?: ReactNode;
+  cartActions?: ReactNode;
+  deleteActions?: ReactNode;
   className?: string;
 }
 
-export const ProductCart: FC<Props> = ({ data, className, actions }) => {
+export const ProductCart: FC<Props> = ({ data, className, cartActions, deleteActions }) => {
   const { img, title, path, price } = data;
   return (
     <div className={cn(cls.ProductCart, className)}>
@@ -39,38 +40,13 @@ export const ProductCart: FC<Props> = ({ data, className, actions }) => {
       </div>
       <div className="cart-item__quantity">
         <span className={cls.ProductCartKeyMobileAmount}>Quantity:</span>
-        <div className={cls.ProductCartActions}>{actions}</div>
-        <div className="amount-actions">
-          <button className="amount-actions__button js-quantity-minus">
-            <svg className="amount-actions__button-icon">
-              <use href="img/svgSprite.svg#icon__minus"></use>
-            </svg>
-          </button>
-          <div className="amount-actions__input-wrapper">
-            <input
-              className="amount-actions__input js-quantity-input"
-              type="number"
-              value="5"
-              min="1"
-              readOnly
-            />
-          </div>
-          <button className="amount-actions__button js-quantity-plus">
-            <svg className="amount-actions__button-icon">
-              <use href="img/svgSprite.svg#icon__plus"></use>
-            </svg>
-          </button>
-        </div>
+        <div className={cls.ProductCartActions}>{cartActions}</div>
       </div>
-      <div className="cart-item__subtotal">
+      <div className={cls.ProductCartSubtotal}>
         <span className={cls.ProductCartKeyMobile}>Subtotal:</span>
         <span className="cart-item__price-new">$14.99</span>
       </div>
-      <button className="cart-item__delete-button close-button">
-        <svg className="close-button__icon">
-          <use href="img/svgSprite.svg#icon__cross"></use>
-        </svg>
-      </button>
+      <div className={cls.ProductCartDeleteButton}>{deleteActions}</div>
     </div>
   );
 };

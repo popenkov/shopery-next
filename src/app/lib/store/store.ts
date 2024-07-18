@@ -1,20 +1,36 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
-import { cartReducer } from 'entities/Cart';
+import { ThunkExtraArg } from '@/app/providers/StoreProvider/StateSchema';
+import { cartReducer } from '@/entities/Cart';
+import { wishlistReducer } from '@/entities/Favorites';
+import { orderReducer } from '@/entities/Order/model/slices/order-slice';
+import { userReducer } from '@/entities/User/slice/user-slice';
+import { $api } from '@/shared/api/api';
 
 const rootReducer = combineReducers({
   cart: cartReducer,
+  user: userReducer,
+  wishlist: wishlistReducer,
+  orders: orderReducer,
+  // [rtkApi.reducerPath]: rtkApi.reducer,
 });
 
-// makeStore function  returns a new store for each request
+const extraArg: ThunkExtraArg = {
+  api: $api,
+};
+
 export const makeStore = () => {
   return configureStore({
     reducer: rootReducer,
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware({
+        thunk: {
+          extraArgument: extraArg,
+        },
+      }),
   });
 };
 
-// Infer the type of makeStore
 export type AppStore = ReturnType<typeof makeStore>;
-// Infer the `RootState` and `AppDispatch` types from the store itself
 export type RootState = ReturnType<AppStore['getState']>;
 export type AppDispatch = AppStore['dispatch'];

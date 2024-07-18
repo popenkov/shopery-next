@@ -1,1 +1,1 @@
-export { type RoundButtonTheme } from './button.types';
+export { type TRoundButtonTheme } from './button.types';

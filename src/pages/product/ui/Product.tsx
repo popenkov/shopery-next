@@ -1,13 +1,13 @@
 import { FC } from 'react';
 import cn from 'classnames';
 
-import { ProductDescription } from 'widgets/ProductDescription';
-import { ProductDetailedTabs, RelatedProducts } from 'widgets/ProductDetailed';
+import { getProductDetails } from '@/entities/Product';
 import { AddToCartCounter } from '@/features/Cart';
+import { AddToWishlist } from '@/features/Product';
 import { AppRouteNames } from '@/shared/model';
 import { Breadcrumbs } from '@/shared/ui/Breadcrumps';
-import { AddToFavorites } from 'features/Product';
-import { getProductDetails } from 'entities/Product';
+import { ProductDescription } from '@/widgets/ProductDescription';
+import { ProductDetailedTabs, RelatedProducts } from '@/widgets/ProductDetailed';
 
 import cls from './Product.module.scss';
 
@@ -25,8 +25,7 @@ const Product: FC = () => {
           actions={
             <>
               <AddToCartCounter className={cls.ProductCartPreviewCounter} />
-              {/* todo */}
-              <AddToFavorites className={cls.productFavoriteButton} item={data} />
+              <AddToWishlist className={cls.productFavoriteButton} item={data} />
             </>
           }
         />

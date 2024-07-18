@@ -1,10 +1,10 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import Image from 'next/image';
 
-import { QuoteIcon } from 'shared/ui/icons';
-import { Text } from 'shared/ui/Text';
+import { QuoteIcon } from '@/shared/ui/icons';
+import { Text } from '@/shared/ui/Text';
 
-import { TReview } from '../../';
+import { type TReview } from '../../';
 
 import cls from './Review.module.scss';
 

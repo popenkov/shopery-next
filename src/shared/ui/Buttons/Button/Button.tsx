@@ -3,7 +3,7 @@ import cn from 'classnames';
 
 import style from './Button.module.scss';
 
-type ButtonTheme =
+type TButtonTheme =
   | 'primary'
   | 'ghost'
   | 'secondary'
@@ -12,14 +12,14 @@ type ButtonTheme =
   | 'text'
   | 'monochrome-light';
 
-type ButtonSize = 'small' | 'normal' | 'large';
+type TButtonSize = 'small' | 'normal' | 'large';
 
 interface AppButtonProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   className?: string;
-  theme?: ButtonTheme;
+  theme?: TButtonTheme;
   type?: 'button' | 'reset' | 'submit';
-  size?: ButtonSize;
+  size?: TButtonSize;
   children: ReactNode;
   ref?: Ref<HTMLButtonElement>;
   form?: string;

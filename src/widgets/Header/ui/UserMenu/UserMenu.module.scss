@@ -1,0 +1,45 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/button-reset';
+@import '@/shared/styles/mixins/link-reset';
+
+.UserMenu {
+  @include flex-center-vertical;
+
+  position: relative;
+  gap: 12px;
+}
+
+.UserMenuAvatar {
+  @include box(32px);
+  @include button-reset;
+
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.UserMenuLinks {
+  @include flex-column;
+
+  position: absolute;
+  top: 43px;
+  right: 0;
+  z-index: 3;
+  gap: 10px;
+  padding: 10px;
+  background-color: var(--monochrome-800);
+  border-radius: 8px;
+}
+
+.UserMenuLink {
+  @include link-reset;
+}
+
+.UserMenuLogoutButton {
+  @include button-reset;
+  @include link-reset;
+
+  color: var(--monochrome-300);
+}

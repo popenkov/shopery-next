@@ -3,7 +3,7 @@
 import { ChangeEvent, InputHTMLAttributes, forwardRef, memo, useId } from 'react';
 import cn from 'classnames';
 
-import { AlertIcon, SearchIcon, SuccessIcon } from 'shared/ui/icons';
+import { AlertIcon, SearchIcon, SuccessIcon } from '@/shared/ui/icons';
 
 import { Text } from '../Text';
 

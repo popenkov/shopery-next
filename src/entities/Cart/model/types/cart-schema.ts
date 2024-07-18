@@ -1,8 +1,8 @@
-import { CartProduct } from './cart';
+import { type TCartProduct } from './cart';
 
 export type CartSchema = {
   isAsideCartOpen: boolean;
-  cart: CartProduct[];
+  cart: TCartProduct[];
   totalAmount: number;
   totalPrice: number;
 };

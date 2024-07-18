@@ -24,9 +24,8 @@ const config: StorybookConfig = {
     autodocs: 'tag',
   },
 
-  staticDirs: ['../../../../public'], // This loads images at localhost:6006/next.svg
+  staticDirs: ['../../../../public'],
   webpackFinal: async (config) => {
-    //  апроблема с путями
     if (config.resolve) {
       // @ts-expect-error
       config.resolve.alias['@'] = path.resolve(__dirname, '../../../');

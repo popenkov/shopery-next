@@ -1,27 +1,37 @@
 'use client';
 
-import { FC, ReactNode } from 'react';
+import { FC, ReactNode, useEffect, useState } from 'react';
 import cn from 'classnames';
 
-
+import { TOrder } from '@/entities/Order';
 import { getRouteOrderHistory } from '@/shared/lib/constants';
 import { AppLink } from '@/shared/ui/AppLink';
 import { Text } from '@/shared/ui/Text';
-
-import { TUserOrderPreview } from '../../model/types';
 
 import { ORDERS_LIST_TITLES } from './constants';
 import { UserOrder } from './UserOrder';
 import cls from './UserOrders.module.scss';
 
 type Props = {
-  data: TUserOrderPreview[];
   className?: string;
   isPreview?: boolean;
   actions?: ReactNode;
 };
 
-export const UserOrders: FC<Props> = ({ className, isPreview, data, actions }) => {
+export const UserOrders: FC<Props> = ({ className, isPreview, actions }) => {
+  const [orders, setOrders] = useState<null | TOrder[]>(null);
+
+  useEffect(() => {
+    const ordersString = localStorage.getItem('orders');
+    if (ordersString) {
+      setOrders(JSON.parse(ordersString));
+    }
+  }, []);
+
+  if (!orders) {
+    return <p>No orders</p>;
+  }
+
   const componentTitleText = isPreview ? 'Recent Order History' : 'Order History';
 
   return (
@@ -47,7 +57,7 @@ export const UserOrders: FC<Props> = ({ className, isPreview, data, actions }) =
           })}
         </div>
         <ul className={cls.UserOrdersOrders}>
-          {data.map((order) => {
+          {orders.map((order) => {
             return <UserOrder order={order} key={order.id} />;
           })}
         </ul>

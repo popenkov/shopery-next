@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { Navigation } from 'features/Navigation';
+import { Navigation } from '@/features/Navigation';
 
 import cls from './Header.module.scss';
 import { HeaderMiddle } from './HeaderMiddle';

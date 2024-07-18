@@ -1,7 +1,7 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import cn from 'classnames';
 
-import { ChevronDownIcon } from 'shared/ui/icons';
+import { ChevronDownIcon } from '@/shared/ui/icons';
 
 import { Text } from '../Text';
 

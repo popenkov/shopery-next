@@ -2,21 +2,21 @@
 
 import React, { DetailedHTMLProps, FC, HTMLAttributes, memo, useState } from 'react';
 
-import { ChevronDownIcon } from 'shared/ui/icons';
+import { ChevronDownIcon } from '@/shared/ui/icons';
 
-import { DropdownItem } from './Dropdown.interface';
+import { type TDropdownItem } from './Dropdown.interface';
 import cls from './Dropdown.module.scss';
 
 interface DropdownProps
   extends Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'onChange'> {
-  data: DropdownItem[];
-  onChange: (value: DropdownItem) => void;
+  data: TDropdownItem[];
+  onChange: (value: TDropdownItem) => void;
 }
 
 export const Dropdown: FC<DropdownProps> = memo(({ data, onChange }) => {
-  const [chosenElement, setChosenElement] = useState<DropdownItem>(data[0]);
+  const [chosenElement, setChosenElement] = useState<TDropdownItem>(data[0]);
 
-  const handleOptionChoose = (item: DropdownItem) => {
+  const handleOptionChoose = (item: TDropdownItem) => {
     setChosenElement(item);
     onChange(item);
   };

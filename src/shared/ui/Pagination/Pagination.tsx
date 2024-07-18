@@ -1,8 +1,8 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import cn from 'classnames';
 
-import { DOTS, usePagination } from 'shared/lib/hooks';
-import { ChevronDownIcon } from 'shared/ui/icons';
+import { DOTS, usePagination } from '@/shared/lib/hooks';
+import { ChevronDownIcon } from '@/shared/ui/icons';
 
 import cls from './Pagination.module.scss';
 

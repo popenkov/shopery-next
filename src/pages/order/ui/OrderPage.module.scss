@@ -1,6 +1,5 @@
-@import '@/shared/styles/mixins/container';
+@import '@/shared/styles/_breakpoints';
 @import '@/shared/styles/mixins/flexbox';
-@import '@/shared/styles/mixins/text-styles';
 
 .OrderPage {
   @include flex-column;
@@ -8,19 +7,53 @@
   width: 100%;
   border: 1px solid var(--monochrome-100);
   border-radius: 8px;
+
+  @media screen and (max-width: $df-screen-m) {
+    border: none;
+  }
 }
 
 .OrderPageInfo {
   display: grid;
-  padding: 24px;
+  grid-template-areas: 'address payment' 'status status';
+  grid-template-columns: 1fr 288px;
+  gap: 57px 24px;
+  padding: 24px 24px 16px;
+
+  @media screen and (max-width: $df-screen-ti) {
+    grid-template-areas: 'address' 'payment' 'status';
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (max-width: $df-screen-m) {
+    padding: 0;
+  }
 }
 
 .OrderPageAddresses {
   display: flex;
+  grid-area: address;
   border: 1px solid var(--monochrome-100);
   border-radius: 6px;
+
+  @media screen and (max-width: $df-screen-ti) {
+    flex-direction: column;
+  }
 }
 
-.OrderPageAddresse {
+.OrderPageAddress {
   border-right: 1px solid var(--monochrome-100);
+
+  @media screen and (max-width: $df-screen-ti) {
+    border-right: none;
+    border-bottom: 1px solid var(--monochrome-100);
+  }
+}
+
+.OrderPagePayment {
+  grid-area: payment;
+}
+
+.OrderPageStatus {
+  grid-area: status;
 }

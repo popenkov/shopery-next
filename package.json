@@ -4,10 +4,6 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "open-browser-windows": "open http://0.0.0.0:5555",
-    "dev-open-browser-windows": "next dev -p 5555 & npm run open-browser-windows",
-    "open-browser-linux": "xdg-open http://0.0.0.0:5555",
-    "dev-open-browser-linux": "next dev -p 5555 & npm run open-browser-linux",
     "build": "next build",
     "start": "next start",
     "start:dev": "concurrently \"npm run start:dev:server\" \"next dev\"",
@@ -32,10 +28,12 @@
     "lint-staged": "lint-staged"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
     "@reduxjs/toolkit": "^2.2.5",
     "@types/circular-dependency-plugin": "^5.0.8",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
+    "axios": "^1.7.2",
     "circular-dependency-plugin": "^5.2.2",
     "classnames": "2.5.1",
     "concurrently": "^8.2.2",
@@ -52,7 +50,8 @@
     "regenerator-runtime": "^0.14.1",
     "sass": "1.70.0",
     "swiper": "11.0.7",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
@@ -99,6 +98,7 @@
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "jest-html-reporters": "^3.1.7",
+    "json-server": "0.17.4",
     "lint-staged": "^15.2.2",
     "nanoid": "^5.0.6",
     "prettier": "^3.2.5",
@@ -127,17 +127,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "lint-staged": {
-    "**/*.{ts,tsx}": [
-      "npm run prettier",
-      "npm run lint:ts"
-    ],
-    "*.scss": "lint:scss"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }

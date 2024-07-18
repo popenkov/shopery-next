@@ -1,10 +1,10 @@
 import { FC, ReactNode } from 'react';
 import cn from 'classnames';
 
-import { Text } from 'shared/ui/Text';
+import { Text } from '@/shared/ui/Text';
 
 import { getVideoAdIcon } from '../../lib';
-import { TAdvertisement } from '../../model';
+import { type TAdvertisement } from '../../model';
 
 import cls from './VideoAd.module.scss';
 
@@ -19,11 +19,10 @@ export const VideoAd: FC<Props> = ({ adData, video, className }) => {
     <div className={cn(cls.videoAd, className)}>
       <div className={cls.videoAdContent}>{video}</div>
       <div className={cls.videoAdAdvantages}>
-        {adData.map((ad) => {
-          const { icon, title, text } = ad;
+        {adData.map(({ icon, title, text }) => {
           const Icon = getVideoAdIcon(icon);
           return (
-            <div className={cls.videoAdAdvantage} key={ad.title}>
+            <div className={cls.videoAdAdvantage} key={title}>
               <Icon className={cls.videoAdAdvantageIcon} />
               <div className={cls.videoAdAdvantageText}>
                 <Text variant="body_s" weight="medium" as="h3">

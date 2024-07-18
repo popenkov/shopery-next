@@ -2,11 +2,11 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import cn from 'classnames';
 import Image from 'next/image';
 
-import { AppLink } from 'shared/ui/AppLink';
-import { ArrowIcon } from 'shared/ui/icons';
-import { Text } from 'shared/ui/Text';
+import { AppLink } from '@/shared/ui/AppLink';
+import { ArrowIcon } from '@/shared/ui/icons';
+import { Text } from '@/shared/ui/Text';
 
-import { TDiscountBanner } from '../model';
+import { type TDiscountBanner } from '../model';
 
 import cls from './DiscountBanner.module.scss';
 
@@ -22,8 +22,12 @@ export const DiscountBanner: FC<Props> = ({ image, title, subtitle, path, classN
       </div>
 
       <div className={cls.bannerText}>
-        <p className={cls.bannerTitle}>{title}</p>
-        <p className={cls.bannerSubtitle}>{subtitle}</p>
+        <Text variant="body_xxl" className={cls.bannerTitle}>
+          {title}
+        </Text>
+        <Text variant="body_m" className={cls.bannerSubtitle}>
+          {subtitle}
+        </Text>
         <AppLink href={path} theme="ghost" className={cls.bannerButton}>
           <Text variant="body_m" weight="semibold">
             Shop Now

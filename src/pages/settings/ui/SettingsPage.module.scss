@@ -1,0 +1,9 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox';
+
+.SettingsPage {
+  @include flex-column;
+
+  gap: 24px;
+  width: 100%;
+}

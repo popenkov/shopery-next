@@ -3,7 +3,7 @@
 import { ChangeEvent, InputHTMLAttributes, ReactNode, memo, useRef } from 'react';
 import cn from 'classnames';
 
-import { CheckIcon } from 'shared/ui/icons';
+import { CheckIcon } from '@/shared/ui/icons';
 
 import { Text } from '../Text';
 
@@ -18,7 +18,7 @@ interface CheckboxProps extends HTMLCheckboxProps {
   className?: string;
   children?: ReactNode;
   name?: string;
-  value?: string | number;
+  value?: string | number | readonly string[] | undefined;
   text?: string;
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 }

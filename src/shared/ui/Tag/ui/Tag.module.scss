@@ -1,13 +1,8 @@
-@import '@/shared/styles/mixins/text-styles';
-
 .tag {
-  @include body-s;
-
   width: fit-content;
   padding: 3px 10px 3px 8px;
   color: var(--color-white);
   border-radius: 4px;
-
 
   &.sale,
   &.not-available {

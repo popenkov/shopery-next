@@ -2,8 +2,8 @@
 
 import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
-import { Banner, TBanner } from 'entities/Banner';
-import { MobileSlider } from 'shared/ui/MobileSlider';
+import { Banner, TBanner } from '@/entities/Banner';
+import { MobileSlider } from '@/shared/ui/MobileSlider';
 
 import { getBannerData } from '../api';
 

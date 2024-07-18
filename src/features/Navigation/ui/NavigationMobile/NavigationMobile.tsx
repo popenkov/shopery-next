@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 
-import { Accordion } from 'shared/ui/Accordion';
-import { Text } from 'shared/ui/Text';
+import { Accordion } from '@/shared/ui/Accordion';
+import { Text } from '@/shared/ui/Text';
 
 import { getNavigationData } from '../../api';
 

@@ -1,5 +1,5 @@
 type TSocialIcons = 'FacebookIcon' | 'TwitterIcon' | 'PinterestIcon' | 'InstagramIcon';
-export type SocialLink = {
+export type TSocialLink = {
   icon: TSocialIcons;
   id: string;
   path: string;

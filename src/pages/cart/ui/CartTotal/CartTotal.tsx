@@ -1,7 +1,12 @@
+'use client';
+
 import { FC } from 'react';
 import cn from 'classnames';
 
+import { selectCartData } from '@/entities/Cart';
 import { getRouteCheckout } from '@/shared/lib/constants';
+import { useAppSelector } from '@/shared/lib/hooks';
+import { getFormattedPrice } from '@/shared/lib/utils';
 import { AppLink } from '@/shared/ui/AppLink';
 import { Text } from '@/shared/ui/Text';
 
@@ -12,6 +17,8 @@ type Props = {
 };
 
 export const CartTotal: FC<Props> = ({ className }) => {
+  const { totalPrice, cart } = useAppSelector(selectCartData);
+
   return (
     <div className={cn('CartTotal cart-page__total', className)}>
       <Text variant="body_xl" className={cls.CartTotalTitle} weight="medium" as="h3">
@@ -23,7 +30,7 @@ export const CartTotal: FC<Props> = ({ className }) => {
             Subtotal:
           </Text>
           <Text variant="body_s" weight="medium" className={cls.CartTotalValue} as="span">
-            $84.00
+            {getFormattedPrice(totalPrice)}
           </Text>
         </div>
         <div className={cls.CartTotalRow}>
@@ -39,11 +46,16 @@ export const CartTotal: FC<Props> = ({ className }) => {
             Total:
           </Text>
           <Text variant="body_s" weight="medium" className={cls.CartTotalValue} as="span">
-            $84.00
+            {getFormattedPrice(totalPrice)}
           </Text>
         </div>
       </div>
-      <AppLink href={getRouteCheckout()} size="large" className={cls.CartTotalButton}>
+      <AppLink
+        href={getRouteCheckout()}
+        size="large"
+        className={cls.CartTotalButton}
+        isDisabled={!cart.length}
+      >
         Proceed to checkout
       </AppLink>
     </div>

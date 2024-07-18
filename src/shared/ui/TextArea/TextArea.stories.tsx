@@ -18,9 +18,9 @@ const meta = {
 } satisfies Meta<typeof TextArea>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type TStory = StoryObj<typeof meta>;
 
-export const TextAreaComponent: Story = {
+export const TextAreaComponent: TStory = {
   decorators: [
     (Story) => (
       <div style={{ maxWidth: '400px' }}>
@@ -31,7 +31,7 @@ export const TextAreaComponent: Story = {
   args: { placeholder: 'name' },
 };
 
-export const TextAreaFilledComponent: Story = {
+export const TextAreaFilledComponent: TStory = {
   decorators: [
     (Story) => (
       <div style={{ maxWidth: '400px' }}>

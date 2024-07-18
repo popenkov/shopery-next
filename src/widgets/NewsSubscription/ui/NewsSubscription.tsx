@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { Subscription } from 'features/Subscription';
+import { Subscription } from '@/features/Subscription';
 
 import cls from './NewsSubscription.module.scss';
 

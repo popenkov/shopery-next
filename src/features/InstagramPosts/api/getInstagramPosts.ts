@@ -1,4 +1,4 @@
-import { TInstagramCard } from '@/entities/InstagramCard';
+import { type TInstagramCard } from '@/entities/InstagramCard';
 
 const DATA: TInstagramCard[] = [
   {

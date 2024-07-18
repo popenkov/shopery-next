@@ -1,4 +1,4 @@
-import { TwitterIcon, PinterestIcon, InstagramIcon, FacebookIcon } from 'shared/ui/icons';
+import { TwitterIcon, PinterestIcon, InstagramIcon, FacebookIcon } from '@/shared/ui/icons';
 
 const icons = {
   FacebookIcon: FacebookIcon,

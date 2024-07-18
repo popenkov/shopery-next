@@ -1,0 +1,55 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/grid';
+@import '@/shared/styles/mixins/text-styles';
+
+.EditUserSettings {
+  display: flex;
+  gap: 112px;
+
+  @media screen and (max-width: $df-screen-t) {
+    flex-direction: column-reverse;
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+.EditUserSettingsInput {
+  @include flex-column;
+
+  gap: 8px;
+  width: 100%;
+
+  label {
+    @include body-s;
+
+    margin: 0;
+  }
+
+  input {
+    max-height: 49px;
+    padding: 13px 16px;
+  }
+}
+
+.EditUserSettingsInputs {
+  @include flex-column;
+
+  gap: 14px;
+  align-items: flex-start;
+  width: 70%;
+  max-width: 512px;
+
+  @media screen and (max-width: $df-screen-t) {
+    width: 100%;
+    max-width: unset;
+  }
+}
+
+.EditUserSettingsInput + .EditUserSettingsButton {
+  margin-top: 8px;
+}
+
+.EditUserSettingsImageUploader {
+  margin-top: 32px;
+}

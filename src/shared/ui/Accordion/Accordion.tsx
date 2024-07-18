@@ -1,8 +1,8 @@
 'use client';
-import { FC, ReactNode, useState } from 'react';
+import { FC, ReactNode, useEffect, useState } from 'react';
 import cn from 'classnames';
 
-import { ChevronDownIcon, PlusIcon } from 'shared/ui/icons';
+import { ChevronDownIcon, PlusIcon } from '@/shared/ui/icons';
 
 import cls from './Accordion.module.scss';
 
@@ -11,6 +11,8 @@ interface Props {
   title: ReactNode;
   children: ReactNode;
   noBorder?: boolean;
+  onClick?: () => void;
+  open?: boolean;
   isOpenByDefault?: boolean;
   className?: string;
 }
@@ -20,16 +22,28 @@ export const Accordion: FC<Props> = ({
   children,
   variant,
   noBorder,
+  open,
+  onClick,
   isOpenByDefault = false,
   className,
 }) => {
-  const [isOpen, setIsOpen] = useState(isOpenByDefault);
+  const [isOpen, setIsOpen] = useState(open || isOpenByDefault);
 
   const isBorder = variant === 'border';
 
   const handleAccordeonToggle = () => {
-    setIsOpen((prev) => !prev);
+    if (onClick) {
+      onClick();
+    } else {
+      setIsOpen((prev) => !prev);
+    }
   };
+
+  useEffect(() => {
+    if (open !== undefined) {
+      setIsOpen(open);
+    }
+  }, [open]);
 
   return (
     <div

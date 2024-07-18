@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import cn from 'classnames';
 
-import { RoundButton } from 'shared/ui/Buttons';
+import { RoundButton } from '@/shared/ui/Buttons';
 
 import { getSocialData } from '../api';
 import { getSocialIcon } from '../lib';
@@ -18,8 +18,7 @@ export const SocialShare: FC<Props> = ({ className }) => {
     <div className={cn(cls.socialShare, className)}>
       <span className={cls.socialShareText}>Share:</span>
       <div className={cls.socialShareContainer}>
-        {socialLinks.map((socialLink) => {
-          const { icon, id } = socialLink;
+        {socialLinks.map(({ icon, id }) => {
           const Icon = getSocialIcon(icon);
           return (
             <RoundButton

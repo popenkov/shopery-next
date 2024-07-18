@@ -1,1 +1,1 @@
-export { type HeaderCategory } from './model';
+export { type THeaderCategory } from './model';

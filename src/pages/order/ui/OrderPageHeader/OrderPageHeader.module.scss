@@ -1,5 +1,5 @@
+@import '@/shared/styles/_breakpoints';
 @import '@/shared/styles/mixins/flexbox';
-@import '@/shared/styles/mixins/text-styles';
 
 .OrderPageHeader {
   @include flex-center-vertical;
@@ -9,12 +9,24 @@
   padding: 16px 24px;
   border-bottom: 1px solid var(--monochrome-100);
   border-radius: 8px;
+
+  @media screen and (max-width: $df-screen-ti) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @media screen and (max-width: $df-screen-m) {
+    padding: 24px 0;
+    border: none;
+  }
 }
 
 .OrderPageHeaderSeparator {
-  @include body-s;
-
   color: var(--monochrome-700);
+
+  @media screen and (max-width: $df-screen-ti) {
+    display: none;
+  }
 }
 
 .OrderPageHeaderText {
@@ -23,4 +35,8 @@
 
 .OrderPageHeaderLink {
   margin-left: auto;
+
+  @media screen and (max-width: $df-screen-ti) {
+    margin-left: 0;
+  }
 }

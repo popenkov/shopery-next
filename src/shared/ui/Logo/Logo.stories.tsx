@@ -12,15 +12,15 @@ const meta = {
 } satisfies Meta<typeof Logo>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type TStory = StoryObj<typeof meta>;
 
-export const DefaultLogo: Story = {
+export const DefaultLogo: TStory = {
   args: {
     size: 'default',
   },
 };
 
-export const SmallLogo: Story = {
+export const SmallLogo: TStory = {
   args: {
     size: 'small',
   },

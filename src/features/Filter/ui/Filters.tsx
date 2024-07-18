@@ -9,14 +9,14 @@ import React, {
 } from 'react';
 import cn from 'classnames';
 
-import { Accordion } from 'shared/ui/Accordion';
-import { Button } from 'shared/ui/Buttons';
-import { Checkbox } from 'shared/ui/Checkbox';
-import { Radio } from 'shared/ui/Radio';
-import { RangeSlider } from 'shared/ui/RangeSlider';
-import { StarRating } from 'shared/ui/StarRating';
-import { TagCheckbox } from 'shared/ui/TagCheckbox';
-import { Text } from 'shared/ui/Text';
+import { Accordion } from '@/shared/ui/Accordion';
+import { Button } from '@/shared/ui/Buttons';
+import { Checkbox } from '@/shared/ui/Checkbox';
+import { Radio } from '@/shared/ui/Radio';
+import { RangeSlider } from '@/shared/ui/RangeSlider';
+import { StarRating } from '@/shared/ui/StarRating';
+import { TagCheckbox } from '@/shared/ui/TagCheckbox';
+import { Text } from '@/shared/ui/Text';
 
 import { getFilterData } from '../api';
 

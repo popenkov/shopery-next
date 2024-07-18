@@ -1,4 +1,4 @@
-import { TVideo } from '@/entities/Video';
+import { type TVideo } from '@/entities/Video';
 
 const data: TVideo = {
   background: 'video-preview.jpg',

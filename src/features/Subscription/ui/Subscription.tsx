@@ -3,10 +3,10 @@
 import { ChangeEvent, FC, useCallback, useState } from 'react';
 import cn from 'classnames';
 
-import { Button } from 'shared/ui/Buttons';
-import { Input } from 'shared/ui/Input';
-import { Logo } from 'shared/ui/Logo';
-import { Text } from 'shared/ui/Text';
+import { Button } from '@/shared/ui/Buttons';
+import { Input } from '@/shared/ui/Input';
+import { Logo } from '@/shared/ui/Logo';
+import { Text } from '@/shared/ui/Text';
 
 import { subscribeOnNews } from '../api/subscribe-on-news';
 

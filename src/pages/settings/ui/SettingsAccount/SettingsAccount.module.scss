@@ -1,0 +1,40 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox';
+
+.SettingsAccount {
+  @include flex-column;
+
+  width: 100%;
+  border: 1px solid var(--monochrome-100);
+  border-radius: 8px;
+
+  @media screen and (max-width: $df-screen-m) {
+    border: none;
+  }
+}
+
+.SettingsAccountHeader {
+  @include flex-center-vertical;
+
+  gap: 8px;
+  width: 100%;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--monochrome-100);
+  border-radius: 8px;
+
+  @media screen and (max-width: $df-screen-ti) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @media screen and (max-width: $df-screen-m) {
+    padding: 24px 0;
+    border: none;
+  }
+}
+
+.SettingsAccountMain,
+.SettingsAccountAddress,
+.SettingsAccountChangePassword {
+  padding: 24px;
+}

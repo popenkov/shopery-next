@@ -1,1 +1,1 @@
-export * from './AddToFavorites';
+export * from './AddToWishlist';
