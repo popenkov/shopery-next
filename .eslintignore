@@ -5,4 +5,4 @@ cypress.config.ts
 /src/app/configs
 /storybook-static
 # todo
-/app
+# /app

@@ -6,12 +6,7 @@
     "jest": true
   },
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint",
-    "unused-imports",
-    "css-import-order",
-    "@feature-sliced/eslint-plugin-messages"
-  ],
+  "plugins": ["@typescript-eslint", "unused-imports", "css-import-order"],
   "extends": [
     "next/core-web-vitals",
     "eslint:recommended",
@@ -22,7 +17,6 @@
     "@feature-sliced/eslint-config/rules/public-api",
     "@feature-sliced/eslint-config/rules/layers-slices"
   ],
-  "processor": "@feature-sliced/messages/fs",
   "settings": {
     "import/resolver": {
       "typescript": {
@@ -106,8 +100,171 @@
         }
       }
     ],
+    // "no-restricted-imports": [
+    //   "error",
+    //   {
+    //     "patterns": [
+    //       // Private imports are prohibited, use public imports instead
+    //       "app/**",
+    //       "pages/*/**",
+    //       "features/*/**",
+    //       "entities/*/**",
+    //       "shared/*/*/**", // Для shared +1 уровень, т.к. там чаще мы обращаемся к конкретной библиотеке/компоненты
+    //       // Prefer absolute imports instead of relatives (for root modules)
+    //       "../**/app",
+    //       "../**/pages",
+    //       "../**/features",
+    //       "../**/entities",
+    //       "../**/shared"
+    //     ]
+    //   }
+    // ],
     // feature-sliced/public-api
-    "import/no-internal-modules": "warn", // ~ 1,
+    // "import/no-internal-modules": "warn" // @ 1,
+    // "import/no-internal-modules": [
+    //   "error",
+    //   {
+    //     "allow": ["./**", "@public/*"] //Used for allow import local modules
+    //   }
+    // ],
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": [
+          {
+            "message": "Private imports are prohibited, use public imports instead",
+            "group": ["@/app/**"]
+          },
+          {
+            "message": "Private imports are prohibited, use public imports instead",
+            "group": ["@/pages/*/**"]
+          },
+          {
+            "message": "Private imports are prohibited, use public imports instead",
+            "group": ["@/widgets/*/**"]
+          },
+          {
+            "message": "Private imports are prohibited, use public imports instead",
+            "group": ["@/features/*/**"]
+          },
+          {
+            "message": "Private imports are prohibited, use public imports instead",
+            "group": ["@/entities/*/**"]
+          },
+          {
+            "message": "Private imports are prohibited, use public imports instead",
+            "group": ["@/shared/*/*/**"]
+          },
+          {
+            "message": "Prefer absolute imports instead of relatives (for root modules)",
+            "group": ["../**/app"]
+          },
+          {
+            "message": "Prefer absolute imports instead of relatives (for root modules)",
+            "group": ["../**/pages"]
+          },
+          {
+            "message": "Prefer absolute imports instead of relatives (for root modules)",
+            "group": ["../**/widgets"]
+          },
+          {
+            "message": "Prefer absolute imports instead of relatives (for root modules)",
+            "group": ["../**/features"]
+          },
+          {
+            "message": "Prefer absolute imports instead of relatives (for root modules)",
+            "group": ["../**/entities"]
+          },
+          {
+            "message": "Prefer absolute imports instead of relatives (for root modules)",
+            "group": ["../**/shared"]
+          }
+        ]
+      }
+    ],
+    "boundaries/element-types": [
+      "error",
+      {
+        "default": "allow",
+        "message": "${file.type} is not allowed to import (${dependency.type})",
+        "rules": [
+          {
+            "from": ["shared"],
+            "disallow": ["app", "pages", "widgets", "features", "entities"],
+            "message": "Shared module must not import upper layers (${dependency.type})"
+          },
+          {
+            "from": ["entities"],
+            "message": "Entity must not import upper layers (${dependency.type})",
+            "disallow": ["app", "pages", "widgets", "features"]
+          },
+          {
+            "from": ["entities"],
+            "message": "Entity must not import other entity",
+            "disallow": [
+              [
+                "entities",
+                {
+                  "entity": "!${entity}"
+                }
+              ]
+            ]
+          },
+          {
+            "from": ["features"],
+            "message": "Feature must not import upper layers (${dependency.type})",
+            "disallow": ["app", "pages", "widgets"]
+          },
+          {
+            "from": ["features"],
+            "message": "Feature must not import other feature",
+            "disallow": [
+              [
+                "features",
+                {
+                  "feature": "!${feature}"
+                }
+              ]
+            ]
+          },
+          {
+            "from": ["widgets"],
+            "message": "Feature must not import upper layers (${dependency.type})",
+            "disallow": ["app", "pages"]
+          },
+          {
+            "from": ["widgets"],
+            "message": "Widget must not import other widget",
+            "disallow": [
+              [
+                "widgets",
+                {
+                  "widget": "!${widget}"
+                }
+              ]
+            ]
+          },
+          {
+            "from": ["pages"],
+            "message": "Page must not import upper layers (${dependency.type})",
+            "disallow": ["app"]
+          },
+          {
+            "from": ["pages"],
+            "message": "Page must not import other page",
+            "disallow": [
+              [
+                "pages",
+                {
+                  "page": "!${page}"
+                }
+              ]
+            ]
+          }
+        ]
+      }
+    ]
+
     // "import/no-internal-modules": [
     //   "warn",
     //   {
@@ -115,6 +272,15 @@
     //   }
     // ],
     // feature-sliced/layers-slices
-    "boundaries/element-types": "warn" // ~ 1,
-  }
+    // "boundaries/element-types": "warn" // @ 1,
+  },
+  "overrides": [
+    { "files": ["**/*.test.*"], "rules": { "boundaries/element-types": "off" } },
+    {
+      "files": ["./**/*"],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ]
 }
