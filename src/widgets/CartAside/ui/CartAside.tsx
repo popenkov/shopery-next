@@ -13,7 +13,7 @@ import { ProductCartPreview } from '@/entities/Product';
 import { RemoveFromCart } from '@/features/Cart';
 import { useAppSelector, useAppDispatch } from '@/shared/lib/hooks';
 import { getFormattedPrice } from '@/shared/lib/utils';
-import { Drawer } from '@/shared/ui/Drawer/Drawer';
+import { Drawer } from '@/shared/ui/Drawer';
 
 import cls from './CartAside.module.scss';
 import { CartAsideFooter } from './CartAsideFooter';

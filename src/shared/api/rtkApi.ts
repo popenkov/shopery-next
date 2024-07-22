@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-import { USER_LOCALSTORAGE_KEY } from '../lib/constants';
+import { USER_LOCALSTORAGE_KEY } from '@/shared/lib/constants';
 
 export const rtkApi = createApi({
   reducerPath: 'api',
@@ -14,6 +14,6 @@ export const rtkApi = createApi({
       return headers;
     },
   }),
-  // ts-ignore
+  // eslint-disable-next-line
   endpoints: (builder) => ({}),
 });

@@ -1,6 +1,4 @@
-import { CartSchema } from '../types/cart-schema';
-
-import { getTotalAmount, getTotalPrice } from './constants';
+import { CartSchema } from '../model/types/cart-schema';
 
 export const changeItemsAmountInCart = (state: CartSchema, id: string, amount: number) => {
   const newState: CartSchema = JSON.parse(JSON.stringify(state));
@@ -9,4 +7,16 @@ export const changeItemsAmountInCart = (state: CartSchema, id: string, amount: n
   newState.totalPrice = getTotalPrice(newState);
   newState.totalAmount = getTotalAmount(newState);
   return newState;
+};
+
+export const getTotalPrice = (state: CartSchema) => {
+  return state.cart.reduce((acc, item) => {
+    return acc + item.price * item.amount;
+  }, 0);
+};
+
+export const getTotalAmount = (state: CartSchema) => {
+  return state.cart.reduce((acc, item) => {
+    return acc + item.amount;
+  }, 0);
 };

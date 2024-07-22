@@ -2,12 +2,15 @@
 import { ChangeEvent, FC, useState } from 'react';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 
-import { useAppDispatch, useAppSelector } from '@/app/lib/store/hooks';
 import { selectCartProducts } from '@/entities/Cart';
 import { TOrder, TOrderProduct, addToOrders } from '@/entities/Order';
-import { VALIDATION_MESSAGES } from '@/shared/lib/constants';
-import { COUNTRIES_LIST, STATES_LIST } from '@/shared/lib/constants/countries-list';
-import { EMAIL_REGEX } from '@/shared/lib/constants/validation-regex';
+import {
+  COUNTRIES_LIST,
+  STATES_LIST,
+  EMAIL_REGEX,
+  VALIDATION_MESSAGES,
+} from '@/shared/lib/constants';
+import { useAppDispatch, useAppSelector } from '@/shared/lib/hooks';
 import { AppSelect } from '@/shared/ui/AppSelect';
 import { Checkbox } from '@/shared/ui/Checkbox';
 import { Input } from '@/shared/ui/Input';

@@ -6,7 +6,7 @@ import { Footer } from '@/widgets/Footer';
 import { Header } from '@/widgets/Header';
 import '@/app/styles/globals.scss';
 import { StoreProvider } from '@/app/providers';
-import { CartAside } from '@/widgets/CartAside/ui/CartAside';
+import { CartAside } from '@/widgets/CartAside';
 
 const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700'],

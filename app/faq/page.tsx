@@ -1,2 +1,2 @@
-import { Faq } from 'pages/faq/ui';
+import { Faq } from '@/pages/faq/ui';
 export default Faq;
