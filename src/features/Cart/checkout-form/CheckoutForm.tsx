@@ -9,6 +9,7 @@ import {
   STATES_LIST,
   EMAIL_REGEX,
   VALIDATION_MESSAGES,
+  getRouteOrderHistory,
 } from '@/shared/lib/constants';
 import { useAppDispatch, useAppSelector } from '@/shared/lib/hooks';
 import { AppSelect } from '@/shared/ui/AppSelect';
@@ -19,6 +20,7 @@ import { Text } from '@/shared/ui/Text';
 import { TextArea } from '@/shared/ui/TextArea';
 
 import cls from './CheckoutForm.module.scss';
+import { useRouter } from 'next/navigation';
 
 type TFormData = {
   firstName: string;
@@ -38,9 +40,11 @@ type TFormData = {
 };
 
 export const CheckoutForm: FC = () => {
+  const router = useRouter();
   const dispatch = useAppDispatch();
   const cartItems = useAppSelector(selectCartProducts);
   const [showAddAddress, setShowAddAddress] = useState(false);
+  const [isFormSubmitting, setIsFormSubmitting] = useState(false);
   const {
     reset,
     handleSubmit,
@@ -52,6 +56,7 @@ export const CheckoutForm: FC = () => {
 
   // todo   сделать модел для запроса из формы и из стора и отправить
   const onSubmit: SubmitHandler<TFormData> = (data) => {
+    setIsFormSubmitting((prev) => (prev = true));
     const orderItems: TOrderProduct[] = cartItems.map((item) => {
       return {
         id: item.id,
@@ -102,15 +107,20 @@ export const CheckoutForm: FC = () => {
     dispatch(addToOrders(orderDate));
 
     if (isValid) {
-      console.log('form sent');
       reset();
+      router.push(getRouteOrderHistory());
+      setIsFormSubmitting((prev) => (prev = false));
     }
+    setIsFormSubmitting((prev) => (prev = false));
   };
 
   const handleAddressCheckboxChange = (evt: ChangeEvent<HTMLInputElement>) => {
     setShowAddAddress(evt.target.checked);
   };
 
+  if (isFormSubmitting) {
+    return <Text>Submitting...</Text>;
+  }
   return (
     <form className={cls.checkoutForm} id="checkoutForm" onSubmit={handleSubmit(onSubmit)}>
       <div className={cls.checkoutFormMain}>
