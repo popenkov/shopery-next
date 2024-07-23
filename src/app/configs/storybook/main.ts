@@ -24,7 +24,7 @@ const config: StorybookConfig = {
     autodocs: 'tag',
   },
 
-  staticDirs: ['../../../../public'],
+  staticDirs: ['../../../../public', '../../../shared/assets/'],
   webpackFinal: async (config) => {
     if (config.resolve) {
       // @ts-expect-error
