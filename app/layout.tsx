@@ -7,6 +7,7 @@ import { Header } from '@/widgets/Header';
 import '@/app/styles/globals.scss';
 import { StoreProvider } from '@/app/providers';
 import { CartAside } from '@/widgets/CartAside';
+import SmoothScroll from '@/shared/ui/SmoothScroll/SmoothScroll';
 
 const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700'],
@@ -27,9 +28,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         <StoreProvider>
-          <Header />
-          {children}
-          <Footer />
+          <SmoothScroll speed={0.08}>
+            <Header />
+            {children}
+            <Footer />
+          </SmoothScroll>
           <CartAside />
         </StoreProvider>
       </body>
