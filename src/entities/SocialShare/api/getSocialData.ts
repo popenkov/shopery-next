@@ -1,20 +1,18 @@
-import { nanoid } from 'nanoid';
-
 import { type TSocialLink } from '../model';
 
 const DATA: TSocialLink[] = [
   {
-    id: nanoid(),
+    id: 'FacebookIcon',
     icon: 'FacebookIcon',
     path: '/fb',
   },
-  { id: nanoid(), icon: 'TwitterIcon', path: '/tw' },
+  { id: 'TwitterIcon', icon: 'TwitterIcon', path: '/tw' },
   {
-    id: nanoid(),
+    id: 'PinterestIcon',
     icon: 'PinterestIcon',
     path: '/pint',
   },
-  { id: nanoid(), icon: 'InstagramIcon', path: '/inst' },
+  { id: 'InstagramIcon', icon: 'InstagramIcon', path: '/inst' },
 ];
 
 export const getSocialData = () => {

@@ -27,7 +27,7 @@ export const Dropdown: FC<DropdownProps> = memo(({ data, onChange }) => {
 
   return (
     <div className={cls.dropdown}>
-      <button className={cls.dropdownButton}>
+      <button className={cls.dropdownButton} data-testid="dropdownButton">
         <span>{chosenElement.label}</span>
         <ChevronDownIcon className={cls.dropdownButtonIcon} />
       </button>

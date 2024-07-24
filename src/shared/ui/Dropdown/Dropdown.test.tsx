@@ -1,50 +1,49 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, waitFor, within } from '@testing-library/react';
 
 import { Dropdown } from './Dropdown';
+import { CHANGE_CURRENCY_DATA } from '@/features/CurrencySwitcher/ui/constants';
 
 describe('Dropdown', () => {
-  const data = [
-    { value: 'option1', label: 'Option 1' },
-    { value: 'option2', label: 'Option 2' },
-    { value: 'option3', label: 'Option 3' },
-  ];
-
   it('renders the dropdown with the correct class names', () => {
-    const { getByText } = render(<Dropdown data={data} onChange={() => {}} />);
+    const { getByTestId } = render(<Dropdown data={CHANGE_CURRENCY_DATA} onChange={() => {}} />);
 
-    const button = getByText('Option 1');
-
+    const button = getByTestId('dropdownButton');
     expect(button).toBeInTheDocument();
     expect(button).toHaveClass('dropdownButton');
   });
 
   it('displays the correct dropdown items when clicked', () => {
-    const { getByText, queryByText } = render(<Dropdown data={data} onChange={() => {}} />);
+    const { getByText, queryByText, getByTestId } = render(
+      <Dropdown data={CHANGE_CURRENCY_DATA} onChange={() => {}} />,
+    );
 
-    const button = getByText('Option 1');
+    const button = getByTestId('dropdownButton');
     fireEvent.mouseOver(button);
 
-    data.forEach((item) => {
-      expect(getByText(item.label)).toBeInTheDocument();
+    CHANGE_CURRENCY_DATA.forEach(async (item) => {
+      await waitFor(() => expect(getByText(item.label)).toBeInTheDocument());
     });
 
-    data.forEach((item) => {
-      expect(queryByText(item.label)).not.toBeNull();
+    CHANGE_CURRENCY_DATA.forEach(async (item) => {
+      await waitFor(() => expect(queryByText(item.label)).not.toBeNull());
     });
   });
 
   it('calls the onChange function with the correct value when clicked', () => {
     const handleChange = jest.fn();
 
-    const { getByText } = render(<Dropdown data={data} onChange={handleChange} />);
+    const { getByText, getByTestId, getByRole } = render(
+      <Dropdown data={CHANGE_CURRENCY_DATA} onChange={handleChange} />,
+    );
 
-    const button = getByText('Option 1');
+    const button = getByTestId('dropdownButton');
     fireEvent.mouseOver(button);
 
-    const optionButton = getByText('Option 2');
+    const listItem = getByRole('list');
+    const optionButton = within(listItem).getByText('USD');
     fireEvent.click(optionButton);
 
-    expect(handleChange).toHaveBeenCalledWith(data[1]);
+    expect(handleChange).toHaveBeenCalledWith(CHANGE_CURRENCY_DATA[0]);
   });
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent, waitFor } from '@testing-library/react';
+import { render, fireEvent, waitFor, within } from '@testing-library/react';
 
 import { AppSelect } from './AppSelect';
 
@@ -27,11 +27,13 @@ describe('AppSelect', () => {
 
     const handleChange = jest.fn();
 
-    const { getByText } = render(
+    const { container } = render(
       <AppSelect options={options} onChange={handleChange} menuIsOpen />,
     );
 
-    const option = getByText('Option 1') as Element;
+    const list = container.querySelector('.react-select__menu') as HTMLElement;
+
+    const option = within(list).getByText('Option 1') as Element;
 
     fireEvent.click(option);
     await waitFor(() => expect(handleChange).toHaveBeenCalledWith('option1'));

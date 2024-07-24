@@ -1,5 +1,3 @@
-import { nanoid } from 'nanoid';
-
 import { type TProductDetailed } from '..';
 
 const data: TProductDetailed = {
@@ -164,7 +162,7 @@ const data: TProductDetailed = {
   },
   relatedProducts: [
     {
-      id: nanoid(),
+      id: '4',
       path: '#',
       img: '/images/product-apple.jpg',
       title: 'Green Apple',
@@ -179,7 +177,7 @@ const data: TProductDetailed = {
       ],
     },
     {
-      id: nanoid(),
+      id: '1',
       path: '#',
       img: '/images/product-mango.jpg',
       title: 'Surjapur Mango',
@@ -188,7 +186,7 @@ const data: TProductDetailed = {
       rating: 4,
     },
     {
-      id: nanoid(),
+      id: '2',
       path: '#',
       img: '/images/product-tomatos.jpg',
       title: 'Red Tomatos',
@@ -197,7 +195,7 @@ const data: TProductDetailed = {
       rating: 4,
     },
     {
-      id: nanoid(),
+      id: '3',
       path: '#',
       img: '/images/product-cauliflower.jpg',
       title: 'Fresh Cauliflower',
