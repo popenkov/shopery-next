@@ -10,7 +10,13 @@ export const LangSwitcher: FC = memo(() => {
   // todo i18
   const handleLanguageChange = (item: TDropdownItem) => console.log(item);
 
-  return <Dropdown data={CHANGE_LANG_DATA} onChange={handleLanguageChange} />;
+  return (
+    <Dropdown
+      data={CHANGE_LANG_DATA}
+      onChange={handleLanguageChange}
+      testid="HeaderTop.LangSwitcher"
+    />
+  );
 });
 
 LangSwitcher.displayName = 'LangSwitcher';

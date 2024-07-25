@@ -25,15 +25,19 @@ export const Breadcrumbs: FC<BreadcrumbsProps> = memo(({ items }) => {
 
     if (isHomeLink) {
       return (
-        <li key={index} className={cls.item}>
+        <li key={index} className={cls.item} data-testid="Breadcrumbs.homeLink">
           {homeLink}
         </li>
       );
     } else if (isLastCrumb) {
       return (
-        <span key={index} className={[cls.link, cls.active].join(' ')}>
+        <li
+          key={index}
+          className={[cls.link, cls.active].join(' ')}
+          data-testid="Breadcrumbs.currentPage"
+        >
           {crumb}
-        </span>
+        </li>
       );
     } else {
       const currentPage = PAGE_ROUTES.filter((page) => {
@@ -42,7 +46,7 @@ export const Breadcrumbs: FC<BreadcrumbsProps> = memo(({ items }) => {
 
       const link = currentPage.href;
       return (
-        <li key={index} className={cls.item}>
+        <li key={index} className={cls.item} data-testid="Breadcrumbs.link">
           <Link href={link} className={cls.link}>
             {crumb}
           </Link>

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormError component renders correctly 1`] = `
+<div>
+  <div
+    class="FormError"
+  >
+    <p
+      class="text FormErrorText primary body_m left regular"
+    >
+      Error message
+    </p>
+  </div>
+</div>
+`;

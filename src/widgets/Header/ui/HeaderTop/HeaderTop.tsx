@@ -33,11 +33,19 @@ export const HeaderTop: FC = () => {
             <UserMenu user={authData} />
           ) : (
             <Text variant="body_tiny" className={cls.auth}>
-              <Link className={cls.authLink} href={getRouteLogin()}>
+              <Link
+                className={cls.authLink}
+                href={getRouteLogin()}
+                data-testid="HeaderTop.loginLink"
+              >
                 Sign in
               </Link>
               <span className={cls.authSeparator}>/</span>
-              <Link className={cls.authLink} href={getRouteRegistation()}>
+              <Link
+                className={cls.authLink}
+                href={getRouteRegistation()}
+                data-testid="HeaderTop.registerLink"
+              >
                 Sign up
               </Link>
             </Text>
