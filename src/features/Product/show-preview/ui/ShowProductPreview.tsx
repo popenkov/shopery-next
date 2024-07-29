@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 import { type TProduct } from '@/entities/Product';
 import { RoundButton, TRoundButtonTheme } from '@/shared/ui/Buttons';

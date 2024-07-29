@@ -1,6 +1,6 @@
 'use client';
 
-import React, { DetailedHTMLProps, FC, HTMLAttributes, useEffect, useRef, useState } from 'react';
+import { DetailedHTMLProps, FC, HTMLAttributes, useEffect, useRef, useState } from 'react';
 import cn from 'classnames';
 
 import { PlayIcon } from '@/shared/ui/icons';

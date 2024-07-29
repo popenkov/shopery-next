@@ -1,5 +1,3 @@
-// todo перенести в сущность заказа
-
 export interface UserSchema {
   _inited: boolean;
   authData?: TUser;

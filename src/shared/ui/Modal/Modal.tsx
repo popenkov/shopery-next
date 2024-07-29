@@ -1,6 +1,6 @@
 'use client';
 
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import cn from 'classnames';
 
 import { useModal } from '@/shared/lib/hooks';

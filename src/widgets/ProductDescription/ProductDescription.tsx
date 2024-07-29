@@ -14,8 +14,6 @@ type Props = {
   actions?: ReactNode;
 };
 
-// todo заполнить данными из  data
-
 export const ProductDescription: FC<Props> = ({ data, actions }) => {
   return (
     <div className={cls.productDescription} aria-hidden="true">
@@ -30,7 +28,6 @@ export const ProductDescription: FC<Props> = ({ data, actions }) => {
               </div>
             </div>
 
-            {/* todo replace static data */}
             <div className={cls.productDescriptionReviewWrapper}>
               <div className={cls.productDescriptionReview}>
                 <StarRating value={5} className={cls.productDescriptionRating} />

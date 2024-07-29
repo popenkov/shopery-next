@@ -39,7 +39,6 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
 
   const [hasError, setHasError] = useState(false);
 
-  // todo   сделать модел для запроса из формы и из стора и отправить
   const onSubmit: SubmitHandler<LoginSchema> = async (data) => {
     if (isValid) {
       const response = await dispatch(loginByUsername(data));

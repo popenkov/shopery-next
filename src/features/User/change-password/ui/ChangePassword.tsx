@@ -28,7 +28,6 @@ const changePasswordSchema = yup.object({
 
 export const ChangePassword: FC<Props> = ({ className }) => {
   const {
-    register,
     reset,
     handleSubmit,
     control,
@@ -38,7 +37,6 @@ export const ChangePassword: FC<Props> = ({ className }) => {
     resolver: yupResolver(changePasswordSchema),
   });
 
-  // todo   сделать модел для запроса из формы и из стора и отправить
   const onSubmit: SubmitHandler<TFormData> = (data) => {
     console.log('data', data);
     if (isValid) {
