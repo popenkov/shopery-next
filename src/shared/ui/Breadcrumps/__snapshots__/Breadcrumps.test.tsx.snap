@@ -13,10 +13,10 @@ exports[`Breadcrumbs component renders correctly 1`] = `
       >
         <li
           class="item"
-          data-testid="Breadcrumbs.homeLink"
         >
           <a
             class="link"
+            data-testid="Breadcrumbs.link"
             href="/"
           >
             <svg
@@ -52,10 +52,10 @@ exports[`Breadcrumbs component renders correctly 1`] = `
         </li>
         <li
           class="item"
-          data-testid="Breadcrumbs.link"
         >
           <a
             class="link"
+            data-testid="Breadcrumbs.link"
             href="/catalog"
           >
             Catalog
@@ -74,11 +74,14 @@ exports[`Breadcrumbs component renders correctly 1`] = `
             />
           </svg>
         </li>
-        <li
-          class="link active"
-          data-testid="Breadcrumbs.currentPage"
-        >
-          404 Error Page
+        <li>
+          <a
+            class="link active"
+            data-testid="Breadcrumbs.link"
+            href="#"
+          >
+            404 Error Page
+          </a>
         </li>
       </ul>
     </div>

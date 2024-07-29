@@ -37,7 +37,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "./src/app/configs/jest/setupTests.ts",
-    "./src/app/configs/jest/jest.config.ts"
+    "./src/app/configs/jest/jest.config.ts",
+    "src/shared/ui/MobileSlider/test.js"
   ],
   "exclude": [
     "node_modules",

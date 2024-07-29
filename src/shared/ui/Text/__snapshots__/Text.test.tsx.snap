@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text component renders correctly 1`] = `
+<div>
+  <p
+    class="text primary body_m left regular"
+  >
+    Text content
+  </p>
+</div>
+`;

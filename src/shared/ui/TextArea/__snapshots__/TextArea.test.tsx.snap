@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea component renders correctly 1`] = `
+<div>
+  <div
+    class="inputWrapper"
+  >
+    <textarea
+      class="input"
+      id=":r0:"
+    />
+  </div>
+</div>
+`;

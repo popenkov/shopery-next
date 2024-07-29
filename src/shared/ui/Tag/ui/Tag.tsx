@@ -5,7 +5,13 @@ import { Text } from '../../Text';
 
 import cls from './Tag.module.scss';
 
-type TTagVariant = 'sale' | 'not-available' | 'best-sale' | 'new' | 'out-of-stock' | 'in-stock';
+export type TTagVariant =
+  | 'sale'
+  | 'not-available'
+  | 'best-sale'
+  | 'new'
+  | 'out-of-stock'
+  | 'in-stock';
 
 interface TagProps extends DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement> {
   children: ReactNode;

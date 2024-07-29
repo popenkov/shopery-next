@@ -35,7 +35,6 @@ export const ImageUploader: FC<Props> = forwardRef<HTMLInputElement, Props>(
       const reader = new FileReader();
       reader.readAsDataURL(file);
       reader.onloadend = () => {
-        console.log('reader.result ', reader.result);
         setPreview(reader.result as string);
       };
     };
