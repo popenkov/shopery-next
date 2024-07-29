@@ -47,20 +47,16 @@
       "paymentMethod": "PayPal",
       "status": "Processing",
       "shippingAddress": {
-        "firstName": "name",
-        "lastName": "Last name",
-        "email": "test@test.re",
-        "phone": "+7 (222) 222-22-22"
+        "name": "Dainne Russell",
+        "street": "4140 Parker Rd. Allentown, New Mexico 31134",
+        "email": "dainne.ressell@gmail.com",
+        "phone": "(671) 555-0110"
       },
       "billingAddress": {
-        "firstName": "name",
-        "lastName": "Last name",
-        "email": "test@test.re",
-        "phone": "+7 (222) 222-22-22",
-        "street": "Street Address",
-        "country": "AL",
-        "state": "AZ",
-        "zipCode": "333 333"
+        "name": "Dainne Russell",
+        "street": "4140 Parker Rd. Allentown, New Mexico 31134",
+        "email": "dainne.ressell@gmail.com",
+        "phone": "(671) 555-0110"
       },
       "date": "2024-07-07T14:26:17.187Z"
     }

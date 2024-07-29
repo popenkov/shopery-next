@@ -1,5 +1,6 @@
 import React, { DetailedHTMLProps, HTMLAttributes } from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react';
+
 import { Video } from './Video';
 
 describe('Video component', () => {

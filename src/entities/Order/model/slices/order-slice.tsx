@@ -11,7 +11,7 @@ const initialState: OrderSchema = {
     : [],
   order: undefined,
   error: undefined,
-  isLoading: false,
+  isLoading: true,
 };
 
 const orderSlice = createSlice({
@@ -35,6 +35,7 @@ const orderSlice = createSlice({
         state.order = action.payload;
       })
       .addCase(getOrderById.rejected, (state, action) => {
+        console.log('action', action);
         state.isLoading = false;
         state.error = action.payload;
       });

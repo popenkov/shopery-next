@@ -1,7 +1,9 @@
 import React from 'react';
-import { render, fireEvent, waitFor, getByTestId, getAllByTestId } from '@testing-library/react';
-import { Breadcrumbs } from './';
+import { render } from '@testing-library/react';
+
 import { AppRouteNames } from '@/shared/model';
+
+import { Breadcrumbs } from './';
 
 const crumbs: AppRouteNames[] = [
   AppRouteNames.HOME,

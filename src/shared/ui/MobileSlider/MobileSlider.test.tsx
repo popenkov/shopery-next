@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
-import { render, waitFor } from '@testing-library/react';
+import { render } from '@testing-library/react';
+
 import { MobileSlider } from './MobileSlider';
 jest.mock('swiper/react', () => ({
   Swiper: ({ children }: { children: ReactNode }) => (

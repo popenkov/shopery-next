@@ -19,6 +19,7 @@ export default function AccountLayout({
       <Breadcrumbs items={crumbs} />
       <main className={cls.AccountLayout}>
         <AccountNavigation className={cls.AccountAside} />
+
         {children}
       </main>
       <Subscription variant="gray" />

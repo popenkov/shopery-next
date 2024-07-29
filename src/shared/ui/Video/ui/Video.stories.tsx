@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Video } from './Video';
-import { getVideoData } from '@/widgets/MainVideo/api';
 
 const meta = {
   title: 'shared/Video',
@@ -14,10 +13,15 @@ const meta = {
   argTypes: {},
 } satisfies Meta<typeof Video>;
 
+const video = {
+  background: 'video-preview.jpg',
+  src: 'https://www.youtube.com/embed/2eX2TCfiFuY',
+  title: 'We’re the Best Organic Farm in the World',
+  subtitle: 'Video',
+};
+
 export default meta;
 type TStory = StoryObj<typeof meta>;
-
-const { video } = getVideoData();
 
 export const VideoComponent: TStory = {
   decorators: [

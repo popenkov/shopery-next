@@ -24,7 +24,7 @@ server.use(jsonServer.bodyParser);
 // Нужно для небольшой задержки, чтобы запрос проходил не мгновенно, имитация реального апи
 server.use(async (req, res, next) => {
   await new Promise((res) => {
-    setTimeout(res, 800);
+    setTimeout(res, 3000);
   });
   next();
 });
@@ -51,13 +51,14 @@ server.post('/login', (req, res) => {
 
 server.post('/order-detailed', (req, res) => {
   try {
-    const { id } = req.body.data;
+    const { id } = req.body;
     const db = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'db.json'), 'UTF-8'));
 
     const { orders = [] } = db;
 
-    const order = orders.find((order) => order.id === id);
-
+    const order = orders.find((order) => {
+      return order.id === id;
+    });
     if (order) {
       return res.json(order);
     }

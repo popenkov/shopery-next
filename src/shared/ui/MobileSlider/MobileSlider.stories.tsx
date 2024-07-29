@@ -1,8 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { MobileSlider } from './MobileSlider';
-import { getBannerData } from '@/widgets/Banners/api';
 import { Banner, TBanner } from '@/entities/Banner';
+import { getBannerData } from '@/widgets/Banners/api';
+
+import { MobileSlider } from './MobileSlider';
 
 const meta = {
   title: 'shared/MobileSlider',

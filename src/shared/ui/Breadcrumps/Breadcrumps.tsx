@@ -2,10 +2,10 @@ import { FC, memo } from 'react';
 import Link from 'next/link';
 
 import { getRouteHome } from '@/shared/lib/constants';
+import { PAGE_ROUTES } from '@/shared/lib/constants/routes';
 import { HomeIcon, ChevronDownIcon } from '@/shared/ui/icons';
 
 import cls from './Breadcrumps.module.scss';
-import { PAGE_ROUTES } from '@/shared/lib/constants/routes';
 
 interface BreadcrumbsProps {
   items: string[];
