@@ -3,8 +3,12 @@
 import { FC, useEffect, useState } from 'react';
 import cn from 'classnames';
 
-import { changeNumItemsInCart, removeItemFromCart, selectCartData } from '@/entities/Cart';
-import { changeItemsAmountInCart } from '@/entities/Cart/model/lib/helpers';
+import {
+  changeNumItemsInCart,
+  removeItemFromCart,
+  selectCartData,
+  changeItemsAmountInCart,
+} from '@/entities/Cart';
 import { useAppDispatch, useAppSelector } from '@/shared/lib/hooks';
 import { MinusIcon, PlusIcon } from '@/shared/ui/icons';
 

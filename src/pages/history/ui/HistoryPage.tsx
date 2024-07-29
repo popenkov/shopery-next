@@ -1,7 +1,7 @@
 'use client';
 import { FC } from 'react';
 
-import { UserOrders } from '@/entities/User/ui/UserOrders/UserOrders';
+import { UserOrders } from '@/entities/User';
 import { Pagination } from '@/shared/ui/Pagination';
 
 import cls from './HistoryPage.module.scss';

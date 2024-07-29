@@ -5,9 +5,9 @@ import cn from 'classnames';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 
 import { VALIDATION_MESSAGES } from '@/shared/lib/constants';
-import { EMAIL_REGEX } from '@/shared/lib/constants/validation-regex';
+import { EMAIL_REGEX } from '@/shared/lib/constants';
 import { Button } from '@/shared/ui/Buttons';
-import { ImageUploader } from '@/shared/ui/ImageUploader/ImageUploader';
+import { ImageUploader } from '@/shared/ui/ImageUploader';
 import { Input } from '@/shared/ui/Input';
 import { MaskedInput } from '@/shared/ui/MaskedInput';
 

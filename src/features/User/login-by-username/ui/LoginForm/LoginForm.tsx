@@ -8,7 +8,7 @@ import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 
 import { VALIDATION_MESSAGES } from '@/shared/lib/constants';
 import { getRouteHome, getRoutePasswordReset, getRouteRegistation } from '@/shared/lib/constants';
-import { EMAIL_REGEX } from '@/shared/lib/constants/validation-regex';
+import { EMAIL_REGEX } from '@/shared/lib/constants';
 import { useAppDispatch } from '@/shared/lib/hooks';
 import { Button } from '@/shared/ui/Buttons';
 import { Checkbox } from '@/shared/ui/Checkbox';

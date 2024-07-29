@@ -7,9 +7,9 @@ import {
   getOrderDetailedData,
   getOrderDetailedError,
   getOrderDetailedIsLoading,
-} from '@/entities/Order/model/selectors/order';
-import { getOrderById } from '@/entities/Order/services/getOrderById';
-import { getUserOrderById } from '@/entities/User/api/getUserOrderById';
+  getOrderById,
+} from '@/entities/Order';
+import { getUserOrderById } from '@/entities/User';
 import { useAppDispatch } from '@/shared/lib/hooks';
 import { Text } from '@/shared/ui/Text';
 
@@ -31,20 +31,6 @@ export const OrderPage: FC<{ params: { id: string } }> = ({ params: { id } }) =>
   useEffect(() => {
     dispatch(getOrderById(id) as unknown as UnknownAction);
   }, [dispatch, id]);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const order = await fetchOrderById(id);
-  //       // Dispatch the action with the fetched order data
-  //       dispatch(getOrderByIdfulfilled(order));
-  //     } catch (error) {
-  //       // Dispatch the action with the error
-  //       dispatch(getOrderByIdrejected(error.message));
-  //     }
-  //   };
-  //   fetchData();
-  // }, [dispatch, id]);
 
   const { date, amount, items, status, address } = getUserOrderById(id);
   return (

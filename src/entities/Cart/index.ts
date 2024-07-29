@@ -15,3 +15,5 @@ export {
   type TCartProduct,
   type CartSchema,
 } from './model';
+
+export { changeItemsAmountInCart } from './lib';

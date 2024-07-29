@@ -10,10 +10,11 @@ import cls from './Dropdown.module.scss';
 interface DropdownProps
   extends Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'onChange'> {
   data: TDropdownItem[];
+  testid?: string;
   onChange: (value: TDropdownItem) => void;
 }
 
-export const Dropdown: FC<DropdownProps> = memo(({ data, onChange }) => {
+export const Dropdown: FC<DropdownProps> = memo(({ data, testid, onChange }) => {
   const [chosenElement, setChosenElement] = useState<TDropdownItem>(data[0]);
 
   const handleOptionChoose = (item: TDropdownItem) => {
@@ -26,8 +27,8 @@ export const Dropdown: FC<DropdownProps> = memo(({ data, onChange }) => {
   }
 
   return (
-    <div className={cls.dropdown}>
-      <button className={cls.dropdownButton}>
+    <div className={cls.dropdown} data-testid={testid}>
+      <button className={cls.dropdownButton} data-testid="dropdownButton">
         <span>{chosenElement.label}</span>
         <ChevronDownIcon className={cls.dropdownButtonIcon} />
       </button>

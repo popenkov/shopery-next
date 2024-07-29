@@ -4,9 +4,12 @@ import { FC } from 'react';
 import cn from 'classnames';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 
-import { VALIDATION_MESSAGES } from '@/shared/lib/constants';
-import { COUNTRIES_LIST, STATES_LIST } from '@/shared/lib/constants/countries-list';
-import { EMAIL_REGEX } from '@/shared/lib/constants/validation-regex';
+import {
+  VALIDATION_MESSAGES,
+  COUNTRIES_LIST,
+  STATES_LIST,
+  EMAIL_REGEX,
+} from '@/shared/lib/constants';
 import { AppSelect } from '@/shared/ui/AppSelect';
 import { Button } from '@/shared/ui/Buttons';
 import { Input } from '@/shared/ui/Input';
@@ -22,7 +25,6 @@ type Props = {
 
 export const EditUserBillingAddress: FC<Props> = ({ className }) => {
   const {
-    register,
     reset,
     handleSubmit,
     control,

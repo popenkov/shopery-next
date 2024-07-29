@@ -43,7 +43,13 @@ export const ImageUploader: FC<Props> = forwardRef<HTMLInputElement, Props>(
     return (
       <div className={cn(cls.ImageUploader, className)}>
         <div className={cls.ImageUploaderPreviewWrapper}>
-          <Image className={cls.ImageUploaderPreview} fill src={preview} alt="image preview" />
+          <Image
+            className={cls.ImageUploaderPreview}
+            fill
+            src={preview}
+            alt="image preview"
+            data-testid="ImageUploader.preview"
+          />
         </div>
 
         <input
@@ -53,6 +59,7 @@ export const ImageUploader: FC<Props> = forwardRef<HTMLInputElement, Props>(
           onChange={handleFileChange}
           className={cls.ImageUploaderInput}
           id="file"
+          data-testid="ImageUploader.input"
           {...rest}
         />
         <label htmlFor="file" className={cls.ImageUploaderLabel}>

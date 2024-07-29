@@ -46,7 +46,7 @@ export const Input = memo(
     return (
       <div className={cn(cls.inputContainer, className)}>
         {label && (
-          <label htmlFor={uniqueId} className={cls.inputLabel}>
+          <label htmlFor={uniqueId} className={cls.inputLabel} data-testid="Input.label">
             {label}
           </label>
         )}
@@ -61,6 +61,7 @@ export const Input = memo(
               [cls.error]: errorText,
               [cls.success]: value && !errorText,
             })}
+            data-testid="Input.input"
             {...otherProps}
           />
           {type === 'search' && (

@@ -1,6 +1,6 @@
 import { createSelector } from '@reduxjs/toolkit';
 
-import { RootState } from '@/app/lib/store/store';
+//
 
 import { type TWishlistProduct } from '../types/wishlist';
 

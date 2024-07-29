@@ -12,7 +12,13 @@ export const CurrencySwitcher: FC = memo(() => {
     console.log(item);
   };
 
-  return <Dropdown data={CHANGE_CURRENCY_DATA} onChange={handleCurrencyChange} />;
+  return (
+    <Dropdown
+      data={CHANGE_CURRENCY_DATA}
+      onChange={handleCurrencyChange}
+      testid="HeaderTop.CurrencySwitcher"
+    />
+  );
 });
 
 CurrencySwitcher.displayName = 'CurrencySwitcher';

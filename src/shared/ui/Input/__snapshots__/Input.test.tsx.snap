@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input component renders correctly 1`] = `
+<div>
+  <div
+    class="inputContainer"
+  >
+    <div
+      class="inputWrapper"
+    >
+      <input
+        class="input"
+        data-testid="Input.input"
+        id=":r0:"
+        type="text"
+      />
+    </div>
+  </div>
+</div>
+`;
