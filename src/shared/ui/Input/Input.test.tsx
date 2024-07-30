@@ -49,11 +49,11 @@ describe('Input component', () => {
     expect(searchIcon).toBeInTheDocument();
   });
 
-  //   it('calls handleLoupeClick when search icon is clicked', () => {
-  //     const handleLoupeClick = jest.fn();
-  //     const { container } = render(<Input type="search" />);
-  //     const searchIcon = container.querySelector('.inputIconSearch');
-  //     fireEvent.click(searchIcon!);
-  //     expect(handleLoupeClick).toHaveBeenCalledTimes(1);
-  //   });
+  it.skip('calls handleLoupeClick when search icon is clicked', () => {
+    const handleLoupeClick = jest.fn();
+    const { container } = render(<Input type="search" />);
+    const searchIcon = container.querySelector('.inputIconSearch');
+    fireEvent.click(searchIcon!);
+    expect(handleLoupeClick).toHaveBeenCalledTimes(1);
+  });
 });

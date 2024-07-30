@@ -24,19 +24,19 @@ describe('HeaderTop component', () => {
   });
 
   //   todo
-  // it('renders user menu when authData is present', () => {
-  //   const user: TUser = {
-  //     id: '1',
-  //     photo: '',
-  //     name: 'Tony',
-  //     role: 'user',
-  //     avatar: '',
-  //   };
-  //   const selectAuthData = jest.fn();
-  //   selectAuthData.mockReturnValue(user);
-  //   const { getByText } = renderWithStore(<HeaderTop />);
-  //   expect(getByText('User Menu')).toBeInTheDocument();
-  // });
+  it.skip('renders user menu when authData is present', () => {
+    const user: TUser = {
+      id: '1',
+      photo: '',
+      name: 'Tony',
+      role: 'user',
+      avatar: '',
+    };
+    const selectAuthData = jest.fn();
+    selectAuthData.mockReturnValue(user);
+    const { getByText } = renderWithStore(<HeaderTop />);
+    expect(getByText('User Menu')).toBeInTheDocument();
+  });
 
   it('renders currency and language switchers', () => {
     const { getByTestId } = renderWithStore(<HeaderTop />);

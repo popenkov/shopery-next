@@ -244,14 +244,7 @@
       "files": ["./**/*"],
       "rules": {
         "no-restricted-imports": "off"
-        // "import/no-internal-modules": "off"
       }
     }
-    // {
-    //   "files": ["../../**/*"],
-    //   "rules": {
-    //     "import/no-internal-modules": "off"
-    //   }
-    // }
   ]
 }

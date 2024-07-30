@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 
 import { RangeSlider } from './RangeSlider';
 
@@ -13,26 +13,26 @@ describe('RangeSlider component', () => {
 
   // todo разобраться как изменить значение
 
-  // it('calls onChange callback when slider is updated', () => {
-  //   const onChange = jest.fn();
-  //   const { getByRole, container } = render(
-  //     <RangeSlider min={0} max={100} range={[20, 80]} onChange={onChange} />,
-  //   );
-  //   const slider = container.querySelector('.rangeSlider');
-  //   fireEvent.change(container, { target: { value: [30, 90] } });
-  //   expect(onChange).toHaveBeenCalledTimes(1);
-  //   expect(onChange).toHaveBeenCalledWith({ min: 30, max: 90 });
-  // });
+  it.skip('calls onChange callback when slider is updated', () => {
+    const onChange = jest.fn();
+    const { getByRole, container } = render(
+      <RangeSlider min={0} max={100} range={[20, 80]} onChange={onChange} />,
+    );
+    const slider = container.querySelector('.rangeSlider');
+    fireEvent.change(container, { target: { value: [30, 90] } });
+    expect(onChange).toHaveBeenCalledTimes(1);
+    expect(onChange).toHaveBeenCalledWith({ min: 30, max: 90 });
+  });
 
-  // it('updates currentRange state when slider is updated', () => {
-  //   const { getByRole, getByText } = render(
-  //     <RangeSlider min={0} max={100} range={[20, 80]} onChange={() => {}} />,
-  //   );
-  //   const slider = getByRole('slider');
-  //   fireEvent.change(slider, { target: { value: [30, 90] } });
-  //   const textValue = getByText('30 - 90');
-  //   expect(textValue).toBeInTheDocument();
-  // });
+  it.skip('updates currentRange state when slider is updated', () => {
+    const { getByRole, getByText } = render(
+      <RangeSlider min={0} max={100} range={[20, 80]} onChange={() => {}} />,
+    );
+    const slider = getByRole('slider');
+    fireEvent.change(slider, { target: { value: [30, 90] } });
+    const textValue = getByText('30 - 90');
+    expect(textValue).toBeInTheDocument();
+  });
 
   it('renders correct text value when slider is updated', () => {
     const { getByText } = render(

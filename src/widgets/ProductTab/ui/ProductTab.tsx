@@ -17,8 +17,6 @@ import cls from './ProductTab.module.scss';
 export const ProductTab: FC = () => {
   const { productTabs } = getProductTab();
 
-  // const products = await fetch(`http://localhost:6868/api/products`);
-
   return (
     <div className={cls.productTab}>
       <Text variant="heading_3" weight="semibold" align="center" className={cls.productTabTitle}>
