@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MobileSlider component renders correctly 1`] = `
+<div>
+  <div
+    class="slider"
+  >
+    <div
+      data-testid="swiper-testid"
+    >
+      <div
+        data-testid="swiper-slide-testid"
+      >
+        <div>
+          1
+        </div>
+      </div>
+      <div
+        data-testid="swiper-slide-testid"
+      >
+        <div>
+          2
+        </div>
+      </div>
+      <div
+        data-testid="swiper-slide-testid"
+      >
+        <div>
+          3
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

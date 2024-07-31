@@ -22,7 +22,6 @@ export const CheckoutTotal: FC<Props> = ({ className }) => {
   const totalPrice = useAppSelector(selectTotalPrice);
   const [activePaymentMethod, setActivePaymentMethod] = useState('cash');
 
-  // todo
   const handlePaymentMethodChoose = (method: string) => {
     setActivePaymentMethod(method);
   };
@@ -52,7 +51,6 @@ export const CheckoutTotal: FC<Props> = ({ className }) => {
             Shipping:
           </Text>
           <Text variant="body_s" weight="medium" className={cls.CheckoutTotalValue}>
-            {/* todo */}
             {getFormattedPrice(totalPrice) ? getFormattedPrice(totalPrice) : 'Free'}
           </Text>
         </div>
@@ -66,7 +64,6 @@ export const CheckoutTotal: FC<Props> = ({ className }) => {
         </div>
       </div>
       <div className={cls.CheckoutPaymentMethods}>
-        {/* todo привязать к форме */}
         <Text variant="body_xl" weight="medium" className={cls.CheckoutPaymentMethodsTitle}>
           Payment Method
         </Text>

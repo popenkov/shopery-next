@@ -9,10 +9,9 @@ const initialState: OrderSchema = {
   orders: localStorage?.getItem(ORDERS_LOCALSTORAGE_KEY)
     ? JSON.parse(localStorage.getItem(ORDERS_LOCALSTORAGE_KEY)!)
     : [],
-  // todo order detailed data with request
   order: undefined,
   error: undefined,
-  isLoading: false,
+  isLoading: true,
 };
 
 const orderSlice = createSlice({

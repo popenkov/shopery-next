@@ -1,5 +1,6 @@
 'use client';
 import { ChangeEvent, FC, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 
 import { selectCartProducts } from '@/entities/Cart';
@@ -20,7 +21,6 @@ import { Text } from '@/shared/ui/Text';
 import { TextArea } from '@/shared/ui/TextArea';
 
 import cls from './CheckoutForm.module.scss';
-import { useRouter } from 'next/navigation';
 
 type TFormData = {
   firstName: string;

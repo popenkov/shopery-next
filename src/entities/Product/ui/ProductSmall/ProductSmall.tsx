@@ -1,4 +1,4 @@
-import React, { DetailedHTMLProps, FC, HTMLAttributes, ReactNode } from 'react';
+import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 

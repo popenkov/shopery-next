@@ -1,37 +1,19 @@
 import React from 'react';
-import { render, fireEvent, waitFor, getByTestId } from '@testing-library/react';
-import { HeaderTop } from './HeaderTop';
-import { selectAuthData, TUser, userReducer } from '@/entities/User';
+import { fireEvent, waitFor } from '@testing-library/react';
+
 import { getRouteLogin, getRouteRegistation } from '@/shared/lib/constants';
 import { renderWithStore } from '@/shared/lib/tests/renderWithStore/renderWithStore';
 
-const user: TUser = {
-  id: '1',
-  photo: '',
-  name: 'Tony',
-  role: 'user',
-  avatar: '',
-};
+import { HeaderTop } from './HeaderTop';
 
-const options = {
-  initialState: {
-    user: {
-      authData: user,
-    },
-  },
-  asyncReducers: {
-    user: userReducer,
-  },
-};
+jest.mock('@/entities/User/models/selectors/user', () => ({
+  selectAuthData: jest.fn(),
+}));
 
-// jest.mock('@/entities/User/models/selectors/user', () => ({
-//   selectAuthData: jest.fn(),
-// }));
-
-// jest.mock('../UserMenu', () => ({
-//   __esModule: true,
-//   default: () => <div>User Menu</div>,
-// }));
+jest.mock('../UserMenu', () => ({
+  __esModule: true,
+  default: () => <div>User Menu</div>,
+}));
 
 describe('HeaderTop component', () => {
   it('renders location and actions', () => {
@@ -42,11 +24,19 @@ describe('HeaderTop component', () => {
   });
 
   //   todo
-  //   it('renders user menu when authData is present', () => {
-  //     selectAuthData.mockReturnValue(user);
-  //     const { getByText } = renderWithStore(<HeaderTop />);
-  //     expect(getByText('User Menu')).toBeInTheDocument();
-  //   });
+  it.skip('renders user menu when authData is present', () => {
+    const user: TUser = {
+      id: '1',
+      photo: '',
+      name: 'Tony',
+      role: 'user',
+      avatar: '',
+    };
+    const selectAuthData = jest.fn();
+    selectAuthData.mockReturnValue(user);
+    const { getByText } = renderWithStore(<HeaderTop />);
+    expect(getByText('User Menu')).toBeInTheDocument();
+  });
 
   it('renders currency and language switchers', () => {
     const { getByTestId } = renderWithStore(<HeaderTop />);

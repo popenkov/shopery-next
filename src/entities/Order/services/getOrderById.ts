@@ -6,15 +6,17 @@ import { TOrder } from '../model';
 
 export const getOrderById = createAsyncThunk<TOrder, string, ThunkConfig<string>>(
   'order/getOrderById',
-  async (orderId, thunkApi) => {
+  async (id, thunkApi) => {
     const { extra, rejectWithValue } = thunkApi;
 
-    if (!orderId) {
+    if (!id) {
       throw new Error('');
     }
 
     try {
-      const response = await extra.api.get<TOrder>(`/order-detailed/${orderId}`, {});
+      const response = await extra.api.post<TOrder>(`/order-detailed`, {
+        id,
+      });
 
       if (!response.data) {
         throw new Error();

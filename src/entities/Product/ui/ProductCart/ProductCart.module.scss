@@ -4,7 +4,6 @@
 @import '@/shared/styles/mixins/box';
 @import '@/shared/styles/mixins/text-styles';
 
-// todo  Доделать
 .ProductCart {
   display: grid;
   grid-template-columns: 1fr minmax(194px, 317px) minmax(108px, 187px) 194px 22px;

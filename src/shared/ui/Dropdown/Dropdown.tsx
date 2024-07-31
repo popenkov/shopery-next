@@ -1,6 +1,6 @@
 'use client';
 
-import React, { DetailedHTMLProps, FC, HTMLAttributes, memo, useState } from 'react';
+import { DetailedHTMLProps, FC, HTMLAttributes, memo, useState } from 'react';
 
 import { ChevronDownIcon } from '@/shared/ui/icons';
 

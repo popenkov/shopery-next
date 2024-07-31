@@ -1,6 +1,6 @@
 'use client';
 
-import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import { Review, TReview } from '@/entities/Review';
 import { MobileSlider } from '@/shared/ui/MobileSlider';

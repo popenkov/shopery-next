@@ -2,8 +2,9 @@
 
 import { FC, ReactNode, useEffect, useRef } from 'react';
 
-import cls from './SmoothScroll.module.scss';
 import { useWindowSize } from '@/shared/lib/hooks/useWindowSize';
+
+import cls from './SmoothScroll.module.scss';
 
 type Props = {
   children: ReactNode;

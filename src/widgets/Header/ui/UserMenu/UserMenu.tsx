@@ -1,6 +1,6 @@
 'use client';
 
-import React, { FC, memo, useState } from 'react';
+import { FC, memo, useState } from 'react';
 import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';

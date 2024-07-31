@@ -1,6 +1,6 @@
 'use client';
 
-import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import { Product, TProduct } from '@/entities/Product';
 import { AddToCart } from '@/features/Cart/add-to-cart';

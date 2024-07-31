@@ -49,6 +49,5 @@ const ORDER_DATA: TUserOrder = {
   user: { id: '1', photo: '/images/user-photo--1.jpg', name: 'Dianne Russell', role: 'Customer' },
 };
 export const getUserOrderById = (id: string) => {
-  console.log(id);
   return ORDER_DATA;
 };

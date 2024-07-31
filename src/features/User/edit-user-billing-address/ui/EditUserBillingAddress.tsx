@@ -33,7 +33,6 @@ export const EditUserBillingAddress: FC<Props> = ({ className }) => {
     mode: 'onChange',
   });
 
-  // todo   сделать модел для запроса из формы и из стора и отправить
   const onSubmit: SubmitHandler<TFormData> = (data) => {
     console.log('data', data);
     if (isValid) {

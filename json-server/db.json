@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Tony Soprano",
+      "username": "honest_tony",
+      "email": "user-1@mail.com",
+      "password": "123",
+      "photo": "https://images.unsplash.com/photo-1493106819501-66d381c466f1?q=80&w=300&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "2",
+      "name": "TestName",
+      "username": "user-2",
+      "email": "user-2@mail.com",
+      "password": "123",
+      "avatar": "https://images.unsplash.com/photo-1585670210684-75bfe134068d?fm=jpg&w=300&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }
+  ],
+  "orders": [
+    {
+      "id": "1720362377187",
+      "items": [
+        {
+          "id": "qBmrBPk6K9euRVzp6V9hf",
+          "name": "1 Red Tomatos",
+          "price": 14.99,
+          "quantity": 3,
+          "total": 44.97,
+          "img": "/images/product-tomatos.jpg",
+          "path": "/"
+        },
+        {
+          "id": "PcJJPAwNkiIh7k6D7ti1P",
+          "name": "1 Surjapur Mango",
+          "price": 14.99,
+          "quantity": 5,
+          "total": 74.95,
+          "img": "/images/product-mango.jpg",
+          "path": "/"
+        }
+      ],
+      "subtotal": 119.92,
+      "amount": 8,
+      "discount": 0,
+      "delivery": null,
+      "paymentMethod": "PayPal",
+      "status": "Processing",
+      "shippingAddress": {
+        "name": "Dainne Russell",
+        "street": "4140 Parker Rd. Allentown, New Mexico 31134",
+        "email": "dainne.ressell@gmail.com",
+        "phone": "(671) 555-0110"
+      },
+      "billingAddress": {
+        "name": "Dainne Russell",
+        "street": "4140 Parker Rd. Allentown, New Mexico 31134",
+        "email": "dainne.ressell@gmail.com",
+        "phone": "(671) 555-0110"
+      },
+      "date": "2024-07-07T14:26:17.187Z"
+    }
+  ]
+}

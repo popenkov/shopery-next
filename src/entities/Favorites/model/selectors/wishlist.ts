@@ -1,7 +1,5 @@
 import { createSelector } from '@reduxjs/toolkit';
 
-//
-
 import { type TWishlistProduct } from '../types/wishlist';
 
 const selectBase = createSelector(

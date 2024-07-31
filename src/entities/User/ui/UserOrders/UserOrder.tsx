@@ -23,7 +23,6 @@ export const UserOrder: FC<Props> = ({ order }) => {
       <Text variant="body_s" className={cls.UserOrdersItemText}>
         #{order.id}
       </Text>
-      {/* todo */}
       <Text variant="body_s" className={cls.UserOrdersItemText}>
         {new Date(order.date).toDateString()}
       </Text>

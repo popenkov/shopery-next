@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react';
+
 import { ImageUploader } from './ImageUploader';
 
 jest.mock('next/image', () => ({ src, alt }: { src: string; alt: string }) => (

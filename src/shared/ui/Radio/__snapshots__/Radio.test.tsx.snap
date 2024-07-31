@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio component renders correctly 1`] = `
+<div>
+  <label
+    class="radio"
+  >
+    <input
+      class="input"
+      name="test"
+      type="radio"
+      value="test-value"
+    />
+    <span
+      class="fakeInput"
+    />
+  </label>
+</div>
+`;
