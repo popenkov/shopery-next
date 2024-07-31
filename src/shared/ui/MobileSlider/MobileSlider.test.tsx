@@ -1,7 +1,15 @@
-import React from 'react';
-import { render, waitFor } from '@testing-library/react';
-import { MobileSlider } from './MobileSlider';
+import React, { ReactNode } from 'react';
+import { render } from '@testing-library/react';
 
+import { MobileSlider } from './MobileSlider';
+jest.mock('swiper/react', () => ({
+  Swiper: ({ children }: { children: ReactNode }) => (
+    <div data-testid="swiper-testid">{children}</div>
+  ),
+  SwiperSlide: ({ children }: { children: ReactNode }) => (
+    <div data-testid="swiper-slide-testid">{children}</div>
+  ),
+}));
 const data = [{ id: 1 }, { id: 2 }, { id: 3 }];
 describe('MobileSlider component', () => {
   it('renders correctly', () => {

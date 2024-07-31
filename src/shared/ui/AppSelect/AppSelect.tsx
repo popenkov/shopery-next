@@ -44,7 +44,6 @@ const DropdownIndicator: ComponentType<
 };
 
 export const AppSelect = memo(
-  // todo проверить без forwardRef
   forwardRef<HTMLSelectElement, SelectProps>((props) => {
     const {
       options,

@@ -18,7 +18,8 @@ interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDi
 }
 
 export const ProductCart: FC<Props> = ({ data, className, cartActions, deleteActions }) => {
-  const { img, title, path, price } = data;
+  const { img, title, path, price, amount } = data;
+
   return (
     <div className={cn(cls.ProductCart, className)}>
       <div className={cls.ProductCartInfo}>
@@ -44,7 +45,7 @@ export const ProductCart: FC<Props> = ({ data, className, cartActions, deleteAct
       </div>
       <div className={cls.ProductCartSubtotal}>
         <span className={cls.ProductCartKeyMobile}>Subtotal:</span>
-        <span className="cart-item__price-new">$14.99</span>
+        <span className="cart-item__price-new"> {getFormattedPrice(price * amount)}</span>
       </div>
       <div className={cls.ProductCartDeleteButton}>{deleteActions}</div>
     </div>

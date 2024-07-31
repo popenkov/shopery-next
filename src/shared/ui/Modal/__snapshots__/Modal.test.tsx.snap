@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal component renders correctly 1`] = `<div />`;
+
+exports[`Modal component renders correctly when lazy is true and isMounted is true 1`] = `<div />`;

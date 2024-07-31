@@ -1,0 +1,1 @@
+export { CartAside } from './CartAside';

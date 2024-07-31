@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 import { Advantages } from '@/widgets/Advantages';
 import { Banners } from '@/widgets/Banners';

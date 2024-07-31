@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tag component renders correctly 1`] = `
+<div>
+  <span
+    class="text tag sale primary body_s left regular"
+  >
+    Sale
+  </span>
+</div>
+`;

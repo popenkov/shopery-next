@@ -1,6 +1,6 @@
 'use client';
 
-import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import cn from 'classnames';
 
 import { useCountDown } from '@/shared/lib/hooks';
@@ -15,7 +15,7 @@ interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDi
 
 export const Countdown: FC<Props> = ({ date, className }) => {
   const { days, hours, minutes, seconds } = useCountDown(date);
-  // todo  если дата прошла, то не выводить
+
   return (
     <div className={cn(cls.counter, className)}>
       <div className={cls.counterItem}>

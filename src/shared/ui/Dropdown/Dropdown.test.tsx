@@ -1,8 +1,9 @@
 import React from 'react';
 import { render, fireEvent, waitFor, within } from '@testing-library/react';
 
-import { Dropdown } from './Dropdown';
 import { CHANGE_CURRENCY_DATA } from '@/features/CurrencySwitcher/ui/constants';
+
+import { Dropdown } from './Dropdown';
 
 describe('Dropdown', () => {
   it('renders the dropdown with the correct class names', () => {

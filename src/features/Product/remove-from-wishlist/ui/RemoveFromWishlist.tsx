@@ -1,6 +1,6 @@
 'use client';
 
-import React, { FC } from 'react';
+import { FC } from 'react';
 import cn from 'classnames';
 
 import { removeProductFromWishlist } from '@/entities/Favorites';

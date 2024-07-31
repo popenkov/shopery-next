@@ -13,7 +13,6 @@ type Props = {
   className: string;
 };
 
-// todo  Доделать
 export const AddToCartCounter: FC<Props> = ({ className }) => {
   const handleAmountChange = (value: number) => {
     console.log(value);

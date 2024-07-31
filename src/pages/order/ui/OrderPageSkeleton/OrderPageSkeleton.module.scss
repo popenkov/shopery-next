@@ -1,0 +1,43 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox';
+
+.OrderPageSkeleton {
+  @include flex-column;
+
+  gap: 30px;
+  width: 100%;
+
+  @media screen and (max-width: $df-screen-ti) {
+    max-width: calc(100vw - 40px);
+    margin: 0 auto;
+  }
+}
+
+.OrderPageSkeletonInfo {
+  display: grid;
+  grid-template-areas: 'address payment' 'status status';
+  grid-template-columns: 1fr 288px;
+  gap: 57px 24px;
+  padding: 24px 24px 16px;
+
+  @media screen and (max-width: $df-screen-ti) {
+    grid-template-areas: 'address' 'payment' 'status';
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (max-width: $df-screen-m) {
+    padding: 0;
+  }
+}
+
+.OrderPageSkeletonAddresses {
+  grid-area: address;
+}
+
+.OrderPageSkeletonPayment {
+  grid-area: payment;
+}
+
+.OrderPageSkeletonStatus {
+  grid-area: status;
+}

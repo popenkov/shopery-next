@@ -1,7 +1,9 @@
-import { render, screen } from '@testing-library/react';
-import Page from './index';
 import { ReactNode } from 'react';
+import { screen } from '@testing-library/react';
+
 import { renderWithStore } from '@/shared/lib/tests/renderWithStore/renderWithStore';
+
+import Page from './index';
 
 jest.mock('swiper/react', () => ({
   Swiper: ({ children }: { children: ReactNode }) => (

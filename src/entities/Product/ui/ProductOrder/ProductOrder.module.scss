@@ -3,8 +3,6 @@
 @import '@/shared/styles/mixins/flexbox';
 @import '@/shared/styles/mixins/box';
 
-// todo  Доделать
-
 .ProductOrder {
   display: grid;
   grid-template-columns: 2.3fr repeat(3, 1fr);

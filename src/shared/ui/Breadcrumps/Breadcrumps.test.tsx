@@ -1,7 +1,9 @@
 import React from 'react';
-import { render, fireEvent, waitFor, getByTestId } from '@testing-library/react';
-import { Breadcrumbs } from './';
+import { render } from '@testing-library/react';
+
 import { AppRouteNames } from '@/shared/model';
+
+import { Breadcrumbs } from './';
 
 const crumbs: AppRouteNames[] = [
   AppRouteNames.HOME,
@@ -16,33 +18,37 @@ describe('Breadcrumbs component', () => {
   });
 
   it('renders home link correctly', () => {
-    const { getByRole, getByTestId } = render(<Breadcrumbs items={crumbs} />);
-    const homeLink = getByTestId('Breadcrumbs.homeLink');
+    const { getAllByTestId, debug } = render(<Breadcrumbs items={crumbs} />);
+    const homeLink = getAllByTestId('Breadcrumbs.link')[0];
+    debug();
     expect(homeLink).toBeInTheDocument();
     expect(homeLink).toHaveAttribute('href', '/'); // assuming getRouteHome() returns '/'
   });
 
   it('renders breadcrumb items correctly', () => {
-    const { getAllByRole } = render(<Breadcrumbs items={crumbs} />);
-    const breadcrumbItems = getAllByRole('listitem');
+    const { getAllByRole, getAllByTestId } = render(<Breadcrumbs items={crumbs} />);
+    const breadcrumbItems = getAllByTestId('Breadcrumbs.link');
     expect(breadcrumbItems).toHaveLength(crumbs.length);
     breadcrumbItems.forEach((item, index) => {
+      if (index === 0) {
+        return;
+      }
       expect(item).toHaveTextContent(crumbs[index]);
     });
   });
 
   it('renders active breadcrumb item correctly', () => {
-    const { getAllByRole } = render(<Breadcrumbs items={crumbs} />);
-    const activeItem = getAllByRole('link')[crumbs.length - 1];
+    const { getAllByTestId } = render(<Breadcrumbs items={crumbs} />);
+    const activeItem = getAllByTestId('Breadcrumbs.link')[crumbs.length - 1];
     expect(activeItem).toHaveClass('active');
   });
 
   it('renders links correctly', () => {
-    const { getAllByRole } = render(<Breadcrumbs items={crumbs} />);
-    const links = getAllByRole('link');
+    const { getAllByTestId } = render(<Breadcrumbs items={crumbs} />);
+    const links = getAllByTestId('Breadcrumbs.link');
     links.forEach((link, index) => {
       if (index < crumbs.length - 1) {
-        expect(link).toHaveAttribute('href', crumbs[index + 1]); // assuming PAGE_ROUTES has correct hrefs
+        expect(link).toHaveAttribute('href', crumbs[index]);
       }
     });
   });

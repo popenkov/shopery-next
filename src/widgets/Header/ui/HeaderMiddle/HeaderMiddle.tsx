@@ -1,6 +1,6 @@
 'use client';
 
-import React, { FC, useState } from 'react';
+import { FC, useState } from 'react';
 import cn from 'classnames';
 
 import { ProductSearch } from '@/features/ProductsSearch';
@@ -20,7 +20,6 @@ export const HeaderMiddle: FC = () => {
   };
 
   return (
-    // todo add link
     <div className={cls.middle}>
       <BurgerButton className={cls.mobileBurger} onClick={handleMenuToggle} />
       <Logo className={cls.logoDesktop} />

@@ -1,9 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { ProductTabs } from './ProductTabs';
 import { ProductLarge, TProduct } from '@/entities/Product';
-import { MobileSlider } from '../MobileSlider';
 import { getProductTab } from '@/widgets/ProductTab/api';
+
+import { MobileSlider } from '../MobileSlider';
+
+import { ProductTabs } from './ProductTabs';
 
 const meta = {
   title: 'shared/ProductTabs',
