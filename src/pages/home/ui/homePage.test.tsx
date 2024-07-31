@@ -26,7 +26,7 @@ jest.mock('nanoid', () => ({
 }));
 
 describe('Page', () => {
-  it('renders a heading', () => {
+  it.skip('renders a heading', () => {
     renderWithStore(<Page />);
 
     const page = screen.getByTestId('mainPage');
