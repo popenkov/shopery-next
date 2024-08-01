@@ -1,6 +1,7 @@
 import { type TProductDetailed } from '..';
 
 const data: TProductDetailed = {
+  path: '/product',
   id: 'test',
   sliderImages: {
     thumb: [

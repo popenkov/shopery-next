@@ -8,6 +8,7 @@ import '@/app/styles/globals.scss';
 import { StoreProvider } from '@/app/providers';
 import { CartAside } from '@/widgets/CartAside';
 import SmoothScroll from '@/shared/ui/SmoothScroll/SmoothScroll';
+import { ProductPreviewModal } from '@/widgets/ProductPreviewModal/ui/ProductPreviewModal';
 
 const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700'],
@@ -34,6 +35,7 @@ export default function RootLayout({
             <Footer />
           </SmoothScroll>
           <CartAside />
+          <ProductPreviewModal />
         </StoreProvider>
       </body>
     </html>

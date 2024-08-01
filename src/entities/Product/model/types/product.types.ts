@@ -5,8 +5,8 @@ type TStockVariant = 'not-available' | 'in-stock';
 
 export type TProduct = {
   id: string;
-  path: string;
-  img: string;
+  path?: string;
+  img?: string;
   title: string;
   price: number;
   priceOld?: number;
@@ -36,6 +36,7 @@ type TProductReview = {
 
 export type TProductDetailed = {
   id: string;
+  path?: string;
   title: string;
   sku: string;
   brandLogo: string;
