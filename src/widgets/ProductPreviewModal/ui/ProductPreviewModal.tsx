@@ -33,11 +33,11 @@ export const ProductPreviewModal: FC = () => {
   }, [itemId]);
 
   let content;
-  if (true) {
+  if (false) {
     content = <ProductPreviewSkeleton />;
   }
 
-  if (false) {
+  if (true) {
     content = (
       <ProductDescription
         data={data}

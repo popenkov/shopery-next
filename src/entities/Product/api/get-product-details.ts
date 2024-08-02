@@ -30,7 +30,7 @@ const data: TProductDetailed = {
   priceOld: 17.28,
   priceTags: [
     {
-      type: 'red',
+      type: 'sale',
       text: '64% Off',
     },
   ],
@@ -46,7 +46,7 @@ const data: TProductDetailed = {
     path: '#',
   },
   sku: '2,51,594',
-  brandLogo: 'brand-farmary.svg',
+  brandLogo: '/images/brand-farmary.svg',
   description:
     'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et ipsum. Nulla varius magna a consequat pulvinar. ',
   categories: [{ title: 'Vegetables', path: '#' }],

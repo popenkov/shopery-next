@@ -50,70 +50,66 @@ export const ThumbSlider: FC<Props> = ({ data, className }) => {
 
   return (
     <div className={cn(cls.ThumbSlider, className)}>
-      <>
-        <div className={cls.thumbContainer}>
-          <div className={cls.thumb}>
-            <Swiper
-              onSwiper={setThumbsSwiper}
-              direction="vertical"
-              loop={true}
-              spaceBetween={8}
-              slidesPerView="auto"
-              freeMode={true}
-              navigation={{
-                nextEl: buttonNextRef.current,
-                prevEl: buttonPrevRef.current,
-              }}
-              watchSlidesProgress={true}
-              modules={[FreeMode, Navigation, Thumbs]}
-              onInit={(swiper: SwiperType) => {
-                onBeforeInit(swiper, buttonPrevRef, buttonNextRef);
-              }}
-            >
-              {data.thumb.map((photo, index) => {
-                return (
-                  <SwiperSlide className={cls.thumbSlide} key={`thumb/${index}`}>
-                    {/* <img src={photo} /> */}
-                    <Image src={photo} alt="product image" fill />
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
-          </div>
-          <div className={cls.navigation}>
-            <button
-              className={cn(cls.navigationButton, cls.navigationButtonPrev)}
-              ref={buttonPrevRef}
-            >
-              <ChevronDownIcon className={cls.navigationButtonIcon} />
-            </button>
-            <button
-              className={cn(cls.navigationButton, cls.navigationButtonNext)}
-              ref={buttonNextRef}
-            >
-              <ChevronDownIcon className={cls.navigationButtonIcon} />
-            </button>
-          </div>
-        </div>
-        <div className={cls.main}>
-          <Swiper
-            loop={true}
-            spaceBetween={10}
-            thumbs={{ swiper: thumbsSwiper }}
-            modules={[FreeMode, Thumbs]}
+      <div className={cls.thumbContainer}>
+        <Swiper
+          className={cls.thumb}
+          onSwiper={setThumbsSwiper}
+          direction="vertical"
+          loop={true}
+          spaceBetween={8}
+          slidesPerView="auto"
+          freeMode={true}
+          navigation={{
+            nextEl: buttonNextRef.current,
+            prevEl: buttonPrevRef.current,
+          }}
+          watchSlidesProgress={true}
+          modules={[FreeMode, Navigation, Thumbs]}
+          onInit={(swiper: SwiperType) => {
+            onBeforeInit(swiper, buttonPrevRef, buttonNextRef);
+          }}
+        >
+          {data.thumb.map((photo, index) => {
+            return (
+              <SwiperSlide className={cls.thumbSlide} key={`thumb/${index}`}>
+                <Image src={photo} alt="thumb image" fill />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+        <div className={cls.navigation}>
+          <button
+            className={cn(cls.navigationButton, cls.navigationButtonPrev)}
+            ref={buttonPrevRef}
           >
-            {data.thumb.map((photo, index) => {
-              return (
-                <SwiperSlide className={cls.mainSlide} key={`main-slide/${index}`}>
-                  <div className={cls.mainImgWrapper}>
-                    <Image src={photo} fill alt="product image" className={cls.mainImg} />
-                  </div>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
+            <ChevronDownIcon className={cls.navigationButtonIcon} />
+          </button>
+          <button
+            className={cn(cls.navigationButton, cls.navigationButtonNext)}
+            ref={buttonNextRef}
+          >
+            <ChevronDownIcon className={cls.navigationButtonIcon} />
+          </button>
         </div>
-      </>
+      </div>
+      <div className={cls.main}>
+        <Swiper
+          loop={true}
+          spaceBetween={10}
+          thumbs={{ swiper: thumbsSwiper }}
+          modules={[FreeMode, Thumbs]}
+        >
+          {data.thumb.map((photo, index) => {
+            return (
+              <SwiperSlide className={cls.mainSlide} key={`main-slide/${index}`}>
+                <div className={cls.mainImgWrapper}>
+                  <Image src={photo} fill alt="main image" className={cls.mainImg} />
+                </div>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div>
     </div>
   );
 };

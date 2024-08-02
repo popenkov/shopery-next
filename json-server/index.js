@@ -69,6 +69,26 @@ server.post('/order-detailed', (req, res) => {
   }
 });
 
+server.post('/product-detailed', (req, res) => {
+  try {
+    const { id } = req.body;
+    const db = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'db.json'), 'UTF-8'));
+
+    const { product_detailed = [] } = db;
+
+    const product = product_detailed.find((product) => {
+      return product.id === id;
+    });
+    if (product) {
+      return res.json(product);
+    }
+    return res.status(403).json({ message: 'Product not found' });
+  } catch (e) {
+    console.log(e);
+    return res.status(500).json({ message: e.message });
+  }
+});
+
 // проверяем, авторизован ли пользователь
 // eslint-disable-next-line;
 server.use((req, res, next) => {

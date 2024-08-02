@@ -6,12 +6,14 @@ import { wishlistReducer } from '@/entities/Favorites';
 import { orderReducer } from '@/entities/Order';
 import { userReducer } from '@/entities/User';
 import { $api } from '@/shared/api';
+import { productsReducer } from '@/entities/Product';
 
 const rootReducer = combineReducers({
   cart: cartReducer,
   user: userReducer,
   wishlist: wishlistReducer,
   orders: orderReducer,
+  products: productsReducer,
   // [rtkApi.reducerPath]: rtkApi.reducer,
 });
 

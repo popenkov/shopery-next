@@ -6,9 +6,10 @@ import { ORDERS_LOCALSTORAGE_KEY } from '../../lib/constants';
 import { getOrderById } from '../../services/getOrderById';
 
 const initialState: OrderSchema = {
-  orders: localStorage?.getItem(ORDERS_LOCALSTORAGE_KEY)
-    ? JSON.parse(localStorage.getItem(ORDERS_LOCALSTORAGE_KEY)!)
-    : [],
+  orders:
+    localStorage && localStorage.getItem(ORDERS_LOCALSTORAGE_KEY)
+      ? JSON.parse(localStorage.getItem(ORDERS_LOCALSTORAGE_KEY)!)
+      : [],
   order: undefined,
   error: undefined,
   isLoading: true,
