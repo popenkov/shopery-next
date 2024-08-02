@@ -63,7 +63,7 @@
   ],
   "product_detailed": {
     "path": "/product",
-    "id": "test",
+    "id": "test_product_id",
     "sliderImages": {
       "thumb": [
         "/images/preview-image.jpg",
@@ -91,7 +91,7 @@
     "priceOld": 17.28,
     "priceTags": [
       {
-        "type": "red",
+        "type": "sale",
         "text": "64% Off"
       }
     ],

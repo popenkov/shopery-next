@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
@@ -5,8 +7,8 @@ export const useWindowSize = () => {
   const pathname = usePathname();
   const [windowSize, setWindowSize] = useState(() => {
     return {
-      width: window.innerWidth,
-      height: window.innerHeight,
+      width: 0,
+      height: 0,
     };
   });
 
@@ -18,10 +20,14 @@ export const useWindowSize = () => {
   };
 
   useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [pathname]);
+  }, [window, pathname]);
 
   return windowSize;
 };

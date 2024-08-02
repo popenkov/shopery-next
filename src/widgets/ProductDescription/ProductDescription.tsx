@@ -9,7 +9,6 @@ import { ThumbSlider } from '@/shared/ui/ThumbSlider';
 import cls from './ProductDescription.module.scss';
 import { Tag } from '@/shared/ui/Tag';
 import Link from 'next/link';
-import { getRouteCatalog } from '@/shared/lib/constants';
 import { TTagVariant } from '@/shared/ui/Tag/ui';
 import { getFormattedPrice, getWordDeclination } from '@/shared/lib/utils';
 
@@ -26,12 +25,10 @@ export const ProductDescription: FC<Props> = ({ data, actions }) => {
     priceTags,
     priceOld,
     tags,
-    stock,
     sliderImages,
     rating,
     reviews,
     description,
-    descriptions,
     sku,
     brandLogo,
     categories,
@@ -40,7 +37,7 @@ export const ProductDescription: FC<Props> = ({ data, actions }) => {
   return (
     <div className={cls.productDescription} aria-hidden="true">
       <div className={cls.productDescriptionContent}>
-        <ThumbSlider data={data.sliderImages} className={cls.productDescriptionSlider} />
+        <ThumbSlider data={sliderImages} className={cls.productDescriptionSlider} />
         <div className={cls.productDescriptionAbout}>
           <div className={cls.productDescriptionHeader}>
             <div className={cls.productDescriptionTitleWrapper}>
@@ -107,9 +104,13 @@ export const ProductDescription: FC<Props> = ({ data, actions }) => {
               <div className={cls.productDescriptionCategory}>
                 <span className={cls.productDescriptionCategoriesText}>Category:</span>
                 <div className={cls.productDescriptionCategoriesContainer}>
-                  <Link className={cls.productDescriptionCategoriesLink} href={getRouteCatalog()}>
-                    Vegetables
-                  </Link>
+                  {categories.map((category) => {
+                    return (
+                      <Link className={cls.productDescriptionCategoriesLink} href={category.path}>
+                        {category.title}
+                      </Link>
+                    );
+                  })}
                 </div>
               </div>
             )}
@@ -117,9 +118,13 @@ export const ProductDescription: FC<Props> = ({ data, actions }) => {
               <div className={cls.productDescriptionTags}>
                 <span className={cls.productDescriptionTagsText}>Tag:</span>
                 <div className={cls.productDescriptionTagsContainer}>
-                  <Link className={cls.productDescriptionTagsLink} href={getRouteCatalog()}>
-                    Vegetables
-                  </Link>
+                  {categoryTags.map((categoryTag) => {
+                    return (
+                      <Link className={cls.productDescriptionTagsLink} href={categoryTag.path}>
+                        {categoryTag.title}
+                      </Link>
+                    );
+                  })}
                 </div>
               </div>
             )}

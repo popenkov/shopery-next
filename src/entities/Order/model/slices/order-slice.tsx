@@ -7,7 +7,7 @@ import { getOrderById } from '../../services/getOrderById';
 
 const initialState: OrderSchema = {
   orders:
-    localStorage && localStorage.getItem(ORDERS_LOCALSTORAGE_KEY)
+    typeof window !== 'undefined' && localStorage.getItem(ORDERS_LOCALSTORAGE_KEY)
       ? JSON.parse(localStorage.getItem(ORDERS_LOCALSTORAGE_KEY)!)
       : [],
   order: undefined,

@@ -11,8 +11,24 @@ import { Modal } from '@/shared/ui/Modal';
 
 import { useChangeSearchParams } from '@/shared/lib/hooks/useChangeSearchParams';
 import { ProductPreviewSkeleton } from './ProductPreviewSkeleton';
+import { useAppDispatch, useAppSelector } from '@/shared/lib/hooks';
+import {
+  getProductDetailedData,
+  getProductDetailedError,
+  getProductDetailedIsLoading,
+} from '@/entities/Product/model';
+import { getProductById } from '@/entities/Product/api/get-product-by-id';
+import { UnknownAction } from '@reduxjs/toolkit';
+import { Text } from '@/shared/ui/Text';
 
 export const ProductPreviewModal: FC = () => {
+  const dispatch = useAppDispatch();
+  const productData = useAppSelector(getProductDetailedData);
+  const isLoading = useAppSelector(getProductDetailedIsLoading);
+  const error = useAppSelector(getProductDetailedError);
+
+  console.log(productData, error, isLoading);
+
   const { getSearchParam, removeQueryParam } = useChangeSearchParams();
   const [isOpen, setIsOpen] = useState(false);
   const data = getProductDetails();
@@ -27,24 +43,33 @@ export const ProductPreviewModal: FC = () => {
 
   useEffect(() => {
     if (itemId) {
+      const testID = 'test_product_id';
+      dispatch(getProductById(testID) as unknown as UnknownAction);
       setIsOpen(true);
       document.body.classList.add('fixed');
     }
-  }, [itemId]);
+  }, [dispatch, itemId]);
 
   let content;
-  if (false) {
+  if (isLoading) {
     content = <ProductPreviewSkeleton />;
   }
+  if (error) {
+    content = (
+      <div className={cls.ProductCartPreviewModalError}>
+        <Text align="center">Network error. Please, try again later!</Text>
+      </div>
+    );
+  }
 
-  if (true) {
+  if (productData) {
     content = (
       <ProductDescription
-        data={data}
+        data={productData}
         actions={
           <>
-            <AddToCartCounter className={cls.ProductCartPreviewCounter} />
-            <AddToWishlist className={cls.productFavoriteButton} item={data} />
+            <AddToCartCounter className={cls.ProductCartPreviewCounter} item={productData} />
+            <AddToWishlist className={cls.productFavoriteButton} item={productData} />
           </>
         }
       />
@@ -53,7 +78,7 @@ export const ProductPreviewModal: FC = () => {
 
   return (
     <Modal isOpen={isOpen} className={cls.ProductPreviewModal} onClose={handleModalClose}>
-      <div className={cls.ProductPreviewModalContent}>{content}</div>
+      <div className={cls.ProductPreviewModalContent}>{content} </div>
     </Modal>
   );
 };

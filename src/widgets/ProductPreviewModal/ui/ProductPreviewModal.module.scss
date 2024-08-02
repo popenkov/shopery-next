@@ -67,6 +67,17 @@
   }
 }
 
+.ProductCartPreviewModalError {
+  @include flex-center;
+
+  width: 100%;
+  min-height: 563px;
+
+  @media screen and (max-width: $df-screen-ti) {
+    min-height: unset;
+  }
+}
+
 .ProductCartPreviewCounter {
   flex-grow: 1;
 }

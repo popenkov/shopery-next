@@ -74,13 +74,10 @@ server.post('/product-detailed', (req, res) => {
     const { id } = req.body;
     const db = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'db.json'), 'UTF-8'));
 
-    const { product_detailed = [] } = db;
+    const { product_detailed } = db;
 
-    const product = product_detailed.find((product) => {
-      return product.id === id;
-    });
-    if (product) {
-      return res.json(product);
+    if (product_detailed) {
+      return res.json(product_detailed);
     }
     return res.status(403).json({ message: 'Product not found' });
   } catch (e) {
