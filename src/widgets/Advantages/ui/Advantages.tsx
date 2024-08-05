@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { AdvantageCard } from '@/entities/Advantage';
 
 import { getAdvantagesData } from '../api';

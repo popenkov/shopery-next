@@ -3,34 +3,34 @@ import { TNavigation } from '../model';
 const data: TNavigation = {
   categories: [
     {
-      path: '/apple',
+      path: '/catalog',
       icon: 'AppleIcon',
       title: 'Fresh Fruit',
     },
     {
-      path: '/salad',
+      path: '/catalog',
       icon: 'SaladIcon',
       title: 'Vegetables',
     },
-    { path: '/fish', icon: 'FishIcon', title: 'River Fish' },
-    { path: '/coffee', icon: 'CoffeeIcon', title: 'Drink & Water' },
+    { path: '/catalog', icon: 'FishIcon', title: 'River Fish' },
+    { path: '/catalog', icon: 'CoffeeIcon', title: 'Drink & Water' },
     {
-      path: '/ice_cream',
+      path: '/catalog',
       icon: 'IceCreamIcon',
       title: 'Yogurt & Ice Cream',
     },
     {
-      path: '/cupcake',
+      path: '/catalog',
       icon: 'CupcakeIcon',
       title: 'Cake & Bread',
     },
-    { path: '/pie', icon: 'PieIcon', title: 'Butter & Cream' },
-    { path: '/food', icon: 'FoodIcon', title: 'Cooking' },
+    { path: '/catalog', icon: 'PieIcon', title: 'Butter & Cream' },
+    { path: '/catalog', icon: 'FoodIcon', title: 'Cooking' },
   ],
   navigation: [
     {
       title: 'Home',
-      path: '/home',
+      path: '/',
       items: [
         { title: 'Home 1', path: '/home-1' },
         { title: 'Home 1', path: '/home-2' },
@@ -48,7 +48,7 @@ const data: TNavigation = {
     },
     {
       title: 'Pages',
-      path: '/pages',
+      path: '/catalog',
       items: [
         { title: 'Pages 1', path: '/page-1' },
         { title: 'Pages 1', path: '/page-2' },

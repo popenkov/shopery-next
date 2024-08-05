@@ -8,6 +8,7 @@ import { CartIcon } from '@/shared/ui/icons';
 import { Text } from '@/shared/ui/Text';
 
 import cls from './HeaderCart.module.scss';
+import { getRouteCart } from '@/shared/lib/constants';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 
@@ -17,7 +18,7 @@ export const HeaderCart: FC<Props> = () => {
   const formattedPrice = getFormattedPrice(totalPrice);
   return (
     <div className={cls.cart}>
-      <Link className={cls.cartLink} href="#">
+      <Link className={cls.cartLink} href={getRouteCart()}>
         <CartIcon className={cls.cartIcon} />
         {Number.isFinite(totalAmount) && <span className={cls.cartItemsAmount}>{totalAmount}</span>}
       </Link>
