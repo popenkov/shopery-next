@@ -1,4 +1,4 @@
-import { DetailedHTMLProps, FC, HTMLAttributes, useState } from 'react';
+import { DetailedHTMLProps, HTMLAttributes, useState } from 'react';
 import cn from 'classnames';
 
 import { DOTS, usePagination } from '@/shared/lib/hooks';

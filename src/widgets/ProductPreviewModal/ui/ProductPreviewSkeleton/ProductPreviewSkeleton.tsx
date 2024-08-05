@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
 
-import cls from './ProductPreviewSkeleton.module.scss';
 import { Skeleton } from '@/shared/ui/Skeleton';
+
+import cls from './ProductPreviewSkeleton.module.scss';
 
 export const ProductPreviewSkeleton: FC = () => {
   return (

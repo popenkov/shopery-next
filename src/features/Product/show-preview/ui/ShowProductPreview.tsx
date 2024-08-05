@@ -1,13 +1,12 @@
 'use client';
 
 import { FC } from 'react';
-import { redirect } from 'next/navigation';
 import { usePathname } from 'next/navigation';
 
 import { type TProduct } from '@/entities/Product';
+import { useChangeSearchParams } from '@/shared/lib/hooks/useChangeSearchParams';
 import { RoundButton, TRoundButtonTheme } from '@/shared/ui/Buttons';
 import { EyeIcon } from '@/shared/ui/icons';
-import { useChangeSearchParams } from '@/shared/lib/hooks/useChangeSearchParams';
 
 type Props = {
   item: TProduct;

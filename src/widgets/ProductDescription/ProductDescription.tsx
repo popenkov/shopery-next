@@ -1,17 +1,17 @@
 import { FC, ReactNode } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { type TProductDetailed } from '@/entities/Product';
 import { SocialShare } from '@/entities/SocialShare';
+import { getFormattedPrice, getWordDeclination } from '@/shared/lib/utils';
+import { FadeIn, SlideIn } from '@/shared/lib/utils/motions';
 import { StarRating } from '@/shared/ui/StarRating';
+import { Tag } from '@/shared/ui/Tag';
+import { TTagVariant } from '@/shared/ui/Tag/ui';
 import { ThumbSlider } from '@/shared/ui/ThumbSlider';
 
 import cls from './ProductDescription.module.scss';
-import { Tag } from '@/shared/ui/Tag';
-import Link from 'next/link';
-import { TTagVariant } from '@/shared/ui/Tag/ui';
-import { getFormattedPrice, getWordDeclination } from '@/shared/lib/utils';
-import { FadeIn, SlideIn } from '@/shared/lib/utils/motions';
 
 type Props = {
   data: TProductDetailed;

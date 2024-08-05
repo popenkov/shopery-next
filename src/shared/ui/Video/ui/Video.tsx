@@ -3,6 +3,7 @@
 import { DetailedHTMLProps, FC, HTMLAttributes, useEffect, useRef, useState } from 'react';
 import cn from 'classnames';
 import { motion } from 'framer-motion';
+
 import { PlayIcon } from '@/shared/ui/icons';
 import { Text } from '@/shared/ui/Text';
 

@@ -1,6 +1,7 @@
 'use client';
 
 import { FC } from 'react';
+
 import { ProductLarge, TProduct } from '@/entities/Product';
 import { AddToCart } from '@/features/Cart/add-to-cart';
 import { AddToWishlist } from '@/features/Product';

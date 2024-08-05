@@ -1,5 +1,5 @@
 'use client';
-import { FC, useEffect, useState } from 'react';
+import { FC, useState } from 'react';
 
 import { DiscountBanner } from '@/entities/DiscountBanner';
 import { ProductSmall, TProduct } from '@/entities/Product';

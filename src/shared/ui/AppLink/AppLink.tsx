@@ -2,8 +2,8 @@
 
 import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode, Ref } from 'react';
 import cn from 'classnames';
-import Link, { LinkProps } from 'next/link';
 import { motion } from 'framer-motion';
+import Link, { LinkProps } from 'next/link';
 
 import cls from './AppLink.module.scss';
 

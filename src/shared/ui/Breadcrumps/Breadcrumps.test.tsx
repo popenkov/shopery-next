@@ -1,7 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { AppRouteNames } from '@/shared/model';
+
 import { PAGE_ROUTES } from '@/shared/lib/constants/routes';
+import { AppRouteNames } from '@/shared/model';
 
 import { Breadcrumbs } from './';
 

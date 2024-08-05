@@ -1,13 +1,13 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import Image from 'next/image';
 
+import { TypingText } from '@/shared/lib/utils/motions';
 import { QuoteIcon } from '@/shared/ui/icons';
 import { Text } from '@/shared/ui/Text';
 
 import { type TReview } from '../../';
 
 import cls from './Review.module.scss';
-import { TypingText } from '@/shared/lib/utils/motions';
 
 interface Props
   extends Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'id' | 'role'>,

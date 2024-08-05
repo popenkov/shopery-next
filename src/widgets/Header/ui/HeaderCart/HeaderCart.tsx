@@ -2,13 +2,13 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import Link from 'next/link';
 
 import { selectTotalAmount, selectTotalPrice } from '@/entities/Cart';
+import { getRouteCart } from '@/shared/lib/constants';
 import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice } from '@/shared/lib/utils';
 import { CartIcon } from '@/shared/ui/icons';
 import { Text } from '@/shared/ui/Text';
 
 import cls from './HeaderCart.module.scss';
-import { getRouteCart } from '@/shared/lib/constants';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 

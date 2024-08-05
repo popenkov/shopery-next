@@ -3,14 +3,14 @@
 import { FC, useState } from 'react';
 import cn from 'classnames';
 
+import { addToCart, openAsideCartMenu } from '@/entities/Cart';
+import { TProductDetailed } from '@/entities/Product';
+import { useAppDispatch } from '@/shared/lib/hooks';
 import { AmountCounter } from '@/shared/ui/AmountCounter';
 import { Button } from '@/shared/ui/Buttons';
 import { CartIcon } from '@/shared/ui/icons';
 
 import cls from './AddToCartCounter.module.scss';
-import { TProductDetailed } from '@/entities/Product';
-import { useAppDispatch } from '@/shared/lib/hooks';
-import { addToCart, openAsideCartMenu } from '@/entities/Cart';
 
 type Props = {
   item: TProductDetailed;

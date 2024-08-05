@@ -1,25 +1,25 @@
 'use client';
 
-import { getProductDetails } from '@/entities/Product';
-import { AddToCartCounter } from '@/features/Cart';
-import { AddToWishlist } from '@/features/Product';
-import { ProductDescription } from '@/widgets/ProductDescription';
 import { FC, useEffect, useState } from 'react';
+import { UnknownAction } from '@reduxjs/toolkit';
 
-import cls from './ProductPreviewModal.module.scss';
-import { Modal } from '@/shared/ui/Modal';
-
-import { useChangeSearchParams } from '@/shared/lib/hooks/useChangeSearchParams';
-import { ProductPreviewSkeleton } from './ProductPreviewSkeleton';
-import { useAppDispatch, useAppSelector } from '@/shared/lib/hooks';
+import { getProductDetails } from '@/entities/Product';
+import { getProductById } from '@/entities/Product/api/get-product-by-id';
 import {
   getProductDetailedData,
   getProductDetailedError,
   getProductDetailedIsLoading,
 } from '@/entities/Product/model';
-import { getProductById } from '@/entities/Product/api/get-product-by-id';
-import { UnknownAction } from '@reduxjs/toolkit';
+import { AddToCartCounter } from '@/features/Cart';
+import { AddToWishlist } from '@/features/Product';
+import { useAppDispatch, useAppSelector } from '@/shared/lib/hooks';
+import { useChangeSearchParams } from '@/shared/lib/hooks/useChangeSearchParams';
+import { Modal } from '@/shared/ui/Modal';
 import { Text } from '@/shared/ui/Text';
+import { ProductDescription } from '@/widgets/ProductDescription';
+
+import cls from './ProductPreviewModal.module.scss';
+import { ProductPreviewSkeleton } from './ProductPreviewSkeleton';
 
 export const ProductPreviewModal: FC = () => {
   const dispatch = useAppDispatch();

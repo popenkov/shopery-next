@@ -86,6 +86,26 @@ server.post('/product-detailed', (req, res) => {
   }
 });
 
+server.put('/update-address', (req, res) => {
+  try {
+    const { data } = req.body;
+    const db = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'db.json'), 'UTF-8'));
+
+    const { user_data = [] } = db;
+
+    const userDataFromBd = user_data.find((user) => user.userId === data.id);
+
+    if (userDataFromBd) {
+      userDataFromBd.address = data.address;
+      return res.status(200).json({ message: 'Success' });
+    }
+    return res.status(403).json({ message: 'Product not found' });
+  } catch (e) {
+    console.log(e);
+    return res.status(500).json({ message: e.message });
+  }
+});
+
 // проверяем, авторизован ли пользователь
 // eslint-disable-next-line;
 server.use((req, res, next) => {

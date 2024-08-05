@@ -5,9 +5,9 @@ import { Product, ProductSmall, TProduct } from '@/entities/Product';
 import { AddToCart } from '@/features/Cart/add-to-cart';
 import { AddToWishlist } from '@/features/Product';
 import { ShowProductPreview } from '@/features/Product';
+import { CardRevealingOnScroll } from '@/shared/lib/utils/motions';
 
 import cls from './CatalogItems.module.scss';
-import { CardRevealingOnScroll } from '@/shared/lib/utils/motions';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   products: TProduct[];
