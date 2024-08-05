@@ -7,6 +7,7 @@ import { Text } from '@/shared/ui/Text';
 import { type TReview } from '../../';
 
 import cls from './Review.module.scss';
+import { TypingText } from '@/shared/lib/utils/motions';
 
 interface Props
   extends Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'id' | 'role'>,
@@ -18,7 +19,7 @@ export const Review: FC<Props> = ({ text, photo, name, role }) => {
       <div className={cls.content}>
         <QuoteIcon className={cls.icon} />
         <Text variant="body_m" align="center" className={cls.text}>
-          {text}
+          <TypingText text={text} />
         </Text>
       </div>
       <div className={cls.author}>

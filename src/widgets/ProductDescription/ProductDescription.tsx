@@ -11,6 +11,7 @@ import { Tag } from '@/shared/ui/Tag';
 import Link from 'next/link';
 import { TTagVariant } from '@/shared/ui/Tag/ui';
 import { getFormattedPrice, getWordDeclination } from '@/shared/lib/utils';
+import { FadeIn, SlideIn } from '@/shared/lib/utils/motions';
 
 type Props = {
   data: TProductDetailed;
@@ -88,55 +89,61 @@ export const ProductDescription: FC<Props> = ({ data, actions }) => {
               )}
             </div>
           </div>
-          <div className={cls.productDescriptionInfo}>
-            <div className={cls.productDescriptionBrand}>
-              <span className={cls.productDescriptionBrandText}>Brand:</span>
-              <span className={cls.productDescriptionBrandValue}>
-                <Image src={brandLogo} alt="image" fill />
-              </span>
+          <FadeIn shouldDelay={true}>
+            <div className={cls.productDescriptionInfo}>
+              <div className={cls.productDescriptionBrand}>
+                <span className={cls.productDescriptionBrandText}>Brand:</span>
+                <span className={cls.productDescriptionBrandValue}>
+                  <Image src={brandLogo} alt="image" fill />
+                </span>
+              </div>
+              <SocialShare className={cls.productDescriptionShare} />
+              <p className={cls.productDescriptionDescription}>{description}</p>
             </div>
-            <SocialShare className={cls.productDescriptionShare} />
-            <p className={cls.productDescriptionDescription}>{description}</p>
-          </div>
-          <div className={cls.productDescriptionCart}>{actions}</div>
-          <div className={cls.productDescriptionCategories}>
-            {categories && (
-              <div className={cls.productDescriptionCategory}>
-                <span className={cls.productDescriptionCategoriesText}>Category:</span>
-                <div className={cls.productDescriptionCategoriesContainer}>
-                  {categories.map((category) => {
-                    return (
-                      <Link
-                        className={cls.productDescriptionCategoriesLink}
-                        href={category.path}
-                        key={category.path}
-                      >
-                        {category.title}
-                      </Link>
-                    );
-                  })}
+          </FadeIn>
+          <SlideIn shouldDelay={true}>
+            <div className={cls.productDescriptionCart}>{actions}</div>
+          </SlideIn>
+          <SlideIn shouldDelay={true}>
+            <div className={cls.productDescriptionCategories}>
+              {categories && (
+                <div className={cls.productDescriptionCategory}>
+                  <span className={cls.productDescriptionCategoriesText}>Category:</span>
+                  <div className={cls.productDescriptionCategoriesContainer}>
+                    {categories.map((category) => {
+                      return (
+                        <Link
+                          className={cls.productDescriptionCategoriesLink}
+                          href={category.path}
+                          key={category.path}
+                        >
+                          {category.title}
+                        </Link>
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
-            )}
-            {categoryTags && (
-              <div className={cls.productDescriptionTags}>
-                <span className={cls.productDescriptionTagsText}>Tag:</span>
-                <div className={cls.productDescriptionTagsContainer}>
-                  {categoryTags.map((categoryTag) => {
-                    return (
-                      <Link
-                        className={cls.productDescriptionTagsLink}
-                        href={categoryTag.path}
-                        key={categoryTag.path}
-                      >
-                        {categoryTag.title}
-                      </Link>
-                    );
-                  })}
+              )}
+              {categoryTags && (
+                <div className={cls.productDescriptionTags}>
+                  <span className={cls.productDescriptionTagsText}>Tag:</span>
+                  <div className={cls.productDescriptionTagsContainer}>
+                    {categoryTags.map((categoryTag) => {
+                      return (
+                        <Link
+                          className={cls.productDescriptionTagsLink}
+                          href={categoryTag.path}
+                          key={categoryTag.path}
+                        >
+                          {categoryTag.title}
+                        </Link>
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
-            )}
-          </div>
+              )}
+            </div>
+          </SlideIn>
         </div>
       </div>
     </div>

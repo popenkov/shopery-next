@@ -1,5 +1,8 @@
+'use client';
+
 import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode, Ref } from 'react';
 import cn from 'classnames';
+import { motion } from 'framer-motion';
 
 import style from './Button.module.scss';
 
@@ -37,7 +40,11 @@ export const Button: FC<AppButtonProps> = (props) => {
     ...otherProps
   } = props;
   return (
-    <button
+    // @ts-ignore
+    <motion.button
+      whileTap={{ scale: 0.95 }}
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.3 }}
       className={cn(
         style.button,
         {
@@ -52,6 +59,6 @@ export const Button: FC<AppButtonProps> = (props) => {
       {...otherProps}
     >
       {children}
-    </button>
+    </motion.button>
   );
 };
