@@ -1,8 +1,8 @@
 'use client';
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 
 import { DiscountBanner } from '@/entities/DiscountBanner';
-import { ProductSmall } from '@/entities/Product';
+import { ProductSmall, TProduct } from '@/entities/Product';
 import { AddToCart } from '@/features/Cart/add-to-cart';
 import { CatalogSort } from '@/features/CatalogSort';
 import { AddToWishlist } from '@/features/Product';
@@ -15,14 +15,27 @@ import { CatalogItems, getCatalogItems } from '@/widgets/CatalogItems';
 
 import cls from './catalog.module.scss';
 
+// todo
+const PAGE_SIZE = 10;
+
 const Catalog: FC = () => {
   const crumbs: AppRouteNames[] = [AppRouteNames.HOME, AppRouteNames.CATALOG];
   const { banner, featuredItems } = getCatalogFilterData();
-  const { items } = getCatalogItems();
+  const { items: allItems } = getCatalogItems();
+  const [items, setItems] = useState<TProduct[]>(allItems);
 
-  const handlePageChange = () => {
-    console.log('handlePageChange');
+  // todo
+  // useEffect(() => {
+  //   handlePageChange(1);
+  // }, [allItems]);
+
+  const handlePageChange = (filteredProducts: TProduct[]) => {
+    console.log('handlePageChange', filteredProducts);
+
+    // update your component state to display the current page cards
+    setItems(filteredProducts);
   };
+
   return (
     <main className="main" data-testid="catalogPage">
       <Breadcrumbs items={crumbs} />
@@ -56,12 +69,18 @@ const Catalog: FC = () => {
         </div>
 
         <Pagination
-          onPageChange={handlePageChange}
-          totalCount={20}
-          currentPage={1}
-          pageSize={10}
+          allItems={allItems}
           className={cls.pagination}
+          pageSize={PAGE_SIZE}
+          onPageChange={handlePageChange}
         />
+
+        {/* <PaginationClient
+          totalCount={items.length}
+          pageSize={PAGE_SIZE}
+          onPageChange={handlePageChange}
+          className={cls.pagination}
+        /> */}
       </div>
     </main>
   );

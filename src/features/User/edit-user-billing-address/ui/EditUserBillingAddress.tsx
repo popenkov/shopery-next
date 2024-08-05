@@ -34,7 +34,6 @@ export const EditUserBillingAddress: FC<Props> = ({ className }) => {
   });
 
   const onSubmit: SubmitHandler<TFormData> = (data) => {
-    console.log('data', data);
     if (isValid) {
       console.log('form sent');
       reset();
