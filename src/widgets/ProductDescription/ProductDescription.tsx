@@ -106,7 +106,11 @@ export const ProductDescription: FC<Props> = ({ data, actions }) => {
                 <div className={cls.productDescriptionCategoriesContainer}>
                   {categories.map((category) => {
                     return (
-                      <Link className={cls.productDescriptionCategoriesLink} href={category.path}>
+                      <Link
+                        className={cls.productDescriptionCategoriesLink}
+                        href={category.path}
+                        key={category.path}
+                      >
                         {category.title}
                       </Link>
                     );
@@ -120,7 +124,11 @@ export const ProductDescription: FC<Props> = ({ data, actions }) => {
                 <div className={cls.productDescriptionTagsContainer}>
                   {categoryTags.map((categoryTag) => {
                     return (
-                      <Link className={cls.productDescriptionTagsLink} href={categoryTag.path}>
+                      <Link
+                        className={cls.productDescriptionTagsLink}
+                        href={categoryTag.path}
+                        key={categoryTag.path}
+                      >
                         {categoryTag.title}
                       </Link>
                     );

@@ -28,12 +28,23 @@
   max-width: 50%;
   height: auto;
   aspect-ratio: 1 / 1.1;
+
+  @media screen and (max-width: $df-screen-tl) {
+    width: 100%;
+    max-width: unset;
+    min-height: 200px;
+    aspect-ratio: unset;
+  }
 }
 
 .productPreviewSkeletonAbout {
   flex-grow: 1;
   flex-shrink: 0;
   max-width: 50%;
+
+  @media screen and (max-width: $df-screen-tl) {
+    max-width: unset;
+  }
 }
 
 .productPreviewSkeletonHeader {

@@ -51,7 +51,7 @@ export const ProductPreviewModal: FC = () => {
   }, [dispatch, itemId]);
 
   let content;
-  if (isLoading) {
+  if (true) {
     content = <ProductPreviewSkeleton />;
   }
   if (error) {
