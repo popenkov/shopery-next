@@ -12,6 +12,9 @@ import { TTagVariant } from '@/shared/ui/Tag/ui';
 import { ThumbSlider } from '@/shared/ui/ThumbSlider';
 
 import cls from './ProductDescription.module.scss';
+import { useAppSelector } from '@/shared/lib/hooks';
+import { selectCurrentCurrency } from '@/entities/Currency';
+import { DEFAULT_CURRENCY } from '@/features/CurrencySwitcher/ui/constants';
 
 type Props = {
   data: TProductDetailed;
@@ -35,6 +38,8 @@ export const ProductDescription: FC<Props> = ({ data, actions }) => {
     categories,
     categoryTags,
   } = data;
+
+  const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;
   return (
     <div className={cls.productDescription} aria-hidden="true">
       <div className={cls.productDescriptionContent}>
@@ -72,10 +77,12 @@ export const ProductDescription: FC<Props> = ({ data, actions }) => {
             <div className={cls.productDescriptionPriceWrapper}>
               {priceOld && (
                 <span className={cls.productDescriptionPriceOld}>
-                  {getFormattedPrice(priceOld)}
+                  {getFormattedPrice(priceOld, currentCurrency)}
                 </span>
               )}
-              <span className={cls.productDescriptionPrice}>{getFormattedPrice(price)}</span>
+              <span className={cls.productDescriptionPrice}>
+                {getFormattedPrice(price, currentCurrency)}
+              </span>
               {priceTags && (
                 <div className={cls.productDescriptionPriceTags}>
                   {priceTags.map((tag) => {

@@ -2,6 +2,7 @@ import { nanoid } from 'nanoid';
 
 import { type TProduct } from '@/entities/Product';
 import { TTabItem } from '@/shared/ui/ProductTabs';
+import { TCurrencyVariant } from '@/entities/Currency';
 
 const data: TTabItem<TProduct>[] = [
   {
@@ -13,8 +14,8 @@ const data: TTabItem<TProduct>[] = [
         path: '#',
         img: '/images/product-apple.jpg',
         title: '1 Green Apple',
-        price: 14.99,
-        priceOld: 20.99,
+        price: { USD: 14.99, EUR: 12.2 },
+        priceOld: { USD: 20.99, EUR: 18.2 },
         rating: 4,
         tags: [
           {
@@ -28,7 +29,7 @@ const data: TTabItem<TProduct>[] = [
         path: '#',
         img: '/images/product-mango.jpg',
         title: '1 Surjapur Mango',
-        price: 14.99,
+        price: { USD: 14.99, EUR: 12.2 },
         rating: 4,
       },
       {
@@ -36,7 +37,7 @@ const data: TTabItem<TProduct>[] = [
         path: '#',
         img: '/images/product-tomatos.jpg',
         title: '1 Red Tomatos',
-        price: 14.99,
+        price: { USD: 14.99, EUR: 12.2 },
         rating: 4,
       },
       {
@@ -44,7 +45,7 @@ const data: TTabItem<TProduct>[] = [
         path: '#',
         img: '/images/product-cauliflower.jpg',
         title: '1 Fresh Cauliflower',
-        price: 14.99,
+        price: { USD: 14.99, EUR: 12.2 },
         rating: 4,
       },
       {
@@ -52,7 +53,7 @@ const data: TTabItem<TProduct>[] = [
         path: '#',
         img: '/images/product-letucce.jpg',
         title: '1 Green Lettuce',
-        price: 14.99,
+        price: { USD: 14.99, EUR: 12.2 },
         rating: 4,
       },
       {
@@ -60,7 +61,7 @@ const data: TTabItem<TProduct>[] = [
         path: '#',
         img: '/images/product-eggplant.jpg',
         title: '1 Eggplant',
-        price: 14.99,
+        price: { USD: 14.99, EUR: 12.2 },
         rating: 4,
       },
       {
@@ -68,7 +69,7 @@ const data: TTabItem<TProduct>[] = [
         path: '#',
         img: '/images/product-chilli.jpg',
         title: '1 Green Chilli',
-        price: 14.99,
+        price: { USD: 14.99, EUR: 12.2 },
         rating: 4,
       },
       {
@@ -76,7 +77,7 @@ const data: TTabItem<TProduct>[] = [
         path: '#',
         img: '/images/product-eggplant-dark.jpg',
         title: '1 Eggplant',
-        price: 14.99,
+        price: { USD: 14.99, EUR: 12.2 },
         rating: 4,
       },
     ],
@@ -90,8 +91,8 @@ const data: TTabItem<TProduct>[] = [
         path: '#',
         img: '/images/product-apple.jpg',
         title: 'Green Apple',
-        price: 14.99,
-        priceOld: 20.99,
+        price: { USD: 14.99, EUR: 12.2 },
+        priceOld: { USD: 20.99, EUR: 18.2 },
         rating: 4,
         tags: [
           {
@@ -105,7 +106,7 @@ const data: TTabItem<TProduct>[] = [
         path: '#',
         img: '/images/product-mango.jpg',
         title: 'Surjapur Mango',
-        price: 14.99,
+        price: { USD: 14.99, EUR: 12.2 },
         rating: 4,
       },
       {
@@ -113,7 +114,7 @@ const data: TTabItem<TProduct>[] = [
         path: '#',
         img: '/images/product-tomatos.jpg',
         title: 'Red Tomatos',
-        price: 14.99,
+        price: { USD: 14.99, EUR: 12.2 },
         rating: 4,
       },
       {
@@ -121,7 +122,7 @@ const data: TTabItem<TProduct>[] = [
         path: '#',
         img: '/images/product-cauliflower.jpg',
         title: 'Fresh Cauliflower',
-        price: 14.99,
+        price: { USD: 14.99, EUR: 12.2 },
         rating: 4,
       },
       {
@@ -129,7 +130,7 @@ const data: TTabItem<TProduct>[] = [
         path: '#',
         img: '/images/product-letucce.jpg',
         title: 'Green Lettuce',
-        price: 14.99,
+        price: { USD: 14.99, EUR: 12.2 },
         rating: 4,
       },
       {
@@ -137,7 +138,7 @@ const data: TTabItem<TProduct>[] = [
         path: '#',
         img: '/images/product-eggplant.jpg',
         title: 'Eggplant',
-        price: 14.99,
+        price: { USD: 14.99, EUR: 12.2 },
         rating: 4,
       },
       {
@@ -145,7 +146,7 @@ const data: TTabItem<TProduct>[] = [
         path: '#',
         img: '/images/product-chilli.jpg',
         title: 'Green Chilli',
-        price: 14.99,
+        price: { USD: 14.99, EUR: 12.2 },
         rating: 4,
       },
       {
@@ -153,7 +154,7 @@ const data: TTabItem<TProduct>[] = [
         path: '#',
         img: '/images/product-eggplant-dark.jpg',
         title: 'Eggplant',
-        price: 14.99,
+        price: { USD: 14.99, EUR: 12.2 },
         rating: 4,
       },
     ],

@@ -32,7 +32,7 @@ export const AddToCartCounter: FC<Props> = ({ className, item }) => {
     // path?: string;
     // img: string;
     // title: string;
-    // price: number;
+    // price: Record<TCurrencyVariant, number>;
     // amount: number;
 
     const CartModel = { ...item, amount: amount };

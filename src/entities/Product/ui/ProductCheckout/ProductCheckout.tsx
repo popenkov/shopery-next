@@ -8,6 +8,9 @@ import { getFormattedPrice } from '@/shared/lib/utils';
 import { Text } from '@/shared/ui/Text';
 
 import cls from './ProductCheckout.module.scss';
+import { selectCurrentCurrency } from '@/entities/Currency';
+import { DEFAULT_CURRENCY } from '@/features/CurrencySwitcher/ui/constants';
+import { useAppSelector } from '@/shared/lib/hooks';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   data: Omit<TProduct, 'rating'>;
@@ -15,14 +18,15 @@ interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDi
 }
 
 export const ProductCheckout: FC<Props> = ({ data, className }) => {
+  const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;
   const { img, title, amount, path, price } = data;
   return (
     <div className={cn(cls.productCheckout, className)}>
       <div className={cls.productCheckoutInfo}>
         <div className={cls.productCheckoutPhoto}>
-          <Image src={img} alt={title} fill />
+          <Image src={img!} alt={title} fill />
         </div>
-        <Link href={path}>
+        <Link href={path!}>
           <Text variant="body_s" as="h3">
             {title}
             <Text variant="body_s" as="span" className={cls.productCheckoutQuantity}>
@@ -36,7 +40,7 @@ export const ProductCheckout: FC<Props> = ({ data, className }) => {
         </Link>
       </div>
       <Text className={cls.productCheckoutPrice} variant="body_s">
-        {getFormattedPrice(price)}
+        {getFormattedPrice(price, currentCurrency)}
       </Text>
     </div>
   );

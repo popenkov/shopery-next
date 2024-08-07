@@ -12,12 +12,15 @@ import { Radio } from '@/shared/ui/Radio';
 import { Text } from '@/shared/ui/Text';
 
 import cls from './CheckoutTotal.module.scss';
+import { selectCurrentCurrency } from '@/entities/Currency';
+import { DEFAULT_CURRENCY } from '@/features/CurrencySwitcher/ui/constants';
 
 type Props = {
   className: string;
 };
 
 export const CheckoutTotal: FC<Props> = ({ className }) => {
+  const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;
   const cartItems = useAppSelector(selectCartProducts);
   const totalPrice = useAppSelector(selectTotalPrice);
   const [activePaymentMethod, setActivePaymentMethod] = useState('cash');
@@ -43,7 +46,7 @@ export const CheckoutTotal: FC<Props> = ({ className }) => {
             Subtotal:
           </Text>
           <Text variant="body_s" weight="medium" className={cls.CheckoutTotalValue}>
-            {getFormattedPrice(totalPrice)}
+            {getFormattedPrice(totalPrice, currentCurrency)}
           </Text>
         </div>
         <div className={cls.CheckoutTotalRow}>
@@ -51,7 +54,9 @@ export const CheckoutTotal: FC<Props> = ({ className }) => {
             Shipping:
           </Text>
           <Text variant="body_s" weight="medium" className={cls.CheckoutTotalValue}>
-            {getFormattedPrice(totalPrice) ? getFormattedPrice(totalPrice) : 'Free'}
+            {getFormattedPrice(totalPrice, currentCurrency)
+              ? getFormattedPrice(totalPrice, currentCurrency)
+              : 'Free'}
           </Text>
         </div>
         <div className={cls.CheckoutTotalRow}>
@@ -59,7 +64,7 @@ export const CheckoutTotal: FC<Props> = ({ className }) => {
             Total:
           </Text>
           <Text variant="body_s" weight="medium" className={cls.CheckoutTotalValue}>
-            {getFormattedPrice(totalPrice)}
+            {getFormattedPrice(totalPrice, currentCurrency)}
           </Text>
         </div>
       </div>

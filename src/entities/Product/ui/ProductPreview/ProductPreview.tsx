@@ -34,11 +34,11 @@ export const ProductPreview: FC<ProductPreviewProps> = ({ data, actions }) => {
           <div className={cls.descriptionMain}>
             <div className={cls.price}>
               <Text variant="body_m" weight="medium">
-                {getFormattedPrice(price)}
+                {getFormattedPrice(price, currentCurrency)}
               </Text>
               {priceOld && (
                 <Text variant="body_m" weight="medium" className={cls.priceOld}>
-                  {getFormattedPrice(priceOld)}
+                  {getFormattedPrice(priceOld, currentCurrency)}
                 </Text>
               )}
             </div>

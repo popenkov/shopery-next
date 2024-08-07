@@ -18,10 +18,12 @@ import { Drawer } from '@/shared/ui/Drawer';
 import cls from './CartAside.module.scss';
 import { CartAsideFooter } from './CartAsideFooter';
 import { CartAsideHeader } from './CartAsideHeader';
+import { selectCurrentCurrency } from '@/entities/Currency';
+import { DEFAULT_CURRENCY } from '@/features/CurrencySwitcher/ui/constants';
 
 export const CartAside = () => {
   const dispatch = useAppDispatch();
-
+  const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;
   const cartItems = useAppSelector(selectCartProducts);
   const isMenuOpen = useAppSelector(selectMenuState);
   const totalAmount = useAppSelector(selectTotalAmount);
@@ -35,7 +37,7 @@ export const CartAside = () => {
     return null;
   }
 
-  const formattedPrice = getFormattedPrice(totalPrice);
+  const formattedPrice = getFormattedPrice(totalPrice, currentCurrency);
 
   return (
     <Drawer isOpen={isMenuOpen} onClose={handleDrawerClose} hasOverlay={false}>

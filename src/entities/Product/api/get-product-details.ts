@@ -26,8 +26,8 @@ const data: TProductDetailed = {
     ],
   },
   title: 'Chinese Cabbage',
-  price: 14.99,
-  priceOld: 17.28,
+  price: { USD: 14.99, EUR: 12.2 },
+  priceOld: { USD: 17.29, EUR: 16.2 },
   priceTags: [
     {
       type: 'sale',
@@ -167,8 +167,8 @@ const data: TProductDetailed = {
       path: '#',
       img: '/images/product-apple.jpg',
       title: 'Green Apple',
-      price: 14.99,
-      priceOld: 20.99,
+      price: { USD: 14.99, EUR: 12.2 },
+      priceOld: { USD: 20.99, EUR: 18.2 },
       rating: 4,
       tags: [
         {
@@ -182,7 +182,7 @@ const data: TProductDetailed = {
       path: '#',
       img: '/images/product-mango.jpg',
       title: 'Surjapur Mango',
-      price: 14.99,
+      price: { USD: 14.99, EUR: 12.2 },
 
       rating: 4,
     },
@@ -191,7 +191,7 @@ const data: TProductDetailed = {
       path: '#',
       img: '/images/product-tomatos.jpg',
       title: 'Red Tomatos',
-      price: 14.99,
+      price: { USD: 14.99, EUR: 12.2 },
 
       rating: 4,
     },
@@ -200,7 +200,7 @@ const data: TProductDetailed = {
       path: '#',
       img: '/images/product-cauliflower.jpg',
       title: 'Fresh Cauliflower',
-      price: 14.99,
+      price: { USD: 14.99, EUR: 12.2 },
 
       rating: 4,
     },

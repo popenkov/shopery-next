@@ -1,3 +1,4 @@
+import { TCurrencyVariant } from '@/entities/Currency';
 import { type TLink } from '@/shared/model/navigation-link.types';
 import { type TTag } from '@/shared/ui/Tag';
 
@@ -8,8 +9,8 @@ export type TProduct = {
   path?: string;
   img?: string;
   title: string;
-  price: number;
-  priceOld?: number;
+  price: Record<TCurrencyVariant, number>;
+  priceOld?: Record<TCurrencyVariant, number>;
   rating?: number;
   tags?: TTag[];
   stock?: {
@@ -40,8 +41,8 @@ export type TProductDetailed = {
   title: string;
   sku: string;
   brandLogo: string;
-  price: number;
-  priceOld?: number;
+  price: Record<TCurrencyVariant, number>;
+  priceOld: Record<TCurrencyVariant, number>;
   rating: number;
   priceTags: TTag[];
   tags?: TTag[];

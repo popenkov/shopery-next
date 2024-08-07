@@ -9,13 +9,16 @@ import { CartIcon } from '@/shared/ui/icons';
 import { Text } from '@/shared/ui/Text';
 
 import cls from './HeaderCart.module.scss';
+import { selectCurrentCurrency } from '@/entities/Currency';
+import { DEFAULT_CURRENCY } from '@/features/CurrencySwitcher/ui/constants';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 
 export const HeaderCart: FC<Props> = () => {
+  const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;
   const totalAmount = useAppSelector(selectTotalAmount);
   const totalPrice = useAppSelector(selectTotalPrice);
-  const formattedPrice = getFormattedPrice(totalPrice);
+  const formattedPrice = getFormattedPrice(totalPrice, currentCurrency);
   return (
     <div className={cls.cart}>
       <Link className={cls.cartLink} href={getRouteCart()}>

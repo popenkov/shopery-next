@@ -24,15 +24,9 @@ const Catalog: FC = () => {
   const { items: allItems } = getCatalogItems();
   const [items, setItems] = useState<TProduct[]>(allItems);
 
-  // todo
-  // useEffect(() => {
-  //   handlePageChange(1);
-  // }, [allItems]);
-
   const handlePageChange = (filteredProducts: TProduct[]) => {
     console.log('handlePageChange', filteredProducts);
 
-    // update your component state to display the current page cards
     setItems(filteredProducts);
   };
 

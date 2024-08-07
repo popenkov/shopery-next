@@ -1,3 +1,5 @@
+import { TCurrencyVariant } from '@/entities/Currency';
+
 export interface UserSchema {
   _inited: boolean;
   authData?: TUser;
@@ -21,7 +23,7 @@ export type TUser = {
 export type TUserOrderPreview = {
   id: number;
   date: string;
-  price: number;
+  price: Record<TCurrencyVariant, number>;
   amount: number;
   status: 'Processing' | 'On the way' | 'Completed';
 };
@@ -31,7 +33,7 @@ export type TUserOrderItem = {
   path: string;
   img: string;
   name: string;
-  price: number;
+  price: Record<TCurrencyVariant, number>;
   quantity: number;
   total: number;
 };
