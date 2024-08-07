@@ -6,6 +6,7 @@ import { ChevronDownIcon } from '@/shared/ui/icons';
 import { Text } from '../Text';
 
 import cls from './CategoriesButton.module.scss';
+import { useTranslations } from 'next-intl';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   className?: string;
@@ -13,6 +14,8 @@ interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLButtonElement>, HTM
 }
 
 export const CategoriesButton: FC<Props> = ({ className, onClick }) => {
+  const t = useTranslations('HomePage');
+
   const handleCategoryButtonClick = () => {
     onClick();
   };
@@ -20,7 +23,7 @@ export const CategoriesButton: FC<Props> = ({ className, onClick }) => {
     <button className={cn(cls.button, className)} onClick={handleCategoryButtonClick}>
       <span className={cls.buttonLines} />
       <Text variant="body_s" weight="medium" as="span">
-        All Categories
+        {t('allCategories')}
       </Text>
       <ChevronDownIcon className={cls.chevron} />
     </button>

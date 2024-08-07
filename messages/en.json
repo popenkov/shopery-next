@@ -1,0 +1,13 @@
+{
+  "common": {
+    "search": "search",
+    "cart": "Shopping cart"
+  },
+  "HomePage": {
+    "title": "Hello world!",
+    "address": "Store Location: Lincoln- 344, Illinois, Chicago, USA",
+    "login": "Sign in",
+    "registraion": "Sign up",
+    "allCategories": "All categories"
+  }
+}

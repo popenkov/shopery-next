@@ -8,10 +8,12 @@ import { Button } from '@/shared/ui/Buttons';
 import { Input } from '@/shared/ui/Input';
 
 import cls from './ProductsSearch.module.scss';
+import { useTranslations } from 'next-intl';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 
 export const ProductSearch: FC<Props> = () => {
+  const t = useTranslations('common');
   const [searchValue, setSearchValue] = useState('');
 
   const handleSearchButtonClick = useCallback(() => {
@@ -27,8 +29,8 @@ export const ProductSearch: FC<Props> = () => {
   return (
     <div className={cls.search}>
       <Input
-        type="search"
-        placeholder="search"
+        type={t('search')}
+        placeholder={t('search')}
         hasValidation={false}
         className={cls.searchField}
         value={searchValue}

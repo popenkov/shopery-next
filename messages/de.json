@@ -1,0 +1,12 @@
+{
+  "common": {
+    "search": "Suchen",
+    "cart": "Tasche"
+  },
+  "HomePage": {
+    "address": "Geschäftsort: Lincoln- 344, Illinois, Chicago, USA",
+    "login": "Anmelden",
+    "registraion": "Registrieren",
+    "allCategories": "Alle Kategorien"
+  }
+}

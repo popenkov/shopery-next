@@ -14,14 +14,16 @@ import { Text } from '@/shared/ui/Text';
 import { UserMenu } from '../UserMenu';
 
 import cls from './HeaderTop.module.scss';
+import { useTranslations } from 'next-intl';
 
 export const HeaderTop: FC = () => {
+  const t = useTranslations('HomePage');
   const authData = useAppSelector(selectAuthData);
 
   return (
     <div className={cls.top}>
       <div className={cls.content}>
-        <Location address="Store Location: Lincoln- 344, Illinois, Chicago, USA" />
+        <Location address={t('address')} />
         <div className={cls.actions}>
           <div className={cls.dropdowns}>
             <LangSwitcher />

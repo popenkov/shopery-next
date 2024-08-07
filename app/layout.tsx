@@ -1,6 +1,8 @@
 import { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
+import { NextIntlClientProvider } from 'next-intl';
+import { getLocale, getMessages } from 'next-intl/server';
 
 import { Footer } from '@/widgets/Footer';
 import { Header } from '@/widgets/Header';
@@ -20,22 +22,32 @@ export const metadata: Metadata = {
   description: 'Ecobazar description',
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: ReactNode;
 }>) {
+  const locale = await getLocale();
+
+  // // Providing all messages to the client
+  // // side is the easiest way to get started
+  const messages = await getMessages();
+
   return (
-    <html lang="en">
+    <html
+    //  lang={locale}
+    >
       <body className={poppins.className}>
         <StoreProvider>
-          <SmoothScroll speed={0.08}>
-            <Header />
-            {children}
-            <Footer />
-          </SmoothScroll>
-          <CartAside />
-          <ProductPreviewModal />
+          <NextIntlClientProvider messages={messages}>
+            <SmoothScroll speed={0.08}>
+              <Header />
+              {children}
+              <Footer />
+            </SmoothScroll>
+            <CartAside />
+            <ProductPreviewModal />
+          </NextIntlClientProvider>
         </StoreProvider>
       </body>
     </html>

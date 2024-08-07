@@ -21,6 +21,7 @@ import { Text } from '@/shared/ui/Text';
 import { getFilterData } from '../api';
 
 import cls from './Filters.module.scss';
+import { useTranslations } from 'next-intl';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   classname?: string;
@@ -38,7 +39,7 @@ type TState = {
 
 export const Filters: FC<Props> = ({ classname }) => {
   const { categories, priceRange, tags } = getFilterData();
-
+  const t = useTranslations('HomePage');
   const [isButtonShown, setIsButtonShown] = useState(false);
   const [chosenFilters, setChosenFilters] = useState<TState>({
     price: priceRange,
@@ -108,7 +109,7 @@ export const Filters: FC<Props> = ({ classname }) => {
       <Accordion
         title={
           <Text variant="body_l" weight="medium">
-            All categories
+            {t('allCategories')}
           </Text>
         }
         isOpenByDefault
