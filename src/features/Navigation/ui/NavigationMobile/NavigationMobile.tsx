@@ -36,11 +36,11 @@ export const NavigationMobile = () => {
                 {link.title}
               </Text>
             }
-            key={link.path}
+            key={`${link.path}/${link.title}`}
           >
             {link?.items?.map((sublink) => {
               return (
-                <li key={sublink.path} className={cls.navigationMenuItem}>
+                <li key={`${sublink.path}/${sublink.title}`} className={cls.navigationMenuItem}>
                   <Link href={sublink.path} className={cls.navigationLink}>
                     {sublink.title}
                   </Link>

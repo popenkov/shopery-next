@@ -1,6 +1,7 @@
 import { nanoid } from 'nanoid';
 
 import { Footer } from '../model';
+import { getUserLocale } from '@/app/lib/locale';
 
 const data: Footer = {
   navigation: [
@@ -211,6 +212,7 @@ const dataDe: Footer = {
   ],
 };
 
-export const getFooterData = () => {
-  return data;
+export const getFooterData = async () => {
+  const locale = await getUserLocale();
+  return locale === 'en' ? data : dataDe;
 };

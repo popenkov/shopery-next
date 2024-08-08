@@ -38,7 +38,7 @@ export const ProductSearch: FC<Props> = () => {
       />
 
       <Button type="submit" className={cls.searchButton} onClick={handleSearchButtonClick}>
-        Search
+        {t('search')}
       </Button>
     </div>
   );

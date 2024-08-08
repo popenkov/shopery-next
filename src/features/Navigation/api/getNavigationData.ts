@@ -116,7 +116,7 @@ const dataDe: TNavigation = {
     },
     {
       title: 'Shop',
-      path: '/katalog',
+      path: '/Shop',
       items: [
         { title: 'Shop 1', path: '/shop-1' },
         { title: 'Shop 1', path: '/shop-2' },
@@ -124,7 +124,7 @@ const dataDe: TNavigation = {
     },
     {
       title: 'Seiten',
-      path: '/katalog',
+      path: '/page',
       items: [
         { title: 'Seiten 1', path: '/page-1' },
         { title: 'Seiten 1', path: '/page-2' },

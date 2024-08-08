@@ -37,7 +37,7 @@ export const NavigationCategories: FC<Props> = ({ categories }) => {
         {categories.map((link) => {
           const Icon = getCategoryIcon(link.icon);
           return (
-            <li key={link.path} className={cls.listItem}>
+            <li key={`${link.path}/${link.title}`} className={cls.listItem}>
               <Link className={cls.link} href={link.path} onClick={handleLinkClick}>
                 <Icon className={cls.linkIcon} />
                 <Text variant="body_s" weight="medium" as="span">

@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, memo } from 'react';
+import { FC, memo, useState } from 'react';
 
 import { Dropdown, TDropdownItem } from '@/shared/ui/Dropdown';
 
@@ -10,6 +10,7 @@ import { type TCurrencyVariant, updateCurrentCurrency } from '@/entities/Currenc
 
 export const CurrencySwitcher: FC = memo(() => {
   const dispatch = useAppDispatch();
+  const [currentCurrency, setCurrentCurrency] = useState<TDropdownItem>(CHANGE_CURRENCY_DATA[0]);
 
   const handleCurrencyChange = (item: TDropdownItem) => {
     const formattedValue = item.value.toUpperCase();
@@ -21,6 +22,7 @@ export const CurrencySwitcher: FC = memo(() => {
 
   return (
     <Dropdown
+      defaultItem={currentCurrency}
       data={CHANGE_CURRENCY_DATA}
       onChange={handleCurrencyChange}
       testid="HeaderTop.CurrencySwitcher"
