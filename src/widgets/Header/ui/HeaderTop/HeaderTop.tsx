@@ -40,7 +40,7 @@ export const HeaderTop: FC = () => {
                 href={getRouteLogin()}
                 data-testid="HeaderTop.loginLink"
               >
-                Sign in
+                {t('login')}
               </Link>
               <span className={cls.authSeparator}>/</span>
               <Link
@@ -48,7 +48,7 @@ export const HeaderTop: FC = () => {
                 href={getRouteRegistation()}
                 data-testid="HeaderTop.registerLink"
               >
-                Sign up
+                {t('registration')}
               </Link>
             </Text>
           )}

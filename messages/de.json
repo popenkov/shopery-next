@@ -1,12 +1,24 @@
 {
   "common": {
     "search": "Suchen",
-    "cart": "Tasche"
+    "cart": "Tasche",
+    "or": "oder"
   },
   "HomePage": {
     "address": "Geschäftsort: Lincoln- 344, Illinois, Chicago, USA",
     "login": "Anmelden",
-    "registraion": "Registrieren",
+    "registration": "Registrieren",
+
     "allCategories": "Alle Kategorien"
+  },
+  "LoginPage": {
+    "noAccount": "Haben Sie noch kein Konto?",
+    "signIn": "Anmeldung",
+    "login": "Anmelden",
+    "register": "Registrieren"
+  },
+  "Footer": {
+    "aboutTitle": "Über Shopery",
+    "aboutText": "Mal sehen, was Uvinisterät, deosn't es in mttaer aber die wrod als Rscheearch an eine, in der Mühe und Schmerzen können jeedn lteter snderon das Wrot das Projekt raed."
   }
 }
