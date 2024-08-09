@@ -1,6 +1,6 @@
 'use client';
 
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import cn from 'classnames';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 
@@ -10,32 +10,63 @@ import {
   STATES_LIST,
   EMAIL_REGEX,
 } from '@/shared/lib/constants';
-import { AppSelect } from '@/shared/ui/AppSelect';
+import { AppSelect, SelectOption } from '@/shared/ui/AppSelect';
 import { Button } from '@/shared/ui/Buttons';
 import { Input } from '@/shared/ui/Input';
 import { MaskedInput } from '@/shared/ui/MaskedInput';
 
-import { TFormData } from '../model';
-
 import cls from './EditUserBillingAddress.module.scss';
+import { useAppDispatch, useAppSelector } from '@/shared/lib/hooks';
+import { getUserBillingAddress, TUserAddress } from '@/entities/User';
+import { getSelectedOption, getSelectValue } from '@/shared/lib/utils';
+import { PropsValue } from 'react-select';
+import { updateBillingAddress } from '@/entities/User/services/updateBillingAddress';
+import { UnknownAction } from '@reduxjs/toolkit';
 
 type Props = {
   className?: string;
 };
 
 export const EditUserBillingAddress: FC<Props> = ({ className }) => {
+  const dispatch = useAppDispatch();
+  const userData = useAppSelector(getUserBillingAddress);
   const {
     reset,
     handleSubmit,
     control,
+    watch,
+    setValue,
     formState: { isValid },
-  } = useForm<TFormData>({
+  } = useForm<TUserAddress>({
+    defaultValues: userData,
     mode: 'onChange',
   });
 
-  const onSubmit: SubmitHandler<TFormData> = (data) => {
+  useEffect(() => {
+    if (Object.keys(userData).length) {
+      reset(userData);
+    }
+  }, [userData]);
+
+  const selectedCountry = watch('countryAddress');
+
+  useEffect(() => {
+    console.log(
+      'getSelectedOption(selectedCountry, COUNTRIES_LIST).value)',
+      getSelectedOption(selectedCountry, COUNTRIES_LIST).value,
+    );
+    console.log(
+      'getSelectValue(value, COUNTRIES_LIST)',
+      getSelectValue(getSelectedOption(selectedCountry, COUNTRIES_LIST).value, COUNTRIES_LIST),
+    );
+    if (!selectedCountry) {
+      setValue('countryAddress', getSelectedOption(selectedCountry, COUNTRIES_LIST).value);
+    }
+  }, [selectedCountry]);
+
+  const onSubmit: SubmitHandler<TUserAddress> = (data) => {
     if (isValid) {
-      console.log('form sent');
+      dispatch(updateBillingAddress(data) as unknown as UnknownAction);
       reset();
     }
   };
@@ -116,10 +147,11 @@ export const EditUserBillingAddress: FC<Props> = ({ className }) => {
           rules={{
             required: VALIDATION_MESSAGES.REQUIRED,
           }}
-          render={({ field: { onChange }, fieldState: { error } }) => (
+          render={({ field: { value, onChange }, fieldState: { error } }) => (
             <AppSelect
               label="Country / Region"
               placeholder="Select"
+              value={getSelectValue(value, COUNTRIES_LIST) as PropsValue<SelectOption>}
               options={COUNTRIES_LIST}
               onChange={(newValue) => onChange(newValue)}
               errorText={error?.message}
@@ -134,10 +166,11 @@ export const EditUserBillingAddress: FC<Props> = ({ className }) => {
           rules={{
             required: VALIDATION_MESSAGES.REQUIRED,
           }}
-          render={({ field: { onChange }, fieldState: { error } }) => (
+          render={({ field: { value, onChange }, fieldState: { error } }) => (
             <AppSelect
               label="States"
               placeholder="Select"
+              value={getSelectValue(value, STATES_LIST) as PropsValue<SelectOption>}
               options={STATES_LIST}
               onChange={(newValue) => onChange(newValue)}
               errorText={error?.message}

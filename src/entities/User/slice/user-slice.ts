@@ -2,12 +2,18 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import { USER_LOCALSTORAGE_KEY } from '@/shared/lib/constants';
 
-import { TUser, UserSchema } from '../model/types';
+import { TUser, TUserData, UserSchema } from '../model/types';
 import { initAuthData } from '../services/initAuthData';
+import { getUserDataById } from '../services/getUserDataById';
+import { updateBillingAddress } from '../services/updateBillingAddress';
 
 const initialState: UserSchema = {
   _inited: false,
   authData: undefined,
+  user: undefined,
+  error: undefined,
+  isLoading: true,
+  addressData: undefined,
 };
 
 export const userSlice = createSlice({
@@ -24,13 +30,39 @@ export const userSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(initAuthData.fulfilled, (state, { payload }: PayloadAction<TUser>) => {
-      state.authData = payload;
-      state._inited = true;
-    });
-    builder.addCase(initAuthData.rejected, (state) => {
-      state._inited = true;
-    });
+    builder
+      .addCase(initAuthData.fulfilled, (state, { payload }: PayloadAction<TUser>) => {
+        state.authData = payload;
+        state._inited = true;
+      })
+      .addCase(initAuthData.rejected, (state) => {
+        state._inited = true;
+      })
+      .addCase(getUserDataById.pending, (state) => {
+        state.error = undefined;
+        state.isLoading = true;
+      })
+      .addCase(getUserDataById.fulfilled, (state, action: PayloadAction<TUserData>) => {
+        state.isLoading = false;
+        state.user = action.payload;
+      })
+      .addCase(getUserDataById.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      })
+      // todo
+      .addCase(updateBillingAddress.pending, (state) => {
+        state.error = undefined;
+        state.isLoading = true;
+      })
+      .addCase(updateBillingAddress.fulfilled, (state, action: PayloadAction<Profile>) => {
+        state.isLoading = false;
+        state.addressData = action.payload;
+      })
+      .addCase(updateBillingAddress.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      });
   },
 });
 

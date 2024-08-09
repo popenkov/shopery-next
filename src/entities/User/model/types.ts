@@ -3,6 +3,10 @@ import { TCurrencyVariant } from '@/entities/Currency';
 export interface UserSchema {
   _inited: boolean;
   authData?: TUser;
+  user?: TUserData;
+  isLoading?: boolean;
+  error?: string;
+  addressData?: TUserAddress;
 }
 
 export type TUserAddress = {
@@ -10,6 +14,13 @@ export type TUserAddress = {
   street: string;
   email: string;
   phone: string;
+  firstName: string;
+  lastName: string;
+  companyName: string;
+  streetAddress: string;
+  countryAddress: string;
+  countryState: string;
+  zipAddress: string;
 };
 
 export type TUser = {
@@ -18,6 +29,23 @@ export type TUser = {
   name: string;
   role?: string;
   avatar?: string;
+};
+
+export type TUserPersonalData = {
+  photo: string;
+  firstName: string;
+  lastName: string;
+  role: string;
+  email: string;
+  phone: string;
+};
+
+export type TUserData = {
+  id: string;
+  userId: string;
+  personalData: TUserPersonalData;
+  shippingAddress: TUserAddress;
+  billingAddress: TUserAddress;
 };
 
 export type TUserOrderPreview = {

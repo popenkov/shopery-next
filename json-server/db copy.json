@@ -109,104 +109,38 @@
     "sku": "2,51,594",
     "brandLogo": "brand-farmary.svg",
     "description": "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et ipsum. Nulla varius magna a consequat pulvinar. ",
-    "categories": [
-      {
-        "title": "Vegetables",
-        "path": "#"
-      }
-    ],
+    "categories": [{ "title": "Vegetables", "path": "#" }],
     "categoryTags": [
-      {
-        "title": "Vegetables",
-        "path": "#"
-      },
-      {
-        "title": "Healthy",
-        "path": "#"
-      },
-      {
-        "title": "Chinese",
-        "path": "#"
-      },
-      {
-        "title": "Cabbage",
-        "path": "#"
-      },
-      {
-        "title": "Green Cabbage",
-        "path": "#"
-      }
+      { "title": "Vegetables", "path": "#" },
+      { "title": "Healthy", "path": "#" },
+      { "title": "Chinese", "path": "#" },
+      { "title": "Cabbage", "path": "#" },
+      { "title": "Green Cabbage", "path": "#" }
     ],
     "descriptions": "<p> Sed commodo aliquam dui ac porta. Fusce ipsum felis, imperdiet at posuere ac, viverra at mauris. Maecenas tincidunt ligula a sem vestibulum pharetra. Maecenas auctor tortor lacus, nec laoreet nisi porttitor vel. Etiam tincidunt metus vel dui interdum sollicitudin. Mauris sem ante, vestibulum nec orci vitae, aliquam mollis lacus. Sed et condimentum arcu, id molestie tellus. Nulla facilisi. Nam scelerisque vitae justo a convallis. Morbi urna ipsum, placerat quis commodo quis, egestas elementum leo. Donec convallis mollis enim. Aliquam id mi quam. Phasellus nec fringilla elit.</p> <p>  Nulla mauris tellus, feugiat quis pharetra sed, gravida ac dui. Sed iaculis, metus faucibus elementum tincidunt, turpis mi viverra velit, pellentesque tristique neque mi eget nulla. Proin luctus elementum neque et pharetra. </p> <ul>  <li> 100 g of fresh leaves provides. </li> <li> Aliquam ac est at augue volutpat elementum. </li> <li> Quisque nec enim eget sapien molestie. </li> <li> Proin convallis odio volutpat finibus posuere.  </li>  </ul>  <p>  Cras et diam maximus, accumsan  sapien et, sollicitudin velit. Nulla  blandit eros non turpis lobortis iaculis at ut massa.  </p>",
     "specs": [
-      {
-        "title": "Weight",
-        "value": [
-          {
-            "title": "03",
-            "path": "#"
-          }
-        ]
-      },
-      {
-        "title": "Color",
-        "value": [
-          {
-            "title": "Green",
-            "path": "/"
-          }
-        ]
-      },
-      {
-        "title": "Type",
-        "value": [
-          {
-            "title": "Organic",
-            "path": "/"
-          }
-        ]
-      },
+      { "title": "Weight", "value": [{ "title": "03", "path": "#" }] },
+      { "title": "Color", "value": [{ "title": "Green", "path": "/" }] },
+      { "title": "Type", "value": [{ "title": "Organic", "path": "/" }] },
       {
         "title": "Category",
-        "value": [
-          {
-            "title": "Vegetables",
-            "path": "/"
-          }
-        ]
+        "value": [{ "title": "Vegetables", "path": "/" }]
       },
       {
         "title": "Stock Status",
-        "value": [
-          {
-            "title": "Available (5,413)",
-            "path": "#"
-          }
-        ]
+        "value": [{ "title": "Available (5,413)", "path": "#" }]
       },
       {
         "title": "Tags",
         "value": [
-          {
-            "title": "Vegetables",
-            "path": "/"
-          },
-          {
-            "title": "Healthy",
-            "path": "/"
-          },
-          {
-            "title": "Chinese",
-            "path": "/"
-          },
-          {
-            "title": "Cabbage",
-            "path": "/"
-          },
-          {
-            "title": " Green Cabbage,",
-            "path": "/"
-          }
+          { "title": "Vegetables", "path": "/" },
+          { "title": "Healthy", "path": "/" },
+
+          { "title": "Chinese", "path": "/" },
+
+          { "title": "Cabbage", "path": "/" },
+
+          { "title": " Green Cabbage,", "path": "/" }
         ]
       }
     ],
@@ -308,6 +242,7 @@
         "img": "/images/product-mango.jpg",
         "title": "Surjapur Mango",
         "price": 14.99,
+
         "rating": 4
       },
       {
@@ -316,6 +251,7 @@
         "img": "/images/product-tomatos.jpg",
         "title": "Red Tomatos",
         "price": 14.99,
+
         "rating": 4
       },
       {
@@ -324,6 +260,7 @@
         "img": "/images/product-cauliflower.jpg",
         "title": "Fresh Cauliflower",
         "price": 14.99,
+
         "rating": 4
       }
     ]
@@ -340,16 +277,17 @@
         "email": "dainne.ressell@gmail.com",
         "phone": "(671) 555-0110"
       },
+
       "billingAddress": {
-        "firstName": "Tony",
-        "lastName": "Honest",
-        "companyName": "Google",
-        "streetAddress": "1600 Amphitheatre Parkway",
+        "firstName": "Dianne",
+        "lastName": "Russell",
+        "companyName": "",
+        "streetAddress": "4140 Parker Rd. Allentown, New Mexico 31134",
         "countryAddress": "US",
-        "countryState": "MT",
-        "zipAddress": "333 333",
-        "email": "test@test.ru",
-        "phone": "+3 (333) 333-33-33"
+        "countryState": "NM",
+        "zipAddress": "5555555",
+        "email": "dainne.ressell@gmail.com",
+        "phone": "(671) 555-0110"
       }
     }
   ]

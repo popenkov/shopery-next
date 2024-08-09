@@ -86,20 +86,42 @@ server.post('/product-detailed', (req, res) => {
   }
 });
 
-server.put('/update-address', (req, res) => {
+server.post('/user_data', (req, res) => {
   try {
-    const { data } = req.body;
+    const { userId } = req.body;
     const db = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'db.json'), 'UTF-8'));
 
     const { user_data = [] } = db;
 
-    const userDataFromBd = user_data.find((user) => user.userId === data.id);
+    const user = user_data.find((user) => {
+      return user.userId === userId;
+    });
+    if (user) {
+      return res.json(user);
+    }
+    return res.status(403).json({ message: 'User not found' });
+  } catch (e) {
+    console.log(e);
+    return res.status(500).json({ message: e.message });
+  }
+});
+
+server.put('/update-billing-address', (req, res) => {
+  try {
+    const db = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'db.json'), 'UTF-8'));
+
+    const { user_data = [] } = db;
+
+    const userDataFromBd = user_data[0];
 
     if (userDataFromBd) {
-      userDataFromBd.address = data.address;
+      userDataFromBd.billingAddress = req.body;
+
+      // Write the updated db object back to the db.json file
+      fs.writeFileSync(path.resolve(__dirname, 'db.json'), JSON.stringify(db, null, 2));
       return res.status(200).json({ message: 'Success' });
     }
-    return res.status(403).json({ message: 'Product not found' });
+    return res.status(403).json({ message: 'User not found' });
   } catch (e) {
     console.log(e);
     return res.status(500).json({ message: e.message });

@@ -1,12 +1,10 @@
-import { FC } from 'react';
-
-import { SettingsAccount } from './SettingsAccount';
+import SettingsAccount from './SettingsAccount';
 import cls from './SettingsPage.module.scss';
 
-export const SettingsPage: FC = () => {
+export default function SettingsPage() {
   return (
     <div className={cls.SettingsPage}>
       <SettingsAccount />
     </div>
   );
-};
+}
