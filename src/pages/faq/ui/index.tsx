@@ -22,7 +22,14 @@ export const Faq: FC = () => {
           <FaqAccordeons />
         </div>
         <div className={cls.FaqImageContainer}>
-          <Image src="/images/faq-image.jpeg" fill alt="not found image" className={cls.FaqImage} />
+          <Image
+            src="/images/faq-image.jpeg"
+            fill
+            width="0"
+            height="0"
+            alt="not found image"
+            className={cls.FaqImage}
+          />
         </div>
       </div>
       <Subscription variant="gray" />

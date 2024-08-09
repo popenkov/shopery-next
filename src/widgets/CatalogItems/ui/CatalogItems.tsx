@@ -5,6 +5,7 @@ import { Product, ProductSmall, TProduct } from '@/entities/Product';
 import { AddToCart } from '@/features/Cart/add-to-cart';
 import { AddToWishlist } from '@/features/Product';
 import { ShowProductPreview } from '@/features/Product';
+import { CardRevealingOnScroll } from '@/shared/lib/utils/motions';
 
 import cls from './CatalogItems.module.scss';
 
@@ -19,21 +20,23 @@ export const CatalogItems: FC<Props> = ({ products, className }) => {
       <div className={cls.catalogDesktopWrapper}>
         {products.map((product) => {
           return (
-            <Product
-              data={product}
-              key={product.id}
-              actions={
-                <>
-                  <AddToWishlist className={cls.imageButton} item={product} theme="secondary" />
-                  <ShowProductPreview
-                    item={product}
-                    theme="secondary"
-                    className={cls.imageButton}
-                  />
-                </>
-              }
-              cartAction={<AddToCart item={product} className={cls.button} />}
-            />
+            <CardRevealingOnScroll>
+              <Product
+                data={product}
+                key={product.id}
+                actions={
+                  <>
+                    <AddToWishlist className={cls.imageButton} item={product} theme="secondary" />
+                    <ShowProductPreview
+                      item={product}
+                      theme="secondary"
+                      className={cls.imageButton}
+                    />
+                  </>
+                }
+                cartAction={<AddToCart item={product} className={cls.button} />}
+              />
+            </CardRevealingOnScroll>
           );
         })}
       </div>

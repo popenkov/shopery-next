@@ -13,3 +13,5 @@ export {
 export { type TProduct, type TProductDetailed } from './model';
 
 export { getProductDetails } from './api';
+
+export { productsReducer } from './model';

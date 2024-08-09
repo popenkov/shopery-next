@@ -24,7 +24,7 @@ const Product: FC = () => {
           data={data}
           actions={
             <>
-              <AddToCartCounter className={cls.ProductCartPreviewCounter} />
+              <AddToCartCounter className={cls.ProductCartPreviewCounter} item={data} />
               <AddToWishlist className={cls.productFavoriteButton} item={data} />
             </>
           }

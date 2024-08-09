@@ -11,12 +11,15 @@ import { AppLink } from '@/shared/ui/AppLink';
 import { Text } from '@/shared/ui/Text';
 
 import cls from './CartTotal.module.scss';
+import { selectCurrentCurrency } from '@/entities/Currency';
+import { DEFAULT_CURRENCY } from '@/features/CurrencySwitcher/ui/constants';
 
 type Props = {
   className?: string;
 };
 
 export const CartTotal: FC<Props> = ({ className }) => {
+  const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;
   const { totalPrice, cart } = useAppSelector(selectCartData);
 
   return (

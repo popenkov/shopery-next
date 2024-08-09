@@ -1,0 +1,24 @@
+{
+  "common": {
+    "search": "search",
+    "cart": "Shopping cart",
+    "or": "or"
+  },
+  "HomePage": {
+    "title": "Hello world!",
+    "address": "Store Location: Lincoln- 344, Illinois, Chicago, USA",
+    "login": "Sign in",
+    "registration": "Sign up",
+    "allCategories": "All categories"
+  },
+  "LoginPage": {
+    "noAccount": "Don’t have account?",
+    "signIn": "Sign in",
+    "login": "Login",
+    "register": "Registrieren"
+  },
+  "Footer": {
+    "aboutTitle": "About Shopery",
+    "aboutText": "Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magna congue nec."
+  }
+}

@@ -9,8 +9,8 @@ import cls from './FooterSocials.module.scss';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLUListElement>, HTMLUListElement> {}
 
-export const FooterSocials: FC<Props> = () => {
-  const { socialLinks } = getFooterData();
+export const FooterSocials: FC<Props> = async () => {
+  const { socialLinks } = await getFooterData();
   return (
     <ul className={cls.socials}>
       {socialLinks.map(({ icon, id }) => {

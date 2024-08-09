@@ -8,6 +8,9 @@ import { StarRating } from '@/shared/ui/StarRating';
 import { Text } from '@/shared/ui/Text';
 
 import cls from './Product.module.scss';
+import { useAppSelector } from '@/shared/lib/hooks';
+import { selectCurrentCurrency } from '@/entities/Currency';
+import { DEFAULT_CURRENCY } from '@/features/CurrencySwitcher/ui/constants';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   data: TProduct;
@@ -16,13 +19,17 @@ interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDi
 }
 
 export const Product: FC<Props> = ({ data, actions, cartAction }) => {
+  const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;
   const { img, title, path, price, priceOld, rating } = data;
 
+  if (!currentCurrency) {
+    return null;
+  }
   return (
     <div className={cls.product}>
       <div className={cls.imageContainer}>
         <div className={cls.buttons}>{actions}</div>
-        <Image src={img} fill alt={title} className={cls.image} />
+        <Image src={img!} fill alt={title} className={cls.image} />
       </div>
       <div className={cls.description}>
         <div>
@@ -33,11 +40,11 @@ export const Product: FC<Props> = ({ data, actions, cartAction }) => {
           </Link>
           <div className={cls.price}>
             <Text variant="body_m" weight="medium">
-              {getFormattedPrice(price)}
+              {getFormattedPrice(price, currentCurrency)}
             </Text>
             {priceOld && (
               <Text variant="body_m" weight="medium" className={cls.priceOld}>
-                {getFormattedPrice(priceOld)}
+                {getFormattedPrice(priceOld, currentCurrency)}
               </Text>
             )}
           </div>

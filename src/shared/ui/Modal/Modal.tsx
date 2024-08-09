@@ -34,15 +34,15 @@ export const Modal = (props: ModalProps) => {
     [cls.isClosing]: isClosing,
   };
 
-  if (lazy && !isMounted) {
+  if (lazy && !isMounted && typeof window === 'undefined') {
     return null;
   }
 
   return (
-    <Portal element={document.getElementById('app') ?? document.body}>
-      <div className={cn(cls.Modal, mods, [className, 'app_modal'])}>
+    <Portal element={document.getElementById('app') ?? document?.body}>
+      <div className={cn(cls.Modal, mods)}>
         <Overlay onClick={close} />
-        <div className={cls.content}>{children}</div>
+        <div className={cn(cls.content, className)}>{children}</div>
       </div>
     </Portal>
   );

@@ -69,6 +69,7 @@ export const ProductTabs = <T extends unknown>({
               return tabContent(item);
             })}
           </div>
+
           {sliderContent && (
             <div className={cls.sliderContent}>{sliderContent({ data: tabContentState })}</div>
           )}

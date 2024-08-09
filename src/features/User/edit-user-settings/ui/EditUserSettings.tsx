@@ -14,12 +14,14 @@ import { MaskedInput } from '@/shared/ui/MaskedInput';
 import { TFormData } from '../model';
 
 import cls from './EditUserSettings.module.scss';
+import { TUserPersonalData } from '@/entities/User/model';
 
 type Props = {
+  data: TUserPersonalData;
   className?: string;
 };
 
-export const EditUserSettings: FC<Props> = ({ className }) => {
+export const EditUserSettings: FC<Props> = ({ data, className }) => {
   const {
     register,
     reset,
@@ -29,6 +31,8 @@ export const EditUserSettings: FC<Props> = ({ className }) => {
   } = useForm<TFormData>({
     mode: 'onChange',
   });
+
+  // todo обновить данные
 
   const onSubmit: SubmitHandler<TFormData> = (data) => {
     console.log('data', data);

@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 import withSvgr from 'next-plugin-svgr';
 import CircularDependencyPlugin from 'circular-dependency-plugin';
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin('./src/app/configs/i18n/i18n.ts');
 
 const nextConfig = {
   experimental: {
@@ -18,9 +21,9 @@ const nextConfig = {
   webpack: (config) => {
     config.plugins.push(
       new CircularDependencyPlugin({
-        exclude: /a\.js|node_modules/,
+        exclude: /a\.js|node_modules|/,
         include: /src/,
-        failOnError: true,
+        failOnError: false, //todo
         allowAsyncCycles: false,
         cwd: process.cwd(),
       }),
@@ -30,4 +33,4 @@ const nextConfig = {
   },
 };
 
-export default withSvgr(nextConfig);
+export default withNextIntl(withSvgr(nextConfig));

@@ -1,6 +1,6 @@
 export const CHANGE_LANG_DATA = [
   {
-    value: 'eng',
+    value: 'en',
     label: 'Eng',
   },
   {

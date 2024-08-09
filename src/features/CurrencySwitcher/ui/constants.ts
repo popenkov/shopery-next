@@ -8,3 +8,7 @@ export const CHANGE_CURRENCY_DATA = [
     label: 'EUR',
   },
 ];
+
+export const DEFAULT_CURRENCY = 'USD';
+
+export const CURRENCY_LOCALSTORAGE_KEY = 'currency';

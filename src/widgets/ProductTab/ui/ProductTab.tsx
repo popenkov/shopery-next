@@ -13,8 +13,13 @@ import { Text } from '@/shared/ui/Text';
 import { getProductTab } from '../api';
 
 import cls from './ProductTab.module.scss';
+import { useAppSelector } from '@/shared/lib/hooks';
+import { selectCurrentCurrency } from '@/entities/Currency';
+import { DEFAULT_CURRENCY } from '@/features/CurrencySwitcher/ui/constants';
 
 export const ProductTab: FC = () => {
+  const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;
+
   const { productTabs } = getProductTab();
 
   return (

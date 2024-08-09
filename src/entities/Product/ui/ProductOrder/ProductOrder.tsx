@@ -30,7 +30,7 @@ export const ProductOrder: FC<Props> = ({ data, className }) => {
       </div>
       <div className={cls.ProductOrderPrice}>
         <Text variant="body_s" className={cls.ProductOrderPriceNew}>
-          {getFormattedPrice(price)}
+          {getFormattedPrice(price, currentCurrency)}
         </Text>
       </div>
       <Text variant="body_s" className={cls.ProductOrderQuantity}>

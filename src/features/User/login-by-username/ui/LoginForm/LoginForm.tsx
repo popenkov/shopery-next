@@ -20,6 +20,7 @@ import { LoginSchema } from '../../model/types/loginSchema';
 import { loginByUsername } from '../../services/loginByUsername/loginByUsername';
 
 import cls from './LoginForm.module.scss';
+import { useTranslations } from 'next-intl';
 
 export interface LoginFormProps {
   className?: string;
@@ -27,6 +28,7 @@ export interface LoginFormProps {
 
 const LoginForm = memo(({ className }: LoginFormProps) => {
   const dispatch = useAppDispatch();
+  const t = useTranslations('LoginPage');
 
   const {
     reset,
@@ -56,7 +58,7 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
   return (
     <form className={cn(cls.LoginForm, className)} onSubmit={handleSubmit(onSubmit)}>
       <Text variant="heading_5" weight="semibold" as="h2" className="LoginFormTitle">
-        Sign in
+        {t('signIn')}
       </Text>
       <div className={cls.LoginFormInputContainer}>
         <Controller
@@ -112,16 +114,16 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
         </Link>
       </div>
       <Button type="submit" className={cls.LoginFormsubmitButton}>
-        Login
+        {t('login')}
       </Button>
       {hasError && <FormError text="email: user-1@mail.com, password: 123" />}
       <div className={cls.LoginFormRegistration}>
         <Text variant="body_s" className={cls.LoginFormRegistrationText} as="span">
-          Don’t have account?
+          {t('noAccount')}
         </Text>
         <Link className={cls.LoginFormRegistrationLink} href={getRouteRegistation()}>
           <Text variant="body_s" weight="medium" as="span">
-            Register
+            {t('register')}
           </Text>
         </Link>
       </div>
