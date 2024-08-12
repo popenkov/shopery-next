@@ -1,4 +1,5 @@
-import { getUserLocale } from '@/app/lib/locale';
+import { getUserLocale } from '@/shared/lib/locale';
+
 import { TNavigation } from '../model';
 
 const data: TNavigation = {

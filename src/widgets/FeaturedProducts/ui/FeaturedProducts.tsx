@@ -3,7 +3,7 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import { Product, TProduct } from '@/entities/Product';
-import { AddToCart } from '@/features/Cart/add-to-cart';
+import { AddToCart } from '@/features/Cart';
 import { AddToWishlist } from '@/features/Product';
 import { ShowProductPreview } from '@/features/Product';
 import { MobileSlider } from '@/shared/ui/MobileSlider';

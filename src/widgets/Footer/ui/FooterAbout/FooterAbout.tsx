@@ -1,10 +1,10 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 import { Text } from '@/shared/ui/Text';
 
 import cls from './FooterAbout.module.scss';
-import { useTranslations } from 'next-intl';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 

@@ -1,5 +1,6 @@
-import { SelectOption } from '@/shared/ui/AppSelect';
 import { Options, PropsValue } from 'react-select';
+
+import { SelectOption } from '@/shared/ui/AppSelect';
 
 export const getSelectedOption = (
   value: PropsValue<SelectOption>,

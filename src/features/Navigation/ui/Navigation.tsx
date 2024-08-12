@@ -2,15 +2,15 @@
 
 import { FC, useEffect, useState } from 'react';
 
+import { THeaderCategory } from '@/entities/NavigationCategory';
 import { PhoneLink } from '@/entities/PhoneLink';
+import { TLink } from '@/shared/model/navigation-link.types';
 
 import { getNavigationData } from '../api';
 
 import cls from './Navigation.module.scss';
 import { NavigationCategories } from './NavigationCategories';
 import { NavigationLinks } from './NavigationLinks';
-import { THeaderCategory } from '@/entities/NavigationCategory';
-import { TLink } from '@/shared/model/navigation-link.types';
 
 export const Navigation: FC = () => {
   const [categories, setCategories] = useState<THeaderCategory[]>([]);

@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 
 import { selectCartProducts } from '@/entities/Cart';
+import { selectCurrentCurrency, DEFAULT_CURRENCY } from '@/entities/Currency';
 import { TOrder, TOrderProduct, addToOrders } from '@/entities/Order';
 import {
   COUNTRIES_LIST,
@@ -40,6 +41,7 @@ type TFormData = {
 };
 
 export const CheckoutForm: FC = () => {
+  const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;
   const router = useRouter();
   const dispatch = useAppDispatch();
   const cartItems = useAppSelector(selectCartProducts);
@@ -57,15 +59,19 @@ export const CheckoutForm: FC = () => {
   // todo   сделать модел для запроса из формы и из стора и отправить
   const onSubmit: SubmitHandler<TFormData> = (data) => {
     setIsFormSubmitting((prev) => (prev = true));
+
     const orderItems: TOrderProduct[] = cartItems.map((item) => {
       return {
         id: item.id,
         name: item.title,
         price: item.price,
         quantity: item.amount,
-        total: item.price * item.amount,
-        img: item.img,
         // todo
+        total: {
+          USD: item.price.USD * item.amount,
+          EUR: item.price.EUR * item.amount,
+        },
+        img: item.img!,
         path: '/',
       };
     });
@@ -73,11 +79,17 @@ export const CheckoutForm: FC = () => {
     const orderDate: TOrder = {
       id: Date.now().toString(),
       items: orderItems,
-      subtotal: orderItems.reduce((acc, item) => acc + item.price * item.quantity, 0),
       amount: orderItems.reduce((acc, item) => acc + item.quantity, 0),
+      subtotal: orderItems.reduce(
+        (acc, current) => {
+          acc.USD += current.price.USD * current.quantity;
+          acc.EUR += current.price.EUR * current.quantity;
+          return acc;
+        },
+        { USD: 0, EUR: 0 },
+      ),
       discount: 0,
       delivery: null,
-      // todo
       paymentMethod: 'PayPal',
       status: 'Processing',
       shippingAddress: {
@@ -104,6 +116,7 @@ export const CheckoutForm: FC = () => {
       },
       date: new Date(),
     };
+
     dispatch(addToOrders(orderDate));
 
     if (isValid) {
@@ -202,6 +215,7 @@ export const CheckoutForm: FC = () => {
               <AppSelect
                 label="Country / Region"
                 placeholder="Select"
+                value={COUNTRIES_LIST[0]}
                 options={COUNTRIES_LIST}
                 onChange={(newValue) => onChange(newValue)}
                 errorText={error?.message}
@@ -220,6 +234,7 @@ export const CheckoutForm: FC = () => {
               <AppSelect
                 label="States"
                 placeholder="Select"
+                value={STATES_LIST[0]}
                 options={STATES_LIST}
                 onChange={(newValue) => onChange(newValue)}
                 errorText={error?.message}
@@ -337,6 +352,7 @@ export const CheckoutForm: FC = () => {
                   <AppSelect
                     label="Country / Region"
                     placeholder="Select"
+                    value={COUNTRIES_LIST[0]}
                     options={COUNTRIES_LIST}
                     onChange={(newValue) => onChange(newValue)}
                     errorText={error?.message}
@@ -355,6 +371,7 @@ export const CheckoutForm: FC = () => {
                   <AppSelect
                     label="States"
                     placeholder="Select"
+                    value={STATES_LIST[0]}
                     options={STATES_LIST}
                     onChange={(newValue) => onChange(newValue)}
                     errorText={error?.message}

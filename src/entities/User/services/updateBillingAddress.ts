@@ -1,5 +1,7 @@
-import { ThunkConfig } from '@/app/providers/StoreProvider/StateSchema';
 import { createAsyncThunk } from '@reduxjs/toolkit';
+
+import { ThunkConfig } from '@/app/providers/StoreProvider/StateSchema';
+
 import { TUserAddress } from '../model';
 
 export const updateBillingAddress = createAsyncThunk<

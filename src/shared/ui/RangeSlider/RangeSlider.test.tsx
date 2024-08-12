@@ -15,10 +15,9 @@ describe('RangeSlider component', () => {
 
   it.skip('calls onChange callback when slider is updated', () => {
     const onChange = jest.fn();
-    const { getByRole, container } = render(
+    const { container } = render(
       <RangeSlider min={0} max={100} range={[20, 80]} onChange={onChange} />,
     );
-    const slider = container.querySelector('.rangeSlider');
     fireEvent.change(container, { target: { value: [30, 90] } });
     expect(onChange).toHaveBeenCalledTimes(1);
     expect(onChange).toHaveBeenCalledWith({ min: 30, max: 90 });

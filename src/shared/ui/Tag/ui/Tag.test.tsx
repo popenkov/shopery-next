@@ -1,7 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { Tag, TTagVariant } from './Tag';
+import { TTagVariant } from '../model';
+
+import { Tag } from './Tag';
 
 describe('Tag component', () => {
   it('renders correctly', () => {

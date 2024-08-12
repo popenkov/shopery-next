@@ -1,12 +1,12 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import cn from 'classnames';
+import { useTranslations } from 'next-intl';
 
 import { ChevronDownIcon } from '@/shared/ui/icons';
 
 import { Text } from '../Text';
 
 import cls from './CategoriesButton.module.scss';
-import { useTranslations } from 'next-intl';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   className?: string;

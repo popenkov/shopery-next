@@ -10,8 +10,14 @@ export {
   ProductOrder,
 } from './ui';
 
-export { type TProduct, type TProductDetailed } from './model';
+export {
+  type TProduct,
+  type TProductDetailed,
+  getProductDetailedData,
+  getProductDetailedError,
+  getProductDetailedIsLoading,
+} from './model';
 
-export { getProductDetails } from './api';
+export { getProductDetails, getProductById } from './api';
 
 export { productsReducer } from './model';

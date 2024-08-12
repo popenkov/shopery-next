@@ -2,6 +2,7 @@
 
 import { FC } from 'react';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 import { Location } from '@/entities/Location';
 import { selectAuthData } from '@/entities/User';
@@ -14,7 +15,6 @@ import { Text } from '@/shared/ui/Text';
 import { UserMenu } from '../UserMenu';
 
 import cls from './HeaderTop.module.scss';
-import { useTranslations } from 'next-intl';
 
 export const HeaderTop: FC = () => {
   const t = useTranslations('HomePage');

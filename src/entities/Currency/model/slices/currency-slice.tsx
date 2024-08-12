@@ -1,8 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { CurrencySchema, TCurrencyVariant } from '../types/currency-schema';
 import { CURRENCY_LOCALSTORAGE_KEY } from '@/shared/lib/constants/localstorage';
-import { DEFAULT_CURRENCY } from '@/features/CurrencySwitcher/ui/constants';
+
+import { CurrencySchema, TCurrencyVariant } from '../types/currency-schema';
+import { DEFAULT_CURRENCY } from '../../lib';
 
 const initialState: CurrencySchema = {
   currency:

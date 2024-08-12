@@ -2,11 +2,13 @@
 
 import { FC, memo, useState } from 'react';
 
-import { Dropdown, TDropdownItem } from '@/shared/ui/Dropdown';
-
-import { CHANGE_CURRENCY_DATA } from './constants';
+import {
+  CHANGE_CURRENCY_DATA,
+  type TCurrencyVariant,
+  updateCurrentCurrency,
+} from '@/entities/Currency';
 import { useAppDispatch } from '@/shared/lib/hooks';
-import { type TCurrencyVariant, updateCurrentCurrency } from '@/entities/Currency';
+import { Dropdown, TDropdownItem } from '@/shared/ui/Dropdown';
 
 export const CurrencySwitcher: FC = memo(() => {
   const dispatch = useAppDispatch();

@@ -1,13 +1,19 @@
 import React from 'react';
 import { render, fireEvent, waitFor, within } from '@testing-library/react';
 
-import { CHANGE_CURRENCY_DATA } from '@/features/CurrencySwitcher/ui/constants';
+import { CHANGE_CURRENCY_DATA } from '@/entities/Currency';
 
 import { Dropdown } from './Dropdown';
 
 describe('Dropdown', () => {
   it('renders the dropdown with the correct class names', () => {
-    const { getByTestId } = render(<Dropdown data={CHANGE_CURRENCY_DATA} onChange={() => {}} />);
+    const { getByTestId } = render(
+      <Dropdown
+        defaultItem={CHANGE_CURRENCY_DATA[0]}
+        data={CHANGE_CURRENCY_DATA}
+        onChange={() => {}}
+      />,
+    );
 
     const button = getByTestId('dropdownButton');
     expect(button).toBeInTheDocument();
@@ -16,7 +22,11 @@ describe('Dropdown', () => {
 
   it('displays the correct dropdown items when clicked', () => {
     const { getByText, queryByText, getByTestId } = render(
-      <Dropdown data={CHANGE_CURRENCY_DATA} onChange={() => {}} />,
+      <Dropdown
+        defaultItem={CHANGE_CURRENCY_DATA[0]}
+        data={CHANGE_CURRENCY_DATA}
+        onChange={() => {}}
+      />,
     );
 
     const button = getByTestId('dropdownButton');
@@ -35,7 +45,11 @@ describe('Dropdown', () => {
     const handleChange = jest.fn();
 
     const { getByText, getByTestId, getByRole } = render(
-      <Dropdown data={CHANGE_CURRENCY_DATA} onChange={handleChange} />,
+      <Dropdown
+        defaultItem={CHANGE_CURRENCY_DATA[0]}
+        data={CHANGE_CURRENCY_DATA}
+        onChange={handleChange}
+      />,
     );
 
     const button = getByTestId('dropdownButton');

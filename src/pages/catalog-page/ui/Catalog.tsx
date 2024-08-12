@@ -3,20 +3,16 @@ import { FC, useState } from 'react';
 
 import { DiscountBanner } from '@/entities/DiscountBanner';
 import { ProductSmall, TProduct } from '@/entities/Product';
-import { AddToCart } from '@/features/Cart/add-to-cart';
+import { AddToCart } from '@/features/Cart';
 import { CatalogSort } from '@/features/CatalogSort';
-import { AddToWishlist } from '@/features/Product';
-import { ShowProductPreview } from '@/features/Product';
+import { AddToWishlist, ShowProductPreview } from '@/features/Product';
 import { AppRouteNames } from '@/shared/model';
 import { Breadcrumbs } from '@/shared/ui/Breadcrumps';
-import { Pagination } from '@/shared/ui/Pagination';
+import { PAGE_SIZE, Pagination } from '@/shared/ui/Pagination';
 import { CatalogFilter, getCatalogFilterData } from '@/widgets/CatalogFilter';
 import { CatalogItems, getCatalogItems } from '@/widgets/CatalogItems';
 
 import cls from './catalog.module.scss';
-
-// todo
-const PAGE_SIZE = 10;
 
 const Catalog: FC = () => {
   const crumbs: AppRouteNames[] = [AppRouteNames.HOME, AppRouteNames.CATALOG];

@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { screen } from '@testing-library/react';
 
-import { renderWithStore } from '@/shared/lib/tests/renderWithStore/renderWithStore';
+import { renderWithStore } from '@/shared/lib/tests';
 
 import Page from './index';
 
@@ -15,12 +15,12 @@ jest.mock('swiper/react', () => ({
 }));
 
 jest.mock('swiper/modules', () => ({
-  Navigation: (props: any) => null,
-  Pagination: (props: any) => null,
-  Scrollbar: (props: any) => null,
-  A11y: (props: any) => null,
-  EffectFade: (props: any) => null,
-  Autoplay: (props: any) => null,
+  Navigation: () => null,
+  Pagination: () => null,
+  Scrollbar: () => null,
+  A11y: () => null,
+  EffectFade: () => null,
+  Autoplay: () => null,
 }));
 
 jest.mock('nanoid', () => ({

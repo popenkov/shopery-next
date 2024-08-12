@@ -2,15 +2,14 @@ import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { selectCurrentCurrency, DEFAULT_CURRENCY } from '@/entities/Currency';
 import { type TProduct } from '@/entities/Product';
+import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice } from '@/shared/lib/utils';
 import { StarRating } from '@/shared/ui/StarRating';
 import { Text } from '@/shared/ui/Text';
 
 import cls from './Product.module.scss';
-import { useAppSelector } from '@/shared/lib/hooks';
-import { selectCurrentCurrency } from '@/entities/Currency';
-import { DEFAULT_CURRENCY } from '@/features/CurrencySwitcher/ui/constants';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   data: TProduct;

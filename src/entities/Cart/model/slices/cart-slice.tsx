@@ -8,7 +8,7 @@ const initialState: CartSchema = {
   isAsideCartOpen: false,
   cart: [],
   totalAmount: 0,
-  totalPrice: 0,
+  totalPrice: { USD: 0, EUR: 0 },
 };
 
 const cartSlice = createSlice({

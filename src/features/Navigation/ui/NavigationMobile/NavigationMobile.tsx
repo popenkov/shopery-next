@@ -3,13 +3,13 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
+import { TLink } from '@/shared/model/navigation-link.types';
 import { Accordion } from '@/shared/ui/Accordion';
 import { Text } from '@/shared/ui/Text';
 
 import { getNavigationData } from '../../api';
 
 import cls from './NavigationMobile.module.scss';
-import { TLink } from '@/shared/model/navigation-link.types';
 
 export const NavigationMobile = () => {
   const [navigation, setNavigation] = useState<TLink[]>([]);

@@ -7,7 +7,7 @@ import { Breadcrumbs } from '@/shared/ui/Breadcrumps';
 import { Text } from '@/shared/ui/Text';
 
 import cls from './Faq.module.scss';
-import { FaqAccordeons } from './FaqAccordeons/FaqAccordeons';
+import { FaqAccordeons } from './FaqAccordeons';
 
 export const Faq: FC = () => {
   const crumbs: AppRouteNames[] = [AppRouteNames.HOME, AppRouteNames.FAQ];

@@ -2,14 +2,13 @@ import { FC } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
+import { selectCurrentCurrency, DEFAULT_CURRENCY } from '@/entities/Currency';
 import { TOrder } from '@/entities/Order';
+import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice, getWordDeclination } from '@/shared/lib/utils';
 import { Text } from '@/shared/ui/Text';
 
 import cls from './UserOrders.module.scss';
-import { useAppSelector } from '@/shared/lib/hooks';
-import { selectCurrentCurrency } from '@/entities/Currency';
-import { DEFAULT_CURRENCY } from '@/features/CurrencySwitcher/ui/constants';
 type Props = {
   order: TOrder;
 };

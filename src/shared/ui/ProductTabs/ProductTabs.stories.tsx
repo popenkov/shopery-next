@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+// eslint-disable-next-line
 import { ProductLarge, TProduct } from '@/entities/Product';
+// eslint-disable-next-line
 import { getProductTab } from '@/widgets/ProductTab/api';
 
 import { MobileSlider } from '../MobileSlider';

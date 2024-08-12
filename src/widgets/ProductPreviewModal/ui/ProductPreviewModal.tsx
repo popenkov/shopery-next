@@ -3,17 +3,15 @@
 import { FC, useEffect, useState } from 'react';
 import { UnknownAction } from '@reduxjs/toolkit';
 
-import { getProductDetails } from '@/entities/Product';
-import { getProductById } from '@/entities/Product/api/get-product-by-id';
 import {
+  getProductById,
   getProductDetailedData,
   getProductDetailedError,
   getProductDetailedIsLoading,
-} from '@/entities/Product/model';
+} from '@/entities/Product';
 import { AddToCartCounter } from '@/features/Cart';
 import { AddToWishlist } from '@/features/Product';
-import { useAppDispatch, useAppSelector } from '@/shared/lib/hooks';
-import { useChangeSearchParams } from '@/shared/lib/hooks/useChangeSearchParams';
+import { useAppDispatch, useAppSelector, useChangeSearchParams } from '@/shared/lib/hooks';
 import { Modal } from '@/shared/ui/Modal';
 import { Text } from '@/shared/ui/Text';
 import { ProductDescription } from '@/widgets/ProductDescription';
@@ -27,11 +25,8 @@ export const ProductPreviewModal: FC = () => {
   const isLoading = useAppSelector(getProductDetailedIsLoading);
   const error = useAppSelector(getProductDetailedError);
 
-  console.log(productData, error, isLoading);
-
   const { getSearchParam, removeQueryParam } = useChangeSearchParams();
   const [isOpen, setIsOpen] = useState(false);
-  const data = getProductDetails();
   const itemId = getSearchParam('product');
 
   const handleModalClose = () => {
@@ -51,7 +46,7 @@ export const ProductPreviewModal: FC = () => {
   }, [dispatch, itemId]);
 
   let content;
-  if (true) {
+  if (isLoading) {
     content = <ProductPreviewSkeleton />;
   }
   if (error) {

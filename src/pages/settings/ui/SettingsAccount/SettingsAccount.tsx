@@ -1,18 +1,18 @@
 'use client';
 
 import { FC, useEffect } from 'react';
+import { UnknownAction } from '@reduxjs/toolkit';
 import cn from 'classnames';
 
+import { getUserDataById } from '@/entities/User';
+import { getUserData, getUserError, getUserIsLoading } from '@/entities/User/selectors';
 import { EditUserSettings } from '@/features/User';
 import { ChangePassword } from '@/features/User/change-password';
 import { EditUserBillingAddress } from '@/features/User/edit-user-billing-address';
+import { useAppDispatch, useAppSelector } from '@/shared/lib/hooks';
 import { Text } from '@/shared/ui/Text';
 
 import cls from './SettingsAccount.module.scss';
-import { getUserDataById } from '@/entities/User';
-import { useAppDispatch, useAppSelector } from '@/shared/lib/hooks';
-import { UnknownAction } from '@reduxjs/toolkit';
-import { getUserData, getUserError, getUserIsLoading } from '@/entities/User/selectors';
 
 type Props = {
   className?: string;

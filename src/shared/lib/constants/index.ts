@@ -11,6 +11,7 @@ export {
   getRouteWishlist,
   getRouteDashboard,
   getRouteAccountSettings,
+  PAGE_ROUTES,
 } from './routes';
 export { VALIDATION_MESSAGES } from './validation-messages';
 

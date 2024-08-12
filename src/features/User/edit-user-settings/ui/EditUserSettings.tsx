@@ -4,6 +4,7 @@ import { FC } from 'react';
 import cn from 'classnames';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 
+import { TUserPersonalData } from '@/entities/User/model';
 import { VALIDATION_MESSAGES } from '@/shared/lib/constants';
 import { EMAIL_REGEX } from '@/shared/lib/constants';
 import { Button } from '@/shared/ui/Buttons';
@@ -14,7 +15,6 @@ import { MaskedInput } from '@/shared/ui/MaskedInput';
 import { TFormData } from '../model';
 
 import cls from './EditUserSettings.module.scss';
-import { TUserPersonalData } from '@/entities/User/model';
 
 type Props = {
   data: TUserPersonalData;

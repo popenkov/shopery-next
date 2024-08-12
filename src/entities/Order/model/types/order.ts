@@ -19,7 +19,7 @@ export type TOrderProduct = {
   name: string;
   price: Record<TCurrencyVariant, number>;
   quantity: number;
-  total: number;
+  total: Record<TCurrencyVariant, number>;
 };
 
 export type TOrder = {

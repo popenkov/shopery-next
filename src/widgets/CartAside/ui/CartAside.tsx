@@ -12,18 +12,14 @@ import {
 import { ProductCartPreview } from '@/entities/Product';
 import { RemoveFromCart } from '@/features/Cart';
 import { useAppSelector, useAppDispatch } from '@/shared/lib/hooks';
-import { getFormattedPrice } from '@/shared/lib/utils';
 import { Drawer } from '@/shared/ui/Drawer';
 
 import cls from './CartAside.module.scss';
 import { CartAsideFooter } from './CartAsideFooter';
 import { CartAsideHeader } from './CartAsideHeader';
-import { selectCurrentCurrency } from '@/entities/Currency';
-import { DEFAULT_CURRENCY } from '@/features/CurrencySwitcher/ui/constants';
 
 export const CartAside = () => {
   const dispatch = useAppDispatch();
-  const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;
   const cartItems = useAppSelector(selectCartProducts);
   const isMenuOpen = useAppSelector(selectMenuState);
   const totalAmount = useAppSelector(selectTotalAmount);
@@ -36,8 +32,6 @@ export const CartAside = () => {
   if (!cartItems.length) {
     return null;
   }
-
-  const formattedPrice = getFormattedPrice(totalPrice, currentCurrency);
 
   return (
     <Drawer isOpen={isMenuOpen} onClose={handleDrawerClose} hasOverlay={false}>
@@ -55,11 +49,7 @@ export const CartAside = () => {
             );
           })}
         </div>
-        <CartAsideFooter
-          closeDrawer={handleDrawerClose}
-          amount={totalAmount}
-          price={formattedPrice}
-        />
+        <CartAsideFooter closeDrawer={handleDrawerClose} amount={totalAmount} price={totalPrice} />
       </div>
     </Drawer>
   );

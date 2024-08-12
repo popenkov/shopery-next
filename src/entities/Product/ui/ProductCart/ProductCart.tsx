@@ -3,15 +3,15 @@ import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { selectCurrentCurrency } from '@/entities/Currency';
+import { DEFAULT_CURRENCY } from '@/entities/Currency';
+import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice } from '@/shared/lib/utils';
 import { Text } from '@/shared/ui/Text';
 
 import { type TProduct } from '../..';
 
 import cls from './ProductCart.module.scss';
-import { selectCurrentCurrency } from '@/entities/Currency';
-import { DEFAULT_CURRENCY } from '@/features/CurrencySwitcher/ui/constants';
-import { useAppSelector } from '@/shared/lib/hooks';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   data: Omit<TProduct, 'rating'>;
@@ -51,7 +51,8 @@ export const ProductCart: FC<Props> = ({ data, className, cartActions, deleteAct
         <span className={cls.ProductCartKeyMobile}>Subtotal:</span>
         <span className="cart-item__price-new">
           {' '}
-          {getFormattedPrice(price[currentCurrency] * amount!, currentCurrency)}
+          {/* * amount! */}
+          {getFormattedPrice(price[currentCurrency], currentCurrency)}
         </span>
       </div>
       <div className={cls.ProductCartDeleteButton}>{deleteActions}</div>

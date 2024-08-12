@@ -1,7 +1,8 @@
 import { nanoid } from 'nanoid';
 
+import { getUserLocale } from '@/shared/lib/locale';
+
 import { Footer } from '../model';
-import { getUserLocale } from '@/app/lib/locale';
 
 const data: Footer = {
   navigation: [

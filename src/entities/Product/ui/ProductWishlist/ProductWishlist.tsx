@@ -3,6 +3,8 @@ import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { selectCurrentCurrency, DEFAULT_CURRENCY } from '@/entities/Currency';
+import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice } from '@/shared/lib/utils';
 import { Tag } from '@/shared/ui/Tag';
 import { Text } from '@/shared/ui/Text';
@@ -10,9 +12,6 @@ import { Text } from '@/shared/ui/Text';
 import { type TProduct } from '../../';
 
 import cls from './ProductWishlist.module.scss';
-import { useAppSelector } from '@/shared/lib/hooks';
-import { selectCurrentCurrency } from '@/entities/Currency';
-import { DEFAULT_CURRENCY } from '@/features/CurrencySwitcher/ui/constants';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   data: Omit<TProduct, 'rating'>;

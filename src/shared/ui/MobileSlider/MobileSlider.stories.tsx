@@ -1,7 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+// eslint-disable-next-line
 import { Banner, TBanner } from '@/entities/Banner';
-import { getBannerData } from '@/widgets/Banners/api';
+// eslint-disable-next-line
+import { getBannerData } from '@/widgets/Banners';
 
 import { MobileSlider } from './MobileSlider';
 

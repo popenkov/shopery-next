@@ -2,7 +2,7 @@
 
 import { FC, ReactNode, useEffect, useRef } from 'react';
 
-import { useWindowSize } from '@/shared/lib/hooks/useWindowSize';
+import { useWindowSize } from '@/shared/lib/hooks';
 
 import cls from './SmoothScroll.module.scss';
 

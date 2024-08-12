@@ -1,7 +1,9 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
 import { selectTotalAmount, selectTotalPrice } from '@/entities/Cart';
+import { selectCurrentCurrency, DEFAULT_CURRENCY } from '@/entities/Currency';
 import { getRouteCart } from '@/shared/lib/constants';
 import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice } from '@/shared/lib/utils';
@@ -9,8 +11,6 @@ import { CartIcon } from '@/shared/ui/icons';
 import { Text } from '@/shared/ui/Text';
 
 import cls from './HeaderCart.module.scss';
-import { selectCurrentCurrency } from '@/entities/Currency';
-import { DEFAULT_CURRENCY } from '@/features/CurrencySwitcher/ui/constants';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 

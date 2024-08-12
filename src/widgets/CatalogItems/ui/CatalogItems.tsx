@@ -2,10 +2,9 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import cn from 'classnames';
 
 import { Product, ProductSmall, TProduct } from '@/entities/Product';
-import { AddToCart } from '@/features/Cart/add-to-cart';
-import { AddToWishlist } from '@/features/Product';
-import { ShowProductPreview } from '@/features/Product';
-import { CardRevealingOnScroll } from '@/shared/lib/utils/motions';
+import { AddToCart } from '@/features/Cart';
+import { ShowProductPreview, AddToWishlist } from '@/features/Product';
+import { CardRevealingOnScroll } from '@/shared/lib/utils';
 
 import cls from './CatalogItems.module.scss';
 
@@ -20,10 +19,9 @@ export const CatalogItems: FC<Props> = ({ products, className }) => {
       <div className={cls.catalogDesktopWrapper}>
         {products.map((product) => {
           return (
-            <CardRevealingOnScroll>
+            <CardRevealingOnScroll key={product.id}>
               <Product
                 data={product}
-                key={product.id}
                 actions={
                   <>
                     <AddToWishlist className={cls.imageButton} item={product} theme="secondary" />

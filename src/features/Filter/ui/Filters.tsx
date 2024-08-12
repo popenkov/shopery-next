@@ -8,6 +8,7 @@ import {
   useState,
 } from 'react';
 import cn from 'classnames';
+import { useTranslations } from 'next-intl';
 
 import { Accordion } from '@/shared/ui/Accordion';
 import { Button } from '@/shared/ui/Buttons';
@@ -21,7 +22,6 @@ import { Text } from '@/shared/ui/Text';
 import { getFilterData } from '../api';
 
 import cls from './Filters.module.scss';
-import { useTranslations } from 'next-intl';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   classname?: string;

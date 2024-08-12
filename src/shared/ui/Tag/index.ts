@@ -1,2 +1,2 @@
 export { Tag } from './ui';
-export { type TTag } from './model';
+export { type TTag, type TTagVariant } from './model';

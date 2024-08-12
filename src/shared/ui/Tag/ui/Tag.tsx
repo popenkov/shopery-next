@@ -1,17 +1,10 @@
 import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode, memo } from 'react';
 import cn from 'classnames';
 
+import { TTagVariant } from '../model/types/tag.types';
 import { Text } from '../../Text';
 
 import cls from './Tag.module.scss';
-
-export type TTagVariant =
-  | 'sale'
-  | 'not-available'
-  | 'best-sale'
-  | 'new'
-  | 'out-of-stock'
-  | 'in-stock';
 
 interface TagProps extends DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement> {
   children: ReactNode;

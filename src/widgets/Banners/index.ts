@@ -1,1 +1,2 @@
-export { Banners } from './ui/';
+export { Banners } from './ui';
+export { getBannerData } from './api';

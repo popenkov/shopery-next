@@ -1,9 +1,11 @@
 'use client';
 
 import { memo, useState } from 'react';
+import { UnknownAction } from '@reduxjs/toolkit';
 import cn from 'classnames';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 
 import { VALIDATION_MESSAGES } from '@/shared/lib/constants';
@@ -17,10 +19,9 @@ import { Input } from '@/shared/ui/Input';
 import { Text } from '@/shared/ui/Text';
 
 import { LoginSchema } from '../../model/types/loginSchema';
-import { loginByUsername } from '../../services/loginByUsername/loginByUsername';
+import { loginByUsername } from '../../services/loginByUsername';
 
 import cls from './LoginForm.module.scss';
-import { useTranslations } from 'next-intl';
 
 export interface LoginFormProps {
   className?: string;
@@ -43,7 +44,7 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
 
   const onSubmit: SubmitHandler<LoginSchema> = async (data) => {
     if (isValid) {
-      const response = await dispatch(loginByUsername(data));
+      const response = await dispatch(loginByUsername(data) as unknown as UnknownAction);
 
       if (response.payload === 'error') {
         setHasError(true);

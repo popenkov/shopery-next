@@ -5,7 +5,7 @@ import cn from 'classnames';
 
 import { type TDiscountBanner, DiscountBanner } from '@/entities/DiscountBanner';
 import { ProductSmall, TProduct } from '@/entities/Product';
-import { AddToCart } from '@/features/Cart/add-to-cart';
+import { AddToCart } from '@/features/Cart';
 import { Filters } from '@/features/Filter';
 import { AddToWishlist } from '@/features/Product';
 import { ShowProductPreview } from '@/features/Product';

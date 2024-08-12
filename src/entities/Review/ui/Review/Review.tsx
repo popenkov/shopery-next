@@ -1,7 +1,7 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import Image from 'next/image';
 
-import { TypingText } from '@/shared/lib/utils/motions';
+import { TypingText } from '@/shared/lib/utils';
 import { QuoteIcon } from '@/shared/ui/icons';
 import { Text } from '@/shared/ui/Text';
 

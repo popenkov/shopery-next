@@ -88,3 +88,13 @@
 .UserOrderFooter {
   padding-bottom: 30px;
 }
+
+.UserOrderPagination {
+  @include flex-center;
+
+  width: 100%;
+
+  li {
+    padding: 0;
+  }
+}

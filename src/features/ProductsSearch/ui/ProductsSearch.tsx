@@ -2,13 +2,13 @@
 
 import { ChangeEvent, DetailedHTMLProps, FC, HTMLAttributes, useCallback, useState } from 'react';
 import { redirect } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 import { getRouteCatalog } from '@/shared/lib/constants';
 import { Button } from '@/shared/ui/Buttons';
 import { Input } from '@/shared/ui/Input';
 
 import cls from './ProductsSearch.module.scss';
-import { useTranslations } from 'next-intl';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 

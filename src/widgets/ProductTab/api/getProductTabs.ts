@@ -2,7 +2,6 @@ import { nanoid } from 'nanoid';
 
 import { type TProduct } from '@/entities/Product';
 import { TTabItem } from '@/shared/ui/ProductTabs';
-import { TCurrencyVariant } from '@/entities/Currency';
 
 const data: TTabItem<TProduct>[] = [
   {

@@ -1,5 +1,7 @@
 import { createSelector } from '@reduxjs/toolkit';
 
+import { TCurrencyVariant } from '@/entities/Currency';
+
 import { type TCartProduct } from '../types/cart';
 
 const selectBase = createSelector(
@@ -21,7 +23,7 @@ export const selectMenuState = createSelector(
 
 export const selectTotalPrice = createSelector(
   selectBase,
-  (state: { totalPrice: number }) => state.totalPrice,
+  (state: { totalPrice: Record<TCurrencyVariant, number> }) => state.totalPrice,
 );
 
 export const selectTotalAmount = createSelector(

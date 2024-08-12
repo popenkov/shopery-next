@@ -2,10 +2,12 @@
 
 import { FC } from 'react';
 
+import { selectCurrentCurrency, DEFAULT_CURRENCY } from '@/entities/Currency';
 import { ProductLarge, TProduct } from '@/entities/Product';
-import { AddToCart } from '@/features/Cart/add-to-cart';
+import { AddToCart } from '@/features/Cart';
 import { AddToWishlist } from '@/features/Product';
 import { ShowProductPreview } from '@/features/Product';
+import { useAppSelector } from '@/shared/lib/hooks';
 import { MobileSlider } from '@/shared/ui/MobileSlider';
 import { ProductTabs } from '@/shared/ui/ProductTabs';
 import { Text } from '@/shared/ui/Text';
@@ -13,9 +15,6 @@ import { Text } from '@/shared/ui/Text';
 import { getProductTab } from '../api';
 
 import cls from './ProductTab.module.scss';
-import { useAppSelector } from '@/shared/lib/hooks';
-import { selectCurrentCurrency } from '@/entities/Currency';
-import { DEFAULT_CURRENCY } from '@/features/CurrencySwitcher/ui/constants';
 
 export const ProductTab: FC = () => {
   const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;

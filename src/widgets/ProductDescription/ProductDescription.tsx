@@ -2,19 +2,17 @@ import { FC, ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { selectCurrentCurrency, DEFAULT_CURRENCY } from '@/entities/Currency';
 import { type TProductDetailed } from '@/entities/Product';
 import { SocialShare } from '@/entities/SocialShare';
+import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice, getWordDeclination } from '@/shared/lib/utils';
-import { FadeIn, SlideIn } from '@/shared/lib/utils/motions';
+import { FadeIn, SlideIn } from '@/shared/lib/utils';
 import { StarRating } from '@/shared/ui/StarRating';
-import { Tag } from '@/shared/ui/Tag';
-import { TTagVariant } from '@/shared/ui/Tag/ui';
+import { Tag, type TTagVariant } from '@/shared/ui/Tag';
 import { ThumbSlider } from '@/shared/ui/ThumbSlider';
 
 import cls from './ProductDescription.module.scss';
-import { useAppSelector } from '@/shared/lib/hooks';
-import { selectCurrentCurrency } from '@/entities/Currency';
-import { DEFAULT_CURRENCY } from '@/features/CurrencySwitcher/ui/constants';
 
 type Props = {
   data: TProductDetailed;

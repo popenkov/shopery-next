@@ -55,9 +55,7 @@ describe('ImageUploader component', () => {
   it('updates preview when file is selected', () => {
     const imageSrc = 'https://test.com/image.jpg';
     const onChange = jest.fn();
-    const { getByAltText, getByTestId } = render(
-      <ImageUploader imageSrc={imageSrc} onChange={onChange} />,
-    );
+    const { getByTestId } = render(<ImageUploader imageSrc={imageSrc} onChange={onChange} />);
     const fileInput = getByTestId('ImageUploader.input');
     const file = new File(['test'], 'test.jpg', {
       type: 'image/jpeg',

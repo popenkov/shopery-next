@@ -3,14 +3,13 @@ import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { selectCurrentCurrency, DEFAULT_CURRENCY } from '@/entities/Currency';
 import { TProduct } from '@/entities/Product';
+import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice } from '@/shared/lib/utils';
 import { Text } from '@/shared/ui/Text';
 
 import cls from './ProductCheckout.module.scss';
-import { selectCurrentCurrency } from '@/entities/Currency';
-import { DEFAULT_CURRENCY } from '@/features/CurrencySwitcher/ui/constants';
-import { useAppSelector } from '@/shared/lib/hooks';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   data: Omit<TProduct, 'rating'>;

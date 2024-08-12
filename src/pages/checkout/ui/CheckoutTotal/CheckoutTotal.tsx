@@ -4,6 +4,7 @@ import { FC, useState } from 'react';
 import cn from 'classnames';
 
 import { selectCartProducts, selectTotalPrice } from '@/entities/Cart';
+import { selectCurrentCurrency, DEFAULT_CURRENCY } from '@/entities/Currency';
 import { ProductCheckout } from '@/entities/Product';
 import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice } from '@/shared/lib/utils';
@@ -12,8 +13,6 @@ import { Radio } from '@/shared/ui/Radio';
 import { Text } from '@/shared/ui/Text';
 
 import cls from './CheckoutTotal.module.scss';
-import { selectCurrentCurrency } from '@/entities/Currency';
-import { DEFAULT_CURRENCY } from '@/features/CurrencySwitcher/ui/constants';
 
 type Props = {
   className: string;
