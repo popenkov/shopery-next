@@ -1,6 +1,6 @@
 import { createSelector } from '@reduxjs/toolkit';
 
-import { TCurrencyVariant } from '../types/currency-schema';
+import { TCurrencyVariant } from '../types';
 
 const selectBase = createSelector(
   (state: RootState) => state,

@@ -1,7 +1,7 @@
 import { AxiosInstance } from 'axios';
 
 import { CartSchema } from '@/entities/Cart';
-import { WishlistSchema } from '@/entities/Favorites/model/types/wishlist-schema';
+import { WishlistSchema } from '@/entities/Favorites';
 import { UserSchema } from '@/entities/User';
 
 export interface StateSchema {

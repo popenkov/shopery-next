@@ -6,8 +6,7 @@ import cn from 'classnames';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 import { PropsValue } from 'react-select';
 
-import { getUserBillingAddress, TUserAddress } from '@/entities/User';
-import { updateBillingAddress } from '@/entities/User/services/updateBillingAddress';
+import { getUserBillingAddress, TUserAddress, updateBillingAddress } from '@/entities/User';
 import {
   VALIDATION_MESSAGES,
   COUNTRIES_LIST,
@@ -22,7 +21,6 @@ import { Input } from '@/shared/ui/Input';
 import { MaskedInput } from '@/shared/ui/MaskedInput';
 
 import cls from './EditUserBillingAddress.module.scss';
-
 
 type Props = {
   className?: string;

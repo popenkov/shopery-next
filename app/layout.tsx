@@ -6,11 +6,11 @@ import { getLocale, getMessages } from 'next-intl/server';
 
 import { StoreProvider } from '@/app/providers';
 import '@/app/styles/globals.scss';
-import SmoothScroll from '@/shared/ui/SmoothScroll/SmoothScroll';
+import { SmoothScroll } from '@/shared/ui/SmoothScroll';
 import { CartAside } from '@/widgets/CartAside';
 import { Footer } from '@/widgets/Footer';
 import { Header } from '@/widgets/Header';
-import { ProductPreviewModal } from '@/widgets/ProductPreviewModal/ui/ProductPreviewModal';
+import { ProductPreviewModal } from '@/widgets/ProductPreviewModal';
 
 const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700'],
@@ -28,15 +28,10 @@ export default async function RootLayout({
   children: ReactNode;
 }>) {
   const locale = await getLocale();
-
-  // // Providing all messages to the client
-  // // side is the easiest way to get started
   const messages = await getMessages();
 
   return (
-    <html
-    //  lang={locale}
-    >
+    <html lang={locale}>
       <body className={poppins.className}>
         <StoreProvider>
           <NextIntlClientProvider messages={messages}>

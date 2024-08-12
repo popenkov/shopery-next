@@ -44,7 +44,7 @@ describe('Dropdown', () => {
   it('calls the onChange function with the correct value when clicked', () => {
     const handleChange = jest.fn();
 
-    const { getByText, getByTestId, getByRole } = render(
+    const { getByTestId, getByRole } = render(
       <Dropdown
         defaultItem={CHANGE_CURRENCY_DATA[0]}
         data={CHANGE_CURRENCY_DATA}

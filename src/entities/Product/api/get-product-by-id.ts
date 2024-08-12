@@ -1,6 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-import { ThunkConfig } from '@/app/providers/StoreProvider/StateSchema';
+// eslint-disable-next-line
+import { ThunkConfig } from '@/app/providers';
 
 import { TProductDetailed } from '../model';
 

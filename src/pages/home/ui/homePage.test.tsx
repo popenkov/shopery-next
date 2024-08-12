@@ -27,6 +27,10 @@ jest.mock('nanoid', () => ({
   nanoid: jest.fn(),
 }));
 
+jest.mock('swiper/css', () => ({
+  ['swiper/css']: {},
+}));
+
 describe('Page', () => {
   it.skip('renders a heading', () => {
     renderWithStore(<Page />);

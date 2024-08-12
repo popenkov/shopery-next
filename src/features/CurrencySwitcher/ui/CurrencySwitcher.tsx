@@ -12,6 +12,8 @@ import { Dropdown, TDropdownItem } from '@/shared/ui/Dropdown';
 
 export const CurrencySwitcher: FC = memo(() => {
   const dispatch = useAppDispatch();
+  // todo  переписать снова на куки
+  // eslint-disable-next-line
   const [currentCurrency, setCurrentCurrency] = useState<TDropdownItem>(CHANGE_CURRENCY_DATA[0]);
 
   const handleCurrencyChange = (item: TDropdownItem) => {

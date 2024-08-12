@@ -18,8 +18,8 @@ import { FormError } from '@/shared/ui/FormError';
 import { Input } from '@/shared/ui/Input';
 import { Text } from '@/shared/ui/Text';
 
-import { LoginSchema } from '../../model/types/loginSchema';
-import { loginByUsername } from '../../services/loginByUsername';
+import { LoginSchema } from '../../model';
+import { loginByUsername } from '../../services';
 
 import cls from './LoginForm.module.scss';
 

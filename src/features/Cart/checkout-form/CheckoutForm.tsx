@@ -4,7 +4,6 @@ import { useRouter } from 'next/navigation';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 
 import { selectCartProducts } from '@/entities/Cart';
-import { selectCurrentCurrency, DEFAULT_CURRENCY } from '@/entities/Currency';
 import { TOrder, TOrderProduct, addToOrders } from '@/entities/Order';
 import {
   COUNTRIES_LIST,
@@ -41,7 +40,6 @@ type TFormData = {
 };
 
 export const CheckoutForm: FC = () => {
-  const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;
   const router = useRouter();
   const dispatch = useAppDispatch();
   const cartItems = useAppSelector(selectCartProducts);
@@ -58,6 +56,7 @@ export const CheckoutForm: FC = () => {
 
   // todo   сделать модел для запроса из формы и из стора и отправить
   const onSubmit: SubmitHandler<TFormData> = (data) => {
+    // eslint-disable-next-line
     setIsFormSubmitting((prev) => (prev = true));
 
     const orderItems: TOrderProduct[] = cartItems.map((item) => {
@@ -66,7 +65,6 @@ export const CheckoutForm: FC = () => {
         name: item.title,
         price: item.price,
         quantity: item.amount,
-        // todo
         total: {
           USD: item.price.USD * item.amount,
           EUR: item.price.EUR * item.amount,
@@ -122,8 +120,10 @@ export const CheckoutForm: FC = () => {
     if (isValid) {
       reset();
       router.push(getRouteOrderHistory());
+      // eslint-disable-next-line
       setIsFormSubmitting((prev) => (prev = false));
     }
+    // eslint-disable-next-line
     setIsFormSubmitting((prev) => (prev = false));
   };
 

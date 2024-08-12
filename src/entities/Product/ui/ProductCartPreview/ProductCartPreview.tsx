@@ -1,5 +1,6 @@
 import { FC, ReactNode } from 'react';
 import cn from 'classnames';
+import Image from 'next/image';
 
 import { selectCurrentCurrency, DEFAULT_CURRENCY } from '@/entities/Currency';
 import { useAppSelector } from '@/shared/lib/hooks';
@@ -21,7 +22,9 @@ export const ProductCartPreview: FC<Props> = ({ data, actions, className }) => {
   const { img, title, path, price, amount } = data;
   return (
     <div className={cn(cls.ProductCartPreview, className)}>
-      <img className={cls.ProductCartPreviewImage} src={img} alt={data.title} />
+      <div className={cls.ProductCartPreviewImageContainer}>
+        <Image className={cls.ProductCartPreviewImage} src={img!} alt={data.title} />
+      </div>
       <div className={cls.ProductCartPreviewDescription}>
         <a className={cls.ProductCartPreviewLink} href={path}>
           <Text variant="body_s" className={cls.ProductCartPreviewTitle}>

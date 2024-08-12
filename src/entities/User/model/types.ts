@@ -10,8 +10,6 @@ export interface UserSchema {
 }
 
 export type TUserAddress = {
-  name: string;
-  street: string;
   email: string;
   phone: string;
   firstName: string;

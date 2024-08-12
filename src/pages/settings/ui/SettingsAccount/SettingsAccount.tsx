@@ -4,8 +4,7 @@ import { FC, useEffect } from 'react';
 import { UnknownAction } from '@reduxjs/toolkit';
 import cn from 'classnames';
 
-import { getUserDataById } from '@/entities/User';
-import { getUserData, getUserError, getUserIsLoading } from '@/entities/User/selectors';
+import { getUserDataById, getUserData, getUserError, getUserIsLoading } from '@/entities/User';
 import { EditUserSettings } from '@/features/User';
 import { ChangePassword } from '@/features/User/change-password';
 import { EditUserBillingAddress } from '@/features/User/edit-user-billing-address';
@@ -49,6 +48,7 @@ export const SettingsAccount: FC<Props> = ({ className }) => {
             Account Settings
           </Text>
         </div>
+        {/* todo */}
         <EditUserSettings className={cls.SettingsAccountMain} data={userData.personalData} />
       </div>
 

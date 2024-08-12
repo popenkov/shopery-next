@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import { ProductSchema, TProductDetailed } from '../types';
-import { getProductById } from '../../api/get-product-by-id';
+import { getProductById } from '../../api';
 
 const initialState: ProductSchema = {
   product_detailed: undefined,

@@ -39,7 +39,7 @@ export const ChangePassword: FC<Props> = ({ className }) => {
 
   const onSubmit: SubmitHandler<TFormData> = (data) => {
     if (isValid) {
-      console.log('form sent');
+      console.log('form sent', data);
       reset();
     }
   };

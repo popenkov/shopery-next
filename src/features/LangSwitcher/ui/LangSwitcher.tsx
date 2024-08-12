@@ -2,7 +2,8 @@
 
 import { FC, memo, useEffect, useState } from 'react';
 
-import { type TLocale } from '@/app/configs/i18n/i18n.config';
+// eslint-disable-next-line
+import { type TLocale } from '@/app/configs/i18n';
 import { getUserLocale, setUserLocale } from '@/shared/lib/locale';
 import { Dropdown, TDropdownItem } from '@/shared/ui/Dropdown';
 

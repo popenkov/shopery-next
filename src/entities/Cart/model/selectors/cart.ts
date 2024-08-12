@@ -2,7 +2,7 @@ import { createSelector } from '@reduxjs/toolkit';
 
 import { TCurrencyVariant } from '@/entities/Currency';
 
-import { type TCartProduct } from '../types/cart';
+import { type TCartProduct } from '../types';
 
 const selectBase = createSelector(
   (state: RootState) => state,

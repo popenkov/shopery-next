@@ -71,7 +71,6 @@ server.post('/order-detailed', (req, res) => {
 
 server.post('/product-detailed', (req, res) => {
   try {
-    const { id } = req.body;
     const db = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'db.json'), 'UTF-8'));
 
     const { product_detailed } = db;

@@ -3,7 +3,9 @@ import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { DEFAULT_CURRENCY, selectCurrentCurrency } from '@/entities/Currency';
 import { type TUserOrderItem } from '@/entities/User';
+import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice } from '@/shared/lib/utils';
 import { Text } from '@/shared/ui/Text';
 
@@ -16,6 +18,7 @@ interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDi
 
 export const ProductOrder: FC<Props> = ({ data, className }) => {
   const { img, name, path, price, quantity, total } = data;
+  const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;
   return (
     <div className={cn(cls.ProductOrder, className)}>
       <div className={cls.ProductOrderInfo}>

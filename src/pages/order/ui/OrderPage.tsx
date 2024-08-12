@@ -17,7 +17,7 @@ import cls from './OrderPage.module.scss';
 import { OrderPageAddress } from './OrderPageAddress';
 import { OrderPageHeader } from './OrderPageHeader';
 import { OrderPagePayment } from './OrderPagePayment';
-import { OrderPageSkeleton } from './OrderPageSkeleton/OrderPageSkeleton';
+import { OrderPageSkeleton } from './OrderPageSkeleton';
 import { OrderPageStatus } from './OrderPageStatus';
 import { OrderProducts } from './OrderProducts';
 

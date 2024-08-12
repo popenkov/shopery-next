@@ -1,7 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { TWishlistProduct } from '../types/wishlist';
-import { WishlistSchema } from '../types/wishlist-schema';
+import { TWishlistProduct, WishlistSchema } from '../types';
 
 const initialState: WishlistSchema = {
   products: [],

@@ -1,6 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
-import { ThunkExtraArg } from '@/app/providers/StoreProvider/StateSchema';
+import { ThunkExtraArg } from '@/app/providers';
 import { cartReducer } from '@/entities/Cart';
 import { currencyReducer } from '@/entities/Currency';
 import { wishlistReducer } from '@/entities/Favorites';

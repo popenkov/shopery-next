@@ -1,7 +1,7 @@
 import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode, memo } from 'react';
 import cn from 'classnames';
 
-import { TTagVariant } from '../model/types/tag.types';
+import { TTagVariant } from '../model';
 import { Text } from '../../Text';
 
 import cls from './Tag.module.scss';

@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, ReactNode, useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import cn from 'classnames';
 
 import { TOrder } from '@/entities/Order';
@@ -16,10 +16,9 @@ import cls from './UserOrders.module.scss';
 type Props = {
   className?: string;
   isPreview?: boolean;
-  actions?: ReactNode;
 };
 
-export const UserOrders: FC<Props> = ({ className, isPreview, actions }) => {
+export const UserOrders: FC<Props> = ({ className, isPreview }) => {
   const [orders, setOrders] = useState<null | TOrder[]>(null);
 
   useEffect(() => {

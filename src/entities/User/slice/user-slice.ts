@@ -2,10 +2,9 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import { USER_LOCALSTORAGE_KEY } from '@/shared/lib/constants';
 
-import { TUser, TUserData, UserSchema } from '../model/types';
-import { getUserDataById } from '../services/getUserDataById';
-import { initAuthData } from '../services/initAuthData';
-import { updateBillingAddress } from '../services/updateBillingAddress';
+import { TUser, TUserAddress, TUserData, UserSchema } from '../model';
+import { getUserDataById, initAuthData } from '../services';
+import { updateBillingAddress } from '../services';
 
 const initialState: UserSchema = {
   _inited: false,
@@ -55,7 +54,7 @@ export const userSlice = createSlice({
         state.error = undefined;
         state.isLoading = true;
       })
-      .addCase(updateBillingAddress.fulfilled, (state, action: PayloadAction<Profile>) => {
+      .addCase(updateBillingAddress.fulfilled, (state, action: PayloadAction<TUserAddress>) => {
         state.isLoading = false;
         state.addressData = action.payload;
       })

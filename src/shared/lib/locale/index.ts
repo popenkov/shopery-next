@@ -2,7 +2,8 @@
 
 import { cookies } from 'next/headers';
 
-import { TLocale, defaultLocale } from '@/app/configs/i18n/i18n.config';
+// eslint-disable-next-line
+import { TLocale, defaultLocale } from '@/app/configs/i18n';
 
 // In this example the locale is read from a cookie. You could alternatively
 // also read it from a database, backend service, or any other source.

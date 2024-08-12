@@ -4,7 +4,7 @@ import { FC } from 'react';
 import cn from 'classnames';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 
-import { TUserPersonalData } from '@/entities/User/model';
+import { TUserPersonalData } from '@/entities/User';
 import { VALIDATION_MESSAGES } from '@/shared/lib/constants';
 import { EMAIL_REGEX } from '@/shared/lib/constants';
 import { Button } from '@/shared/ui/Buttons';
@@ -20,7 +20,8 @@ type Props = {
   data: TUserPersonalData;
   className?: string;
 };
-
+// todo
+// eslint-disable-next-line
 export const EditUserSettings: FC<Props> = ({ data, className }) => {
   const {
     register,

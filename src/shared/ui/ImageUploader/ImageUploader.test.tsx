@@ -3,6 +3,7 @@ import { render, fireEvent, waitFor } from '@testing-library/react';
 
 import { ImageUploader } from './ImageUploader';
 
+// eslint-disable-next-line
 jest.mock('next/image', () => ({ src, alt }: { src: string; alt: string }) => (
   <img src={src} alt={alt} data-testid="ImageUploader.preview" />
 ));

@@ -22,7 +22,7 @@ interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDi
 
 export const ProductCart: FC<Props> = ({ data, className, cartActions, deleteActions }) => {
   const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;
-  const { img, title, path, price, amount } = data;
+  const { img, title, path, price } = data;
 
   return (
     <div className={cn(cls.ProductCart, className)}>
@@ -50,8 +50,6 @@ export const ProductCart: FC<Props> = ({ data, className, cartActions, deleteAct
       <div className={cls.ProductCartSubtotal}>
         <span className={cls.ProductCartKeyMobile}>Subtotal:</span>
         <span className="cart-item__price-new">
-          {' '}
-          {/* * amount! */}
           {getFormattedPrice(price[currentCurrency], currentCurrency)}
         </span>
       </div>

@@ -1,4 +1,4 @@
-import { CartSchema } from '../model/types/cart-schema';
+import { CartSchema } from '../model';
 
 export const changeItemsAmountInCart = (state: CartSchema, id: string, amount: number) => {
   const newState: CartSchema = JSON.parse(JSON.stringify(state));
