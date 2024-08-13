@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
 import { selectTotalAmount, selectTotalPrice } from '@/entities/Cart';
-import { selectCurrentCurrency, DEFAULT_CURRENCY } from '@/entities/Currency';
+import { selectCurrentCurrency } from '@/entities/Currency';
 import { getRouteCart } from '@/shared/lib/constants';
 import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice } from '@/shared/lib/utils';
@@ -16,7 +16,7 @@ interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDi
 
 export const HeaderCart: FC<Props> = () => {
   const t = useTranslations('common');
-  const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;
+  const currentCurrency = useAppSelector(selectCurrentCurrency);
   const totalAmount = useAppSelector(selectTotalAmount);
   const totalPrice = useAppSelector(selectTotalPrice);
   const formattedPrice = getFormattedPrice(totalPrice, currentCurrency);

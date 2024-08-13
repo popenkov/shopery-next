@@ -2,7 +2,7 @@ import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { selectCurrentCurrency, DEFAULT_CURRENCY } from '@/entities/Currency';
+import { selectCurrentCurrency } from '@/entities/Currency';
 import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice } from '@/shared/lib/utils';
 import { StarRating } from '@/shared/ui/StarRating';
@@ -20,7 +20,7 @@ interface ProductLargeProps
 }
 
 export const ProductLarge: FC<ProductLargeProps> = ({ data, actions, cartAction }) => {
-  const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;
+  const currentCurrency = useAppSelector(selectCurrentCurrency);
   const { img, title, path, price, priceOld, rating } = data;
 
   return (

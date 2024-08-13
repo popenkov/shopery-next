@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-import { selectCurrentCurrency, DEFAULT_CURRENCY } from '@/entities/Currency';
+import { selectCurrentCurrency } from '@/entities/Currency';
 import { TOrder } from '@/entities/Order';
 import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice, getWordDeclination } from '@/shared/lib/utils';
@@ -14,7 +14,7 @@ type Props = {
 };
 
 export const UserOrder: FC<Props> = ({ order }) => {
-  const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;
+  const currentCurrency = useAppSelector(selectCurrentCurrency);
 
   const animations = {
     initial: { scale: 0, opacity: 0 },

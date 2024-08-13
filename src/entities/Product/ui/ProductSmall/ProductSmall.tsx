@@ -2,7 +2,7 @@ import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { selectCurrentCurrency, DEFAULT_CURRENCY } from '@/entities/Currency';
+import { selectCurrentCurrency } from '@/entities/Currency';
 import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice } from '@/shared/lib/utils';
 import { StarRating } from '@/shared/ui/StarRating';
@@ -19,7 +19,7 @@ interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDi
 
 export const ProductSmall: FC<Props> = ({ data, actions }) => {
   const { img, title, path, price, priceOld, rating } = data;
-  const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;
+  const currentCurrency = useAppSelector(selectCurrentCurrency);
   return (
     <div className={cls.productSmall}>
       <Link className={cls.productImageLink} href={path!}>

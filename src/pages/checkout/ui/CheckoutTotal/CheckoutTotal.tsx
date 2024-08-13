@@ -4,7 +4,7 @@ import { FC, useState } from 'react';
 import cn from 'classnames';
 
 import { selectCartProducts, selectTotalPrice } from '@/entities/Cart';
-import { selectCurrentCurrency, DEFAULT_CURRENCY } from '@/entities/Currency';
+import { selectCurrentCurrency } from '@/entities/Currency';
 import { ProductCheckout } from '@/entities/Product';
 import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice } from '@/shared/lib/utils';
@@ -19,7 +19,7 @@ type Props = {
 };
 
 export const CheckoutTotal: FC<Props> = ({ className }) => {
-  const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;
+  const currentCurrency = useAppSelector(selectCurrentCurrency);
   const cartItems = useAppSelector(selectCartProducts);
   const totalPrice = useAppSelector(selectTotalPrice);
   const [activePaymentMethod, setActivePaymentMethod] = useState('cash');

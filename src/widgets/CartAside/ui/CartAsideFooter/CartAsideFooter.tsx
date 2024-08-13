@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { selectCurrentCurrency, TCurrencyVariant, DEFAULT_CURRENCY } from '@/entities/Currency';
+import { selectCurrentCurrency, TCurrencyVariant } from '@/entities/Currency';
 import { getRouteCart, getRouteCheckout } from '@/shared/lib/constants';
 import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice, getWordDeclination } from '@/shared/lib/utils';
@@ -16,7 +16,7 @@ type Props = {
 };
 
 export const CartAsideFooter: FC<Props> = ({ closeDrawer, price, amount }) => {
-  const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;
+  const currentCurrency = useAppSelector(selectCurrentCurrency);
   return (
     <div className={cls.CartAsideFooter}>
       <div className={cls.CartAsideFooterTotal}>

@@ -1,11 +1,11 @@
 import React from 'react';
 import { fireEvent, waitFor } from '@testing-library/react';
 
+import { TUser } from '@/entities/User';
 import { getRouteLogin, getRouteRegistation } from '@/shared/lib/constants';
 import { renderWithStore } from '@/shared/lib/tests';
 
 import { HeaderTop } from './HeaderTop';
-import { TUser } from '@/entities/User';
 
 jest.mock('../../../../entities/User', () => ({
   selectAuthData: jest.fn(),

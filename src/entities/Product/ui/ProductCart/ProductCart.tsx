@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { selectCurrentCurrency } from '@/entities/Currency';
-import { DEFAULT_CURRENCY } from '@/entities/Currency';
 import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice } from '@/shared/lib/utils';
 import { Text } from '@/shared/ui/Text';
@@ -21,7 +20,7 @@ interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDi
 }
 
 export const ProductCart: FC<Props> = ({ data, className, cartActions, deleteActions }) => {
-  const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;
+  const currentCurrency = useAppSelector(selectCurrentCurrency);
   const { img, title, path, price } = data;
 
   return (

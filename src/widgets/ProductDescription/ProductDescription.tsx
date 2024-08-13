@@ -2,7 +2,7 @@ import { FC, ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { selectCurrentCurrency, DEFAULT_CURRENCY } from '@/entities/Currency';
+import { selectCurrentCurrency } from '@/entities/Currency';
 import { type TProductDetailed } from '@/entities/Product';
 import { SocialShare } from '@/entities/SocialShare';
 import { useAppSelector } from '@/shared/lib/hooks';
@@ -37,7 +37,7 @@ export const ProductDescription: FC<Props> = ({ data, actions }) => {
     categoryTags,
   } = data;
 
-  const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;
+  const currentCurrency = useAppSelector(selectCurrentCurrency);
   return (
     <div className={cls.productDescription} aria-hidden="true">
       <div className={cls.productDescriptionContent}>

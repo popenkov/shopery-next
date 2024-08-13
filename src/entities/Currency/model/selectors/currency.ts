@@ -4,7 +4,7 @@ import { TCurrencyVariant } from '../types';
 
 const selectBase = createSelector(
   (state: RootState) => state,
-  (state) => state.cart,
+  (state) => state.currency,
 );
 
 export const selectCurrencyData = createSelector(selectBase, (state) => state);

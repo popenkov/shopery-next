@@ -1,9 +1,11 @@
 'use client';
 
-import { FC, memo, useState } from 'react';
+import { FC, memo, useEffect, useState } from 'react';
 
 import {
   CHANGE_CURRENCY_DATA,
+  getUserCurrency,
+  setUserCurrency,
   type TCurrencyVariant,
   updateCurrentCurrency,
 } from '@/entities/Currency';
@@ -12,16 +14,32 @@ import { Dropdown, TDropdownItem } from '@/shared/ui/Dropdown';
 
 export const CurrencySwitcher: FC = memo(() => {
   const dispatch = useAppDispatch();
-  // todo  переписать снова на куки
-  // eslint-disable-next-line
   const [currentCurrency, setCurrentCurrency] = useState<TDropdownItem>(CHANGE_CURRENCY_DATA[0]);
 
+  const getCurrentCurrency = async () => {
+    const currency = await getUserCurrency();
+    const currencyObj = CHANGE_CURRENCY_DATA.find((item) => {
+      return item.value.toLowerCase() === currency.toLowerCase();
+    });
+    setCurrentCurrency(currencyObj!);
+    const formattedValue = currencyObj!.value.toUpperCase();
+    dispatch(updateCurrentCurrency(formattedValue as TCurrencyVariant));
+  };
+
+  useEffect(() => {
+    getCurrentCurrency();
+  }, []);
+
   const handleCurrencyChange = (item: TDropdownItem) => {
+    const currency = item.value as TCurrencyVariant;
+    const currencyObj = CHANGE_CURRENCY_DATA.find((item) => {
+      return item.value.toLowerCase() === currency.toLowerCase();
+    });
+    setCurrentCurrency(currencyObj!);
+    setUserCurrency(currency);
     const formattedValue = item.value.toUpperCase();
     dispatch(updateCurrentCurrency(formattedValue as TCurrencyVariant));
-    setTimeout(() => {
-      window.location.reload();
-    }, 0);
+    window.location.reload();
   };
 
   return (
