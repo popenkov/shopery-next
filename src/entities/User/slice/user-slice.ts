@@ -2,8 +2,8 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import { USER_LOCALSTORAGE_KEY } from '@/shared/lib/constants';
 
-import { TUser, TUserAddress, TUserData, UserSchema } from '../model';
-import { getUserDataById, initAuthData } from '../services';
+import { TUser, TUserAddress, TUserData, TUserPersonalData, UserSchema } from '../model';
+import { getUserDataById, initAuthData, updatePersonalData } from '../services';
 import { updateBillingAddress } from '../services';
 
 const initialState: UserSchema = {
@@ -13,6 +13,7 @@ const initialState: UserSchema = {
   error: undefined,
   isLoading: true,
   addressData: undefined,
+  personalData: undefined,
 };
 
 export const userSlice = createSlice({
@@ -59,6 +60,19 @@ export const userSlice = createSlice({
         state.addressData = action.payload;
       })
       .addCase(updateBillingAddress.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      })
+      // todo
+      .addCase(updatePersonalData.pending, (state) => {
+        state.error = undefined;
+        state.isLoading = true;
+      })
+      .addCase(updatePersonalData.fulfilled, (state, action: PayloadAction<TUserPersonalData>) => {
+        state.isLoading = false;
+        state.personalData = action.payload;
+      })
+      .addCase(updatePersonalData.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
       });

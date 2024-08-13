@@ -36,9 +36,9 @@ export const Input = memo(
       ...otherProps
     } = props;
 
-    // todo
     const handleLoupeClick = () => {
-      // ref?.current?.focus();
+      // @ts-ignore
+      ref?.current?.focus();
     };
 
     const uniqueId = useId();
@@ -55,6 +55,7 @@ export const Input = memo(
             id={uniqueId}
             ref={ref}
             type={type}
+            value={value}
             onChange={(evt) => onChange?.(evt)}
             className={cn(cls.input, {
               [cls.search]: type === 'search',

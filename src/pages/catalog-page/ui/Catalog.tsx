@@ -21,8 +21,6 @@ const Catalog: FC = () => {
   const [items, setItems] = useState<TProduct[]>(allItems);
 
   const handlePageChange = (filteredProducts: TProduct[]) => {
-    console.log('handlePageChange', filteredProducts);
-
     setItems(filteredProducts);
   };
 

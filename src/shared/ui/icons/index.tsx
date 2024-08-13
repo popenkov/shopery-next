@@ -1,9 +1,13 @@
 import { FC } from 'react';
 
-export const AlertIcon: FC<{ className?: string }> = ({ className }) => {
+export const AlertIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="20"
       height="20"
       viewBox="0 0 20 20"
@@ -35,10 +39,14 @@ export const AlertIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const AppStoreIcon: FC<{ className?: string }> = ({ className }) => {
+export const AppStoreIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="28"
       height="29"
       viewBox="0 0 28 29"
@@ -53,10 +61,14 @@ export const AppStoreIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const ApplePayIcon: FC<{ className?: string }> = ({ className }) => {
+export const ApplePayIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="45"
       height="32"
       viewBox="0 0 45 32"
@@ -73,10 +85,14 @@ export const ApplePayIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const AppleIcon: FC<{ className?: string }> = ({ className }) => {
+export const AppleIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -99,10 +115,14 @@ export const AppleIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const ApplepayIcon: FC<{ className?: string }> = ({ className }) => {
+export const ApplepayIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="45"
       height="32"
       viewBox="0 0 45 32"
@@ -119,9 +139,18 @@ export const ApplepayIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const ArrowRightIcon: FC<{ className?: string }> = ({ className }) => {
+export const ArrowRightIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -132,9 +161,18 @@ export const ArrowRightIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const ArrowIcon: FC<{ className?: string }> = ({ className }) => {
+export const ArrowIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -145,10 +183,14 @@ export const ArrowIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const CalendarIcon: FC<{ className?: string }> = ({ className }) => {
+export const CalendarIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="18"
       height="19"
       viewBox="0 0 18 19"
@@ -168,9 +210,18 @@ export const CalendarIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const CartIcon: FC<{ className?: string }> = ({ className }) => {
+export const CartIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      viewBox="0 0 32 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M10.0833 12.9167H5.83333L3 28.5H28.5L25.6667 12.9167H21.4167M10.0833 12.9167V8.66667C10.0833 5.53705 12.6204 3 15.75 3V3C18.8796 3 21.4167 5.53705 21.4167 8.66667V12.9167M10.0833 12.9167H21.4167M10.0833 12.9167V17.1667M21.4167 12.9167V17.1667"
         stroke="currentColor"
@@ -182,10 +233,14 @@ export const CartIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const ChatMessageIcon: FC<{ className?: string }> = ({ className }) => {
+export const ChatMessageIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="18"
       height="19"
       viewBox="0 0 18 19"
@@ -203,10 +258,14 @@ export const ChatMessageIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const CheckIcon: FC<{ className?: string }> = ({ className }) => {
+export const CheckIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="16"
       height="16"
       viewBox="0 0 16 16"
@@ -224,18 +283,31 @@ export const CheckIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const ChevronDownIcon: FC<{ className?: string }> = ({ className }) => {
+export const ChevronDownIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      viewBox="0 0 12 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path d="M10 4L6 8L2 4" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 };
 
-export const CloseBtnIcon: FC<{ className?: string }> = ({ className }) => {
+export const CloseBtnIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="10"
       height="10"
       viewBox="0 0 10 10"
@@ -260,9 +332,18 @@ export const CloseBtnIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const CloseIcon: FC<{ className?: string }> = ({ className }) => {
+export const CloseIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      viewBox="0 0 25 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M18.75 6.25L6.25 18.75"
         stroke="currentColor"
@@ -281,10 +362,14 @@ export const CloseIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const CoffeeIcon: FC<{ className?: string }> = ({ className }) => {
+export const CoffeeIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -303,9 +388,18 @@ export const CoffeeIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const CrossIcon: FC<{ className?: string }> = ({ className }) => {
+export const CrossIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      viewBox="0 0 25 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M18.75 6.25L6.25 18.75"
         stroke="currentColor"
@@ -324,10 +418,14 @@ export const CrossIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const CupcakeIcon: FC<{ className?: string }> = ({ className }) => {
+export const CupcakeIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -386,10 +484,14 @@ export const CupcakeIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const CutleryIcon: FC<{ className?: string }> = ({ className }) => {
+export const CutleryIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -424,10 +526,14 @@ export const CutleryIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const DashboardIcon: FC<{ className?: string }> = ({ className }) => {
+export const DashboardIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -442,10 +548,14 @@ export const DashboardIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const DeliveryTruckIcon: FC<{ className?: string }> = ({ className }) => {
+export const DeliveryTruckIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="40"
       height="40"
       viewBox="0 0 40 40"
@@ -460,9 +570,18 @@ export const DeliveryTruckIcon: FC<{ className?: string }> = ({ className }) => 
   );
 };
 
-export const Delivery_truckIcon: FC<{ className?: string }> = ({ className }) => {
+export const Delivery_truckIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M32.7021 26.3042C31.7247 26.3042 30.7962 26.687 30.0957 27.3793C29.3952 28.0798 29.0043 28.9921 29.0043 29.9694C29.0043 30.9468 29.3871 31.8591 30.0957 32.5596C30.8043 33.2519 31.7247 33.6347 32.7021 33.6347C34.7058 33.6347 36.3348 31.9894 36.3348 29.9694C36.3348 27.9495 34.7058 26.3042 32.7021 26.3042ZM32.7021 32.0057C31.5781 32.0057 30.6333 31.0772 30.6333 29.9694C30.6333 28.8617 31.5781 27.9332 32.7021 27.9332C33.8098 27.9332 34.7058 28.8454 34.7058 29.9694C34.7058 31.0935 33.8098 32.0057 32.7021 32.0057ZM33.6469 14.0949C33.5003 13.9564 33.3048 13.8831 33.1012 13.8831H28.9228C28.4749 13.8831 28.1083 14.2496 28.1083 14.6976V21.3765C28.1083 21.8245 28.4749 22.191 28.9228 22.191H35.5528C36.0008 22.191 36.3673 21.8245 36.3673 21.3765V16.9049C36.3673 16.6768 36.2696 16.4569 36.0986 16.3022L33.6469 14.0949ZM34.7383 20.562H29.7373V15.504H32.7835L34.7383 17.2633V20.562ZM12.8121 26.3042C11.8347 26.3042 10.9061 26.687 10.2057 27.3793C9.50519 28.0798 9.11423 28.9921 9.11423 29.9694C9.11423 30.9468 9.49705 31.8591 10.2057 32.5596C10.9143 33.2519 11.8347 33.6347 12.8121 33.6347C14.8157 33.6347 16.4447 31.9894 16.4447 29.9694C16.4447 27.9495 14.8157 26.3042 12.8121 26.3042ZM12.8121 32.0057C11.688 32.0057 10.7432 31.0772 10.7432 29.9694C10.7432 28.8617 11.688 27.9332 12.8121 27.9332C13.9198 27.9332 14.8157 28.8454 14.8157 29.9694C14.8157 31.0935 13.9198 32.0057 12.8121 32.0057ZM7.37935 27.306H5.74221V25.1395C5.74221 24.6915 5.37569 24.325 4.92771 24.325C4.47974 24.325 4.11322 24.6915 4.11322 25.1395V28.1205C4.11322 28.5685 4.47974 28.935 4.92771 28.935H7.37935C7.82733 28.935 8.19385 28.5685 8.19385 28.1205C8.19385 27.6726 7.82733 27.306 7.37935 27.306ZM11.5089 22.867C11.5089 22.4191 11.1423 22.0525 10.6944 22.0525H0.814498C0.366524 22.0525 0 22.4191 0 22.867C0 23.315 0.366524 23.6815 0.814498 23.6815H10.6944C11.1423 23.6815 11.5089 23.3231 11.5089 22.867ZM2.46793 19.9267L12.3478 19.9837C12.7958 19.9837 13.1623 19.6253 13.1704 19.1773C13.1786 18.7212 12.8121 18.3547 12.3641 18.3547L2.48422 18.2977C2.47607 18.2977 2.47607 18.2977 2.47607 18.2977C2.0281 18.2977 1.66158 18.6561 1.66158 19.104C1.65343 19.5602 2.01996 19.9267 2.46793 19.9267ZM4.12951 16.2289H14.0094C14.4573 16.2289 14.8239 15.8623 14.8239 15.4144C14.8239 14.9664 14.4573 14.5999 14.0094 14.5999H4.12951C3.68153 14.5999 3.31501 14.9664 3.31501 15.4144C3.31501 15.8623 3.68153 16.2289 4.12951 16.2289ZM39.6986 15.1293L33.8668 10.2993C33.7202 10.1771 33.541 10.112 33.3456 10.112H26.4875V7.17979C26.4875 6.73182 26.121 6.3653 25.673 6.3653H4.92771C4.47974 6.3653 4.11322 6.73182 4.11322 7.17979V13.1419C4.11322 13.5899 4.47974 13.9564 4.92771 13.9564C5.37569 13.9564 5.74221 13.5899 5.74221 13.1419V7.99429H24.8666V27.306H18.1877C17.7398 27.306 17.3732 27.6726 17.3732 28.1205C17.3732 28.5685 17.7398 28.935 18.1877 28.935H28.1328C28.5807 28.935 28.9473 28.5685 28.9473 28.1205C28.9473 27.6726 28.5807 27.306 28.1328 27.306H26.4956V11.741H33.0605L38.371 16.1393L38.314 27.2897H37.4669C37.0189 27.2897 36.6524 27.6563 36.6524 28.1042C36.6524 28.5522 37.0189 28.9187 37.4669 28.9187H39.1203C39.5683 28.9187 39.9348 28.5604 39.9348 28.1124L40 15.7646C39.9919 15.5203 39.886 15.284 39.6986 15.1293Z"
         fill="currentColor"
@@ -471,10 +590,14 @@ export const Delivery_truckIcon: FC<{ className?: string }> = ({ className }) =>
   );
 };
 
-export const DiscoverIcon: FC<{ className?: string }> = ({ className }) => {
+export const DiscoverIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="45"
       height="32"
       viewBox="0 0 45 32"
@@ -496,10 +619,14 @@ export const DiscoverIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const EmailIcon: FC<{ className?: string }> = ({ className }) => {
+export const EmailIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -524,10 +651,14 @@ export const EmailIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const EyeOpenIcon: FC<{ className?: string }> = ({ className }) => {
+export const EyeOpenIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="20"
       height="21"
       viewBox="0 0 20 21"
@@ -552,9 +683,18 @@ export const EyeOpenIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const EyeIcon: FC<{ className?: string }> = ({ className }) => {
+export const EyeIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M10 3.54103C3.75 3.54103 1.25 10.0001 1.25 10.0001C1.25 10.0001 3.75 16.4577 10 16.4577C16.25 16.4577 18.75 10.0001 18.75 10.0001C18.75 10.0001 16.25 3.54103 10 3.54103V3.54103Z"
         stroke="currentColor"
@@ -573,9 +713,18 @@ export const EyeIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const FacebookIcon: FC<{ className?: string }> = ({ className }) => {
+export const FacebookIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         id="Vector"
         d="M11.998 2.98874L13.6416 2.98874L13.6416 0.12674C13.3574 0.0877457 12.3828 -7.62939e-06 11.2471 -7.62939e-06C8.87793 -7.62939e-06 7.25488 1.49024 7.25488 4.22924L7.25488 6.74999L4.64062 6.74999L4.64062 9.94949L7.25488 9.94949L7.25488 18L10.4609 18L10.4609 9.95024L12.9697 9.95024L13.3672 6.75074L10.46 6.75074L10.46 4.54649C10.4609 3.62174 10.71 2.98874 11.998 2.98874Z"
@@ -587,10 +736,14 @@ export const FacebookIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const FilterIcon: FC<{ className?: string }> = ({ className }) => {
+export const FilterIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="22"
       height="22"
       viewBox="0 0 22 22"
@@ -607,10 +760,14 @@ export const FilterIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const FishIcon: FC<{ className?: string }> = ({ className }) => {
+export const FishIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -645,10 +802,14 @@ export const FishIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const FoodIcon: FC<{ className?: string }> = ({ className }) => {
+export const FoodIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -683,10 +844,14 @@ export const FoodIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const GooglePlayIcon: FC<{ className?: string }> = ({ className }) => {
+export const GooglePlayIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="24"
       height="25"
       viewBox="0 0 24 25"
@@ -701,9 +866,18 @@ export const GooglePlayIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const HeadphonesIcon: FC<{ className?: string }> = ({ className }) => {
+export const HeadphonesIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M30.9966 18.1681V16.9378C30.9966 13.9933 29.9546 11.2571 28.0655 9.22689C26.1294 7.14286 23.4672 6 20.563 6H19.5479C16.6437 6 13.9815 7.14286 12.0454 9.22689C10.1563 11.2571 9.11429 13.9933 9.11429 16.9378V18.1681C6.82185 18.3227 5 20.2319 5 22.5647V24.4874C5 26.9143 6.97647 28.8908 9.40336 28.8908H11.884C12.3277 28.8908 12.6908 28.5277 12.6908 28.084V18.9613C12.6908 18.5176 12.3277 18.1546 11.884 18.1546H10.7277V16.9378C10.7277 11.6202 14.5193 7.61345 19.5412 7.61345H20.5563C25.5849 7.61345 29.3697 11.6202 29.3697 16.9378V18.1546H28.2134C27.7698 18.1546 27.4067 18.5176 27.4067 18.9613V28.0773C27.4067 28.521 27.7698 28.884 28.2134 28.884H29.3429C29.0134 33.0924 26.116 34.0672 24.7714 34.2891C24.4017 33.1529 23.3328 32.3328 22.0756 32.3328H20.0588C18.4992 32.3328 17.2286 33.6034 17.2286 35.163C17.2286 36.7227 18.4992 38 20.0588 38H22.0824C23.3866 38 24.4824 37.1126 24.8118 35.916C25.4706 35.8219 26.5126 35.5866 27.5479 34.9815C29.0067 34.1277 30.7345 32.3866 30.963 28.8773C33.2689 28.7361 35.0975 26.8202 35.0975 24.4807V22.558C35.1042 20.2319 33.2891 18.316 30.9966 18.1681ZM11.0908 27.2706H9.41681C7.87731 27.2706 6.62689 26.0202 6.62689 24.4807V22.558C6.62689 21.0185 7.87731 19.7681 9.41681 19.7681H11.0908V27.2706ZM22.0824 36.3866H20.0588C19.3866 36.3866 18.842 35.842 18.842 35.1697C18.842 34.4975 19.3866 33.9529 20.0588 33.9529H22.0824C22.7546 33.9529 23.2992 34.4975 23.2992 35.1697C23.2992 35.842 22.7546 36.3866 22.0824 36.3866ZM33.4908 24.4807C33.4908 26.0202 32.2403 27.2706 30.7008 27.2706H29.0269V19.7681H30.7008C32.2403 19.7681 33.4908 21.0185 33.4908 22.558V24.4807Z"
         fill="currentColor"
@@ -712,10 +886,14 @@ export const HeadphonesIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const HeartLinedIcon: FC<{ className?: string }> = ({ className }) => {
+export const HeartLinedIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="20"
       height="20"
       viewBox="0 0 20 20"
@@ -731,10 +909,14 @@ export const HeartLinedIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const HeartStrokeIcon: FC<{ className?: string }> = ({ className }) => {
+export const HeartStrokeIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="32"
       height="33"
       viewBox="0 0 32 33"
@@ -750,9 +932,17 @@ export const HeartStrokeIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const HeartIcon: FC<{ className?: string }> = ({ className }) => {
+export const HeartIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      viewBox="0 0 32 32"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         id="Vector"
         d="M15.9995 7.45074C24 -2.66667 42.6665 13.3333 15.9995 28.0722C-10.6665 13.3333 8 -2.66666 15.9995 7.45074Z"
@@ -764,10 +954,14 @@ export const HeartIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const HomeIcon: FC<{ className?: string }> = ({ className }) => {
+export const HomeIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -785,10 +979,14 @@ export const HomeIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const IceCreamIcon: FC<{ className?: string }> = ({ className }) => {
+export const IceCreamIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -815,10 +1013,14 @@ export const IceCreamIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const Ice_creamIcon: FC<{ className?: string }> = ({ className }) => {
+export const Ice_creamIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -845,9 +1047,18 @@ export const Ice_creamIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const InstagramIcon: FC<{ className?: string }> = ({ className }) => {
+export const InstagramIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         id="Vector"
         d="M17.9824 5.29205C17.9395 4.33564 17.7852 3.67812 17.5635 3.10837C17.335 2.50359 16.9834 1.96213 16.5225 1.51202C16.0723 1.05489 15.5273 0.699692 14.9297 0.474701C14.3564 0.253143 13.7031 0.0984879 12.7461 0.0563126C11.7832 0.0105743 11.4766 0 9.0332 0C6.58887 0 6.2832 0.0105743 5.32324 0.052742C4.36719 0.0949097 3.70898 0.24971 3.13965 0.47113C2.53516 0.699692 1.99316 1.05132 1.54297 1.51202C1.08594 1.96213 0.731445 2.50716 0.505859 3.10493C0.28418 3.67812 0.129883 4.33207 0.0878906 5.28848C0.0419922 6.25203 0.03125 6.55792 0.03125 9.00175C0.03125 11.4456 0.0419922 11.7515 0.0839844 12.7115C0.125977 13.6679 0.28125 14.3254 0.50293 14.8951C0.731445 15.4999 1.08594 16.0414 1.54297 16.4915C1.99316 16.9486 2.53809 17.3038 3.13574 17.5288C3.70898 17.7504 4.36328 17.905 5.32031 17.9472C6.2793 17.9895 6.58594 17.9999 9.0293 17.9999C11.4736 17.9999 11.7793 17.9895 12.7393 17.9472C13.6953 17.905 14.3535 17.7504 14.9229 17.5288C16.1328 17.0611 17.0889 16.1047 17.5566 14.8951C17.7783 14.322 17.9326 13.6679 17.9746 12.7115C18.0176 11.7515 18.0273 11.4456 18.0273 9.00175C18.0273 6.55792 18.0244 6.25203 17.9824 5.29205ZM16.3613 12.6411C16.3223 13.5202 16.1748 13.9949 16.0518 14.3114C15.749 15.0956 15.127 15.7179 14.3428 16.0204C14.0264 16.1434 13.5479 16.2911 12.6729 16.3297C11.7227 16.372 11.4385 16.3824 9.03613 16.3824C6.63477 16.3824 6.34668 16.372 5.40039 16.3297C4.52148 16.2911 4.04688 16.1434 3.73047 16.0204C3.33984 15.8761 2.98535 15.6476 2.69629 15.3487C2.39746 15.0568 2.16895 14.7052 2.02539 14.315C1.90234 13.9985 1.75391 13.5202 1.71582 12.6447C1.67285 11.6953 1.66309 11.4104 1.66309 9.00877C1.66309 6.60709 1.67285 6.31879 1.71582 5.37296C1.75391 4.49387 1.90234 4.01917 2.02539 3.70271C2.16895 3.31234 2.39746 2.95728 2.7002 2.66882C2.99219 2.36994 3.34375 2.14138 3.73438 1.99729C4.05078 1.87422 4.52832 1.72656 5.4043 1.68783C6.35352 1.64566 6.63867 1.63509 9.04004 1.63509C11.4453 1.63509 11.7295 1.64566 12.6758 1.68783C13.5547 1.72656 14.0293 1.87422 14.3457 1.99729C14.7363 2.14138 15.0918 2.36994 15.3799 2.66882C15.6787 2.96071 15.9072 3.31234 16.0518 3.70271C16.1748 4.01917 16.3223 4.49731 16.3613 5.37296C16.4033 6.32236 16.4141 6.60709 16.4141 9.00877C16.4141 11.4104 16.4033 11.6917 16.3613 12.6411Z"
@@ -873,9 +1084,18 @@ export const InstagramIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const LeafIcon: FC<{ className?: string }> = ({ className }) => {
+export const LeafIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      viewBox="0 0 32 33"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <g clipPath="url(#clip0_460_43091)">
         <path
           d="M31.9759 1.3712C31.9127 1.17858 31.7368 1.04539 31.5343 1.03695C30.5147 0.994517 27.7279 1.00183 23.8822 1.9852C20.3025 2.90064 16.9433 4.40533 14.1675 6.3367C13.9472 6.49002 13.893 6.79283 14.0462 7.01314C14.1994 7.23345 14.5022 7.28777 14.7226 7.13452C17.4039 5.2687 20.6546 3.81377 24.1229 2.92683C25.4189 2.59545 26.7587 2.34389 28.029 2.18627C27.5082 2.4112 26.95 2.67439 26.369 2.98289C22.4401 5.06858 20.245 7.73552 19.032 9.8792C18.8726 9.16395 18.8289 8.34189 18.8286 7.97552C18.8285 7.7072 18.611 7.48977 18.3427 7.48977C18.0743 7.48977 17.8567 7.70733 17.8567 7.9757C17.8567 8.19077 17.8739 9.98302 18.4167 11.0878C17.6686 12.6852 16.9689 14.2821 16.2918 15.8286C16.0042 16.4855 15.7211 17.132 15.4404 17.7649C15.0026 16.9405 14.4256 15.4479 14.5839 13.4956C14.6055 13.2282 14.4063 12.9937 14.1387 12.972C13.872 12.9508 13.6368 13.1496 13.6151 13.4171C13.3877 16.2219 14.503 18.1801 14.9555 18.848C14.1074 20.7223 13.271 22.4484 12.3902 23.9217C11.9367 22.895 11.2263 20.9387 11.2263 18.7604C11.2263 18.492 11.0087 18.2745 10.7404 18.2745C10.472 18.2745 10.2544 18.492 10.2544 18.7604C10.2544 21.6498 11.372 24.1069 11.7742 24.8975C10.8119 26.3353 9.78436 27.4596 8.62367 28.1438C5.08779 24.3037 4.74292 17.0988 10.9201 10.4274C11.6223 9.66902 12.3929 8.94508 13.2107 8.27577C13.4184 8.10577 13.4489 7.79964 13.2789 7.59195C13.1089 7.38427 12.8027 7.35377 12.5951 7.5237C11.7429 8.22133 10.9394 8.97614 10.207 9.76708C3.69104 16.8043 4.05817 24.4746 7.79436 28.6765C4.54073 30.8661 0.514981 31.0029 0.472856 31.0041C0.204731 31.0113 -0.00683118 31.2344 0.000168815 31.5026C0.00710632 31.7665 0.223231 31.9758 0.485731 31.9758C0.490044 31.9758 0.494419 31.9757 0.498731 31.9756C0.685231 31.9707 4.97954 31.83 8.49723 29.3732C9.56311 30.2429 11.235 30.772 13.2621 30.772C15.557 30.772 18.3072 30.0937 21.148 28.4638C23.7798 26.9538 25.6666 24.6438 26.7561 21.5981C27.6891 18.9901 28.0037 15.8521 27.666 12.5234C27.0639 6.58933 29.3056 3.91164 31.8177 1.90202C31.9759 1.77533 32.0389 1.56383 31.9759 1.3712ZM27.6832 5.34633C26.7273 7.34727 26.4054 9.72702 26.699 12.6214C27.0222 15.8071 26.7255 18.798 25.8409 21.2707C24.8315 24.0926 23.0898 26.229 20.6643 27.6208C17.6035 29.377 15.0344 29.7749 13.418 29.7995C11.7655 29.8254 10.3365 29.4726 9.37767 28.8195C10.1757 28.3018 10.9084 27.6075 11.5969 26.7693C11.6348 26.7696 11.6757 26.7698 11.7214 26.7698C12.1986 26.7698 13.0877 26.7493 14.1367 26.6268C16.2354 26.3815 17.8898 25.8636 19.0541 25.0875C19.2774 24.9386 19.3377 24.6369 19.1889 24.4136C19.04 24.1904 18.7383 24.1301 18.515 24.2789C16.7214 25.4746 13.8324 25.7343 12.3412 25.7856C13.2865 24.4374 14.1572 22.8185 15.0159 21.0255C15.8609 21.0234 18.104 20.8406 20.2367 19.1404C20.4465 18.9731 20.481 18.6673 20.3137 18.4575C20.1464 18.2476 19.8407 18.2132 19.6309 18.3805C18.0646 19.6291 16.407 19.9518 15.4841 20.0291C16.0444 18.8166 16.6045 17.5374 17.182 16.2185C17.48 15.5377 17.7827 14.8468 18.0915 14.1512C18.1248 14.152 18.16 14.1525 18.197 14.1525C18.9295 14.1525 20.3882 13.9738 21.9912 12.7861C22.2068 12.6264 22.2521 12.322 22.0923 12.1064C21.9325 11.8908 21.6282 11.8455 21.4125 12.0053C20.4235 12.738 19.5133 13.0133 18.9238 13.1152C18.7809 13.14 18.6501 13.1556 18.5319 13.1656C18.8151 12.5371 19.1042 11.9065 19.401 11.2768C21.2114 7.43527 24.423 5.12058 26.7985 3.85527C27.8283 3.30677 28.7948 2.90214 29.5879 2.61302C28.8911 3.34727 28.2111 4.24133 27.6832 5.34633Z"
@@ -891,9 +1111,18 @@ export const LeafIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const LinkIcon: FC<{ className?: string }> = ({ className }) => {
+export const LinkIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         id="Vector"
         d="M5.83301 6.66667C4.94922 6.66667 4.10156 7.01785 3.47559 7.64297C2.85059 8.2681 2.5 9.11595 2.5 10C2.5 10.884 2.85059 11.7319 3.47559 12.357C4.10156 12.9821 4.94922 13.3333 5.83301 13.3333L7.5 13.3333C7.7207 13.3333 7.93262 13.4211 8.08887 13.5774C8.24512 13.7337 8.33301 13.9456 8.33301 14.1667C8.33301 14.3877 8.24512 14.5996 8.08887 14.7559C7.93262 14.9122 7.7207 15 7.5 15L5.83301 15C4.50684 15 3.23535 14.4732 2.29785 13.5355C1.35938 12.5979 0.833008 11.3261 0.833008 10C0.833008 8.67392 1.35938 7.40215 2.29785 6.46446C3.23535 5.52678 4.50684 5 5.83301 5L7.5 5C7.7207 5 7.93262 5.0878 8.08887 5.24408C8.24512 5.40036 8.33301 5.61232 8.33301 5.83333C8.33301 6.05435 8.24512 6.26631 8.08887 6.42259C7.93262 6.57887 7.7207 6.66667 7.5 6.66667L5.83301 6.66667ZM11.666 5.83333C11.666 5.61232 11.7539 5.40036 11.9102 5.24408C12.0664 5.0878 12.2783 5 12.5 5L14.166 5C15.4922 5 16.7646 5.52678 17.7021 6.46446C18.6396 7.40215 19.166 8.67392 19.166 10C19.166 11.3261 18.6396 12.5979 17.7021 13.5355C16.7646 14.4732 15.4922 15 14.166 15L12.5 15C12.2783 15 12.0664 14.9122 11.9102 14.7559C11.7539 14.5996 11.666 14.3877 11.666 14.1667C11.666 13.9456 11.7539 13.7337 11.9102 13.5774C12.0664 13.4211 12.2783 13.3333 12.5 13.3333L14.166 13.3333C15.0508 13.3333 15.8984 12.9821 16.5234 12.357C17.1484 11.7319 17.5 10.884 17.5 10C17.5 9.11595 17.1484 8.2681 16.5234 7.64297C15.8984 7.01785 15.0508 6.66667 14.166 6.66667L12.5 6.66667C12.2783 6.66667 12.0664 6.57887 11.9102 6.42259C11.7539 6.26631 11.666 6.05435 11.666 5.83333ZM5.83301 10C5.83301 9.77899 5.9209 9.56703 6.07715 9.41075C6.2334 9.25447 6.44531 9.16667 6.66602 9.16667L13.333 9.16667C13.5537 9.16667 13.7656 9.25447 13.9219 9.41075C14.0781 9.56703 14.166 9.77899 14.166 10C14.166 10.221 14.0781 10.433 13.9219 10.5892C13.7656 10.7455 13.5537 10.8333 13.333 10.8333L6.66602 10.8333C6.44531 10.8333 6.2334 10.7455 6.07715 10.5892C5.9209 10.433 5.83301 10.221 5.83301 10Z"
@@ -905,10 +1134,14 @@ export const LinkIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const ListCheckboxIcon: FC<{ className?: string }> = ({ className }) => {
+export const ListCheckboxIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="20"
       height="20"
       viewBox="0 0 20 20"
@@ -934,10 +1167,14 @@ export const ListCheckboxIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const LockIcon: FC<{ className?: string }> = ({ className }) => {
+export const LockIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="11"
       height="11"
       viewBox="0 0 11 11"
@@ -962,10 +1199,14 @@ export const LockIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const LogoutIcon: FC<{ className?: string }> = ({ className }) => {
+export const LogoutIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="25"
       height="24"
       viewBox="0 0 25 24"
@@ -980,9 +1221,18 @@ export const LogoutIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const MapPinIcon: FC<{ className?: string }> = ({ className }) => {
+export const MapPinIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      viewBox="0 0 17 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M16 8.36364C16 14.0909 8.5 19 8.5 19C8.5 19 1 14.0909 1 8.36364C1 6.41068 1.79018 4.53771 3.1967 3.15676C4.60322 1.77581 6.51088 1 8.5 1C10.4891 1 12.3968 1.77581 13.8033 3.15676C15.2098 4.53771 16 6.41068 16 8.36364Z"
         stroke="currentColor"
@@ -999,10 +1249,14 @@ export const MapPinIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const MastercardIcon: FC<{ className?: string }> = ({ className }) => {
+export const MastercardIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="45"
       height="32"
       viewBox="0 0 45 32"
@@ -1031,10 +1285,14 @@ export const MastercardIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const MeatIcon: FC<{ className?: string }> = ({ className }) => {
+export const MeatIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -1061,10 +1319,14 @@ export const MeatIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const MinusIcon: FC<{ className?: string }> = ({ className }) => {
+export const MinusIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="16"
       height="16"
       viewBox="0 0 16 16"
@@ -1082,10 +1344,14 @@ export const MinusIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const OrderHistoryIcon: FC<{ className?: string }> = ({ className }) => {
+export const OrderHistoryIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="25"
       height="24"
       viewBox="0 0 25 24"
@@ -1100,9 +1366,18 @@ export const OrderHistoryIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const PackageIcon: FC<{ className?: string }> = ({ className }) => {
+export const PackageIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M34.447 11.5441C34.447 11.4225 34.42 11.301 34.366 11.1862C34.2579 10.9565 34.0485 10.8012 33.8189 10.7539L20.0612 4.08105C19.8383 3.97298 19.5749 3.97298 19.352 4.08105L5.45927 10.8147C5.18911 10.943 5.01351 11.2132 5 11.5171V11.5239C5 11.5306 5 11.5374 5 11.5509V28.4491C5 28.7598 5.1756 29.0435 5.45927 29.1786L19.352 35.9122C19.3588 35.9122 19.3588 35.9122 19.3656 35.919C19.3858 35.9257 19.4061 35.9325 19.4263 35.946C19.4331 35.946 19.4398 35.9527 19.4534 35.9527C19.4736 35.9595 19.4939 35.9662 19.5141 35.973C19.5209 35.973 19.5276 35.9797 19.5344 35.9797C19.5547 35.9865 19.5817 35.9865 19.6019 35.9932C19.6087 35.9932 19.6154 35.9932 19.6222 35.9932C19.6492 35.9932 19.683 36 19.71 36C19.737 36 19.7708 36 19.7978 35.9932C19.8046 35.9932 19.8113 35.9932 19.8181 35.9932C19.8383 35.9932 19.8653 35.9865 19.8856 35.9797C19.8924 35.9797 19.8991 35.973 19.9059 35.973C19.9261 35.9662 19.9464 35.9595 19.9667 35.9527C19.9734 35.9527 19.9802 35.946 19.9937 35.946C20.0139 35.9392 20.0342 35.9325 20.0545 35.919C20.0612 35.919 20.0612 35.919 20.068 35.9122L34.0013 29.1583C34.2782 29.0232 34.4605 28.7396 34.4605 28.4289V11.5644C34.447 11.5576 34.447 11.5509 34.447 11.5441ZM19.7032 5.70874L31.7522 11.5509L27.3149 13.7054L15.2659 7.86323L19.7032 5.70874ZM19.7032 17.393L7.65428 11.5509L13.4086 8.7615L25.4576 14.6036L19.7032 17.393ZM6.62094 12.8544L18.8928 18.8046V33.886L6.62094 27.9358V12.8544ZM20.5137 33.886V18.8046L26.2748 16.0084V19.9527C26.2748 20.3985 26.6395 20.7632 27.0853 20.7632C27.531 20.7632 27.8957 20.3985 27.8957 19.9527V15.2182L32.8261 12.8274V27.9088L20.5137 33.886Z"
         fill="currentColor"
@@ -1111,10 +1386,14 @@ export const PackageIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const ParcelIcon: FC<{ className?: string }> = ({ className }) => {
+export const ParcelIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="38"
       height="40"
       viewBox="0 0 38 40"
@@ -1129,10 +1408,14 @@ export const ParcelIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const PhoneIcon: FC<{ className?: string }> = ({ className }) => {
+export const PhoneIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="28"
       height="28"
       viewBox="0 0 28 28"
@@ -1164,10 +1447,14 @@ export const PhoneIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const PieIcon: FC<{ className?: string }> = ({ className }) => {
+export const PieIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -1194,9 +1481,18 @@ export const PieIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const PinterestIcon: FC<{ className?: string }> = ({ className }) => {
+export const PinterestIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         id="Vector"
         d="M9.24414 0C4.31152 0 1.6875 3.16139 1.6875 6.60855C1.6875 8.20724 2.58105 10.2008 4.01074 10.8331C4.22754 10.931 4.3457 10.8894 4.39453 10.688C4.4375 10.535 4.625 9.79807 4.71582 9.45042C4.74414 9.33904 4.72949 9.24229 4.63965 9.13766C4.16504 8.58863 3.78809 7.58847 3.78809 6.65017C3.78809 4.24594 5.69922 1.91146 8.95215 1.91146C11.7646 1.91146 13.7324 3.73854 13.7324 6.35204C13.7324 9.30529 12.1699 11.3484 10.1387 11.3484C9.01465 11.3484 8.17773 10.4663 8.44336 9.37505C8.76367 8.07561 9.39258 6.6783 9.39258 5.74113C9.39258 4.90072 8.91797 4.20544 7.94824 4.20544C6.80469 4.20544 5.87598 5.33836 5.87598 6.85943C5.87598 7.82585 6.21777 8.47838 6.21777 8.47838C6.21777 8.47838 5.08594 13.0506 4.87598 13.9045C4.52051 15.3502 4.92383 17.6914 4.95898 17.8928C4.98047 18.0042 5.10547 18.0391 5.1748 17.9479C5.28613 17.8017 6.6543 15.8497 7.03809 14.4389C7.17773 13.9248 7.75 11.84 7.75 11.84C8.12695 12.5207 9.21484 13.0911 10.374 13.0911C13.8213 13.0911 16.3125 10.0613 16.3125 6.30141C16.2998 2.69675 13.2148 0 9.24414 0Z"
@@ -1208,19 +1504,32 @@ export const PinterestIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const PlayButtonIcon: FC<{ className?: string }> = ({ className }) => {
+export const PlayButtonIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      viewBox="0 0 84 84"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <circle cx="42" cy="42" r="40.75" stroke="currentColor" strokeWidth="1.5" />
       <path d="M34 30V54L54 42L34 30Z" fill="currentColor" />
     </svg>
   );
 };
 
-export const PlayIcon: FC<{ className?: string }> = ({ className }) => {
+export const PlayIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="14"
       height="18"
       viewBox="0 0 14 18"
@@ -1232,9 +1541,18 @@ export const PlayIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const PlusIcon: FC<{ className?: string }> = ({ className }) => {
+export const PlusIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M2.33398 6.99998H11.6673M7.00065 2.33331V11.6666V2.33331Z"
         stroke="currentColor"
@@ -1246,10 +1564,14 @@ export const PlusIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const PotatoesIcon: FC<{ className?: string }> = ({ className }) => {
+export const PotatoesIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -1292,10 +1614,14 @@ export const PotatoesIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const PriceTagIcon: FC<{ className?: string }> = ({ className }) => {
+export const PriceTagIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="32"
       height="33"
       viewBox="0 0 32 33"
@@ -1329,9 +1655,18 @@ export const PriceTagIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const Price_tagIcon: FC<{ className?: string }> = ({ className }) => {
+export const Price_tagIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      viewBox="0 0 32 33"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <g clipPath="url(#clip0_460_43081)">
         <path
           d="M28.0671 24.7501C28.326 24.7501 28.5359 24.5402 28.5359 24.2813V13.0313C28.5359 12.4718 28.3178 11.8995 27.9219 11.4198L24.4454 7.20769C24.2633 6.987 24.0539 6.801 23.8265 6.65287C23.8405 6.50962 23.8484 6.36494 23.8484 6.21887V0.968872C23.8484 0.709997 23.6385 0.500122 23.3797 0.500122C23.1208 0.500122 22.9109 0.709997 22.9109 0.968872C22.9109 0.968872 22.91 6.26356 22.9096 6.28593C22.7762 6.26231 22.6409 6.25012 22.5047 6.25012H16.4422C16.0154 6.25012 15.597 6.36987 15.2224 6.58994C15.2062 6.59575 15.1902 6.60225 15.1744 6.60994L10.605 8.83568C10.0987 9.08962 9.69392 9.51556 9.46498 10.035C9.46248 10.0407 9.46011 10.0464 9.45786 10.0521L7.56861 14.8441C7.47367 15.085 7.59192 15.3572 7.83279 15.4522C7.88923 15.4744 7.94736 15.4849 8.00461 15.4849C8.19148 15.4849 8.36811 15.3724 8.44079 15.188L10.3264 10.4052C10.4682 10.0884 10.7161 9.82887 11.0204 9.67612L13.4347 8.50019L11.0249 11.4199C10.6641 11.857 10.4734 12.4143 10.4734 13.0314V29.2189C10.4734 29.4074 10.49 29.592 10.52 29.7719L5.68992 27.6316C4.59879 27.1482 4.10429 25.864 4.58779 24.769C4.58986 24.7642 4.59186 24.7594 4.59386 24.7547L7.64904 17.1619C7.74567 16.9217 7.62936 16.6487 7.38917 16.5521C7.14886 16.4554 6.87598 16.5718 6.77929 16.8119L3.72679 24.3976C3.04042 25.9632 3.74942 27.7971 5.31011 28.4886L10.9741 30.9984C10.981 31.0014 10.9881 31.0037 10.9951 31.0064C11.57 31.9046 12.5639 32.5001 13.6922 32.5001H25.2547C27.0333 32.5001 28.5359 30.9974 28.5359 29.2188V26.4688C28.5359 26.2099 28.326 26.0001 28.0672 26.0001C27.8083 26.0001 27.5984 26.2099 27.5984 26.4688V29.2188C27.5984 30.4893 26.5251 31.5626 25.2547 31.5626H13.6922C12.4343 31.5626 11.4109 30.5112 11.4109 29.2188V13.0313C11.4109 12.6289 11.5243 12.2875 11.748 12.0166L15.2244 7.80444C15.548 7.41244 15.9919 7.18756 16.4422 7.18756H22.5047C22.593 7.18756 22.681 7.1965 22.7679 7.21337C22.4745 8.21406 21.7476 9.04906 20.766 9.4675C20.5094 9.03819 20.0401 8.75006 19.5046 8.75006C18.6947 8.75006 18.0359 9.40894 18.0359 10.2188C18.0359 11.0287 18.6947 11.6876 19.5046 11.6876C20.2535 11.6876 20.8729 11.1239 20.962 10.3986C22.2244 9.92112 23.179 8.90937 23.6044 7.67444C23.6452 7.7155 23.6847 7.75869 23.7224 7.80444L27.1989 12.0166C27.4565 12.3287 27.5984 12.6891 27.5984 13.0314V24.2814C27.5984 24.5402 27.8082 24.7501 28.0671 24.7501ZM19.5046 10.7501C19.2117 10.7501 18.9734 10.5117 18.9734 10.2188C18.9734 9.92587 19.2117 9.68756 19.5046 9.68756C19.7975 9.68756 20.0359 9.92587 20.0359 10.2188C20.0359 10.5117 19.7975 10.7501 19.5046 10.7501Z"
@@ -1359,10 +1694,14 @@ export const Price_tagIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const QuoteIcon: FC<{ className?: string }> = ({ className }) => {
+export const QuoteIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="40"
       height="40"
       viewBox="0 0 40 40"
@@ -1379,10 +1718,14 @@ export const QuoteIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const SaladIcon: FC<{ className?: string }> = ({ className }) => {
+export const SaladIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -1437,10 +1780,14 @@ export const SaladIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const SearchIcon: FC<{ className?: string }> = ({ className }) => {
+export const SearchIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="20"
       height="21"
       viewBox="0 0 20 21"
@@ -1465,10 +1812,14 @@ export const SearchIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const SecureIcon: FC<{ className?: string }> = ({ className }) => {
+export const SecureIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="65"
       height="32"
       viewBox="0 0 65 32"
@@ -1547,10 +1898,14 @@ export const SecureIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const SettingsIcon: FC<{ className?: string }> = ({ className }) => {
+export const SettingsIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="25"
       height="24"
       viewBox="0 0 25 24"
@@ -1565,10 +1920,14 @@ export const SettingsIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const ShippingIcon: FC<{ className?: string }> = ({ className }) => {
+export const ShippingIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="40"
       height="40"
       viewBox="0 0 40 40"
@@ -1595,10 +1954,14 @@ export const ShippingIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const ShoppingBagIcon: FC<{ className?: string }> = ({ className }) => {
+export const ShoppingBagIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="40"
       height="40"
       viewBox="0 0 40 40"
@@ -1617,9 +1980,18 @@ export const ShoppingBagIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const Shopping_bagIcon: FC<{ className?: string }> = ({ className }) => {
+export const Shopping_bagIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M32.5682 31.7342L30.7268 10.9816C30.6936 10.5709 30.3492 10.2596 29.9319 10.2596H26.0503C26.0437 6.80853 23.2351 4 19.7841 4C16.3331 4 13.5245 6.80853 13.5179 10.2596H9.63631C9.22563 10.2596 8.88118 10.5709 8.84144 10.9816L7 31.7342C7 31.7607 7 31.7806 7 31.8071C7 34.1188 9.12627 36 11.7361 36H27.8321C30.4419 36 32.5682 34.1188 32.5682 31.8071C32.5682 31.7806 32.5682 31.7607 32.5682 31.7342ZM19.7841 5.58973C22.3608 5.58973 24.4539 7.68288 24.4606 10.2596H15.1076C15.1143 7.68288 17.2074 5.58973 19.7841 5.58973ZM27.8321 34.4036H11.7361C10.0139 34.4036 8.60961 33.2577 8.58973 31.8336L10.3649 11.8493H13.5179V14.638C13.5179 15.0751 13.8756 15.4328 14.3128 15.4328C14.7499 15.4328 15.1076 15.0751 15.1076 14.638V11.8493H24.4606V14.638C24.4606 15.0751 24.8183 15.4328 25.2554 15.4328C25.6926 15.4328 26.0503 15.0751 26.0503 14.638V11.8493H29.2033L30.9785 31.8402C30.9586 33.2577 29.5543 34.4036 27.8321 34.4036Z"
         fill="currentColor"
@@ -1632,9 +2004,18 @@ export const Shopping_bagIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const StarIcon: FC<{ className?: string }> = ({ className }) => {
+export const StarIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M8.27563 11.921L11.4281 13.918C11.8311 14.173 12.3311 13.7935 12.2116 13.323L11.3011 9.74051C11.2754 9.64072 11.2784 9.5357 11.3097 9.43752C11.341 9.33934 11.3994 9.25199 11.4781 9.18551L14.3051 6.83301C14.6761 6.52401 14.4851 5.90751 14.0076 5.87651L10.3161 5.63651C10.2167 5.62946 10.1214 5.59433 10.0412 5.5352C9.961 5.47607 9.89925 5.39537 9.86313 5.30251L8.48613 1.83551C8.44864 1.73698 8.38208 1.65218 8.29528 1.59234C8.20849 1.5325 8.10555 1.50046 8.00013 1.50046C7.89471 1.50046 7.79177 1.5325 7.70498 1.59234C7.61818 1.65218 7.55162 1.73698 7.51413 1.83551L6.13713 5.30251C6.10109 5.39547 6.03937 5.47626 5.95916 5.53549C5.87896 5.59471 5.78358 5.62992 5.68413 5.63701L1.99263 5.87701C1.51563 5.90751 1.32363 6.52401 1.69513 6.83301L4.52213 9.18601C4.60079 9.25245 4.65911 9.33971 4.69042 9.43779C4.72173 9.53587 4.72475 9.64079 4.69913 9.74051L3.85513 13.063C3.71163 13.6275 4.31213 14.083 4.79513 13.7765L7.72513 11.921C7.80748 11.8687 7.90304 11.8409 8.00063 11.8409C8.09821 11.8409 8.19378 11.8687 8.27613 11.921H8.27563Z"
         fill="currentColor"
@@ -1643,10 +2024,14 @@ export const StarIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const SteakIcon: FC<{ className?: string }> = ({ className }) => {
+export const SteakIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -1669,10 +2054,14 @@ export const SteakIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const SuccessIcon: FC<{ className?: string }> = ({ className }) => {
+export const SuccessIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="20"
       height="21"
       viewBox="0 0 20 21"
@@ -1690,10 +2079,14 @@ export const SuccessIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const SupportIcon: FC<{ className?: string }> = ({ className }) => {
+export const SupportIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="45"
       height="44"
       viewBox="0 0 45 44"
@@ -1724,10 +2117,14 @@ export const SupportIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const TagIcon: FC<{ className?: string }> = ({ className }) => {
+export const TagIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="20"
       height="21"
       viewBox="0 0 20 21"
@@ -1752,10 +2149,14 @@ export const TagIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const TurkeyIcon: FC<{ className?: string }> = ({ className }) => {
+export const TurkeyIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -1770,9 +2171,18 @@ export const TurkeyIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const TwitterIcon: FC<{ className?: string }> = ({ className }) => {
+export const TwitterIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         id="Vector"
         d="M18 3.41887C17.3311 3.7125 16.6172 3.90713 15.874 4.00163C16.6387 3.54488 17.2227 2.82713 17.4971 1.962C16.7842 2.38725 15.9961 2.68763 15.1572 2.85525C14.4795 2.13412 13.5146 1.6875 12.4619 1.6875C10.4189 1.6875 8.77344 3.34575 8.77344 5.37863C8.77344 5.67113 8.79883 5.95238 8.85938 6.22013C5.79102 6.0705 3.07715 4.60013 1.25293 2.36025C0.93457 2.91262 0.748047 3.54488 0.748047 4.2255C0.748047 5.5035 1.40625 6.63638 2.3877 7.29225C1.79395 7.281 1.21289 7.10888 0.719727 6.83775C0.719727 6.849 0.719727 6.86363 0.719727 6.87825C0.719727 8.6715 1.99902 10.161 3.67676 10.5041C3.37598 10.5863 3.04883 10.6256 2.70898 10.6256C2.47266 10.6256 2.23438 10.6121 2.01074 10.5626C2.48828 12.024 3.8457 13.0984 5.45898 13.1333C4.20312 14.1154 2.6084 14.7071 0.882812 14.7071C0.580078 14.7071 0.290039 14.6936 0 14.6565C1.63477 15.7106 3.57227 16.3125 5.66113 16.3125C12.4512 16.3125 16.1641 10.6875 16.1641 5.81175C16.1641 5.64863 16.1582 5.49113 16.1504 5.33475C16.8828 4.815 17.498 4.16588 18 3.41887Z"
@@ -1784,10 +2194,14 @@ export const TwitterIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const UserIcon: FC<{ className?: string }> = ({ className }) => {
+export const UserIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="20"
       height="21"
       viewBox="0 0 20 21"
@@ -1808,10 +2222,14 @@ export const UserIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const VisaLogoIcon: FC<{ className?: string }> = ({ className }) => {
+export const VisaLogoIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="32"
       height="12"
       viewBox="0 0 32 12"
@@ -1828,10 +2246,14 @@ export const VisaLogoIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const VisaIcon: FC<{ className?: string }> = ({ className }) => {
+export const VisaIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="45"
       height="32"
       viewBox="0 0 45 32"
@@ -1848,10 +2270,14 @@ export const VisaIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const WarningIcon: FC<{ className?: string }> = ({ className }) => {
+export const WarningIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="20"
       height="21"
       viewBox="0 0 20 21"
@@ -1883,10 +2309,14 @@ export const WarningIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const WishListIcon: FC<{ className?: string }> = ({ className }) => {
+export const WishListIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="25"
       height="24"
       viewBox="0 0 25 24"
@@ -1902,10 +2332,14 @@ export const WishListIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const DefaultLogo: FC<{ className?: string }> = ({ className }) => {
+export const DefaultLogo: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="183"
       height="39"
       viewBox="0 0 183 39"
@@ -1924,10 +2358,14 @@ export const DefaultLogo: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const MiniLogo: FC<{ className?: string }> = ({ className }) => {
+export const MiniLogo: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
       width="32"
       height="31"
       viewBox="0 0 32 31"
