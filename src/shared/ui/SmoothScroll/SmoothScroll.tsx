@@ -2,7 +2,7 @@
 
 import { FC, ReactNode, useEffect, useRef } from 'react';
 
-import { useWindowSize } from '@/shared/lib/hooks/useWindowSize';
+import { useWindowSize } from '@/shared/lib/hooks';
 
 import cls from './SmoothScroll.module.scss';
 
@@ -11,7 +11,7 @@ type Props = {
   speed?: number;
 };
 
-const SmoothScroll: FC<Props> = ({ children, speed = 0.1 }) => {
+export const SmoothScroll: FC<Props> = ({ children, speed = 0.1 }) => {
   const windowSize = useWindowSize();
 
   const scrollingContainerRef = useRef<HTMLDivElement>(null);
@@ -57,4 +57,4 @@ const SmoothScroll: FC<Props> = ({ children, speed = 0.1 }) => {
   );
 };
 
-export default SmoothScroll;
+// export default SmoothScroll;

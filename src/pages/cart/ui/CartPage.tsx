@@ -7,7 +7,7 @@ import { Text } from '@/shared/ui/Text';
 
 import { CartItems } from './CartItems';
 import cls from './CartPage.module.scss';
-import { CartTotal } from './CartTotal/CartTotal';
+import { CartTotal } from './CartTotal';
 
 const CartPage: FC = () => {
   const crumbs: AppRouteNames[] = [AppRouteNames.HOME, AppRouteNames.CART];

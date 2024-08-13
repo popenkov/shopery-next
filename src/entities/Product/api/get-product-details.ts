@@ -1,6 +1,7 @@
 import { type TProductDetailed } from '..';
 
 const data: TProductDetailed = {
+  path: '/product',
   id: 'test',
   sliderImages: {
     thumb: [
@@ -25,11 +26,11 @@ const data: TProductDetailed = {
     ],
   },
   title: 'Chinese Cabbage',
-  price: 14.99,
-  priceOld: 17.28,
+  price: { USD: 14.99, EUR: 12.2 },
+  priceOld: { USD: 17.29, EUR: 16.2 },
   priceTags: [
     {
-      type: 'red',
+      type: 'sale',
       text: '64% Off',
     },
   ],
@@ -45,7 +46,7 @@ const data: TProductDetailed = {
     path: '#',
   },
   sku: '2,51,594',
-  brandLogo: 'brand-farmary.svg',
+  brandLogo: '/images/brand-farmary.svg',
   description:
     'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et ipsum. Nulla varius magna a consequat pulvinar. ',
   categories: [{ title: 'Vegetables', path: '#' }],
@@ -166,8 +167,8 @@ const data: TProductDetailed = {
       path: '#',
       img: '/images/product-apple.jpg',
       title: 'Green Apple',
-      price: 14.99,
-      priceOld: 20.99,
+      price: { USD: 14.99, EUR: 12.2 },
+      priceOld: { USD: 20.99, EUR: 18.2 },
       rating: 4,
       tags: [
         {
@@ -181,7 +182,7 @@ const data: TProductDetailed = {
       path: '#',
       img: '/images/product-mango.jpg',
       title: 'Surjapur Mango',
-      price: 14.99,
+      price: { USD: 14.99, EUR: 12.2 },
 
       rating: 4,
     },
@@ -190,7 +191,7 @@ const data: TProductDetailed = {
       path: '#',
       img: '/images/product-tomatos.jpg',
       title: 'Red Tomatos',
-      price: 14.99,
+      price: { USD: 14.99, EUR: 12.2 },
 
       rating: 4,
     },
@@ -199,7 +200,7 @@ const data: TProductDetailed = {
       path: '#',
       img: '/images/product-cauliflower.jpg',
       title: 'Fresh Cauliflower',
-      price: 14.99,
+      price: { USD: 14.99, EUR: 12.2 },
 
       rating: 4,
     },

@@ -1,0 +1,128 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+@import '@/shared/styles/mixins/container';
+@import '@/shared/styles/mixins/button-reset';
+@import '@/shared/styles/mixins/text-styles';
+
+.productPreviewSkeleton {
+  @include container;
+
+  width: 100%;
+}
+
+.productPreviewSkeletonContent {
+  display: flex;
+  gap: 22px;
+  align-items: stretch;
+
+  @media screen and (max-width: $df-screen-tl) {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+}
+
+.productPreviewSkeletonSlider {
+  flex-grow: 1;
+  flex-shrink: 0;
+  max-width: 50%;
+  height: auto;
+  aspect-ratio: 1 / 1.1;
+
+  @media screen and (max-width: $df-screen-tl) {
+    width: 100%;
+    max-width: unset;
+    min-height: 200px;
+    aspect-ratio: unset;
+  }
+}
+
+.productPreviewSkeletonAbout {
+  flex-grow: 1;
+  flex-shrink: 0;
+  max-width: 50%;
+
+  @media screen and (max-width: $df-screen-tl) {
+    max-width: unset;
+  }
+}
+
+.productPreviewSkeletonHeader {
+  @include flex-column;
+
+  gap: 11px;
+  padding-bottom: 19px;
+}
+
+.productPreviewSkeletonTitleWrapper {
+  @include flex-center-vertical;
+
+  gap: 8px;
+}
+
+.productPreviewSkeletonReviewWrapper {
+  @include flex-center-vertical;
+
+  gap: 14px;
+}
+
+.productPreviewSkeletonPriceWrapper {
+  @include flex-center-vertical;
+
+  gap: 4px;
+}
+
+.productPreviewSkeletonReviewWrapper + .productPreviewSkeletonPriceWrapper {
+  margin-top: 10px;
+}
+
+.productPreviewSkeletonInfo {
+  display: grid;
+  grid-template-areas: 'brand share' 'description description';
+  grid-template-columns: 1fr 1fr;
+  gap: 19px 40px;
+  padding: 25px 0 23px;
+
+  @media screen and (max-width: $df-screen-m) {
+    grid-template-areas: 'brand' 'share' 'description';
+    grid-template-columns: 1fr;
+  }
+}
+
+.productPreviewSkeletonBrand {
+  @include flex-center-vertical;
+
+  gap: 8px;
+}
+
+.productPreviewSkeletonShare {
+  grid-area: share;
+  justify-content: flex-end;
+}
+
+.productPreviewSkeletonDescription {
+  grid-area: description;
+}
+
+.productPreviewSkeletonCart {
+  @include flex-center-vertical;
+
+  gap: 12px;
+  width: 100%;
+}
+
+.productPreviewSkeletonCategories {
+  @include flex-column;
+
+  gap: 12px;
+  padding-top: 23px;
+}
+
+.productPreviewSkeletonCategory {
+  @include flex-center-vertical;
+}
+
+.productPreviewSkeletonTags {
+  display: flex;
+  gap: 7px;
+}

@@ -8,6 +8,7 @@ import {
   useState,
 } from 'react';
 import cn from 'classnames';
+import { useTranslations } from 'next-intl';
 
 import { Accordion } from '@/shared/ui/Accordion';
 import { Button } from '@/shared/ui/Buttons';
@@ -38,7 +39,7 @@ type TState = {
 
 export const Filters: FC<Props> = ({ classname }) => {
   const { categories, priceRange, tags } = getFilterData();
-
+  const t = useTranslations('HomePage');
   const [isButtonShown, setIsButtonShown] = useState(false);
   const [chosenFilters, setChosenFilters] = useState<TState>({
     price: priceRange,
@@ -108,7 +109,7 @@ export const Filters: FC<Props> = ({ classname }) => {
       <Accordion
         title={
           <Text variant="body_l" weight="medium">
-            All categories
+            {t('allCategories')}
           </Text>
         }
         isOpenByDefault

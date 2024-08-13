@@ -1,5 +1,8 @@
+'use client';
+
 import { ComponentProps, ElementType, ReactNode, Ref, forwardRef, memo } from 'react';
 import cn from 'classnames';
+import { motion } from 'framer-motion';
 
 import { type TRoundButtonTheme } from '../model';
 
@@ -20,8 +23,8 @@ type Props<E extends ElementType = ElementType> = ButtonOwnProps<E> &
 
 const ButtonElement = forwardRef<HTMLButtonElement, Props>((props, ref) => {
   const { className, icon, as, theme = 'primary', ...otherProps } = props;
-
-  const Element = as || DEFAULT_ELEMENT;
+  // @ts-ignore
+  const Element = as ? motion[as] : motion[DEFAULT_ELEMENT];
 
   return (
     <Element
@@ -29,6 +32,9 @@ const ButtonElement = forwardRef<HTMLButtonElement, Props>((props, ref) => {
         [style[theme]]: true,
       })}
       ref={ref}
+      whileTap={{ scale: 0.95 }}
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.3 }}
       {...otherProps}
     >
       {icon}

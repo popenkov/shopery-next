@@ -1,4 +1,4 @@
-import { CartSchema } from '../model/types/cart-schema';
+import { CartSchema } from '../model';
 
 export const changeItemsAmountInCart = (state: CartSchema, id: string, amount: number) => {
   const newState: CartSchema = JSON.parse(JSON.stringify(state));
@@ -9,10 +9,16 @@ export const changeItemsAmountInCart = (state: CartSchema, id: string, amount: n
   return newState;
 };
 
+// надо вернуть объект
 export const getTotalPrice = (state: CartSchema) => {
-  return state.cart.reduce((acc, item) => {
-    return acc + item.price * item.amount;
-  }, 0);
+  return state.cart.reduce(
+    (acc, current) => {
+      acc.USD += current.price.USD * current.amount;
+      acc.EUR += current.price.EUR * current.amount;
+      return acc;
+    },
+    { USD: 0, EUR: 0 },
+  );
 };
 
 export const getTotalAmount = (state: CartSchema) => {

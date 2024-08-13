@@ -1,3 +1,3 @@
-import { OrderPage } from './ui/OrderPage';
+import { OrderPage } from './ui';
 
 export default OrderPage;

@@ -1,3 +1,3 @@
-import { HistoryPage } from './ui/HistoryPage';
+import { HistoryPage } from './ui';
 
 export default HistoryPage;

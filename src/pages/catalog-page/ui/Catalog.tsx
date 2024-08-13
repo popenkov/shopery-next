@@ -1,15 +1,14 @@
 'use client';
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
 import { DiscountBanner } from '@/entities/DiscountBanner';
-import { ProductSmall } from '@/entities/Product';
-import { AddToCart } from '@/features/Cart/add-to-cart';
+import { ProductSmall, TProduct } from '@/entities/Product';
+import { AddToCart } from '@/features/Cart';
 import { CatalogSort } from '@/features/CatalogSort';
-import { AddToWishlist } from '@/features/Product';
-import { ShowProductPreview } from '@/features/Product';
+import { AddToWishlist, ShowProductPreview } from '@/features/Product';
 import { AppRouteNames } from '@/shared/model';
 import { Breadcrumbs } from '@/shared/ui/Breadcrumps';
-import { Pagination } from '@/shared/ui/Pagination';
+import { PAGE_SIZE, Pagination } from '@/shared/ui/Pagination';
 import { CatalogFilter, getCatalogFilterData } from '@/widgets/CatalogFilter';
 import { CatalogItems, getCatalogItems } from '@/widgets/CatalogItems';
 
@@ -18,11 +17,15 @@ import cls from './catalog.module.scss';
 const Catalog: FC = () => {
   const crumbs: AppRouteNames[] = [AppRouteNames.HOME, AppRouteNames.CATALOG];
   const { banner, featuredItems } = getCatalogFilterData();
-  const { items } = getCatalogItems();
+  const { items: allItems } = getCatalogItems();
+  const [items, setItems] = useState<TProduct[]>(allItems);
 
-  const handlePageChange = () => {
-    console.log('handlePageChange');
+  const handlePageChange = (filteredProducts: TProduct[]) => {
+    console.log('handlePageChange', filteredProducts);
+
+    setItems(filteredProducts);
   };
+
   return (
     <main className="main" data-testid="catalogPage">
       <Breadcrumbs items={crumbs} />
@@ -56,12 +59,18 @@ const Catalog: FC = () => {
         </div>
 
         <Pagination
-          onPageChange={handlePageChange}
-          totalCount={20}
-          currentPage={1}
-          pageSize={10}
+          allItems={allItems}
           className={cls.pagination}
+          pageSize={PAGE_SIZE}
+          onPageChange={handlePageChange}
         />
+
+        {/* <PaginationClient
+          totalCount={items.length}
+          pageSize={PAGE_SIZE}
+          onPageChange={handlePageChange}
+          className={cls.pagination}
+        /> */}
       </div>
     </main>
   );

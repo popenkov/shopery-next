@@ -1,3 +1,5 @@
+import { TCurrencyVariant } from '@/entities/Currency';
+
 export type TOrderAddress = {
   firstName: string;
   lastName: string;
@@ -15,9 +17,9 @@ export type TOrderProduct = {
   path: string;
   img: string;
   name: string;
-  price: number;
+  price: Record<TCurrencyVariant, number>;
   quantity: number;
-  total: number;
+  total: Record<TCurrencyVariant, number>;
 };
 
 export type TOrder = {
@@ -26,7 +28,7 @@ export type TOrder = {
   date: Date;
   paymentMethod: 'PayPal';
   items: TOrderProduct[];
-  subtotal: number;
+  subtotal: Record<TCurrencyVariant, number>;
   discount: number;
   delivery: number | null;
   status: 'Processing' | 'On the way' | 'Order Received' | 'Delivered';

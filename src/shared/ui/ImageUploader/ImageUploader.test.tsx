@@ -3,6 +3,7 @@ import { render, fireEvent, waitFor } from '@testing-library/react';
 
 import { ImageUploader } from './ImageUploader';
 
+// eslint-disable-next-line
 jest.mock('next/image', () => ({ src, alt }: { src: string; alt: string }) => (
   <img src={src} alt={alt} data-testid="ImageUploader.preview" />
 ));
@@ -55,9 +56,7 @@ describe('ImageUploader component', () => {
   it('updates preview when file is selected', () => {
     const imageSrc = 'https://test.com/image.jpg';
     const onChange = jest.fn();
-    const { getByAltText, getByTestId } = render(
-      <ImageUploader imageSrc={imageSrc} onChange={onChange} />,
-    );
+    const { getByTestId } = render(<ImageUploader imageSrc={imageSrc} onChange={onChange} />);
     const fileInput = getByTestId('ImageUploader.input');
     const file = new File(['test'], 'test.jpg', {
       type: 'image/jpeg',

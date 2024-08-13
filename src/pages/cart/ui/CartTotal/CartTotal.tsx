@@ -4,6 +4,8 @@ import { FC } from 'react';
 import cn from 'classnames';
 
 import { selectCartData } from '@/entities/Cart';
+import { selectCurrentCurrency } from '@/entities/Currency';
+import { DEFAULT_CURRENCY } from '@/entities/Currency';
 import { getRouteCheckout } from '@/shared/lib/constants';
 import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice } from '@/shared/lib/utils';
@@ -17,6 +19,7 @@ type Props = {
 };
 
 export const CartTotal: FC<Props> = ({ className }) => {
+  const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;
   const { totalPrice, cart } = useAppSelector(selectCartData);
 
   return (
@@ -30,7 +33,7 @@ export const CartTotal: FC<Props> = ({ className }) => {
             Subtotal:
           </Text>
           <Text variant="body_s" weight="medium" className={cls.CartTotalValue} as="span">
-            {getFormattedPrice(totalPrice)}
+            {getFormattedPrice(totalPrice, currentCurrency)}
           </Text>
         </div>
         <div className={cls.CartTotalRow}>
@@ -46,7 +49,7 @@ export const CartTotal: FC<Props> = ({ className }) => {
             Total:
           </Text>
           <Text variant="body_s" weight="medium" className={cls.CartTotalValue} as="span">
-            {getFormattedPrice(totalPrice)}
+            {getFormattedPrice(totalPrice, currentCurrency)}
           </Text>
         </div>
       </div>

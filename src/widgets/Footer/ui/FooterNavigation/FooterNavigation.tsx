@@ -9,8 +9,9 @@ import cls from './FooterNavigation.module.scss';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 
-export const FooterNavigation: FC<Props> = () => {
-  const { navigation } = getFooterData();
+export const FooterNavigation: FC<Props> = async () => {
+  const { navigation } = await getFooterData();
+
   return (
     <div className={cls.navigation}>
       {navigation.map((link) => {

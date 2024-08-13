@@ -1,1 +1,1 @@
-export { type TTag } from './tag.types';
+export { type TTag, type TTagVariant } from './tag.types';

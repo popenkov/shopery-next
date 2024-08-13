@@ -8,8 +8,8 @@ import { getPaymentIcon } from './getPaymentIcon';
 
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLUListElement>, HTMLUListElement> {}
 
-export const FooterPayment: FC<Props> = () => {
-  const { paymentMethods } = getFooterData();
+export const FooterPayment: FC<Props> = async () => {
+  const { paymentMethods } = await getFooterData();
 
   return (
     <ul className={cls.payment}>

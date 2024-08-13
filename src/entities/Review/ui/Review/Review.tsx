@@ -1,6 +1,7 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import Image from 'next/image';
 
+import { TypingText } from '@/shared/lib/utils';
 import { QuoteIcon } from '@/shared/ui/icons';
 import { Text } from '@/shared/ui/Text';
 
@@ -18,7 +19,7 @@ export const Review: FC<Props> = ({ text, photo, name, role }) => {
       <div className={cls.content}>
         <QuoteIcon className={cls.icon} />
         <Text variant="body_m" align="center" className={cls.text}>
-          {text}
+          <TypingText text={text} />
         </Text>
       </div>
       <div className={cls.author}>

@@ -3,9 +3,8 @@
 import { FC } from 'react';
 
 import { ProductLarge, TProduct } from '@/entities/Product';
-import { AddToCart } from '@/features/Cart/add-to-cart';
-import { AddToWishlist } from '@/features/Product';
-import { ShowProductPreview } from '@/features/Product';
+import { AddToCart } from '@/features/Cart';
+import { AddToWishlist, ShowProductPreview } from '@/features/Product';
 import { MobileSlider } from '@/shared/ui/MobileSlider';
 import { ProductTabs } from '@/shared/ui/ProductTabs';
 import { Text } from '@/shared/ui/Text';

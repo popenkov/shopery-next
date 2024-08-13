@@ -3,6 +3,9 @@ import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { selectCurrentCurrency } from '@/entities/Currency';
+import { DEFAULT_CURRENCY } from '@/entities/Currency';
+import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice } from '@/shared/lib/utils';
 import { Text } from '@/shared/ui/Text';
 
@@ -18,15 +21,16 @@ interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDi
 }
 
 export const ProductCart: FC<Props> = ({ data, className, cartActions, deleteActions }) => {
-  const { img, title, path, price, amount } = data;
+  const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;
+  const { img, title, path, price } = data;
 
   return (
     <div className={cn(cls.ProductCart, className)}>
       <div className={cls.ProductCartInfo}>
         <div className={cls.ProductCartPhoto}>
-          <Image src={img} alt={title} fill />
+          <Image src={img!} alt={title} fill />
         </div>
-        <Link href={path}>
+        <Link href={path!}>
           <Text variant="body_m" weight="medium" as="h3">
             {title}
           </Text>
@@ -36,7 +40,7 @@ export const ProductCart: FC<Props> = ({ data, className, cartActions, deleteAct
       <div className={cls.ProductCartPrice}>
         <span className={cls.ProductCartKeyMobile}>Price:</span>
         <Text variant="body_m" weight="medium" className={cls.ProductCartPriceNew}>
-          {getFormattedPrice(price)}
+          {getFormattedPrice(price, currentCurrency)}
         </Text>
       </div>
       <div className="cart-item__quantity">
@@ -45,7 +49,9 @@ export const ProductCart: FC<Props> = ({ data, className, cartActions, deleteAct
       </div>
       <div className={cls.ProductCartSubtotal}>
         <span className={cls.ProductCartKeyMobile}>Subtotal:</span>
-        <span className="cart-item__price-new"> {getFormattedPrice(price * amount)}</span>
+        <span className="cart-item__price-new">
+          {getFormattedPrice(price[currentCurrency], currentCurrency)}
+        </span>
       </div>
       <div className={cls.ProductCartDeleteButton}>{deleteActions}</div>
     </div>

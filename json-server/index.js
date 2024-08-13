@@ -69,6 +69,64 @@ server.post('/order-detailed', (req, res) => {
   }
 });
 
+server.post('/product-detailed', (req, res) => {
+  try {
+    const db = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'db.json'), 'UTF-8'));
+
+    const { product_detailed } = db;
+
+    if (product_detailed) {
+      return res.json(product_detailed);
+    }
+    return res.status(403).json({ message: 'Product not found' });
+  } catch (e) {
+    console.log(e);
+    return res.status(500).json({ message: e.message });
+  }
+});
+
+server.post('/user_data', (req, res) => {
+  try {
+    const { userId } = req.body;
+    const db = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'db.json'), 'UTF-8'));
+
+    const { user_data = [] } = db;
+
+    const user = user_data.find((user) => {
+      return user.userId === userId;
+    });
+    if (user) {
+      return res.json(user);
+    }
+    return res.status(403).json({ message: 'User not found' });
+  } catch (e) {
+    console.log(e);
+    return res.status(500).json({ message: e.message });
+  }
+});
+
+server.put('/update-billing-address', (req, res) => {
+  try {
+    const db = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'db.json'), 'UTF-8'));
+
+    const { user_data = [] } = db;
+
+    const userDataFromBd = user_data[0];
+
+    if (userDataFromBd) {
+      userDataFromBd.billingAddress = req.body;
+
+      // Write the updated db object back to the db.json file
+      fs.writeFileSync(path.resolve(__dirname, 'db.json'), JSON.stringify(db, null, 2));
+      return res.status(200).json({ message: 'Success' });
+    }
+    return res.status(403).json({ message: 'User not found' });
+  } catch (e) {
+    console.log(e);
+    return res.status(500).json({ message: e.message });
+  }
+});
+
 // проверяем, авторизован ли пользователь
 // eslint-disable-next-line;
 server.use((req, res, next) => {

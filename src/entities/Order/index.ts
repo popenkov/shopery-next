@@ -1,10 +1,12 @@
-export { selectOrdersData } from './model/selectors/order';
-export { type TOrderAddress, type TOrderProduct, type TOrder } from './model';
-export { getOrderById } from './services/getOrderById';
+export { getOrderById } from './services';
 export {
+  type TOrderAddress,
+  type TOrderProduct,
+  type TOrder,
+  addToOrders,
+  orderReducer,
   getOrderDetailedData,
   getOrderDetailedError,
   getOrderDetailedIsLoading,
-} from './model/selectors/order';
-
-export { addToOrders, orderReducer } from './model';
+  selectOrdersData,
+} from './model';

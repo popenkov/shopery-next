@@ -5,8 +5,6 @@ export {
   removeItemFromCart,
   closeAsideCartMenu,
   openAsideCartMenu,
-} from './model/slices/cart-slice';
-export {
   selectCartData,
   selectCartProducts,
   selectMenuState,

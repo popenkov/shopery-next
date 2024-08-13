@@ -4,6 +4,7 @@ import { FC, useState } from 'react';
 import cn from 'classnames';
 
 import { selectCartProducts, selectTotalPrice } from '@/entities/Cart';
+import { selectCurrentCurrency, DEFAULT_CURRENCY } from '@/entities/Currency';
 import { ProductCheckout } from '@/entities/Product';
 import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice } from '@/shared/lib/utils';
@@ -18,6 +19,7 @@ type Props = {
 };
 
 export const CheckoutTotal: FC<Props> = ({ className }) => {
+  const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;
   const cartItems = useAppSelector(selectCartProducts);
   const totalPrice = useAppSelector(selectTotalPrice);
   const [activePaymentMethod, setActivePaymentMethod] = useState('cash');
@@ -43,7 +45,7 @@ export const CheckoutTotal: FC<Props> = ({ className }) => {
             Subtotal:
           </Text>
           <Text variant="body_s" weight="medium" className={cls.CheckoutTotalValue}>
-            {getFormattedPrice(totalPrice)}
+            {getFormattedPrice(totalPrice, currentCurrency)}
           </Text>
         </div>
         <div className={cls.CheckoutTotalRow}>
@@ -51,7 +53,9 @@ export const CheckoutTotal: FC<Props> = ({ className }) => {
             Shipping:
           </Text>
           <Text variant="body_s" weight="medium" className={cls.CheckoutTotalValue}>
-            {getFormattedPrice(totalPrice) ? getFormattedPrice(totalPrice) : 'Free'}
+            {getFormattedPrice(totalPrice, currentCurrency)
+              ? getFormattedPrice(totalPrice, currentCurrency)
+              : 'Free'}
           </Text>
         </div>
         <div className={cls.CheckoutTotalRow}>
@@ -59,7 +63,7 @@ export const CheckoutTotal: FC<Props> = ({ className }) => {
             Total:
           </Text>
           <Text variant="body_s" weight="medium" className={cls.CheckoutTotalValue}>
-            {getFormattedPrice(totalPrice)}
+            {getFormattedPrice(totalPrice, currentCurrency)}
           </Text>
         </div>
       </div>

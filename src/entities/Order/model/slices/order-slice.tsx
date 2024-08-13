@@ -1,14 +1,14 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { TOrder } from '../types/order';
-import { OrderSchema } from '../types/order-schema';
-import { ORDERS_LOCALSTORAGE_KEY } from '../../lib/constants';
-import { getOrderById } from '../../services/getOrderById';
+import { TOrder, OrderSchema } from '../types';
+import { ORDERS_LOCALSTORAGE_KEY } from '../../lib';
+import { getOrderById } from '../../services';
 
 const initialState: OrderSchema = {
-  orders: localStorage?.getItem(ORDERS_LOCALSTORAGE_KEY)
-    ? JSON.parse(localStorage.getItem(ORDERS_LOCALSTORAGE_KEY)!)
-    : [],
+  orders:
+    typeof window !== 'undefined' && localStorage.getItem(ORDERS_LOCALSTORAGE_KEY)
+      ? JSON.parse(localStorage.getItem(ORDERS_LOCALSTORAGE_KEY)!)
+      : [],
   order: undefined,
   error: undefined,
   isLoading: true,

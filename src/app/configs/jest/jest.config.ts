@@ -5,10 +5,21 @@ import path from 'path';
 import type { Config } from 'jest';
 
 const config: Config = {
+  verbose: true,
+  // automock: true,
+  clearMocks: true,
   // todo
   // collectCoverage: true,
   collectCoverageFrom: ['src/**/*.{js,jsx}', '!src/index.jsx', '!src/api.js'],
   coverageDirectory: 'coverage',
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: 80,
+    },
+  },
   testEnvironment: 'jsdom',
   rootDir: '../../../../',
   setupFilesAfterEnv: ['<rootDir>/src/app/configs/jest/setupTests.ts'],

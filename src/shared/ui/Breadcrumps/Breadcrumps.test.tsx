@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
+import { PAGE_ROUTES } from '@/shared/lib/constants';
 import { AppRouteNames } from '@/shared/model';
 
 import { Breadcrumbs } from './';
@@ -26,7 +27,7 @@ describe('Breadcrumbs component', () => {
   });
 
   it('renders breadcrumb items correctly', () => {
-    const { getAllByRole, getAllByTestId } = render(<Breadcrumbs items={crumbs} />);
+    const { getAllByTestId } = render(<Breadcrumbs items={crumbs} />);
     const breadcrumbItems = getAllByTestId('Breadcrumbs.link');
     expect(breadcrumbItems).toHaveLength(crumbs.length);
     breadcrumbItems.forEach((item, index) => {
@@ -46,9 +47,13 @@ describe('Breadcrumbs component', () => {
   it('renders links correctly', () => {
     const { getAllByTestId } = render(<Breadcrumbs items={crumbs} />);
     const links = getAllByTestId('Breadcrumbs.link');
+
     links.forEach((link, index) => {
       if (index < crumbs.length - 1) {
-        expect(link).toHaveAttribute('href', crumbs[index]);
+        const currentPage = PAGE_ROUTES.filter((page) => {
+          return page.name === crumbs[index];
+        })[0];
+        expect(link).toHaveAttribute('href', currentPage.href);
       }
     });
   });

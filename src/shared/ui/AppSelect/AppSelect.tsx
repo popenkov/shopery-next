@@ -29,6 +29,7 @@ interface SelectProps
   placeholder?: string;
   onChange?: (value: string) => void;
   menuIsOpen?: boolean;
+  value: PropsValue<SelectOption>;
   isSearchable?: boolean;
   errorText?: string;
 }
@@ -52,6 +53,7 @@ export const AppSelect = memo(
       errorText,
       label,
       placeholder,
+      value,
       isSearchable = false,
     } = props;
 
@@ -73,12 +75,13 @@ export const AppSelect = memo(
           options={options}
           placeholder={placeholder}
           isMulti={false}
+          value={value}
           className={cls.select}
           menuIsOpen={menuIsOpen}
           isSearchable={isSearchable!}
           classNamePrefix="react-select"
           instanceId={'selectInstanceId'}
-          defaultValue={options[0] as PropsValue<SelectOption>}
+          // defaultValue={options[0] as PropsValue<SelectOption>}
         />
         {errorText && (
           <Text variant="body_s" weight="medium" className={cls.errorMessage} as="span">

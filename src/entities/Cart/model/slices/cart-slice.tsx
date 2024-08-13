@@ -1,14 +1,13 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { type TCartProduct } from '../types/cart';
-import { CartSchema } from '../types/cart-schema';
-import { getTotalAmount, getTotalPrice } from '../../lib/index';
+import { type TCartProduct, CartSchema } from '../types';
+import { getTotalAmount, getTotalPrice } from '../../lib';
 
 const initialState: CartSchema = {
   isAsideCartOpen: false,
   cart: [],
   totalAmount: 0,
-  totalPrice: 0,
+  totalPrice: { USD: 0, EUR: 0 },
 };
 
 const cartSlice = createSlice({

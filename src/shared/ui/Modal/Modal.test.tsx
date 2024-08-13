@@ -28,8 +28,8 @@ describe('Modal component', () => {
 
   it.skip('has correct class names when isOpen is true', () => {
     const { container, debug } = render(<Modal isOpen={true}>Modal content</Modal>);
-    // debug();
-    // expect(container.querySelector('.Modal')).toHaveClass('opened');
+    debug();
+    expect(container.querySelector('.Modal')).toHaveClass('opened');
     expect(container).toHaveClass('opened');
   });
 
@@ -39,10 +39,9 @@ describe('Modal component', () => {
         Modal content
       </Modal>,
     );
-    // debug();
-    const overlay = container.querySelector('.Overlay');
+    debug();
     fireEvent.click(container);
-    // expect(container.querySelector('.Modal')).toHaveClass('isClosing');
+    expect(container.querySelector('.Modal')).toHaveClass('isClosing');
     expect(container).toHaveClass('isClosing');
   });
 

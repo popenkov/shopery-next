@@ -10,10 +10,8 @@ import {
   selectWishlistProducts,
 } from '@/entities/Favorites';
 import { TProduct } from '@/entities/Product';
-import { useAppSelector } from '@/shared/lib/hooks';
-import { useAppDispatch } from '@/shared/lib/hooks';
-import { RoundButton } from '@/shared/ui/Buttons';
-import { type TRoundButtonTheme } from '@/shared/ui/Buttons/RoundButton';
+import { useAppSelector, useAppDispatch } from '@/shared/lib/hooks';
+import { type TRoundButtonTheme, RoundButton } from '@/shared/ui/Buttons';
 import { HeartIcon, HeartLinedIcon } from '@/shared/ui/icons';
 
 import cls from './AddToWishlist.module.scss';

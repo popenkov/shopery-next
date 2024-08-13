@@ -1,9 +1,10 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
+// eslint-disable-next-line
 import { ThunkConfig } from '@/app/providers/StoreProvider/StateSchema';
 import { setAuthData } from '@/entities/User';
 
-import { LoginSchema } from '../../model/types/loginSchema';
+import { LoginSchema } from '../../model';
 
 interface LoginByUsernameProps extends LoginSchema {}
 

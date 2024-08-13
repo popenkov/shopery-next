@@ -4,6 +4,7 @@ import { FC } from 'react';
 import cn from 'classnames';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 
+import { TUserPersonalData } from '@/entities/User';
 import { VALIDATION_MESSAGES } from '@/shared/lib/constants';
 import { EMAIL_REGEX } from '@/shared/lib/constants';
 import { Button } from '@/shared/ui/Buttons';
@@ -16,10 +17,12 @@ import { TFormData } from '../model';
 import cls from './EditUserSettings.module.scss';
 
 type Props = {
+  data: TUserPersonalData;
   className?: string;
 };
-
-export const EditUserSettings: FC<Props> = ({ className }) => {
+// todo
+// eslint-disable-next-line
+export const EditUserSettings: FC<Props> = ({ data, className }) => {
   const {
     register,
     reset,
@@ -29,6 +32,8 @@ export const EditUserSettings: FC<Props> = ({ className }) => {
   } = useForm<TFormData>({
     mode: 'onChange',
   });
+
+  // todo обновить данные
 
   const onSubmit: SubmitHandler<TFormData> = (data) => {
     console.log('data', data);

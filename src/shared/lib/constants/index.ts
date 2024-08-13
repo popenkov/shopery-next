@@ -11,9 +11,10 @@ export {
   getRouteWishlist,
   getRouteDashboard,
   getRouteAccountSettings,
+  PAGE_ROUTES,
 } from './routes';
 export { VALIDATION_MESSAGES } from './validation-messages';
 
-export { USER_LOCALSTORAGE_KEY } from './localstorage';
+export { USER_LOCALSTORAGE_KEY, CURRENCY_LOCALSTORAGE_KEY } from './localstorage';
 export { EMAIL_REGEX } from './validation-regex';
 export { COUNTRIES_LIST, STATES_LIST } from './countries-list';
