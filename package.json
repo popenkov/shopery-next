@@ -31,7 +31,7 @@
     "@types/circular-dependency-plugin": "^5.0.8",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
-    "axios": "^1.7.2",
+    "axios": "^1.7.4",
     "circular-dependency-plugin": "^5.2.2",
     "classnames": "2.5.1",
     "concurrently": "^8.2.2",
