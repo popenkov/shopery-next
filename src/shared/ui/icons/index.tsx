@@ -8,6 +8,7 @@ export const AlertIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="20"
       height="20"
       viewBox="0 0 20 20"
@@ -47,6 +48,7 @@ export const AppStoreIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="28"
       height="29"
       viewBox="0 0 28 29"
@@ -69,6 +71,7 @@ export const ApplePayIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="45"
       height="32"
       viewBox="0 0 45 32"
@@ -93,6 +96,7 @@ export const AppleIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -123,6 +127,7 @@ export const ApplepayIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="45"
       height="32"
       viewBox="0 0 45 32"
@@ -147,6 +152,7 @@ export const ArrowRightIcon: FC<{ className?: string; onClick?: () => void }> = 
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -169,6 +175,7 @@ export const ArrowIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -191,6 +198,7 @@ export const CalendarIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="18"
       height="19"
       viewBox="0 0 18 19"
@@ -218,6 +226,7 @@ export const CartIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -241,6 +250,7 @@ export const ChatMessageIcon: FC<{ className?: string; onClick?: () => void }> =
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="18"
       height="19"
       viewBox="0 0 18 19"
@@ -266,6 +276,7 @@ export const CheckIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="16"
       height="16"
       viewBox="0 0 16 16"
@@ -291,6 +302,7 @@ export const ChevronDownIcon: FC<{ className?: string; onClick?: () => void }> =
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       viewBox="0 0 12 12"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -308,6 +320,7 @@ export const CloseBtnIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="10"
       height="10"
       viewBox="0 0 10 10"
@@ -340,6 +353,7 @@ export const CloseIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       viewBox="0 0 25 25"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -370,6 +384,7 @@ export const CoffeeIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -396,6 +411,7 @@ export const CrossIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       viewBox="0 0 25 25"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -426,6 +442,7 @@ export const CupcakeIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -492,6 +509,7 @@ export const CutleryIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -534,6 +552,7 @@ export const DashboardIcon: FC<{ className?: string; onClick?: () => void }> = (
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -556,6 +575,7 @@ export const DeliveryTruckIcon: FC<{ className?: string; onClick?: () => void }>
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="40"
       height="40"
       viewBox="0 0 40 40"
@@ -578,6 +598,7 @@ export const Delivery_truckIcon: FC<{ className?: string; onClick?: () => void }
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       viewBox="0 0 40 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -598,6 +619,7 @@ export const DiscoverIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="45"
       height="32"
       viewBox="0 0 45 32"
@@ -627,6 +649,7 @@ export const EmailIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -659,6 +682,7 @@ export const EyeOpenIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="20"
       height="21"
       viewBox="0 0 20 21"
@@ -691,6 +715,7 @@ export const EyeIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -721,6 +746,7 @@ export const FacebookIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       viewBox="0 0 18 18"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -744,6 +770,7 @@ export const FilterIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="22"
       height="22"
       viewBox="0 0 22 22"
@@ -768,6 +795,7 @@ export const FishIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -810,6 +838,7 @@ export const FoodIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -852,6 +881,7 @@ export const GooglePlayIcon: FC<{ className?: string; onClick?: () => void }> = 
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="25"
       viewBox="0 0 24 25"
@@ -874,6 +904,7 @@ export const HeadphonesIcon: FC<{ className?: string; onClick?: () => void }> = 
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       viewBox="0 0 40 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -894,6 +925,7 @@ export const HeartLinedIcon: FC<{ className?: string; onClick?: () => void }> = 
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="20"
       height="20"
       viewBox="0 0 20 20"
@@ -917,6 +949,7 @@ export const HeartStrokeIcon: FC<{ className?: string; onClick?: () => void }> =
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="32"
       height="33"
       viewBox="0 0 32 33"
@@ -940,6 +973,7 @@ export const HeartIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       viewBox="0 0 32 32"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -962,6 +996,7 @@ export const HomeIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -987,6 +1022,7 @@ export const IceCreamIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -1021,6 +1057,7 @@ export const Ice_creamIcon: FC<{ className?: string; onClick?: () => void }> = (
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -1055,6 +1092,7 @@ export const InstagramIcon: FC<{ className?: string; onClick?: () => void }> = (
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       viewBox="0 0 18 18"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1092,6 +1130,7 @@ export const LeafIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       viewBox="0 0 32 33"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1119,6 +1158,7 @@ export const LinkIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1142,6 +1182,7 @@ export const ListCheckboxIcon: FC<{ className?: string; onClick?: () => void }> 
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="20"
       height="20"
       viewBox="0 0 20 20"
@@ -1175,6 +1216,7 @@ export const LockIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="11"
       height="11"
       viewBox="0 0 11 11"
@@ -1207,6 +1249,7 @@ export const LogoutIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="25"
       height="24"
       viewBox="0 0 25 24"
@@ -1229,6 +1272,7 @@ export const MapPinIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       viewBox="0 0 17 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1257,6 +1301,7 @@ export const MastercardIcon: FC<{ className?: string; onClick?: () => void }> = 
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="45"
       height="32"
       viewBox="0 0 45 32"
@@ -1293,6 +1338,7 @@ export const MeatIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -1327,6 +1373,7 @@ export const MinusIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="16"
       height="16"
       viewBox="0 0 16 16"
@@ -1352,6 +1399,7 @@ export const OrderHistoryIcon: FC<{ className?: string; onClick?: () => void }> 
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="25"
       height="24"
       viewBox="0 0 25 24"
@@ -1374,6 +1422,7 @@ export const PackageIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       viewBox="0 0 40 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1394,6 +1443,7 @@ export const ParcelIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="38"
       height="40"
       viewBox="0 0 38 40"
@@ -1416,6 +1466,7 @@ export const PhoneIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="28"
       height="28"
       viewBox="0 0 28 28"
@@ -1455,6 +1506,7 @@ export const PieIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -1489,6 +1541,7 @@ export const PinterestIcon: FC<{ className?: string; onClick?: () => void }> = (
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       viewBox="0 0 18 18"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1512,6 +1565,7 @@ export const PlayButtonIcon: FC<{ className?: string; onClick?: () => void }> = 
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       viewBox="0 0 84 84"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1530,6 +1584,7 @@ export const PlayIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="14"
       height="18"
       viewBox="0 0 14 18"
@@ -1549,6 +1604,7 @@ export const PlusIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       viewBox="0 0 14 14"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1572,6 +1628,7 @@ export const PotatoesIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -1622,6 +1679,7 @@ export const PriceTagIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="32"
       height="33"
       viewBox="0 0 32 33"
@@ -1663,6 +1721,7 @@ export const Price_tagIcon: FC<{ className?: string; onClick?: () => void }> = (
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       viewBox="0 0 32 33"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1702,6 +1761,7 @@ export const QuoteIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="40"
       height="40"
       viewBox="0 0 40 40"
@@ -1726,6 +1786,7 @@ export const SaladIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -1788,6 +1849,7 @@ export const SearchIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="20"
       height="21"
       viewBox="0 0 20 21"
@@ -1820,6 +1882,7 @@ export const SecureIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="65"
       height="32"
       viewBox="0 0 65 32"
@@ -1906,6 +1969,7 @@ export const SettingsIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="25"
       height="24"
       viewBox="0 0 25 24"
@@ -1928,6 +1992,7 @@ export const ShippingIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="40"
       height="40"
       viewBox="0 0 40 40"
@@ -1962,6 +2027,7 @@ export const ShoppingBagIcon: FC<{ className?: string; onClick?: () => void }> =
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="40"
       height="40"
       viewBox="0 0 40 40"
@@ -1988,6 +2054,7 @@ export const Shopping_bagIcon: FC<{ className?: string; onClick?: () => void }> 
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       viewBox="0 0 40 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -2012,6 +2079,7 @@ export const StarIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       viewBox="0 0 16 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -2032,6 +2100,7 @@ export const SteakIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -2062,6 +2131,7 @@ export const SuccessIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="20"
       height="21"
       viewBox="0 0 20 21"
@@ -2087,6 +2157,7 @@ export const SupportIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="45"
       height="44"
       viewBox="0 0 45 44"
@@ -2125,6 +2196,7 @@ export const TagIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="20"
       height="21"
       viewBox="0 0 20 21"
@@ -2157,6 +2229,7 @@ export const TurkeyIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -2179,6 +2252,7 @@ export const TwitterIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       viewBox="0 0 18 18"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -2202,6 +2276,7 @@ export const UserIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="20"
       height="21"
       viewBox="0 0 20 21"
@@ -2230,6 +2305,7 @@ export const VisaLogoIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="32"
       height="12"
       viewBox="0 0 32 12"
@@ -2254,6 +2330,7 @@ export const VisaIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="45"
       height="32"
       viewBox="0 0 45 32"
@@ -2278,6 +2355,7 @@ export const WarningIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="20"
       height="21"
       viewBox="0 0 20 21"
@@ -2317,6 +2395,7 @@ export const WishListIcon: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="25"
       height="24"
       viewBox="0 0 25 24"
@@ -2340,6 +2419,7 @@ export const DefaultLogo: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="183"
       height="39"
       viewBox="0 0 183 39"
@@ -2366,6 +2446,7 @@ export const MiniLogo: FC<{ className?: string; onClick?: () => void }> = ({
     <svg
       className={className}
       onClick={onClick}
+      data-testid="test-icon"
       width="32"
       height="31"
       viewBox="0 0 32 31"
