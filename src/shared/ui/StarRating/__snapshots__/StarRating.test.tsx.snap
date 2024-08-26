@@ -9,6 +9,7 @@ exports[`StarRating component renders correctly 1`] = `
       class="star filled"
     >
       <svg
+        data-testid="test-icon"
         fill="none"
         viewBox="0 0 16 16"
         xmlns="http://www.w3.org/2000/svg"
@@ -23,6 +24,7 @@ exports[`StarRating component renders correctly 1`] = `
       class="star filled"
     >
       <svg
+        data-testid="test-icon"
         fill="none"
         viewBox="0 0 16 16"
         xmlns="http://www.w3.org/2000/svg"
@@ -37,6 +39,7 @@ exports[`StarRating component renders correctly 1`] = `
       class="star filled"
     >
       <svg
+        data-testid="test-icon"
         fill="none"
         viewBox="0 0 16 16"
         xmlns="http://www.w3.org/2000/svg"
@@ -51,6 +54,7 @@ exports[`StarRating component renders correctly 1`] = `
       class="star"
     >
       <svg
+        data-testid="test-icon"
         fill="none"
         viewBox="0 0 16 16"
         xmlns="http://www.w3.org/2000/svg"
@@ -65,6 +69,7 @@ exports[`StarRating component renders correctly 1`] = `
       class="star"
     >
       <svg
+        data-testid="test-icon"
         fill="none"
         viewBox="0 0 16 16"
         xmlns="http://www.w3.org/2000/svg"

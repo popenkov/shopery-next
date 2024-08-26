@@ -9,6 +9,8 @@ import { Text } from '@/shared/ui/Text';
 import { type TProduct } from '../../';
 
 import cls from './ProductPreview.module.scss';
+import { selectCurrentCurrency } from '@/entities/Currency';
+import { useAppSelector } from '@/shared/lib/hooks';
 
 interface ProductPreviewProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
@@ -17,6 +19,7 @@ interface ProductPreviewProps
 }
 
 export const ProductPreview: FC<ProductPreviewProps> = ({ data, actions }) => {
+  const currentCurrency = useAppSelector(selectCurrentCurrency);
   const { img, title, path, price, priceOld, rating } = data;
 
   return (

@@ -15,7 +15,7 @@ export const InstagramCard: FC<Props> = ({ img, path }) => {
   return (
     <a className={cls.card} href={`instagram.com/${path}`}>
       <div className={cls.imgContainer}>
-        <Image src={img} alt="alt" className={cls.img} fill />
+        <Image src={img} alt={path} className={cls.img} fill />
       </div>
       <div className={cls.overlay}>
         <InstagramIcon className={cls.icon} />

@@ -21,6 +21,7 @@ exports[`Breadcrumbs component renders correctly 1`] = `
           >
             <svg
               class="homeIcon"
+              data-testid="test-icon"
               fill="none"
               height="24"
               viewBox="0 0 24 24"
@@ -37,6 +38,7 @@ exports[`Breadcrumbs component renders correctly 1`] = `
             </svg>
             <svg
               class="chevron"
+              data-testid="test-icon"
               fill="none"
               viewBox="0 0 12 12"
               xmlns="http://www.w3.org/2000/svg"
@@ -62,6 +64,7 @@ exports[`Breadcrumbs component renders correctly 1`] = `
           </a>
           <svg
             class="chevron"
+            data-testid="test-icon"
             fill="none"
             viewBox="0 0 12 12"
             xmlns="http://www.w3.org/2000/svg"

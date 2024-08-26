@@ -40,7 +40,7 @@ export const ProductOrder: FC<Props> = ({ data, className }) => {
         x{quantity}
       </Text>
       <Text variant="body_s" weight="medium" className={cls.ProductOrderTotal}>
-        {getFormattedPrice(total)}
+        {getFormattedPrice(total, currentCurrency)}
       </Text>
     </div>
   );
