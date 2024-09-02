@@ -1,8 +1,11 @@
 import React from 'react';
-import { ProductCartPreview } from './ProductCartPreview';
+
 import { renderWithStore } from '@/shared/lib/tests';
-import { TProduct } from '../../model';
 import { getFormattedPrice } from '@/shared/lib/utils';
+
+import { TProduct } from '../../model';
+
+import { ProductCartPreview } from './ProductCartPreview';
 
 const data: TProduct = {
   id: '1',

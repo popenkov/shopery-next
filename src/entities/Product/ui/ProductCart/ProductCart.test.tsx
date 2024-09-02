@@ -1,8 +1,11 @@
 import React from 'react';
-import { ProductCart } from './ProductCart';
-import { TProduct } from '../../model';
+
 import { renderWithStore } from '@/shared/lib/tests';
 import { getFormattedPrice } from '@/shared/lib/utils';
+
+import { TProduct } from '../../model';
+
+import { ProductCart } from './ProductCart';
 
 describe('ProductCart component', () => {
   const data: Omit<TProduct, 'rating'> = {

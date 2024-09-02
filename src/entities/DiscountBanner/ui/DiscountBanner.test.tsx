@@ -1,7 +1,9 @@
 import React from 'react';
-import { render, fireEvent, waitFor } from '@testing-library/react';
-import { DiscountBanner } from './DiscountBanner';
+import { render } from '@testing-library/react';
+
 import { TDiscountBanner } from '../model';
+
+import { DiscountBanner } from './DiscountBanner';
 
 const discountBannerProps: TDiscountBanner = {
   image: '/images/discount-banner.jpg',

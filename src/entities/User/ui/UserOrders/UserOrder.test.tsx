@@ -1,10 +1,12 @@
 import React from 'react';
-import { render, fireEvent, waitFor } from '@testing-library/react';
-import { UserOrder } from './UserOrder';
+import { render } from '@testing-library/react';
+
 import { selectCurrentCurrency } from '@/entities/Currency';
+import { TOrder } from '@/entities/Order';
 import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice, getWordDeclination } from '@/shared/lib/utils';
-import { TOrder } from '@/entities/Order';
+
+import { UserOrder } from './UserOrder';
 
 jest.mock('@/entities/Currency', () => ({
   selectCurrentCurrency: jest.fn(() => 'USD'),
@@ -26,6 +28,40 @@ describe('UserOrder component', () => {
     subtotal: { USD: 14.99, EUR: 12.2 },
     amount: 2,
     status: 'Processing',
+    discount: 0,
+    items: [
+      {
+        id: 'qBmrBPk6K9euRVzp6V9hf',
+        name: '1 Red Tomatos',
+        price: { USD: 14.99, EUR: 12.2 },
+        quantity: 3,
+        total: { USD: 44.99, EUR: 32.2 },
+        img: '/images/product-tomatos.jpg',
+        path: '/',
+      },
+    ],
+    delivery: null,
+    paymentMethod: 'PayPal',
+    shippingAddress: {
+      firstName: 'Dainne',
+      lastName: 'Russell',
+      country: 'United States',
+      state: 'New Mexico',
+      zipCode: '31134',
+      street: '4140 Parker Rd. Allentown, New Mexico 31134',
+      email: 'dainne.ressell@gmail.com',
+      phone: '(671) 555-0110',
+    },
+    billingAddress: {
+      firstName: 'Dainne',
+      lastName: 'Russell',
+      country: 'United States',
+      state: 'New Mexico',
+      zipCode: '31134',
+      street: '4140 Parker Rd. Allentown, New Mexico 31134',
+      email: 'dainne.ressell@gmail.com',
+      phone: '(671) 555-0110',
+    },
   };
 
   it.skip('renders correctly', () => {

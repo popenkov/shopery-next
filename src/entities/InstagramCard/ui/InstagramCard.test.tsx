@@ -1,7 +1,9 @@
 import React from 'react';
-import { render, fireEvent, waitFor } from '@testing-library/react';
-import { InstagramCard } from './InstagramCard';
+import { render } from '@testing-library/react';
+
 import { TInstagramCard } from '..';
+
+import { InstagramCard } from './InstagramCard';
 
 const instagramCardProps: TInstagramCard = {
   id: '1',

@@ -1,7 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { UserAddress } from './UserAddress';
+
 import { getUserAddress } from '../../api';
+
+import { UserAddress } from './UserAddress';
 
 jest.mock('../../api', () => ({
   getUserAddress: jest.fn(() => ({

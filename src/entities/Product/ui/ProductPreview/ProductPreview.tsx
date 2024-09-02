@@ -2,6 +2,8 @@ import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { selectCurrentCurrency } from '@/entities/Currency';
+import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice } from '@/shared/lib/utils';
 import { StarRating } from '@/shared/ui/StarRating';
 import { Text } from '@/shared/ui/Text';
@@ -9,8 +11,6 @@ import { Text } from '@/shared/ui/Text';
 import { type TProduct } from '../../';
 
 import cls from './ProductPreview.module.scss';
-import { selectCurrentCurrency } from '@/entities/Currency';
-import { useAppSelector } from '@/shared/lib/hooks';
 
 interface ProductPreviewProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {

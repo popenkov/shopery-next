@@ -1,9 +1,12 @@
 import React from 'react';
-import { ProductWishlist } from './ProductWishlist';
+
 import { useAppSelector as useAppSelectorOriginal } from '@/shared/lib/hooks';
-import { TProduct } from '../../model';
 import { renderWithStore } from '@/shared/lib/tests';
 import { getFormattedPrice } from '@/shared/lib/utils';
+
+import { TProduct } from '../../model';
+
+import { ProductWishlist } from './ProductWishlist';
 
 jest.mock('@/shared/lib/hooks', () => ({
   useAppSelector: jest.fn(),

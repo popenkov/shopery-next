@@ -1,8 +1,11 @@
 import React from 'react';
-import { ProductCheckout } from './ProductCheckout';
-import { TProduct } from '../../model';
+
 import { renderWithStore } from '@/shared/lib/tests';
 import { getFormattedPrice } from '@/shared/lib/utils';
+
+import { TProduct } from '../../model';
+
+import { ProductCheckout } from './ProductCheckout';
 
 const data: Omit<TProduct, 'rating'> = {
   id: '1',

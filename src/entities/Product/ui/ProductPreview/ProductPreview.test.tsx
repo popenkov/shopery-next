@@ -1,11 +1,11 @@
 import React from 'react';
-import { render, fireEvent, waitFor } from '@testing-library/react';
-import { ProductPreview } from './ProductPreview';
-import { selectCurrentCurrency } from '@/entities/Currency';
-import { useAppSelector as useAppSelectorOriginal } from '@/shared/lib/hooks';
+
 import { renderWithStore } from '@/shared/lib/tests';
-import { TProduct } from '../../model';
 import { getFormattedPrice } from '@/shared/lib/utils';
+
+import { TProduct } from '../../model';
+
+import { ProductPreview } from './ProductPreview';
 
 const data: TProduct = {
   id: '1',

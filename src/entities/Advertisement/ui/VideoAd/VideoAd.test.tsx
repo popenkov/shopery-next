@@ -1,8 +1,10 @@
 import React from 'react';
-import { render, fireEvent, waitFor } from '@testing-library/react';
-import { VideoAd } from './VideoAd';
+import { render } from '@testing-library/react';
+
 import * as methods from '../../lib/getVideoAdIcon';
 import { TAdvertisement } from '../../model';
+
+import { VideoAd } from './VideoAd';
 
 const adData: TAdvertisement[] = [
   {

@@ -1,11 +1,12 @@
 import React from 'react';
-import { render, fireEvent, waitFor } from '@testing-library/react';
-import { ProductSmall } from './ProductSmall';
-import { selectCurrentCurrency } from '@/entities/Currency';
+
 import { useAppSelector as useAppSelectorOriginal } from '@/shared/lib/hooks';
-import { TProduct } from '../../model';
 import { renderWithStore } from '@/shared/lib/tests';
 import { getFormattedPrice } from '@/shared/lib/utils';
+
+import { TProduct } from '../../model';
+
+import { ProductSmall } from './ProductSmall';
 
 jest.mock('@/shared/lib/hooks', () => ({
   useAppSelector: jest.fn(),

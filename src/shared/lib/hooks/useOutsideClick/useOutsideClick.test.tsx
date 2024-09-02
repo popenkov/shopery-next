@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { render, fireEvent } from '@testing-library/react';
+
 import { useOutsideClick } from './useOutsideClick';
 
 type Props = {

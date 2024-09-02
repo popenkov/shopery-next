@@ -1,8 +1,10 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { SocialShare } from './SocialShare';
+
 import * as api from '../api/getSocialData';
 import { TSocialLink } from '../model';
+
+import { SocialShare } from './SocialShare';
 
 describe('SocialShare component', () => {
   const socialLinks: TSocialLink[] = [

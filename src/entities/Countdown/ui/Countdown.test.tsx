@@ -1,7 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { Countdown } from './Countdown';
+
 import * as hooks from '@/shared/lib/hooks';
+
+import { Countdown } from './Countdown';
 
 jest.mock('@/shared/lib/hooks', () => ({
   useCountDown: jest.fn(() => ({

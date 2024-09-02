@@ -1,7 +1,9 @@
 import React from 'react';
-import { render, fireEvent, waitFor } from '@testing-library/react';
-import { UserCard } from './UserCard';
+import { render } from '@testing-library/react';
+
 import { getUserData } from '../../api';
+
+import { UserCard } from './UserCard';
 
 jest.mock('../../api', () => ({
   getUserData: jest.fn(() => ({

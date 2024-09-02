@@ -1,5 +1,5 @@
-import React from 'react';
 import { renderHook } from '@testing-library/react';
+
 import { useMediaQuery } from './useMediaQuery';
 
 describe('useMediaQuery', () => {
@@ -40,8 +40,6 @@ describe('useMediaQuery', () => {
   });
 
   it.skip('updates the matches state when the window is resized', () => {
-    const matchMediaInstance = window.matchMedia('800px');
-
     const { result } = renderHook(() => useMediaQuery('800px'));
     expect(result.current).toBe(false);
 
@@ -58,7 +56,7 @@ describe('useMediaQuery', () => {
       console.log('Removing event listener:', args);
     });
 
-    const { result, unmount } = renderHook(() => useMediaQuery('800px'));
+    const { unmount } = renderHook(() => useMediaQuery('800px'));
 
     unmount();
 

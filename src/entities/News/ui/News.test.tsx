@@ -1,7 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { News } from './News';
+
 import { TNews } from '../model';
+
+import { News } from './News';
 
 const newsData: TNews = {
   id: '12',

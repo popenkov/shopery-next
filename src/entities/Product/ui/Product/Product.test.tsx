@@ -1,8 +1,11 @@
 import React from 'react';
-import { Product } from './Product';
-import { TProduct } from '../../model';
+
 import { renderWithStore } from '@/shared/lib/tests';
 import { getFormattedPrice } from '@/shared/lib/utils';
+
+import { TProduct } from '../../model';
+
+import { Product } from './Product';
 
 const data: TProduct = {
   id: '1',

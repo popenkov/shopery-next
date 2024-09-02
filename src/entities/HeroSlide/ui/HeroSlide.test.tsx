@@ -1,7 +1,9 @@
 import React from 'react';
-import { render, fireEvent, waitFor } from '@testing-library/react';
-import { HeroSlide } from './HeroSlide';
+import { render } from '@testing-library/react';
+
 import { THeroSlide } from '..';
+
+import { HeroSlide } from './HeroSlide';
 
 const heroSlideProps: THeroSlide = {
   id: '1',

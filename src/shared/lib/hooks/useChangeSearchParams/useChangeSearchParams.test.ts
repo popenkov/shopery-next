@@ -69,10 +69,10 @@
 //   });
 // });
 
-import React from 'react';
-import { renderHook, act } from '@testing-library/react';
-import { useChangeSearchParams } from './useChangeSearchParams';
+import { renderHook } from '@testing-library/react';
 import { useRouter } from 'next/navigation';
+
+import { useChangeSearchParams } from './useChangeSearchParams';
 jest.mock('next/navigation', () => ({
   __esModule: true,
   useRouter: jest.fn(() => ({ push: jest.fn() })),

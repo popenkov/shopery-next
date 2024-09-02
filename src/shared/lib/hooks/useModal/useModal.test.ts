@@ -1,6 +1,6 @@
-import React from 'react';
-import { renderHook, act } from '@testing-library/react';
+import { renderHook } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+
 import { useModal } from './useModal';
 
 describe('useModal', () => {
@@ -34,9 +34,7 @@ describe('useModal', () => {
 
   it('calls close when Escape key is pressed', async () => {
     const onCloseMock = jest.fn();
-    const { result } = renderHook(() =>
-      useModal({ animationDelay: 0, onClose: onCloseMock, isOpen: true }),
-    );
+    renderHook(() => useModal({ animationDelay: 0, onClose: onCloseMock, isOpen: true }));
     await userEvent.keyboard('{Escape}');
     expect(onCloseMock).toHaveBeenCalledTimes(1);
   });

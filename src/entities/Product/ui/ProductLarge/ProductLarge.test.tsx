@@ -1,9 +1,11 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
-import { ProductLarge } from './ProductLarge';
-import { TProduct } from '../../model';
-import { getFormattedPrice } from '@/shared/lib/utils';
+
 import { renderWithStore } from '@/shared/lib/tests';
+import { getFormattedPrice } from '@/shared/lib/utils';
+
+import { TProduct } from '../../model';
+
+import { ProductLarge } from './ProductLarge';
 
 const data: TProduct = {
   id: '1',

@@ -1,5 +1,6 @@
 import React from 'react';
-import { render, fireEvent, waitFor } from '@testing-library/react';
+import { render } from '@testing-library/react';
+
 import { PhoneLink } from './PhoneLink';
 
 const phone = '+1234567890';

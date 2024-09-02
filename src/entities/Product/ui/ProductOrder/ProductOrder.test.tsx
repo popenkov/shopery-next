@@ -1,8 +1,10 @@
 import React from 'react';
-import { ProductOrder } from './ProductOrder';
+
+import { TUserOrderItem } from '@/entities/User';
 import { renderWithStore } from '@/shared/lib/tests';
 import { getFormattedPrice } from '@/shared/lib/utils';
-import { TUserOrderItem } from '@/entities/User';
+
+import { ProductOrder } from './ProductOrder';
 
 const data: TUserOrderItem = {
   id: 1,

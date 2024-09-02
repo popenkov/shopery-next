@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+
 import { AdvantageCard } from './AdvantageCard';
 import * as utils from './getAdvantageIcon';
 
