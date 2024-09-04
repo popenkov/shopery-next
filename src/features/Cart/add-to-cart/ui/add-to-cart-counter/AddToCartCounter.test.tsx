@@ -7,23 +7,28 @@ import { renderWithStore } from '@/shared/lib/tests';
 
 import { AddToCartCounter } from './AddToCartCounter';
 
-jest.mock('@/shared/lib/hooks', () => ({
-  useAppDispatch: () => useDispatchMock,
-}));
-
 jest.mock('@/entities/Cart');
 
-jest.mock('react-redux', () => {
-  const useDispatchMock = jest.fn();
+jest.mock('@/shared/lib/hooks', () => {
+  const mockUseDispatch = jest.fn();
   return {
-    useSelector: jest.fn(),
-    useDispatch: () => useDispatchMock,
+    useAppDispatch: () => mockUseDispatch,
   };
 });
 
-const useDispatchMock = jest.mocked(useDispatch);
-const useAppDispatchMock = useDispatchMock.withTypes as jest.Mock;
+jest.mock('react-redux', () => {
+  const mockUseDispatch = jest.fn();
+  const mockUseSelector = jest.fn();
+  const mockUseStore = jest.fn();
 
+  return {
+    useDispatch: () => mockUseDispatch,
+    useSelector: mockUseSelector,
+    useStore: mockUseStore,
+  };
+});
+
+const useAppDispatchMock = jest.fn();
 useAppDispatchMock.mockImplementation(() => jest.fn());
 
 const item: TProductDetailed = {
