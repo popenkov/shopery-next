@@ -27,7 +27,6 @@ export const AccountNavigation: FC<Props> = ({ className }) => {
         {ACCOUNT_NAVIGATION_DATA.map((link) => {
           const Icon = getAccountNavigationIcon(link.icon as keyof typeof accountNavigationIcons);
           const isActive = pathname === link.path;
-          console.log(isActive);
           return (
             <li key={link.path} className={cls.AccountNavigationItem}>
               <Link

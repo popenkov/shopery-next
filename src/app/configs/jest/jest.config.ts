@@ -9,8 +9,22 @@ const config: Config = {
   // automock: true,
   clearMocks: true,
   // todo
-  // collectCoverage: true,
-  collectCoverageFrom: ['src/**/*.{js,jsx}', '!src/index.jsx', '!src/api.js'],
+  collectCoverage: true,
+  collectCoverageFrom: [
+    'src/**/*.{ts,tsx}',
+    '!src/**/index.ts',
+    '!src/**/api/*',
+    '!src/**/types/*',
+    '!src/**/services/*',
+    '!**/*.js',
+    '!**/*.stories.tsx',
+    '!**/*.config.ts',
+    '!**/*.types.ts',
+    '!**/types.ts',
+    '!**/constants.ts',
+    '!**/*.interface.ts',
+    '!pages/',
+  ],
   coverageDirectory: 'coverage',
   coverageThreshold: {
     global: {

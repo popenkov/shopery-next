@@ -33,7 +33,6 @@ export const ProductPreviewModal: FC = () => {
     document.body.classList.remove('fixed');
     setIsOpen(false);
     removeQueryParam('product');
-    console.log('close');
   };
 
   useEffect(() => {

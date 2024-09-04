@@ -1,6 +1,6 @@
 'use client';
 
-import { DetailedHTMLProps, FC, HTMLAttributes, memo, useState } from 'react';
+import { DetailedHTMLProps, FC, HTMLAttributes, memo, useEffect, useState } from 'react';
 import cn from 'classnames';
 
 import { ChevronDownIcon } from '@/shared/ui/icons';
@@ -18,6 +18,10 @@ interface DropdownProps
 
 export const Dropdown: FC<DropdownProps> = memo(({ defaultItem, data, testid, onChange }) => {
   const [chosenElement, setChosenElement] = useState<TDropdownItem>(defaultItem);
+
+  useEffect(() => {
+    setChosenElement(defaultItem);
+  }, [defaultItem]);
 
   const handleOptionChoose = (item: TDropdownItem) => {
     setChosenElement(item);

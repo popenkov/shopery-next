@@ -28,7 +28,6 @@ export const ProductReview: FC<Props> = ({ data, className }) => {
         <div className={cls.productReviewAuthor}>
           <div className={cls.productReviewAvatarWrapper}>
             <Image
-              fill
               width="0"
               height="0"
               className={cls.productReviewAvatar}

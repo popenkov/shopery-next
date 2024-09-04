@@ -23,7 +23,6 @@ export const SettingsAccount: FC<Props> = ({ className }) => {
   const isLoading = useAppSelector(getUserIsLoading);
   const error = useAppSelector(getUserError);
   useEffect(() => {
-    // todo откуда брать юзерИд
     const testUserID = '1';
     dispatch(getUserDataById(testUserID) as unknown as UnknownAction);
   }, [dispatch]);
@@ -49,7 +48,7 @@ export const SettingsAccount: FC<Props> = ({ className }) => {
           </Text>
         </div>
         {/* todo */}
-        <EditUserSettings className={cls.SettingsAccountMain} data={userData.personalData} />
+        <EditUserSettings className={cls.SettingsAccountMain} />
       </div>
 
       <div className={cn(cls.SettingsAccount)}>

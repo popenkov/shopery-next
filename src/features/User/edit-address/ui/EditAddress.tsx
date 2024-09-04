@@ -1,7 +1,9 @@
 'use client';
 import { FC } from 'react';
 import cn from 'classnames';
+import Link from 'next/link';
 
+import { getRouteAccountSettings } from '@/shared/lib/constants';
 import { Text } from '@/shared/ui/Text';
 
 import cls from './EditAddress.module.scss';
@@ -11,16 +13,11 @@ type Props = {
 };
 
 export const EditAddress: FC<Props> = ({ className }) => {
-  // const dispatch = useAppDispatch();
-  const handleEditAddressButtonClick = () => {
-    // dispatch(EditAddress({ id }));
-    console.log('Edit address');
-  };
   return (
-    <button className={cn(cls.Button, className)} onClick={handleEditAddressButtonClick}>
+    <Link href={getRouteAccountSettings()} className={cn(cls.Button, className)}>
       <Text variant="body_m" weight="medium" as="span">
         Edit address
       </Text>
-    </button>
+    </Link>
   );
 };

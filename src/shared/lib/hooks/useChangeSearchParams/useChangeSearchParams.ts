@@ -24,10 +24,19 @@ export const useChangeSearchParams = () => {
     return Boolean(searchParams?.has(paramName));
   };
 
-  const removeQueryParam = (paramName: string) => {
-    const currentParams = new URLSearchParams(searchParams?.toString());
-    currentParams.delete(paramName);
-    router.push(pathname || '', { scroll: false });
+  // todo проверить метод
+
+  // const removeQueryParam = (paramName: string) => {
+  //   const currentParams = new URLSearchParams(searchParams?.toString());
+  //   currentParams.delete(paramName);
+  //   router.push(pathname || '', { scroll: false });
+  // };
+
+  const removeQueryParam = (key: string) => {
+    const newSearchParams = new URLSearchParams(searchParams?.toString());
+    newSearchParams.delete(key);
+    const newUrl = `${pathname}${newSearchParams.toString() ? `?${newSearchParams.toString()}` : ''}`;
+    router.push(newUrl, { scroll: false });
   };
 
   return { getSearchParam, checkParams, setQueryParams, removeQueryParam };

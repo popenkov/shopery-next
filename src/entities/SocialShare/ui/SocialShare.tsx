@@ -18,7 +18,7 @@ export const SocialShare: FC<Props> = ({ className }) => {
     <div className={cn(cls.socialShare, className)}>
       <span className={cls.socialShareText}>Share:</span>
       <div className={cls.socialShareContainer}>
-        {socialLinks.map(({ icon, id }) => {
+        {socialLinks.map(({ icon, id, path }) => {
           const Icon = getSocialIcon(icon);
           return (
             <RoundButton
@@ -27,6 +27,7 @@ export const SocialShare: FC<Props> = ({ className }) => {
               className={cls.link}
               theme="ghost"
               as="a"
+              href={path}
             />
           );
         })}

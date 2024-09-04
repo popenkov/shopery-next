@@ -7,6 +7,7 @@ export interface UserSchema {
   isLoading?: boolean;
   error?: string;
   addressData?: TUserAddress;
+  personalData?: TUserPersonalData;
 }
 
 export type TUserAddress = {

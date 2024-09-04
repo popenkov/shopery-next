@@ -50,14 +50,6 @@ export const EditUserBillingAddress: FC<Props> = ({ className }) => {
   const selectedCountry = watch('countryAddress');
 
   useEffect(() => {
-    console.log(
-      'getSelectedOption(selectedCountry, COUNTRIES_LIST).value)',
-      getSelectedOption(selectedCountry, COUNTRIES_LIST).value,
-    );
-    console.log(
-      'getSelectValue(value, COUNTRIES_LIST)',
-      getSelectValue(getSelectedOption(selectedCountry, COUNTRIES_LIST).value, COUNTRIES_LIST),
-    );
     if (!selectedCountry) {
       setValue('countryAddress', getSelectedOption(selectedCountry, COUNTRIES_LIST).value);
     }
@@ -96,12 +88,14 @@ export const EditUserBillingAddress: FC<Props> = ({ className }) => {
           rules={{
             required: VALIDATION_MESSAGES.REQUIRED,
           }}
-          render={({ field, fieldState: { error } }) => (
+          render={({ field: { value, onChange }, fieldState: { error } }) => (
             <Input
               label="Last name"
               placeholder="Your Last name"
               errorText={error?.message}
-              {...field}
+              // {...field}
+              value={value}
+              onChange={(newValue) => onChange(newValue)}
               className={cls.EditUserBillingAddressInput}
             />
           )}

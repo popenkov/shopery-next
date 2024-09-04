@@ -1,44 +1,48 @@
 'use client';
 
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
+import { UnknownAction } from '@reduxjs/toolkit';
 import cn from 'classnames';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 
-import { TUserPersonalData } from '@/entities/User';
+import { getPersonalUserData, TUserPersonalData, updatePersonalData } from '@/entities/User';
 import { VALIDATION_MESSAGES } from '@/shared/lib/constants';
 import { EMAIL_REGEX } from '@/shared/lib/constants';
+import { useAppDispatch, useAppSelector } from '@/shared/lib/hooks';
 import { Button } from '@/shared/ui/Buttons';
 import { ImageUploader } from '@/shared/ui/ImageUploader';
 import { Input } from '@/shared/ui/Input';
 import { MaskedInput } from '@/shared/ui/MaskedInput';
 
-import { TFormData } from '../model';
-
 import cls from './EditUserSettings.module.scss';
 
 type Props = {
-  data: TUserPersonalData;
   className?: string;
 };
-// todo
-// eslint-disable-next-line
-export const EditUserSettings: FC<Props> = ({ data, className }) => {
+
+export const EditUserSettings: FC<Props> = ({ className }) => {
+  const dispatch = useAppDispatch();
+  const userData = useAppSelector(getPersonalUserData);
   const {
-    register,
     reset,
     handleSubmit,
     control,
     formState: { isValid },
-  } = useForm<TFormData>({
+  } = useForm<TUserPersonalData>({
     mode: 'onChange',
   });
 
+  useEffect(() => {
+    if (Object.keys(userData).length) {
+      reset(userData);
+    }
+  }, [userData]);
+
   // todo обновить данные
 
-  const onSubmit: SubmitHandler<TFormData> = (data) => {
-    console.log('data', data);
+  const onSubmit: SubmitHandler<TUserPersonalData> = (data) => {
     if (isValid) {
-      console.log('form sent');
+      dispatch(updatePersonalData(data) as unknown as UnknownAction);
       reset();
     }
   };
@@ -122,11 +126,17 @@ export const EditUserSettings: FC<Props> = ({ data, className }) => {
           Save Changes
         </Button>
       </div>
-
-      <ImageUploader
-        imageSrc="/images/product-red-capsicum.jpg"
-        className={cls.EditUserSettingsImageUploader}
-        {...register('photo', { required: true })}
+      <Controller
+        control={control}
+        name="photo"
+        render={({ field: { value, onChange }, fieldState: { error } }) => (
+          <ImageUploader
+            imageSrc={value}
+            className={cls.EditUserSettingsImageUploader}
+            onChange={(newValue) => onChange(newValue)}
+            errorText={error?.message}
+          />
+        )}
       />
     </form>
   );

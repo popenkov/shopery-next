@@ -26,15 +26,6 @@ export const AddToCartCounter: FC<Props> = ({ className, item }) => {
   };
 
   const handleAddToCartButtonClick = () => {
-    console.log('handleAddToCartButtonClick', amount, item);
-
-    // id: string;
-    // path?: string;
-    // img: string;
-    // title: string;
-    // price: Record<TCurrencyVariant, number>;
-    // amount: number;
-
     const CartModel = { ...item, amount: amount };
     dispatch(addToCart(CartModel));
     dispatch(openAsideCartMenu());

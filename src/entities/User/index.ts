@@ -13,9 +13,15 @@ export {
   getUserBillingAddress,
   getUserShippingAddress,
   getUserError,
+  getUserData,
   getUserIsLoading,
 } from './selectors';
 export { setAuthData, logout, userReducer } from './slice';
 export { UserOrders, UserCard, UserAddress } from './ui';
-export { getUserAddress, getUserData, getUserOrderById } from './api';
-export { updateBillingAddress, getUserDataById, initAuthData } from './services';
+export { getUserAddress, getUserOrderById } from './api';
+export {
+  updateBillingAddress,
+  updatePersonalData,
+  getUserDataById,
+  initAuthData,
+} from './services';

@@ -22,7 +22,7 @@ export const VideoAd: FC<Props> = ({ adData, video, className }) => {
         {adData.map(({ icon, title, text }) => {
           const Icon = getVideoAdIcon(icon);
           return (
-            <div className={cls.videoAdAdvantage} key={title}>
+            <div className={cls.videoAdAdvantage} data-testid="advantage" key={title}>
               <Icon className={cls.videoAdAdvantageIcon} />
               <div className={cls.videoAdAdvantageText}>
                 <Text variant="body_s" weight="medium" as="h3">

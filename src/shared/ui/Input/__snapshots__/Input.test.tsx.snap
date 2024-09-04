@@ -13,6 +13,7 @@ exports[`Input component renders correctly 1`] = `
         data-testid="Input.input"
         id=":r0:"
         type="text"
+        value=""
       />
     </div>
   </div>

@@ -3,7 +3,7 @@ import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { selectCurrentCurrency, DEFAULT_CURRENCY } from '@/entities/Currency';
+import { selectCurrentCurrency } from '@/entities/Currency';
 import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice } from '@/shared/lib/utils';
 import { Tag } from '@/shared/ui/Tag';
@@ -20,7 +20,7 @@ interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDi
 }
 
 export const ProductWishlist: FC<Props> = ({ data, className, actions }) => {
-  const currentCurrency = useAppSelector(selectCurrentCurrency) || DEFAULT_CURRENCY;
+  const currentCurrency = useAppSelector(selectCurrentCurrency);
   const { img, title, path, price, priceOld, stock } = data;
   return (
     <div className={cn(cls.productWishlist, className)}>

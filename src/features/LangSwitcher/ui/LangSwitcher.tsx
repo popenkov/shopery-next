@@ -27,6 +27,7 @@ export const LangSwitcher: FC = memo(() => {
   const handleLanguageChange = (item: TDropdownItem) => {
     const locale = item.value as TLocale;
     setUserLocale(locale);
+    window.location.reload();
   };
 
   if (!currentLocale) {

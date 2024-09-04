@@ -4,7 +4,7 @@ import { memo, useState } from 'react';
 import { UnknownAction } from '@reduxjs/toolkit';
 import cn from 'classnames';
 import Link from 'next/link';
-import { redirect } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 
@@ -28,6 +28,7 @@ export interface LoginFormProps {
 }
 
 const LoginForm = memo(({ className }: LoginFormProps) => {
+  const router = useRouter();
   const dispatch = useAppDispatch();
   const t = useTranslations('LoginPage');
 
@@ -45,14 +46,12 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
   const onSubmit: SubmitHandler<LoginSchema> = async (data) => {
     if (isValid) {
       const response = await dispatch(loginByUsername(data) as unknown as UnknownAction);
-
+      reset({ email: '', password: '' });
       if (response.payload === 'error') {
         setHasError(true);
-        reset({ email: '', password: '' });
         return;
       }
-      reset({ email: '', password: '' });
-      redirect(getRouteHome());
+      router.push(getRouteHome());
     }
   };
 

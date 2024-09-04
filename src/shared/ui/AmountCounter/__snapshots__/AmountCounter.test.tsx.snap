@@ -11,6 +11,7 @@ exports[`AmountCounter component renders correctly 1`] = `
     >
       <svg
         class="AmountCounterButtonIcon"
+        data-testid="test-icon"
         fill="none"
         height="16"
         viewBox="0 0 16 16"
@@ -44,6 +45,7 @@ exports[`AmountCounter component renders correctly 1`] = `
     >
       <svg
         class="AmountCounterButtonIcon"
+        data-testid="test-icon"
         fill="none"
         viewBox="0 0 14 14"
         xmlns="http://www.w3.org/2000/svg"
