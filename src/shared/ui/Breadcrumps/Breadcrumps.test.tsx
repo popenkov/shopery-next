@@ -20,7 +20,7 @@ describe('Breadcrumbs component', () => {
 
   it('renders home link correctly', () => {
     const { getAllByTestId, debug } = render(<Breadcrumbs items={crumbs} />);
-    const homeLink = getAllByTestId('Breadcrumbs.link')[0];
+    const homeLink = getAllByTestId('breadcrumbs-link')[0];
     debug();
     expect(homeLink).toBeInTheDocument();
     expect(homeLink).toHaveAttribute('href', '/'); // assuming getRouteHome() returns '/'
@@ -28,7 +28,7 @@ describe('Breadcrumbs component', () => {
 
   it('renders breadcrumb items correctly', () => {
     const { getAllByTestId } = render(<Breadcrumbs items={crumbs} />);
-    const breadcrumbItems = getAllByTestId('Breadcrumbs.link');
+    const breadcrumbItems = getAllByTestId('breadcrumbs-link');
     expect(breadcrumbItems).toHaveLength(crumbs.length);
     breadcrumbItems.forEach((item, index) => {
       if (index === 0) {
@@ -40,13 +40,13 @@ describe('Breadcrumbs component', () => {
 
   it('renders active breadcrumb item correctly', () => {
     const { getAllByTestId } = render(<Breadcrumbs items={crumbs} />);
-    const activeItem = getAllByTestId('Breadcrumbs.link')[crumbs.length - 1];
+    const activeItem = getAllByTestId('breadcrumbs-link')[crumbs.length - 1];
     expect(activeItem).toHaveClass('active');
   });
 
   it('renders links correctly', () => {
     const { getAllByTestId } = render(<Breadcrumbs items={crumbs} />);
-    const links = getAllByTestId('Breadcrumbs.link');
+    const links = getAllByTestId('breadcrumbs-link');
 
     links.forEach((link, index) => {
       if (index < crumbs.length - 1) {

@@ -17,7 +17,7 @@ export const Location: FC<LocationProps> = memo(({ address, isMobile }) => {
       className={cn(cls.location, {
         [cls.mobile]: isMobile,
       })}
-      data-testid="HeaderTop.location"
+      data-testid="header-top-location"
     >
       <MapPinIcon className={cls.icon} />
       <Text variant="body_tiny"> {address}</Text>

@@ -70,7 +70,7 @@ describe('AddToCartCounter', () => {
 
   it.skip('рендерит компонент AmountCounter с правильным значением', () => {
     const { getByTestId } = renderWithStore(<AddToCartCounter item={item} className="" />);
-    const amountCounter = getByTestId('AmountCounter.input');
+    const amountCounter = getByTestId('amount-counter-input');
     expect(amountCounter).toHaveAttribute('value', '5');
   });
 
@@ -83,7 +83,7 @@ describe('AddToCartCounter', () => {
   it.skip('вызывает функцию handleAmountChange при изменении значения AmountCounter', () => {
     const handleAmountChange = jest.fn();
     const { getByTestId } = renderWithStore(<AddToCartCounter item={item} className="" />);
-    const amountCounter = getByTestId('AmountCounter.input');
+    const amountCounter = getByTestId('amount-counter-input');
     fireEvent.change(amountCounter, { target: { value: 10 } });
     expect(handleAmountChange).toHaveBeenCalledTimes(1);
   });

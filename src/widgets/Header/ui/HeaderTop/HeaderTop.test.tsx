@@ -20,9 +20,9 @@ jest.mock('../UserMenu', () => ({
 describe.skip('HeaderTop component', () => {
   it('renders location and actions', () => {
     const { getByTestId } = renderWithStore(<HeaderTop />);
-    expect(getByTestId('HeaderTop.location')).toBeInTheDocument();
-    expect(getByTestId('HeaderTop.loginLink')).toBeInTheDocument();
-    expect(getByTestId('HeaderTop.registerLink')).toBeInTheDocument();
+    expect(getByTestId('header-top-location')).toBeInTheDocument();
+    expect(getByTestId('header-top-login-link')).toBeInTheDocument();
+    expect(getByTestId('header-top-register-link')).toBeInTheDocument();
   });
 
   //   todo
@@ -48,14 +48,14 @@ describe.skip('HeaderTop component', () => {
 
   it('calls login link when clicked', () => {
     const { getByTestId } = renderWithStore(<HeaderTop />);
-    const loginLink = getByTestId('HeaderTop.loginLink');
+    const loginLink = getByTestId('header-top-login-link');
     fireEvent.click(loginLink);
     waitFor(() => expect(window.location.href).toBe(getRouteLogin()));
   });
 
   it('calls registration link when clicked', async () => {
     const { getByTestId } = renderWithStore(<HeaderTop />);
-    const registrationLink = getByTestId('HeaderTop.registerLink');
+    const registrationLink = getByTestId('header-top-register-link');
     fireEvent.click(registrationLink);
 
     waitFor(() => expect(window.location.href).toBe(getRouteRegistation()));

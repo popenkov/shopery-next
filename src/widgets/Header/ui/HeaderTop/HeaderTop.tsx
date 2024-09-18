@@ -38,7 +38,7 @@ export const HeaderTop: FC = () => {
               <Link
                 className={cls.authLink}
                 href={getRouteLogin()}
-                data-testid="HeaderTop.loginLink"
+                data-testid="header-top-login-link"
               >
                 {t('login')}
               </Link>
@@ -46,7 +46,7 @@ export const HeaderTop: FC = () => {
               <Link
                 className={cls.authLink}
                 href={getRouteRegistation()}
-                data-testid="HeaderTop.registerLink"
+                data-testid="header-top-register-link"
               >
                 {t('registration')}
               </Link>

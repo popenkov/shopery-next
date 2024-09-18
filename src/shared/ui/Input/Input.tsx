@@ -46,7 +46,7 @@ export const Input = memo(
     return (
       <div className={cn(cls.inputContainer, className)}>
         {label && (
-          <label htmlFor={uniqueId} className={cls.inputLabel} data-testid="Input.label">
+          <label htmlFor={uniqueId} className={cls.inputLabel} data-testid="input-label">
             {label}
           </label>
         )}

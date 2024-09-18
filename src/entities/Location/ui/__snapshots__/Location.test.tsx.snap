@@ -4,7 +4,7 @@ exports[`Location component renders correctly 1`] = `
 <div>
   <div
     class="location"
-    data-testid="HeaderTop.location"
+    data-testid="header-top-location"
   >
     <svg
       class="icon"

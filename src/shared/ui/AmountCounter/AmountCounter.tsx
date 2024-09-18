@@ -31,7 +31,7 @@ export const AmountCounter: FC<Props> = ({ value, onChange, className }) => {
       <button
         className={cls.AmountCounterButton}
         onClick={handleMinusButtonClick}
-        data-testid="AmountCounter.minusButton"
+        data-testid="amount-counter-minus-button"
       >
         <MinusIcon className={cls.AmountCounterButtonIcon} />
       </button>
@@ -42,13 +42,13 @@ export const AmountCounter: FC<Props> = ({ value, onChange, className }) => {
           value={currentValue}
           min="1"
           readOnly
-          data-testid="AmountCounter.input"
+          data-testid="amount-counter-input"
         />
       </div>
       <button
         className={cls.AmountCounterButton}
         onClick={handlePlusButtonClick}
-        data-testid="AmountCounter.plusButton"
+        data-testid="amount-counter-plus-button"
       >
         <PlusIcon className={cls.AmountCounterButtonIcon} />
       </button>
