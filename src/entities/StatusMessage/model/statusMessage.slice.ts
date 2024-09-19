@@ -24,3 +24,5 @@ export const {
   actions: { openStatusMessage, closeStatusMessage },
   reducer: statusMessageReducer,
 } = statusMessageSlice;
+
+export default statusMessageSlice;

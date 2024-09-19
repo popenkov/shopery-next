@@ -25,9 +25,10 @@ const extraArg: ThunkExtraArg = {
   api: $api,
 };
 
-export const makeStore = () => {
+export const setupStore = (preloadedState?: Partial<RootState>) => {
   return configureStore({
     reducer: rootReducer,
+    preloadedState,
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware({
         thunk: {
@@ -37,7 +38,7 @@ export const makeStore = () => {
   });
 };
 
-export type AppStore = ReturnType<typeof makeStore>;
+export type AppStore = ReturnType<typeof setupStore>;
 // todo replace on d.ts
 // export type RootState = ReturnType<AppStore['getState']>;
 export type AppDispatch = AppStore['dispatch'];
