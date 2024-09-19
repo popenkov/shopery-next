@@ -24,14 +24,6 @@ export const useChangeSearchParams = () => {
     return Boolean(searchParams?.has(paramName));
   };
 
-  // todo проверить метод
-
-  // const removeQueryParam = (paramName: string) => {
-  //   const currentParams = new URLSearchParams(searchParams?.toString());
-  //   currentParams.delete(paramName);
-  //   router.push(pathname || '', { scroll: false });
-  // };
-
   const removeQueryParam = (key: string) => {
     const newSearchParams = new URLSearchParams(searchParams?.toString());
     newSearchParams.delete(key);

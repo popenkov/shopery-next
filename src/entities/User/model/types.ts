@@ -4,7 +4,7 @@ export interface UserSchema {
   _inited: boolean;
   authData?: TUser;
   user?: TUserData;
-  isLoading?: boolean;
+  isLoading: boolean;
   error?: string;
   addressData?: TUserAddress;
   personalData?: TUserPersonalData;

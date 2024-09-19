@@ -1,4 +1,3 @@
-export { getOrderById } from './services';
 export {
   type TOrderAddress,
   type TOrderProduct,
@@ -8,5 +7,9 @@ export {
   getOrderDetailedData,
   getOrderDetailedError,
   getOrderDetailedIsLoading,
+  getUserOrdersData,
   selectOrdersData,
+  getOrderById,
 } from './model';
+
+export { ORDERS_LOCALSTORAGE_KEY } from './lib';

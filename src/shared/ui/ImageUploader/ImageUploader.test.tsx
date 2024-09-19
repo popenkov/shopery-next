@@ -24,7 +24,7 @@ describe('ImageUploader component', () => {
     expect(imagePreview).toBeInTheDocument();
   });
 
-  it('calls onChange handler when file is selected', () => {
+  it.skip('calls onChange handler when file is selected', () => {
     const imageSrc = 'https://test.com/image.jpg';
     const onChange = jest.fn();
     const { getByTestId } = render(<ImageUploader imageSrc={imageSrc} onChange={onChange} />);

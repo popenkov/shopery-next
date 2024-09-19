@@ -16,7 +16,6 @@ jest.mock('../UserMenu', () => ({
   default: () => <div>User Menu</div>,
 }));
 
-// todo
 describe.skip('HeaderTop component', () => {
   it('renders location and actions', () => {
     const { getByTestId } = renderWithStore(<HeaderTop />);

@@ -31,7 +31,9 @@ fs.readdir(inputDir, (err, files) => {
     const id = file.replace(/\.svg$/, '');
     const componentName = generateIconName(id);
     const updatedSvgContent = [
-      '<svg' + ' className={className} onClick={onClick}' + svgContent.split('<svg')[1],
+      '<svg' +
+        ' className={className} onClick={onClick} data-testid="test-icon"' +
+        svgContent.split('<svg')[1],
     ]
       .join('<svg')
       .replace('fill-rule', 'fillRule')

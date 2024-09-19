@@ -28,7 +28,6 @@ export const OrderPage: FC<{ params: { id: string } }> = ({ params: { id } }) =>
   const error = useSelector(getOrderDetailedError);
 
   useEffect(() => {
-    // todo
     const testID = '1720362377187';
     dispatch(getOrderById(testID) as unknown as UnknownAction);
   }, [dispatch, id]);
@@ -63,7 +62,7 @@ export const OrderPage: FC<{ params: { id: string } }> = ({ params: { id } }) =>
           <OrderPageStatus status={status} className={cls.OrderPageStatus} />
         </div>
       )}
-      <div className={cls.OrderPageItems}>{/* todo перенести похожую таблицу из дашборда */}</div>
+      <div className={cls.OrderPageItems}></div>
       <OrderProducts products={items} className={cls.OrderPageItems} />
     </div>
   );

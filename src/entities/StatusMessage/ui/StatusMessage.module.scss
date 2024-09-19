@@ -1,0 +1,92 @@
+@import '@/shared/styles/_breakpoints';
+@import '@/shared/styles/mixins/flexbox';
+@import '@/shared/styles/mixins/box';
+
+.StatusMessage {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  z-index: var(--success-message-z-index);
+  display: flex;
+  align-items: stretch;
+  min-width: 260px;
+  min-height: 64px;
+  background-color: var(--back-primary);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 12%);
+
+  @media screen and (max-width: $df-screen-ti) {
+    left: 8px;
+    width: 100%;
+    max-width: calc(100% - 16px);
+  }
+}
+
+.StatusMessageIcon {
+  @include flex-center;
+
+  width: 64px;
+  min-width: 64px;
+  min-height: 64px;
+  color: white;
+
+  &.success {
+    background-color: var(--status-success);
+  }
+
+  &.error {
+    background-color: var(--status-danger);
+  }
+}
+
+.StatusMessageDescription {
+  position: relative;
+  flex-grow: 1;
+  box-sizing: border-box;
+  min-height: 64px;
+  padding: 20px 60px 20px 24px;
+  background-color: var(--back-primary);
+
+  @media screen and (max-width: $df-screen-ti) {
+    flex-grow: 1;
+    padding: 12px 60px 12px 24px;
+  }
+}
+
+.StatusMessageText {
+  color: var(--front-secondary);
+}
+
+.StatusMessageCloseButton {
+  @include flex-center;
+  @include box(32px);
+
+  position: absolute;
+  top: 17px;
+  right: 15px;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  opacity: 0.6;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 15px;
+    width: 2px;
+    height: 17px;
+    background-color: var(--monochrome-400);
+    content: '';
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

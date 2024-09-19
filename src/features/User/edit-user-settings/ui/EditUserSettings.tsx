@@ -38,8 +38,6 @@ export const EditUserSettings: FC<Props> = ({ className }) => {
     }
   }, [userData]);
 
-  // todo обновить данные
-
   const onSubmit: SubmitHandler<TUserPersonalData> = (data) => {
     if (isValid) {
       dispatch(updatePersonalData(data) as unknown as UnknownAction);

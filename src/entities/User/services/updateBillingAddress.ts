@@ -3,6 +3,8 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 // eslint-disable-next-line
 import { ThunkConfig } from '@/app/providers';
 
+import { openStatusMessage } from '@/entities/StatusMessage';
+
 import { TUserAddress } from '../model';
 
 export const updateBillingAddress = createAsyncThunk<
@@ -19,9 +21,11 @@ export const updateBillingAddress = createAsyncThunk<
       throw new Error();
     }
 
+    thunkApi.dispatch(openStatusMessage(true));
     return response.data;
   } catch (e) {
     console.log(e);
+    thunkApi.dispatch(openStatusMessage(false));
     return rejectWithValue('error');
   }
 });

@@ -6,6 +6,7 @@ import { currencyReducer } from '@/entities/Currency';
 import { wishlistReducer } from '@/entities/Favorites';
 import { orderReducer } from '@/entities/Order';
 import { productsReducer } from '@/entities/Product';
+import { statusMessageReducer } from '@/entities/StatusMessage';
 import { userReducer } from '@/entities/User';
 import { $api } from '@/shared/api';
 
@@ -16,6 +17,7 @@ const rootReducer = combineReducers({
   orders: orderReducer,
   products: productsReducer,
   currency: currencyReducer,
+  statusMessage: statusMessageReducer,
   // [rtkApi.reducerPath]: rtkApi.reducer,
 });
 

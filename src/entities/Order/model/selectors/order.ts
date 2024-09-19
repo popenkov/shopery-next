@@ -9,5 +9,6 @@ const selectBase = createSelector(
 
 export const selectOrdersData = createSelector(selectBase, (state) => state);
 export const getOrderDetailedData = (state: RootState) => state.orders?.order;
+export const getUserOrdersData = (state: RootState) => state.orders?.orders;
 export const getOrderDetailedIsLoading = (state: RootState) => state.orders?.isLoading || false;
 export const getOrderDetailedError = (state: RootState) => state.orders?.error;

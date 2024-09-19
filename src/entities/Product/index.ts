@@ -16,8 +16,9 @@ export {
   getProductDetailedData,
   getProductDetailedError,
   getProductDetailedIsLoading,
+  getProductById,
 } from './model';
 
-export { getProductDetails, getProductById } from './api';
+export { getProductDetails } from './mock';
 
 export { productsReducer } from './model';

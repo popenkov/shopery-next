@@ -4,7 +4,7 @@ import { CurrencySchema, TCurrencyVariant } from '../types';
 import { DEFAULT_CURRENCY } from '../../lib';
 
 const initialState: CurrencySchema = {
-  currency: DEFAULT_CURRENCY, //todo
+  currency: DEFAULT_CURRENCY,
 };
 
 const currencySlice = createSlice({

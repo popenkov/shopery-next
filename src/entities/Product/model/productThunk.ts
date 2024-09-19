@@ -3,7 +3,9 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 // eslint-disable-next-line
 import { ThunkConfig } from '@/app/providers';
 
-import { TProductDetailed } from '../model';
+import { openStatusMessage } from '@/entities/StatusMessage';
+
+import { TProductDetailed } from '.';
 
 export const getProductById = createAsyncThunk<TProductDetailed, string, ThunkConfig<string>>(
   'order/geTProductDetailedById',
@@ -23,9 +25,11 @@ export const getProductById = createAsyncThunk<TProductDetailed, string, ThunkCo
         throw new Error();
       }
 
+      thunkApi.dispatch(openStatusMessage(true));
       return response.data;
     } catch (e) {
       console.log(e);
+      thunkApi.dispatch(openStatusMessage(false));
       return rejectWithValue('error');
     }
   },

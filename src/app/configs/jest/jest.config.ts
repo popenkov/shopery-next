@@ -6,9 +6,7 @@ import type { Config } from 'jest';
 
 const config: Config = {
   verbose: true,
-  // automock: true,
   clearMocks: true,
-  // todo
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**/*.{ts,tsx}',

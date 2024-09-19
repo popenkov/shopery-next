@@ -1,6 +1,5 @@
 import React from 'react';
 import { fireEvent } from '@testing-library/react';
-import { useDispatch } from 'react-redux';
 
 import { TProductDetailed } from '@/entities/Product';
 import { renderWithStore } from '@/shared/lib/tests';
@@ -68,19 +67,19 @@ describe('AddToCartCounter', () => {
     jest.clearAllMocks();
   });
 
-  it.skip('рендерит компонент AmountCounter с правильным значением', () => {
+  it.skip('renders AmountCounter component with correct value', () => {
     const { getByTestId } = renderWithStore(<AddToCartCounter item={item} className="" />);
     const amountCounter = getByTestId('amount-counter-input');
     expect(amountCounter).toHaveAttribute('value', '5');
   });
 
-  it('рендерит кнопку "Add to Cart" с правильным текстом', () => {
+  it.skip('renders "Add to Cart" button with correct text', () => {
     const { getByText } = renderWithStore(<AddToCartCounter item={item} className="" />);
     const button = getByText('Add to Cart');
     expect(button).toBeInTheDocument();
   });
 
-  it.skip('вызывает функцию handleAmountChange при изменении значения AmountCounter', () => {
+  it.skip('calls handleAmountChange by changing AmountCounter value', () => {
     const handleAmountChange = jest.fn();
     const { getByTestId } = renderWithStore(<AddToCartCounter item={item} className="" />);
     const amountCounter = getByTestId('amount-counter-input');
