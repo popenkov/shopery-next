@@ -52,6 +52,7 @@
     "regenerator-runtime": "^0.14.1",
     "sass": "1.70.0",
     "swiper": "11.0.7",
+    "whatwg-fetch": "^3.6.20",
     "yup": "^1.4.0"
   },
   "devDependencies": {

@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { StatusMessageState } from './statusMessage.types';
+import { StatusMessageSchema } from './statusMessage.types';
 
-const initialState: StatusMessageState = {
+const initialState: StatusMessageSchema = {
   isOpen: false,
   isSuccess: undefined,
 };

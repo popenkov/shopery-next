@@ -47,7 +47,11 @@ export const StatusMessage: FC = () => {
           </div>
           <div className={cls.StatusMessageDescription}>
             <Text className={cls.StatusMessageText}>{isSuccess ? 'Success' : 'Error'}</Text>
-            <button className={cls.StatusMessageCloseButton} onClick={handleCloseBtnClick}></button>
+            <button
+              className={cls.StatusMessageCloseButton}
+              onClick={handleCloseBtnClick}
+              data-testid="status-message-close-button"
+            ></button>
           </div>
         </div>
       )}

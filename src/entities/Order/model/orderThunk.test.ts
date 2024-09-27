@@ -1,7 +1,5 @@
 import { TestAsyncThunk } from '@/shared/lib/tests/TestAsyncThunk';
 
-import { TUserOrder } from '../../User/model';
-import { TOrder } from './types';
 import { getOrderById } from './orderThunk';
 
 const data = {
@@ -56,15 +54,28 @@ const data = {
   date: '2024-07-07T14:26:17.187Z',
 };
 
-describe('getOrderById.test', () => {
-  it.only('success', async () => {
+describe('getOrderById async thunk', () => {
+  it('success', async () => {
+    const TEST_ORDER_ID = '12332123';
     const thunk = new TestAsyncThunk(getOrderById);
-    thunk.api.get.mockReturnValue(Promise.resolve({ data }));
+    thunk.api.post.mockReturnValue(Promise.resolve({ data }));
 
-    const result = await thunk.callThunk('1');
+    const result = await thunk.callThunk(TEST_ORDER_ID);
     console.log('result', result);
-    expect(thunk.api.get).toHaveBeenCalled();
+    expect(thunk.api.post).toHaveBeenCalled();
     expect(result.meta.requestStatus).toBe('fulfilled');
     expect(result.payload).toEqual(data);
+  });
+
+  it('error', async () => {
+    const TEST_ORDER_ID = '12332123';
+    const thunk = new TestAsyncThunk(getOrderById);
+    thunk.api.post.mockReturnValue(Promise.resolve({ status: 403 }));
+
+    const result = await thunk.callThunk(TEST_ORDER_ID);
+    console.log('result', result);
+    expect(thunk.api.post).toHaveBeenCalled();
+    expect(result.meta.requestStatus).toBe('rejected');
+    expect(result.payload).toBe('error');
   });
 });

@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, ReactNode } from 'react';
+import { FC, ReactNode, useEffect, useState } from 'react';
 import cn from 'classnames';
 
 import { useModal } from '@/shared/lib/hooks';
@@ -33,6 +33,8 @@ export const Drawer: FC<Props> = (props) => {
     hasOverlay = true,
   } = props;
 
+  const [element, setElement] = useState<HTMLElement>();
+
   const { close, isClosing, isMounted } = useModal({
     animationDelay: ANIMATION_DELAY,
     onClose,
@@ -46,12 +48,17 @@ export const Drawer: FC<Props> = (props) => {
     [cls.top]: position === 'top',
   };
 
+  useEffect(() => {
+    const appElement = document.getElementById('app');
+    setElement(appElement ?? document.body);
+  }, []);
+
   if (lazy && !isMounted) {
     return null;
   }
 
   return (
-    <Portal element={document.getElementById('app') ?? document.body}>
+    <Portal element={element}>
       {hasOverlay && <Overlay onClick={close} />}
       <div className={cn(cls.Drawer, className, mods)}>{children}</div>
     </Portal>
