@@ -3,6 +3,8 @@ import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { selectCurrentCurrency } from '@/entities/Currency';
+import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice } from '@/shared/lib/utils';
 import { Tag } from '@/shared/ui/Tag';
 import { Text } from '@/shared/ui/Text';
@@ -18,14 +20,15 @@ interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDi
 }
 
 export const ProductWishlist: FC<Props> = ({ data, className, actions }) => {
+  const currentCurrency = useAppSelector(selectCurrentCurrency);
   const { img, title, path, price, priceOld, stock } = data;
   return (
     <div className={cn(cls.productWishlist, className)}>
       <div className={cls.productWishlistInfo}>
         <div className={cls.productWishlistPhoto}>
-          <Image src={img} alt={title} fill />
+          <Image src={img!} alt={title} fill />
         </div>
-        <Link href={path}>
+        <Link href={path!}>
           <Text variant="body_m" weight="medium" as="h3">
             {title}
           </Text>
@@ -33,11 +36,11 @@ export const ProductWishlist: FC<Props> = ({ data, className, actions }) => {
       </div>
       <div className={cls.productWishlistPrice}>
         <Text variant="body_m" weight="medium" className={cls.productWishlistPriceNew}>
-          {getFormattedPrice(price)}
+          {getFormattedPrice(price, currentCurrency)}
         </Text>
         {priceOld && (
           <Text variant="body_m" weight="medium" className={cls.productWishlistPriceOld}>
-            {getFormattedPrice(priceOld)}
+            {getFormattedPrice(priceOld, currentCurrency)}
           </Text>
         )}
       </div>

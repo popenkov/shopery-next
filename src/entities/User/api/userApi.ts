@@ -1,6 +1,6 @@
 import { rtkApi } from '@/shared/api/rtkApi';
 
-import { TUser } from '../model/types';
+import { TUser } from '../model';
 
 const userApi = rtkApi.injectEndpoints({
   endpoints: (build) => ({

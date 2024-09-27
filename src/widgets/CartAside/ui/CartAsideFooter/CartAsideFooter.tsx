@@ -1,7 +1,9 @@
 import { FC } from 'react';
 
+import { selectCurrentCurrency, TCurrencyVariant } from '@/entities/Currency';
 import { getRouteCart, getRouteCheckout } from '@/shared/lib/constants';
-import { getWordDeclination } from '@/shared/lib/utils';
+import { useAppSelector } from '@/shared/lib/hooks';
+import { getFormattedPrice, getWordDeclination } from '@/shared/lib/utils';
 import { AppLink } from '@/shared/ui/AppLink';
 import { Text } from '@/shared/ui/Text';
 
@@ -9,11 +11,12 @@ import cls from './CartAsideFooter.module.scss';
 
 type Props = {
   closeDrawer: () => void;
-  price: string;
+  price: Record<TCurrencyVariant, number>;
   amount: number;
 };
 
 export const CartAsideFooter: FC<Props> = ({ closeDrawer, price, amount }) => {
+  const currentCurrency = useAppSelector(selectCurrentCurrency);
   return (
     <div className={cls.CartAsideFooter}>
       <div className={cls.CartAsideFooterTotal}>
@@ -21,7 +24,7 @@ export const CartAsideFooter: FC<Props> = ({ closeDrawer, price, amount }) => {
           {amount} {getWordDeclination(amount, ['Product', 'Products'])}
         </Text>
         <Text variant="body_m" weight="semibold" as="span">
-          {price}
+          {getFormattedPrice(price, currentCurrency)}
         </Text>
       </div>
       <div className={cls.CartAsideFooterButtons}>

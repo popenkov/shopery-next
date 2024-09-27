@@ -2,7 +2,9 @@ import { FC } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
+import { selectCurrentCurrency } from '@/entities/Currency';
 import { TOrder } from '@/entities/Order';
+import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice, getWordDeclination } from '@/shared/lib/utils';
 import { Text } from '@/shared/ui/Text';
 
@@ -12,23 +14,25 @@ type Props = {
 };
 
 export const UserOrder: FC<Props> = ({ order }) => {
+  const currentCurrency = useAppSelector(selectCurrentCurrency);
+
   const animations = {
     initial: { scale: 0, opacity: 0 },
     animate: { scale: 1, opacity: 1 },
     exit: { scale: 0, opacity: 0 },
     transition: { type: 'spring', stiffness: 900, damping: 40 },
   };
+
   return (
     <motion.li {...animations} layout key={order.id} className={cls.UserOrdersItem}>
       <Text variant="body_s" className={cls.UserOrdersItemText}>
         #{order.id}
       </Text>
-      {/* todo */}
       <Text variant="body_s" className={cls.UserOrdersItemText}>
         {new Date(order.date).toDateString()}
       </Text>
       <Text variant="body_s" className={cls.UserOrdersItemText}>
-        {getFormattedPrice(order.subtotal)} ({order.amount}{' '}
+        {getFormattedPrice(order.subtotal, currentCurrency)} ({order.amount}{' '}
         {getWordDeclination(order.amount, ['Product', 'Products'])})
       </Text>
       <Text variant="body_s" className={cls.UserOrdersItemText}>

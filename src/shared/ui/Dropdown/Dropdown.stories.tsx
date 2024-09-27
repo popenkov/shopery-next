@@ -16,6 +16,10 @@ type TStory = StoryObj<typeof meta>;
 
 export const DropdownComponent: TStory = {
   args: {
+    defaultItem: {
+      value: 'DE',
+      label: 'DE',
+    },
     data: [
       {
         value: 'DE',

@@ -1,4 +1,4 @@
-import React, { DetailedHTMLProps, FC, HTMLAttributes, useRef } from 'react';
+import { DetailedHTMLProps, FC, HTMLAttributes, useRef } from 'react';
 import cn from 'classnames';
 
 import { Location } from '@/entities/Location';

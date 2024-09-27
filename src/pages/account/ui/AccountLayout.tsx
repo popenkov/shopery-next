@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 
 import { Subscription } from '@/features/Subscription';
 import { AppRouteNames } from '@/shared/model';
@@ -12,7 +12,6 @@ export default function AccountLayout({
 }: Readonly<{
   children: ReactNode;
 }>) {
-  // todo
   const crumbs: AppRouteNames[] = [AppRouteNames.HOME, AppRouteNames.CATALOG];
 
   return (
@@ -20,6 +19,7 @@ export default function AccountLayout({
       <Breadcrumbs items={crumbs} />
       <main className={cls.AccountLayout}>
         <AccountNavigation className={cls.AccountAside} />
+
         {children}
       </main>
       <Subscription variant="gray" />

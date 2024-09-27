@@ -1,3 +1,17 @@
-export { addToOrders } from './model/slices/order-slice';
-export { selectOrdersData } from './model/selectors/order';
-export { type TOrderAddress, type TOrderProduct, type TOrder } from './model';
+import { OrderSchema } from './model/types/order-schema';
+export {
+  type TOrderAddress,
+  type TOrderProduct,
+  type TOrder,
+  type OrderSchema,
+  addToOrders,
+  orderReducer,
+  getOrderDetailedData,
+  getOrderDetailedError,
+  getOrderDetailedIsLoading,
+  getUserOrdersData,
+  selectOrdersData,
+  getOrderById,
+} from './model';
+
+export { ORDERS_LOCALSTORAGE_KEY } from './lib';

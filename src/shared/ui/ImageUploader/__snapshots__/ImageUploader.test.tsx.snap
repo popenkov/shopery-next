@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageUploader component renders correctly 1`] = `
+<div>
+  <div
+    class="ImageUploader"
+  >
+    <div
+      class="ImageUploaderPreviewWrapper"
+    >
+      <img
+        alt="image preview"
+        data-testid="image-uploader-preview"
+        src="https://test.com/image.jpg"
+      />
+    </div>
+    <input
+      accept="image/*"
+      class="ImageUploaderInput"
+      data-testid="image-uploader-input"
+      id="file"
+      type="file"
+    />
+    <label
+      class="ImageUploaderLabel"
+      for="file"
+    >
+      Choose Image
+    </label>
+  </div>
+</div>
+`;

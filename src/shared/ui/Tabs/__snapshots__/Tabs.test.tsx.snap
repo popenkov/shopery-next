@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs component renders correctly 1`] = `
+<div>
+  <div
+    class="tabs"
+  >
+    <div
+      class="labels"
+    >
+      <div
+        class="labelsContent"
+      >
+        <div
+          class="scrollContainer"
+        >
+          <button
+            class="label active"
+          >
+            Tab 1
+          </button>
+          <button
+            class="label"
+          >
+            Tab 2
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="panes"
+    >
+      <div
+        class="pane"
+      >
+        <div
+          class="paneContent"
+        >
+          <div>
+            Content 1
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

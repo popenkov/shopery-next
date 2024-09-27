@@ -1,4 +1,4 @@
-import { type TUserOrder } from '../model/types';
+import { type TUserOrder } from '../model';
 
 const ORDER_DATA: TUserOrder = {
   id: 1,
@@ -12,7 +12,7 @@ const ORDER_DATA: TUserOrder = {
       path: '#',
       img: '/images/product-small--red-capsicum.jpg',
       name: 'Red Capsicum',
-      price: 14,
+      price: { USD: 14.99, EUR: 12.2 },
       quantity: 5,
       total: 70,
     },
@@ -21,7 +21,7 @@ const ORDER_DATA: TUserOrder = {
       path: '#',
       img: '/images/product-small--green-capsicum.jpg',
       name: 'Green Capsicum',
-      price: 14,
+      price: { USD: 14.99, EUR: 12.2 },
       quantity: 2,
       total: 28,
     },
@@ -30,7 +30,7 @@ const ORDER_DATA: TUserOrder = {
       path: '#',
       img: '/images/product-green-chilli.jpg',
       name: 'Green Chili',
-      price: 26.7,
+      price: { USD: 14.99, EUR: 12.2 },
       quantity: 10,
       total: 267,
     },
@@ -41,14 +41,18 @@ const ORDER_DATA: TUserOrder = {
   total: 84,
   status: 'Processing',
   address: {
-    name: 'Dainne Russell',
-    street: '4140 Parker Rd. Allentown, New Mexico 31134',
-    email: 'dainne.ressell@gmail.com',
-    phone: '(671) 555-0110',
+    firstName: 'Tony',
+    lastName: 'Honest',
+    companyName: 'Google',
+    streetAddress: '1600 Amphitheatre Parkway',
+    countryAddress: 'US',
+    countryState: 'MT',
+    zipAddress: '333 333',
+    email: 'test@test.ru',
+    phone: '+3 (333) 333-33-33',
   },
   user: { id: '1', photo: '/images/user-photo--1.jpg', name: 'Dianne Russell', role: 'Customer' },
 };
-export const getUserOrderById = (id: string) => {
-  console.log(id);
+export const getUserOrderById = () => {
   return ORDER_DATA;
 };

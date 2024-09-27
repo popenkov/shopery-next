@@ -47,6 +47,7 @@
   --hard-primary: #2c742f;
   --orange-500: #ff8a00;
   --red-500: #ea4b48;
+  --status-success: var(--primary);
   --status-warning: var(--orange-500);
   --status-danger: var(--red-500);
   --front-primary: var(--monochrome-900);
@@ -67,4 +68,5 @@
   --hero-navigation-z-index: 11;
   --overlay-z-index: 12;
   --modal-content-z-index: 20;
+  --success-message-z-index: 21;
 }

@@ -1,6 +1,7 @@
 'use client';
 
-import React, { DetailedHTMLProps, FC, HTMLAttributes, memo, useState } from 'react';
+import { DetailedHTMLProps, FC, HTMLAttributes, memo, useEffect, useState } from 'react';
+import cn from 'classnames';
 
 import { ChevronDownIcon } from '@/shared/ui/icons';
 
@@ -9,12 +10,18 @@ import cls from './Dropdown.module.scss';
 
 interface DropdownProps
   extends Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'onChange'> {
+  defaultItem: TDropdownItem;
   data: TDropdownItem[];
+  testid?: string;
   onChange: (value: TDropdownItem) => void;
 }
 
-export const Dropdown: FC<DropdownProps> = memo(({ data, onChange }) => {
-  const [chosenElement, setChosenElement] = useState<TDropdownItem>(data[0]);
+export const Dropdown: FC<DropdownProps> = memo(({ defaultItem, data, testid, onChange }) => {
+  const [chosenElement, setChosenElement] = useState<TDropdownItem>(defaultItem);
+
+  useEffect(() => {
+    setChosenElement(defaultItem);
+  }, [defaultItem]);
 
   const handleOptionChoose = (item: TDropdownItem) => {
     setChosenElement(item);
@@ -26,8 +33,8 @@ export const Dropdown: FC<DropdownProps> = memo(({ data, onChange }) => {
   }
 
   return (
-    <div className={cls.dropdown}>
-      <button className={cls.dropdownButton}>
+    <div className={cls.dropdown} data-testid={testid}>
+      <button className={cls.dropdownButton} data-testid="dropdownButton">
         <span>{chosenElement.label}</span>
         <ChevronDownIcon className={cls.dropdownButtonIcon} />
       </button>
@@ -35,7 +42,12 @@ export const Dropdown: FC<DropdownProps> = memo(({ data, onChange }) => {
         {data.map((item) => {
           return (
             <li key={item.value} className={cls.dropdownItem}>
-              <button className={cls.dropdownLink} onClick={() => handleOptionChoose(item)}>
+              <button
+                className={cn(cls.dropdownLink, {
+                  [cls.active]: item.value === chosenElement.value,
+                })}
+                onClick={() => handleOptionChoose(item)}
+              >
                 {item.label}
               </button>
             </li>

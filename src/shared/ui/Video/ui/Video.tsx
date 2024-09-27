@@ -1,7 +1,8 @@
 'use client';
 
-import React, { DetailedHTMLProps, FC, HTMLAttributes, useEffect, useRef, useState } from 'react';
+import { DetailedHTMLProps, FC, HTMLAttributes, useEffect, useRef, useState } from 'react';
 import cn from 'classnames';
+import { motion } from 'framer-motion';
 
 import { PlayIcon } from '@/shared/ui/icons';
 import { Text } from '@/shared/ui/Text';
@@ -53,7 +54,10 @@ export const Video: FC<Props> = ({ data, hasOverlay = true, buttonType = 'primar
                 {title}
               </Text>
             )}
-            <button
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
               className={cn(cls.videoPlayButton, {
                 [cls.primary]: buttonType === 'primary',
                 [cls.secondary]: buttonType === 'secondary',
@@ -61,7 +65,7 @@ export const Video: FC<Props> = ({ data, hasOverlay = true, buttonType = 'primar
               onClick={handlePlayButtonClick}
             >
               <PlayIcon className={cls.videoPlayIcon} />
-            </button>
+            </motion.button>
           </div>
         )}
         {isVideoShown && (

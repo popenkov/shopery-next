@@ -1,4 +1,4 @@
-import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 import { CloseIcon } from '@/shared/ui/icons';
 import { Text } from '@/shared/ui/Text';

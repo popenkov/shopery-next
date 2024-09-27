@@ -1,17 +1,23 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
-import { ThunkExtraArg } from '@/app/providers/StoreProvider/StateSchema';
+import { ThunkExtraArg } from '@/app/providers';
 import { cartReducer } from '@/entities/Cart';
+import { currencyReducer } from '@/entities/Currency';
 import { wishlistReducer } from '@/entities/Favorites';
-import { orderReducer } from '@/entities/Order/model/slices/order-slice';
-import { userReducer } from '@/entities/User/slice/user-slice';
-import { $api } from '@/shared/api/api';
+import { orderReducer } from '@/entities/Order';
+import { productsReducer } from '@/entities/Product';
+import { statusMessageReducer } from '@/entities/StatusMessage';
+import { userReducer } from '@/entities/User';
+import { $api } from '@/shared/api';
 
 const rootReducer = combineReducers({
   cart: cartReducer,
   user: userReducer,
   wishlist: wishlistReducer,
   orders: orderReducer,
+  products: productsReducer,
+  currency: currencyReducer,
+  statusMessage: statusMessageReducer,
   // [rtkApi.reducerPath]: rtkApi.reducer,
 });
 
@@ -19,9 +25,10 @@ const extraArg: ThunkExtraArg = {
   api: $api,
 };
 
-export const makeStore = () => {
+export const setupStore = (preloadedState?: Partial<RootState>) => {
   return configureStore({
     reducer: rootReducer,
+    preloadedState,
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware({
         thunk: {
@@ -31,6 +38,7 @@ export const makeStore = () => {
   });
 };
 
-export type AppStore = ReturnType<typeof makeStore>;
-export type RootState = ReturnType<AppStore['getState']>;
+export type AppStore = ReturnType<typeof setupStore>;
+// todo replace on d.ts
+// export type RootState = ReturnType<AppStore['getState']>;
 export type AppDispatch = AppStore['dispatch'];

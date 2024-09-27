@@ -1,9 +1,14 @@
 import { FC } from 'react';
 
-export const AlertIcon: FC<{ className?: string }> = ({ className }) => {
+export const AlertIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="20"
       height="20"
       viewBox="0 0 20 20"
@@ -35,10 +40,15 @@ export const AlertIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const AppStoreIcon: FC<{ className?: string }> = ({ className }) => {
+export const AppStoreIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="28"
       height="29"
       viewBox="0 0 28 29"
@@ -47,16 +57,21 @@ export const AppStoreIcon: FC<{ className?: string }> = ({ className }) => {
     >
       <path
         d="M25.4247 22.0656C25.0163 23.0167 24.512 23.9236 23.9197 24.7723C23.1275 25.9011 22.4794 26.6821 21.9801 27.1161C21.206 27.8278 20.3759 28.193 19.4875 28.2134C18.8499 28.2134 18.0811 28.032 17.1857 27.6639C16.2873 27.2976 15.4619 27.1156 14.7071 27.1156C13.9155 27.1156 13.0667 27.2976 12.1585 27.6639C11.2491 28.032 10.5164 28.2239 9.9564 28.2426C9.10473 28.2793 8.2554 27.9042 7.40723 27.1161C6.86648 26.6436 6.1904 25.8351 5.37957 24.6895C4.50982 23.4656 3.79465 22.047 3.23465 20.4288C2.63498 18.6817 2.33398 16.9895 2.33398 15.3515C2.33398 13.4749 2.7394 11.8567 3.5514 10.5005C4.19015 9.41081 5.0389 8.55215 6.10173 7.92098C7.14443 7.29701 8.33417 6.96123 9.54923 6.94798C10.2259 6.94798 11.1132 7.1574 12.2162 7.56865C13.3158 7.98106 14.0217 8.19048 14.3314 8.19048C14.5624 8.19048 15.347 7.94548 16.6764 7.45781C17.9341 7.00515 18.9952 6.8179 19.8643 6.89198C22.2204 7.08215 23.9902 8.01081 25.1668 9.68381C23.0604 10.9601 22.018 12.7481 22.039 15.0417C22.0577 16.8285 22.7057 18.3154 23.9797 19.4955C24.5572 20.0438 25.2018 20.4673 25.9187 20.7677C25.7684 21.2057 25.6036 21.6386 25.4247 22.0656ZM20.0218 0.805479C20.0218 2.20548 19.5102 3.51331 18.4906 4.72315C17.2597 6.16223 15.7717 6.99348 14.1576 6.86223C14.1359 6.68612 14.125 6.50884 14.1249 6.3314C14.1249 4.9874 14.71 3.5489 15.7495 2.37231C16.2687 1.77673 16.9278 1.28148 17.7282 0.886563C18.5273 0.497479 19.2822 0.282229 19.9927 0.244896C20.0131 0.432146 20.0218 0.619396 20.0218 0.804896V0.805479Z"
-        fill="white"
+        fill="currentColor"
       />
     </svg>
   );
 };
 
-export const ApplePayIcon: FC<{ className?: string }> = ({ className }) => {
+export const ApplePayIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="45"
       height="32"
       viewBox="0 0 45 32"
@@ -67,16 +82,21 @@ export const ApplePayIcon: FC<{ className?: string }> = ({ className }) => {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M11.8888 10.7777C11.511 11.2435 10.9067 11.6108 10.3024 11.5583C10.2268 10.9286 10.5227 10.2595 10.8689 9.84622C11.2466 9.36735 11.9076 9.02624 12.4427 9C12.5057 9.65598 12.2602 10.2988 11.8888 10.7777ZM12.4363 11.6828C11.9039 11.6509 11.4181 11.8496 11.0257 12.0102C10.7732 12.1135 10.5593 12.201 10.3966 12.201C10.2141 12.201 9.99142 12.1088 9.74142 12.0053C9.41384 11.8697 9.03932 11.7147 8.64658 11.7221C7.74637 11.7353 6.90911 12.2666 6.44956 13.1128C5.50528 14.8052 6.20405 17.3111 7.11685 18.6887C7.56381 19.3709 8.0989 20.1187 8.80396 20.0925C9.11415 20.0803 9.33728 19.9816 9.56819 19.8795C9.83404 19.7619 10.1102 19.6398 10.5414 19.6398C10.9577 19.6398 11.2218 19.7588 11.4753 19.8729C11.7164 19.9815 11.9479 20.0857 12.2915 20.0793C13.0217 20.0662 13.4813 19.3971 13.9282 18.7149C14.4106 17.9827 14.6226 17.2681 14.6547 17.1596L14.6585 17.1471C14.6585 17.1471 14.6518 17.1435 14.6412 17.1384C14.48 17.0615 13.2476 16.4736 13.2358 14.8971C13.2239 13.5738 14.2133 12.9034 14.369 12.7978C14.3785 12.7914 14.3849 12.7871 14.3878 12.7848C13.7583 11.814 12.7762 11.709 12.4363 11.6828ZM17.4917 20.0074V9.78068H21.1744C23.0755 9.78068 24.4038 11.1451 24.4038 13.1393C24.4038 15.1335 23.0504 16.511 21.124 16.511H19.0151V20.0074H17.4917ZM19.0149 11.1191H20.7713C22.0933 11.1191 22.8487 11.8538 22.8487 13.146C22.8487 14.4383 22.0933 15.1796 20.765 15.1796H19.0149V11.1191ZM29.4336 18.7806C29.0307 19.5809 28.1431 20.086 27.1862 20.086C25.7698 20.086 24.7815 19.207 24.7815 17.8819C24.7815 16.57 25.7383 15.8156 27.5073 15.7041L29.4084 15.586V15.0219C29.4084 14.1888 28.8859 13.7361 27.9542 13.7361C27.1862 13.7361 26.6259 14.1494 26.5126 14.7791H25.1403C25.1843 13.4541 26.3804 12.4898 27.9983 12.4898C29.7421 12.4898 30.8752 13.4409 30.8752 14.9169V20.0073H29.4651V18.7806H29.4336ZM27.5948 18.8727C26.7827 18.8727 26.2665 18.466 26.2665 17.8429C26.2665 17.2 26.7639 16.8261 27.7144 16.767L29.4078 16.6555V17.2328C29.4078 18.1905 28.6272 18.8727 27.5948 18.8727ZM35.5525 20.4073C34.9419 22.1981 34.2431 22.7885 32.7575 22.7885C32.6442 22.7885 32.2664 22.7754 32.1783 22.7491V21.5225C32.2727 21.5356 32.5057 21.5487 32.6253 21.5487C33.2989 21.5487 33.6766 21.2535 33.9095 20.486L34.048 20.0334L31.467 12.588H33.0596L34.8538 18.6296H34.8852L36.6794 12.588H38.228L35.5525 20.4073Z"
-        fill="white"
+        fill="#fff"
       />
     </svg>
   );
 };
 
-export const AppleIcon: FC<{ className?: string }> = ({ className }) => {
+export const AppleIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -99,10 +119,15 @@ export const AppleIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const ApplepayIcon: FC<{ className?: string }> = ({ className }) => {
+export const ApplepayIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="45"
       height="32"
       viewBox="0 0 45 32"
@@ -113,15 +138,25 @@ export const ApplepayIcon: FC<{ className?: string }> = ({ className }) => {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M11.8888 10.7777C11.511 11.2435 10.9067 11.6108 10.3024 11.5583C10.2268 10.9286 10.5227 10.2595 10.8689 9.84622C11.2466 9.36735 11.9076 9.02624 12.4427 9C12.5057 9.65598 12.2602 10.2988 11.8888 10.7777ZM12.4363 11.6828C11.9039 11.6509 11.4181 11.8496 11.0257 12.0102C10.7732 12.1135 10.5593 12.201 10.3966 12.201C10.2141 12.201 9.99142 12.1088 9.74142 12.0053C9.41384 11.8697 9.03932 11.7147 8.64658 11.7221C7.74637 11.7353 6.90911 12.2666 6.44956 13.1128C5.50528 14.8052 6.20405 17.3111 7.11685 18.6887C7.56381 19.3709 8.0989 20.1187 8.80396 20.0925C9.11415 20.0803 9.33728 19.9816 9.56819 19.8795C9.83404 19.7619 10.1102 19.6398 10.5414 19.6398C10.9577 19.6398 11.2218 19.7588 11.4753 19.8729C11.7164 19.9815 11.9479 20.0857 12.2915 20.0793C13.0217 20.0662 13.4813 19.3971 13.9282 18.7149C14.4106 17.9827 14.6226 17.2681 14.6547 17.1596L14.6585 17.1471C14.6585 17.1471 14.6518 17.1435 14.6412 17.1384C14.48 17.0615 13.2476 16.4736 13.2358 14.8971C13.2239 13.5738 14.2133 12.9034 14.369 12.7978C14.3785 12.7914 14.3849 12.7871 14.3878 12.7848C13.7583 11.814 12.7762 11.709 12.4363 11.6828ZM17.4917 20.0074V9.78068H21.1744C23.0755 9.78068 24.4038 11.1451 24.4038 13.1393C24.4038 15.1335 23.0504 16.511 21.124 16.511H19.0151V20.0074H17.4917ZM19.0149 11.1191H20.7713C22.0933 11.1191 22.8487 11.8538 22.8487 13.146C22.8487 14.4383 22.0933 15.1796 20.765 15.1796H19.0149V11.1191ZM29.4336 18.7806C29.0307 19.5809 28.1431 20.086 27.1862 20.086C25.7698 20.086 24.7815 19.207 24.7815 17.8819C24.7815 16.57 25.7383 15.8156 27.5073 15.7041L29.4084 15.586V15.0219C29.4084 14.1888 28.8859 13.7361 27.9542 13.7361C27.1862 13.7361 26.6259 14.1494 26.5126 14.7791H25.1403C25.1843 13.4541 26.3804 12.4898 27.9983 12.4898C29.7421 12.4898 30.8752 13.4409 30.8752 14.9169V20.0073H29.4651V18.7806H29.4336ZM27.5948 18.8727C26.7827 18.8727 26.2665 18.466 26.2665 17.8429C26.2665 17.2 26.7639 16.8261 27.7144 16.767L29.4078 16.6555V17.2328C29.4078 18.1905 28.6272 18.8727 27.5948 18.8727ZM35.5525 20.4073C34.9419 22.1981 34.2431 22.7885 32.7575 22.7885C32.6442 22.7885 32.2664 22.7754 32.1783 22.7491V21.5225C32.2727 21.5356 32.5057 21.5487 32.6253 21.5487C33.2989 21.5487 33.6766 21.2535 33.9095 20.486L34.048 20.0334L31.467 12.588H33.0596L34.8538 18.6296H34.8852L36.6794 12.588H38.228L35.5525 20.4073Z"
-        fill="white"
+        fill="currentColor"
       />
     </svg>
   );
 };
 
-export const ArrowRightIcon: FC<{ className?: string }> = ({ className }) => {
+export const ArrowRightIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      data-testid="test-icon"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -132,9 +167,19 @@ export const ArrowRightIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const ArrowIcon: FC<{ className?: string }> = ({ className }) => {
+export const ArrowIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      data-testid="test-icon"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -145,10 +190,15 @@ export const ArrowIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const CalendarIcon: FC<{ className?: string }> = ({ className }) => {
+export const CalendarIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="18"
       height="19"
       viewBox="0 0 18 19"
@@ -168,9 +218,19 @@ export const CalendarIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const CartIcon: FC<{ className?: string }> = ({ className }) => {
+export const CartIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      data-testid="test-icon"
+      viewBox="0 0 32 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M10.0833 12.9167H5.83333L3 28.5H28.5L25.6667 12.9167H21.4167M10.0833 12.9167V8.66667C10.0833 5.53705 12.6204 3 15.75 3V3C18.8796 3 21.4167 5.53705 21.4167 8.66667V12.9167M10.0833 12.9167H21.4167M10.0833 12.9167V17.1667M21.4167 12.9167V17.1667"
         stroke="currentColor"
@@ -182,10 +242,15 @@ export const CartIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const ChatMessageIcon: FC<{ className?: string }> = ({ className }) => {
+export const ChatMessageIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="18"
       height="19"
       viewBox="0 0 18 19"
@@ -202,11 +267,39 @@ export const ChatMessageIcon: FC<{ className?: string }> = ({ className }) => {
     </svg>
   );
 };
-
-export const CheckIcon: FC<{ className?: string }> = ({ className }) => {
+export const ErrorIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+      <path d="M12 7.5V13.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      <path
+        d="M12.0052 17.5353C12.5838 17.5288 13.0402 17.066 13.0338 16.4874C13.0274 15.941 12.5452 15.4717 11.9988 15.4717C11.4138 15.4717 10.9702 15.9217 10.9702 16.5131C10.9702 17.1238 11.3945 17.5417 12.0052 17.5353Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+};
+
+export const CheckIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
+  return (
+    <svg
+      className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="16"
       height="16"
       viewBox="0 0 16 16"
@@ -215,7 +308,7 @@ export const CheckIcon: FC<{ className?: string }> = ({ className }) => {
     >
       <path
         d="M13.3337 4L6.00033 11.3333L2.66699 8"
-        stroke="white"
+        stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -224,18 +317,33 @@ export const CheckIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const ChevronDownIcon: FC<{ className?: string }> = ({ className }) => {
+export const ChevronDownIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      data-testid="test-icon"
+      viewBox="0 0 12 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path d="M10 4L6 8L2 4" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 };
 
-export const CloseBtnIcon: FC<{ className?: string }> = ({ className }) => {
+export const CloseBtnIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="10"
       height="10"
       viewBox="0 0 10 10"
@@ -260,9 +368,19 @@ export const CloseBtnIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const CloseIcon: FC<{ className?: string }> = ({ className }) => {
+export const CloseIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      data-testid="test-icon"
+      viewBox="0 0 25 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M18.75 6.25L6.25 18.75"
         stroke="currentColor"
@@ -281,10 +399,15 @@ export const CloseIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const CoffeeIcon: FC<{ className?: string }> = ({ className }) => {
+export const CoffeeIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -303,9 +426,19 @@ export const CoffeeIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const CrossIcon: FC<{ className?: string }> = ({ className }) => {
+export const CrossIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      data-testid="test-icon"
+      viewBox="0 0 25 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M18.75 6.25L6.25 18.75"
         stroke="currentColor"
@@ -324,10 +457,15 @@ export const CrossIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const CupcakeIcon: FC<{ className?: string }> = ({ className }) => {
+export const CupcakeIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -386,10 +524,15 @@ export const CupcakeIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const CutleryIcon: FC<{ className?: string }> = ({ className }) => {
+export const CutleryIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -424,10 +567,15 @@ export const CutleryIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const DashboardIcon: FC<{ className?: string }> = ({ className }) => {
+export const DashboardIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -442,10 +590,15 @@ export const DashboardIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const DeliveryTruckIcon: FC<{ className?: string }> = ({ className }) => {
+export const DeliveryTruckIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="40"
       height="40"
       viewBox="0 0 40 40"
@@ -460,9 +613,19 @@ export const DeliveryTruckIcon: FC<{ className?: string }> = ({ className }) => 
   );
 };
 
-export const Delivery_truckIcon: FC<{ className?: string }> = ({ className }) => {
+export const Delivery_truckIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      data-testid="test-icon"
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M32.7021 26.3042C31.7247 26.3042 30.7962 26.687 30.0957 27.3793C29.3952 28.0798 29.0043 28.9921 29.0043 29.9694C29.0043 30.9468 29.3871 31.8591 30.0957 32.5596C30.8043 33.2519 31.7247 33.6347 32.7021 33.6347C34.7058 33.6347 36.3348 31.9894 36.3348 29.9694C36.3348 27.9495 34.7058 26.3042 32.7021 26.3042ZM32.7021 32.0057C31.5781 32.0057 30.6333 31.0772 30.6333 29.9694C30.6333 28.8617 31.5781 27.9332 32.7021 27.9332C33.8098 27.9332 34.7058 28.8454 34.7058 29.9694C34.7058 31.0935 33.8098 32.0057 32.7021 32.0057ZM33.6469 14.0949C33.5003 13.9564 33.3048 13.8831 33.1012 13.8831H28.9228C28.4749 13.8831 28.1083 14.2496 28.1083 14.6976V21.3765C28.1083 21.8245 28.4749 22.191 28.9228 22.191H35.5528C36.0008 22.191 36.3673 21.8245 36.3673 21.3765V16.9049C36.3673 16.6768 36.2696 16.4569 36.0986 16.3022L33.6469 14.0949ZM34.7383 20.562H29.7373V15.504H32.7835L34.7383 17.2633V20.562ZM12.8121 26.3042C11.8347 26.3042 10.9061 26.687 10.2057 27.3793C9.50519 28.0798 9.11423 28.9921 9.11423 29.9694C9.11423 30.9468 9.49705 31.8591 10.2057 32.5596C10.9143 33.2519 11.8347 33.6347 12.8121 33.6347C14.8157 33.6347 16.4447 31.9894 16.4447 29.9694C16.4447 27.9495 14.8157 26.3042 12.8121 26.3042ZM12.8121 32.0057C11.688 32.0057 10.7432 31.0772 10.7432 29.9694C10.7432 28.8617 11.688 27.9332 12.8121 27.9332C13.9198 27.9332 14.8157 28.8454 14.8157 29.9694C14.8157 31.0935 13.9198 32.0057 12.8121 32.0057ZM7.37935 27.306H5.74221V25.1395C5.74221 24.6915 5.37569 24.325 4.92771 24.325C4.47974 24.325 4.11322 24.6915 4.11322 25.1395V28.1205C4.11322 28.5685 4.47974 28.935 4.92771 28.935H7.37935C7.82733 28.935 8.19385 28.5685 8.19385 28.1205C8.19385 27.6726 7.82733 27.306 7.37935 27.306ZM11.5089 22.867C11.5089 22.4191 11.1423 22.0525 10.6944 22.0525H0.814498C0.366524 22.0525 0 22.4191 0 22.867C0 23.315 0.366524 23.6815 0.814498 23.6815H10.6944C11.1423 23.6815 11.5089 23.3231 11.5089 22.867ZM2.46793 19.9267L12.3478 19.9837C12.7958 19.9837 13.1623 19.6253 13.1704 19.1773C13.1786 18.7212 12.8121 18.3547 12.3641 18.3547L2.48422 18.2977C2.47607 18.2977 2.47607 18.2977 2.47607 18.2977C2.0281 18.2977 1.66158 18.6561 1.66158 19.104C1.65343 19.5602 2.01996 19.9267 2.46793 19.9267ZM4.12951 16.2289H14.0094C14.4573 16.2289 14.8239 15.8623 14.8239 15.4144C14.8239 14.9664 14.4573 14.5999 14.0094 14.5999H4.12951C3.68153 14.5999 3.31501 14.9664 3.31501 15.4144C3.31501 15.8623 3.68153 16.2289 4.12951 16.2289ZM39.6986 15.1293L33.8668 10.2993C33.7202 10.1771 33.541 10.112 33.3456 10.112H26.4875V7.17979C26.4875 6.73182 26.121 6.3653 25.673 6.3653H4.92771C4.47974 6.3653 4.11322 6.73182 4.11322 7.17979V13.1419C4.11322 13.5899 4.47974 13.9564 4.92771 13.9564C5.37569 13.9564 5.74221 13.5899 5.74221 13.1419V7.99429H24.8666V27.306H18.1877C17.7398 27.306 17.3732 27.6726 17.3732 28.1205C17.3732 28.5685 17.7398 28.935 18.1877 28.935H28.1328C28.5807 28.935 28.9473 28.5685 28.9473 28.1205C28.9473 27.6726 28.5807 27.306 28.1328 27.306H26.4956V11.741H33.0605L38.371 16.1393L38.314 27.2897H37.4669C37.0189 27.2897 36.6524 27.6563 36.6524 28.1042C36.6524 28.5522 37.0189 28.9187 37.4669 28.9187H39.1203C39.5683 28.9187 39.9348 28.5604 39.9348 28.1124L40 15.7646C39.9919 15.5203 39.886 15.284 39.6986 15.1293Z"
         fill="currentColor"
@@ -471,10 +634,15 @@ export const Delivery_truckIcon: FC<{ className?: string }> = ({ className }) =>
   );
 };
 
-export const DiscoverIcon: FC<{ className?: string }> = ({ className }) => {
+export const DiscoverIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="45"
       height="32"
       viewBox="0 0 45 32"
@@ -485,7 +653,7 @@ export const DiscoverIcon: FC<{ className?: string }> = ({ className }) => {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M38.9033 12.0583C40.2868 12.0583 41.0477 12.6983 41.0477 13.9072C41.1169 14.8316 40.4943 15.6138 39.6642 15.756L41.5319 18.387H40.0793L38.4883 15.8271H38.3499V18.387H37.174V12.0583H38.9033ZM38.3502 14.974H38.696C39.457 14.974 39.8028 14.6185 39.8028 13.9785C39.8028 13.4096 39.457 13.0541 38.696 13.0541H38.3502V14.974ZM33.0929 18.387H36.4132V17.3204H34.2688V15.6138H36.344V14.5471H34.2688V13.125H36.4132V12.0583H33.0929V18.387ZM29.6345 16.3249L28.0435 12.0583H26.7984L29.3578 18.5293H29.9804L32.5398 12.0583H31.2947L29.6345 16.3249ZM15.5917 15.2579C15.5917 17.0357 16.9751 18.5289 18.7045 18.5289C19.2579 18.5289 19.7421 18.3867 20.2263 18.1734V16.7512C19.8804 17.1779 19.3962 17.4623 18.8428 17.4623C17.736 17.4623 16.8368 16.609 16.8368 15.4713V15.329C16.7676 14.1913 17.6669 13.1958 18.7737 13.1246C19.327 13.1246 19.8804 13.4091 20.2263 13.8357V12.4136C19.8113 12.1291 19.2579 12.058 18.7737 12.058C16.9751 11.9158 15.5917 13.4091 15.5917 15.2579ZM13.4476 14.476C12.7558 14.1916 12.5483 14.0494 12.5483 13.6938C12.6175 13.2672 12.9634 12.9116 13.3784 12.9828C13.7243 12.9828 14.0701 13.1961 14.3468 13.4805L14.9694 12.6272C14.4852 12.2005 13.8626 11.9161 13.2401 11.9161C12.2716 11.845 11.4415 12.6272 11.3724 13.6227V13.6938C11.3724 14.5472 11.7182 15.0449 12.825 15.4005C13.1017 15.4716 13.3784 15.6138 13.6551 15.756C13.8626 15.8982 14.001 16.1116 14.001 16.396C14.001 16.8938 13.5859 17.3204 13.1709 17.3204H13.1017C12.5483 17.3204 12.0641 16.9649 11.8566 16.4671L11.0957 17.2493C11.5107 18.0315 12.3408 18.4582 13.1709 18.4582C14.2777 18.5293 15.1769 17.676 15.2461 16.5382V16.3249C15.1769 15.4716 14.8311 15.0449 13.4476 14.476ZM9.43543 18.387H10.6114V12.0583H9.43543V18.387ZM3.9707 12.0583H6.04592C7.70609 12.1294 9.0204 13.5516 8.95122 15.2582C8.95122 16.1827 8.53618 17.036 7.84444 17.6759C7.22188 18.1737 6.46096 18.4581 5.70005 18.387H3.9707V12.0583ZM5.49264 17.32C6.04603 17.3911 6.6686 17.1778 7.08364 16.8222C7.49868 16.3956 7.70621 15.8267 7.70621 15.1867C7.70621 14.6179 7.49868 14.049 7.08364 13.6223C6.6686 13.2668 6.04603 13.0535 5.49264 13.1246H5.14677V17.32H5.49264Z"
-        fill="white"
+        fill="#fff"
       />
       <path
         d="M20.5723 15.1831C20.5723 13.3343 22.0249 11.9121 23.7543 11.9121C25.5528 11.9121 26.9363 13.4054 27.0054 15.2542C26.9363 17.1031 25.5528 18.5964 23.7543 18.5253C21.9557 18.4542 20.5723 16.9609 20.5723 15.1831Z"
@@ -496,10 +664,15 @@ export const DiscoverIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const EmailIcon: FC<{ className?: string }> = ({ className }) => {
+export const EmailIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -524,10 +697,15 @@ export const EmailIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const EyeOpenIcon: FC<{ className?: string }> = ({ className }) => {
+export const EyeOpenIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="20"
       height="21"
       viewBox="0 0 20 21"
@@ -552,9 +730,19 @@ export const EyeOpenIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const EyeIcon: FC<{ className?: string }> = ({ className }) => {
+export const EyeIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      data-testid="test-icon"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M10 3.54103C3.75 3.54103 1.25 10.0001 1.25 10.0001C1.25 10.0001 3.75 16.4577 10 16.4577C16.25 16.4577 18.75 10.0001 18.75 10.0001C18.75 10.0001 16.25 3.54103 10 3.54103V3.54103Z"
         stroke="currentColor"
@@ -573,9 +761,19 @@ export const EyeIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const FacebookIcon: FC<{ className?: string }> = ({ className }) => {
+export const FacebookIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      data-testid="test-icon"
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         id="Vector"
         d="M11.998 2.98874L13.6416 2.98874L13.6416 0.12674C13.3574 0.0877457 12.3828 -7.62939e-06 11.2471 -7.62939e-06C8.87793 -7.62939e-06 7.25488 1.49024 7.25488 4.22924L7.25488 6.74999L4.64062 6.74999L4.64062 9.94949L7.25488 9.94949L7.25488 18L10.4609 18L10.4609 9.95024L12.9697 9.95024L13.3672 6.75074L10.46 6.75074L10.46 4.54649C10.4609 3.62174 10.71 2.98874 11.998 2.98874Z"
@@ -587,10 +785,15 @@ export const FacebookIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const FilterIcon: FC<{ className?: string }> = ({ className }) => {
+export const FilterIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="22"
       height="22"
       viewBox="0 0 22 22"
@@ -607,10 +810,15 @@ export const FilterIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const FishIcon: FC<{ className?: string }> = ({ className }) => {
+export const FishIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -645,10 +853,15 @@ export const FishIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const FoodIcon: FC<{ className?: string }> = ({ className }) => {
+export const FoodIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -683,10 +896,15 @@ export const FoodIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const GooglePlayIcon: FC<{ className?: string }> = ({ className }) => {
+export const GooglePlayIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="25"
       viewBox="0 0 24 25"
@@ -695,15 +913,25 @@ export const GooglePlayIcon: FC<{ className?: string }> = ({ className }) => {
     >
       <path
         d="M15.0652 11.7297L4.7188 1.3545L17.8828 8.9121L15.0652 11.7297ZM2.0176 0.744896C1.408 1.0641 1 1.6449 1 2.4009V23.0889C1 23.8449 1.408 24.4257 2.0176 24.7449L14.05 12.7425L2.0176 0.744896ZM21.9532 11.3217L19.192 9.7233L16.1116 12.7473L19.192 15.7713L22.0096 14.1729C22.8532 13.5021 22.8532 11.9925 21.9532 11.3217ZM4.7188 24.1401L17.8828 16.5825L15.0652 13.7649L4.7188 24.1401Z"
-        fill="white"
+        fill="currentColor"
       />
     </svg>
   );
 };
 
-export const HeadphonesIcon: FC<{ className?: string }> = ({ className }) => {
+export const HeadphonesIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      data-testid="test-icon"
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M30.9966 18.1681V16.9378C30.9966 13.9933 29.9546 11.2571 28.0655 9.22689C26.1294 7.14286 23.4672 6 20.563 6H19.5479C16.6437 6 13.9815 7.14286 12.0454 9.22689C10.1563 11.2571 9.11429 13.9933 9.11429 16.9378V18.1681C6.82185 18.3227 5 20.2319 5 22.5647V24.4874C5 26.9143 6.97647 28.8908 9.40336 28.8908H11.884C12.3277 28.8908 12.6908 28.5277 12.6908 28.084V18.9613C12.6908 18.5176 12.3277 18.1546 11.884 18.1546H10.7277V16.9378C10.7277 11.6202 14.5193 7.61345 19.5412 7.61345H20.5563C25.5849 7.61345 29.3697 11.6202 29.3697 16.9378V18.1546H28.2134C27.7698 18.1546 27.4067 18.5176 27.4067 18.9613V28.0773C27.4067 28.521 27.7698 28.884 28.2134 28.884H29.3429C29.0134 33.0924 26.116 34.0672 24.7714 34.2891C24.4017 33.1529 23.3328 32.3328 22.0756 32.3328H20.0588C18.4992 32.3328 17.2286 33.6034 17.2286 35.163C17.2286 36.7227 18.4992 38 20.0588 38H22.0824C23.3866 38 24.4824 37.1126 24.8118 35.916C25.4706 35.8219 26.5126 35.5866 27.5479 34.9815C29.0067 34.1277 30.7345 32.3866 30.963 28.8773C33.2689 28.7361 35.0975 26.8202 35.0975 24.4807V22.558C35.1042 20.2319 33.2891 18.316 30.9966 18.1681ZM11.0908 27.2706H9.41681C7.87731 27.2706 6.62689 26.0202 6.62689 24.4807V22.558C6.62689 21.0185 7.87731 19.7681 9.41681 19.7681H11.0908V27.2706ZM22.0824 36.3866H20.0588C19.3866 36.3866 18.842 35.842 18.842 35.1697C18.842 34.4975 19.3866 33.9529 20.0588 33.9529H22.0824C22.7546 33.9529 23.2992 34.4975 23.2992 35.1697C23.2992 35.842 22.7546 36.3866 22.0824 36.3866ZM33.4908 24.4807C33.4908 26.0202 32.2403 27.2706 30.7008 27.2706H29.0269V19.7681H30.7008C32.2403 19.7681 33.4908 21.0185 33.4908 22.558V24.4807Z"
         fill="currentColor"
@@ -712,10 +940,15 @@ export const HeadphonesIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const HeartLinedIcon: FC<{ className?: string }> = ({ className }) => {
+export const HeartLinedIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="20"
       height="20"
       viewBox="0 0 20 20"
@@ -731,10 +964,15 @@ export const HeartLinedIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const HeartStrokeIcon: FC<{ className?: string }> = ({ className }) => {
+export const HeartStrokeIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="32"
       height="33"
       viewBox="0 0 32 33"
@@ -750,9 +988,18 @@ export const HeartStrokeIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const HeartIcon: FC<{ className?: string }> = ({ className }) => {
+export const HeartIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      data-testid="test-icon"
+      viewBox="0 0 32 32"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         id="Vector"
         d="M15.9995 7.45074C24 -2.66667 42.6665 13.3333 15.9995 28.0722C-10.6665 13.3333 8 -2.66666 15.9995 7.45074Z"
@@ -764,10 +1011,15 @@ export const HeartIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const HomeIcon: FC<{ className?: string }> = ({ className }) => {
+export const HomeIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -785,10 +1037,15 @@ export const HomeIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const IceCreamIcon: FC<{ className?: string }> = ({ className }) => {
+export const IceCreamIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -815,10 +1072,15 @@ export const IceCreamIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const Ice_creamIcon: FC<{ className?: string }> = ({ className }) => {
+export const Ice_creamIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -845,9 +1107,19 @@ export const Ice_creamIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const InstagramIcon: FC<{ className?: string }> = ({ className }) => {
+export const InstagramIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      data-testid="test-icon"
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         id="Vector"
         d="M17.9824 5.29205C17.9395 4.33564 17.7852 3.67812 17.5635 3.10837C17.335 2.50359 16.9834 1.96213 16.5225 1.51202C16.0723 1.05489 15.5273 0.699692 14.9297 0.474701C14.3564 0.253143 13.7031 0.0984879 12.7461 0.0563126C11.7832 0.0105743 11.4766 0 9.0332 0C6.58887 0 6.2832 0.0105743 5.32324 0.052742C4.36719 0.0949097 3.70898 0.24971 3.13965 0.47113C2.53516 0.699692 1.99316 1.05132 1.54297 1.51202C1.08594 1.96213 0.731445 2.50716 0.505859 3.10493C0.28418 3.67812 0.129883 4.33207 0.0878906 5.28848C0.0419922 6.25203 0.03125 6.55792 0.03125 9.00175C0.03125 11.4456 0.0419922 11.7515 0.0839844 12.7115C0.125977 13.6679 0.28125 14.3254 0.50293 14.8951C0.731445 15.4999 1.08594 16.0414 1.54297 16.4915C1.99316 16.9486 2.53809 17.3038 3.13574 17.5288C3.70898 17.7504 4.36328 17.905 5.32031 17.9472C6.2793 17.9895 6.58594 17.9999 9.0293 17.9999C11.4736 17.9999 11.7793 17.9895 12.7393 17.9472C13.6953 17.905 14.3535 17.7504 14.9229 17.5288C16.1328 17.0611 17.0889 16.1047 17.5566 14.8951C17.7783 14.322 17.9326 13.6679 17.9746 12.7115C18.0176 11.7515 18.0273 11.4456 18.0273 9.00175C18.0273 6.55792 18.0244 6.25203 17.9824 5.29205ZM16.3613 12.6411C16.3223 13.5202 16.1748 13.9949 16.0518 14.3114C15.749 15.0956 15.127 15.7179 14.3428 16.0204C14.0264 16.1434 13.5479 16.2911 12.6729 16.3297C11.7227 16.372 11.4385 16.3824 9.03613 16.3824C6.63477 16.3824 6.34668 16.372 5.40039 16.3297C4.52148 16.2911 4.04688 16.1434 3.73047 16.0204C3.33984 15.8761 2.98535 15.6476 2.69629 15.3487C2.39746 15.0568 2.16895 14.7052 2.02539 14.315C1.90234 13.9985 1.75391 13.5202 1.71582 12.6447C1.67285 11.6953 1.66309 11.4104 1.66309 9.00877C1.66309 6.60709 1.67285 6.31879 1.71582 5.37296C1.75391 4.49387 1.90234 4.01917 2.02539 3.70271C2.16895 3.31234 2.39746 2.95728 2.7002 2.66882C2.99219 2.36994 3.34375 2.14138 3.73438 1.99729C4.05078 1.87422 4.52832 1.72656 5.4043 1.68783C6.35352 1.64566 6.63867 1.63509 9.04004 1.63509C11.4453 1.63509 11.7295 1.64566 12.6758 1.68783C13.5547 1.72656 14.0293 1.87422 14.3457 1.99729C14.7363 2.14138 15.0918 2.36994 15.3799 2.66882C15.6787 2.96071 15.9072 3.31234 16.0518 3.70271C16.1748 4.01917 16.3223 4.49731 16.3613 5.37296C16.4033 6.32236 16.4141 6.60709 16.4141 9.00877C16.4141 11.4104 16.4033 11.6917 16.3613 12.6411Z"
@@ -873,9 +1145,19 @@ export const InstagramIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const LeafIcon: FC<{ className?: string }> = ({ className }) => {
+export const LeafIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      data-testid="test-icon"
+      viewBox="0 0 32 33"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <g clipPath="url(#clip0_460_43091)">
         <path
           d="M31.9759 1.3712C31.9127 1.17858 31.7368 1.04539 31.5343 1.03695C30.5147 0.994517 27.7279 1.00183 23.8822 1.9852C20.3025 2.90064 16.9433 4.40533 14.1675 6.3367C13.9472 6.49002 13.893 6.79283 14.0462 7.01314C14.1994 7.23345 14.5022 7.28777 14.7226 7.13452C17.4039 5.2687 20.6546 3.81377 24.1229 2.92683C25.4189 2.59545 26.7587 2.34389 28.029 2.18627C27.5082 2.4112 26.95 2.67439 26.369 2.98289C22.4401 5.06858 20.245 7.73552 19.032 9.8792C18.8726 9.16395 18.8289 8.34189 18.8286 7.97552C18.8285 7.7072 18.611 7.48977 18.3427 7.48977C18.0743 7.48977 17.8567 7.70733 17.8567 7.9757C17.8567 8.19077 17.8739 9.98302 18.4167 11.0878C17.6686 12.6852 16.9689 14.2821 16.2918 15.8286C16.0042 16.4855 15.7211 17.132 15.4404 17.7649C15.0026 16.9405 14.4256 15.4479 14.5839 13.4956C14.6055 13.2282 14.4063 12.9937 14.1387 12.972C13.872 12.9508 13.6368 13.1496 13.6151 13.4171C13.3877 16.2219 14.503 18.1801 14.9555 18.848C14.1074 20.7223 13.271 22.4484 12.3902 23.9217C11.9367 22.895 11.2263 20.9387 11.2263 18.7604C11.2263 18.492 11.0087 18.2745 10.7404 18.2745C10.472 18.2745 10.2544 18.492 10.2544 18.7604C10.2544 21.6498 11.372 24.1069 11.7742 24.8975C10.8119 26.3353 9.78436 27.4596 8.62367 28.1438C5.08779 24.3037 4.74292 17.0988 10.9201 10.4274C11.6223 9.66902 12.3929 8.94508 13.2107 8.27577C13.4184 8.10577 13.4489 7.79964 13.2789 7.59195C13.1089 7.38427 12.8027 7.35377 12.5951 7.5237C11.7429 8.22133 10.9394 8.97614 10.207 9.76708C3.69104 16.8043 4.05817 24.4746 7.79436 28.6765C4.54073 30.8661 0.514981 31.0029 0.472856 31.0041C0.204731 31.0113 -0.00683118 31.2344 0.000168815 31.5026C0.00710632 31.7665 0.223231 31.9758 0.485731 31.9758C0.490044 31.9758 0.494419 31.9757 0.498731 31.9756C0.685231 31.9707 4.97954 31.83 8.49723 29.3732C9.56311 30.2429 11.235 30.772 13.2621 30.772C15.557 30.772 18.3072 30.0937 21.148 28.4638C23.7798 26.9538 25.6666 24.6438 26.7561 21.5981C27.6891 18.9901 28.0037 15.8521 27.666 12.5234C27.0639 6.58933 29.3056 3.91164 31.8177 1.90202C31.9759 1.77533 32.0389 1.56383 31.9759 1.3712ZM27.6832 5.34633C26.7273 7.34727 26.4054 9.72702 26.699 12.6214C27.0222 15.8071 26.7255 18.798 25.8409 21.2707C24.8315 24.0926 23.0898 26.229 20.6643 27.6208C17.6035 29.377 15.0344 29.7749 13.418 29.7995C11.7655 29.8254 10.3365 29.4726 9.37767 28.8195C10.1757 28.3018 10.9084 27.6075 11.5969 26.7693C11.6348 26.7696 11.6757 26.7698 11.7214 26.7698C12.1986 26.7698 13.0877 26.7493 14.1367 26.6268C16.2354 26.3815 17.8898 25.8636 19.0541 25.0875C19.2774 24.9386 19.3377 24.6369 19.1889 24.4136C19.04 24.1904 18.7383 24.1301 18.515 24.2789C16.7214 25.4746 13.8324 25.7343 12.3412 25.7856C13.2865 24.4374 14.1572 22.8185 15.0159 21.0255C15.8609 21.0234 18.104 20.8406 20.2367 19.1404C20.4465 18.9731 20.481 18.6673 20.3137 18.4575C20.1464 18.2476 19.8407 18.2132 19.6309 18.3805C18.0646 19.6291 16.407 19.9518 15.4841 20.0291C16.0444 18.8166 16.6045 17.5374 17.182 16.2185C17.48 15.5377 17.7827 14.8468 18.0915 14.1512C18.1248 14.152 18.16 14.1525 18.197 14.1525C18.9295 14.1525 20.3882 13.9738 21.9912 12.7861C22.2068 12.6264 22.2521 12.322 22.0923 12.1064C21.9325 11.8908 21.6282 11.8455 21.4125 12.0053C20.4235 12.738 19.5133 13.0133 18.9238 13.1152C18.7809 13.14 18.6501 13.1556 18.5319 13.1656C18.8151 12.5371 19.1042 11.9065 19.401 11.2768C21.2114 7.43527 24.423 5.12058 26.7985 3.85527C27.8283 3.30677 28.7948 2.90214 29.5879 2.61302C28.8911 3.34727 28.2111 4.24133 27.6832 5.34633Z"
@@ -884,16 +1166,26 @@ export const LeafIcon: FC<{ className?: string }> = ({ className }) => {
       </g>
       <defs>
         <clipPath id="clip0_460_43091">
-          <rect width="32" height="32" fill="white" transform="translate(0 0.5)" />
+          <rect width="32" height="32" fill="currentColor" transform="translate(0 0.5)" />
         </clipPath>
       </defs>
     </svg>
   );
 };
 
-export const LinkIcon: FC<{ className?: string }> = ({ className }) => {
+export const LinkIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      data-testid="test-icon"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         id="Vector"
         d="M5.83301 6.66667C4.94922 6.66667 4.10156 7.01785 3.47559 7.64297C2.85059 8.2681 2.5 9.11595 2.5 10C2.5 10.884 2.85059 11.7319 3.47559 12.357C4.10156 12.9821 4.94922 13.3333 5.83301 13.3333L7.5 13.3333C7.7207 13.3333 7.93262 13.4211 8.08887 13.5774C8.24512 13.7337 8.33301 13.9456 8.33301 14.1667C8.33301 14.3877 8.24512 14.5996 8.08887 14.7559C7.93262 14.9122 7.7207 15 7.5 15L5.83301 15C4.50684 15 3.23535 14.4732 2.29785 13.5355C1.35938 12.5979 0.833008 11.3261 0.833008 10C0.833008 8.67392 1.35938 7.40215 2.29785 6.46446C3.23535 5.52678 4.50684 5 5.83301 5L7.5 5C7.7207 5 7.93262 5.0878 8.08887 5.24408C8.24512 5.40036 8.33301 5.61232 8.33301 5.83333C8.33301 6.05435 8.24512 6.26631 8.08887 6.42259C7.93262 6.57887 7.7207 6.66667 7.5 6.66667L5.83301 6.66667ZM11.666 5.83333C11.666 5.61232 11.7539 5.40036 11.9102 5.24408C12.0664 5.0878 12.2783 5 12.5 5L14.166 5C15.4922 5 16.7646 5.52678 17.7021 6.46446C18.6396 7.40215 19.166 8.67392 19.166 10C19.166 11.3261 18.6396 12.5979 17.7021 13.5355C16.7646 14.4732 15.4922 15 14.166 15L12.5 15C12.2783 15 12.0664 14.9122 11.9102 14.7559C11.7539 14.5996 11.666 14.3877 11.666 14.1667C11.666 13.9456 11.7539 13.7337 11.9102 13.5774C12.0664 13.4211 12.2783 13.3333 12.5 13.3333L14.166 13.3333C15.0508 13.3333 15.8984 12.9821 16.5234 12.357C17.1484 11.7319 17.5 10.884 17.5 10C17.5 9.11595 17.1484 8.2681 16.5234 7.64297C15.8984 7.01785 15.0508 6.66667 14.166 6.66667L12.5 6.66667C12.2783 6.66667 12.0664 6.57887 11.9102 6.42259C11.7539 6.26631 11.666 6.05435 11.666 5.83333ZM5.83301 10C5.83301 9.77899 5.9209 9.56703 6.07715 9.41075C6.2334 9.25447 6.44531 9.16667 6.66602 9.16667L13.333 9.16667C13.5537 9.16667 13.7656 9.25447 13.9219 9.41075C14.0781 9.56703 14.166 9.77899 14.166 10C14.166 10.221 14.0781 10.433 13.9219 10.5892C13.7656 10.7455 13.5537 10.8333 13.333 10.8333L6.66602 10.8333C6.44531 10.8333 6.2334 10.7455 6.07715 10.5892C5.9209 10.433 5.83301 10.221 5.83301 10Z"
@@ -905,10 +1197,15 @@ export const LinkIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const ListCheckboxIcon: FC<{ className?: string }> = ({ className }) => {
+export const ListCheckboxIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="20"
       height="20"
       viewBox="0 0 20 20"
@@ -919,7 +1216,7 @@ export const ListCheckboxIcon: FC<{ className?: string }> = ({ className }) => {
         <rect width="20" height="20" rx="10" fill="#00B307" />
         <path
           d="M14.4173 7.125L8.68815 12.8542L6.08398 10.25"
-          stroke="white"
+          stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -927,17 +1224,22 @@ export const ListCheckboxIcon: FC<{ className?: string }> = ({ className }) => {
       </g>
       <defs>
         <clipPath id="clip0_460_43041">
-          <rect width="20" height="20" fill="white" />
+          <rect width="20" height="20" fill="currentColor" />
         </clipPath>
       </defs>
     </svg>
   );
 };
 
-export const LockIcon: FC<{ className?: string }> = ({ className }) => {
+export const LockIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="11"
       height="11"
       viewBox="0 0 11 11"
@@ -946,14 +1248,14 @@ export const LockIcon: FC<{ className?: string }> = ({ className }) => {
     >
       <path
         d="M8.70833 5.04199H2.29167C1.78541 5.04199 1.375 5.4524 1.375 5.95866V9.16699C1.375 9.67325 1.78541 10.0837 2.29167 10.0837H8.70833C9.21459 10.0837 9.625 9.67325 9.625 9.16699V5.95866C9.625 5.4524 9.21459 5.04199 8.70833 5.04199Z"
-        stroke="white"
+        stroke="currentColor"
         strokeWidth="0.916667"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M3.2085 5.04199V3.20866C3.2085 2.60087 3.44994 2.01798 3.87971 1.58821C4.30948 1.15843 4.89237 0.916992 5.50016 0.916992C6.10795 0.916992 6.69084 1.15843 7.12062 1.58821C7.55039 2.01798 7.79183 2.60087 7.79183 3.20866V5.04199"
-        stroke="white"
+        stroke="currentColor"
         strokeWidth="0.916667"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -962,10 +1264,15 @@ export const LockIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const LogoutIcon: FC<{ className?: string }> = ({ className }) => {
+export const LogoutIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="25"
       height="24"
       viewBox="0 0 25 24"
@@ -980,9 +1287,19 @@ export const LogoutIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const MapPinIcon: FC<{ className?: string }> = ({ className }) => {
+export const MapPinIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      data-testid="test-icon"
+      viewBox="0 0 17 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M16 8.36364C16 14.0909 8.5 19 8.5 19C8.5 19 1 14.0909 1 8.36364C1 6.41068 1.79018 4.53771 3.1967 3.15676C4.60322 1.77581 6.51088 1 8.5 1C10.4891 1 12.3968 1.77581 13.8033 3.15676C15.2098 4.53771 16 6.41068 16 8.36364Z"
         stroke="currentColor"
@@ -999,10 +1316,15 @@ export const MapPinIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const MastercardIcon: FC<{ className?: string }> = ({ className }) => {
+export const MastercardIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="45"
       height="32"
       viewBox="0 0 45 32"
@@ -1031,10 +1353,15 @@ export const MastercardIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const MeatIcon: FC<{ className?: string }> = ({ className }) => {
+export const MeatIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -1061,10 +1388,15 @@ export const MeatIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const MinusIcon: FC<{ className?: string }> = ({ className }) => {
+export const MinusIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="16"
       height="16"
       viewBox="0 0 16 16"
@@ -1073,7 +1405,7 @@ export const MinusIcon: FC<{ className?: string }> = ({ className }) => {
     >
       <path
         d="M3.33301 8H12.6663"
-        stroke="white"
+        stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -1082,10 +1414,15 @@ export const MinusIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const OrderHistoryIcon: FC<{ className?: string }> = ({ className }) => {
+export const OrderHistoryIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="25"
       height="24"
       viewBox="0 0 25 24"
@@ -1100,9 +1437,19 @@ export const OrderHistoryIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const PackageIcon: FC<{ className?: string }> = ({ className }) => {
+export const PackageIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      data-testid="test-icon"
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M34.447 11.5441C34.447 11.4225 34.42 11.301 34.366 11.1862C34.2579 10.9565 34.0485 10.8012 33.8189 10.7539L20.0612 4.08105C19.8383 3.97298 19.5749 3.97298 19.352 4.08105L5.45927 10.8147C5.18911 10.943 5.01351 11.2132 5 11.5171V11.5239C5 11.5306 5 11.5374 5 11.5509V28.4491C5 28.7598 5.1756 29.0435 5.45927 29.1786L19.352 35.9122C19.3588 35.9122 19.3588 35.9122 19.3656 35.919C19.3858 35.9257 19.4061 35.9325 19.4263 35.946C19.4331 35.946 19.4398 35.9527 19.4534 35.9527C19.4736 35.9595 19.4939 35.9662 19.5141 35.973C19.5209 35.973 19.5276 35.9797 19.5344 35.9797C19.5547 35.9865 19.5817 35.9865 19.6019 35.9932C19.6087 35.9932 19.6154 35.9932 19.6222 35.9932C19.6492 35.9932 19.683 36 19.71 36C19.737 36 19.7708 36 19.7978 35.9932C19.8046 35.9932 19.8113 35.9932 19.8181 35.9932C19.8383 35.9932 19.8653 35.9865 19.8856 35.9797C19.8924 35.9797 19.8991 35.973 19.9059 35.973C19.9261 35.9662 19.9464 35.9595 19.9667 35.9527C19.9734 35.9527 19.9802 35.946 19.9937 35.946C20.0139 35.9392 20.0342 35.9325 20.0545 35.919C20.0612 35.919 20.0612 35.919 20.068 35.9122L34.0013 29.1583C34.2782 29.0232 34.4605 28.7396 34.4605 28.4289V11.5644C34.447 11.5576 34.447 11.5509 34.447 11.5441ZM19.7032 5.70874L31.7522 11.5509L27.3149 13.7054L15.2659 7.86323L19.7032 5.70874ZM19.7032 17.393L7.65428 11.5509L13.4086 8.7615L25.4576 14.6036L19.7032 17.393ZM6.62094 12.8544L18.8928 18.8046V33.886L6.62094 27.9358V12.8544ZM20.5137 33.886V18.8046L26.2748 16.0084V19.9527C26.2748 20.3985 26.6395 20.7632 27.0853 20.7632C27.531 20.7632 27.8957 20.3985 27.8957 19.9527V15.2182L32.8261 12.8274V27.9088L20.5137 33.886Z"
         fill="currentColor"
@@ -1111,10 +1458,15 @@ export const PackageIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const ParcelIcon: FC<{ className?: string }> = ({ className }) => {
+export const ParcelIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="38"
       height="40"
       viewBox="0 0 38 40"
@@ -1129,10 +1481,15 @@ export const ParcelIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const PhoneIcon: FC<{ className?: string }> = ({ className }) => {
+export const PhoneIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="28"
       height="28"
       viewBox="0 0 28 28"
@@ -1164,10 +1521,15 @@ export const PhoneIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const PieIcon: FC<{ className?: string }> = ({ className }) => {
+export const PieIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -1194,9 +1556,19 @@ export const PieIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const PinterestIcon: FC<{ className?: string }> = ({ className }) => {
+export const PinterestIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      data-testid="test-icon"
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         id="Vector"
         d="M9.24414 0C4.31152 0 1.6875 3.16139 1.6875 6.60855C1.6875 8.20724 2.58105 10.2008 4.01074 10.8331C4.22754 10.931 4.3457 10.8894 4.39453 10.688C4.4375 10.535 4.625 9.79807 4.71582 9.45042C4.74414 9.33904 4.72949 9.24229 4.63965 9.13766C4.16504 8.58863 3.78809 7.58847 3.78809 6.65017C3.78809 4.24594 5.69922 1.91146 8.95215 1.91146C11.7646 1.91146 13.7324 3.73854 13.7324 6.35204C13.7324 9.30529 12.1699 11.3484 10.1387 11.3484C9.01465 11.3484 8.17773 10.4663 8.44336 9.37505C8.76367 8.07561 9.39258 6.6783 9.39258 5.74113C9.39258 4.90072 8.91797 4.20544 7.94824 4.20544C6.80469 4.20544 5.87598 5.33836 5.87598 6.85943C5.87598 7.82585 6.21777 8.47838 6.21777 8.47838C6.21777 8.47838 5.08594 13.0506 4.87598 13.9045C4.52051 15.3502 4.92383 17.6914 4.95898 17.8928C4.98047 18.0042 5.10547 18.0391 5.1748 17.9479C5.28613 17.8017 6.6543 15.8497 7.03809 14.4389C7.17773 13.9248 7.75 11.84 7.75 11.84C8.12695 12.5207 9.21484 13.0911 10.374 13.0911C13.8213 13.0911 16.3125 10.0613 16.3125 6.30141C16.2998 2.69675 13.2148 0 9.24414 0Z"
@@ -1208,19 +1580,34 @@ export const PinterestIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const PlayButtonIcon: FC<{ className?: string }> = ({ className }) => {
+export const PlayButtonIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      data-testid="test-icon"
+      viewBox="0 0 84 84"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <circle cx="42" cy="42" r="40.75" stroke="currentColor" strokeWidth="1.5" />
       <path d="M34 30V54L54 42L34 30Z" fill="currentColor" />
     </svg>
   );
 };
 
-export const PlayIcon: FC<{ className?: string }> = ({ className }) => {
+export const PlayIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="14"
       height="18"
       viewBox="0 0 14 18"
@@ -1232,9 +1619,19 @@ export const PlayIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const PlusIcon: FC<{ className?: string }> = ({ className }) => {
+export const PlusIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      data-testid="test-icon"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M2.33398 6.99998H11.6673M7.00065 2.33331V11.6666V2.33331Z"
         stroke="currentColor"
@@ -1246,10 +1643,15 @@ export const PlusIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const PotatoesIcon: FC<{ className?: string }> = ({ className }) => {
+export const PotatoesIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -1292,10 +1694,15 @@ export const PotatoesIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const PriceTagIcon: FC<{ className?: string }> = ({ className }) => {
+export const PriceTagIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="32"
       height="33"
       viewBox="0 0 32 33"
@@ -1322,16 +1729,26 @@ export const PriceTagIcon: FC<{ className?: string }> = ({ className }) => {
       </g>
       <defs>
         <clipPath id="clip0_460_43081">
-          <rect width="32" height="32" fill="white" transform="translate(0 0.5)" />
+          <rect width="32" height="32" fill="currentColor" transform="translate(0 0.5)" />
         </clipPath>
       </defs>
     </svg>
   );
 };
 
-export const Price_tagIcon: FC<{ className?: string }> = ({ className }) => {
+export const Price_tagIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      data-testid="test-icon"
+      viewBox="0 0 32 33"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <g clipPath="url(#clip0_460_43081)">
         <path
           d="M28.0671 24.7501C28.326 24.7501 28.5359 24.5402 28.5359 24.2813V13.0313C28.5359 12.4718 28.3178 11.8995 27.9219 11.4198L24.4454 7.20769C24.2633 6.987 24.0539 6.801 23.8265 6.65287C23.8405 6.50962 23.8484 6.36494 23.8484 6.21887V0.968872C23.8484 0.709997 23.6385 0.500122 23.3797 0.500122C23.1208 0.500122 22.9109 0.709997 22.9109 0.968872C22.9109 0.968872 22.91 6.26356 22.9096 6.28593C22.7762 6.26231 22.6409 6.25012 22.5047 6.25012H16.4422C16.0154 6.25012 15.597 6.36987 15.2224 6.58994C15.2062 6.59575 15.1902 6.60225 15.1744 6.60994L10.605 8.83568C10.0987 9.08962 9.69392 9.51556 9.46498 10.035C9.46248 10.0407 9.46011 10.0464 9.45786 10.0521L7.56861 14.8441C7.47367 15.085 7.59192 15.3572 7.83279 15.4522C7.88923 15.4744 7.94736 15.4849 8.00461 15.4849C8.19148 15.4849 8.36811 15.3724 8.44079 15.188L10.3264 10.4052C10.4682 10.0884 10.7161 9.82887 11.0204 9.67612L13.4347 8.50019L11.0249 11.4199C10.6641 11.857 10.4734 12.4143 10.4734 13.0314V29.2189C10.4734 29.4074 10.49 29.592 10.52 29.7719L5.68992 27.6316C4.59879 27.1482 4.10429 25.864 4.58779 24.769C4.58986 24.7642 4.59186 24.7594 4.59386 24.7547L7.64904 17.1619C7.74567 16.9217 7.62936 16.6487 7.38917 16.5521C7.14886 16.4554 6.87598 16.5718 6.77929 16.8119L3.72679 24.3976C3.04042 25.9632 3.74942 27.7971 5.31011 28.4886L10.9741 30.9984C10.981 31.0014 10.9881 31.0037 10.9951 31.0064C11.57 31.9046 12.5639 32.5001 13.6922 32.5001H25.2547C27.0333 32.5001 28.5359 30.9974 28.5359 29.2188V26.4688C28.5359 26.2099 28.326 26.0001 28.0672 26.0001C27.8083 26.0001 27.5984 26.2099 27.5984 26.4688V29.2188C27.5984 30.4893 26.5251 31.5626 25.2547 31.5626H13.6922C12.4343 31.5626 11.4109 30.5112 11.4109 29.2188V13.0313C11.4109 12.6289 11.5243 12.2875 11.748 12.0166L15.2244 7.80444C15.548 7.41244 15.9919 7.18756 16.4422 7.18756H22.5047C22.593 7.18756 22.681 7.1965 22.7679 7.21337C22.4745 8.21406 21.7476 9.04906 20.766 9.4675C20.5094 9.03819 20.0401 8.75006 19.5046 8.75006C18.6947 8.75006 18.0359 9.40894 18.0359 10.2188C18.0359 11.0287 18.6947 11.6876 19.5046 11.6876C20.2535 11.6876 20.8729 11.1239 20.962 10.3986C22.2244 9.92112 23.179 8.90937 23.6044 7.67444C23.6452 7.7155 23.6847 7.75869 23.7224 7.80444L27.1989 12.0166C27.4565 12.3287 27.5984 12.6891 27.5984 13.0314V24.2814C27.5984 24.5402 27.8082 24.7501 28.0671 24.7501ZM19.5046 10.7501C19.2117 10.7501 18.9734 10.5117 18.9734 10.2188C18.9734 9.92587 19.2117 9.68756 19.5046 9.68756C19.7975 9.68756 20.0359 9.92587 20.0359 10.2188C20.0359 10.5117 19.7975 10.7501 19.5046 10.7501Z"
@@ -1352,17 +1769,22 @@ export const Price_tagIcon: FC<{ className?: string }> = ({ className }) => {
       </g>
       <defs>
         <clipPath id="clip0_460_43081">
-          <rect width="32" height="32" fill="white" transform="translate(0 0.5)" />
+          <rect width="32" height="32" fill="currentColor" transform="translate(0 0.5)" />
         </clipPath>
       </defs>
     </svg>
   );
 };
 
-export const QuoteIcon: FC<{ className?: string }> = ({ className }) => {
+export const QuoteIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="40"
       height="40"
       viewBox="0 0 40 40"
@@ -1379,10 +1801,15 @@ export const QuoteIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const SaladIcon: FC<{ className?: string }> = ({ className }) => {
+export const SaladIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -1437,10 +1864,15 @@ export const SaladIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const SearchIcon: FC<{ className?: string }> = ({ className }) => {
+export const SearchIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="20"
       height="21"
       viewBox="0 0 20 21"
@@ -1465,10 +1897,15 @@ export const SearchIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const SecureIcon: FC<{ className?: string }> = ({ className }) => {
+export const SecureIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="65"
       height="32"
       viewBox="0 0 65 32"
@@ -1479,78 +1916,83 @@ export const SecureIcon: FC<{ className?: string }> = ({ className }) => {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M12.5547 7.2085V8.5835H13.0129C13.7722 8.5835 14.3879 9.1991 14.3879 9.9585V13.1668C14.3879 13.9262 13.7722 14.5418 13.0129 14.5418H6.59619C5.8368 14.5418 5.22119 13.9262 5.22119 13.1668V9.9585C5.22119 9.1991 5.8368 8.5835 6.59619 8.5835H7.05469V7.2085C7.05469 6.47915 7.34442 5.77968 7.86014 5.26395C8.37587 4.74823 9.07534 4.4585 9.80469 4.4585C10.534 4.4585 11.2335 4.74823 11.7492 5.26395C12.265 5.77968 12.5547 6.47915 12.5547 7.2085ZM9.80469 5.37516C9.31846 5.37516 8.85214 5.56832 8.50833 5.91213C8.16451 6.25595 7.97135 6.72227 7.97135 7.2085V8.5835H11.638V7.2085C11.638 6.72227 11.4449 6.25595 11.101 5.91213C10.7572 5.56832 10.2909 5.37516 9.80469 5.37516ZM13.0129 9.50016C13.266 9.50016 13.4712 9.70537 13.4712 9.9585V13.1668C13.4712 13.42 13.266 13.6252 13.0129 13.6252H6.59619C6.34306 13.6252 6.13786 13.42 6.13786 13.1668V9.9585C6.13786 9.70537 6.34306 9.50016 6.59619 9.50016H13.0129Z"
-        fill="white"
+        fill="currentColor"
       />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
         d="M54.7175 10.36C54.7395 10.1474 54.7505 9.94571 54.7505 9.75505C54.7505 9.20505 54.6295 8.71371 54.3875 8.28105C54.1528 7.84105 53.8155 7.49638 53.3755 7.24705C52.9355 6.99771 52.4295 6.87305 51.8575 6.87305C51.2708 6.87305 50.7501 7.00138 50.2955 7.25805C49.8481 7.50738 49.4998 7.86671 49.2505 8.33605C49.0011 8.80538 48.8765 9.35171 48.8765 9.97505C48.8765 10.5984 49.0048 11.1484 49.2615 11.625C49.5181 12.0944 49.8701 12.4574 50.3175 12.714C50.7721 12.9707 51.2855 13.099 51.8575 13.099C52.5761 13.099 53.1775 12.9194 53.6615 12.56C54.1455 12.1934 54.4681 11.7204 54.6295 11.141H53.5515C53.4341 11.4784 53.2288 11.7497 52.9355 11.955C52.6495 12.153 52.2901 12.252 51.8575 12.252C51.3295 12.252 50.8785 12.087 50.5045 11.757C50.1378 11.4197 49.9361 10.954 49.8995 10.36H54.7175ZM53.4635 8.56705C53.6321 8.83838 53.7165 9.16471 53.7165 9.54605H49.9105C49.9618 8.97405 50.1635 8.52671 50.5155 8.20405C50.8748 7.88138 51.3075 7.72005 51.8135 7.72005C52.1655 7.72005 52.4845 7.79338 52.7705 7.94005C53.0638 8.07938 53.2948 8.28838 53.4635 8.56705Z"
-        fill="white"
+        fill="currentColor"
       />
       <path
         d="M46.148 7.95082C46.324 7.60615 46.5733 7.33848 46.896 7.14782C47.226 6.95715 47.6256 6.86182 48.095 6.86182V7.89582H47.831C46.709 7.89582 46.148 8.50448 46.148 9.72182V12.9998H45.147V6.97182H46.148V7.95082Z"
-        fill="white"
+        fill="currentColor"
       />
       <path
         d="M43.4567 13.0002V6.97217H42.4557V10.2832C42.4557 10.9138 42.3017 11.3942 41.9937 11.7242C41.6857 12.0542 41.264 12.2192 40.7287 12.2192C40.208 12.2192 39.7973 12.0615 39.4967 11.7462C39.196 11.4235 39.0457 10.9652 39.0457 10.3712V6.97217H38.0557V10.5032C38.0557 11.0605 38.162 11.5335 38.3747 11.9222C38.5947 12.3108 38.8917 12.6042 39.2657 12.8022C39.6397 12.9928 40.0613 13.0882 40.5307 13.0882C40.9413 13.0882 41.3153 13.0038 41.6527 12.8352C41.9973 12.6592 42.265 12.4172 42.4557 12.1092V13.0002H43.4567Z"
-        fill="white"
+        fill="currentColor"
       />
       <path
         d="M31.0552 9.97505C31.0552 9.35171 31.1798 8.80905 31.4292 8.34705C31.6785 7.87771 32.0232 7.51471 32.4632 7.25805C32.9105 7.00138 33.4202 6.87305 33.9922 6.87305C34.7328 6.87305 35.3415 7.05271 35.8182 7.41205C36.3022 7.77138 36.6212 8.27005 36.7752 8.90805H35.6972C35.5945 8.54138 35.3928 8.25171 35.0922 8.03905C34.7988 7.82638 34.4322 7.72005 33.9922 7.72005C33.4202 7.72005 32.9582 7.91805 32.6062 8.31405C32.2542 8.70271 32.0782 9.25638 32.0782 9.97505C32.0782 10.701 32.2542 11.262 32.6062 11.658C32.9582 12.054 33.4202 12.252 33.9922 12.252C34.4322 12.252 34.7988 12.1494 35.0922 11.944C35.3855 11.7387 35.5872 11.4454 35.6972 11.064H36.7752C36.6138 11.68 36.2912 12.175 35.8072 12.549C35.3232 12.9157 34.7182 13.099 33.9922 13.099C33.4202 13.099 32.9105 12.9707 32.4632 12.714C32.0232 12.4574 31.6785 12.0944 31.4292 11.625C31.1798 11.1557 31.0552 10.6057 31.0552 9.97505Z"
-        fill="white"
+        fill="currentColor"
       />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
         d="M30.0749 10.36C30.0969 10.1474 30.1079 9.94571 30.1079 9.75505C30.1079 9.20505 29.9869 8.71371 29.7449 8.28105C29.5102 7.84105 29.1729 7.49638 28.7329 7.24705C28.2929 6.99771 27.7869 6.87305 27.2149 6.87305C26.6282 6.87305 26.1076 7.00138 25.6529 7.25805C25.2056 7.50738 24.8572 7.86671 24.6079 8.33605C24.3586 8.80538 24.2339 9.35171 24.2339 9.97505C24.2339 10.5984 24.3622 11.1484 24.6189 11.625C24.8756 12.0944 25.2276 12.4574 25.6749 12.714C26.1296 12.9707 26.6429 13.099 27.2149 13.099C27.9336 13.099 28.5349 12.9194 29.0189 12.56C29.5029 12.1934 29.8256 11.7204 29.9869 11.141H28.9089C28.7916 11.4784 28.5862 11.7497 28.2929 11.955C28.0069 12.153 27.6476 12.252 27.2149 12.252C26.6869 12.252 26.2359 12.087 25.8619 11.757C25.4952 11.4197 25.2936 10.954 25.2569 10.36H30.0749ZM28.8209 8.56705C28.9896 8.83838 29.0739 9.16471 29.0739 9.54605H25.2679C25.3192 8.97405 25.5209 8.52671 25.8729 8.20405C26.2322 7.88138 26.6649 7.72005 27.1709 7.72005C27.5229 7.72005 27.8419 7.79338 28.1279 7.94005C28.4212 8.07938 28.6522 8.28838 28.8209 8.56705Z"
-        fill="white"
+        fill="currentColor"
       />
       <path
         d="M20.5826 13.0769C20.0766 13.0769 19.622 12.9889 19.2186 12.8129C18.8226 12.6296 18.511 12.3802 18.2836 12.0649C18.0563 11.7422 17.939 11.3719 17.9316 10.9539H18.9986C19.0353 11.3132 19.182 11.6176 19.4386 11.8669C19.7026 12.1089 20.084 12.2299 20.5826 12.2299C21.0593 12.2299 21.4333 12.1126 21.7046 11.8779C21.9833 11.6359 22.1226 11.3279 22.1226 10.9539C22.1226 10.6606 22.042 10.4222 21.8806 10.2389C21.7193 10.0556 21.5176 9.91622 21.2756 9.82089C21.0336 9.72555 20.7073 9.62289 20.2966 9.51289C19.7906 9.38089 19.3836 9.24889 19.0756 9.11689C18.775 8.98489 18.5146 8.77955 18.2946 8.50089C18.082 8.21489 17.9756 7.83355 17.9756 7.35689C17.9756 6.93889 18.082 6.56855 18.2946 6.24589C18.5073 5.92322 18.8043 5.67389 19.1856 5.49789C19.5743 5.32189 20.018 5.23389 20.5166 5.23389C21.2353 5.23389 21.822 5.41355 22.2766 5.77289C22.7386 6.13222 22.999 6.60889 23.0576 7.20289H21.9576C21.921 6.90955 21.767 6.65289 21.4956 6.43289C21.2243 6.20555 20.865 6.09189 20.4176 6.09189C19.9996 6.09189 19.6586 6.20189 19.3946 6.42189C19.1306 6.63455 18.9986 6.93522 18.9986 7.32389C18.9986 7.60255 19.0756 7.82989 19.2296 8.00589C19.391 8.18189 19.5853 8.31755 19.8126 8.41289C20.0473 8.50089 20.3736 8.60355 20.7916 8.72089C21.2976 8.86022 21.7046 8.99955 22.0126 9.13889C22.3206 9.27089 22.5846 9.47989 22.8046 9.76589C23.0246 10.0446 23.1346 10.4259 23.1346 10.9099C23.1346 11.2839 23.0356 11.6359 22.8376 11.9659C22.6396 12.2959 22.3463 12.5636 21.9576 12.7689C21.569 12.9742 21.1106 13.0769 20.5826 13.0769Z"
-        fill="white"
+        fill="currentColor"
       />
       <path
         d="M57.569 23.948V20.732H59.057V19.352H57.569V17.708H55.877V19.352H55.085V20.732H55.877V23.936C55.877 25.312 56.585 26 58.001 26H59.057V24.584H58.277C58.021 24.584 57.837 24.536 57.725 24.44C57.621 24.336 57.569 24.172 57.569 23.948Z"
-        fill="white"
+        fill="currentColor"
       />
       <path
         d="M51.3637 19.2559C52.1557 19.2559 52.7957 19.5079 53.2837 20.0119C53.7717 20.5079 54.0157 21.2039 54.0157 22.0999V25.9999H52.3357V22.3279C52.3357 21.7999 52.2037 21.3959 51.9397 21.1159C51.6757 20.8279 51.3157 20.6839 50.8597 20.6839C50.3957 20.6839 50.0277 20.8279 49.7557 21.1159C49.4917 21.3959 49.3597 21.7999 49.3597 22.3279V25.9999H47.6797V19.3519H49.3597V20.1799C49.5837 19.8919 49.8677 19.6679 50.2117 19.5079C50.5637 19.3399 50.9477 19.2559 51.3637 19.2559Z"
-        fill="white"
+        fill="currentColor"
       />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
         d="M46.4053 23.1801C46.4373 22.9881 46.4533 22.7721 46.4533 22.5321C46.4533 21.8841 46.3133 21.3121 46.0333 20.8161C45.7613 20.3121 45.3733 19.9241 44.8693 19.6521C44.3733 19.3801 43.8093 19.2441 43.1773 19.2441C42.5213 19.2441 41.9413 19.3841 41.4373 19.6641C40.9333 19.9441 40.5413 20.3441 40.2613 20.8641C39.9813 21.3841 39.8413 21.9881 39.8413 22.6761C39.8413 23.3561 39.9813 23.9561 40.2613 24.4761C40.5493 24.9961 40.9453 25.4001 41.4493 25.6881C41.9613 25.9681 42.5373 26.1081 43.1773 26.1081C43.9693 26.1081 44.6373 25.9041 45.1813 25.4961C45.7253 25.0801 46.0933 24.5521 46.2853 23.9121H44.4733C44.2093 24.4481 43.7653 24.7161 43.1413 24.7161C42.7093 24.7161 42.3453 24.5801 42.0493 24.3081C41.7533 24.0361 41.5853 23.6601 41.5453 23.1801H46.4053ZM44.2453 21.0201C44.5493 21.2761 44.7053 21.6201 44.7133 22.0521H41.5573C41.6213 21.6041 41.7933 21.2561 42.0733 21.0081C42.3613 20.7521 42.7133 20.6241 43.1293 20.6241C43.5693 20.6241 43.9413 20.7561 44.2453 21.0201Z"
-        fill="white"
+        fill="currentColor"
       />
       <path
         d="M35.9552 19.2559C36.7712 19.2559 37.4272 19.5079 37.9232 20.0119C38.4272 20.5079 38.6792 21.2039 38.6792 22.0999V25.9999H36.9992V22.3279C36.9992 21.8079 36.8672 21.4119 36.6032 21.1399C36.3392 20.8599 35.9792 20.7199 35.5232 20.7199C35.0672 20.7199 34.7032 20.8599 34.4312 21.1399C34.1672 21.4119 34.0352 21.8079 34.0352 22.3279V25.9999H32.3552V22.3279C32.3552 21.8079 32.2232 21.4119 31.9592 21.1399C31.6952 20.8599 31.3352 20.7199 30.8792 20.7199C30.4152 20.7199 30.0472 20.8599 29.7752 21.1399C29.5112 21.4119 29.3792 21.8079 29.3792 22.3279V25.9999H27.6992V19.3519H29.3792V20.1559C29.5952 19.8759 29.8712 19.6559 30.2072 19.4959C30.5512 19.3359 30.9272 19.2559 31.3352 19.2559C31.8552 19.2559 32.3192 19.3679 32.7272 19.5919C33.1352 19.8079 33.4512 20.1199 33.6752 20.5279C33.8912 20.1439 34.2032 19.8359 34.6112 19.6039C35.0272 19.3719 35.4752 19.2559 35.9552 19.2559Z"
-        fill="white"
+        fill="currentColor"
       />
       <path
         d="M22.6775 29.1441L26.7935 19.3521H25.0055L23.2655 23.9961L21.5495 19.3521H19.6655L22.3295 25.8321L20.8895 29.1441H22.6775Z"
-        fill="white"
+        fill="currentColor"
       />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
         d="M11.8687 22.6521C11.8687 21.9801 12.0007 21.3841 12.2647 20.8641C12.5367 20.3441 12.9007 19.9441 13.3567 19.6641C13.8207 19.3841 14.3367 19.2441 14.9047 19.2441C15.4007 19.2441 15.8327 19.3441 16.2007 19.5441C16.5767 19.7441 16.8767 19.9961 17.1007 20.3001V19.3521H18.7927V26.0001H17.1007V25.0281C16.8847 25.3401 16.5847 25.6001 16.2007 25.8081C15.8247 26.0081 15.3887 26.1081 14.8927 26.1081C14.3327 26.1081 13.8207 25.9641 13.3567 25.6761C12.9007 25.3881 12.5367 24.9841 12.2647 24.4641C12.0007 23.9361 11.8687 23.3321 11.8687 22.6521ZM17.1007 22.6761C17.1007 22.2681 17.0207 21.9201 16.8607 21.6321C16.7007 21.3361 16.4847 21.1121 16.2127 20.9601C15.9407 20.8001 15.6487 20.7201 15.3367 20.7201C15.0247 20.7201 14.7367 20.7961 14.4727 20.9481C14.2087 21.1001 13.9927 21.3241 13.8247 21.6201C13.6647 21.9081 13.5847 22.2521 13.5847 22.6521C13.5847 23.0521 13.6647 23.4041 13.8247 23.7081C13.9927 24.0041 14.2087 24.2321 14.4727 24.3921C14.7447 24.5521 15.0327 24.6321 15.3367 24.6321C15.6487 24.6321 15.9407 24.5561 16.2127 24.4041C16.4847 24.2441 16.7007 24.0201 16.8607 23.7321C17.0207 23.4361 17.1007 23.0841 17.1007 22.6761Z"
-        fill="white"
+        fill="currentColor"
       />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
         d="M10.784 21.476C11 21.084 11.108 20.664 11.108 20.216C11.108 19.72 10.992 19.276 10.76 18.884C10.536 18.492 10.196 18.184 9.74 17.96C9.284 17.736 8.732 17.624 8.084 17.624H5V26H6.68V22.784H8.084C8.772 22.784 9.34 22.664 9.788 22.424C10.244 22.184 10.576 21.868 10.784 21.476ZM9.044 21.116C8.82 21.324 8.476 21.428 8.012 21.428H6.68V18.992H8.012C8.924 18.992 9.38 19.4 9.38 20.216C9.38 20.6 9.268 20.9 9.044 21.116Z"
-        fill="white"
+        fill="currentColor"
       />
     </svg>
   );
 };
 
-export const SettingsIcon: FC<{ className?: string }> = ({ className }) => {
+export const SettingsIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="25"
       height="24"
       viewBox="0 0 25 24"
@@ -1565,10 +2007,15 @@ export const SettingsIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const ShippingIcon: FC<{ className?: string }> = ({ className }) => {
+export const ShippingIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="40"
       height="40"
       viewBox="0 0 40 40"
@@ -1595,10 +2042,15 @@ export const ShippingIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const ShoppingBagIcon: FC<{ className?: string }> = ({ className }) => {
+export const ShoppingBagIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="40"
       height="40"
       viewBox="0 0 40 40"
@@ -1617,9 +2069,19 @@ export const ShoppingBagIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const Shopping_bagIcon: FC<{ className?: string }> = ({ className }) => {
+export const Shopping_bagIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      data-testid="test-icon"
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M32.5682 31.7342L30.7268 10.9816C30.6936 10.5709 30.3492 10.2596 29.9319 10.2596H26.0503C26.0437 6.80853 23.2351 4 19.7841 4C16.3331 4 13.5245 6.80853 13.5179 10.2596H9.63631C9.22563 10.2596 8.88118 10.5709 8.84144 10.9816L7 31.7342C7 31.7607 7 31.7806 7 31.8071C7 34.1188 9.12627 36 11.7361 36H27.8321C30.4419 36 32.5682 34.1188 32.5682 31.8071C32.5682 31.7806 32.5682 31.7607 32.5682 31.7342ZM19.7841 5.58973C22.3608 5.58973 24.4539 7.68288 24.4606 10.2596H15.1076C15.1143 7.68288 17.2074 5.58973 19.7841 5.58973ZM27.8321 34.4036H11.7361C10.0139 34.4036 8.60961 33.2577 8.58973 31.8336L10.3649 11.8493H13.5179V14.638C13.5179 15.0751 13.8756 15.4328 14.3128 15.4328C14.7499 15.4328 15.1076 15.0751 15.1076 14.638V11.8493H24.4606V14.638C24.4606 15.0751 24.8183 15.4328 25.2554 15.4328C25.6926 15.4328 26.0503 15.0751 26.0503 14.638V11.8493H29.2033L30.9785 31.8402C30.9586 33.2577 29.5543 34.4036 27.8321 34.4036Z"
         fill="currentColor"
@@ -1632,9 +2094,19 @@ export const Shopping_bagIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const StarIcon: FC<{ className?: string }> = ({ className }) => {
+export const StarIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      data-testid="test-icon"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M8.27563 11.921L11.4281 13.918C11.8311 14.173 12.3311 13.7935 12.2116 13.323L11.3011 9.74051C11.2754 9.64072 11.2784 9.5357 11.3097 9.43752C11.341 9.33934 11.3994 9.25199 11.4781 9.18551L14.3051 6.83301C14.6761 6.52401 14.4851 5.90751 14.0076 5.87651L10.3161 5.63651C10.2167 5.62946 10.1214 5.59433 10.0412 5.5352C9.961 5.47607 9.89925 5.39537 9.86313 5.30251L8.48613 1.83551C8.44864 1.73698 8.38208 1.65218 8.29528 1.59234C8.20849 1.5325 8.10555 1.50046 8.00013 1.50046C7.89471 1.50046 7.79177 1.5325 7.70498 1.59234C7.61818 1.65218 7.55162 1.73698 7.51413 1.83551L6.13713 5.30251C6.10109 5.39547 6.03937 5.47626 5.95916 5.53549C5.87896 5.59471 5.78358 5.62992 5.68413 5.63701L1.99263 5.87701C1.51563 5.90751 1.32363 6.52401 1.69513 6.83301L4.52213 9.18601C4.60079 9.25245 4.65911 9.33971 4.69042 9.43779C4.72173 9.53587 4.72475 9.64079 4.69913 9.74051L3.85513 13.063C3.71163 13.6275 4.31213 14.083 4.79513 13.7765L7.72513 11.921C7.80748 11.8687 7.90304 11.8409 8.00063 11.8409C8.09821 11.8409 8.19378 11.8687 8.27613 11.921H8.27563Z"
         fill="currentColor"
@@ -1643,10 +2115,15 @@ export const StarIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const SteakIcon: FC<{ className?: string }> = ({ className }) => {
+export const SteakIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -1669,10 +2146,15 @@ export const SteakIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const SuccessIcon: FC<{ className?: string }> = ({ className }) => {
+export const SuccessIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="20"
       height="21"
       viewBox="0 0 20 21"
@@ -1681,7 +2163,7 @@ export const SuccessIcon: FC<{ className?: string }> = ({ className }) => {
     >
       <path
         d="M16.6663 5.5L7.49967 14.6667L3.33301 10.5"
-        stroke="#00B307"
+        stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -1690,10 +2172,15 @@ export const SuccessIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const SupportIcon: FC<{ className?: string }> = ({ className }) => {
+export const SupportIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="45"
       height="44"
       viewBox="0 0 45 44"
@@ -1724,10 +2211,15 @@ export const SupportIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const TagIcon: FC<{ className?: string }> = ({ className }) => {
+export const TagIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="20"
       height="21"
       viewBox="0 0 20 21"
@@ -1752,10 +2244,15 @@ export const TagIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const TurkeyIcon: FC<{ className?: string }> = ({ className }) => {
+export const TurkeyIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -1770,9 +2267,19 @@ export const TurkeyIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const TwitterIcon: FC<{ className?: string }> = ({ className }) => {
+export const TwitterIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
-    <svg className={className} viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      onClick={onClick}
+      data-testid="test-icon"
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         id="Vector"
         d="M18 3.41887C17.3311 3.7125 16.6172 3.90713 15.874 4.00163C16.6387 3.54488 17.2227 2.82713 17.4971 1.962C16.7842 2.38725 15.9961 2.68763 15.1572 2.85525C14.4795 2.13412 13.5146 1.6875 12.4619 1.6875C10.4189 1.6875 8.77344 3.34575 8.77344 5.37863C8.77344 5.67113 8.79883 5.95238 8.85938 6.22013C5.79102 6.0705 3.07715 4.60013 1.25293 2.36025C0.93457 2.91262 0.748047 3.54488 0.748047 4.2255C0.748047 5.5035 1.40625 6.63638 2.3877 7.29225C1.79395 7.281 1.21289 7.10888 0.719727 6.83775C0.719727 6.849 0.719727 6.86363 0.719727 6.87825C0.719727 8.6715 1.99902 10.161 3.67676 10.5041C3.37598 10.5863 3.04883 10.6256 2.70898 10.6256C2.47266 10.6256 2.23438 10.6121 2.01074 10.5626C2.48828 12.024 3.8457 13.0984 5.45898 13.1333C4.20312 14.1154 2.6084 14.7071 0.882812 14.7071C0.580078 14.7071 0.290039 14.6936 0 14.6565C1.63477 15.7106 3.57227 16.3125 5.66113 16.3125C12.4512 16.3125 16.1641 10.6875 16.1641 5.81175C16.1641 5.64863 16.1582 5.49113 16.1504 5.33475C16.8828 4.815 17.498 4.16588 18 3.41887Z"
@@ -1784,10 +2291,15 @@ export const TwitterIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const UserIcon: FC<{ className?: string }> = ({ className }) => {
+export const UserIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="20"
       height="21"
       viewBox="0 0 20 21"
@@ -1808,10 +2320,15 @@ export const UserIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const VisaLogoIcon: FC<{ className?: string }> = ({ className }) => {
+export const VisaLogoIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="32"
       height="12"
       viewBox="0 0 32 12"
@@ -1822,16 +2339,21 @@ export const VisaLogoIcon: FC<{ className?: string }> = ({ className }) => {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M8.22787 10.989H5.50174L3.45748 2.96065C3.36045 2.59135 3.15443 2.26486 2.85138 2.11098C2.09508 1.72428 1.26169 1.41653 0.352539 1.26132V0.952224H4.74412C5.35022 0.952224 5.80479 1.41653 5.88056 1.95577L6.94123 7.74689L9.66603 0.952224H12.3164L8.22787 10.989ZM13.8307 10.989H11.2561L13.3762 0.952224H15.9508L13.8307 10.989ZM19.2811 3.73268C19.3568 3.1921 19.8114 2.88301 20.3417 2.88301C21.1751 2.8054 22.0829 2.96062 22.8406 3.34598L23.2951 1.18501C22.5375 0.875918 21.7041 0.720703 20.9478 0.720703C18.449 0.720703 16.6307 2.11095 16.6307 4.04043C16.6307 5.50828 17.9187 6.27901 18.8278 6.74331C19.8114 7.20628 20.1902 7.51537 20.1144 7.97834C20.1144 8.6728 19.3568 8.98189 18.6005 8.98189C17.6914 8.98189 16.7822 8.7504 15.9502 8.3637L15.4956 10.526C16.4047 10.9114 17.3883 11.0666 18.2975 11.0666C21.0994 11.1429 22.8406 9.75395 22.8406 7.66925C22.8406 5.04398 19.2811 4.8901 19.2811 3.73268ZM31.8509 10.989L29.8066 0.952224H27.6108C27.1562 0.952224 26.7016 1.26132 26.5501 1.72428L22.7646 10.989H25.415L25.944 9.5225H29.2005L29.5035 10.989H31.8509ZM27.9904 3.65502L28.7467 7.43772H26.6267L27.9904 3.65502Z"
-        fill="white"
+        fill="currentColor"
       />
     </svg>
   );
 };
 
-export const VisaIcon: FC<{ className?: string }> = ({ className }) => {
+export const VisaIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="45"
       height="32"
       viewBox="0 0 45 32"
@@ -1842,16 +2364,21 @@ export const VisaIcon: FC<{ className?: string }> = ({ className }) => {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M14.8753 21.2681H12.1492L10.1049 13.2398C10.0079 12.8705 9.80189 12.544 9.49884 12.3901C8.74254 12.0034 7.90915 11.6957 7 11.5405V11.2314H11.3916C11.9977 11.2314 12.4523 11.6957 12.528 12.2349L13.5887 18.026L16.3135 11.2314H18.9639L14.8753 21.2681ZM20.4789 21.2681H17.9043L20.0243 11.2314H22.5989L20.4789 21.2681ZM25.9298 14.012C26.0056 13.4714 26.4601 13.1623 26.9905 13.1623C27.8239 13.0847 28.7317 13.2399 29.4893 13.6253L29.9439 11.4643C29.1863 11.1552 28.3529 11 27.5966 11C25.0977 11 23.2794 12.3902 23.2794 14.3197C23.2794 15.7876 24.5674 16.5583 25.4766 17.0226C26.4601 17.4856 26.839 17.7947 26.7632 18.2576C26.7632 18.9521 26.0056 19.2612 25.2493 19.2612C24.3401 19.2612 23.431 19.0297 22.5989 18.643L22.1443 20.8053C23.0535 21.1907 24.0371 21.3459 24.9462 21.3459C27.7481 21.4222 29.4893 20.0332 29.4893 17.9485C29.4893 15.3233 25.9298 15.1694 25.9298 14.012ZM38.5003 21.2681L36.456 11.2314H34.2602C33.8056 11.2314 33.351 11.5405 33.1995 12.0034L29.414 21.2681H32.0644L32.5934 19.8016H35.8499L36.1529 21.2681H38.5003ZM34.6385 13.9346L35.3948 17.7173H33.2748L34.6385 13.9346Z"
-        fill="white"
+        fill="#fff"
       />
     </svg>
   );
 };
 
-export const WarningIcon: FC<{ className?: string }> = ({ className }) => {
+export const WarningIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="20"
       height="21"
       viewBox="0 0 20 21"
@@ -1883,10 +2410,15 @@ export const WarningIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const WishListIcon: FC<{ className?: string }> = ({ className }) => {
+export const WishListIcon: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="25"
       height="24"
       viewBox="0 0 25 24"
@@ -1902,10 +2434,15 @@ export const WishListIcon: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const DefaultLogo: FC<{ className?: string }> = ({ className }) => {
+export const DefaultLogo: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="183"
       height="39"
       viewBox="0 0 183 39"
@@ -1924,10 +2461,15 @@ export const DefaultLogo: FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const MiniLogo: FC<{ className?: string }> = ({ className }) => {
+export const MiniLogo: FC<{ className?: string; onClick?: () => void }> = ({
+  className,
+  onClick,
+}) => {
   return (
     <svg
       className={className}
+      onClick={onClick}
+      data-testid="test-icon"
       width="32"
       height="31"
       viewBox="0 0 32 31"

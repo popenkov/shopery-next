@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TagCheckbox component renders correctly 1`] = `
+<div>
+  <label
+    class="tag"
+  >
+    <input
+      class="tagInput"
+      name="name"
+      type="checkbox"
+      value="value"
+    />
+    <p
+      class="text tagText primary body_s left regular"
+    >
+      Title
+    </p>
+  </label>
+</div>
+`;

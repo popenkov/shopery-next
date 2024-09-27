@@ -67,6 +67,7 @@
   @include box(20px);
 
   position: absolute;
+  color: var(--primary);
 
   &Search {
     top: 12px;

@@ -1,7 +1,8 @@
 'use client';
 
 import { ChangeEvent, DetailedHTMLProps, FC, HTMLAttributes, useCallback, useState } from 'react';
-import { redirect } from 'next/navigation';
+import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 import { getRouteCatalog } from '@/shared/lib/constants';
 import { Button } from '@/shared/ui/Buttons';
@@ -12,11 +13,12 @@ import cls from './ProductsSearch.module.scss';
 interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 
 export const ProductSearch: FC<Props> = () => {
+  const router = useRouter();
+  const t = useTranslations('common');
   const [searchValue, setSearchValue] = useState('');
 
   const handleSearchButtonClick = useCallback(() => {
-    console.log(searchValue);
-    redirect(getRouteCatalog());
+    router.push(`${getRouteCatalog()}?q=${searchValue}`);
   }, [searchValue]);
 
   const handleInputChange = useCallback((evt: ChangeEvent<HTMLInputElement>) => {
@@ -27,8 +29,8 @@ export const ProductSearch: FC<Props> = () => {
   return (
     <div className={cls.search}>
       <Input
-        type="search"
-        placeholder="search"
+        type={t('search')}
+        placeholder={t('search')}
         hasValidation={false}
         className={cls.searchField}
         value={searchValue}
@@ -36,7 +38,7 @@ export const ProductSearch: FC<Props> = () => {
       />
 
       <Button type="submit" className={cls.searchButton} onClick={handleSearchButtonClick}>
-        Search
+        {t('search')}
       </Button>
     </div>
   );

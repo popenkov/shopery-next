@@ -27,7 +27,13 @@ export const ProductReview: FC<Props> = ({ data, className }) => {
       <div className={cls.productReviewHeader}>
         <div className={cls.productReviewAuthor}>
           <div className={cls.productReviewAvatarWrapper}>
-            <Image fill className={cls.productReviewAvatar} src={photo} alt="avatar" />
+            <Image
+              width="0"
+              height="0"
+              className={cls.productReviewAvatar}
+              src={photo}
+              alt="avatar"
+            />
           </div>
           <Text className={cls.productReviewName} variant="body_s" weight="medium" as="span">
             {name}

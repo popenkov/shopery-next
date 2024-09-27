@@ -7,6 +7,33 @@ import { Text } from '@/shared/ui/Text';
 
 import cls from '../Faq.module.scss';
 
+const ACCORDEONS_DATA = [
+  {
+    id: 0,
+    title: 'In elementum est a ante sodales iaculis.',
+    content:
+      'Morbi porttitor ligula in nunc varius sagittis. Proin dui nisi, laoreet ut tempor ac, cursus vitae eros. Cras quis ultricies elit. Proin ac lectus arcu. Maecenas aliquet vel tellus at accumsan. Donec a eros non massa vulputate ornare. Vivamus ornare commodo ante, at commodo felis congue vitae.',
+  },
+  {
+    id: 1,
+    title: 'Etiam lobortis massa eu nibh tempor elementum.',
+    content:
+      'Morbi porttitor ligula in nunc varius sagittis. Proin dui nisi, laoreet ut tempor ac, cursus vitae eros. Cras quis ultricies elit. Proin ac lectus arcu. Maecenas aliquet vel tellus at accumsan. Donec a eros non massa vulputate ornare. Vivamus ornare commodo ante, at commodo felis congue vitae.',
+  },
+  {
+    id: 2,
+    title: 'Aenean quis quam nec lacus semper dignissim.',
+    content:
+      'Morbi porttitor ligula in nunc varius sagittis. Proin dui nisi, laoreet ut tempor ac, cursus vitae eros. Cras quis ultricies elit. Proin ac lectus arcu. Maecenas aliquet vel tellus at accumsan. Donec a eros non massa vulputate ornare. Vivamus ornare commodo ante, at commodo felis congue vitae.',
+  },
+  {
+    id: 3,
+    title: 'Nulla tincidunt eros id tempus accumsan.',
+    content:
+      'Morbi porttitor ligula in nunc varius sagittis. Proin dui nisi, laoreet ut tempor ac, cursus vitae eros. Cras quis ultricies elit. Proin ac lectus arcu. Maecenas aliquet vel tellus at accumsan. Donec a eros non massa vulputate ornare. Vivamus ornare commodo ante, at commodo felis congue vitae.',
+  },
+];
+
 export const FaqAccordeons: FC = () => {
   const [activeIndex, setActiveIndex] = useState<null | number>(0);
 
@@ -20,74 +47,25 @@ export const FaqAccordeons: FC = () => {
 
   return (
     <div className={cls.FaqTextContent}>
-      <Accordion
-        variant="border"
-        title={
-          <Text variant="body_l" weight="medium">
-            In elementum est a ante sodales iaculis.
-          </Text>
-        }
-        open={activeIndex === 0}
-        onClick={() => handleAccordionClick(0)}
-      >
-        <Text variant="body_s" className={cls.FaqText}>
-          Morbi porttitor ligula in nunc varius sagittis. Proin dui nisi, laoreet ut tempor ac,
-          cursus vitae eros. Cras quis ultricies elit. Proin ac lectus arcu. Maecenas aliquet vel
-          tellus at accumsan. Donec a eros non massa vulputate ornare. Vivamus ornare commodo ante,
-          at commodo felis congue vitae.
-        </Text>
-      </Accordion>
-      <Accordion
-        variant="border"
-        title={
-          <Text variant="body_l" weight="medium">
-            Etiam lobortis massa eu nibh tempor elementum.
-          </Text>
-        }
-        open={activeIndex === 1}
-        onClick={() => handleAccordionClick(1)}
-      >
-        <Text variant="body_s" className={cls.FaqText}>
-          Morbi porttitor ligula in nunc varius sagittis. Proin dui nisi, laoreet ut tempor ac,
-          cursus vitae eros. Cras quis ultricies elit. Proin ac lectus arcu. Maecenas aliquet vel
-          tellus at accumsan. Donec a eros non massa vulputate ornare. Vivamus ornare commodo ante,
-          at commodo felis congue vitae.
-        </Text>
-      </Accordion>
-      <Accordion
-        variant="border"
-        title={
-          <Text variant="body_l" weight="medium">
-            Aenean quis quam nec lacus semper dignissim.
-          </Text>
-        }
-        open={activeIndex === 2}
-        onClick={() => handleAccordionClick(2)}
-      >
-        <Text variant="body_s" className={cls.FaqText}>
-          Morbi porttitor ligula in nunc varius sagittis. Proin dui nisi, laoreet ut tempor ac,
-          cursus vitae eros. Cras quis ultricies elit. Proin ac lectus arcu. Maecenas aliquet vel
-          tellus at accumsan. Donec a eros non massa vulputate ornare. Vivamus ornare commodo ante,
-          at commodo felis congue vitae.
-        </Text>
-      </Accordion>
-      <Accordion
-        variant="border"
-        open={activeIndex === 3}
-        onClick={() => handleAccordionClick(3)}
-        title={
-          <Text variant="body_l" weight="medium">
-            Nulla tincidunt eros id tempus accumsan.
-          </Text>
-        }
-      >
-        <Text variant="body_s" className={cls.FaqText}>
-          Morbi porttitor ligula in nunc varius sagittis. Proin dui nisi, laoreet ut tempor ac,
-          cursus vitae eros. Cras quis ultricies elit. Proin ac lectus arcu. Maecenas aliquet vel
-          tellus at accumsan. Donec a eros non massa vulputate ornare. Vivamus ornare commodo ante,
-          at commodo felis congue vitae.
-        </Text>
-      </Accordion>
+      {ACCORDEONS_DATA.map(({ id, title, content }) => {
+        return (
+          <Accordion
+            variant="border"
+            title={
+              <Text variant="body_l" weight="medium">
+                {title}
+              </Text>
+            }
+            open={activeIndex === id}
+            onClick={() => handleAccordionClick(id)}
+            key={id}
+          >
+            <Text variant="body_s" className={cls.FaqText}>
+              {content}
+            </Text>
+          </Accordion>
+        );
+      })}
     </div>
   );
 };

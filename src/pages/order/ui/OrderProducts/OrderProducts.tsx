@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import cn from 'classnames';
 
-import { ProductOrder } from '@/entities/Product/ui/ProductOrder';
-import { type TUserOrderItem } from '@/entities/User/model/types';
+import { ProductOrder } from '@/entities/Product';
+import { type TUserOrderItem } from '@/entities/User';
 
 import { OrderProductsHeader } from '../OrderProductsHeader';
 

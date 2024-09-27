@@ -1,6 +1,5 @@
 /api
 /cypress
-cypress.config.ts
 /node_modules
 /src/app/configs
 /storybook-static

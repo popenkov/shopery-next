@@ -7,7 +7,7 @@ import { Breadcrumbs } from '@/shared/ui/Breadcrumps';
 import { Text } from '@/shared/ui/Text';
 
 import cls from './Faq.module.scss';
-import { FaqAccordeons } from './FaqAccordeons/FaqAccordeons';
+import { FaqAccordeons } from './FaqAccordeons';
 
 export const Faq: FC = () => {
   const crumbs: AppRouteNames[] = [AppRouteNames.HOME, AppRouteNames.FAQ];
@@ -22,7 +22,14 @@ export const Faq: FC = () => {
           <FaqAccordeons />
         </div>
         <div className={cls.FaqImageContainer}>
-          <Image src="/images/faq-image.jpeg" fill alt="not found image" className={cls.FaqImage} />
+          <Image
+            src="/images/faq-image.jpeg"
+            fill
+            width="0"
+            height="0"
+            alt="not found image"
+            className={cls.FaqImage}
+          />
         </div>
       </div>
       <Subscription variant="gray" />

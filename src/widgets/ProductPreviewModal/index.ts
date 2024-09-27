@@ -1,0 +1,1 @@
+export { ProductPreviewModal } from './ui';

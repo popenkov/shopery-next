@@ -1,5 +1,8 @@
+'use client';
+
 import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode, Ref } from 'react';
 import cn from 'classnames';
+import { motion } from 'framer-motion';
 import Link, { LinkProps } from 'next/link';
 
 import cls from './AppLink.module.scss';
@@ -26,6 +29,8 @@ interface Props
   isDisabled?: boolean;
 }
 
+const MotionLink = motion(Link);
+
 export const AppLink: FC<Props> = (props) => {
   const {
     href,
@@ -38,7 +43,8 @@ export const AppLink: FC<Props> = (props) => {
     ...otherProps
   } = props;
   return (
-    <Link
+    // @ts-ignore
+    <MotionLink
       href={href}
       className={cn(cls.link, className, {
         [cls[theme]]: true,
@@ -46,9 +52,12 @@ export const AppLink: FC<Props> = (props) => {
         [cls.disabled]: isDisabled,
       })}
       ref={ref}
+      whileTap={{ scale: 0.95 }}
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.3 }}
       {...otherProps}
     >
       {children}
-    </Link>
+    </MotionLink>
   );
 };

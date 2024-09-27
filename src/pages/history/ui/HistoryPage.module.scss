@@ -17,13 +17,3 @@
     padding: 12px 24px;
   }
 }
-
-.HistoryPagePagination {
-  @include flex-center;
-
-  width: 100%;
-
-  li {
-    padding: 0;
-  }
-}

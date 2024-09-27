@@ -24,7 +24,12 @@ body {
 
   min-height: 100vh;
   color: rgb(var(--foreground-rgb));
+  font-family: var(--font-base);
   background: var(--green-gray-scale-900);
+
+  &.fixed {
+    overflow: hidden;
+  }
 }
 
 main {

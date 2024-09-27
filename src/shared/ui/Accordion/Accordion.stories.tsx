@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { fn } from '@storybook/test';
 
 import { Accordion } from './Accordion';
 
@@ -9,6 +10,8 @@ const meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
+  args: { onClick: fn(), open: true },
+  argTypes: {},
 } satisfies Meta<typeof Accordion>;
 
 export default meta;
@@ -23,6 +26,7 @@ export const AccordionComponent: TStory = {
     ),
   ],
   args: {
+    variant: 'border',
     title: <p>Заголовок</p>,
     children: <p>Содержимое</p>,
   },

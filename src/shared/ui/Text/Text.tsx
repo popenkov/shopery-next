@@ -36,6 +36,7 @@ const T = <E extends ElementType = typeof DEFAULT_ELEMENT>(props: Props<E>) => {
     align = 'left',
     variant = 'body_m',
     weight = 'regular',
+    ...rest
   } = props;
 
   const Element = as || DEFAULT_ELEMENT;
@@ -47,7 +48,11 @@ const T = <E extends ElementType = typeof DEFAULT_ELEMENT>(props: Props<E>) => {
     [cls[weight]]: true,
   };
 
-  return <Element className={cn(cls.text, className, mods)}>{children}</Element>;
+  return (
+    <Element className={cn(cls.text, className, mods)} {...rest}>
+      {children}
+    </Element>
+  );
 };
 
 export const Text = memo(T);

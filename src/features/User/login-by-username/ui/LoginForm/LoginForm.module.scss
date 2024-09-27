@@ -54,6 +54,9 @@
 }
 
 .LoginFormRegistration {
+  @include flex-center-vertical;
+
+  gap: 10px;
   margin: 0 auto;
 }
 

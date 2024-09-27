@@ -2,6 +2,8 @@ import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { selectCurrentCurrency } from '@/entities/Currency';
+import { useAppSelector } from '@/shared/lib/hooks';
 import { getFormattedPrice } from '@/shared/lib/utils';
 import { StarRating } from '@/shared/ui/StarRating';
 import { Text } from '@/shared/ui/Text';
@@ -17,12 +19,13 @@ interface ProductPreviewProps
 }
 
 export const ProductPreview: FC<ProductPreviewProps> = ({ data, actions }) => {
+  const currentCurrency = useAppSelector(selectCurrentCurrency);
   const { img, title, path, price, priceOld, rating } = data;
 
   return (
     <div className={cls.product}>
       <Link href={`/products/${path}`} className={cls.imageLink}>
-        <Image src={img} fill alt={title} className={cls.image} />
+        <Image src={img!} fill alt={title} className={cls.image} />
       </Link>
       <div className={cls.description}>
         <Link href={`/products/${path}`} className={cls.link}>
@@ -34,11 +37,11 @@ export const ProductPreview: FC<ProductPreviewProps> = ({ data, actions }) => {
           <div className={cls.descriptionMain}>
             <div className={cls.price}>
               <Text variant="body_m" weight="medium">
-                {getFormattedPrice(price)}
+                {getFormattedPrice(price, currentCurrency)}
               </Text>
               {priceOld && (
                 <Text variant="body_m" weight="medium" className={cls.priceOld}>
-                  {getFormattedPrice(priceOld)}
+                  {getFormattedPrice(priceOld, currentCurrency)}
                 </Text>
               )}
             </div>

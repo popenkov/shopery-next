@@ -1,0 +1,1 @@
+export { OrderPageSkeleton } from './OrderPageSkeleton';

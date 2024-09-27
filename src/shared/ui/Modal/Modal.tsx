@@ -1,6 +1,6 @@
 'use client';
 
-import React, { ReactNode } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import cn from 'classnames';
 
 import { useModal } from '@/shared/lib/hooks';
@@ -23,6 +23,8 @@ const ANIMATION_DELAY = 300;
 export const Modal = (props: ModalProps) => {
   const { className, children, isOpen, onClose, lazy } = props;
 
+  const [element, setElement] = useState<HTMLElement>();
+
   const { close, isClosing, isMounted } = useModal({
     animationDelay: ANIMATION_DELAY,
     onClose,
@@ -34,15 +36,20 @@ export const Modal = (props: ModalProps) => {
     [cls.isClosing]: isClosing,
   };
 
+  useEffect(() => {
+    const appElement = document.getElementById('app');
+    setElement(appElement ?? document.body);
+  }, []);
+
   if (lazy && !isMounted) {
     return null;
   }
 
   return (
-    <Portal element={document.getElementById('app') ?? document.body}>
-      <div className={cn(cls.Modal, mods, [className, 'app_modal'])}>
+    <Portal element={element}>
+      <div className={cn(cls.Modal, mods)}>
         <Overlay onClick={close} />
-        <div className={cls.content}>{children}</div>
+        <div className={cn(cls.content, className)}>{children}</div>
       </div>
     </Portal>
   );

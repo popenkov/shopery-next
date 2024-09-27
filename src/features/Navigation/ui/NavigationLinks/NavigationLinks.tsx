@@ -15,7 +15,7 @@ export const NavigationLinks: FC<Props> = ({ links }) => {
     <ul className={cls.navigationMenu}>
       {links.map((link) => {
         return (
-          <li className={cls.navigationMenuItem} key={link.path}>
+          <li className={cls.navigationMenuItem} key={`${link.path}/${link.title}`}>
             <Link className={cls.navigationMenuLink} href={link.path}>
               {link.title}
               {link?.items && <ChevronDownIcon className={cls.navigationLinkIcon} />}
@@ -24,7 +24,7 @@ export const NavigationLinks: FC<Props> = ({ links }) => {
               <ul className={cls.navigationDropMenu}>
                 {link.items.map((sublink) => {
                   return (
-                    <li key={sublink.path}>
+                    <li key={`${sublink.path}/${sublink.title}`}>
                       <Link className={cls.navigationDropMenuLink} href={sublink.path}>
                         {sublink.title}
                       </Link>

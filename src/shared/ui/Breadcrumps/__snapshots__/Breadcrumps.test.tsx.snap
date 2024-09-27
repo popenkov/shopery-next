@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumbs component renders correctly 1`] = `
+<div>
+  <div
+    class="breadcrumps"
+  >
+    <div
+      class="breadcrumpsContent"
+    >
+      <ul
+        class="list"
+      >
+        <li
+          class="item"
+        >
+          <a
+            class="link"
+            data-testid="breadcrumbs-link"
+            href="/"
+          >
+            <svg
+              class="homeIcon"
+              data-testid="test-icon"
+              fill="none"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 10L12 3L20 10V20H15V16C15 15.2044 14.6839 14.4413 14.1213 13.8787C13.5587 13.3161 12.7956 13 12 13C11.2043 13 10.4413 13.3161 9.87868 13.8787C9.31607 14.4413 9 15.2044 9 16V20H4V10Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+            </svg>
+            <svg
+              class="chevron"
+              data-testid="test-icon"
+              fill="none"
+              viewBox="0 0 12 12"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 4L6 8L2 4"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </li>
+        <li
+          class="item"
+        >
+          <a
+            class="link"
+            data-testid="breadcrumbs-link"
+            href="/catalog"
+          >
+            Catalog
+          </a>
+          <svg
+            class="chevron"
+            data-testid="test-icon"
+            fill="none"
+            viewBox="0 0 12 12"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 4L6 8L2 4"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </li>
+        <li>
+          <a
+            class="link active"
+            data-testid="breadcrumbs-link"
+            href="#"
+          >
+            404 Error Page
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

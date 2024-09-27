@@ -1,24 +1,39 @@
 'use client';
 
-import { FC, forwardRef, useState } from 'react';
+import { FC, forwardRef, useEffect, useState } from 'react';
 import cn from 'classnames';
 import Image from 'next/image';
-import { ChangeHandler } from 'react-hook-form';
 
 import cls from './ImageUploader.module.scss';
 
 type Props = {
-  onChange: ChangeHandler;
+  onChange: (value: string) => void;
   imageSrc: string;
   className?: string;
   accept?: string;
+  errorText?: string;
   maxSize?: number;
 };
 
 export const ImageUploader: FC<Props> = forwardRef<HTMLInputElement, Props>(
-  ({ imageSrc, onChange, className, accept = 'image/*', maxSize = 1024 * 1024, ...rest }, ref) => {
+  (
+    {
+      imageSrc,
+      onChange,
+      className,
+      accept = 'image/*',
+      maxSize = 1024 * 1024,
+      errorText,
+      ...rest
+    },
+    ref,
+  ) => {
     const [preview, setPreview] = useState<string>(imageSrc);
     const [error, setError] = useState<string | null>(null);
+
+    useEffect(() => {
+      setPreview(imageSrc);
+    }, [imageSrc]);
 
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       const file = event.target.files?.[0];
@@ -30,20 +45,24 @@ export const ImageUploader: FC<Props> = forwardRef<HTMLInputElement, Props>(
         return;
       }
 
-      onChange(event);
-
       const reader = new FileReader();
       reader.readAsDataURL(file);
       reader.onloadend = () => {
-        console.log('reader.result ', reader.result);
         setPreview(reader.result as string);
+        onChange(reader.result as string);
       };
     };
 
     return (
       <div className={cn(cls.ImageUploader, className)}>
         <div className={cls.ImageUploaderPreviewWrapper}>
-          <Image className={cls.ImageUploaderPreview} fill src={preview} alt="image preview" />
+          <Image
+            className={cls.ImageUploaderPreview}
+            fill
+            src={preview}
+            alt="image preview"
+            data-testid="image-uploader-preview"
+          />
         </div>
 
         <input
@@ -53,12 +72,14 @@ export const ImageUploader: FC<Props> = forwardRef<HTMLInputElement, Props>(
           onChange={handleFileChange}
           className={cls.ImageUploaderInput}
           id="file"
+          data-testid="image-uploader-input"
           {...rest}
         />
         <label htmlFor="file" className={cls.ImageUploaderLabel}>
           Choose Image
         </label>
         {error && <span className={cls.ImageUploaderError}>{error}</span>}
+        {errorText && <span className={cls.ImageUploaderError}>{errorText}</span>}
       </div>
     );
   },

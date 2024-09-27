@@ -1,6 +1,9 @@
-import React, { FC } from 'react';
+'use client';
+
+import { FC } from 'react';
 
 import { type TProduct } from '@/entities/Product';
+import { useChangeSearchParams } from '@/shared/lib/hooks';
 import { RoundButton, TRoundButtonTheme } from '@/shared/ui/Buttons';
 import { EyeIcon } from '@/shared/ui/icons';
 
@@ -11,8 +14,10 @@ type Props = {
 };
 
 export const ShowProductPreview: FC<Props> = ({ className, item, theme = 'primary' }) => {
+  const { setQueryParams } = useChangeSearchParams();
+
   const handlePreviewButtonClick = () => {
-    console.log('show preview for item', item);
+    setQueryParams('product', item.id);
   };
 
   return (

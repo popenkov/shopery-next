@@ -1,0 +1,1 @@
+export { selectWishlistProducts } from './wishlist';

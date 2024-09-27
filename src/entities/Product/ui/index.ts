@@ -6,3 +6,4 @@ export * from './ProductSmall';
 export * from './ProductWishlist';
 export * from './ProductCartPreview';
 export * from './ProductCart';
+export * from './ProductOrder';

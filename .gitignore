@@ -41,6 +41,5 @@ next-env.d.ts
 /src/stories
 
 
-/json-server
 .env
 *storybook.log

@@ -8,20 +8,20 @@ const range = (start: number, end: number) => {
 };
 
 type TUsePagination = {
-  totalCount: number;
+  totalElements: number;
   pageSize: number;
   siblingCount: number;
   currentPage: number;
 };
 
 export const usePagination = ({
-  totalCount,
-  //   pageSize,  // todo
-  siblingCount = 1,
+  totalElements,
+  pageSize,
   currentPage,
+  siblingCount = 1,
 }: TUsePagination) => {
   const paginationRange = useMemo(() => {
-    const totalPageCount = totalCount;
+    const totalPageCount = Math.ceil(totalElements / pageSize);
 
     const totalPageNumbers = siblingCount + 5;
 
@@ -55,7 +55,7 @@ export const usePagination = ({
       let middleRange = range(leftSiblingIndex, rightSiblingIndex);
       return [firstPageIndex, DOTS, ...middleRange, DOTS, lastPageIndex];
     }
-  }, [totalCount, siblingCount, currentPage]);
+  }, [totalElements, siblingCount, currentPage]);
 
   return paginationRange;
 };

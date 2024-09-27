@@ -1,11 +1,10 @@
 'use client';
 
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 import { ProductLarge, TProduct } from '@/entities/Product';
-import { AddToCart } from '@/features/Cart/add-to-cart';
-import { AddToWishlist } from '@/features/Product';
-import { ShowProductPreview } from '@/features/Product';
+import { AddToCart } from '@/features/Cart';
+import { AddToWishlist, ShowProductPreview } from '@/features/Product';
 import { MobileSlider } from '@/shared/ui/MobileSlider';
 import { ProductTabs } from '@/shared/ui/ProductTabs';
 import { Text } from '@/shared/ui/Text';
@@ -16,9 +15,6 @@ import cls from './ProductTab.module.scss';
 
 export const ProductTab: FC = () => {
   const { productTabs } = getProductTab();
-
-  // todo
-  // const products = await fetch(`http://localhost:6868/api/products`);
 
   return (
     <div className={cls.productTab}>

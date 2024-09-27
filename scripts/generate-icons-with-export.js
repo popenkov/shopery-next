@@ -30,7 +30,11 @@ fs.readdir(inputDir, (err, files) => {
     const svgContent = fs.readFileSync(filePath, 'utf-8');
     const id = file.replace(/\.svg$/, '');
     const componentName = generateIconName(id);
-    const updatedSvgContent = ['<svg' + ' className={className}' + svgContent.split('<svg')[1]]
+    const updatedSvgContent = [
+      '<svg' +
+        ' className={className} onClick={onClick} data-testid="test-icon"' +
+        svgContent.split('<svg')[1],
+    ]
       .join('<svg')
       .replace('fill-rule', 'fillRule')
       .replace('stroke-linecap', 'strokeLinecap')
@@ -39,7 +43,7 @@ fs.readdir(inputDir, (err, files) => {
       .replace('clip-rule', 'clipRule');
 
     return `
-export const ${componentName}: FC<{className?:string}> = ({className}) => {
+export const ${componentName}: FC<{className?:string, onClick?: () => void}> = ({className, onClick}) => {
   return (
     ${updatedSvgContent}
   );

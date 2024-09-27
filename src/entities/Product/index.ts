@@ -7,8 +7,18 @@ export {
   ProductCheckout,
   ProductCartPreview,
   ProductCart,
+  ProductOrder,
 } from './ui';
 
-export { type TProduct, type TProductDetailed } from './model';
+export {
+  type TProduct,
+  type TProductDetailed,
+  getProductDetailedData,
+  getProductDetailedError,
+  getProductDetailedIsLoading,
+  getProductById,
+} from './model';
 
-export { getWishlistItems, getProductDetails } from './api';
+export { getProductDetails } from './mock';
+
+export { productsReducer } from './model';

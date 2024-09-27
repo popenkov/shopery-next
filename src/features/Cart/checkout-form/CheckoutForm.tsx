@@ -1,13 +1,18 @@
 'use client';
 import { ChangeEvent, FC, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 
-import { useAppDispatch, useAppSelector } from '@/app/lib/store/hooks';
 import { selectCartProducts } from '@/entities/Cart';
 import { TOrder, TOrderProduct, addToOrders } from '@/entities/Order';
-import { VALIDATION_MESSAGES } from '@/shared/lib/constants';
-import { COUNTRIES_LIST, STATES_LIST } from '@/shared/lib/constants/countries-list';
-import { EMAIL_REGEX } from '@/shared/lib/constants/validation-regex';
+import {
+  COUNTRIES_LIST,
+  STATES_LIST,
+  EMAIL_REGEX,
+  VALIDATION_MESSAGES,
+  getRouteOrderHistory,
+} from '@/shared/lib/constants';
+import { useAppDispatch, useAppSelector } from '@/shared/lib/hooks';
 import { AppSelect } from '@/shared/ui/AppSelect';
 import { Checkbox } from '@/shared/ui/Checkbox';
 import { Input } from '@/shared/ui/Input';
@@ -35,9 +40,11 @@ type TFormData = {
 };
 
 export const CheckoutForm: FC = () => {
+  const router = useRouter();
   const dispatch = useAppDispatch();
   const cartItems = useAppSelector(selectCartProducts);
   const [showAddAddress, setShowAddAddress] = useState(false);
+  const [isFormSubmitting, setIsFormSubmitting] = useState(false);
   const {
     reset,
     handleSubmit,
@@ -47,17 +54,20 @@ export const CheckoutForm: FC = () => {
     mode: 'onChange',
   });
 
-  // todo   сделать модел для запроса из формы и из стора и отправить
   const onSubmit: SubmitHandler<TFormData> = (data) => {
+    setIsFormSubmitting(true);
+
     const orderItems: TOrderProduct[] = cartItems.map((item) => {
       return {
         id: item.id,
         name: item.title,
         price: item.price,
         quantity: item.amount,
-        total: item.price * item.amount,
-        img: item.img,
-        // todo
+        total: {
+          USD: item.price.USD * item.amount,
+          EUR: item.price.EUR * item.amount,
+        },
+        img: item.img!,
         path: '/',
       };
     });
@@ -65,11 +75,17 @@ export const CheckoutForm: FC = () => {
     const orderDate: TOrder = {
       id: Date.now().toString(),
       items: orderItems,
-      subtotal: orderItems.reduce((acc, item) => acc + item.price * item.quantity, 0),
       amount: orderItems.reduce((acc, item) => acc + item.quantity, 0),
+      subtotal: orderItems.reduce(
+        (acc, current) => {
+          acc.USD += current.price.USD * current.quantity;
+          acc.EUR += current.price.EUR * current.quantity;
+          return acc;
+        },
+        { USD: 0, EUR: 0 },
+      ),
       discount: 0,
       delivery: null,
-      // todo
       paymentMethod: 'PayPal',
       status: 'Processing',
       shippingAddress: {
@@ -96,18 +112,26 @@ export const CheckoutForm: FC = () => {
       },
       date: new Date(),
     };
+
     dispatch(addToOrders(orderDate));
 
     if (isValid) {
-      console.log('form sent');
       reset();
+      router.push(getRouteOrderHistory());
+
+      setIsFormSubmitting(false);
     }
+
+    setIsFormSubmitting(false);
   };
 
   const handleAddressCheckboxChange = (evt: ChangeEvent<HTMLInputElement>) => {
     setShowAddAddress(evt.target.checked);
   };
 
+  if (isFormSubmitting) {
+    return <Text>Submitting...</Text>;
+  }
   return (
     <form className={cls.checkoutForm} id="checkoutForm" onSubmit={handleSubmit(onSubmit)}>
       <div className={cls.checkoutFormMain}>
@@ -189,6 +213,7 @@ export const CheckoutForm: FC = () => {
               <AppSelect
                 label="Country / Region"
                 placeholder="Select"
+                value={COUNTRIES_LIST[0]}
                 options={COUNTRIES_LIST}
                 onChange={(newValue) => onChange(newValue)}
                 errorText={error?.message}
@@ -207,6 +232,7 @@ export const CheckoutForm: FC = () => {
               <AppSelect
                 label="States"
                 placeholder="Select"
+                value={STATES_LIST[0]}
                 options={STATES_LIST}
                 onChange={(newValue) => onChange(newValue)}
                 errorText={error?.message}
@@ -324,6 +350,7 @@ export const CheckoutForm: FC = () => {
                   <AppSelect
                     label="Country / Region"
                     placeholder="Select"
+                    value={COUNTRIES_LIST[0]}
                     options={COUNTRIES_LIST}
                     onChange={(newValue) => onChange(newValue)}
                     errorText={error?.message}
@@ -342,6 +369,7 @@ export const CheckoutForm: FC = () => {
                   <AppSelect
                     label="States"
                     placeholder="Select"
+                    value={STATES_LIST[0]}
                     options={STATES_LIST}
                     onChange={(newValue) => onChange(newValue)}
                     errorText={error?.message}

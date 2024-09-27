@@ -5,8 +5,6 @@ export {
   removeItemFromCart,
   closeAsideCartMenu,
   openAsideCartMenu,
-} from './model/slices/cart-slice';
-export {
   selectCartData,
   selectCartProducts,
   selectMenuState,
@@ -15,3 +13,5 @@ export {
   type TCartProduct,
   type CartSchema,
 } from './model';
+
+export { changeItemsAmountInCart } from './lib';

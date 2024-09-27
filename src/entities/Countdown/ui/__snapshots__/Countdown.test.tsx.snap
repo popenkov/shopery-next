@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Countdown component renders correctly 1`] = `
+<div>
+  <div
+    class="counter"
+  >
+    <div
+      class="counterItem"
+    >
+      <p
+        class="text counterValue primary heading_5 left regular"
+      >
+        10
+      </p>
+      <span
+        class="counterDescription"
+      >
+        Days
+      </span>
+    </div>
+    <p
+      class="text counterSeparator primary body_xl left regular"
+    >
+      :
+    </p>
+    <div
+      class="counterItem"
+    >
+      <p
+        class="text counterValue primary heading_5 left regular"
+      >
+        5
+      </p>
+      <span
+        class="counterDescription"
+      >
+        Hours
+      </span>
+    </div>
+    <p
+      class="text counterSeparator primary body_xl left regular"
+    >
+      :
+    </p>
+    <div
+      class="counterItem"
+    >
+      <p
+        class="text counterValue primary heading_5 left regular"
+      >
+        30
+      </p>
+      <span
+        class="counterDescription"
+      >
+        Mins
+      </span>
+    </div>
+    <p
+      class="text counterSeparator primary body_xl left regular"
+    >
+      :
+    </p>
+    <div
+      class="counterItem"
+    >
+      <p
+        class="text counterValue primary heading_5 left regular"
+      >
+        15
+      </p>
+      <span
+        class="counterDescription"
+      >
+        Secs
+      </span>
+    </div>
+  </div>
+</div>
+`;
