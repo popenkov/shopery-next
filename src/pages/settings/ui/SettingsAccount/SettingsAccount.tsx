@@ -47,7 +47,6 @@ export const SettingsAccount: FC<Props> = ({ className }) => {
             Account Settings
           </Text>
         </div>
-        {/* todo */}
         <EditUserSettings className={cls.SettingsAccountMain} />
       </div>
 

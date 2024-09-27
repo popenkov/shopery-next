@@ -13,7 +13,7 @@ interface BreadcrumbsProps {
 
 export const Breadcrumbs: FC<BreadcrumbsProps> = memo(({ items }) => {
   const homeLink = (
-    <Link className={cls.link} href={getRouteHome()} data-testid="Breadcrumbs.link">
+    <Link className={cls.link} href={getRouteHome()} data-testid="breadcrumbs-link">
       <HomeIcon className={cls.homeIcon} />
       <ChevronDownIcon className={cls.chevron} />
     </Link>
@@ -35,7 +35,7 @@ export const Breadcrumbs: FC<BreadcrumbsProps> = memo(({ items }) => {
           <Link
             href="#"
             className={[cls.link, cls.active].join(' ')}
-            data-testid="Breadcrumbs.link"
+            data-testid="breadcrumbs-link"
           >
             {crumb}
           </Link>
@@ -49,7 +49,7 @@ export const Breadcrumbs: FC<BreadcrumbsProps> = memo(({ items }) => {
       const link = currentPage.href;
       return (
         <li key={index} className={cls.item}>
-          <Link href={link} className={cls.link} data-testid="Breadcrumbs.link">
+          <Link href={link} className={cls.link} data-testid="breadcrumbs-link">
             {crumb}
           </Link>
           <ChevronDownIcon className={cls.chevron} />

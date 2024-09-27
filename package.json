@@ -14,7 +14,7 @@
     "lint:scss:fix": "stylelint \"**/*.scss\" --fix",
     "prettier": "npx prettier --write **/*.{ts,tsx,json}",
     "debug": "NODE_OPTIONS='--inspect' next dev",
-    "test:unit": "set NODE_ENV=test && node --experimental-vm-modules node_modules/jest/bin/jest.js --config ./src/app/configs/jest/jest.config.ts",
+    "test:unit": "set NODE_ENV=test && node node_modules/jest/bin/jest.js --config ./src/app/configs/jest/jest.config.ts",
     "test:ui": "test-storybook --config-dir ./src/app/configs/storybook",
     "test:ui:ci": "concurrently -s first -k \"npm run storybook\" \"npm run test:ui\"",
     "test:e2e": "npx cypress open --config-file ./src/app/configs/cypress/cypress.config.ts",
@@ -52,6 +52,7 @@
     "regenerator-runtime": "^0.14.1",
     "sass": "1.70.0",
     "swiper": "11.0.7",
+    "whatwg-fetch": "^3.6.20",
     "yup": "^1.4.0"
   },
   "devDependencies": {

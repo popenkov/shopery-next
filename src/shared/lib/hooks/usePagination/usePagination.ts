@@ -16,7 +16,7 @@ type TUsePagination = {
 
 export const usePagination = ({
   totalElements,
-  pageSize, // todo
+  pageSize,
   currentPage,
   siblingCount = 1,
 }: TUsePagination) => {

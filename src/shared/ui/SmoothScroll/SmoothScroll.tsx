@@ -11,7 +11,9 @@ type Props = {
   speed?: number;
 };
 
-export const SmoothScroll: FC<Props> = ({ children, speed = 0.1 }) => {
+const DEFAULT_SCROLL_SPEED = 0.1;
+
+export const SmoothScroll: FC<Props> = ({ children, speed = DEFAULT_SCROLL_SPEED }) => {
   const windowSize = useWindowSize();
 
   const scrollingContainerRef = useRef<HTMLDivElement>(null);

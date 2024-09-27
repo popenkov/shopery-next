@@ -1,13 +1,15 @@
+import { StateSchema } from '@/app/providers';
 import { createSelector } from '@reduxjs/toolkit';
 
 //
 
 const selectBase = createSelector(
-  (state: RootState) => state,
-  (state) => state.orders,
+  (state: StateSchema) => state,
+  (state) => state.order,
 );
 
 export const selectOrdersData = createSelector(selectBase, (state) => state);
-export const getOrderDetailedData = (state: RootState) => state.orders?.order;
-export const getOrderDetailedIsLoading = (state: RootState) => state.orders?.isLoading || false;
-export const getOrderDetailedError = (state: RootState) => state.orders?.error;
+export const getOrderDetailedData = (state: StateSchema) => state.order?.order;
+export const getUserOrdersData = (state: StateSchema) => state.order?.orders;
+export const getOrderDetailedIsLoading = (state: StateSchema) => state.order?.isLoading || false;
+export const getOrderDetailedError = (state: StateSchema) => state.order?.error;

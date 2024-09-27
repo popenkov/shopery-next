@@ -10,14 +10,14 @@ exports[`ImageUploader component renders correctly 1`] = `
     >
       <img
         alt="image preview"
-        data-testid="ImageUploader.preview"
+        data-testid="image-uploader-preview"
         src="https://test.com/image.jpg"
       />
     </div>
     <input
       accept="image/*"
       class="ImageUploaderInput"
-      data-testid="ImageUploader.input"
+      data-testid="image-uploader-input"
       id="file"
       type="file"
     />

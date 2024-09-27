@@ -6,6 +6,7 @@ import { getLocale, getMessages } from 'next-intl/server';
 
 import { StoreProvider } from '@/app/providers';
 import '@/app/styles/globals.scss';
+import { StatusMessage } from '@/entities/StatusMessage';
 import { SmoothScroll } from '@/shared/ui/SmoothScroll';
 import { CartAside } from '@/widgets/CartAside';
 import { Footer } from '@/widgets/Footer';
@@ -16,6 +17,8 @@ const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700'],
   subsets: ['latin'],
 });
+
+const SCROLL_SPEED = 0.08;
 
 export const metadata: Metadata = {
   title: 'Ecobazar',
@@ -35,13 +38,14 @@ export default async function RootLayout({
       <body className={poppins.className}>
         <StoreProvider>
           <NextIntlClientProvider messages={messages}>
-            <SmoothScroll speed={0.08}>
+            <SmoothScroll speed={SCROLL_SPEED}>
               <Header />
               {children}
               <Footer />
             </SmoothScroll>
             <CartAside />
             <ProductPreviewModal />
+            <StatusMessage />
           </NextIntlClientProvider>
         </StoreProvider>
       </body>

@@ -6,6 +6,7 @@ import { currencyReducer } from '@/entities/Currency';
 import { wishlistReducer } from '@/entities/Favorites';
 import { orderReducer } from '@/entities/Order';
 import { productsReducer } from '@/entities/Product';
+import { statusMessageReducer } from '@/entities/StatusMessage';
 import { userReducer } from '@/entities/User';
 import { $api } from '@/shared/api';
 
@@ -16,6 +17,7 @@ const rootReducer = combineReducers({
   orders: orderReducer,
   products: productsReducer,
   currency: currencyReducer,
+  statusMessage: statusMessageReducer,
   // [rtkApi.reducerPath]: rtkApi.reducer,
 });
 
@@ -23,9 +25,10 @@ const extraArg: ThunkExtraArg = {
   api: $api,
 };
 
-export const makeStore = () => {
+export const setupStore = (preloadedState?: Partial<RootState>) => {
   return configureStore({
     reducer: rootReducer,
+    preloadedState,
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware({
         thunk: {
@@ -35,7 +38,7 @@ export const makeStore = () => {
   });
 };
 
-export type AppStore = ReturnType<typeof makeStore>;
+export type AppStore = ReturnType<typeof setupStore>;
 // todo replace on d.ts
 // export type RootState = ReturnType<AppStore['getState']>;
 export type AppDispatch = AppStore['dispatch'];

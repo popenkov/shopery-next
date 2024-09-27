@@ -14,7 +14,7 @@ describe('Location component', () => {
   it('renders with correct class names', () => {
     const address = '123 Main St';
     const { getByTestId } = render(<Location address={address} />);
-    const location = getByTestId('HeaderTop.location');
+    const location = getByTestId('header-top-location');
 
     expect(location).toHaveClass('location');
   });
@@ -22,7 +22,7 @@ describe('Location component', () => {
   it('renders with mobile class when isMobile is true', () => {
     const address = '123 Main St';
     const { getByTestId } = render(<Location address={address} isMobile />);
-    const location = getByTestId('HeaderTop.location');
+    const location = getByTestId('header-top-location');
 
     expect(location).toHaveClass('mobile');
   });
@@ -43,6 +43,6 @@ describe('Location component', () => {
   it('renders with correct data-testid', () => {
     const address = '123 Main St';
     const { getByTestId } = render(<Location address={address} />);
-    expect(getByTestId('HeaderTop.location')).toBeInTheDocument();
+    expect(getByTestId('header-top-location')).toBeInTheDocument();
   });
 });

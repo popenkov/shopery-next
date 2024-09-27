@@ -16,7 +16,7 @@ exports[`Breadcrumbs component renders correctly 1`] = `
         >
           <a
             class="link"
-            data-testid="Breadcrumbs.link"
+            data-testid="breadcrumbs-link"
             href="/"
           >
             <svg
@@ -57,7 +57,7 @@ exports[`Breadcrumbs component renders correctly 1`] = `
         >
           <a
             class="link"
-            data-testid="Breadcrumbs.link"
+            data-testid="breadcrumbs-link"
             href="/catalog"
           >
             Catalog
@@ -80,7 +80,7 @@ exports[`Breadcrumbs component renders correctly 1`] = `
         <li>
           <a
             class="link active"
-            data-testid="Breadcrumbs.link"
+            data-testid="breadcrumbs-link"
             href="#"
           >
             404 Error Page

@@ -12,7 +12,7 @@ describe('Input component', () => {
   it('renders label correctly', () => {
     const label = 'Input label';
     const { getByTestId } = render(<Input label={label} />);
-    const labelElement = getByTestId('Input.label');
+    const labelElement = getByTestId('input-label');
     expect(labelElement).toBeInTheDocument();
   });
 

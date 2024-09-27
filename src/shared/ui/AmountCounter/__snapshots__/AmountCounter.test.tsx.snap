@@ -7,7 +7,7 @@ exports[`AmountCounter component renders correctly 1`] = `
   >
     <button
       class="AmountCounterButton"
-      data-testid="AmountCounter.minusButton"
+      data-testid="amount-counter-minus-button"
     >
       <svg
         class="AmountCounterButtonIcon"
@@ -20,7 +20,7 @@ exports[`AmountCounter component renders correctly 1`] = `
       >
         <path
           d="M3.33301 8H12.6663"
-          stroke="white"
+          stroke="currentColor"
           stroke-linecap="round"
           stroke-linejoin="round"
           stroke-width="2"
@@ -32,7 +32,7 @@ exports[`AmountCounter component renders correctly 1`] = `
     >
       <input
         class="AmountCounterInput"
-        data-testid="AmountCounter.input"
+        data-testid="amount-counter-input"
         min="1"
         readonly=""
         type="number"
@@ -41,7 +41,7 @@ exports[`AmountCounter component renders correctly 1`] = `
     </div>
     <button
       class="AmountCounterButton"
-      data-testid="AmountCounter.plusButton"
+      data-testid="amount-counter-plus-button"
     >
       <svg
         class="AmountCounterButtonIcon"

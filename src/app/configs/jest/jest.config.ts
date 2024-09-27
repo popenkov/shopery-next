@@ -6,9 +6,7 @@ import type { Config } from 'jest';
 
 const config: Config = {
   verbose: true,
-  // automock: true,
   clearMocks: true,
-  // todo
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**/*.{ts,tsx}',
@@ -36,7 +34,7 @@ const config: Config = {
   },
   testEnvironment: 'jsdom',
   rootDir: '../../../../',
-  setupFilesAfterEnv: ['<rootDir>/src/app/configs/jest/setupTests.ts'],
+  setupFilesAfterEnv: ['<rootDir>/src/app/configs/jest/setupTests.ts', '@testing-library/jest-dom'],
   testMatch: [
     // Обнаружил разницу между МАК ОС и ВИНДОУС!!!
     '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',

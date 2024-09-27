@@ -3,8 +3,10 @@
 import { FC, useEffect, useState } from 'react';
 import cn from 'classnames';
 
-import { TOrder } from '@/entities/Order';
+import { getOrderDetailedData, TOrder } from '@/entities/Order';
+import { ORDERS_LOCALSTORAGE_KEY } from '@/entities/Order';
 import { getRouteOrderHistory } from '@/shared/lib/constants';
+import { useAppSelector } from '@/shared/lib/hooks';
 import { AppLink } from '@/shared/ui/AppLink';
 import { PAGE_SIZE, Pagination } from '@/shared/ui/Pagination';
 import { Text } from '@/shared/ui/Text';
@@ -19,16 +21,21 @@ type Props = {
 };
 
 export const UserOrders: FC<Props> = ({ className, isPreview }) => {
-  const [orders, setOrders] = useState<null | TOrder[]>(null);
+  const orderData = useAppSelector(getOrderDetailedData);
+  const [orders, setOrders] = useState<TOrder[]>([]);
 
   useEffect(() => {
-    const ordersString = localStorage.getItem('orders');
-    if (ordersString) {
-      setOrders(JSON.parse(ordersString));
+    let ordersItems;
+    if (!orderData?.length && Boolean(localStorage.getItem(ORDERS_LOCALSTORAGE_KEY))) {
+      ordersItems = JSON.parse(localStorage.getItem(ORDERS_LOCALSTORAGE_KEY)!);
+    } else {
+      ordersItems = orderData;
     }
-  }, []);
 
-  if (!orders) {
+    setOrders(ordersItems);
+  }, [orderData]);
+
+  if (!orders.length) {
     return <p>No orders</p>;
   }
 
@@ -37,6 +44,8 @@ export const UserOrders: FC<Props> = ({ className, isPreview }) => {
   const handlePageChange = (filteredProducts: TOrder[]) => {
     setOrders(filteredProducts);
   };
+
+  console.log('orders', orders);
 
   return (
     <>

@@ -1,12 +1,12 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
+import { getProductById } from '../productThunk';
 import { ProductSchema, TProductDetailed } from '../types';
-import { getProductById } from '../../api';
 
 const initialState: ProductSchema = {
-  product_detailed: undefined,
-  error: undefined,
-  isLoading: true,
+  product_detailed: null,
+  error: null,
+  isLoading: false,
 };
 
 const productsSlice = createSlice({
@@ -16,7 +16,7 @@ const productsSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(getProductById.pending, (state) => {
-        state.error = undefined;
+        state.error = null;
         state.isLoading = true;
       })
       .addCase(getProductById.fulfilled, (state, action: PayloadAction<TProductDetailed>) => {
@@ -25,7 +25,9 @@ const productsSlice = createSlice({
       })
       .addCase(getProductById.rejected, (state, action) => {
         state.isLoading = false;
-        state.error = action.payload;
+        if (action.payload) {
+          state.error = action.payload;
+        }
       });
   },
 });

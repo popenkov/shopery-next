@@ -3,8 +3,8 @@ import cn from 'classnames';
 
 import { RoundButton } from '@/shared/ui/Buttons';
 
-import { getSocialData } from '../api';
 import { getSocialIcon } from '../lib';
+import { getSocialData } from '../mock';
 
 import cls from './SocialShare.module.scss';
 

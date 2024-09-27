@@ -54,10 +54,8 @@ export const CheckoutForm: FC = () => {
     mode: 'onChange',
   });
 
-  // todo   сделать модел для запроса из формы и из стора и отправить
   const onSubmit: SubmitHandler<TFormData> = (data) => {
-    // eslint-disable-next-line
-    setIsFormSubmitting((prev) => (prev = true));
+    setIsFormSubmitting(true);
 
     const orderItems: TOrderProduct[] = cartItems.map((item) => {
       return {
@@ -120,11 +118,11 @@ export const CheckoutForm: FC = () => {
     if (isValid) {
       reset();
       router.push(getRouteOrderHistory());
-      // eslint-disable-next-line
-      setIsFormSubmitting((prev) => (prev = false));
+
+      setIsFormSubmitting(false);
     }
-    // eslint-disable-next-line
-    setIsFormSubmitting((prev) => (prev = false));
+
+    setIsFormSubmitting(false);
   };
 
   const handleAddressCheckboxChange = (evt: ChangeEvent<HTMLInputElement>) => {

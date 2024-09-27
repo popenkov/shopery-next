@@ -11,7 +11,7 @@ const initialState: UserSchema = {
   authData: undefined,
   user: undefined,
   error: undefined,
-  isLoading: true,
+  isLoading: false,
   addressData: undefined,
   personalData: undefined,
 };
@@ -50,7 +50,6 @@ export const userSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload;
       })
-      // todo
       .addCase(updateBillingAddress.pending, (state) => {
         state.error = undefined;
         state.isLoading = true;
@@ -63,7 +62,6 @@ export const userSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload;
       })
-      // todo
       .addCase(updatePersonalData.pending, (state) => {
         state.error = undefined;
         state.isLoading = true;
