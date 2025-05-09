@@ -34,7 +34,7 @@
     "axios": "^1.7.2",
     "circular-dependency-plugin": "^5.2.2",
     "classnames": "2.5.1",
-    "concurrently": "^8.2.2",
+    "concurrently": "^9.0.0",
     "eslint-plugin-unused-imports": "^3.1.0",
     "framer-motion": "^11.3.21",
     "identity-obj-proxy": "^3.0.0",
